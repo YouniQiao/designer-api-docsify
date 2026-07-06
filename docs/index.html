@@ -113,20 +113,36 @@
         function(hook) {
           var activeKit = null, loadingKit = null, savedOpen = [];
 
+          // Watch for sidebar DOM clear — capture expanded state before removal
+          hook.ready(function() {
+            var sidebarNav = document.querySelector('.sidebar-nav');
+            if (sidebarNav) {
+              var observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(m) {
+                  m.removedNodes.forEach(function(node) {
+                    if (node.nodeType === 1 && node.querySelector) {
+                      var kitLoaded = node.classList && node.classList.contains('kit-loaded') ? node : node.querySelector('.kit-loaded');
+                      if (kitLoaded) {
+                        var details = kitLoaded.querySelectorAll('details');
+                        savedOpen.length = 0;
+                        details.forEach(function(d, i) { if (d.open) savedOpen.push(i); });
+                      }
+                    }
+                  });
+                });
+              });
+              observer.observe(sidebarNav, { childList: true, subtree: true });
+            }
+            fixLinks(); detectKit();
+          });
+
           function injectKitSidebar(kit) {
             if (loadingKit === kit) return;
             loadingKit = kit;
             var existing = document.querySelector('.kit-loaded');
             if (kit === activeKit && existing) { expandPathToCurrent(); return; }
-            // Save currently expanded details before replacing sidebar
-            if (existing) {
-              var cur = existing.querySelectorAll('details');
-              savedOpen = [];
-              cur.forEach(function(d, i) { if (d.open) savedOpen.push(i); });
-              existing.remove();
-            }
+            if (existing) existing.remove();
             if (!kit) { activeKit = null; loadingKit = null; return; }
-            if (existing && kit !== activeKit) existing.remove();
             var items = document.querySelectorAll('.sidebar-nav > ul > li');
             var targetLi = null;
             items.forEach(function(li) {
@@ -146,7 +162,7 @@
                 if (savedOpen.length) {
                   var details = div.querySelectorAll('details');
                   savedOpen.forEach(function(i) { if (i < details.length) details[i].open = true; });
-                  savedOpen = [];
+                  savedOpen.length = 0;
                 }
                 activeKit = kit;
                 expandPathToCurrent();
