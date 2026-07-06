@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [backgroundTaskManager:backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md#backgroundtaskmanager)
+**替代接口：** [backgroundTaskManager:backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md)
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 

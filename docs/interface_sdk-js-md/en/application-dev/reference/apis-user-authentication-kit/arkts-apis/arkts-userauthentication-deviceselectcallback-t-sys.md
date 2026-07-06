@@ -18,7 +18,7 @@ Defines the callback triggered for the companion device selection. When the syst
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectPurpose | int | Yes | Selection purpose. It identifies the purpose of the current device selection. Fordetails about the value, see [SelectPurpose](arkts-userauthentication-selectpurpose-e-sys.md#selectpurpose).**SELECT_ADD_DEVICE(1)** means to select the device for adding a template, and **SELECT_AUTH_DEVICE(2)**means to select the device for authentication. Vendors can customize the extended value (greater than orequal to 10000). The application should return the corresponding device list based on the selection purpose. |
+| selectPurpose | int | Yes | Selection purpose. It identifies the purpose of the current device selection. Fordetails about the value, see [SelectPurpose](arkts-userauthentication-selectpurpose-e-sys.md).**SELECT_ADD_DEVICE(1)** means to select the device for adding a template, and **SELECT_AUTH_DEVICE(2)**means to select the device for authentication. Vendors can customize the extended value (greater than orequal to 10000). The application should return the corresponding device list based on the selection purpose. |
 
 **Return value:**
 

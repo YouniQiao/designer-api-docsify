@@ -6,7 +6,7 @@
 
 **废弃版本：** 21
 
-**替代接口：** [WebHitTestType](../arkts-apis/arkts-arkweb-webhittesttype-e.md#webhittesttype)
+**替代接口：** [WebHitTestType](../arkts-apis/arkts-arkweb-webhittesttype-e.md)
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

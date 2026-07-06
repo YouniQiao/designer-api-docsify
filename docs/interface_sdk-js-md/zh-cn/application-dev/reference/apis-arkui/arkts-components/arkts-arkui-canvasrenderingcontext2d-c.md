@@ -2,7 +2,7 @@
 
 CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。 > **说明：** > > * 建议使用时将CanvasRenderingContext2D对象与Canvas组件封装到同一个自定义组件中，保证两者一一对应且生命周期保持一致。 > > * 本文绘制接口在调用时会存入被关联的Canvas组件的指令队列中。仅当当前帧进入渲染阶段且关联的Canvas组件处于可见状态时， > 这些指令才会从队列中被提取并执行。因此，在Canvas组件不可见的情况下，应尽量避免频繁调用绘制接口， > 以防止指令在队列中堆积，从而避免内存占用过大的问题。 > > * beginPath、moveTo、lineTo、closePath、bezierCurveTo、quadraticCurveTo、arc、arcTo、ellipse、rect和 > roundRect接口只能对CanvasRenderingContext2D中的路径生效，无法对OffscreenCanvasRenderingContext2D和 > Path2D对象中设置的路径生效。 > > * Canvas组件的宽或高超过8000px时使用CPU渲染，会导致性能明显下降。
 
-**继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#canvasrenderer)
+**继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
 
 **起始版本：** 8
 

@@ -6,7 +6,7 @@
 
 **废弃版本：** 18
 
-**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -24,7 +24,7 @@ data: Uint8Array
 
 **废弃版本：** 18
 
-**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -42,7 +42,7 @@ index: number
 
 **废弃版本：** 18
 
-**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -60,7 +60,7 @@ reqType: USBControlRequestType
 
 **废弃版本：** 18
 
-**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -78,7 +78,7 @@ request: number
 
 **废弃版本：** 18
 
-**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -96,7 +96,7 @@ target: USBRequestTargetType
 
 **废弃版本：** 18
 
-**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -114,7 +114,7 @@ value: number
 
 **废弃版本：** 18
 
-**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**替代接口：** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **系统能力：** SystemCapability.USB.USBManager
 

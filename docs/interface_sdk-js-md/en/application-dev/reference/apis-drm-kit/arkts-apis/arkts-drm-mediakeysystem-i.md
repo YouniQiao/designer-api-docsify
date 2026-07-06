@@ -9,7 +9,7 @@ Manages and record MediaKeySessions. Before calling an MediaKeySystem method, we
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@ohos.multimedia.drm';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## clearOfflineMediaKeys

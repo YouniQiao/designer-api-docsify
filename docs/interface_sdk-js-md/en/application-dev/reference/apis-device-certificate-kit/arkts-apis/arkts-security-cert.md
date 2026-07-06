@@ -1,6 +1,6 @@
 # @ohos.security.cert
 
-The certificate algorithm library framework provides certificate-related APIs. The **certFramework** module depends on the basic algorithm capabilities of the Crypto framework. For details, see [cryptoFramework](../../apis-crypto-architecture-kit/arkts-apis/arkts-security-cryptoframework.md#cryptoframework).
+The certificate algorithm library framework provides certificate-related APIs. The **certFramework** module depends on the basic algorithm capabilities of the Crypto framework. For details, see [cryptoFramework](../../apis-crypto-architecture-kit/arkts-apis/arkts-security-cryptoframework.md).
 
 **Since:** 9
 
@@ -9,7 +9,7 @@ The certificate algorithm library framework provides certificate-related APIs. T
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## Summary
@@ -27,7 +27,7 @@ import { cert } from '@ohos.security.cert';
 | [createCmsParser](arkts-devicecertificate-createcmsparser-f.md#createcmsparser-1) | Creates a **CmsParser** object. |
 | [createPkcs12](arkts-devicecertificate-createpkcs12-f.md#createpkcs12-1) | Creates P12. This API uses a promise to return the result. |
 | [createPkcs12Sync](arkts-devicecertificate-createpkcs12sync-f.md#createpkcs12sync-1) | Creates P12. This API returns the result synchronously. |
-| [createTrustAnchorsWithKeyStore](arkts-devicecertificate-createtrustanchorswithkeystore-f.md#createtrustanchorswithkeystore-1) | Creates a [TrustAnchor](arkts-devicecertificate-x509trustanchor-i.md#x509trustanchor) object array by using the CA certificate parsed from a .p12 keystore file. This API uses a promise to return the result. |
+| [createTrustAnchorsWithKeyStore](arkts-devicecertificate-createtrustanchorswithkeystore-f.md#createtrustanchorswithkeystore-1) | Creates a [TrustAnchor](arkts-devicecertificate-x509trustanchor-i.md) object array by using the CA certificate parsed from a .p12 keystore file. This API uses a promise to return the result. |
 | [createX500DistinguishedName](arkts-devicecertificate-createx500distinguishedname-f.md#createx500distinguishedname-1) | Creates an **X500DistinguishedName** object with a name in the form of a string. This API uses a promise to return the result. |
 | [createX500DistinguishedName](arkts-devicecertificate-createx500distinguishedname-f.md#createx500distinguishedname-2) | Creates an **X500DistinguishedName** object with a name in DER format. This API uses a promise to return the result. |
 | [createX509CRL](arkts-devicecertificate-createx509crl-f.md#createx509crl-1) | Creates an **X509CRL** instance. This API uses an asynchronous callback to return the result. |
@@ -86,8 +86,8 @@ import { cert } from '@ohos.security.cert';
 | [X509CertChain](arkts-devicecertificate-x509certchain-i.md) | Provides APIs for managing the X.509 certificate chain. |
 | [X509CertMatchParameters](arkts-devicecertificate-x509certmatchparameters-i.md) | Defines the parameters used to match a certificate. If no parameter is specified, all certificates are matched. |
 | [X509CertRevokedParams](arkts-devicecertificate-x509certrevokedparams-i.md) | Parameters for checking certificate revocation status. |
-| [X509Crl](arkts-devicecertificate-x509crl-i.md) | Provides APIs for X.509 CRL operations. &gt; **NOTE** &gt; &gt; This API is supported since API version 9 and deprecated since API version 11. Use [X509CRL()](arkts-devicecertificate-x509crl-i.md#x509crl) &gt; instead. |
-| [X509CrlEntry](arkts-devicecertificate-x509crlentry-i.md) | Provides APIs for operating on a revoked certificate entry in a CRL. &gt; **NOTE** &gt; &gt; This API is supported since API version 9 and deprecated since API version 11. Use &gt; [X509CRLEntry()](arkts-devicecertificate-x509crlentry-i.md#x509crlentry) instead. |
+| [X509Crl](arkts-devicecertificate-x509crl-i.md) | Provides APIs for X.509 CRL operations. &gt; **NOTE** &gt; &gt; This API is supported since API version 9 and deprecated since API version 11. Use [X509CRL()](arkts-devicecertificate-x509crl-i.md) &gt; instead. |
+| [X509CrlEntry](arkts-devicecertificate-x509crlentry-i.md) | Provides APIs for operating on a revoked certificate entry in a CRL. &gt; **NOTE** &gt; &gt; This API is supported since API version 9 and deprecated since API version 11. Use &gt; [X509CRLEntry()](arkts-devicecertificate-x509crlentry-i.md) instead. |
 | [X509TrustAnchor](arkts-devicecertificate-x509trustanchor-i.md) | Represents an X.509 trust anchor, which is used to verify the certificate chain. The certificate or public key in the trust anchor is used as the trusted root to verify the certificate chain. |
 
 ### Enums

@@ -1,8 +1,8 @@
 # DepthFusion (System API)
 
-Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-depthfusionquery-i-sys.md#depthfusionquery).
+Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-depthfusionquery-i-sys.md).
 
-**Inheritance/Implementation:** DepthFusion extends [DepthFusionQuery](arkts-camera-depthfusionquery-i-sys.md#depthfusionquery)
+**Inheritance/Implementation:** DepthFusion extends [DepthFusionQuery](arkts-camera-depthfusionquery-i-sys.md)
 
 **Since:** 14
 
@@ -13,7 +13,7 @@ Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-depthfusion
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## enableDepthFusion

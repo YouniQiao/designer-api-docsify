@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@ohos.settings';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## openDisplaySettingsPage

@@ -1,6 +1,6 @@
 # @ohos.enterprise.bluetoothManager
 
-The **bluetoothManager** module provides Bluetooth management capabilities, including setting and obtaining Bluetooth information. > **NOTE** > > The APIs of this module can be used only in the stage model. > > The APIs of this module can be called only by a device administrator application that is enabled. For details, see > [MDM Kit Development](../../../../mdm/mdm-kit-guide.md). > > The global restriction policies are provided by **restrictions**. To disable Bluetooth globally, see > [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md#restrictions).
+The **bluetoothManager** module provides Bluetooth management capabilities, including setting and obtaining Bluetooth information. > **NOTE** > > The APIs of this module can be used only in the stage model. > > The APIs of this module can be called only by a device administrator application that is enabled. For details, see > [MDM Kit Development](../../../../mdm/mdm-kit-guide.md). > > The global restriction policies are provided by **restrictions**. To disable Bluetooth globally, see > [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md).
 
 **Since:** 11
 
@@ -9,7 +9,7 @@ The **bluetoothManager** module provides Bluetooth management capabilities, incl
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@ohos.enterprise.bluetoothManager';
+import { bluetoothManager } from '@kit.MDMKit';
 ```
 
 ## Summary

@@ -6,7 +6,7 @@ Enumerates the authentication results.
 
 **Deprecated since:** 8
 
-**Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauthresultcode-e.md#userauthresultcode)
+**Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauthresultcode-e.md)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

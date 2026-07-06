@@ -6,14 +6,14 @@ The **reminderAgent** module provides APIs for publishing scheduled reminders th
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager:reminderAgentManager](arkts-reminderagentmanager.md#reminderagentmanager)
+**Substitutes:** [reminderAgentManager:reminderAgentManager](arkts-reminderagentmanager.md)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from '@ohos.reminderAgent';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

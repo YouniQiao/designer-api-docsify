@@ -9,7 +9,7 @@ Represents a component on the UI and provides APIs for obtaining component attri
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@ohos.UiTest';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## clearText
@@ -620,7 +620,7 @@ Inputs text to a component in a specified text input mode. This API takes effect
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | InputTextMode | Yes | Text input mode.For details, see [InputTextMode](arkts-test-inputtextmode-i.md#inputtextmode).<br> **Note**: If **InputTextMode.addition** is set to **true**, the specified text is added to the end of theexisting text in the component. Otherwise, the specified text overwrites the existing text of the component. |
+| mode | InputTextMode | Yes | Text input mode.For details, see [InputTextMode](arkts-test-inputtextmode-i.md).<br> **Note**: If **InputTextMode.addition** is set to **true**, the specified text is added to the end of theexisting text in the component. Otherwise, the specified text overwrites the existing text of the component. |
 
 **Return value:**
 

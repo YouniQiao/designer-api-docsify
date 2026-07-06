@@ -9,7 +9,7 @@ Provides index management capabilities, such as obtaining the locale index list 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@ohos.i18n';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## addLocale

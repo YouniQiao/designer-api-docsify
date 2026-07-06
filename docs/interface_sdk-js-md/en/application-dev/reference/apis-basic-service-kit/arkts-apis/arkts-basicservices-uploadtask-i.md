@@ -9,7 +9,7 @@ Implements file uploads. Before using any APIs of this class, you must obtain an
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@ohos.request';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## delete
@@ -111,7 +111,7 @@ Unsubscribes from upload progress events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -154,7 +154,7 @@ Unsubscribes from HTTP response events for the upload task.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -197,7 +197,7 @@ Unsubscribes from upload completion or failure events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -265,7 +265,7 @@ Unsubscribes from upload completion or failure events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -333,7 +333,7 @@ Subscribes to upload progress events. This API uses an asynchronous callback to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -368,7 +368,7 @@ Subscribes to HTTP response events for the upload task.This API uses an asynchro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -403,7 +403,7 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -447,7 +447,7 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Example**
 

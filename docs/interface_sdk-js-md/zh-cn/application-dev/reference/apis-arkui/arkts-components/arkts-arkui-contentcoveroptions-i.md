@@ -1,8 +1,8 @@
 # ContentCoverOptions
 
-继承自[BindOptions](arkts-arkui-bindoptions-i.md#bindoptions)。 全屏模态页面内容选项。
+继承自[BindOptions](arkts-arkui-bindoptions-i.md)。 全屏模态页面内容选项。
 
-**继承/实现关系：** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#bindoptions)
+**继承/实现关系：** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
 
 **起始版本：** 10
 

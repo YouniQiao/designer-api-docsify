@@ -9,7 +9,7 @@ Layout information for the semi-folded state. > **NOTE** > > 1. In semi-folded s
 ## Modules to Import
 
 ```TypeScript
-import { HoverModeStatus, ExtraRegionPosition, OnHoverStatusChangeHandler, ExpandedRegionLayoutOptions, FoldSplitContainer, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio } from '@ohos.arkui.advanced.FoldSplitContainer';
+import { HoverModeStatus, ExtraRegionPosition, OnHoverStatusChangeHandler, ExpandedRegionLayoutOptions, FoldSplitContainer, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio } from '@kit.ArkUI';
 ```
 
 ## extraRegionPosition

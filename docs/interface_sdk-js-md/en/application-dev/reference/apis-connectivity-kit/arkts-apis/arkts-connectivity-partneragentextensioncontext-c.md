@@ -2,7 +2,7 @@
 
 Class for the context of the PartnerAgentExtensionAbility.
 
-**Inheritance/Implementation:** PartnerAgentExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext)
+**Inheritance/Implementation:** PartnerAgentExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 23
 
@@ -13,6 +13,6 @@ Class for the context of the PartnerAgentExtensionAbility.
 ## Modules to Import
 
 ```TypeScript
-import { PartnerAgentExtensionContext } from '@ohos.FusionConnectivity.PartnerAgentExtensionContext';
+import { PartnerAgentExtensionContext } from '@kit.ConnectivityKit';
 ```
 

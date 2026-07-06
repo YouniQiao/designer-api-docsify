@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { font } from '@ohos.font';
+import { font } from '@kit.ArkUI';
 ```
 
 ## getSystemFontList

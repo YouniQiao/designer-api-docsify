@@ -32,7 +32,7 @@
 | [ShaderEffect](arkts-arkgraphics2d-shadereffect-c.md) | 着色器。画刷和画笔设置着色器后，会使用着色器效果而不是颜色属性去绘制，但此时画笔和画刷的透明度属性仍然生效。 |
 | [ShadowLayer](arkts-arkgraphics2d-shadowlayer-c.md) | 阴影层对象。 |
 | [TextBlob](arkts-arkgraphics2d-textblob-c.md) | 由一个或多个具有相同字体的字符组成的字块。 |
-| [Tool](arkts-arkgraphics2d-tool-c.md) | 本模块定义的工具类，仅提供静态的方法，主要完成其他模块和[common2D](arkts-graphics-common2d.md#common2d)中定义的数据结构的转换功能等操作。 |
+| [Tool](arkts-arkgraphics2d-tool-c.md) | 本模块定义的工具类，仅提供静态的方法，主要完成其他模块和[common2D](arkts-graphics-common2d.md)中定义的数据结构的转换功能等操作。 |
 | [Typeface](arkts-arkgraphics2d-typeface-c.md) | 字体，如宋体、楷体等。 |
 | [TypefaceArguments](arkts-arkgraphics2d-typefacearguments-c.md) | 提供字体属性配置的结构体。 |
 
@@ -65,7 +65,7 @@
 | [PathMeasureMatrixFlags](arkts-arkgraphics2d-pathmeasurematrixflags-e.md) | 路径测量中的矩阵信息维度枚举，常用于控制物体沿路径移动的动画场景。 |
 | [PathOp](arkts-arkgraphics2d-pathop-e.md) | 路径操作类型枚举，可用于合并或裁剪路径等功能。 |
 | [PointMode](arkts-arkgraphics2d-pointmode-e.md) | 绘制数组点的方式的枚举。 |
-| [RectType](arkts-arkgraphics2d-recttype-e.md) | 定义填充网格的矩形类型的枚举。仅在[Lattice](arkts-graphics-drawing.md#drawing)中使用。 |
+| [RectType](arkts-arkgraphics2d-recttype-e.md) | 定义填充网格的矩形类型的枚举。仅在[Lattice](arkts-graphics-drawing.md)中使用。 |
 | [RegionOp](arkts-arkgraphics2d-regionop-e.md) | 两个区域合并时的操作的枚举。 |
 | [ScaleToFit](arkts-arkgraphics2d-scaletofit-e.md) | 源矩形到目标矩形的缩放方式枚举。 |
 | [ShadowFlag](arkts-arkgraphics2d-shadowflag-e.md) | 控制阴影绘制行为的枚举。 |

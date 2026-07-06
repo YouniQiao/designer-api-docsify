@@ -9,7 +9,7 @@ Plugin component request callback parameters.
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from '@ohos.pluginComponent';
+import { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## componentTemplate

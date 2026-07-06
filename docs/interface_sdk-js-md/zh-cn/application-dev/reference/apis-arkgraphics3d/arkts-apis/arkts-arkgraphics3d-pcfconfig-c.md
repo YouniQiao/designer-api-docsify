@@ -2,7 +2,7 @@
 
 PCF软阴影配置参数
 
-**继承/实现关系：** PCFConfig extends [SoftShadowConfig](arkts-arkgraphics3d-softshadowconfig-c.md#softshadowconfig)
+**继承/实现关系：** PCFConfig extends [SoftShadowConfig](arkts-arkgraphics3d-softshadowconfig-c.md)
 
 **起始版本：** 26.0.0
 

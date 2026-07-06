@@ -9,7 +9,7 @@ Provides APIs to operate the authenticator.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@ohos.account.appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addAccountImplicitly

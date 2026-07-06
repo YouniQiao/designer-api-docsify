@@ -9,7 +9,7 @@ Describes the size of a PiP window.
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from '@ohos.PiPWindow';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## height

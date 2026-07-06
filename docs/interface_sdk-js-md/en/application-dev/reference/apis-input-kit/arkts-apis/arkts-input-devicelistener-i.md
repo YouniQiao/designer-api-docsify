@@ -9,7 +9,7 @@ Provides hot swap information about an input device.
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from '@ohos.multimodalInput.inputDevice';
+import { inputDevice } from '@kit.InputKit';
 ```
 
 ## deviceId

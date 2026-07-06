@@ -9,7 +9,7 @@ AbilityStage is a [module](../../../../quick-start/application-package-overview.
 ## Modules to Import
 
 ```TypeScript
-import { AbilityStage } from '@ohos.app.ability.AbilityStage';
+import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## onAboutToCreateAbility
@@ -118,7 +118,7 @@ class MyAbilityStage extends AbilityStage {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-Called when the system global configuration (such as the system language and dark/light color mode) changes. All the configuration items are defined in the [Configuration](arkts-ability-configuration-i.md#configuration) class. This API returns the result synchronously and does not support asynchronous callbacks. > **NOTE** > > There are certain restrictions when this callback is actually triggered. For example, if you set the application > language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage-1), the > system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details, > see [When to Use](../../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
+Called when the system global configuration (such as the system language and dark/light color mode) changes. All the configuration items are defined in the [Configuration](arkts-ability-configuration-i.md) class. This API returns the result synchronously and does not support asynchronous callbacks. > **NOTE** > > There are certain restrictions when this callback is actually triggered. For example, if you set the application > language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage-1), the > system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details, > see [When to Use](../../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 9
 

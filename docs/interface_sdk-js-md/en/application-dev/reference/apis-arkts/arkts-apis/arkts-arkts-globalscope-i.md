@@ -2,7 +2,7 @@
 
 Implements the running environment of the Worker thread. The GlobalScope class inherits from WorkerEventTarget.
 
-**Inheritance/Implementation:** GlobalScope extends [WorkerEventTarget](arkts-arkts-workereventtarget-i.md#workereventtarget)
+**Inheritance/Implementation:** GlobalScope extends [WorkerEventTarget](arkts-arkts-workereventtarget-i.md)
 
 **Since:** 9
 
@@ -11,7 +11,7 @@ Implements the running environment of the Worker thread. The GlobalScope class i
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@ohos.worker';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## name

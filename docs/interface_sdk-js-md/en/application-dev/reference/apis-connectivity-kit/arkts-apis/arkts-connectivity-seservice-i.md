@@ -9,7 +9,7 @@ SEService realizes the communication to available SEs on the device.
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from '@ohos.secureElement';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## getReaders

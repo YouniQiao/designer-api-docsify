@@ -780,7 +780,7 @@
   - [BundlePackFlag(系统接口)](arkts-ability-bundlepackflag-e-sys.md)<!--DelEnd--><!--Del-->
   - [UpgradeFlag(系统接口)](arkts-ability-upgradeflag-e-sys.md)<!--DelEnd-->
 - [@ohos.bundle.innerBundleManager](arkts-bundle-innerbundlemanager.md)
-  - [innerBundleManager](arkts-ability-innerbundlemanager-sta-n.md)<!--Del-->
+  - [innerBundleManager](arkts-ability-innerbundlemanager-n.md)<!--Del-->
     - [getAllLauncherAbilityInfos(系统接口)](arkts-ability-getalllauncherabilityinfos-f-sys.md)<!--DelEnd--><!--Del-->
     - [getLauncherAbilityInfos(系统接口)](arkts-ability-getlauncherabilityinfos-f-sys.md)<!--DelEnd--><!--Del-->
     - [getShortcutInfos(系统接口)](arkts-ability-getshortcutinfos-f-sys.md)<!--DelEnd--><!--Del-->

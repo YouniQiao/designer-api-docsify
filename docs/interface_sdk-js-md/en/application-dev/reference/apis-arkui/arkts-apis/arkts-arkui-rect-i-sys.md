@@ -11,7 +11,7 @@ Describes the rectangle information.
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@ohos.screen';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## height

@@ -11,7 +11,7 @@ The distributedMissionManager module implements mission management across device
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from '@ohos.distributedMissionManager';
+import { distributedMissionManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

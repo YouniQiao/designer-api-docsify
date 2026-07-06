@@ -9,7 +9,7 @@ Indicates the options of placing a call.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@ohos.telephony.call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## accountId

@@ -211,7 +211,7 @@ Sets the position of the navigation indicator relative to the right edge of the 
 start(value: LengthMetrics): T
 ```
 
-Sets the distance between the navigation indicator and the right edge (in [RTL](arkts-arkui-layoutdirection-e.md#layoutdirection) scripts) or the left edge (in [LTR](arkts-arkui-layoutdirection-e.md#layoutdirection) scripts) of the **Swiper** component.
+Sets the distance between the navigation indicator and the right edge (in [RTL](arkts-arkui-layoutdirection-e.md) scripts) or the left edge (in [LTR](arkts-arkui-layoutdirection-e.md) scripts) of the **Swiper** component.
 
 **Since:** 12
 

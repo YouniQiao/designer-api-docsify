@@ -1,6 +1,6 @@
 # Path属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性：
 
 **继承/实现关系：** PathAttribute extends [CommonShapeMethod<PathAttribute>](CommonShapeMethod<PathAttribute>)
 
@@ -14,7 +14,7 @@
 commands(value: ResourceStr)
 ```
 
-设置符合[SVG路径描述规范](../../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg路径描述规范)的命令字符串，单位为px。像素单位转换 方法请参考[像素单位转换](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。
+设置符合[SVG路径描述规范](../../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg路径描述规范)的命令字符串，单位为px。像素单位转换 方法请参考[像素单位转换](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
 
 **起始版本：** 7
 

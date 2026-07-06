@@ -50,7 +50,7 @@ off(evt: 'progress', callback: (pg: SyncProgress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | evt | 'progress' | 是 | 取消订阅的事件类型，取值为'progress'（同步过程事件）。 |
-| callback | (pg: SyncProgress) =&gt; void | 是 | 回调函数。同步过程事件，入参为[SyncProgress](arkts-corefile-syncprogress-i.md#syncprogress)，返回值为void。 |
+| callback | (pg: SyncProgress) =&gt; void | 是 | 回调函数。同步过程事件，入参为[SyncProgress](arkts-corefile-syncprogress-i.md)，返回值为void。 |
 
 **错误码：**
 
@@ -141,7 +141,7 @@ on(evt: 'progress', callback: (pg: SyncProgress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | evt | 'progress' | 是 | 订阅的事件类型，取值为'progress'（同步过程事件）。 |
-| callback | (pg: SyncProgress) =&gt; void | 是 | 回调函数。同步过程事件，入参为[SyncProgress](arkts-corefile-syncprogress-i.md#syncprogress)，返回值为void。 |
+| callback | (pg: SyncProgress) =&gt; void | 是 | 回调函数。同步过程事件，入参为[SyncProgress](arkts-corefile-syncprogress-i.md)，返回值为void。 |
 
 **错误码：**
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Declare the common types for the native ContentEmbed.
+Provides the error code definitions for the ContentEmbed module and the type enumeration descriptions for thecapabilities supported by embedded documents.
 
 **Library**: libcontent_embed_ndk.so
 
@@ -18,14 +18,14 @@ Declare the common types for the native ContentEmbed.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ContentEmbed_ErrorCode](#contentembed_errorcode) | ContentEmbed_ErrorCode | The value type of command data. |
-| [ContentEmbed_CapabilityCode](#contentembed_capabilitycode) | ContentEmbed_CapabilityCode | The value type of capability code. |
+| [ContentEmbed_ErrorCode](#contentembed_errorcode) | ContentEmbed_ErrorCode | Defines the error codes of the Content Embed Kit. |
+| [ContentEmbed_CapabilityCode](#contentembed_capabilitycode) | ContentEmbed_CapabilityCode | Enumerates the functions supported by embedded document objects. Multiple capability values can be combinedusing bit masks. |
 
 ### Macro
 
 | Name | Description |
 | -- | -- |
-| MAX_OEID_LENGTH (1 * 40) | The maximum length of an oeid.<br>**Since**: 24 |
+| MAX_OEID_LENGTH (1 * 40) | Indicates the maximum string length of the OEID of an embedded document.<br>**Since**: 24 |
 
 ## Enum type description
 
@@ -37,32 +37,32 @@ enum ContentEmbed_ErrorCode
 
 **Description**
 
-The value type of command data.
+Defines the error codes of the Content Embed Kit.
 
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| CE_ERR_OK = 0 | The error code in the correct case.<br>**Since**: 24 |
-| CE_PERMISSION_DENIED = 201 |  The error code when permission verification failed.<br>**Since**: 24 |
-| CE_ERR_PARAM_INVALID = 401 | The error code when parameter check failed.<br>**Since**: 24 |
-| CE_ERR_DEVICE_NOT_SUPPORTED = 801 | The error code when the device is not supported.<br>**Since**: 24 |
-| CE_ERR_NULL_POINTER = 35300001 | The error code when unexpected null pointer.<br>**Since**: 24 |
-| CE_ERR_CLIENT_CALLBACK_NOT_REGISTERED = 35300002 | The error code when the client callback is not registered.<br>**Since**: 24 |
-| CE_ERR_EXTENSION_ERROR = 35300003 | The error code when an error occurred in the extension application.<br>**Since**: 24 |
-| CE_ERR_SYSTEM_ABNORMAL = 35300004 | The error code when the system service works abnormally.<br>**Since**: 24 |
-| CE_ERR_STORAGE_OPERATION_FAILED = 35300005 | The error code when the storage operation failed.<br>**Since**: 24 |
-| CE_ERR_STREAM_OPERATION_FAILED = 35300006 | The error code when the stream operation failed.<br>**Since**: 24 |
-| CE_ERR_FILE_OPERATION_FAILED = 35300007 | The error code when the file operation failed.<br>**Since**: 24 |
-| CE_ERR_IN_DLP_SANDBOX = 35300008 | The error code when application is in dlp sandbox.<br>**Since**: 24 |
-| CE_ERR_IMAGE_PACKER_OPERATION_FAILED = 35300009 | The error code when the image packer operation failed.<br>**Since**: 24 |
-| CE_ERR_CLIENT_CALLBACK_FAILED = 35300010 | The error code is returned when the client callback fails.<br>**Since**: 24 |
-| CE_ERR_EXTENSION_ABNORMAL_EXIT = 35300011 | The error code is returned when the extension abnormal exit.<br>**Since**: 24 |
-| CE_ERR_INVALID_LINKING_PATH = 35300012 | The error code when linking file is in application sandbox.<br>**Since**: 24 |
-| CE_ERR_CONNECT_LIMIT_EXCEED = 35300013 | The error code when the number of OE Extension connections exceeds the limit.<br>**Since**: 24 |
-| CE_ERR_FILE_NOT_GRANT = 35300014 | The error code when the file is not authorized.<br>**Since**: 24 |
-| CE_ERR_DISK_FULL = 35300015 | The error code when the disk is full.<br>**Since**: 24 |
-| CE_ERR_EXTENSION_NOT_SUPPORT = 35300016 | The error code when the capability is not supported by OE Extension.<br>**Since**: 24 |
+| CE_ERR_OK = 0 | The operation is successful.<br>**Since**: 24 |
+| CE_PERMISSION_DENIED = 201 | Permission verification failed.<br>**Since**: 24 |
+| CE_ERR_PARAM_INVALID = 401 | Invalid parameter.<br>**Since**: 24 |
+| CE_ERR_DEVICE_NOT_SUPPORTED = 801 | This feature isn\'t supported on your device.<br>**Since**: 24 |
+| CE_ERR_NULL_POINTER = 35300001 | A null pointer is returned, which may be caused by memory allocation failure or internal error.<br>**Since**: 24 |
+| CE_ERR_CLIENT_CALLBACK_NOT_REGISTERED = 35300002 | The client has not registered the corresponding callback function.<br>**Since**: 24 |
+| CE_ERR_EXTENSION_ERROR = 35300003 | An unknown error occurs in the OE Extension.<br>**Since**: 24 |
+| CE_ERR_SYSTEM_ABNORMAL = 35300004 | The system service is abnormal, possibly because the service is not started, the connection isinterrupted, or the permission is insufficient.<br>**Since**: 24 |
+| CE_ERR_STORAGE_OPERATION_FAILED = 35300005 | Operations on the Storage object of the OE document failed.<br>**Since**: 24 |
+| CE_ERR_STREAM_OPERATION_FAILED = 35300006 | Operations on the Stream object of the OE document failed.<br>**Since**: 24 |
+| CE_ERR_FILE_OPERATION_FAILED = 35300007 | The file operation failed, possibly because the file does not exist, the permission is insufficient, thepath is incorrect, or the disk space is insufficient.<br>**Since**: 24 |
+| CE_ERR_IN_DLP_SANDBOX = 35300008 | The current application is running in the DLP sandbox environment and cannot call related functions.<br>**Since**: 24 |
+| CE_ERR_IMAGE_PACKER_OPERATION_FAILED = 35300009 | The ImagePacker operation failed.<br>**Since**: 24 |
+| CE_ERR_CLIENT_CALLBACK_FAILED = 35300010 | An exception occurred during the execution of the callback function registered by the client.<br>**Since**: 24 |
+| CE_ERR_EXTENSION_ABNORMAL_EXIT = 35300011 | The OE Extension exits unexpectedly.<br>**Since**: 24 |
+| CE_ERR_INVALID_LINKING_PATH = 35300012 | A file that is linked to a directory that cannot be linked to, such as a file in the app sandboxdirectory.<br>**Since**: 24 |
+| CE_ERR_CONNECT_LIMIT_EXCEED = 35300013 | The number of connected OE Extensions exceeds the upper limit.<br>**Since**: 24 |
+| CE_ERR_FILE_NOT_GRANT = 35300014 | The current file is not authorized.<br>**Since**: 24 |
+| CE_ERR_DISK_FULL = 35300015 | The current disk space is insufficient.<br>**Since**: 24 |
+| CE_ERR_EXTENSION_NOT_SUPPORT = 35300016 | The current OE Extension does not support this capability.<br>**Since**: 24 |
 
 ### ContentEmbed_CapabilityCode
 
@@ -72,13 +72,13 @@ enum ContentEmbed_CapabilityCode
 
 **Description**
 
-The value type of capability code.
+Enumerates the functions supported by embedded document objects. Multiple capability values can be combinedusing bit masks.
 
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| CE_CAPABILITY_SUPPORT_SNAPSHOT = 1 << 0 | The code means application supports document snapshot capture. |
-| CE_CAPABILITY_SUPPORT_DO_EDIT = 1 << 1 | The code means application supports document editing. |
+| CE_CAPABILITY_SUPPORT_SNAPSHOT = 1 << 0 | Indicates that the snapshot image of an OE document can be obtained.<br>**Since**: 24 |
+| CE_CAPABILITY_SUPPORT_DO_EDIT = 1 << 1 | Indicates that the OE document can be edited.<br>**Since**: 24 |
 
 

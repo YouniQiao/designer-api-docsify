@@ -2,7 +2,7 @@
 
 Provides APIs to manage the file retrieval result.
 
-**Inheritance/Implementation:** FetchResult extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md#isendable)
+**Inheritance/Implementation:** FetchResult extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md)
 
 **Since:** 12
 
@@ -11,7 +11,7 @@ Provides APIs to manage the file retrieval result.
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from '@ohos.file.sendablePhotoAccessHelper';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## close

@@ -9,7 +9,7 @@ Provide functions and keep a decrypt module. Before calling an MediaKeySession m
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@ohos.multimedia.drm';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## checkMediaKeyStatus

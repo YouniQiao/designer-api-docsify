@@ -9,7 +9,7 @@ Represents the device-cloud file version management class. It allows you to mana
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@ohos.file.cloudSync';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## clearFileConflict

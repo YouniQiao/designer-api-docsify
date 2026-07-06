@@ -13,7 +13,7 @@ Describes the parameters of the Gatt client's descriptor read request.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@ohos.bluetoothManager';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid

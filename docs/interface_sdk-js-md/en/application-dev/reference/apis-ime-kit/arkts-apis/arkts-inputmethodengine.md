@@ -9,7 +9,7 @@ The **inputMethodEngine** module is oriented to input method applications (inclu
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@ohos.inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## Summary
@@ -18,10 +18,10 @@ import { inputMethodEngine } from '@ohos.inputMethodEngine';
 
 | Name | Description |
 | --- | --- |
-| [createKeyboardDelegate](arkts-ime-createkeyboarddelegate-f.md#createkeyboarddelegate-1) | Obtains a [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md#keyboarddelegate) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more. |
-| [getInputMethodAbility](arkts-ime-getinputmethodability-f.md#getinputmethodability-1) | Obtains an [InputMethodAbility](arkts-ime-inputmethodability-i.md#inputmethodability) instance for the input method. This API can be called only by an input method. The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/ destroy an input method panel, and the like. |
-| [getInputMethodEngine](arkts-ime-getinputmethodengine-f.md#getinputmethodengine-1) | Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-i.md#inputmethodengine) instance for the input method. The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event. |
-| [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) | Obtains a [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md#keyboarddelegate) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more. |
+| [createKeyboardDelegate](arkts-ime-createkeyboarddelegate-f.md#createkeyboarddelegate-1) | Obtains a [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more. |
+| [getInputMethodAbility](arkts-ime-getinputmethodability-f.md#getinputmethodability-1) | Obtains an [InputMethodAbility](arkts-ime-inputmethodability-i.md) instance for the input method. This API can be called only by an input method. The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/ destroy an input method panel, and the like. |
+| [getInputMethodEngine](arkts-ime-getinputmethodengine-f.md#getinputmethodengine-1) | Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-i.md) instance for the input method. The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event. |
+| [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) | Obtains a [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more. |
 
 ### Interfaces
 

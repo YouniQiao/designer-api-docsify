@@ -9,7 +9,7 @@ The **uniformTypeDescriptor** module abstracts and defines uniform data types.
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from '@ohos.data.uniformTypeDescriptor';
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## Summary

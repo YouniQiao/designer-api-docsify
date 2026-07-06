@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from '@ohos.data.uniformTypeDescriptor';
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## getUniformDataTypesByFilenameExtension

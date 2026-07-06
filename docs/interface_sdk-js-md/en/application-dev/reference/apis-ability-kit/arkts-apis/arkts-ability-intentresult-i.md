@@ -9,7 +9,7 @@ Defines the return result of intent execution. The [generic type](../../../../qu
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@ohos.app.ability.insightIntent';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## code

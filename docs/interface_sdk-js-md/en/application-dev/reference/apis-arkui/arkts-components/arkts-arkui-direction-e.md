@@ -9,7 +9,7 @@ Sets the horizontal layout of elements.
 ## Ltr
 
 ```TypeScript
-Ltr = 0
+Ltr
 ```
 
 Elements are laid out from left to right.
@@ -25,7 +25,7 @@ Elements are laid out from left to right.
 ## Rtl
 
 ```TypeScript
-Rtl = 1
+Rtl
 ```
 
 Elements are laid out from right to left.
@@ -41,7 +41,7 @@ Elements are laid out from right to left.
 ## Auto
 
 ```TypeScript
-Auto = 2
+Auto
 ```
 
 Use the default layout direction.

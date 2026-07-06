@@ -11,7 +11,7 @@ The **performanceMonitor** module provides APIs for monitoring performance metri
 ## Modules to Import
 
 ```TypeScript
-import { performanceMonitor } from '@ohos.arkui.performanceMonitor';
+import { performanceMonitor } from '@kit.ArkUI';
 ```
 
 ## Summary

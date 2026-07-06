@@ -9,7 +9,7 @@ Options for creating a menu item instance.
 ## Modules to Import
 
 ```TypeScript
-import { ComposeTitleBarV2MenuItemParams, ComposeTitleBarV2, ComposeTitleBarV2MenuItem } from '@ohos.arkui.advanced.ComposeTitleBarV2';
+import { ComposeTitleBarV2MenuItemParams, ComposeTitleBarV2, ComposeTitleBarV2MenuItem } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription

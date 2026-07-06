@@ -2,7 +2,7 @@
 
 定义Chip前缀符号图标配置。
 
-**继承/实现关系：** ChipV2PrefixSymbolIconConfig extends [ChipV2SymbolIconConfig](arkts-arkui-chipv2symboliconconfig-i.md#chipv2symboliconconfig)
+**继承/实现关系：** ChipV2PrefixSymbolIconConfig extends [ChipV2SymbolIconConfig](arkts-arkui-chipv2symboliconconfig-i.md)
 
 **起始版本：** 26.0.0
 

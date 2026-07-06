@@ -9,7 +9,7 @@ Defines custom cursor resources.
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@ohos.multimodalInput.pointer';
+import { pointer } from '@kit.InputKit';
 ```
 
 ## focusX

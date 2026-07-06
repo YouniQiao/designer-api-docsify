@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@ohos.multimodalInput.inputEventClient';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## injectMouseEvent
@@ -27,7 +27,7 @@ Injects a mouse/touchpad event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mouseEvent | MouseEventData | Yes | Mouse/touchpad event to inject.[Action](arkts-input-action-e.md#action) in this parameter cannot be set to **CANCEL**. |
+| mouseEvent | MouseEventData | Yes | Mouse/touchpad event to inject.[Action](arkts-input-action-e.md) in this parameter cannot be set to **CANCEL**. |
 
 **Error codes:**
 
@@ -35,7 +35,7 @@ Injects a mouse/touchpad event.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 and later |
 
 **Example**
 

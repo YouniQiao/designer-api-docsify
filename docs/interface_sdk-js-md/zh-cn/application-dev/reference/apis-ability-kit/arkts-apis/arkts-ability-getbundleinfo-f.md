@@ -20,7 +20,7 @@ function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncC
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示要查询的应用Bundle名称。 |
 | bundleFlags | number | 是 | 指定返回的BundleInfo所包含的信息。 |
-| callback | AsyncCallback&lt;BundleInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为获取到的BundleInfo；否则为错误对象。 |
+| callback | AsyncCallback&lt;BundleInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的BundleInfo；否则为错误对象。 |
 
 **错误码：**
 
@@ -80,7 +80,7 @@ function getBundleInfo(bundleName: string, bundleFlags: number, userId: number, 
 | bundleName | string | 是 | 表示要查询的应用Bundle名称。 |
 | bundleFlags | number | 是 | 指定返回的BundleInfo所包含的信息。 |
 | userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。 |
-| callback | AsyncCallback&lt;BundleInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为获取到的bundleInfo；否则为错误对象。 |
+| callback | AsyncCallback&lt;BundleInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的bundleInfo；否则为错误对象。 |
 
 **错误码：**
 

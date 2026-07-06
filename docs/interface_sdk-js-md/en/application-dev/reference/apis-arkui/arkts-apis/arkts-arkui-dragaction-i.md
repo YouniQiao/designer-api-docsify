@@ -9,7 +9,7 @@ Implements a **DragAction** object to subscribe to drag state changes and start 
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@ohos.arkui.dragController';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## off('statusChange')

@@ -9,7 +9,7 @@ The **accountManager** module provides APIs for account management of enterprise
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@ohos.enterprise.accountManager';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## Summary

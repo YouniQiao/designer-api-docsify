@@ -11,7 +11,7 @@ Information about an exempted application.
 ## Modules to Import
 
 ```TypeScript
-import { deviceStandby } from '@ohos.resourceschedule.deviceStandby';
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## duration

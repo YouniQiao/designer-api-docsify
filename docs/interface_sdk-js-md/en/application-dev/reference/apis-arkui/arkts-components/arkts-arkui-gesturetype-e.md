@@ -172,7 +172,7 @@ Swipe gesture used to select text content by dragging within an input box compon
 CONTEXT_MENU_HOVER_GESTURE = 11
 ```
 
-Context menu hover gesture. It is a special type of long-press gesture and triggers the **hoverScale** animation effect of the menu during the long-press process (this behavior requires enabling the **hoverScaleInterruption** attribute of [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md#contextmenuanimationoptions) for support).
+Context menu hover gesture. It is a special type of long-press gesture and triggers the **hoverScale** animation effect of the menu during the long-press process (this behavior requires enabling the **hoverScaleInterruption** attribute of [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md) for support).
 
 **Since:** 23
 

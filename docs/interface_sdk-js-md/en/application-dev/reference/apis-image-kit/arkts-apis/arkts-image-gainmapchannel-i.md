@@ -9,7 +9,7 @@ Describes the data content of a single channel of the gain map. For details, see
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## alternateOffset

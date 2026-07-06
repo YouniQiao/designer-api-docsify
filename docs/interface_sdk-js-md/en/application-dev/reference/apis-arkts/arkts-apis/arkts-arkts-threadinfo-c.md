@@ -9,7 +9,7 @@ Describes the internal information about a worker thread.
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@ohos.taskpool';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## priority

@@ -1,8 +1,8 @@
 # AutoExposure
 
-AutoExposure inherits from [AutoExposureQuery](arkts-camera-autoexposurequery-i.md#autoexposurequery). It provides APIs related to auto exposure.
+AutoExposure inherits from [AutoExposureQuery](arkts-camera-autoexposurequery-i.md). It provides APIs related to auto exposure.
 
-**Inheritance/Implementation:** AutoExposure extends [AutoExposureQuery](arkts-camera-autoexposurequery-i.md#autoexposurequery)
+**Inheritance/Implementation:** AutoExposure extends [AutoExposureQuery](arkts-camera-autoexposurequery-i.md)
 
 **Since:** 11
 
@@ -11,7 +11,7 @@ AutoExposure inherits from [AutoExposureQuery](arkts-camera-autoexposurequery-i.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getExposureMode
@@ -32,7 +32,7 @@ Obtains the exposure mode in use. > **NOTE** > > This API directly returns an in
 
 | Type | Description |
 | --- | --- |
-| ExposureMode | Exposure mode obtained. If the operation fails, undefined is returned and an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is thrown. |
+| ExposureMode | Exposure mode obtained. If the operation fails, undefined is returned and an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 
@@ -58,7 +58,7 @@ Obtains the exposure value in use.
 
 | Type | Description |
 | --- | --- |
-| number | Exposure value obtained. There is a step for EV. For example, if the step is 0.5 and thisparameter is set to 1.2, the EV that takes effect is 1.0.<br>If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) isreturned. |
+| number | Exposure value obtained. There is a step for EV. For example, if the step is 0.5 and thisparameter is set to 1.2, the EV that takes effect is 1.0.<br>If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) isreturned. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Obtains the metering point of the camera device.
 
 | Type | Description |
 | --- | --- |
-| Point | Metering point obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| Point | Metering point obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -154,14 +154,14 @@ Sets an exposure compensation value (EV). Before the setting, you are advised to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposureBias | number | Yes | EV. The supported EV range can be obtained by calling[getExposureBiasRange](arkts-camera-autoexposurequery-i.md#getexposurebiasrange-1). If thevalue passed is not within the supported range, the nearest critical point is used.<br>Exposure compensationis adjusted in steps, and the step size may vary across devices due to hardware differences. For example, ifthe step size is 0.5, setting a value of 1.2 would result in an actual effective exposure compensation valueof 1.0.<br>If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| exposureBias | number | Yes | EV. The supported EV range can be obtained by calling[getExposureBiasRange](arkts-camera-autoexposurequery-i.md#getexposurebiasrange-1). If thevalue passed is not within the supported range, the nearest critical point is used.<br>Exposure compensationis adjusted in steps, and the step size may vary across devices due to hardware differences. For example, ifthe step size is 0.5, setting a value of 1.2 would result in an actual effective exposure compensation valueof 1.0.<br>If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
 
 ## setExposureMode
 
@@ -188,7 +188,7 @@ Sets an exposure mode. Before the setting, call [isExposureModeSupported](arkts-
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 19 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 19 and later |
 
 ## setMeteringPoint
 

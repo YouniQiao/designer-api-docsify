@@ -1,12 +1,12 @@
 # VideoPlayer
 
-视频播放管理类，用于管理和播放视频媒体。在调用VideoPlayer的方法前，需要先通过 [createVideoPlayer()](arkts-media-createvideoplayer-f.md#createvideoplayer-1)构建 一个VideoPlayer实例。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer](arkts-media-media-n.md#media)替代。
+视频播放管理类，用于管理和播放视频媒体。在调用VideoPlayer的方法前，需要先通过 [createVideoPlayer()](arkts-media-createvideoplayer-f.md#createvideoplayer-1)构建 一个VideoPlayer实例。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer](arkts-media-media-n.md)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [media:media](arkts-media-media-n.md#media)
+**替代接口：** [media:media](arkts-media-media-n.md)
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 

@@ -6,7 +6,7 @@ Enumerates the file open modes.
 
 **Deprecated since:** 23
 
-**Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
+**Substitutes:** [OpenMode](arkts-corefile-openmode-n.md#openmode)
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -24,7 +24,7 @@ Read mode.
 
 **Deprecated since:** 23
 
-**Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
+**Substitutes:** [OpenMode](arkts-corefile-openmode-n.md#openmode)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +44,7 @@ Write mode.
 
 **Deprecated since:** 23
 
-**Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
+**Substitutes:** [OpenMode](arkts-corefile-openmode-n.md#openmode)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +64,7 @@ Read/Write mode.
 
 **Deprecated since:** 23
 
-**Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
+**Substitutes:** [OpenMode](arkts-corefile-openmode-n.md#openmode)
 
 **Model restriction:** This API can be used only in the stage model.
 

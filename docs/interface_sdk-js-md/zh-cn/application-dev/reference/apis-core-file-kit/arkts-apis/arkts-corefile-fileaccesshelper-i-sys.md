@@ -1124,7 +1124,7 @@ try {
 getRoots(): Promise<RootIterator>
 ```
 
-以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用Promise异步回调。 该方法返回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileiterator-i-sys.md#next-1)方法返回[RootInfo](arkts-corefile-rootinfo-i-sys.md#rootinfo)。
+以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用Promise异步回调。 该方法返回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileiterator-i-sys.md#next-1)方法返回[RootInfo](arkts-corefile-rootinfo-i-sys.md)。
 
 **起始版本：** 9
 
@@ -1219,7 +1219,7 @@ async function getRoots() {
 getRoots(callback: AsyncCallback<RootIterator>): void
 ```
 
-以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用callback异步回调。 callback带回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileiterator-i-sys.md#next-1)方法返回 [RootInfo](arkts-corefile-rootinfo-i-sys.md#rootinfo)。
+以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用callback异步回调。 callback带回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileiterator-i-sys.md#next-1)方法返回 [RootInfo](arkts-corefile-rootinfo-i-sys.md)。
 
 **起始版本：** 9
 
@@ -2343,8 +2343,8 @@ query(uri: string, metaJson: string) : Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | string | 是 | 所选文件或目录的uri（从[FileInfo](arkts-corefile-fileinfo-i-sys.md#fileinfo)中获取）。 |
-| metaJson | string | 是 | json字符串，包含查询属性[FILEKEY](arkts-corefile-filekey-e-sys.md#filekey) 。 |
+| uri | string | 是 | 所选文件或目录的uri（从[FileInfo](arkts-corefile-fileinfo-i-sys.md)中获取）。 |
+| metaJson | string | 是 | json字符串，包含查询属性[FILEKEY](arkts-corefile-filekey-e-sys.md) 。 |
 
 **返回值：**
 
@@ -2399,8 +2399,8 @@ query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | string | 是 | 所选文件或目录的uri（从[FileInfo](arkts-corefile-fileinfo-i-sys.md#fileinfo)中获取）。 |
-| metaJson | string | 是 | json字符串，包含查询属性[FILEKEY](arkts-corefile-filekey-e-sys.md#filekey)。 |
+| uri | string | 是 | 所选文件或目录的uri（从[FileInfo](arkts-corefile-fileinfo-i-sys.md)中获取）。 |
+| metaJson | string | 是 | json字符串，包含查询属性[FILEKEY](arkts-corefile-filekey-e-sys.md)。 |
 | callback | AsyncCallback&lt;string&gt; | 是 | 返回json字符串，包括查询属性和值。 |
 
 **示例：**

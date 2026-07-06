@@ -9,7 +9,7 @@ The MediaSource class defines the media data information, which is from [createM
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableOfflineCache

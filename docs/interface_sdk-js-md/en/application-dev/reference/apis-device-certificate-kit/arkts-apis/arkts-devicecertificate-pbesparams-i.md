@@ -9,7 +9,7 @@ Represents PBES algorithm parameters. Currently, only PBES2 is supported.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## encryptionAlgorithm

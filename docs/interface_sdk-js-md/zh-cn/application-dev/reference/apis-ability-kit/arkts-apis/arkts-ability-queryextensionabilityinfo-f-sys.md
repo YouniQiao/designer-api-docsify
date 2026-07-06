@@ -23,8 +23,8 @@ function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAb
 | --- | --- | --- | --- |
 | want | Want | 是 | 表示包含要查询的应用Bundle名称的Want。 |
 | extensionAbilityType | ExtensionAbilityType | 是 | 标识extensionAbility的类型。 |
-| extensionAbilityFlags | number | 是 | 表示用于指定将返回的ExtensionInfo对象中包含的信息的标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-extensionabilityflag-e-sys.md#extensionabilityflag)。 |
-| callback | AsyncCallback&lt;Array&lt;ExtensionAbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为获取到Array&lt;ExtensionAbilityInfo&gt;；否则为错误对象。 |
+| extensionAbilityFlags | number | 是 | 表示用于指定将返回的ExtensionInfo对象中包含的信息的标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-extensionabilityflag-e-sys.md)。 |
+| callback | AsyncCallback&lt;Array&lt;ExtensionAbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到Array&lt;ExtensionAbilityInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -90,9 +90,9 @@ function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAb
 | --- | --- | --- | --- |
 | want | Want | 是 | 表示包含要查询的应用Bundle名称的Want。 |
 | extensionAbilityType | ExtensionAbilityType | 是 | 标识extensionAbility的类型。 |
-| extensionAbilityFlags | number | 是 | 表示用于指定将返回的ExtensionInfo对象中包含的信息的标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-extensionabilityflag-e-sys.md#extensionabilityflag)。 |
+| extensionAbilityFlags | number | 是 | 表示用于指定将返回的ExtensionInfo对象中包含的信息的标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-extensionabilityflag-e-sys.md)。 |
 | userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。 |
-| callback | AsyncCallback&lt;Array&lt;ExtensionAbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为获取到Array&lt;ExtensionAbilityInfo&gt;；否则为错误对象。 |
+| callback | AsyncCallback&lt;Array&lt;ExtensionAbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到Array&lt;ExtensionAbilityInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -160,7 +160,7 @@ function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAb
 | --- | --- | --- | --- |
 | want | Want | 是 | 表示包含要查询的应用Bundle名称的Want。 |
 | extensionAbilityType | ExtensionAbilityType | 是 | 标识extensionAbility的类型。 |
-| extensionAbilityFlags | number | 是 | 表示用于指定将返回的ExtensionInfo对象中包含的信息的标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-extensionabilityflag-e-sys.md#extensionabilityflag)。 |
+| extensionAbilityFlags | number | 是 | 表示用于指定将返回的ExtensionInfo对象中包含的信息的标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-extensionabilityflag-e-sys.md)。 |
 | userId | number | 否 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取，默认值：调用方所在用户，取值范围：大于等于0。 |
 
 **返回值：**

@@ -9,7 +9,7 @@ Provides the **KVManager** instance configuration, including the bundle name of 
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@ohos.data.distributedKVStore';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## bundleName

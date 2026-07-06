@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@ohos.arkui.ArcAlphabetIndexer';
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -12,7 +12,7 @@ import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@ohos.arkui.Arc
 
 | Name | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following events are supported. |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following events are supported. |
 
 ### Interfaces
 

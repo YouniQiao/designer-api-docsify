@@ -9,7 +9,7 @@ Represents the received data, including the channel ID and data.
 ## Modules to Import
 
 ```TypeScript
-import { proxyChannelManager } from '@ohos.distributedsched.proxyChannelManager';
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## channelId

@@ -9,7 +9,7 @@ Defines the breakpoint configuration options for container dimension analysis. S
 ## Modules to Import
 
 ```TypeScript
-import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@ohos.arkui.components.ContainerReader';
+import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@kit.ArkUI';
 ```
 
 ## height

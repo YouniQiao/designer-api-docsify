@@ -1,8 +1,8 @@
 # CapsuleSegmentButtonConstructionOptions
 
-Represents configuration options for creating a **SegmentButton** component consisting of capsule-style segmented buttons. Inherits from [CommonSegmentButtonOptions](arkts-arkui-commonsegmentbuttonoptions-i.md#commonsegmentbuttonoptions).
+Represents configuration options for creating a **SegmentButton** component consisting of capsule-style segmented buttons. Inherits from [CommonSegmentButtonOptions](arkts-arkui-commonsegmentbuttonoptions-i.md).
 
-**Inheritance/Implementation:** CapsuleSegmentButtonConstructionOptions extends [CommonSegmentButtonOptions](arkts-arkui-commonsegmentbuttonoptions-i.md#commonsegmentbuttonoptions)
+**Inheritance/Implementation:** CapsuleSegmentButtonConstructionOptions extends [CommonSegmentButtonOptions](arkts-arkui-commonsegmentbuttonoptions-i.md)
 
 **Since:** 11
 
@@ -11,7 +11,7 @@ Represents configuration options for creating a **SegmentButton** component cons
 ## Modules to Import
 
 ```TypeScript
-import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions, SegmentButtonIconTextItem, SegmentButtonItemOptions, SegmentButtonTextItem, CapsuleSegmentButtonOptions, SegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonItemTuple, SegmentButton, SegmentButtonItemArray, SegmentButtonItemOptionsArray, SegmentButtonIconItem, BorderRadiusMode, TabSegmentButtonConstructionOptions, TabSegmentButtonOptions, ItemRestriction, DimensionNoPercentage } from '@ohos.arkui.advanced.SegmentButton';
+import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions, SegmentButtonIconTextItem, SegmentButtonItemOptions, SegmentButtonTextItem, CapsuleSegmentButtonOptions, SegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonItemTuple, SegmentButton, SegmentButtonItemArray, SegmentButtonItemOptionsArray, SegmentButtonIconItem, BorderRadiusMode, TabSegmentButtonConstructionOptions, TabSegmentButtonOptions, ItemRestriction, DimensionNoPercentage } from '@kit.ArkUI';
 ```
 
 ## buttons

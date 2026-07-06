@@ -1,8 +1,8 @@
 # UIAbilityContext
 
-UIAbilityContext是需要保存状态的[UIAbility](arkts-app-ability-uiability.md)所对应的context，继承自[Context](arkts-ability-context-depr-i.md#context)，提供 UIAbility的相关配置信息以及操作UIAbility和ServiceExtensionAbility的方法，如启动UIAbility，停止当前UIAbilityContext所属的UIAbility，启动、停止、连接、断开连接 ServiceExtensionAbility等。
+UIAbilityContext是需要保存状态的[UIAbility](arkts-app-ability-uiability.md)所对应的context，继承自[Context](arkts-ability-context-depr-i.md)，提供 UIAbility的相关配置信息以及操作UIAbility和ServiceExtensionAbility的方法，如启动UIAbility，停止当前UIAbilityContext所属的UIAbility，启动、停止、连接、断开连接 ServiceExtensionAbility等。
 
-**继承/实现关系：** UIAbilityContext extends [Context](arkts-ability-context-t.md#context)
+**继承/实现关系：** UIAbilityContext extends [Context](arkts-ability-context-t.md)
 
 **起始版本：** 9
 
@@ -29,7 +29,7 @@ backToCallerAbilityWithResult(abilityResult: AbilityResult, requestCode: string)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | abilityResult | AbilityResult | 是 | 包含目标方返回给拉起方的结果。 |
-| requestCode | string | 是 | 通过[startAbilityForResult](arkts-ability-uiabilitycontext-c.md#startabilityforresult-1)或[openLink](arkts-ability-uiabilitycontext-c.md#openlink-1)拉起目标方Ability且需要目标方返回结果时，系统生成的用于标识本次调用的requestCode。该值可以通过want中的[CALLER_REQUEST_CODE](arkts-app-ability-wantconstant.md#wantconstant)字段获取。 |
+| requestCode | string | 是 | 通过[startAbilityForResult](arkts-ability-uiabilitycontext-c.md#startabilityforresult-1)或[openLink](arkts-ability-uiabilitycontext-c.md#openlink-1)拉起目标方Ability且需要目标方返回结果时，系统生成的用于标识本次调用的requestCode。该值可以通过want中的[CALLER_REQUEST_CODE](arkts-app-ability-wantconstant.md)字段获取。 |
 
 **返回值：**
 
@@ -128,14 +128,14 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 10 |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10 |
-| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed.<br>**适用版本：** 10 |
-| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires.<br>**适用版本：** 10 |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10 |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10 |
-| [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI.<br>**适用版本：** 10 |
-| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out.<br>**适用版本：** 10 |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 10+ |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed.<br>**适用版本：** 10+ |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires.<br>**适用版本：** 10+ |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
+| [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI.<br>**适用版本：** 10+ |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out.<br>**适用版本：** 10+ |
 
 ## connectUIServiceExtensionAbility
 
@@ -164,7 +164,7 @@ connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnect
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;UIServiceProxy&gt; | Promise对象，包含connectUIServiceExtensionAbility执行后返回的[UIServiceProxy](arkts-ability-uiserviceproxy-i.md#uiserviceproxy)对象。 |
+| Promise&lt;UIServiceProxy&gt; | Promise对象，包含connectUIServiceExtensionAbility执行后返回的[UIServiceProxy](arkts-ability-uiserviceproxy-i.md)对象。 |
 
 **错误码：**
 
@@ -498,7 +498,7 @@ openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<Abili
 | [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
-| [16000136](../errorcode-ability.md#16000136-不允许通过app-linking方式拉起应用自身uiability) | The UIAbility is prohibited from launching itself via App Linking.<br>**适用版本：** 23 |
+| [16000136](../errorcode-ability.md#16000136-不允许通过app-linking方式拉起应用自身uiability) | The UIAbility is prohibited from launching itself via App Linking.<br>**适用版本：** 23+ |
 
 ## reportDrawnCompleted
 
@@ -568,9 +568,9 @@ requestDialogService(want: Want, result: AsyncCallback<dialogRequest.RequestResu
 | [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10 |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10 |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
 
 ## requestDialogService
 
@@ -616,9 +616,9 @@ requestDialogService(want: Want): Promise<dialogRequest.RequestResult>
 | [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10 |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10 |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
 
 ## restartApp
 
@@ -930,7 +930,7 @@ setMissionWindowIcon(windowIcon: image.PixelMap): Promise<void>
 setOnNewWantSkipScenarios(scenarios: number): Promise<void>
 ```
 
-在特定场景下拉起UIAbility时，如果不需要触发[onNewWant](arkts-ability-uiability-c.md#onnewwant-1)生命周期回调，可以通过该接口设置。仅支持在主线 程调用。使用Promise异步回调。 > **说明：** > > 该接口通常用于[onCreate](arkts-ability-uiability-c.md#oncreate-1)生命周期回调中。入参取值建议包含所有的 > [Scenarios](arkts-ability-scenarios-e.md#scenarios)枚举值。详见下方示例代码。
+在特定场景下拉起UIAbility时，如果不需要触发[onNewWant](arkts-ability-uiability-c.md#onnewwant-1)生命周期回调，可以通过该接口设置。仅支持在主线 程调用。使用Promise异步回调。 > **说明：** > > 该接口通常用于[onCreate](arkts-ability-uiability-c.md#oncreate-1)生命周期回调中。入参取值建议包含所有的 > [Scenarios](arkts-ability-scenarios-e.md)枚举值。详见下方示例代码。
 
 **起始版本：** 20
 
@@ -944,7 +944,7 @@ setOnNewWantSkipScenarios(scenarios: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scenarios | number | 是 | 取值范围请参考[Scenarios](arkts-ability-scenarios-e.md#scenarios)。 |
+| scenarios | number | 是 | 取值范围请参考[Scenarios](arkts-ability-scenarios-e.md)。 |
 
 **返回值：**
 
@@ -1056,19 +1056,19 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10 |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10 |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10 |
-| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API versiongreater than 11.<br>**适用版本：** 12 |
-| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found.<br>**适用版本：** 12 |
-| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12 |
-| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14 |
-| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14 |
-| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14 |
-| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14 |
-| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
+| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API versiongreater than 11.<br>**适用版本：** 12+ |
+| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found.<br>**适用版本：** 12+ |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12+ |
+| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
+| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
+| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
 ## startAbility
 
@@ -1100,35 +1100,35 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 9 |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 9+ |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
 | [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag isforbidden.<br>**适用版本：** 9 |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag isforbidden.<br>**适用版本：** 9+ |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10 |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10 |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support.<br>**适用版本：** 12 |
-| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API versiongreater than 11.<br>**适用版本：** 12 |
-| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found.<br>**适用版本：** 12 |
-| [16000067](../errorcode-ability.md#16000067-ability启动参数校验失败) | The StartOptions check failed.<br>**适用版本：** 12 |
-| [16000068](../errorcode-ability.md#16000068-ability已经在运行中) | The ability is already running.<br>**适用版本：** 12 |
-| [16300003](../errorcode-ability.md#16300003-目标应用程序不是自身应用程序) | The target application is not the current application.<br>**适用版本：** 12 |
-| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12 |
-| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14 |
-| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14 |
-| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14 |
-| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14 |
-| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support.<br>**适用版本：** 12+ |
+| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API versiongreater than 11.<br>**适用版本：** 12+ |
+| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found.<br>**适用版本：** 12+ |
+| [16000067](../errorcode-ability.md#16000067-ability启动参数校验失败) | The StartOptions check failed.<br>**适用版本：** 12+ |
+| [16000068](../errorcode-ability.md#16000068-ability已经在运行中) | The ability is already running.<br>**适用版本：** 12+ |
+| [16300003](../errorcode-ability.md#16300003-目标应用程序不是自身应用程序) | The target application is not the current application.<br>**适用版本：** 12+ |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12+ |
+| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
+| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
+| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
 ## startAbility
 
@@ -1177,23 +1177,23 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 | [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10 |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10 |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support.<br>**适用版本：** 12 |
-| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API versiongreater than 11.<br>**适用版本：** 12 |
-| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found.<br>**适用版本：** 12 |
-| [16000067](../errorcode-ability.md#16000067-ability启动参数校验失败) | The StartOptions check failed.<br>**适用版本：** 12 |
-| [16000068](../errorcode-ability.md#16000068-ability已经在运行中) | The ability is already running.<br>**适用版本：** 12 |
-| [16300003](../errorcode-ability.md#16300003-目标应用程序不是自身应用程序) | The target application is not the current application.<br>**适用版本：** 12 |
-| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12 |
-| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14 |
-| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14 |
-| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14 |
-| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14 |
-| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support.<br>**适用版本：** 12+ |
+| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API versiongreater than 11.<br>**适用版本：** 12+ |
+| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found.<br>**适用版本：** 12+ |
+| [16000067](../errorcode-ability.md#16000067-ability启动参数校验失败) | The StartOptions check failed.<br>**适用版本：** 12+ |
+| [16000068](../errorcode-ability.md#16000068-ability已经在运行中) | The ability is already running.<br>**适用版本：** 12+ |
+| [16300003](../errorcode-ability.md#16300003-目标应用程序不是自身应用程序) | The target application is not the current application.<br>**适用版本：** 12+ |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12+ |
+| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
+| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
+| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
 ## startAbilityByCall
 
@@ -1201,7 +1201,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 startAbilityByCall(want: Want): Promise<Caller>
 ```
 
-该接口用于获取[Caller](arkts-ability-caller-i.md#caller)通信对象，以便于与 [Callee](arkts-ability-callee-i.md#callee)进行通信。如果指定UIAbility未启动，则会将UIAbility启动至前台或后台。使用Promise异步回调。仅支持在主线程调 用。 该接口不支持拉起启动模式为[specified模式](../../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility。 > **说明：** > > - 跨设备场景下，调用方与目标方必须为同一应用。 > > - 同设备场景下，要求调用方与目标方为不同应用，且调用方具备ohos.permission.ABILITY_BACKGROUND_COMMUNICATION权限（该权限仅系统应用可申请）。 > > - 此外如果应用需要在后台调用该接口，需要具备ohos.permission.START_ABILITIES_FROM_BACKGROUND（该权限仅系统应用可申请）。更多的组件启动规则详见 > [组件启动规则（Stage模型）](../../../../application-models/component-startup-rules.md)。 > > **说明：** > > - API version 10及之前版本，需申请ohos.permission.ABILITY_BACKGROUND_COMMUNICATION（该权限仅系统应用可用）。 > > - API version 11开始，仅需申请ohos.permission.DISTRIBUTED_DATASYNC（该权限仅当执行应用间建链操作时由软总线实施权限校验，在应用拉起阶段不做校验）。
+该接口用于获取[Caller](arkts-ability-caller-i.md)通信对象，以便于与 [Callee](arkts-ability-callee-i.md)进行通信。如果指定UIAbility未启动，则会将UIAbility启动至前台或后台。使用Promise异步回调。仅支持在主线程调 用。 该接口不支持拉起启动模式为[specified模式](../../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility。 > **说明：** > > - 跨设备场景下，调用方与目标方必须为同一应用。 > > - 同设备场景下，要求调用方与目标方为不同应用，且调用方具备ohos.permission.ABILITY_BACKGROUND_COMMUNICATION权限（该权限仅系统应用可申请）。 > > - 此外如果应用需要在后台调用该接口，需要具备ohos.permission.START_ABILITIES_FROM_BACKGROUND（该权限仅系统应用可申请）。更多的组件启动规则详见 > [组件启动规则（Stage模型）](../../../../application-models/component-startup-rules.md)。 > > **说明：** > > - API version 10及之前版本，需申请ohos.permission.ABILITY_BACKGROUND_COMMUNICATION（该权限仅系统应用可用）。 > > - API version 11开始，仅需申请ohos.permission.DISTRIBUTED_DATASYNC（该权限仅当执行应用间建链操作时由软总线实施权限校验，在应用拉起阶段不做校验）。
 
 **起始版本：** 9
 
@@ -1234,23 +1234,23 @@ startAbilityByCall(want: Want): Promise<Caller>
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission.<br>**适用版本：** 9 |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission.<br>**适用版本：** 9+ |
 | [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1.Connect to system service failed.2.Sending restart message to system service failed. 3.System service failed to communicate with dependency module.4.Non-system applications are only allowed to call this interface across devices, not on the current device. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released.<br>**适用版本：** 9 |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10 |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10 |
-| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API version greaterthan 11.<br>**适用版本：** 12 |
-| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12 |
-| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14 |
-| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14 |
-| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14 |
-| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14 |
-| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14 |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released.<br>**适用版本：** 9+ |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
+| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API version greaterthan 11.<br>**适用版本：** 12+ |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12+ |
+| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
+| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
+| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
 ## startAbilityByType
 
@@ -1259,7 +1259,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
 ```
 
-通过type隐式启动[UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability)。使用callback异步回调。仅支持在主线 程调用，仅支持处于前台的应用调用。
+通过type隐式启动[UIExtensionAbility](arkts-ability-uiextensionability-c.md)。使用callback异步回调。仅支持在主线 程调用，仅支持处于前台的应用调用。
 
 **起始版本：** 11
 
@@ -1282,13 +1282,13 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 11 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 11+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 11 |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 11 |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 11 |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 11+ |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 11+ |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 11+ |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released.<br>**适用版本：** 11 |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released.<br>**适用版本：** 11+ |
 
 ## startAbilityByType
 
@@ -1297,7 +1297,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-通过type隐式启动[UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability)。使用Promise异步回调。仅支持在主线程 调用，仅支持处于前台的应用调用。
+通过type隐式启动[UIExtensionAbility](arkts-ability-uiextensionability-c.md)。使用Promise异步回调。仅支持在主线程 调用，仅支持处于前台的应用调用。
 
 **起始版本：** 11
 
@@ -1325,13 +1325,13 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 11 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 11+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 11 |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 11 |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 11 |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 11+ |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 11+ |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 11+ |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released.<br>**适用版本：** 11 |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released.<br>**适用版本：** 11+ |
 
 ## startAbilityForResult
 
@@ -1374,19 +1374,19 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 | [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10 |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10 |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10 |
-| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API version greaterthan 11.<br>**适用版本：** 12 |
-| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found.<br>**适用版本：** 12 |
-| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12 |
-| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14 |
-| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14 |
-| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14 |
-| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14 |
-| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
+| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API version greaterthan 11.<br>**适用版本：** 12+ |
+| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found.<br>**适用版本：** 12+ |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12+ |
+| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
+| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
+| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
 ## startAbilityForResult
 
@@ -1418,31 +1418,31 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 9 |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 9+ |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
 | [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag isforbidden.<br>**适用版本：** 9 |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag isforbidden.<br>**适用版本：** 9+ |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10 |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10 |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10 |
-| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API version greaterthan 11.<br>**适用版本：** 12 |
-| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found.<br>**适用版本：** 12 |
-| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12 |
-| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14 |
-| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14 |
-| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14 |
-| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14 |
-| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
+| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API version greaterthan 11.<br>**适用版本：** 12+ |
+| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found.<br>**适用版本：** 12+ |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12+ |
+| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
+| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
+| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
 ## startAbilityForResult
 
@@ -1491,19 +1491,19 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 | [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10 |
-| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10 |
-| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10 |
-| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API version greaterthan 11.<br>**适用版本：** 12 |
-| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found.<br>**适用版本：** 12 |
-| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12 |
-| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14 |
-| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14 |
-| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14 |
-| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14 |
-| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14 |
-| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
+| [16000018](../errorcode-ability.md#16000018-限制api-11以上版本三方应用跳转) | Redirection to a third-party application is not allowed in API version greaterthan 11.<br>**适用版本：** 12+ |
+| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配应用) | No matching ability is found.<br>**适用版本：** 12+ |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid.<br>**适用版本：** 12+ |
+| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
+| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
+| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
 ## startAppServiceExtensionAbility
 
@@ -1708,9 +1708,9 @@ terminateSelf(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 9 |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 9 |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission.<br>**适用版本：** 9 |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 9+ |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 9+ |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission.<br>**适用版本：** 9+ |
 | [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
@@ -1741,9 +1741,9 @@ terminateSelf(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 9 |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 9 |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission.<br>**适用版本：** 9 |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 9+ |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 9+ |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission.<br>**适用版本：** 9+ |
 | [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
@@ -1776,9 +1776,9 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 9 |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 9 |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission.<br>**适用版本：** 9 |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 9+ |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 9+ |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission.<br>**适用版本：** 9+ |
 | [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
@@ -1816,9 +1816,9 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 9 |
-| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 9 |
-| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission.<br>**适用版本：** 9 |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 9+ |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 9+ |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission.<br>**适用版本：** 9+ |
 | [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |

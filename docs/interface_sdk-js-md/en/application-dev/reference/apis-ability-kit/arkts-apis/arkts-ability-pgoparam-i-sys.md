@@ -11,7 +11,7 @@ Defines the parameters of the PGO configuration file.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@ohos.bundle.installer';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## moduleName

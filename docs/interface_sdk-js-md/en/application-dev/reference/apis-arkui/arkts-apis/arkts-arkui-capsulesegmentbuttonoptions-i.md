@@ -1,8 +1,8 @@
 # CapsuleSegmentButtonOptions
 
-Provides configuration options for capsule-style segmented buttons. Inherits from [CapsuleSegmentButtonConstructionOptions](arkts-arkui-capsulesegmentbuttonconstructionoptions-i.md#capsulesegmentbuttonconstructionoptions).
+Provides configuration options for capsule-style segmented buttons. Inherits from [CapsuleSegmentButtonConstructionOptions](arkts-arkui-capsulesegmentbuttonconstructionoptions-i.md).
 
-**Inheritance/Implementation:** CapsuleSegmentButtonOptions extends [CapsuleSegmentButtonConstructionOptions](arkts-arkui-capsulesegmentbuttonconstructionoptions-i.md#capsulesegmentbuttonconstructionoptions)
+**Inheritance/Implementation:** CapsuleSegmentButtonOptions extends [CapsuleSegmentButtonConstructionOptions](arkts-arkui-capsulesegmentbuttonconstructionoptions-i.md)
 
 **Since:** 11
 
@@ -11,7 +11,7 @@ Provides configuration options for capsule-style segmented buttons. Inherits fro
 ## Modules to Import
 
 ```TypeScript
-import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions, SegmentButtonIconTextItem, SegmentButtonItemOptions, SegmentButtonTextItem, CapsuleSegmentButtonOptions, SegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonItemTuple, SegmentButton, SegmentButtonItemArray, SegmentButtonItemOptionsArray, SegmentButtonIconItem, BorderRadiusMode, TabSegmentButtonConstructionOptions, TabSegmentButtonOptions, ItemRestriction, DimensionNoPercentage } from '@ohos.arkui.advanced.SegmentButton';
+import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions, SegmentButtonIconTextItem, SegmentButtonItemOptions, SegmentButtonTextItem, CapsuleSegmentButtonOptions, SegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonItemTuple, SegmentButton, SegmentButtonItemArray, SegmentButtonItemOptionsArray, SegmentButtonIconItem, BorderRadiusMode, TabSegmentButtonConstructionOptions, TabSegmentButtonOptions, ItemRestriction, DimensionNoPercentage } from '@kit.ArkUI';
 ```
 
 ## type

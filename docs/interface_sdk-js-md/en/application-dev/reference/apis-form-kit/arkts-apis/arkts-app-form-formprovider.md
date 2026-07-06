@@ -9,7 +9,7 @@ The **formProvider** module provides APIs to obtain widget information, update w
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@ohos.app.form.formProvider';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## Summary

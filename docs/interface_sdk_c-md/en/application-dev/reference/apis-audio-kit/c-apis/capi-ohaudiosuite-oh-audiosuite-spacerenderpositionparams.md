@@ -6,7 +6,7 @@ typedef struct OH_AudioSuite_SpaceRenderPositionParams {...} OH_AudioSuite_Space
 
 ## Overview
 
-Definition of the parameter structure for fixed position mode in 3D spatial rendering.Left-hand coordinate system: Extend your left hand, forming an "L" shapewith your thumb and index finger.Point the thumb to the right, the index finger upward, and the remaining fingers forward.This establishes a left-hand coordinate system. In this system, the thumb, index finger,and other fingers represent the positive directions of the x, y, and z axes, respectively.
+Definition of the parameter structure for fixed position mode in 3D spatial rendering.Left-hand coordinate system: Extend your left hand, forming an "L" shape with your thumb and index finger.Point the thumb to the right, the index finger upward, and the remaining fingers forward.This establishes a left-hand coordinate system. In this system, the thumb, index finger,and other fingers represent the positive directions of the x, y, and z axes, respectively.
 
 **Since**: 23
 

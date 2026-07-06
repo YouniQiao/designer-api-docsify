@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PartnerAgentExtensionContext } from '@ohos.FusionConnectivity.PartnerAgentExtensionContext';
+import { PartnerAgentExtensionContext } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

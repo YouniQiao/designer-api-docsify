@@ -9,7 +9,7 @@ Defines the network connection properties.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@ohos.net.connection';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## dnses

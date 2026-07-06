@@ -38,5 +38,5 @@ function wrapKeyItem(keyAlias: string, params: HuksOptions): Promise<HuksReturnR
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) | the input parameter is invalid |
-| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0 |
+| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0+ |
 

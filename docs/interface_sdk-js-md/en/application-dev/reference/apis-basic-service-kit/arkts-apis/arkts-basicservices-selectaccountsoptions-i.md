@@ -9,7 +9,7 @@ Defines the options for selecting accounts.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@ohos.account.appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## allowedAccounts

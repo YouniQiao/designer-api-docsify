@@ -6,7 +6,7 @@ Provides the information about the suspension delay.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DelaySuspendInfo](arkts-backgroundtasks-delaysuspendinfo-i.md#delaysuspendinfo)
+**Substitutes:** [DelaySuspendInfo](arkts-backgroundtasks-delaysuspendinfo-i.md)
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 

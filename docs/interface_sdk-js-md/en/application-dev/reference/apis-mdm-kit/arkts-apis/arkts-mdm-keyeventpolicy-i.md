@@ -9,7 +9,7 @@ Enumerates key event handling policies. When a key event occurs, only the keys f
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@ohos.enterprise.systemManager';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## keyCode

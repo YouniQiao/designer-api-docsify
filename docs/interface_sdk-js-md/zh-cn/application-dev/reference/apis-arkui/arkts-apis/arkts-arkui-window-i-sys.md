@@ -26,8 +26,8 @@ attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| anchorInfo | WindowAnchorInfo | 否 | 一级子窗与主窗保持相对位置不变时的锚点参数。若不传，默认逻辑参考[WindowAnchorInfo](arkts-arkui-windowanchorinfo-i-sys.md#windowanchorinfo)。 |
-| attachOptions | SubWindowAttachOptions | 否 | 设置子窗布局的附加参数。若不传，默认逻辑参考[SubWindowAttachOptions](arkts-arkui-subwindowattachoptions-i-sys.md#subwindowattachoptions)。 |
+| anchorInfo | WindowAnchorInfo | 否 | 一级子窗与主窗保持相对位置不变时的锚点参数。若不传，默认逻辑参考[WindowAnchorInfo](arkts-arkui-windowanchorinfo-i-sys.md)。 |
+| attachOptions | SubWindowAttachOptions | 否 | 设置子窗布局的附加参数。若不传，默认逻辑参考[SubWindowAttachOptions](arkts-arkui-subwindowattachoptions-i-sys.md)。 |
 
 **返回值：**
 
@@ -126,7 +126,7 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
@@ -210,7 +210,7 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
@@ -301,7 +301,7 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
@@ -373,7 +373,7 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
@@ -590,7 +590,7 @@ getTransitionController(): TransitionController
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 
@@ -625,7 +625,7 @@ hide (callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
 **示例：**
@@ -668,7 +668,7 @@ hide(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
 **示例：**
@@ -691,7 +691,7 @@ promise.then(() => {
 hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-windowtype-e.md#windowtype)类型为TYPE_FLOAT），使用callback异步回调。 非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会 被上层的非系统级悬浮窗口遮挡。
+设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-windowtype-e.md)类型为TYPE_FLOAT），使用callback异步回调。 非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会 被上层的非系统级悬浮窗口遮挡。
 
 **起始版本：** 11
 
@@ -769,7 +769,7 @@ export default class EntryAbility extends UIAbility {
 hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>
 ```
 
-设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-windowtype-e.md#windowtype)类型为TYPE_FLOAT），使用Promise异步回调。 非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会 被上层的非系统级悬浮窗口遮挡。
+设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-windowtype-e.md)类型为TYPE_FLOAT），使用Promise异步回调。 非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会 被上层的非系统级悬浮窗口遮挡。
 
 **起始版本：** 11
 
@@ -870,7 +870,7 @@ hideWithAnimation(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: 1. The window is not created or destroyed;2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation.Possible cause: Invalid window type. Only system windows are supported. |
@@ -915,7 +915,7 @@ hideWithAnimation(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: 1. The window is not created or destroyed;2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation.Possible cause: Invalid window type. Only system windows are supported. |
@@ -1101,7 +1101,7 @@ opacity(opacity: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
@@ -1135,7 +1135,7 @@ raiseAboveTarget(windowId: number, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | number | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-i.md#getwindowproperties-1)接口获取到[properties](arkts-arkui-windowproperties-i.md#windowproperties)后，再通过properties.id获取。 |
+| windowId | number | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-i.md#getwindowproperties-1)接口获取到[properties](arkts-arkui-windowproperties-i.md)后，再通过properties.id获取。 |
 | callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
@@ -1211,7 +1211,7 @@ raiseAboveTarget(windowId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | number | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-i.md#getwindowproperties-1)接口获取到[properties](arkts-arkui-windowproperties-i.md#windowproperties)后，再通过properties.id获取。 |
+| windowId | number | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-i.md#getwindowproperties-1)接口获取到[properties](arkts-arkui-windowproperties-i.md)后，再通过properties.id获取。 |
 
 **返回值：**
 
@@ -1290,7 +1290,7 @@ raiseMainWindowAboveTarget(windowId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | number | 是 | 目标主窗口的id，该参数为整数，通过[getWindowProperties](arkts-arkui-window-i.md#getwindowproperties-1)接口获取到[properties](arkts-arkui-windowproperties-i.md#windowproperties)后，再通过properties.id获取。 |
+| windowId | number | 是 | 目标主窗口的id，该参数为整数，通过[getWindowProperties](arkts-arkui-window-i.md#getwindowproperties-1)接口获取到[properties](arkts-arkui-windowproperties-i.md)后，再通过properties.id获取。 |
 
 **返回值：**
 
@@ -1573,7 +1573,7 @@ rotate(rotateOptions: RotateOptions): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
@@ -1620,7 +1620,7 @@ scale(scaleOptions: ScaleOptions): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
@@ -1666,7 +1666,7 @@ setBackdropBlur(radius: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
@@ -1710,7 +1710,7 @@ setBackdropBlurStyle(blurStyle: BlurStyle): void
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -1747,7 +1747,7 @@ setBlur(radius: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
@@ -1787,7 +1787,7 @@ setCornerRadius(cornerRadius: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
@@ -2260,7 +2260,7 @@ setShadow(radius: number, color?: string, offsetX?: number, offsetY?: number): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
@@ -2354,7 +2354,7 @@ setSnapshotSkip(isSkip: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
@@ -2537,7 +2537,7 @@ setTouchableAreas(rects: Array<Rect>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not havethe permission required or a non-system application calls the API.<br>**适用版本：** 26.0.0 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not havethe permission required or a non-system application calls the API.<br>**适用版本：** 26.0.0+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 - 24 |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
@@ -2567,7 +2567,7 @@ setWakeUpScreen(wakeUp: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
@@ -2609,7 +2609,7 @@ setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
@@ -2670,7 +2670,7 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300008](../errorcode-window.md#1300008-显示设备异常) | The display device is abnormal. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -2719,7 +2719,7 @@ setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not havethe permission required or a non-system application calls the API.<br>**适用版本：** 26.0.0 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not havethe permission required or a non-system application calls the API.<br>**适用版本：** 26.0.0+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 20 - 24 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
@@ -2756,7 +2756,7 @@ setWindowMode(mode: WindowMode): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
@@ -2821,7 +2821,7 @@ setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
@@ -2971,7 +2971,7 @@ showWithAnimation(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: 1. The window is not created or destroyed;2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation.Possible cause: Invalid window type. Only system windows are supported. |
@@ -3016,7 +3016,7 @@ showWithAnimation(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: 1. The window is not created or destroyed;2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation.Possible cause: Invalid window type. Only system windows are supported. |
@@ -3059,7 +3059,7 @@ translate(translateOptions: TranslateOptions): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |

@@ -9,7 +9,7 @@ The Filter for Component.
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@ohos.graphics.uiEffect';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## bezierWarp
@@ -542,7 +542,7 @@ Applies a high dynamic range (HDR) brightness enhancement filter to the componen
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 20 - 23 |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API.<br>**Applicable version:** 24 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API.<br>**Applicable version:** 24 and later |
 
 **Example**
 

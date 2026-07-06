@@ -9,7 +9,7 @@ Implements a **WebDataBase** object. > **NOTE** > > - The sample effect is subje
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## deleteHttpAuthCredentials

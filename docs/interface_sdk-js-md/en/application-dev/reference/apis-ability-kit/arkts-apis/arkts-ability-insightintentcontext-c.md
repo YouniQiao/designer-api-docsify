@@ -1,6 +1,6 @@
 # InsightIntentContext
 
-The module provides the context for intent execution. It is used as a property in both the [intent execution base class](arkts-ability-insightintentexecutor-c.md#insightintentexecutor) and [base class decorated with @InsightIntentEntry](arkts-ability-insightintententryexecutor-c.md#insightintententryexecutor) , offering essential capabilities for intent implementation, for example, starting [UIAbility components](arkts-app-ability-uiability.md) within the same application.
+The module provides the context for intent execution. It is used as a property in both the [intent execution base class](arkts-ability-insightintentexecutor-c.md) and [base class decorated with @InsightIntentEntry](arkts-ability-insightintententryexecutor-c.md) , offering essential capabilities for intent implementation, for example, starting [UIAbility components](arkts-app-ability-uiability.md) within the same application.
 
 **Since:** 11
 
@@ -9,7 +9,7 @@ The module provides the context for intent execution. It is used as a property i
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentContext } from '@ohos.app.ability.InsightIntentContext';
+import { InsightIntentContext } from '@kit.AbilityKit';
 ```
 
 ## setReturnModeForUIAbilityForeground
@@ -18,7 +18,7 @@ import { InsightIntentContext } from '@ohos.app.ability.InsightIntentContext';
 setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 ```
 
-Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_ABILITY_FOREGROUND](arkts-ability-executemode-e.md#executemode).
+Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_ABILITY_FOREGROUND](arkts-ability-executemode-e.md).
 
 **Since:** 23
 
@@ -90,7 +90,7 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 ```
 
-Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_EXTENSION_ABILITY](arkts-ability-executemode-e.md#executemode).
+Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_EXTENSION_ABILITY](arkts-ability-executemode-e.md).
 
 **Since:** 23
 

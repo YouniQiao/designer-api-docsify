@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from '@ohos.data.sendableRelationalStore';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## fromSendableAsset

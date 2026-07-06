@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@ohos.notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## publishAsBundle
@@ -43,7 +43,7 @@ function publishAsBundle(
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | The device does not support geofencing.<br>**适用版本：** 23 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | The device does not support geofencing.<br>**适用版本：** 23+ |
 | [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
@@ -53,14 +53,14 @@ function publishAsBundle(
 | [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
 | [1600009](../errorcode-notification.md#1600009-通知发布频度超过限制) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
-| [1600014](../errorcode-notification.md#1600014-没有相关权限) | The right of liveView is not enabled.<br>**适用版本：** 26.0.0 |
+| [1600014](../errorcode-notification.md#1600014-没有相关权限) | The right of liveView is not enabled.<br>**适用版本：** 26.0.0+ |
 | [1600015](../errorcode-notification.md#1600015-当前通知状态不支持重复配置) | The current notification status does not support duplicate configurations. |
 | [1600016](../errorcode-notification.md#1600016-本次更新的通知版本太低) | The notification version for this update is too low. |
 | [1600020](../errorcode-notification.md#1600020-不允许权限管控名单中的应用发布通知) | The application is not allowed to send notifications due to permissionsettings. |
-| [1600025](../errorcode-notification.md#1600025-地理围栏开关关闭) | Geofencing disabled.<br>**适用版本：** 23 |
-| [1600026](../errorcode-notification.md#1600026-位置功能开关关闭) | The location switch is off.<br>**适用版本：** 23 |
-| [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**适用版本：** 23 |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**适用版本：** 26.0.0 |
+| [1600025](../errorcode-notification.md#1600025-地理围栏开关关闭) | Geofencing disabled.<br>**适用版本：** 23+ |
+| [1600026](../errorcode-notification.md#1600026-位置功能开关关闭) | The location switch is off.<br>**适用版本：** 23+ |
+| [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**适用版本：** 23+ |
+| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**适用版本：** 26.0.0+ |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) | Network unreachable. |
 
 **示例：**
@@ -134,7 +134,7 @@ function publishAsBundle(request: NotificationRequest, representativeBundle: str
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | The device does not support geofencing.<br>**适用版本：** 23 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | The device does not support geofencing.<br>**适用版本：** 23+ |
 | [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
@@ -144,14 +144,14 @@ function publishAsBundle(request: NotificationRequest, representativeBundle: str
 | [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
 | [1600009](../errorcode-notification.md#1600009-通知发布频度超过限制) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
-| [1600014](../errorcode-notification.md#1600014-没有相关权限) | The right of liveView is not enabled.<br>**适用版本：** 26.0.0 |
+| [1600014](../errorcode-notification.md#1600014-没有相关权限) | The right of liveView is not enabled.<br>**适用版本：** 26.0.0+ |
 | [1600015](../errorcode-notification.md#1600015-当前通知状态不支持重复配置) | The current notification status does not support duplicate configurations. |
 | [1600016](../errorcode-notification.md#1600016-本次更新的通知版本太低) | The notification version for this update is too low. |
 | [1600020](../errorcode-notification.md#1600020-不允许权限管控名单中的应用发布通知) | The application is not allowed to send notifications due to permissionsettings. |
-| [1600025](../errorcode-notification.md#1600025-地理围栏开关关闭) | Geofencing disabled.<br>**适用版本：** 23 |
-| [1600026](../errorcode-notification.md#1600026-位置功能开关关闭) | The location switch is off.<br>**适用版本：** 23 |
-| [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**适用版本：** 23 |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**适用版本：** 26.0.0 |
+| [1600025](../errorcode-notification.md#1600025-地理围栏开关关闭) | Geofencing disabled.<br>**适用版本：** 23+ |
+| [1600026](../errorcode-notification.md#1600026-位置功能开关关闭) | The location switch is off.<br>**适用版本：** 23+ |
+| [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**适用版本：** 23+ |
+| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**适用版本：** 26.0.0+ |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) | Network unreachable. |
 
 **示例：**
@@ -220,7 +220,7 @@ function publishAsBundle(representativeBundle: BundleOption, request: Notificati
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | The device does not support geofencing.<br>**适用版本：** 23 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | The device does not support geofencing.<br>**适用版本：** 23+ |
 | [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
@@ -230,14 +230,14 @@ function publishAsBundle(representativeBundle: BundleOption, request: Notificati
 | [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
 | [1600009](../errorcode-notification.md#1600009-通知发布频度超过限制) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
-| [1600014](../errorcode-notification.md#1600014-没有相关权限) | The right of liveView is not enabled.<br>**适用版本：** 26.0.0 |
+| [1600014](../errorcode-notification.md#1600014-没有相关权限) | The right of liveView is not enabled.<br>**适用版本：** 26.0.0+ |
 | [1600015](../errorcode-notification.md#1600015-当前通知状态不支持重复配置) | The current notification status does not support duplicate configurations. |
 | [1600016](../errorcode-notification.md#1600016-本次更新的通知版本太低) | The notification version for this update is too low. |
 | [1600020](../errorcode-notification.md#1600020-不允许权限管控名单中的应用发布通知) | The application is not allowed to send notifications due to permissionsettings. |
-| [1600025](../errorcode-notification.md#1600025-地理围栏开关关闭) | Geofencing disabled.<br>**适用版本：** 23 |
-| [1600026](../errorcode-notification.md#1600026-位置功能开关关闭) | The location switch is off.<br>**适用版本：** 23 |
-| [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**适用版本：** 23 |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**适用版本：** 26.0.0 |
+| [1600025](../errorcode-notification.md#1600025-地理围栏开关关闭) | Geofencing disabled.<br>**适用版本：** 23+ |
+| [1600026](../errorcode-notification.md#1600026-位置功能开关关闭) | The location switch is off.<br>**适用版本：** 23+ |
+| [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**适用版本：** 23+ |
+| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**适用版本：** 26.0.0+ |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) | Network unreachable. |
 
 **示例：**

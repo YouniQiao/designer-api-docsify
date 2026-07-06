@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { TestRunner } from '@ohos.application.testRunner';
+import { TestRunner } from '@kit.TestKit';
 ```
 
 ## Summary

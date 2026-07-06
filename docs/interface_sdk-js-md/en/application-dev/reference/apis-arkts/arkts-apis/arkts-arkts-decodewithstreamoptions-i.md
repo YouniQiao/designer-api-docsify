@@ -9,7 +9,7 @@ Defines whether decoding follows data blocks.
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## stream

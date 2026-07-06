@@ -1,8 +1,8 @@
 # X963KdfSpec
 
-密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md#kdfspec)的子类，作为X963KDF密钥派生函数进行密钥派生时的输入。 > **说明：** > > key指的是用户输入的最初的密钥材料。
+密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md)的子类，作为X963KDF密钥派生函数进行密钥派生时的输入。 > **说明：** > > key指的是用户输入的最初的密钥材料。
 
-**继承/实现关系：** X963KdfSpec extends [KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md#kdfspec)
+**继承/实现关系：** X963KdfSpec extends [KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md)
 
 **起始版本：** 22
 

@@ -9,7 +9,7 @@ Represents the information about the web native message connection.
 ## Modules to Import
 
 ```TypeScript
-import { webNativeMessagingExtensionManager } from '@ohos.web.webNativeMessagingExtensionManager';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
 ```
 
 ## bundleName

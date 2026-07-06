@@ -9,7 +9,7 @@ The **HUKS** module provides KeyStore (KS) capabilities, including key managemen
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@ohos.security.huks';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## Summary
@@ -98,7 +98,7 @@ import { huks } from '@ohos.security.huks';
 
 | Name | Description |
 | --- | --- |
-| [HuksHandle](arkts-universalkeystore-hukshandle-i.md) | Defines the struct for a HUKS handle. &gt; **NOTE** &gt; &gt; This API is deprecated since API version 9. You are advised to use &gt; [HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-hukssessionhandle-i.md#hukssessionhandle). |
+| [HuksHandle](arkts-universalkeystore-hukshandle-i.md) | Defines the struct for a HUKS handle. &gt; **NOTE** &gt; &gt; This API is deprecated since API version 9. You are advised to use &gt; [HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-hukssessionhandle-i.md). |
 | [HuksListAliasesReturnResult](arkts-universalkeystore-hukslistaliasesreturnresult-i.md) | Defines the returned key alias array. |
 | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Defines **options** used in the APIs. |
 | [HuksParam](arkts-universalkeystore-huksparam-i.md) | Defines the **param** field in the **properties** array of **options** used in the APIs. |
@@ -115,7 +115,7 @@ import { huks } from '@ohos.security.huks';
 | [HuksChallengePosition](arkts-universalkeystore-hukschallengeposition-e.md) | Enumerates the positions of the 8-byte valid value in a custom challenge generated. |
 | [HuksChallengeType](arkts-universalkeystore-hukschallengetype-e.md) | Enumerates the types of the challenges generated when a key is used. |
 | [HuksCipherMode](arkts-universalkeystore-huksciphermode-e.md) | Enumerates the cipher modes. |
-| [HuksErrorCode](arkts-universalkeystore-hukserrorcode-e.md) | Enumerates the error codes. &gt; **NOTE** &gt; &gt; This API is deprecated since API version 9. You are advised to use &gt; [HuksExceptionErrCode&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huksexceptionerrcode-e.md#huksexceptionerrcode). |
+| [HuksErrorCode](arkts-universalkeystore-hukserrorcode-e.md) | Enumerates the error codes. &gt; **NOTE** &gt; &gt; This API is deprecated since API version 9. You are advised to use &gt; [HuksExceptionErrCode&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huksexceptionerrcode-e.md). |
 | [HuksExceptionErrCode](arkts-universalkeystore-huksexceptionerrcode-e.md) | Enumerates error codes and error details. For details about the error codes, see [Universal Error Codes](../../../../reference/errorcode-universal.md) and [HUKS Error Codes](../../../../reference/apis-universal-keystore-kit/errorcode-huks.md). |
 | [HuksImportKeyType](arkts-universalkeystore-huksimportkeytype-e.md) | Enumerates the types of keys to import. By default, a public key is imported. This field is not required when a symmetric key is imported. |
 | [HuksKeyAlg](arkts-universalkeystore-hukskeyalg-e.md) | Enumerates the key algorithms. |

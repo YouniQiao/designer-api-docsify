@@ -1,6 +1,6 @@
 # CameraInput
 
-Defines the camera input object. It provides camera device information used in [Session](arkts-camera-session-i.md#session).
+Defines the camera input object. It provides camera device information used in [Session](arkts-camera-session-i.md).
 
 **Since:** 10
 
@@ -9,7 +9,7 @@ Defines the camera input object. It provides camera device information used in [
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## closeDelayed

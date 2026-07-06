@@ -11,7 +11,7 @@ Encapsulates the sync root information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudDiskManager } from '@ohos.file.cloudDiskManager';
+import { cloudDiskManager } from '@kit.CoreFileKit';
 ```
 
 ## bundleName

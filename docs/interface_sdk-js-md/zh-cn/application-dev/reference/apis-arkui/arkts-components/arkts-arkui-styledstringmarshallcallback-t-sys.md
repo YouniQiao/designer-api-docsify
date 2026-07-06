@@ -4,7 +4,7 @@
 declare type StyledStringMarshallCallback = (marshallableVal: StyledStringMarshallingValue) => ArrayBuffer
 ```
 
-属性字符串[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#styledstringmarshallingvalue)序列化回调类型。
+属性字符串[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)序列化回调类型。
 
 **起始版本：** 19
 
@@ -24,5 +24,5 @@ declare type StyledStringMarshallCallback = (marshallableVal: StyledStringMarsha
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#styledstringmarshallingvalue)序列化后的数据。 |
+| ArrayBuffer | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)序列化后的数据。 |
 

@@ -9,7 +9,7 @@ Defines the response interface to receive the device status.
 ## Modules to Import
 
 ```TypeScript
-import { stationary } from '@ohos.stationary';
+import { stationary } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## state

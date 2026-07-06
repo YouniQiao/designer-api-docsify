@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@ohos.enterprise.restrictions';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## setDisallowedPolicy
@@ -44,7 +44,7 @@ Disallows a feature.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [9200013](../errorcode-enterpriseDeviceManager.md#9200013-control-not-immediately-effective) | The enterprise management policy has been successfully set,but the function has not taken effect in real time.<br>**Applicable version:** 21 |
+| [9200013](../errorcode-enterpriseDeviceManager.md#9200013-control-not-immediately-effective) | The enterprise management policy has been successfully set,but the function has not taken effect in real time.<br>**Applicable version:** 21 and later |
 
 **Example**
 
@@ -90,7 +90,7 @@ Enables or disables a specified device feature. Once disabled, the feature canno
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| feature | FeatureForDevice | Yes | Device feature to be enabled or disabled.<br> **Note**: An application thathas obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been[activated as the built-in device administrator application](arkts-mdm-startadminprovision-f.md#startadminprovision-1)can use this API to set the [FeatureForDevice.WIFI_P2P](arkts-mdm-featurefordevice-e.md#featurefordevice) feature. |
+| feature | FeatureForDevice | Yes | Device feature to be enabled or disabled.<br> **Note**: An application thathas obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been[activated as the built-in device administrator application](arkts-mdm-startadminprovision-f.md#startadminprovision-1)can use this API to set the [FeatureForDevice.WIFI_P2P](arkts-mdm-featurefordevice-e.md) feature. |
 | disallow | boolean | Yes | Whether to disallow the feature. The value **true** means to disallow the feature;the value **false** means the opposite. |
 
 **Error codes:**

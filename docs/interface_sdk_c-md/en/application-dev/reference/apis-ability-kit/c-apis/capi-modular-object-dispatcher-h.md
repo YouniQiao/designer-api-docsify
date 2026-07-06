@@ -33,8 +33,8 @@ Declare common types and interfaces for modular object dispatcher.
 
 | Name | Description |
 | -- | -- |
-| [void OH_AbilityRuntime_ModObjDispatcher_TypeInfoClear(OH_AbilityRuntime_ModObjDispatcher_TypeInfo* pTypeInfo)](#oh_abilityruntime_modobjdispatcher_typeinfoclear) | Clear TypeInfo resources.Recursively release any heap resources held by a TypeInfo struct(idlType strings, child TypeInfo nodes for map/array/vector/set types).After clearing, all pointers are set to NULL but the TypeInfo struct itself is not freed(it is typically stack-allocated by the caller).TypeInfo_Clear must NOT be called on a shallow copy of another TypeInfo.If TypeInfo t2 = t1 is performed, only clear one of them. |
-| [void OH_AbilityRuntime_ModObjDispatcher_VariantClear(OH_AbilityRuntime_ModObjDispatcher_Variant* pVariant)](#oh_abilityruntime_modobjdispatcher_variantclear) | Clear variant resources.Release any resources held by the variant (strings, container handles, etc.).After clearing, the variant is reset to VT_EMPTY with all fields zeroed.Ownership rules:- When a Variant is passed to a function (e.g. Array_Set, Map_Put), the functionperforms a deep copy. The caller retains ownership of the original Variant andis responsible for freeing its own resources (e.g. free(bstrVal) for strings,Release for container handles).- When a Variant is returned from a function (e.g. Array_Get, Map_Get, CallMethod),the function performs a deep copy and the caller owns the returned Variant.The caller must call Variant_Clear exactly once to release the resources.- Simple types (bool, i32, f64, etc.) do not hold heap resources and do notrequire Variant_Clear, though calling it is harmless.- Variant_Clear must NOT be called on a shallow copy of another Variant.If Variant v2 = v1 is performed, only clear one of them. |
+| [void OH_AbilityRuntime_ModObjDispatcher_TypeInfoClear(OH_AbilityRuntime_ModObjDispatcher_TypeInfo* pTypeInfo)](#oh_abilityruntime_modobjdispatcher_typeinfoclear) | Clear TypeInfo resources.Recursively release any heap resources held by a TypeInfo struct(idlType strings, child TypeInfo nodes for map/array/vector/set types).After clearing, all pointers are set to NULL but the TypeInfo struct itself is not freed(it is typically stack-allocated by the caller).TypeInfoClear must NOT be called on a shallow copy of another TypeInfo.If TypeInfo t2 = t1 is performed, only clear one of them. |
+| [void OH_AbilityRuntime_ModObjDispatcher_VariantClear(OH_AbilityRuntime_ModObjDispatcher_Variant* pVariant)](#oh_abilityruntime_modobjdispatcher_variantclear) | Clear variant resources.Release any resources held by the variant (strings, container handles, etc.).After clearing, the variant is reset to VT_EMPTY with all fields zeroed.Ownership rules:- When a Variant is passed to a function (e.g. Array_Set, Map_Put), the functionperforms a deep copy. The caller retains ownership of the original Variant andis responsible for freeing its own resources (e.g. free(bstrVal) for strings,Release for container handles).- When a Variant is returned from a function (e.g. Array_Get, Map_Get, CallMethod),the function performs a deep copy and the caller owns the returned Variant.The caller must call VariantClear exactly once to release the resources.- Simple types (bool, i32, f64, etc.) do not hold heap resources and do notrequire VariantClear, though calling it is harmless.- VariantClear must NOT be called on a shallow copy of another Variant.If Variant v2 = v1 is performed, only clear one of them. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CreateMainServiceInstance(OHIPCRemoteProxy* remoteProxy, OH_AbilityRuntime_ModObjDispatcherHandle* ppModObjDispatcher)](#oh_abilityruntime_modobjdispatcher_createmainserviceinstance) | Create a modular object dispatcher instance from an IPC remote proxy for the main service interface.The type library metadata will be lazily loaded from the remote service on the first callthat requires it, such as HasTypeDescriptor, QueryMainServiceInterfaceMemIDsOfNames, or CallMethod. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CreateSubInstance(OH_AbilityRuntime_ModObjDispatcherHandle mainServiceDispatcher, OHIPCRemoteProxy* subProxy, OH_AbilityRuntime_ModObjDispatcherHandle* ppModObjDispatcher)](#oh_abilityruntime_modobjdispatcher_createsubinstance) | Create a sub-instance dispatcher bound to a mainService dispatcher.The sub-instance shares the mainService dispatcher's metadata but uses its ownIPC proxy. When CallMethod is invoked on the sub-instance, method metadata isresolved from the mainService dispatcher and the call is sent through subProxy. |
 | [void OH_AbilityRuntime_ModObjDispatcher_Release(OH_AbilityRuntime_ModObjDispatcherHandle* ppModObjDispatcher)](#oh_abilityruntime_modobjdispatcher_release) | Release modular object dispatcher instance. |
@@ -88,7 +88,7 @@ Declare common types and interfaces for modular object dispatcher.
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetRemove(OH_AbilityRuntime_ModObjDispatcher_SetHandle pSet, const OH_AbilityRuntime_ModObjDispatcher_Variant* pValue)](#oh_abilityruntime_modobjdispatcher_setremove) | Remove an element from set. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetContains(OH_AbilityRuntime_ModObjDispatcher_SetHandle pSet, const OH_AbilityRuntime_ModObjDispatcher_Variant* pValue, bool* pExists)](#oh_abilityruntime_modobjdispatcher_setcontains) | Check if an element exists in set. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetSize(OH_AbilityRuntime_ModObjDispatcher_SetHandle pSet, uint32_t* pSize)](#oh_abilityruntime_modobjdispatcher_setgetsize) | Get set size. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetAt(OH_AbilityRuntime_ModObjDispatcher_SetHandle pSet, uint32_t index, OH_AbilityRuntime_ModObjDispatcher_Variant* pValue)](#oh_abilityruntime_modobjdispatcher_setgetat) | Get a set element value by index.The returned variant is a deep copy owned by the caller.Caller must call {@link OH_AbilityRuntime_ModObjDispatcher_Variant_Clear} to release it. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetAt(OH_AbilityRuntime_ModObjDispatcher_SetHandle pSet, uint32_t index, OH_AbilityRuntime_ModObjDispatcher_Variant* pValue)](#oh_abilityruntime_modobjdispatcher_setgetat) | Get a set element value by index.The returned variant is a deep copy owned by the caller.Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetClear(OH_AbilityRuntime_ModObjDispatcher_SetHandle pSet)](#oh_abilityruntime_modobjdispatcher_setclear) | Clear set. |
 | [void OH_AbilityRuntime_ModObjDispatcher_SetRelease(OH_AbilityRuntime_ModObjDispatcher_SetHandle* ppSet)](#oh_abilityruntime_modobjdispatcher_setrelease) | Release set instance. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapCreate(OH_AbilityRuntime_ModObjDispatcher_ValueType keyType, OH_AbilityRuntime_ModObjDispatcher_TypeInfo *valueType, OH_AbilityRuntime_ModObjDispatcher_MapHandle* ppMap)](#oh_abilityruntime_modobjdispatcher_mapcreate) | Create a map instance. |
@@ -99,8 +99,8 @@ Declare common types and interfaces for modular object dispatcher.
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapRemove(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, const OH_AbilityRuntime_ModObjDispatcher_Variant* pKey)](#oh_abilityruntime_modobjdispatcher_mapremove) | Remove a key-value pair from map. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapContainsKey(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, const OH_AbilityRuntime_ModObjDispatcher_Variant* pKey, bool* pExists)](#oh_abilityruntime_modobjdispatcher_mapcontainskey) | Check if a key exists in map. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetSize(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, uint32_t* pSize)](#oh_abilityruntime_modobjdispatcher_mapgetsize) | Get map size. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetKeyAt(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, uint32_t index, OH_AbilityRuntime_ModObjDispatcher_Variant* pKey)](#oh_abilityruntime_modobjdispatcher_mapgetkeyat) | Get a map key by index.The returned variant is a deep copy owned by the caller.Caller must call {@link OH_AbilityRuntime_ModObjDispatcher_Variant_Clear} to release it. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetValueAt(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, uint32_t index, OH_AbilityRuntime_ModObjDispatcher_Variant* pValue)](#oh_abilityruntime_modobjdispatcher_mapgetvalueat) | Get a map value by index.The returned variant is a deep copy owned by the caller.Caller must call {@link OH_AbilityRuntime_ModObjDispatcher_Variant_Clear} to release it. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetKeyAt(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, uint32_t index, OH_AbilityRuntime_ModObjDispatcher_Variant* pKey)](#oh_abilityruntime_modobjdispatcher_mapgetkeyat) | Get a map key by index.The returned variant is a deep copy owned by the caller.Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetValueAt(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, uint32_t index, OH_AbilityRuntime_ModObjDispatcher_Variant* pValue)](#oh_abilityruntime_modobjdispatcher_mapgetvalueat) | Get a map value by index.The returned variant is a deep copy owned by the caller.Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapClear(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap)](#oh_abilityruntime_modobjdispatcher_mapclear) | Clear map. |
 | [void OH_AbilityRuntime_ModObjDispatcher_MapRelease(OH_AbilityRuntime_ModObjDispatcher_MapHandle* ppMap)](#oh_abilityruntime_modobjdispatcher_maprelease) | Release map instance. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_StructCreate(const char* structName, OH_AbilityRuntime_ModObjDispatcher_StructHandle* ppStruct)](#oh_abilityruntime_modobjdispatcher_structcreate) | Create a struct instance. |
@@ -119,7 +119,7 @@ void OH_AbilityRuntime_ModObjDispatcher_TypeInfoClear(OH_AbilityRuntime_ModObjDi
 
 **Description**
 
-Clear TypeInfo resources.Recursively release any heap resources held by a TypeInfo struct(idlType strings, child TypeInfo nodes for map/array/vector/set types).After clearing, all pointers are set to NULL but the TypeInfo struct itself is not freed(it is typically stack-allocated by the caller).TypeInfo_Clear must NOT be called on a shallow copy of another TypeInfo.If TypeInfo t2 = t1 is performed, only clear one of them.
+Clear TypeInfo resources.Recursively release any heap resources held by a TypeInfo struct(idlType strings, child TypeInfo nodes for map/array/vector/set types).After clearing, all pointers are set to NULL but the TypeInfo struct itself is not freed(it is typically stack-allocated by the caller).TypeInfoClear must NOT be called on a shallow copy of another TypeInfo.If TypeInfo t2 = t1 is performed, only clear one of them.
 
 **Since**: 26.0.0
 
@@ -137,7 +137,7 @@ void OH_AbilityRuntime_ModObjDispatcher_VariantClear(OH_AbilityRuntime_ModObjDis
 
 **Description**
 
-Clear variant resources.Release any resources held by the variant (strings, container handles, etc.).After clearing, the variant is reset to VT_EMPTY with all fields zeroed.Ownership rules:- When a Variant is passed to a function (e.g. Array_Set, Map_Put), the functionperforms a deep copy. The caller retains ownership of the original Variant andis responsible for freeing its own resources (e.g. free(bstrVal) for strings,Release for container handles).- When a Variant is returned from a function (e.g. Array_Get, Map_Get, CallMethod),the function performs a deep copy and the caller owns the returned Variant.The caller must call Variant_Clear exactly once to release the resources.- Simple types (bool, i32, f64, etc.) do not hold heap resources and do notrequire Variant_Clear, though calling it is harmless.- Variant_Clear must NOT be called on a shallow copy of another Variant.If Variant v2 = v1 is performed, only clear one of them.
+Clear variant resources.Release any resources held by the variant (strings, container handles, etc.).After clearing, the variant is reset to VT_EMPTY with all fields zeroed.Ownership rules:- When a Variant is passed to a function (e.g. Array_Set, Map_Put), the functionperforms a deep copy. The caller retains ownership of the original Variant andis responsible for freeing its own resources (e.g. free(bstrVal) for strings,Release for container handles).- When a Variant is returned from a function (e.g. Array_Get, Map_Get, CallMethod),the function performs a deep copy and the caller owns the returned Variant.The caller must call VariantClear exactly once to release the resources.- Simple types (bool, i32, f64, etc.) do not hold heap resources and do notrequire VariantClear, though calling it is harmless.- VariantClear must NOT be called on a shallow copy of another Variant.If Variant v2 = v1 is performed, only clear one of them.
 
 **Since**: 26.0.0
 
@@ -170,7 +170,7 @@ Create a modular object dispatcher instance from an IPC remote proxy for the mai
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if remoteProxy or ppModObjDispatcher is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if remoteProxy or ppModObjDispatcher is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_CreateSubInstance()
 
@@ -196,7 +196,7 @@ Create a sub-instance dispatcher bound to a mainService dispatcher.The sub-insta
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if mainServiceDispatcher or subProxy<br>      or ppModObjDispatcher is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if mainServiceDispatcher or subProxy<br>      or ppModObjDispatcher is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_Release()
 
@@ -239,7 +239,7 @@ Check if the type library metadata is available from the remote service.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pModObjDispatcher or pctinfo is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if send request failed.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if type library metadata is invalid.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pModObjDispatcher or pctinfo is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if send request failed.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if type library metadata is invalid.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded from the remote service.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_GetTypeDescriptor()
 
@@ -264,7 +264,7 @@ Get type descriptor for querying interface metadata information.The type descrip
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pModObjDispatcher or ppTypeDescriptor is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if send request failed.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if type library metadata is invalid.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pModObjDispatcher or ppTypeDescriptor is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if send request failed.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if type library metadata is invalid.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded, or memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_QueryMainServiceInterfaceMemIDsOfNames()
 
@@ -291,7 +291,7 @@ Query member IDs of method names in the main service interface.The returned memb
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pModObjDispatcher or rgszNames or pMemID is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if send request failed.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if type library metadata is invalid.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if name not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pModObjDispatcher or rgszNames or pMemID is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if send request failed.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if type library metadata is invalid.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if name not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded from the remote service.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_CallMethod()
 
@@ -321,7 +321,7 @@ Call a method.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if IPC call is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pModObjDispatcher or pInputParams or<br>      pResult is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if method not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if parameter type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if send request failed.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if type library metadata is invalid.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if IPC call is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pModObjDispatcher or pInputParams or<br>      pResult is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if method not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if parameter type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if send request failed.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if type library metadata is invalid.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded, or memory allocation failed<br>      when copying parameter or result.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_Release()
 
@@ -365,7 +365,7 @@ Get version of the type library.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or<br>      pbstrVersion is null, or cMaxVersion is 0.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or<br>      pbstrVersion is null, or cMaxVersion is 0.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded, or memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetInterfaceCount()
 
@@ -390,7 +390,7 @@ Get total number of interfaces.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pcInterfaces is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pcInterfaces is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetInterfaceName()
 
@@ -417,7 +417,7 @@ Get interface name by index.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrName is null,<br>      or cMaxName is 0, or index is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrName is null,<br>      or cMaxName is 0, or index is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded, or memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetInterfaceIsCallback()
 
@@ -443,7 +443,7 @@ Check if interface is a callback type.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrName or<br>      pIsCallback is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface not found.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrName or<br>      pIsCallback is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface not found.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMainServiceInterfaceName()
 
@@ -469,7 +469,7 @@ Get main service interface name.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrName is null,<br>      or cMaxName is 0.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrName is null,<br>      or cMaxName is 0.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded, or memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodCount()
 
@@ -495,7 +495,7 @@ Get method count from interface.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or<br>      pbstrInterfaceName or pcMethods is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface not found.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or<br>      pbstrInterfaceName or pcMethods is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface not found.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodName()
 
@@ -523,7 +523,7 @@ Get method name by index from interface.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrInterfaceName or<br>      pbstrName is null, or cMaxName is 0, or index is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrInterfaceName or<br>      pbstrName is null, or cMaxName is 0, or index is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded, or memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodMemberId()
 
@@ -550,7 +550,7 @@ Get method MemberID by name from interface.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrInterfaceName or<br>      pbstrMethodName or pMemID is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface or method not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrInterfaceName or<br>      pbstrMethodName or pMemID is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface or method not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodReturnType()
 
@@ -577,7 +577,7 @@ Get method return type by name from interface.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrInterfaceName or<br>      pbstrMethodName or pReturnType is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface or method not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrInterfaceName or<br>      pbstrMethodName or pReturnType is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface or method not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodParamCount()
 
@@ -604,7 +604,7 @@ Get method parameter count by name from interface.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrInterfaceName or<br>      pbstrMethodName or pcParams is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface or method not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrInterfaceName or<br>      pbstrMethodName or pcParams is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface or method not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodParamType()
 
@@ -632,7 +632,7 @@ Get method parameter type by name and index from interface.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrInterfaceName or<br>      pbstrMethodName or pParamType is null, or iParamIndex is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface or method not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrInterfaceName or<br>      pbstrMethodName or pParamType is null, or iParamIndex is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface or method not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodParamName()
 
@@ -663,7 +663,7 @@ Get method parameter name by name and index from interface.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrInterfaceName or<br>      pbstrMethodName or pbstrName is null, or iParamIndex is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface or method not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrInterfaceName or<br>      pbstrMethodName or pbstrName is null, or iParamIndex is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if interface or method not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded, or memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumCount()
 
@@ -688,7 +688,7 @@ Get enum count.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pcEnums is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pcEnums is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumName()
 
@@ -715,7 +715,7 @@ Get enum name by index.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrName is null,<br>      or cMaxName is 0, or index is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrName is null,<br>      or cMaxName is 0, or index is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded, or memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumValueCount()
 
@@ -741,7 +741,7 @@ Get enum value count by enum name.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrEnumName or<br>      pcValues is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if enum not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrEnumName or<br>      pcValues is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if enum not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumValueName()
 
@@ -769,7 +769,7 @@ Get enum value name by enum name and value index.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrEnumName or pbstrValueName<br>      is null, or iValueIndex is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if enum not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrEnumName or pbstrValueName<br>      is null, or iValueIndex is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if enum not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded, or memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumValue()
 
@@ -796,7 +796,7 @@ Get enum value by enum name and value name.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrEnumName or<br>      pbstrValueName or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if enum value not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrEnumName or<br>      pbstrValueName or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if enum value not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructCount()
 
@@ -821,7 +821,7 @@ Get struct count.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pcStructs is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pcStructs is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructName()
 
@@ -848,7 +848,7 @@ Get struct name by index.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrName is null, or cMaxName is 0,<br>      or index is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrName is null, or cMaxName is 0,<br>      or index is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded, or memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructFieldCount()
 
@@ -874,7 +874,7 @@ Get struct field count by struct name.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrStructName or<br>      pcFields is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if struct not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrStructName or<br>      pcFields is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if struct not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructFieldName()
 
@@ -902,7 +902,7 @@ Get struct field name by struct name and field index.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrStructName or<br>      pbstrFieldName is null, or iFieldIndex is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if struct not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrStructName or<br>      pbstrFieldName is null, or iFieldIndex is out of range.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if struct not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded, or memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructFieldType()
 
@@ -929,7 +929,7 @@ Get struct field type by struct name and field name.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrStructName or<br>      pbstrFieldName or pFieldType is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if field not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pTypeDescriptor or pbstrStructName or<br>      pbstrFieldName or pFieldType is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if field not found.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if metadata is not loaded.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayCreate()
 
@@ -955,7 +955,7 @@ Create an array instance.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if elementType or ppArray is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if elementType or ppArray is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayGetElementType()
 
@@ -980,7 +980,7 @@ Get array element type.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pArray or pElementType is null.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pArray or pElementType is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal element type info is not available.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArraySet()
 
@@ -1006,7 +1006,7 @@ Set an array element value.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pArray or pValue is null,<br>      or index is out of bounds.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if element type mismatches.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pArray or pValue is null,<br>      or index is out of bounds.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if element type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed when copying variant value.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayGet()
 
@@ -1032,7 +1032,7 @@ Get an array element value.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pArray or pValue is null,<br>      or index is out of bounds.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pArray or pValue is null,<br>      or index is out of bounds.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed when copying variant value.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayGetSize()
 
@@ -1100,7 +1100,7 @@ Create a vector instance.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if elementType or ppVector is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if elementType or ppVector is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorGetElementType()
 
@@ -1125,7 +1125,7 @@ Get vector element type.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pVector or pElementType is null.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pVector or pElementType is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal element type info is not available.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorAdd()
 
@@ -1150,7 +1150,7 @@ Add an element to vector.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pVector or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if element type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pVector or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if element type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed when copying variant value.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorGet()
 
@@ -1176,7 +1176,7 @@ Get a vector element value.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pVector or pValue is null,<br>      or index is out of bounds.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pVector or pValue is null,<br>      or index is out of bounds.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed when copying variant value.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorGetSize()
 
@@ -1268,7 +1268,7 @@ Create a set instance.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if elementType or ppSet is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if elementType or ppSet is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetGetElementType()
 
@@ -1293,7 +1293,7 @@ Get set element type.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pSet or pElementType is null.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pSet or pElementType is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal element type info is not available.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetAdd()
 
@@ -1318,7 +1318,7 @@ Add an element to set.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pSet or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if element type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pSet or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if element type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed when copying variant value.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetRemove()
 
@@ -1343,7 +1343,7 @@ Remove an element from set.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pSet or pValue is null.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pSet or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if element type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if element is not found in set.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetContains()
 
@@ -1369,7 +1369,7 @@ Check if an element exists in set.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pSet or pValue or pExists is null.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pSet or pValue or pExists is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if element type mismatches.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetGetSize()
 
@@ -1404,7 +1404,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetAt(OH_AbilityR
 
 **Description**
 
-Get a set element value by index.The returned variant is a deep copy owned by the caller.Caller must call {@link OH_AbilityRuntime_ModObjDispatcher_Variant_Clear} to release it.
+Get a set element value by index.The returned variant is a deep copy owned by the caller.Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it.
 
 **Since**: 26.0.0
 
@@ -1420,7 +1420,7 @@ Get a set element value by index.The returned variant is a deep copy owned by th
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pSet or pValue is null, or index is out of bounds.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pSet or pValue is null, or index is out of bounds.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed when copying variant value.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetClear()
 
@@ -1488,7 +1488,7 @@ Create a map instance.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if valueType or ppMap is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if valueType or ppMap is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetKeyType()
 
@@ -1538,7 +1538,7 @@ Get map value type.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pValueType is null.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pValueType is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal value type info is not available.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapPut()
 
@@ -1564,7 +1564,7 @@ Put a key-value pair into map.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pKey or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if key or value type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pKey or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if key or value type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed when copying variant value.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGet()
 
@@ -1590,7 +1590,7 @@ Get a value from map by key.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pKey or pValue is null,<br>      or key is not found in map.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pKey or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if key type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if key is not found in map.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed when copying variant value.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapRemove()
 
@@ -1615,7 +1615,7 @@ Remove a key-value pair from map.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pKey is null.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pKey is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if key type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if key is not found in map.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapContainsKey()
 
@@ -1641,7 +1641,7 @@ Check if a key exists in map.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pKey or pExists is null.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pKey or pExists is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if key type mismatches.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetSize()
 
@@ -1676,7 +1676,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetKeyAt(OH_Abili
 
 **Description**
 
-Get a map key by index.The returned variant is a deep copy owned by the caller.Caller must call {@link OH_AbilityRuntime_ModObjDispatcher_Variant_Clear} to release it.
+Get a map key by index.The returned variant is a deep copy owned by the caller.Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it.
 
 **Since**: 26.0.0
 
@@ -1692,7 +1692,7 @@ Get a map key by index.The returned variant is a deep copy owned by the caller.C
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pKey is null, or index is out of bounds.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pKey is null, or index is out of bounds.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed when copying variant value.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetValueAt()
 
@@ -1702,7 +1702,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetValueAt(OH_Abi
 
 **Description**
 
-Get a map value by index.The returned variant is a deep copy owned by the caller.Caller must call {@link OH_AbilityRuntime_ModObjDispatcher_Variant_Clear} to release it.
+Get a map value by index.The returned variant is a deep copy owned by the caller.Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it.
 
 **Since**: 26.0.0
 
@@ -1718,7 +1718,7 @@ Get a map value by index.The returned variant is a deep copy owned by the caller
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pValue is null, or index is out of bounds.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pMap or pValue is null, or index is out of bounds.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed when copying variant value.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapClear()
 
@@ -1785,7 +1785,7 @@ Create a struct instance.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if structName or ppStruct is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if internal error occurs.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if structName or ppStruct is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if struct name is not found<br>      in type metadata.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructGetName()
 
@@ -1811,7 +1811,7 @@ Get struct name.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pStruct or pbstrName is null, or cMaxName is 0.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pStruct or pbstrName is null,<br>      or cMaxName is 0 or too small for struct name.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed or string copy failed.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructSetField()
 
@@ -1837,7 +1837,7 @@ Set a struct field value.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pStruct or szName or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if field is not found in struct.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if field type mismatches.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pStruct or szName or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if field is not found in struct.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if field type mismatches.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed when copying variant value.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructGetField()
 
@@ -1863,7 +1863,7 @@ Get a struct field value.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pStruct or szName or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if field is not found in struct.</li><br>      </ul> |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if operation is successful.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if pStruct or szName or pValue is null.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if field is not found in struct.</li><br>      <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if memory allocation failed when copying variant value.</li><br>      </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructRelease()
 

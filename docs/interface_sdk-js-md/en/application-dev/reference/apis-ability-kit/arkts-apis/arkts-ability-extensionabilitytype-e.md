@@ -38,7 +38,7 @@ WORK_SCHEDULER = 1
 INPUT_METHOD = 2
 ```
 
-[InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md#inputmethodextensionability): provides extended capabilities related to input method applications.
+[InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md): provides extended capabilities related to input method applications.
 
 **Since:** 9
 
@@ -50,7 +50,7 @@ INPUT_METHOD = 2
 SERVICE = 3
 ```
 
-[ServiceExtensionAbility](arkts-ability-serviceextensionability-c-sys.md#serviceextensionability): provides extended capabilities related to background services.
+[ServiceExtensionAbility](arkts-ability-serviceextensionability-c-sys.md): provides extended capabilities related to background services.
 
 **Since:** 9
 
@@ -98,7 +98,7 @@ FileShareExtensionAbility: provides extended capabilities related to file sharin
 STATIC_SUBSCRIBER = 7
 ```
 
-[StaticSubscriberExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-staticsubscriberextensionability-c-sys.md#staticsubscriberextensionability) : provides extended capabilities related to static broadcast, used to handle static events such as startup events.
+[StaticSubscriberExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-staticsubscriberextensionability-c-sys.md) : provides extended capabilities related to static broadcast, used to handle static events such as startup events.
 
 **Since:** 9
 
@@ -146,7 +146,7 @@ WINDOW = 10
 ENTERPRISE_ADMIN = 11
 ```
 
-[EnterpriseAdminExtensionAbility](../../apis-mdm-kit/arkts-apis/arkts-mdm-enterpriseadminextensionability-c.md#enterpriseadminextensionability) : provides extended capabilities for processing enterprise management events, such as application installation events on devices and events indicating too many incorrect screen-lock password attempts.
+[EnterpriseAdminExtensionAbility](../../apis-mdm-kit/arkts-apis/arkts-mdm-enterpriseadminextensionability-c.md) : provides extended capabilities for processing enterprise management events, such as application installation events on devices and events indicating too many incorrect screen-lock password attempts.
 
 **Since:** 9
 
@@ -194,7 +194,7 @@ PrintExtensionAbility: provides extended capabilities for printing photos and do
 SHARE = 16
 ```
 
-[ShareExtensionAbility](arkts-ability-shareextensionability-c.md#shareextensionability): provides sharing service templates based on the UIExtensionAbility.
+[ShareExtensionAbility](arkts-ability-shareextensionability-c.md): provides sharing service templates based on the UIExtensionAbility.
 
 **Since:** 10
 
@@ -230,7 +230,7 @@ DRIVER = 18
 ACTION = 19
 ```
 
-[ActionExtensionAbility](arkts-ability-actionextensionability-c.md#actionextensionability): provides custom action service templates based on the UIExtensionAbility.
+[ActionExtensionAbility](arkts-ability-actionextensionability-c.md): provides custom action service templates based on the UIExtensionAbility.
 
 **Since:** 10
 
@@ -254,7 +254,7 @@ AdsServiceExtensionAbility: provides background customized ad services for exter
 EMBEDDED_UI = 21
 ```
 
-[EmbeddedUIExtensionAbility](arkts-ability-embeddeduiextensionability-c.md#embeddeduiextensionability): provides extended capabilities for the embeddable UI across process.
+[EmbeddedUIExtensionAbility](arkts-ability-embeddeduiextensionability-c.md): provides extended capabilities for the embeddable UI across process.
 
 **Since:** 12
 
@@ -278,7 +278,7 @@ InsightIntentUIExtensionAbility: provides extended capabilities that enable appl
 FENCE = 24
 ```
 
-[FenceExtensionAbility](../../apis-location-kit/arkts-apis/arkts-location-fenceextensionability-c.md#fenceextensionability): provides geofence- related capabilities. It inherits from ExtensionAbility.
+[FenceExtensionAbility](../../apis-location-kit/arkts-apis/arkts-location-fenceextensionability-c.md): provides geofence- related capabilities. It inherits from ExtensionAbility.
 
 **Since:** 18
 
@@ -314,7 +314,7 @@ AssetAccelerationExtensionAbility: provides extended capabilities of pre-downloa
 FORM_EDIT = 27
 ```
 
-[FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-formeditextensionability-c.md#formeditextensionability): provides extended capabilities related to widget editing. It inherits from UIExtensionAbility.
+[FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-formeditextensionability-c.md): provides extended capabilities related to widget editing. It inherits from UIExtensionAbility.
 
 **Since:** 18
 
@@ -326,7 +326,7 @@ FORM_EDIT = 27
 DISTRIBUTED = 28
 ```
 
-[DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributedextensionability-c.md#distributedextensionability): provides extended capabilities for distributed services and lifecycle callbacks for creation, destruction, and connection of the DistributedExtensionAbility.
+[DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributedextensionability-c.md): provides extended capabilities for distributed services and lifecycle callbacks for creation, destruction, and connection of the DistributedExtensionAbility.
 
 **Since:** 20
 
@@ -338,7 +338,7 @@ DISTRIBUTED = 28
 APP_SERVICE = 29
 ```
 
-[AppServiceExtensionAbility](arkts-ability-appserviceextensionability-c.md#appserviceextensionability): provides backend service capabilities for enterprise common applications.
+[AppServiceExtensionAbility](arkts-ability-appserviceextensionability-c.md): provides backend service capabilities for enterprise common applications.
 
 **Since:** 20
 
@@ -390,7 +390,7 @@ WEB_NATIVE_MESSAGING = 32
 FAULT_LOG = 33
 ```
 
-[FaultLogExtensionAbility](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogextensionability-c.md#faultlogextensionability): provides extended capabilities for delayed fault notifications.
+[FaultLogExtensionAbility](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogextensionability-c.md): provides extended capabilities for delayed fault notifications.
 
 **Since:** 21
 
@@ -402,7 +402,7 @@ FAULT_LOG = 33
 NOTIFICATION_SUBSCRIBER = 34
 ```
 
-[NotificationSubscriberExtensionAbility](../../apis-notification-kit/arkts-apis/arkts-notification-notificationsubscriberextensionability-c.md#notificationsubscriberextensionability) : provides extended capabilities for notification subscription.
+[NotificationSubscriberExtensionAbility](../../apis-notification-kit/arkts-apis/arkts-notification-notificationsubscriberextensionability-c.md) : provides extended capabilities for notification subscription.
 
 **Since:** 22
 

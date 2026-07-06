@@ -9,7 +9,7 @@ Checksum object.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@ohos.zlib';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## adler32

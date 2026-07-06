@@ -9,7 +9,7 @@ Provides subtitle information. When a subtitle update event is subscribed to, th
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## duration

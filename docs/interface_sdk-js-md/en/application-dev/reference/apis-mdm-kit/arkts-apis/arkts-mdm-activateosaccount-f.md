@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@ohos.enterprise.accountManager';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## activateOsAccount

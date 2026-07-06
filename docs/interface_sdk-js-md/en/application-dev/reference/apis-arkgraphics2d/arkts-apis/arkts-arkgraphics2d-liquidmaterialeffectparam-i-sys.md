@@ -11,7 +11,7 @@ The parameters of liquid material effect.
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@ohos.graphics.uiEffect';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## distortFactor

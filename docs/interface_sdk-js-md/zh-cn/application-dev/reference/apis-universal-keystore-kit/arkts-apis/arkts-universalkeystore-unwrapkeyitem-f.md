@@ -39,5 +39,5 @@ function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8A
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
 | [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) | the input parameter is invalid |
-| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0 |
+| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0+ |
 

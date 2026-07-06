@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from '@ohos.events.emitter';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## emit
@@ -24,7 +24,7 @@ Emits a specified event. This API can be used to emit data objects across thread
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | InnerEvent | Yes | Event to emit, where [EventPriority](arkts-basicservices-eventpriority-e.md#eventpriority) specifies the emitpriority of the event. |
+| event | InnerEvent | Yes | Event to emit, where [EventPriority](arkts-basicservices-eventpriority-e.md) specifies the emitpriority of the event. |
 | data | EventData | No | Data carried by the event. This parameter is left empty by default. |
 
 **Example**

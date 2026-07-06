@@ -11,7 +11,7 @@ Defines the detailed information about a device.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@ohos.driver.deviceManager';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## deviceId

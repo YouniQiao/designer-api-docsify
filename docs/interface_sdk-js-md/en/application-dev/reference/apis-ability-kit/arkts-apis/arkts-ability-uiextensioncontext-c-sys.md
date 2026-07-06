@@ -1,8 +1,8 @@
 # UIExtensionContext
 
-UIExtensionContext provides the context environment for [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext) and provides UIExtensionAbility-related configuration and APIs for operating the UIExtensionAbility. For example, you can use the APIs to start a UIExtensionAbility.
+UIExtensionContext provides the context environment for [UIExtensionAbility](arkts-ability-uiextensionability-c.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md) and provides UIExtensionAbility-related configuration and APIs for operating the UIExtensionAbility. For example, you can use the APIs to start a UIExtensionAbility.
 
-**Inheritance/Implementation:** UIExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext)
+**Inheritance/Implementation:** UIExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
 **Since:** 10
 
@@ -61,7 +61,7 @@ Connects the current UI extension to an service extension ability with a root ho
 setHostPageOverlayForbidden(isForbidden: boolean) : void
 ```
 
-Sets whether the page started by the [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability) can be overlaid by the page of the user. > **NOTE** > > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md). > > This API must be called before a window is created. You are advised to call it within the > [onCreate](arkts-ability-uiextensionability-c.md#oncreate-1) lifecycle of the > [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability).
+Sets whether the page started by the [UIExtensionAbility](arkts-ability-uiextensionability-c.md) can be overlaid by the page of the user. > **NOTE** > > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md). > > This API must be called before a window is created. You are advised to call it within the > [onCreate](arkts-ability-uiextensionability-c.md#oncreate-1) lifecycle of the > [UIExtensionAbility](arkts-ability-uiextensionability-c.md).
 
 **Since:** 15
 
@@ -75,7 +75,7 @@ Sets whether the page started by the [UIExtensionAbility](arkts-ability-uiextens
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isForbidden | boolean | Yes | Whether the page started by the[UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability) can be overlaid by the page ofthe user. **true** if the page can be overlaid, **false** otherwise. |
+| isForbidden | boolean | Yes | Whether the page started by the[UIExtensionAbility](arkts-ability-uiextensionability-c.md) can be overlaid by the page ofthe user. **true** if the page can be overlaid, **false** otherwise. |
 
 **Error codes:**
 
@@ -126,13 +126,13 @@ Starts an ability with the caller information specified. The caller information 
 | [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-thirdparty-application-in-strict-mode) | The extension cannot start the third party application. |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
-| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 |
-| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 |
-| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 |
-| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit.<br>**Applicable version:** 14 |
-| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 |
-| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 |
-| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported.<br>**Applicable version:** 14 |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit.<br>**Applicable version:** 14 and later |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported.<br>**Applicable version:** 14 and later |
 
 ## startServiceExtensionAbility
 

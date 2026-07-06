@@ -2,7 +2,7 @@
 
 Photo Conflict Functions object.
 
-**Inheritance/Implementation:** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-zoomquery-i.md#zoomquery), [MacroQuery](arkts-camera-macroquery-i-sys.md#macroquery)
+**Inheritance/Implementation:** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-zoomquery-i.md), [MacroQuery](arkts-camera-macroquery-i-sys.md)
 
 **Since:** 13
 
@@ -13,6 +13,6 @@ Photo Conflict Functions object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 

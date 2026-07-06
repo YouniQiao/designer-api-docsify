@@ -104,7 +104,7 @@ Layout style of the title bar. Default value: **BarStyle.STANDARD**
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode. Observe the following when using this API: 1. Make sure the **Navigation** component is in full screen. 2. When the title bar is in [Free](arkts-arkui-navigationtitlemode-e.md#navigationtitlemode) display mode or in [STANDARD](arkts-arkui-barstyle-e.md#barstyle) layout style, this API has no effect. **true**: yes; **false**: no Default value: **false**
+Whether to respond when the device is in semi-folded mode. Observe the following when using this API: 1. Make sure the **Navigation** component is in full screen. 2. When the title bar is in [Free](arkts-arkui-navigationtitlemode-e.md) display mode or in [STANDARD](arkts-arkui-barstyle-e.md) layout style, this API has no effect. **true**: yes; **false**: no Default value: **false**
 
 **Type:** boolean
 
@@ -124,7 +124,7 @@ Whether to respond when the device is in semi-folded mode. Observe the following
 mainTitleModifier?: TextModifier
 ```
 
-Main title attribute modifier. 1. Attribute settings configured by this modifier will override the system's default attribute settings. For example, if the modifier is used to set font size attributes, such as **fontSize**, **maxFontSize**, and **minFontSize**, the settings will take precedence over the system's default settings for size-related attributes. 2. If no modifier is used or an invalid value is set, the system reverts to its default settings. 3. In [Free](arkts-arkui-navigationtitlemode-e.md#navigationtitlemode) mode, setting the font size will disable the effect where the main title's size changes in response to content scrolling.
+Main title attribute modifier. 1. Attribute settings configured by this modifier will override the system's default attribute settings. For example, if the modifier is used to set font size attributes, such as **fontSize**, **maxFontSize**, and **minFontSize**, the settings will take precedence over the system's default settings for size-related attributes. 2. If no modifier is used or an invalid value is set, the system reverts to its default settings. 3. In [Free](arkts-arkui-navigationtitlemode-e.md) mode, setting the font size will disable the effect where the main title's size changes in response to content scrolling.
 
 **Type:** TextModifier
 

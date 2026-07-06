@@ -2,7 +2,7 @@
 
 Sendable PixelMap instance.
 
-**继承/实现关系：** PixelMap extends [ISendable](arkts-image-isendable-t.md#isendable)
+**继承/实现关系：** PixelMap extends [ISendable](arkts-image-isendable-t.md)
 
 **起始版本：** 12
 

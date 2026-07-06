@@ -9,7 +9,7 @@ The **browser** module provides browser management, including setting, canceling
 ## Modules to Import
 
 ```TypeScript
-import { browser } from '@ohos.enterprise.browser';
+import { browser } from '@kit.MDMKit';
 ```
 
 ## Summary

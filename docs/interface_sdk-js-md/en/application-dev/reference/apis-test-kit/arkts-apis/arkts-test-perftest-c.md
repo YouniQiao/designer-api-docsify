@@ -9,7 +9,7 @@ Represents the general entry of the white-box performance test framework. It pro
 ## Modules to Import
 
 ```TypeScript
-import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from '@ohos.test.PerfTest';
+import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from '@kit.TestKit';
 ```
 
 ## create

@@ -21,7 +21,7 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: number, us
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用程序的bundleName。 |
-| applicationFlags | number | 是 | 表示用于指定将返回的ApplicationInfo对象中包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-applicationflag-e-sys.md#applicationflag)。 |
+| applicationFlags | number | 是 | 表示用于指定将返回的ApplicationInfo对象中包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-applicationflag-e-sys.md)。 |
 | userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。 |
 
 **返回值：**
@@ -84,7 +84,7 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: number) : 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用程序的bundleName。 |
-| applicationFlags | number | 是 | 表示用于指定将返回的ApplicationInfo对象中包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-applicationflag-e-sys.md#applicationflag)。 |
+| applicationFlags | number | 是 | 表示用于指定将返回的ApplicationInfo对象中包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-applicationflag-e-sys.md)。 |
 
 **返回值：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@ohos.multimedia.sendableImage';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## convertFromPixelMap

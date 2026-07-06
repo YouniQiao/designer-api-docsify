@@ -6,7 +6,7 @@
 function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>
 ```
 
-判断是否允许嵌入式拉起[EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md#embeddableuiability)。使用Promise异步回调。
+判断是否允许嵌入式拉起[EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md)。使用Promise异步回调。
 
 **起始版本：** 12
 

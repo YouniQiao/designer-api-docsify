@@ -9,7 +9,7 @@ Verifies or decrypts a CMS message. > **NOTE** > > PKCS #7 is a standard syntax 
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## decryptEnvelopedData

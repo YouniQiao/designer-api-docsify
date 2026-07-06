@@ -11,7 +11,7 @@ Generates common parameters for a DH key based on the prime **p** length and the
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## genDHCommonParamsSpec

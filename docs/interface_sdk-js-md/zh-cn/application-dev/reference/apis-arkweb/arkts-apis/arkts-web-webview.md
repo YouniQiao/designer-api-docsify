@@ -57,9 +57,9 @@ This module provides the capability to manage web modules.
 | [CacheOptions](arkts-arkweb-cacheoptions-i.md) | Web组件预编译JavaScript生成字节码缓存的配置对象，用于控制字节码缓存更新。 |
 | [HistoryItem](arkts-arkweb-historyitem-i.md) | Provides information for history item in BackForwardList. |
 | [HitTestValue](arkts-arkweb-hittestvalue-i.md) | 提供点击区域的元素信息。示例代码参考 [getLastHitTest](arkts-arkweb-webviewcontroller-c.md#getlasthittest-1). |
-| [MediaInfo](arkts-arkweb-mediainfo-i.md) | [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md#createnativemediaplayercallback)回调函数的一个参数。包含了网页中媒 体的信息。应用可以根据这些信息来创建接管网页媒体播放的播放器。 |
-| [NativeMediaPlayerBridge](arkts-arkweb-nativemediaplayerbridge-i.md) | [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md#createnativemediaplayercallback)回调函数的返回值类型。接管网页媒体 的播放器和ArkWeb内核之间的一个接口类。 ArkWeb内核通过该接口类的实例对象来控制应用创建的用来接管网页媒体的播放器。 |
-| [NativeMediaPlayerHandler](arkts-arkweb-nativemediaplayerhandler-i.md) | [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md#createnativemediaplayercallback)回调函数的参数。应用通过该对象，将 播放器的状态通知给 ArkWeb 内核。 |
+| [MediaInfo](arkts-arkweb-mediainfo-i.md) | [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md)回调函数的一个参数。包含了网页中媒 体的信息。应用可以根据这些信息来创建接管网页媒体播放的播放器。 |
+| [NativeMediaPlayerBridge](arkts-arkweb-nativemediaplayerbridge-i.md) | [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md)回调函数的返回值类型。接管网页媒体 的播放器和ArkWeb内核之间的一个接口类。 ArkWeb内核通过该接口类的实例对象来控制应用创建的用来接管网页媒体的播放器。 |
+| [NativeMediaPlayerHandler](arkts-arkweb-nativemediaplayerhandler-i.md) | [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md)回调函数的参数。应用通过该对象，将 播放器的状态通知给 ArkWeb 内核。 |
 | [OfflineResourceMap](arkts-arkweb-offlineresourcemap-i.md) | 本地离线资源配置对象，用于配置将被[injectOfflineResources](arkts-arkweb-webviewcontroller-c.md#injectofflineresources-1) 接口注入到内存缓存的本地离线资源的相关信息，内核会根据此信息生成资源缓存，并据此控制缓存的有效期。 |
 | [PdfConfiguration](arkts-arkweb-pdfconfiguration-i.md) | Defines the configuration of creating pdf, related to {@Link createPdf} method. |
 | [RectEvent](arkts-arkweb-rectevent-i.md) | 矩形定义。 |
@@ -86,7 +86,7 @@ This module provides the capability to manage web modules.
 | [MediaPlaybackState](arkts-arkweb-mediaplaybackstate-e.md) | 当前网页的播控状态。 |
 | [MediaType](arkts-arkweb-mediatype-e.md) | 表示媒体类型。 |
 | [NetworkState](arkts-arkweb-networkstate-e.md) | 播放器的网络状态。 |
-| [OfflineResourceType](arkts-arkweb-offlineresourcetype-e.md) | [OfflineResourceMap](arkts-arkweb-offlineresourcemap-i.md#offlineresourcemap)对象对应的本地离线资源的接口类型。 |
+| [OfflineResourceType](arkts-arkweb-offlineresourcetype-e.md) | [OfflineResourceMap](arkts-arkweb-offlineresourcemap-i.md)对象对应的本地离线资源的接口类型。 |
 | [PlaybackStatus](arkts-arkweb-playbackstatus-e.md) | [handleStatusChanged](arkts-arkweb-nativemediaplayerhandler-i.md#handlestatuschanged-1) 接口参数， 用于表示播放器的播 放状态。 |
 | [Preload](arkts-arkweb-preload-e.md) | 播放器预加载媒体数据。 |
 | [PressureLevel](arkts-arkweb-pressurelevel-e.md) | 内存压力等级。在应用主动清理Web组件占用的缓存时，Web内核会根据内存压力等级，进行缓存释放。 |

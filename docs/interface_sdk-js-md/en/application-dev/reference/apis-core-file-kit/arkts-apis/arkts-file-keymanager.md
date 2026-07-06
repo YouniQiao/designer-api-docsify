@@ -9,7 +9,7 @@ This module provides common features related to user key management, including u
 ## Modules to Import
 
 ```TypeScript
-import { keyManager } from '@ohos.file.keyManager';
+import { keyManager } from '@kit.CoreFileKit';
 ```
 
 ## Summary

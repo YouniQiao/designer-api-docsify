@@ -105,7 +105,7 @@ off(type: 'progress', callback?: (uploadedSize: number, totalSize: number) => vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -148,7 +148,7 @@ off(type: 'headerReceive', callback?: (header: object) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -191,7 +191,7 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | the parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | the parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -259,7 +259,7 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | the parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | the parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -327,7 +327,7 @@ on(type: 'progress', callback: (uploadedSize: number, totalSize: number) => void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -362,7 +362,7 @@ on(type: 'headerReceive', callback: (header: object) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -397,7 +397,7 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -441,7 +441,7 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 

@@ -11,7 +11,7 @@ Defines a watcher for event subscription.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from '@ohos.hiSysEvent';
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## onEvent
@@ -20,7 +20,7 @@ import { hiSysEvent } from '@ohos.hiSysEvent';
 onEvent: (info: SysEventInfo) => void
 ```
 
-Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md#syseventinfo)) => void
+Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md)) => void
 
 **Type:** (info: SysEventInfo) => void
 

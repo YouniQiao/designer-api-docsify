@@ -42,8 +42,8 @@
 | [queryModuleUsageRecords](arkts-backgroundtasks-querymoduleusagerecords-f-sys.md#querymoduleusagerecords-4) | 查询FA模型下各应用不用Hap包的使用记录（不超过1000条）。若Hap包中存在FA卡片，使用信息中也包含卡片信息。使用Promise异步回调。 使用Promise形式返回不超过1000条FA使用记录，FA使用记录由近及远排序。 |
 | [queryNotificationEventStats](arkts-backgroundtasks-querynotificationeventstats-f-sys.md#querynotificationeventstats-1) | 通过指定起始和结束时间，查询所有应用的通知次数，使用Callback异步回调。 |
 | [queryNotificationEventStats](arkts-backgroundtasks-querynotificationeventstats-f-sys.md#querynotificationeventstats-2) | 通过指定起始和结束时间，查询所有应用的通知次数，使用Promise异步回调。 |
-| [registerAppGroupCallBack](arkts-backgroundtasks-registerappgroupcallback-f-sys.md#registerappgroupcallback-1) | 应用注册分组变化监听，即用户名下的某个应用分组发生变化时，向所有已注册分组变化监听的应用返回[AppGroupCallbackInfo](arkts-backgroundtasks-appgroupcallbackinfo-i-sys.md#appgroupcallbackinfo)信息。 使用Callback异步回调。 |
-| [registerAppGroupCallBack](arkts-backgroundtasks-registerappgroupcallback-f-sys.md#registerappgroupcallback-2) | 注册应用分组变化监听，即用户名下的某个应用分组发生变化时，向所有已注册分组变化监听的应用返回[AppGroupCallbackInfo](arkts-backgroundtasks-appgroupcallbackinfo-i-sys.md#appgroupcallbackinfo)信息。 使用Promise异步回调。 |
+| [registerAppGroupCallBack](arkts-backgroundtasks-registerappgroupcallback-f-sys.md#registerappgroupcallback-1) | 应用注册分组变化监听，即用户名下的某个应用分组发生变化时，向所有已注册分组变化监听的应用返回[AppGroupCallbackInfo](arkts-backgroundtasks-appgroupcallbackinfo-i-sys.md)信息。 使用Callback异步回调。 |
+| [registerAppGroupCallBack](arkts-backgroundtasks-registerappgroupcallback-f-sys.md#registerappgroupcallback-2) | 注册应用分组变化监听，即用户名下的某个应用分组发生变化时，向所有已注册分组变化监听的应用返回[AppGroupCallbackInfo](arkts-backgroundtasks-appgroupcallbackinfo-i-sys.md)信息。 使用Promise异步回调。 |
 | [setAppGroup](arkts-backgroundtasks-setappgroup-f-sys.md#setappgroup-1) | 将指定bundleName应用的分组设置为newGroup，仅支持当前应用为其他应用设置，使用CallBack异步回调。 |
 | [setAppGroup](arkts-backgroundtasks-setappgroup-f-sys.md#setappgroup-2) | 将指定bundleName应用的分组设置为newGroup，仅支持当前应用为其他应用设置，使用Promise异步回调。 |
 | [unregisterAppGroupCallBack](arkts-backgroundtasks-unregisterappgroupcallback-f-sys.md#unregisterappgroupcallback-1) | 应用解除分组变化监听。使用callback异步回调。 |

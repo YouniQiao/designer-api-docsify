@@ -9,7 +9,7 @@ Enumerates Ethernet network interface configurations. Only IPv4 is supported.
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@ohos.enterprise.networkManager';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## dnsServers

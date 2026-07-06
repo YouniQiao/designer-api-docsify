@@ -9,7 +9,7 @@ Provides encoding and decoding for Base64 and Base64URL. The Base64 encoding tab
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor

@@ -1,9 +1,9 @@
-# @ohos.atomicservice.InterstitialDialogAction
+# @ohos.atomicservice.InterstitialDialogAction (This section describes the interfaces used by InterstitialDialogAction)
 
 ## Modules to Import
 
 ```TypeScript
-import { IconStyle, TitlePosition, BottomOffset, InterstitialDialogAction } from '@ohos.atomicservice.InterstitialDialogAction';
+import { IconStyle, TitlePosition, BottomOffset, InterstitialDialogAction } from '@kit.ArkUI';
 ```
 
 ## Summary

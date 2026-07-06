@@ -9,7 +9,7 @@ Represents control transfer parameters.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@ohos.usbManager';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## bRequest

@@ -9,7 +9,7 @@ Provides methods to accessing bluetooth call-related capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { hfp } from '@ohos.bluetooth.hfp';
+import { hfp } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

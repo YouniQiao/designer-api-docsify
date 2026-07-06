@@ -9,7 +9,7 @@ The **Zip** module provides APIs for file compression and decompression.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@ohos.zlib';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -62,7 +62,7 @@ import { zlib } from '@ohos.zlib';
 | [MemLevel](arkts-basicservices-memlevel-e.md) | MemLevel |
 | [OffsetReferencePoint](arkts-basicservices-offsetreferencepoint-e.md) | Defines the reference point for the offset. |
 | [ParallelStrategy](arkts-basicservices-parallelstrategy-e.md) | ParallelStrategy |
-| [PathSeparatorStrategy](arkts-basicservices-pathseparatorstrategy-e.md) | Defines **PathSeparatorStrategy**, a property of [Options](arkts-basicservices-options-i.md#options), used to specify the separator strategy for the file path in the compressed package specified for decompression. |
+| [PathSeparatorStrategy](arkts-basicservices-pathseparatorstrategy-e.md) | Defines **PathSeparatorStrategy**, a property of [Options](arkts-basicservices-options-i.md), used to specify the separator strategy for the file path in the compressed package specified for decompression. |
 | [ReturnStatus](arkts-basicservices-returnstatus-e.md) | Return codes for the compression/decompression functions. |
 
 ### Types

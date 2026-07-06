@@ -18,7 +18,7 @@ function getAllWindowLayoutInfo(displayId: number): Promise<Array<WindowLayoutIn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | number | 是 | 需要获取窗口布局信息的displayId，该参数应为整数，且为当前实际存在屏幕的displayId，可以通过窗口属性[WindowProperties](arkts-arkui-windowproperties-i.md#windowproperties)获取。 |
+| displayId | number | 是 | 需要获取窗口布局信息的displayId，该参数应为整数，且为当前实际存在屏幕的displayId，可以通过窗口属性[WindowProperties](arkts-arkui-windowproperties-i.md)获取。 |
 
 **返回值：**
 
@@ -76,7 +76,7 @@ function getAllWindowLayoutInfo(displayId: number, option?: WindowInfoOptions): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | number | 是 | 需要获取窗口布局信息的displayId，该参数应为整数，且为当前实际存在屏幕的displayId，可以通过窗口属性[WindowProperties](arkts-arkui-windowproperties-i.md#windowproperties)获取。 |
+| displayId | number | 是 | 需要获取窗口布局信息的displayId，该参数应为整数，且为当前实际存在屏幕的displayId，可以通过窗口属性[WindowProperties](arkts-arkui-windowproperties-i.md)获取。 |
 | option | WindowInfoOptions | 否 | 过滤选项。用于指定返回信息是否排除系统窗、比指定窗口层级更低或更高的窗口的信息。默认不过滤。 |
 
 **返回值：**

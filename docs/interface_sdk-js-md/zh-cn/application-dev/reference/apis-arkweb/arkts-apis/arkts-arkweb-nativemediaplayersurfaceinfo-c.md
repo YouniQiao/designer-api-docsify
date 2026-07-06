@@ -12,7 +12,7 @@
 id: string
 ```
 
-surface的id，用于同层渲染的NativeImage的surfaceId。 详见[NativeEmbedDataInfo](../arkts-components/arkts-arkweb-nativeembeddatainfo-i.md#nativeembeddatainfo)。
+surface的id，用于同层渲染的NativeImage的surfaceId。 详见[NativeEmbedDataInfo](../arkts-components/arkts-arkweb-nativeembeddatainfo-i.md)。
 
 **类型：** string
 

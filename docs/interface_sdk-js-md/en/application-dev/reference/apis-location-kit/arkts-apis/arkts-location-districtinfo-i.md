@@ -9,7 +9,7 @@ Indicates request parameters for obtaining the district information.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@ohos.geoLocationManager';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## administrativeArea

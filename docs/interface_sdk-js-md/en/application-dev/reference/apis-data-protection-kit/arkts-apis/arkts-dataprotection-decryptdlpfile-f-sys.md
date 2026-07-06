@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@ohos.dlpPermission';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## decryptDlpFile
@@ -40,7 +40,7 @@ Decrypts a DLP file to generate a plaintext file. This API can be called only by
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 20 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 20 and later |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
 | [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |

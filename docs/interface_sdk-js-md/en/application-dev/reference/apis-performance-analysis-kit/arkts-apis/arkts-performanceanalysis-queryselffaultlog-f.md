@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogger } from '@ohos.faultLogger';
+import { FaultLogger } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## querySelfFaultLog

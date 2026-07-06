@@ -9,7 +9,7 @@ Represents an exception message about the SQL statement executed by the database
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@ohos.data.relationalStore';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## code

@@ -30,7 +30,7 @@ onComplete: (reason: number, total: number) => void
 onQuery: (infos: SysEventInfo[]) => void
 ```
 
-返回查询到的系统事件的回调方法(infos: [SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md#syseventinfo)[]) => void。
+返回查询到的系统事件的回调方法(infos: [SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md)[]) => void。
 
 **类型：** (infos: SysEventInfo[]) => void
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceAttest } from '@ohos.deviceAttest';
+import { deviceAttest } from '@kit.BasicServicesKit';
 ```
 
 ## getAttestStatus

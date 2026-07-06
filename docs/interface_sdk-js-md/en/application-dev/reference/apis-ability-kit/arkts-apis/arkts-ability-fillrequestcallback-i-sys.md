@@ -36,7 +36,7 @@ Called when an auto-fill request is canceled.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.The input parameter is not valid parameter;<br>2. Mandatory parameters are left unspecified.<br>**Applicable version:** 12 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.The input parameter is not valid parameter;<br>2. Mandatory parameters are left unspecified.<br>**Applicable version:** 12 and later |
 
 ## onFailure
 

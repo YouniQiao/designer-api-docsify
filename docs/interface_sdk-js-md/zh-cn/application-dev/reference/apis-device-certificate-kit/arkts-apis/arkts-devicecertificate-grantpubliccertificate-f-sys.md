@@ -29,7 +29,7 @@ function grantPublicCertificate(keyUri: string, clientAppUid: number) : Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回授予应用使用用户公共凭据权限的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md#cmresult)对象中的uri属性。 |
+| Promise&lt;CMResult&gt; | Promise对象，返回授予应用使用用户公共凭据权限的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的uri属性。 |
 
 **错误码：**
 

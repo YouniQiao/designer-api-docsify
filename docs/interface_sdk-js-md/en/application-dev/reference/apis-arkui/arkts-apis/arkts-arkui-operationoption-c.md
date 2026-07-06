@@ -9,7 +9,7 @@ Declare type OperationOption
 ## Modules to Import
 
 ```TypeScript
-import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from '@ohos.arkui.advanced.SubHeader';
+import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription

@@ -2,7 +2,7 @@
 
 The definition of Banner.
 
-**Inheritance/Implementation:** Banner extends [MediaEntity](arkts-avsession-mediaentity-i.md#mediaentity)
+**Inheritance/Implementation:** Banner extends [MediaEntity](arkts-avsession-mediaentity-i.md)
 
 **Since:** 23
 
@@ -11,7 +11,7 @@ The definition of Banner.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@ohos.multimedia.avMusicTemplate';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## isSupportOnePlay

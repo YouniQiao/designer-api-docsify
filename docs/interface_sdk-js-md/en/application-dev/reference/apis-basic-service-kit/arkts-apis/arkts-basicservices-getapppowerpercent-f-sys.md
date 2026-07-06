@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { batteryStats } from '@ohos.batteryStatistics';
+import { batteryStats } from '@kit.BasicServicesKit';
 ```
 
 ## getAppPowerPercent

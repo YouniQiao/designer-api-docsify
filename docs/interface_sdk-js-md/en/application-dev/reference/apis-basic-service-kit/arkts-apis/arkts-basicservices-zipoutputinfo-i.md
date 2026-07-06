@@ -9,7 +9,7 @@ Compression and decompression return value information.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@ohos.zlib';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## destLen
@@ -34,7 +34,7 @@ Total length of the destination buffer.
 status: ReturnStatus
 ```
 
-For details, see [ReturnStatus](arkts-basicservices-returnstatus-e.md#returnstatus).
+For details, see [ReturnStatus](arkts-basicservices-returnstatus-e.md).
 
 **Type:** ReturnStatus
 

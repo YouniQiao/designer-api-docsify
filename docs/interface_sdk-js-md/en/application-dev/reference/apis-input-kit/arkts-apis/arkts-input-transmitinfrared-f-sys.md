@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { infraredEmitter } from '@ohos.multimodalInput.infraredEmitter';
+import { infraredEmitter } from '@kit.InputKit';
 ```
 
 ## transmitInfrared

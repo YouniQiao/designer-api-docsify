@@ -9,7 +9,7 @@ Defines the callback of the registration message notification of the UIAbility.
 ## Modules to Import
 
 ```TypeScript
-import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@ohos.app.ability.UIAbility';
+import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
 ```
 
 ## constructor

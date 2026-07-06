@@ -9,7 +9,7 @@ Describes the contents of the ranging support types.
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from '@ohos.FusionConnectivity.ranging';
+import { ranging } from '@kit.ConnectivityKit';
 ```
 
 ## nearlinkHadm

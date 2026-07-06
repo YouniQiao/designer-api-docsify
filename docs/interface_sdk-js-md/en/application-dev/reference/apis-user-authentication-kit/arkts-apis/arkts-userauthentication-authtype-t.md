@@ -10,7 +10,7 @@ Enumerates the authentication types.
 
 **Deprecated since:** 8
 
-**Substitutes:** [UserAuthType](arkts-userauthentication-userauthtype-e.md#userauthtype)
+**Substitutes:** [UserAuthType](arkts-userauthentication-userauthtype-e.md)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

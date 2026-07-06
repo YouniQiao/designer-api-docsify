@@ -9,7 +9,7 @@ You can use this module to create a [Context](../../../../application-models/app
 ## Modules to Import
 
 ```TypeScript
-import { application } from '@ohos.app.ability.application';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -18,7 +18,7 @@ import { application } from '@ohos.app.ability.application';
 
 | Name | Description |
 | --- | --- |
-| [createModuleContext](arkts-ability-createmodulecontext-f.md#createmodulecontext-1) | Creates the context for a module. The [resourceManager.Configuration](../../apis-localization-kit/arkts-apis/arkts-localization-configuration-c.md#configuration) in the created module context inherits from the input context, making it convenient for you to access [application resources across HAP/HSP packages](../../../../quick-start/resource-categories-and-access.md#cross-haphsp-resources) . This API uses a promise to return the result. &gt; **NOTE** &gt; &gt; Creating a module context involves resource querying and initialization, which can be time-consuming. In &gt; scenarios where application fluidity is critical, avoid frequently or repeatedly calling the &gt; **createModuleContext** API to create multiple context instances, as this may negatively impact user experience. |
+| [createModuleContext](arkts-ability-createmodulecontext-f.md#createmodulecontext-1) | Creates the context for a module. The [resourceManager.Configuration](../../apis-localization-kit/arkts-apis/arkts-localization-configuration-c.md) in the created module context inherits from the input context, making it convenient for you to access [application resources across HAP/HSP packages](../../../../quick-start/resource-categories-and-access.md#cross-haphsp-resources) . This API uses a promise to return the result. &gt; **NOTE** &gt; &gt; Creating a module context involves resource querying and initialization, which can be time-consuming. In &gt; scenarios where application fluidity is critical, avoid frequently or repeatedly calling the &gt; **createModuleContext** API to create multiple context instances, as this may negatively impact user experience. |
 | [createPluginModuleContext](arkts-ability-createpluginmodulecontext-f.md#createpluginmodulecontext-1) | Creates the context of a plugin under the current application based on the context, plugin bundle name, and plugin module name, so as to obtain the basic information about the plugin. This API uses a promise to return the result. |
 | [demoteCurrentFromCandidateMasterProcess](arkts-ability-demotecurrentfromcandidatemasterprocess-f.md#demotecurrentfromcandidatemasterprocess-1) | Removes the current process from the candidate master process list. This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801 is returned. **System capability**: SystemCapability.Ability.AbilityRuntime.Core |
 | [exitMasterProcessRole](arkts-ability-exitmasterprocessrole-f.md#exitmasterprocessrole-1) | Relinquishes the [master-process](../../../../application-models/ability-terminology.md#master-process) role from the current process. This API uses a promise to return the result. This API can be properly called only on 2-in-1 devices and tablets. If it is called on other device types, error code 801 is returned. |

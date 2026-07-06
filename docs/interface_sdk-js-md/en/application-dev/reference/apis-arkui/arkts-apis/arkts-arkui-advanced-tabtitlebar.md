@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { TabTitleBar, TabTitleBarTabItem, TabTitleBarMenuItem } from '@ohos.arkui.advanced.TabTitleBar';
+import { TabTitleBar, TabTitleBarTabItem, TabTitleBarMenuItem } from '@kit.ArkUI';
 ```
 
 ## Summary

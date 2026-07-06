@@ -2,7 +2,7 @@
 
 Implements communication between the Worker thread and the host thread. The postMessage API is used to send messages to the host thread, and the close API is used to terminate the Worker thread. The ThreadWorkerGlobalScope class inherits from GlobalScope9+.
 
-**Inheritance/Implementation:** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-globalscope-i.md#globalscope)
+**Inheritance/Implementation:** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-globalscope-i.md)
 
 **Since:** 9
 
@@ -11,7 +11,7 @@ Implements communication between the Worker thread and the host thread. The post
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@ohos.worker';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## callGlobalCallObjectMethod

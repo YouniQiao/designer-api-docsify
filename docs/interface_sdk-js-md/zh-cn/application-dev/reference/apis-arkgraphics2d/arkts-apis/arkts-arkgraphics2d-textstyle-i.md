@@ -352,7 +352,7 @@ letterSpacing?: number
 lineHeightMaximum?: number
 ```
 
-行高上限，单位为物理像素px。若同时应用行高缩放，行高上限在[TextStyle](arkts-arkgraphics2d-textstyle-i.md#textstyle).heightScale大于0时生效。取值为正数浮点数，默认值为Number.MAX_VALUE。
+行高上限，单位为物理像素px。若同时应用行高缩放，行高上限在[TextStyle](arkts-arkgraphics2d-textstyle-i.md).heightScale大于0时生效。取值为正数浮点数，默认值为Number.MAX_VALUE。
 
 **类型：** number
 
@@ -368,7 +368,7 @@ lineHeightMaximum?: number
 lineHeightMinimum?: number
 ```
 
-行高下限，单位为物理像素px。若同时应用行高缩放，行高下限在[TextStyle](arkts-arkgraphics2d-textstyle-i.md#textstyle).heightScale大于0时生效。取值范围为非负浮点数，默认值为0。
+行高下限，单位为物理像素px。若同时应用行高缩放，行高下限在[TextStyle](arkts-arkgraphics2d-textstyle-i.md).heightScale大于0时生效。取值范围为非负浮点数，默认值为0。
 
 **类型：** number
 

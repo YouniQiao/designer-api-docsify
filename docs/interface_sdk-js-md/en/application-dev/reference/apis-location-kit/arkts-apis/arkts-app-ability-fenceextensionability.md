@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FenceExtensionAbility } from '@ohos.app.ability.FenceExtensionAbility';
+import { FenceExtensionAbility } from '@kit.LocationKit';
 ```
 
 ## Summary

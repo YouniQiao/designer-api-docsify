@@ -1,6 +1,6 @@
 # TextInput properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following events are supported.
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following events are supported.
 
 **Inheritance/Implementation:** TextInputAttribute extends [CommonMethod<TextInputAttribute>](CommonMethod<TextInputAttribute>)
 
@@ -166,7 +166,7 @@ Sets the caret style.
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-Sets whether to enable leading punctuation compression. > **NOTE** > > - Leading punctuation is not compressed by default. > > - For the range of punctuation marks that support leading compression, see > [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md#paragraphstyle).
+Sets whether to enable leading punctuation compression. > **NOTE** > > - Leading punctuation is not compressed by default. > > - For the range of punctuation marks that support leading compression, see > [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -355,7 +355,7 @@ Sets whether to enable the autofill animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | Yes | Whether to enable the autofill animation.<br>**true** to enable; **false**otherwise.<br>Default value: **true**<br>**NOTE**<br>When enabled, the animation takes effect only for textboxes where [InputType](arkts-arkui-inputtype-e.md#inputtype) is set to **Password**, **NEW_PASSWORD**, or **NUMBER_PASSWORD**. |
+| enabled | Optional&lt;boolean&gt; | Yes | Whether to enable the autofill animation.<br>**true** to enable; **false**otherwise.<br>Default value: **true**<br>**NOTE**<br>When enabled, the animation takes effect only for textboxes where [InputType](arkts-arkui-inputtype-e.md) is set to **Password**, **NEW_PASSWORD**, or **NUMBER_PASSWORD**. |
 
 ## enableAutoSpacing
 
@@ -451,7 +451,7 @@ Sets whether to enable preview text. The preview content is defined as a tempora
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition. When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default. This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md#copyoptions) is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
+Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition. When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default. This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md) is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
 
 **Since:** 22
 
@@ -760,7 +760,7 @@ Sets the letter spacing for a text style. If the value specified is a percentage
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Letter spacing.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | number \| string \| Resource | Yes | Letter spacing.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## lineBreakStrategy
 
@@ -848,7 +848,7 @@ Sets the maximum font size. For the string type, numeric string values with opti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Maximum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | number \| string \| Resource | Yes | Maximum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## maxLength
 
@@ -934,7 +934,7 @@ Sets the minimum font size. For the string type, numeric string values with opti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Minimum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | number \| string \| Resource | Yes | Minimum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## onChange
 
@@ -1194,7 +1194,7 @@ Triggered when the text selection changes or the caret position changes during e
 onWillAttachIME(callback: Callback<IMEClient>)
 ```
 
-Called when the input box is about to be bound to an input method. <!--Del--> Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-uicontext-c-sys.md#setkeyboardappearanceconfig-1) API of **UIContext** to set the keyboard style.<!--DelEnd--> From API version 22, the [setExtraConfig](arkts-arkui-imeclient-i.md#setextraconfig-1) method of [IMEClient](arkts-arkui-imeclient-i.md#imeclient) can be called to set input method extension information. After the input method is bound, it receives this extension information which can be used to implement custom functionality. **IMEClient** is valid only during the execution of **onWillAttachIME** and cannot be called asynchronously. > **NOTE** > > This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Called when the input box is about to be bound to an input method. <!--Del--> Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-uicontext-c-sys.md#setkeyboardappearanceconfig-1) API of **UIContext** to set the keyboard style.<!--DelEnd--> From API version 22, the [setExtraConfig](arkts-arkui-imeclient-i.md#setextraconfig-1) method of [IMEClient](arkts-arkui-imeclient-i.md) can be called to set input method extension information. After the input method is bound, it receives this extension information which can be used to implement custom functionality. **IMEClient** is valid only during the execution of **onWillAttachIME** and cannot be called asynchronously. > **NOTE** > > This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 20
 
@@ -1326,7 +1326,7 @@ Triggered when text is about to be inserted.
 orphanCharOptimization(enabled: Optional<boolean>)
 ```
 
-Sets whether to enable orphan character optimization during text typesetting. If this attribute is not set, orphan character optimization is disabled by default. Orphan character optimization improves the text layout by handling the orphan character (the first Chinese character of the last line of a paragraph) more efficiently. When enabled, it adjusts line breaks to avoid orphan characters as much as possible. This feature takes effect only when [wordBreak](TextInputAttribute#wordBreak) is not **BREAK_ALL** and [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md#textstyle) of the first [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md#textstyle) of the text to be typeset is either **"zh-Hans"** or **"zh-Hant"**. **Since**: 26.0.0
+Sets whether to enable orphan character optimization during text typesetting. If this attribute is not set, orphan character optimization is disabled by default. Orphan character optimization improves the text layout by handling the orphan character (the first Chinese character of the last line of a paragraph) more efficiently. When enabled, it adjusts line breaks to avoid orphan characters as much as possible. This feature takes effect only when [wordBreak](TextInputAttribute#wordBreak) is not **BREAK_ALL** and [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md) of the first [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md) of the text to be typeset is either **"zh-Hans"** or **"zh-Hant"**. **Since**: 26.0.0
 
 **Since:** 26.0.0
 
@@ -1562,7 +1562,7 @@ Set the shader style of the text, such as lineargradient or radialgradient.
 showCounter(value: boolean, options?: InputCounterOptions)
 ```
 
-Sets the character counter displayed when the number of characters entered exceeds the threshold. If the **showCounter** API is not called, the character counter is not displayed by default. **options** can be set only when **value** is set to **true**, in which case a character counter is displayed below the text box. This attribute must be used together with [maxLength](TextInputAttribute#maxLength). The character counter is displayed in this format: Number of characters entered/Character limit. It is visible when the number of characters entered is greater than the character limit multiplied by the threshold percentage value. If **options** is not set, the text box border and character counter subscript turn red when the number of characters entered exceeds the limit. If **value** is set to **true** and [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md#inputcounteroptions) is set, the text box border and character counter subscript turn red and the text box shakes when the number of characters entered reaches the limit, provided that the value of **thresholdPercentage** is valid. If **highlightBorder** is set to **false**, the text box border does not turn red. By default, **highlightBorder** is set to **true**. The character counter is not displayed in the [inline style](../../../../ui/arkts-common-components-text-input.md#inline-style) and [password mode](../../../../ui/arkts-common-components-text-input.md#password-mode). [Example 5: Setting a Character Counter](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#example-5-setting-a-character-counter) shows the effect of setting **showCounter**. > **NOTE** > > This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+Sets the character counter displayed when the number of characters entered exceeds the threshold. If the **showCounter** API is not called, the character counter is not displayed by default. **options** can be set only when **value** is set to **true**, in which case a character counter is displayed below the text box. This attribute must be used together with [maxLength](TextInputAttribute#maxLength). The character counter is displayed in this format: Number of characters entered/Character limit. It is visible when the number of characters entered is greater than the character limit multiplied by the threshold percentage value. If **options** is not set, the text box border and character counter subscript turn red when the number of characters entered exceeds the limit. If **value** is set to **true** and [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) is set, the text box border and character counter subscript turn red and the text box shakes when the number of characters entered reaches the limit, provided that the value of **thresholdPercentage** is valid. If **highlightBorder** is set to **false**, the text box border does not turn red. By default, **highlightBorder** is set to **true**. The character counter is not displayed in the [inline style](../../../../ui/arkts-common-components-text-input.md#inline-style) and [password mode](../../../../ui/arkts-common-components-text-input.md#password-mode). [Example 5: Setting a Character Counter](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#example-5-setting-a-character-counter) shows the effect of setting **showCounter**. > **NOTE** > > This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
 
 **Since:** 11
 
@@ -1607,7 +1607,7 @@ Sets the error message displayed when an error occurs. If the data type is **Res
 showPassword(visible: boolean)
 ```
 
-Sets whether to show the password. This API has effect only when the [input type](arkts-arkui-inputtype-e.md#inputtype) is set to **Password**, **NEWPASSWORD**, or **NUMBERPASSWORD** mode. It does not work in other modes. In the [password mode](../../../../ui/arkts-common-components-text-input.md#password-mode), inconsistencies between the backend state of the text box and the frontend application's state management variables may cause abnormal behavior of the trailing icon. To avoid such issues, use the [onSecurityStateChange](TextInputAttribute#onSecurityStateChange) callback to sync the states. For details, see [Example 1: Setting and Obtaining the Caret Position](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#example-1-setting-and-obtaining-the-caret-position).
+Sets whether to show the password. This API has effect only when the [input type](arkts-arkui-inputtype-e.md) is set to **Password**, **NEWPASSWORD**, or **NUMBERPASSWORD** mode. It does not work in other modes. In the [password mode](../../../../ui/arkts-common-components-text-input.md#password-mode), inconsistencies between the backend state of the text box and the frontend application's state management variables may cause abnormal behavior of the trailing icon. To avoid such issues, use the [onSecurityStateChange](TextInputAttribute#onSecurityStateChange) callback to sync the states. For details, see [Example 1: Setting and Obtaining the Caret Position](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#example-1-setting-and-obtaining-the-caret-position).
 
 **Since:** 12
 

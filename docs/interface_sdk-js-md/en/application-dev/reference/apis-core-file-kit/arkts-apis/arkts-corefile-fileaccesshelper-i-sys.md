@@ -13,7 +13,7 @@ Provides a **FileAccessHelper** object.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@ohos.file.fileAccess';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## access
@@ -1156,7 +1156,7 @@ try {
 getRoots(): Promise<RootIterator>
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses a promise to return a **RootIterator** object. You can use [next](arkts-corefile-fileiterator-i-sys.md#next-1) to return [RootInfo](arkts-corefile-rootinfo-i-sys.md#rootinfo).
+Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses a promise to return a **RootIterator** object. You can use [next](arkts-corefile-fileiterator-i-sys.md#next-1) to return [RootInfo](arkts-corefile-rootinfo-i-sys.md).
 
 **Since:** 9
 
@@ -1251,7 +1251,7 @@ async function getRoots() {
 getRoots(callback: AsyncCallback<RootIterator>): void
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses an asynchronous callback to return a **RootIterator** object. You can use [next](arkts-corefile-fileiterator-i-sys.md#next-1) to return [RootInfo](arkts-corefile-rootinfo-i-sys.md#rootinfo).
+Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses an asynchronous callback to return a **RootIterator** object. You can use [next](arkts-corefile-fileiterator-i-sys.md#next-1) to return [RootInfo](arkts-corefile-rootinfo-i-sys.md).
 
 **Since:** 9
 
@@ -2375,8 +2375,8 @@ Queries the attribute information about a file or directory based on a URI. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileinfo-i-sys.md#fileinfo). |
-| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-filekey-e-sys.md#filekey) to query. |
+| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileinfo-i-sys.md). |
+| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-filekey-e-sys.md) to query. |
 
 **Return value:**
 
@@ -2431,8 +2431,8 @@ Queries the attribute information about a file or directory based on a URI. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileinfo-i-sys.md#fileinfo). |
-| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-filekey-e-sys.md#filekey) to query. |
+| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileinfo-i-sys.md). |
+| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-filekey-e-sys.md) to query. |
 | callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return a JSON string that contains the fileattribute and the value obtained. |
 
 **Example**

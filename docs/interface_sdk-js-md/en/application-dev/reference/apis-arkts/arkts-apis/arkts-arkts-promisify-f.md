@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## promisify
@@ -31,7 +31,7 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 | Type | Description |
 | --- | --- |
 | function | Return a function that returns promises<br>**Applicable version:** 9 - 11 |
-| Function | Promise function.<br>**Applicable version:** 10 |
+| Function | Promise function.<br>**Applicable version:** 10 and later |
 
 **Example**
 

@@ -1,8 +1,8 @@
 # CapsuleStyleOptions
 
-胶囊样式选项。 继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#scaneffectoptions)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions)。
+胶囊样式选项。 继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。
 
-**继承/实现关系：** CapsuleStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#scaneffectoptions), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
+**继承/实现关系：** CapsuleStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
 **起始版本：** 10
 
@@ -88,7 +88,7 @@ content?: ResourceStr
 font?: Font
 ```
 
-文本样式。 默认值： 文本大小（不支持百分比设置）：12fp 其他文本参数跟随[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md#text)组件的主题值。
+文本样式。 默认值： 文本大小（不支持百分比设置）：12fp 其他文本参数跟随[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)组件的主题值。
 
 **类型：** Font
 

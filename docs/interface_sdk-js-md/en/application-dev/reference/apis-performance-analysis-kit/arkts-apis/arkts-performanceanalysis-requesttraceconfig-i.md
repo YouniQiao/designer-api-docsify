@@ -9,7 +9,7 @@ Describes the trace request configuration.
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@ohos.hidebug';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## bufferSizeKb

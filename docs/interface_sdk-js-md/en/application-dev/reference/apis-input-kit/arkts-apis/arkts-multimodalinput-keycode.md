@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { KeyCode } from '@ohos.multimodalInput.keyCode';
+import { KeyCode } from '@kit.InputKit';
 ```
 
 ## Summary

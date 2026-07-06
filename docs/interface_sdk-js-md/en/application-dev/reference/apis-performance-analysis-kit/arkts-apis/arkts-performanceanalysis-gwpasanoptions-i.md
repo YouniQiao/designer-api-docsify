@@ -9,7 +9,7 @@ GwpAsan Options.
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@ohos.hidebug';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## alwaysEnabled

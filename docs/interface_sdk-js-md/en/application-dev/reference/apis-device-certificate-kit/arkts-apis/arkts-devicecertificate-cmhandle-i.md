@@ -9,7 +9,7 @@ Represents the handle to a signing or signature verification operation.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## handle

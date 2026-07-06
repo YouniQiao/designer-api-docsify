@@ -48,7 +48,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [AccountManager](arkts-basicservices-accountmanager-i.md) | 系统账号管理类。 |
-| [CreateOsAccountForDomainOptions](arkts-basicservices-createosaccountfordomainoptions-i.md) | 表示用于创建与指定域账号绑定的系统账号的可选参数。继承自[CreateOsAccountOptions](arkts-basicservices-createosaccountoptions-i-sys.md#createosaccountoptions)。 |
+| [CreateOsAccountForDomainOptions](arkts-basicservices-createosaccountfordomainoptions-i.md) | 表示用于创建与指定域账号绑定的系统账号的可选参数。继承自[CreateOsAccountOptions](arkts-basicservices-createosaccountoptions-i-sys.md)。 |
 | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | 表示域账号信息。 |
 | [DomainServerConfig](arkts-basicservices-domainserverconfig-i.md) | 域服务器配置。 |
 | [OsAccountInfo](arkts-basicservices-osaccountinfo-i.md) | 表示系统账号信息。 |
@@ -78,7 +78,7 @@
 | [GetAuthInfoOptions](arkts-basicservices-getauthinfooptions-i-sys.md) | 表示[查询认证凭据信息](arkts-basicservices-useridentitymanager-c-sys.md#getauthinfo-4)的可选参数集合。 |
 | [GetDomainAccessTokenOptions](arkts-basicservices-getdomainaccesstokenoptions-i-sys.md) | 表示获取域访问令牌的选项。 |
 | [GetDomainAccountInfoOptions](arkts-basicservices-getdomainaccountinfooptions-i-sys.md) | 表示查询域账号信息的选项。 |
-| [GetDomainAccountInfoPluginOptions](arkts-basicservices-getdomainaccountinfopluginoptions-i-sys.md) | 表示插件查询域账号信息的选项。GetDomainAccountInfoPluginOptions类继承 [GetDomainAccountInfoOptions](arkts-basicservices-getdomainaccountinfooptions-i-sys.md#getdomainaccountinfooptions) |
+| [GetDomainAccountInfoPluginOptions](arkts-basicservices-getdomainaccountinfopluginoptions-i-sys.md) | 表示插件查询域账号信息的选项。GetDomainAccountInfoPluginOptions类继承 [GetDomainAccountInfoOptions](arkts-basicservices-getdomainaccountinfooptions-i-sys.md) |
 | [GetInputDataOptions](arkts-basicservices-getinputdataoptions-i-sys.md) | 表示[通知调用者获取数据](../../../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#ongetdata8)的可选参数集合。 |
 | [GetPropertyRequest](arkts-basicservices-getpropertyrequest-i-sys.md) | 提供获取属性请求的信息。 |
 | [IIdmCallback](arkts-basicservices-iidmcallback-i-sys.md) | 表示身份管理回调类。 |

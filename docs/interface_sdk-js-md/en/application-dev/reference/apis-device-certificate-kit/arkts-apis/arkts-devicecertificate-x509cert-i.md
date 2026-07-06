@@ -9,7 +9,7 @@ Provides APIs for X.509 certificate operations.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## checkValidityWithDate
@@ -690,7 +690,7 @@ Obtains the subject of this X.509 certificate. > **NOTE** > > The obtained X.509
 | [19020001](../errorcode-cert.md#19020001-memory-error) | memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | runtime error. Possible causes:<br>1. Memory copy failed;<br>2. A null pointer occurs inside the system;<br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | crypto operation error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | invalid parameters. Possible causes:<br>1. Incorrect parameter types;<br>2. Parameter verification failed.<br>**Applicable version:** 12 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | invalid parameters. Possible causes:<br>1. Incorrect parameter types;<br>2. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## getSubjectX500DistinguishedName
 

@@ -9,7 +9,7 @@ Implements a window manager, which manages each basic window unit, that is, [Win
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## createSubWindow
@@ -46,7 +46,7 @@ Create sub window of the stage.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The subWindow has been created and can not be created again. |
-| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## createSubWindow
 
@@ -77,7 +77,7 @@ Create sub window of the stage.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The subWindow has been created and can not be created again. |
-| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## createSubWindowWithOptions
 
@@ -230,8 +230,8 @@ Get sub window of the stage.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.<br>**Applicable version:** 10 |
-| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.<br>**Applicable version:** 10 and later |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## getSubWindow
 
@@ -259,8 +259,8 @@ Get sub window of the stage.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.<br>**Applicable version:** 10 |
-| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.<br>**Applicable version:** 10 and later |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## isWindowRectAutoSave
 
@@ -290,7 +290,7 @@ Whether the window supports the window rect auto-save.
 | --- | --- |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: 1. The window is not created or destroyed;2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 20 |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 20 and later |
 
 ## loadContent
 
@@ -322,7 +322,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## loadContent
 
@@ -359,7 +359,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## loadContent
 
@@ -390,7 +390,7 @@ Loads content from a page to this window stage. This API uses an asynchronous ca
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## loadContentByName
 
@@ -926,7 +926,7 @@ Set the application modality of the windowStage.
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. Possible cause:The window is not created or destroyed.<br>**Applicable version:** 20 |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. Possible cause:The window is not created or destroyed.<br>**Applicable version:** 20 and later |
 
 ## setWindowRectAutoSave
 

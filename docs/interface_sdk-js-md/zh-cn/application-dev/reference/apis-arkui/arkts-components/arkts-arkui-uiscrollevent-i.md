@@ -2,7 +2,7 @@
 
 定义UIScrollEvent，用于设置目标组件的不同通用事件。
 
-**继承/实现关系：** UIScrollEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md#uiscrollablecommonevent)
+**继承/实现关系：** UIScrollEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
 
 **起始版本：** 19
 

@@ -1,8 +1,8 @@
 # AtomicServiceOptions
 
-**AtomicServiceOptions** is used as an input parameter of [openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice-1) to carry arguments. It inherits from [StartOptions](arkts-ability-startoptions-c.md#startoptions).
+**AtomicServiceOptions** is used as an input parameter of [openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice-1) to carry arguments. It inherits from [StartOptions](arkts-ability-startoptions-c.md).
 
-**Inheritance/Implementation:** AtomicServiceOptions extends [StartOptions](arkts-ability-startoptions-c.md#startoptions)
+**Inheritance/Implementation:** AtomicServiceOptions extends [StartOptions](arkts-ability-startoptions-c.md)
 
 **Since:** 12
 
@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceOptions } from '@ohos.app.ability.AtomicServiceOptions';
+import { AtomicServiceOptions } from '@kit.AbilityKit';
 ```
 
 ## completionHandlerForAtomicService
@@ -56,7 +56,7 @@ Mode in which the system processes the startup. For example, **wantConstant.Flag
 parameters?: Record<string, Object>
 ```
 
-Additional parameters. For details, see the **parameters** field in [Want](arkts-ability-want-c.md#want).
+Additional parameters. For details, see the **parameters** field in [Want](arkts-ability-want-c.md).
 
 **Type:** Record<string, Object>
 

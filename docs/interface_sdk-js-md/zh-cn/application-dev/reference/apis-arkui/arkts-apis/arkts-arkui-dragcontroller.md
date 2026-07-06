@@ -12,10 +12,10 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [createDragAction](arkts-arkui-createdragaction-f.md#createdragaction-1) | 创建拖拽的Action对象，需要显式指定拖拽背板图（可多个），以及拖拽的数据，跟手点等信息；当通过一个已创建的 Action 对象发起的拖拽未结束时，无法再次创建新的 Action 对象，接口会抛出异常； 当Action对象的生命周期结束后，注册在该对象上的回调函数会失效，因此需要在一个尽量长的作用域下持有该对象，并在每次发起拖拽前通过createDragAction返回新的对象覆盖旧值。 @link @ohos.arkui.UIContext}中的 &gt; [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1)方法获取当前UI &gt; 上下文关联的[DragController](arkts-arkui-dragcontroller-c.md#dragcontroller)对象。 &gt; &gt; - 建议控制传递的拖拽背板数量，传递过多容易导致拖起的效率问题。 |
+| [createDragAction](arkts-arkui-createdragaction-f.md#createdragaction-1) | 创建拖拽的Action对象，需要显式指定拖拽背板图（可多个），以及拖拽的数据，跟手点等信息；当通过一个已创建的 Action 对象发起的拖拽未结束时，无法再次创建新的 Action 对象，接口会抛出异常； 当Action对象的生命周期结束后，注册在该对象上的回调函数会失效，因此需要在一个尽量长的作用域下持有该对象，并在每次发起拖拽前通过createDragAction返回新的对象覆盖旧值。 @link @ohos.arkui.UIContext}中的 &gt; [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1)方法获取当前UI &gt; 上下文关联的[DragController](arkts-arkui-dragcontroller-c.md)对象。 &gt; &gt; - 建议控制传递的拖拽背板数量，传递过多容易导致拖起的效率问题。 |
 | [executeDrag](arkts-arkui-executedrag-f.md#executedrag-1) | Execute a drag event. |
-| [executeDrag](arkts-arkui-executedrag-f.md#executedrag-2) | 主动发起拖拽能力，传入拖拽发起后跟手效果所拖拽的对象以及携带拖拽信息。使用Promise异步回调。 @link @ohos.arkui.UIContext}中的 &gt; [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1)方法获取当前UI &gt; 上下文关联的[DragController](arkts-arkui-dragcontroller-c.md#dragcontroller)对象。 |
-| [getDragPreview](arkts-arkui-getdragpreview-f.md#getdragpreview-1) | 返回一个代表拖拽背板的对象。 @link @ohos.arkui.UIContext}中的 &gt; [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1)方法获取当前UI &gt; 上下文关联的[DragController](arkts-arkui-dragcontroller-c.md#dragcontroller)对象。 |
+| [executeDrag](arkts-arkui-executedrag-f.md#executedrag-2) | 主动发起拖拽能力，传入拖拽发起后跟手效果所拖拽的对象以及携带拖拽信息。使用Promise异步回调。 @link @ohos.arkui.UIContext}中的 &gt; [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1)方法获取当前UI &gt; 上下文关联的[DragController](arkts-arkui-dragcontroller-c.md)对象。 |
+| [getDragPreview](arkts-arkui-getdragpreview-f.md#getdragpreview-1) | 返回一个代表拖拽背板的对象。 @link @ohos.arkui.UIContext}中的 &gt; [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1)方法获取当前UI &gt; 上下文关联的[DragController](arkts-arkui-dragcontroller-c.md)对象。 |
 
 ### 类
 

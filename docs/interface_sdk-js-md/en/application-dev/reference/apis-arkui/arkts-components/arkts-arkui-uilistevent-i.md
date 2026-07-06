@@ -2,7 +2,7 @@
 
 Represents the return value of the [getEvent('List')](FrameNode:typeNode.getEvent(node: FrameNode, nodeType: 'List')) method in **frameNode**, which can be used to set scroll events for a **List** node.
 
-**Inheritance/Implementation:** UIListEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md#uiscrollablecommonevent)
+**Inheritance/Implementation:** UIListEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
 
 **Since:** 19
 

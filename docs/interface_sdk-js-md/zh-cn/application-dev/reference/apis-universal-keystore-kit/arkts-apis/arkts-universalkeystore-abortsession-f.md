@@ -33,10 +33,10 @@ abortSession终止密钥操作。使用callback异步回调。
 | [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine or UKey driver |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed<br>**适用版本：** 22 |
-| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | the provider or UKey is busy<br>**适用版本：** 22 |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23 |
-| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0 |
+| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed<br>**适用版本：** 22+ |
+| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | the provider or UKey is busy<br>**适用版本：** 22+ |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
+| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -457,10 +457,10 @@ abortSession终止密钥操作。使用Promise异步回调。
 | [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine or UKey driver |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed<br>**适用版本：** 22 |
-| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | the provider or UKey is busy<br>**适用版本：** 22 |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23 |
-| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0 |
+| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed<br>**适用版本：** 22+ |
+| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | the provider or UKey is busy<br>**适用版本：** 22+ |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
+| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 

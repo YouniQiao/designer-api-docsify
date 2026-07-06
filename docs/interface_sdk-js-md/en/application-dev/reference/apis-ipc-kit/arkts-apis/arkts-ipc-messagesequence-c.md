@@ -9,7 +9,7 @@ Provides APIs for reading and writing data in specific format. During RPC or IPC
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@ohos.rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## closeFileDescriptor
@@ -3691,7 +3691,7 @@ try {
 writeRemoteObject(obj: IRemoteObject): void
 ```
 
-Serializes the remote object and writes it to the [MessageSequence](arkts-ipc-messagesequence-c.md#messagesequence) object.
+Serializes the remote object and writes it to the [MessageSequence](arkts-ipc-messagesequence-c.md) object.
 
 **Since:** 9
 

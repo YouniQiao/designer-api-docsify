@@ -9,7 +9,7 @@ This interface implements audio volume management. Before calling any API in Aud
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## getAppVolumePercentage

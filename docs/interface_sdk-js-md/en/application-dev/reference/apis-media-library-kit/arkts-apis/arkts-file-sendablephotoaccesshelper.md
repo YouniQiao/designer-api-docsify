@@ -9,7 +9,7 @@ Helper functions to access image and video assets
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from '@ohos.file.sendablePhotoAccessHelper';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## Summary

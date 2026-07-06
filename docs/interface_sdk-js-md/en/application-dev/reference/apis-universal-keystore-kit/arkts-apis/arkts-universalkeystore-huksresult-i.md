@@ -6,14 +6,14 @@ Represents the result returned. > **NOTE** > > - For details about the error cod
 
 **Deprecated since:** 9
 
-**Substitutes:** [HuksReturnResult](arkts-universalkeystore-huksreturnresult-i.md#huksreturnresult)
+**Substitutes:** [HuksReturnResult](arkts-universalkeystore-huksreturnresult-i.md)
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@ohos.security.huks';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## certChains

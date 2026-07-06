@@ -11,7 +11,7 @@ Provides the conditions of Collector.
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@ohos.security.securityGuard';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## eventId

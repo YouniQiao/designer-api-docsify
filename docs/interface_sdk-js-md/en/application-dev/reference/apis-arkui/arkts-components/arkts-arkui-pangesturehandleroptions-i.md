@@ -1,8 +1,8 @@
 # PanGestureHandlerOptions
 
-Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions).
+Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
-**Inheritance/Implementation:** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions)
+**Inheritance/Implementation:** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
 **Since:** 12
 

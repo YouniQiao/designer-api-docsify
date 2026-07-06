@@ -9,7 +9,7 @@ Defines the vibrator information.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@ohos.vibrator';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## deviceId

@@ -9,7 +9,7 @@ Defines the time information for a calendar reminder.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@ohos.reminderAgentManager';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## day

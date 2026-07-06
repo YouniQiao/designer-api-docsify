@@ -2,7 +2,7 @@
 
 Manage hfp sink profile.
 
-**Inheritance/Implementation:** HandsFreeHfProfile extends [BaseProfile](arkts-connectivity-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** HandsFreeHfProfile extends [BaseProfile](arkts-connectivity-baseprofile-t.md)
 
 **Since:** 26.0.0
 
@@ -11,7 +11,7 @@ Manage hfp sink profile.
 ## Modules to Import
 
 ```TypeScript
-import { hfp } from '@ohos.bluetooth.hfp';
+import { hfp } from '@kit.ConnectivityKit';
 ```
 
 ## connect

@@ -9,7 +9,7 @@ Defines the mac address info of the Ethernet.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@ohos.net.ethernet';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## iface

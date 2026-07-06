@@ -9,7 +9,7 @@ Initialization parameters for the **ArcAlphabetIndexer** component.
 ## Modules to Import
 
 ```TypeScript
-import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@ohos.arkui.ArcAlphabetIndexer';
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
 ```
 
 ## arrayValue

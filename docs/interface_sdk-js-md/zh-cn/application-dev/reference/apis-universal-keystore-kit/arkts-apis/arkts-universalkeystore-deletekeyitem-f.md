@@ -19,7 +19,7 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名，应为生成key时传入的别名。 |
-| options | HuksOptions | 是 | 用于删除密钥时指定密钥的属性，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md#huksauthstoragelevel)指定需删除密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| options | HuksOptions | 是 | 用于删除密钥时指定密钥的属性，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md)指定需删除密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
 | callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当删除密钥成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -33,7 +33,7 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23 |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
 
 **示例：**
 
@@ -154,7 +154,7 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名，应为生成key时传入的别名。 |
-| options | HuksOptions | 是 | 用于删除时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md#huksauthstoragelevel)指定需删除密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| options | HuksOptions | 是 | 用于删除时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md)指定需删除密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
 
 **返回值：**
 
@@ -173,7 +173,7 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23 |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
 
 **示例：**
 

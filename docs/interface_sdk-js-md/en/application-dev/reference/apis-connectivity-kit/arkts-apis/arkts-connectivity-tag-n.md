@@ -9,7 +9,7 @@ Provides methods to operate or manage NFC tag.
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@ohos.nfc.tag';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -18,7 +18,7 @@ import { tag } from '@ohos.nfc.tag';
 
 | Name | Description |
 | --- | --- |
-| [ndef](arkts-connectivity-tag-ndef-n.md) | Provides methods for accessing NDEF tag. |
+| [ndef](arkts-connectivity-ndef-n.md) | Provides methods for accessing NDEF tag. |
 
 ### Functions
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleNameByUid
@@ -25,7 +25,7 @@ Obtains the bundle name based on the given UID. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | UID of the application. |
-| callback | AsyncCallback&lt;string&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return the result.If the information is successfully obtained, **err** is **null** and **data** is the bundle name. Otherwise,**err** is an error object. |
+| callback | AsyncCallback&lt;string&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result.If the information is successfully obtained, **err** is **null** and **data** is the bundle name. Otherwise,**err** is an error object. |
 
 **Error codes:**
 

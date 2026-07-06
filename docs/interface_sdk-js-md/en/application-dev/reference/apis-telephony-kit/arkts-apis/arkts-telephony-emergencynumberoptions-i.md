@@ -9,7 +9,7 @@ Indicates the option for determining if a number is an emergency number for spec
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@ohos.telephony.call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## slotId

@@ -9,7 +9,7 @@ Provides information about the device or application's folding, rotation, and wi
 ## Modules to Import
 
 ```TypeScript
-import { HoverModeStatus, ExtraRegionPosition, OnHoverStatusChangeHandler, ExpandedRegionLayoutOptions, FoldSplitContainer, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio } from '@ohos.arkui.advanced.FoldSplitContainer';
+import { HoverModeStatus, ExtraRegionPosition, OnHoverStatusChangeHandler, ExpandedRegionLayoutOptions, FoldSplitContainer, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio } from '@kit.ArkUI';
 ```
 
 ## appRotation

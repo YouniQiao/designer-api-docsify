@@ -9,7 +9,7 @@ Describes the data returned by the operation of proactive triggering a WantAgent
 ## Modules to Import
 
 ```TypeScript
-import { WantAgent } from '@ohos.app.ability.wantAgent';
+import { WantAgent } from '@kit.AbilityKit';
 ```
 
 ## extraInfo

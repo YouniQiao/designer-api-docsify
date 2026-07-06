@@ -63,7 +63,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [NavDestinationState](arkts-arkui-navdestinationstate-e.md) | NavDestination组件状态。 |
-| [RouterPageState](arkts-arkui-routerpagestate-e.md) | routerPage生命周期触发时对应的状态。RouterPageState用于[RouterPageInfo](arkts-arkui-routerpageinfo-c.md#routerpageinfo)中，作为 [routerPageUpdate](uiObserver.on(type: 'routerPageUpdate', context: UIAbilityContext \| UIContext, callback: Callback&lt;RouterPageInfo&gt;))无感监听的返回值。 |
+| [RouterPageState](arkts-arkui-routerpagestate-e.md) | routerPage生命周期触发时对应的状态。RouterPageState用于[RouterPageInfo](arkts-arkui-routerpageinfo-c.md)中，作为 [routerPageUpdate](uiObserver.on(type: 'routerPageUpdate', context: UIAbilityContext \| UIContext, callback: Callback&lt;RouterPageInfo&gt;))无感监听的返回值。 |
 | [ScrollEventType](arkts-arkui-scrolleventtype-e.md) | ScrollEvent type. |
 | [TabContentState](arkts-arkui-tabcontentstate-e.md) | TabContent组件的状态。 |
 

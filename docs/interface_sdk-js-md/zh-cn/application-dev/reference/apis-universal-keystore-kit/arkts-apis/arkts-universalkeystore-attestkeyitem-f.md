@@ -36,7 +36,7 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23 |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
 
 **示例：**
 
@@ -178,7 +178,7 @@ function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23 |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
 
 **示例：**
 

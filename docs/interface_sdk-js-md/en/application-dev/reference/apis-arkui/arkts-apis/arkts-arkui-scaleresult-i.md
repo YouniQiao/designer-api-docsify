@@ -9,7 +9,7 @@ Scale Result
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from '@ohos.arkui.componentUtils';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## centerX

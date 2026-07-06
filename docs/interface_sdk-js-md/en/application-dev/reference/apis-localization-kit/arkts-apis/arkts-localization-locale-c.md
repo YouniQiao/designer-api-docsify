@@ -13,7 +13,7 @@ Provides APIs for obtaining locale information.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@ohos.intl';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor

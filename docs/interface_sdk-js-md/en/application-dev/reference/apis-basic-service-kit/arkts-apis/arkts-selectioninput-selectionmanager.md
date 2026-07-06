@@ -11,7 +11,7 @@ This module provides word selection management capabilities, including creating,
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from '@ohos.selectionInput.selectionManager';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

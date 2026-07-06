@@ -11,7 +11,7 @@ Authentication token data. It indicates the parsed **AuthToken** data returned a
 ## Modules to Import
 
 ```TypeScript
-import { userAccessCtrl } from '@ohos.userIAM.userAccessCtrl';
+import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 ```
 
 ## authTrustLevel

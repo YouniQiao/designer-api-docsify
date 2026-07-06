@@ -33,7 +33,7 @@ function getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLev
 | [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
 | [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |
 | [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) | The type of credential has not been enrolled. |
-| [12500013](../errorcode-useriam.md#12500013-密码过期) | Operation failed because of PIN expired.<br>**适用版本：** 12 |
+| [12500013](../errorcode-useriam.md#12500013-密码过期) | Operation failed because of PIN expired.<br>**适用版本：** 12+ |
 
 **示例：**
 

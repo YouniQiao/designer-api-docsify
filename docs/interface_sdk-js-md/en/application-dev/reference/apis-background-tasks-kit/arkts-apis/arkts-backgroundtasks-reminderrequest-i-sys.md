@@ -9,7 +9,7 @@ Defines the request for publishing a reminder.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@ohos.reminderAgentManager';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## forceDistributed

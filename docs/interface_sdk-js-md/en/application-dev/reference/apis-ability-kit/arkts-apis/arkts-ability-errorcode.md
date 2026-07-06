@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ErrorCode } from '@ohos.ability.errorCode';
+import { ErrorCode } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Describes the window transition animation.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## config

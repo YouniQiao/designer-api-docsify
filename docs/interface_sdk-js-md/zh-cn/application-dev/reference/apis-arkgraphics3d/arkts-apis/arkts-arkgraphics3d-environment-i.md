@@ -2,7 +2,7 @@
 
 环境资源.
 
-**继承/实现关系：** Environment extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md#sceneresource)
+**继承/实现关系：** Environment extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md)
 
 **起始版本：** 12
 

@@ -11,7 +11,7 @@ Describes the result of check notifications.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@ohos.notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## code

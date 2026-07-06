@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hyperSnapManager } from '@ohos.app.ability.hyperSnapManager';
+import { hyperSnapManager } from '@kit.AbilityKit';
 ```
 
 ## setHyperSnapEnabled

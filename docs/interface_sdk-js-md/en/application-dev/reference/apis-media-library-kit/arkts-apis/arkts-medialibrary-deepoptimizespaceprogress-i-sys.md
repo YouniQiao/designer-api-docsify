@@ -11,7 +11,7 @@ Defines the DeepOptimizeSpaceProgress data structure.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@ohos.file.photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## progress

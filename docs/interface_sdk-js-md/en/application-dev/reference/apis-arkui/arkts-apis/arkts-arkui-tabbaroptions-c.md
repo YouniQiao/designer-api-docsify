@@ -9,7 +9,7 @@ the class for TabBarOption
 ## Modules to Import
 
 ```TypeScript
-import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from '@ohos.atomicservice.AtomicServiceTabs';
+import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from '@kit.ArkUI';
 ```
 
 ## constructor

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@ohos.bluetoothManager';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceName
@@ -22,7 +22,7 @@ Obtains the name of a peer Bluetooth device. On API 10 and above, the permission
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
-- API version 9 - 9: ohos.permission.USE_BLUETOOTH
+- API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

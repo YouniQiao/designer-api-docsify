@@ -9,7 +9,7 @@ Represents the batch download progress of a file from the Drive Kit.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@ohos.file.cloudSync';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## getFailedFiles

@@ -1,6 +1,6 @@
 # TextDataDetectorConfig
 
-This configuration is only available for the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md#text) and [RichEditor](arkts-arkui-richeditor.md) components.
+This configuration is only available for the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md) and [RichEditor](arkts-arkui-richeditor.md) components.
 
 **Since:** 11
 

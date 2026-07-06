@@ -1,6 +1,6 @@
 # SideBarContainer属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下事件：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下事件：
 
 **继承/实现关系：** SideBarContainerAttribute extends [CommonMethod<SideBarContainerAttribute>](CommonMethod<SideBarContainerAttribute>)
 
@@ -96,7 +96,7 @@ maxSideBarWidth(value: number)
 maxSideBarWidth(value: Length)
 ```
 
-设置侧边栏最大宽度。设置为小于0的值时按默认值显示。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。与 [maxSideBarWidth](SideBarContainerAttribute#maxSideBarWidth(value: number))相比，value参数新增了对百分比字符串和其他 [像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)的支持。 maxSideBarWidth优先于侧边栏子组件maxWidth，maxSideBarWidth未设置时默认值优先级高于侧边栏子组件maxWidth。
+设置侧边栏最大宽度。设置为小于0的值时按默认值显示。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。与 [maxSideBarWidth](SideBarContainerAttribute#maxSideBarWidth(value: number))相比，value参数新增了对百分比字符串和其他 [像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)的支持。 maxSideBarWidth优先于侧边栏子组件maxWidth，maxSideBarWidth未设置时默认值优先级高于侧边栏子组件maxWidth。
 
 **起始版本：** 9
 
@@ -158,7 +158,7 @@ minSideBarWidth(value: number)
 minSideBarWidth(value: Length)
 ```
 
-设置侧边栏最小宽度。设置为小于0的值时按默认值显示。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。与 [minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number))相比，value参数新增了对百分比字符串和其他 [像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)的支持。 minSideBarWidth优先于侧边栏子组件minWidth，minSideBarWidth未设置时默认值优先级高于侧边栏子组件minWidth。
+设置侧边栏最小宽度。设置为小于0的值时按默认值显示。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。与 [minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number))相比，value参数新增了对百分比字符串和其他 [像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)的支持。 minSideBarWidth优先于侧边栏子组件minWidth，minSideBarWidth未设置时默认值优先级高于侧边栏子组件minWidth。
 
 **起始版本：** 9
 
@@ -300,7 +300,7 @@ sideBarWidth(value: number)
 sideBarWidth(value: Length)
 ```
 
-设置侧边栏的宽度。设置为小于0的值时按默认值显示。受最小宽度和最大宽度限制，不在限制区域内取最近的点。与 [sideBarWidth](SideBarContainerAttribute#sideBarWidth(value: number))相比，value参数新增了对百分比字符串和其他 [像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)的支持。 从API version 18开始，该参数支持[!!](../../../../ui/state-management/arkts-new-binding.md)双向绑定变量。
+设置侧边栏的宽度。设置为小于0的值时按默认值显示。受最小宽度和最大宽度限制，不在限制区域内取最近的点。与 [sideBarWidth](SideBarContainerAttribute#sideBarWidth(value: number))相比，value参数新增了对百分比字符串和其他 [像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)的支持。 从API version 18开始，该参数支持[!!](../../../../ui/state-management/arkts-new-binding.md)双向绑定变量。
 
 **起始版本：** 9
 

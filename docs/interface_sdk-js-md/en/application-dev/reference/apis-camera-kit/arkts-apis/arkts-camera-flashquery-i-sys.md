@@ -9,7 +9,7 @@ Provides APIs to obtain the flash information of a camera device, including whet
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## isLcdFlashSupported

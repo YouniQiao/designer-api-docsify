@@ -86,7 +86,7 @@ action: Callback<void>
 icon: ChipV2ImageIconConfig
 ```
 
-自定义尾部图标。 Chip大小是ChipV2Size.SMALL时，图标尺寸为：{ width: 16, height: 16 }。 Chip大小是ChipV2Size.NORMAL时，图标尺寸为：{ width: 24, height: 24 }。</br> 如果想动态修改图标尺寸，那么必须在引入 [ChipGroupV2IconGroupSuffix](arkts-arkui-chipgroupv2icongroupsuffix-s.md#chipgroupv2icongroupsuffix)时，使用 [SymbolGlyphModifier](./arkui/SymbolGlyphModifier:SymbolGlyphModifier)类型。
+自定义尾部图标。 Chip大小是ChipV2Size.SMALL时，图标尺寸为：{ width: 16, height: 16 }。 Chip大小是ChipV2Size.NORMAL时，图标尺寸为：{ width: 24, height: 24 }。</br> 如果想动态修改图标尺寸，那么必须在引入 [ChipGroupV2IconGroupSuffix](arkts-arkui-chipgroupv2icongroupsuffix-s.md)时，使用 [SymbolGlyphModifier](./arkui/SymbolGlyphModifier:SymbolGlyphModifier)类型。
 
 **类型：** ChipV2ImageIconConfig
 

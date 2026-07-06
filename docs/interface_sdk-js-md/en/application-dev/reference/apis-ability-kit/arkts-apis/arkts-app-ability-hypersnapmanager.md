@@ -9,7 +9,7 @@ This module provides the capability to manage HyperSnap.
 ## Modules to Import
 
 ```TypeScript
-import { hyperSnapManager } from '@ohos.app.ability.hyperSnapManager';
+import { hyperSnapManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

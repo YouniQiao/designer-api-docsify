@@ -9,7 +9,7 @@ A carrier that carries the drawn content and drawing status. > **NOTE** > > - Th
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## attachBrush
@@ -382,7 +382,7 @@ Draws a circle. If the radius is less than or equal to zero, nothing is drawn. B
 drawColor(color: common2D.Color, blendMode?: BlendMode): void
 ```
 
-Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-blendmode-e.md#blendmode).
+Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-blendmode-e.md).
 
 **Since:** 11
 
@@ -407,7 +407,7 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: BlendMode): void
 ```
 
-Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-blendmode-e.md#blendmode). This API provides better performance than [drawColor](arkts-arkgraphics2d-canvas-c.md#drawcolor-1) and is recommended.
+Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-blendmode-e.md). This API provides better performance than [drawColor](arkts-arkgraphics2d-canvas-c.md#drawcolor-1) and is recommended.
 
 **Since:** 12
 
@@ -435,7 +435,7 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 drawColor(color: number, blendMode?: BlendMode): void
 ```
 
-Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-blendmode-e.md#blendmode).
+Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-blendmode-e.md).
 
 **Since:** 18
 

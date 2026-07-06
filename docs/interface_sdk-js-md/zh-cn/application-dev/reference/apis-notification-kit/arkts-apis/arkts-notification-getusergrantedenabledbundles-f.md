@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationExtensionSubscription } from '@ohos.notificationExtensionSubscription';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## getUserGrantedEnabledBundles

@@ -9,7 +9,7 @@ The XmlPullParser interface is used to parse the existing xml file.
 ## Modules to Import
 
 ```TypeScript
-import { xml } from '@ohos.xml';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## constructor

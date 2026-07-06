@@ -1,6 +1,6 @@
 # Uint16Array
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md#collections). > **NOTE** > > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
+A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md). > **NOTE** > > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
 
 **Since:** 12
 
@@ -11,7 +11,7 @@ A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collect
 ## Modules to Import
 
 ```TypeScript
-import { collections } from '@arkts.collections';
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

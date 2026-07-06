@@ -9,7 +9,7 @@ Defines contact filter options.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@ohos.contact';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## filterCondition

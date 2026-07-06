@@ -2,7 +2,7 @@
 
 Provides APIs to implement **IRemoteObject**.
 
-**Inheritance/Implementation:** RemoteProxy extends [IRemoteObject](arkts-ipc-iremoteobject-c.md#iremoteobject)
+**Inheritance/Implementation:** RemoteProxy extends [IRemoteObject](arkts-ipc-iremoteobject-c.md)
 
 **Since:** 7
 
@@ -11,7 +11,7 @@ Provides APIs to implement **IRemoteObject**.
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@ohos.rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## addDeathRecipient

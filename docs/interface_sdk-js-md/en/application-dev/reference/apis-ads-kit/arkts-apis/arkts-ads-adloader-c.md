@@ -9,7 +9,7 @@ Provides the APIs for loading ads.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@ohos.advertising';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## constructor
@@ -76,7 +76,7 @@ Loads an ad.
 | [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are leftunspecified.2. Incorrect parameter types. 3.Parameter verification failed |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 | [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 |
+| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -139,7 +139,7 @@ Loads multiple ads.
 | [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are leftunspecified.2. Incorrect parameter types. 3.Parameter verification failed |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 | [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 |
+| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
 
 **Example**
 

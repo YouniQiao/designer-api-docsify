@@ -18,15 +18,15 @@ function minimizeAll(id: number, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | number | 是 | 显示设备[Display](arkts-arkui-displaystate-e.md#displaystate)的ID号，该参数仅支持整数输入。 |
+| id | number | 是 | 显示设备[Display](arkts-arkui-displaystate-e.md)的ID号，该参数仅支持整数输入。 |
 | callback | AsyncCallback&lt;void&gt; | 是 | 回调信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities.<br>**适用版本：** 12+ |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
 **示例：**
@@ -76,7 +76,7 @@ function minimizeAll(id: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | number | 是 | 显示设备[Display](arkts-arkui-displaystate-e.md#displaystate)的ID号，该参数仅支持整数输入。 |
+| id | number | 是 | 显示设备[Display](arkts-arkui-displaystate-e.md)的ID号，该参数仅支持整数输入。 |
 
 **返回值：**
 
@@ -88,8 +88,8 @@ function minimizeAll(id: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities.<br>**适用版本：** 12+ |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
 **示例：**

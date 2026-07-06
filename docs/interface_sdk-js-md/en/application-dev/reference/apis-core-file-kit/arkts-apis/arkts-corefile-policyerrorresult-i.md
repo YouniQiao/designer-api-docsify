@@ -9,7 +9,7 @@ Failed policy result on URI.
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from '@ohos.fileshare';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## code

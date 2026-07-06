@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from '@ohos.multimedia.videoProcessingEngine';
+import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
 ## deinitializeEnvironment

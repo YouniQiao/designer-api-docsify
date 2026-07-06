@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from '@ohos.security.huksExternalCrypto';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## getProperty
@@ -26,7 +26,7 @@ Obtains a property value. This API uses a promise to return the result. The **pr
 | --- | --- | --- | --- |
 | resourceId | string | Yes | Resource ID, which can be obtained using[certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-openauthorizedialog-f.md#openauthorizedialog-2). The result contains **resourceId**. |
 | propertyId | string | Yes | Property name for the search operation, which is the SKF API name defined in GMT 0016-2023. You need to make adaptation based on the API name. |
-| params | Array&lt;HuksExternalCryptoParam&gt; | No | Parameters to be passed to[Extension Ability](arkts-security-cryptoextensionability.md). If a non-system application passes[HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcryptotagtype-e.md#huksexternalcryptotagtype), the parameter is invalid. |
+| params | Array&lt;HuksExternalCryptoParam&gt; | No | Parameters to be passed to[Extension Ability](arkts-security-cryptoextensionability.md). If a non-system application passes[HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcryptotagtype-e.md), the parameter is invalid. |
 
 **Return value:**
 

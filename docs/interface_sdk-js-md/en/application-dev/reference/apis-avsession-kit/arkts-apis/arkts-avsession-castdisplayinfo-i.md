@@ -9,7 +9,7 @@ Define the information for extended display screen.
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@ohos.multimedia.avsession';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## height

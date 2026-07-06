@@ -2,7 +2,7 @@
 
 Defines Geometry interface.
 
-**Inheritance/Implementation:** Geometry extends [Node](arkts-arkgraphics3d-node-i.md#node)
+**Inheritance/Implementation:** Geometry extends [Node](arkts-arkgraphics3d-node-i.md)
 
 **Since:** 12
 

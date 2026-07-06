@@ -9,7 +9,7 @@ Defines the options for creating a **Collator** object. Since API version 9, the
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@ohos.intl';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## caseFirst

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { autoStartupManager } from '@ohos.app.ability.autoStartupManager';
+import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
 ## queryAllAutoStartupApplications
@@ -28,7 +28,7 @@ Obtains information about all auto-startup application components. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;AutoStartupInfo&gt;&gt; | Yes | Callback used to return the result. If the informationis obtained, **err** is **undefined** and **data** is**Array&lt;[AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md#autostartupinfo)&gt;**; otherwise, **err** is anerror object. |
+| callback | AsyncCallback&lt;Array&lt;AutoStartupInfo&gt;&gt; | Yes | Callback used to return the result. If the informationis obtained, **err** is **undefined** and **data** is**Array&lt;[AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md)&gt;**; otherwise, **err** is anerror object. |
 
 **Error codes:**
 

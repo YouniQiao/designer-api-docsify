@@ -6,7 +6,7 @@ Enumerates the sensor types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SensorId](arkts-sensorservice-sensorid-e.md#sensorid)
+**Substitutes:** [SensorId](arkts-sensorservice-sensorid-e.md)
 
 **System capability:** SystemCapability.Sensors.Sensor
 

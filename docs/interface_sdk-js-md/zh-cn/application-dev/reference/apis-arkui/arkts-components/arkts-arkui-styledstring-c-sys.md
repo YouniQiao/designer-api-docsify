@@ -12,7 +12,7 @@ StyledString
 static marshalling(styledString: StyledString, callback: StyledStringMarshallCallback): ArrayBuffer
 ```
 
-序列化属性字符串，通过定义回调来序列化属性字符串的[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#styledstringmarshallingvalue)。
+序列化属性字符串，通过定义回调来序列化属性字符串的[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)。
 
 **起始版本：** 19
 
@@ -27,7 +27,7 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | styledString | StyledString | 是 | 属性字符串参数。 |
-| callback | StyledStringMarshallCallback | 是 | 如何序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#styledstringmarshallingvalue)的回调。 |
+| callback | StyledStringMarshallCallback | 是 | 如何序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)的回调。 |
 
 **返回值：**
 
@@ -69,7 +69,7 @@ static marshalling(styledString: StyledString): ArrayBuffer
 static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallback): Promise<StyledString>
 ```
 
-反序列化后得到属性字符串，通过定义回调来反序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#styledstringmarshallingvalue)。
+反序列化后得到属性字符串，通过定义回调来反序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)。
 
 **起始版本：** 19
 

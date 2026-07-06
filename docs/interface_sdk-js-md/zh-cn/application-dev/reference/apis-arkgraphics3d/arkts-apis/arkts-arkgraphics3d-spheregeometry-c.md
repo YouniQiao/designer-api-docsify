@@ -2,7 +2,7 @@
 
 定义球体.
 
-**继承/实现关系：** SphereGeometry extends [GeometryDefinition](arkts-arkgraphics3d-geometrydefinition-c.md#geometrydefinition)
+**继承/实现关系：** SphereGeometry extends [GeometryDefinition](arkts-arkgraphics3d-geometrydefinition-c.md)
 
 **起始版本：** 18
 

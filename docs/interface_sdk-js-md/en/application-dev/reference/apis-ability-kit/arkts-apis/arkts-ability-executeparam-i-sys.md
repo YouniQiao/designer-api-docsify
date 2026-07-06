@@ -11,7 +11,7 @@ Defines the parameter used to execute an intent call.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@ohos.app.ability.insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -110,7 +110,7 @@ Intent execution mode. If an intent defined by the [@InsightIntentLink](../../..
 flags?: number
 ```
 
-[Flags](arkts-ability-flags-e.md#flags) of the URIs authorized by the intent caller to the intent executor during the call. **NOTE** This parameter supports only **FLAG_AUTH_READ_URI_PERMISSION**, **FLAG_AUTH_WRITE_URI_PERMISSION**, and FLAG_AUTH_READ_URI_PERMISSION|
+[Flags](arkts-ability-flags-e.md) of the URIs authorized by the intent caller to the intent executor during the call. **NOTE** This parameter supports only **FLAG_AUTH_READ_URI_PERMISSION**, **FLAG_AUTH_WRITE_URI_PERMISSION**, and FLAG_AUTH_READ_URI_PERMISSION|
 
 **Type:** number
 

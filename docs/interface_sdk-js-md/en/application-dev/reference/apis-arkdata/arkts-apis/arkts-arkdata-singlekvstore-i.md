@@ -9,7 +9,7 @@ Provides APIs for data management in a single KV store, such as adding data, del
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@ohos.data.distributedKVStore';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## backup
@@ -30,7 +30,7 @@ Backs up a distributed KV store. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the KV store. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md#constants). |
+| file | string | Yes | Name of the KV store. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -79,7 +79,7 @@ Backs up an RDB store. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the KV store. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md#constants). |
+| file | string | Yes | Name of the KV store. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 
 **Return value:**
 
@@ -373,7 +373,7 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md#constants). |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -383,7 +383,7 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 **Example**
 
@@ -434,7 +434,7 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md#constants). |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 
 **Return value:**
 
@@ -449,7 +449,7 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 **Example**
 
@@ -496,7 +496,7 @@ Deletes a backup file. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| files | Array&lt;string&gt; | Yes | Name of the backup file to delete. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md#constants). |
+| files | Array&lt;string&gt; | Yes | Name of the backup file to delete. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 | callback | AsyncCallback&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return the name of the backup file deletedand the operation result. |
 
 **Error codes:**
@@ -544,7 +544,7 @@ Deletes a backup file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| files | Array&lt;string&gt; | Yes | Name of the backup file to delete. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md#constants). |
+| files | Array&lt;string&gt; | Yes | Name of the backup file to delete. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 
 **Return value:**
 
@@ -637,7 +637,7 @@ Batch deletes KV pairs from this single KV store. This API uses an asynchronous 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 **Example**
 
@@ -716,7 +716,7 @@ Batch deletes KV pairs from this single KV store. This API uses a promise to ret
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 **Example**
 
@@ -873,7 +873,7 @@ Obtains the value of the specified key. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md#constants). |
+| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 | callback | AsyncCallback&lt;boolean \| string \| number \| number \| Uint8Array&gt; | Yes | Callback used to return the valueobtained. |
 
 **Error codes:**
@@ -903,7 +903,7 @@ Obtains the value of the specified key. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md#constants). |
+| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 
 **Return value:**
 
@@ -1243,7 +1243,7 @@ Obtains a result set with the specified prefix from this single KV store. This A
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 **Example**
 
@@ -1330,7 +1330,7 @@ Obtains a result set with the specified prefix from this single KV store. This A
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 **Example**
 
@@ -1404,7 +1404,7 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 **Example**
 
@@ -1483,7 +1483,7 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 **Example**
 
@@ -1987,8 +1987,8 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md#constants). |
-| value | Uint8Array \| string \| number \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed[MAX_VALUE_LENGTH](arkts-arkdata-constants-i.md#constants). |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| value | Uint8Array \| string \| number \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed[MAX_VALUE_LENGTH](arkts-arkdata-constants-i.md). |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1998,7 +1998,7 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 ## put
 
@@ -2018,8 +2018,8 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md#constants). |
-| value | Uint8Array \| string \| number \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed[MAX_VALUE_LENGTH](arkts-arkdata-constants-i.md#constants). |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| value | Uint8Array \| string \| number \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed[MAX_VALUE_LENGTH](arkts-arkdata-constants-i.md). |
 
 **Return value:**
 
@@ -2034,7 +2034,7 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 ## putBatch
 
@@ -2064,7 +2064,7 @@ Batch inserts KV pairs to this single KV store. This API uses an asynchronous ca
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 **Example**
 
@@ -2144,7 +2144,7 @@ Batch inserts KV pairs to this single KV store. This API uses a promise to retur
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 **Example**
 
@@ -2219,7 +2219,7 @@ Update the key used to encrypt the database.
 removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes data of a device. This API uses an asynchronous callback to return the result. > **NOTE** > > **deviceId** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md#devicebasicinfo), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md#syncmode).
+Deletes data of a device. This API uses an asynchronous callback to return the result. > **NOTE** > > **deviceId** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md).
 
 **Since:** 9
 
@@ -2280,7 +2280,7 @@ try {
 removeDeviceData(deviceId: string): Promise<void>
 ```
 
-Deletes data of a device. This API uses a promise to return the result. > **NOTE** > > **deviceId** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md#devicebasicinfo), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md#syncmode).
+Deletes data of a device. This API uses a promise to return the result. > **NOTE** > > **deviceId** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md).
 
 **Since:** 9
 
@@ -2356,7 +2356,7 @@ Restores a distributed KV store from a database file. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the database file. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md#constants). |
+| file | string | Yes | Name of the database file. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -2405,7 +2405,7 @@ Restores a distributed KV store from a database file. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the database file. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md#constants). |
+| file | string | Yes | Name of the database file. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 
 **Return value:**
 
@@ -2568,7 +2568,7 @@ try {
 setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the default delay for cross-device data sync. This API uses an asynchronous callback to return the result. > **NOTE** > > After the default delay is set, calling [sync](arkts-arkdata-syncmode-e.md#syncmode) will not trigger the cross- > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
+Sets the default delay for cross-device data sync. This API uses an asynchronous callback to return the result. > **NOTE** > > After the default delay is set, calling [sync](arkts-arkdata-syncmode-e.md) will not trigger the cross- > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
 
 **Since:** 9
 
@@ -2616,7 +2616,7 @@ try {
 setSyncParam(defaultAllowedDelayMs: number): Promise<void>
 ```
 
-Sets the default delay for cross-device data sync. This API uses a promise to return the result. > **NOTE** > > After the default delay is set, calling [sync](arkts-arkdata-syncmode-e.md#syncmode) will not trigger the cross- > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
+Sets the default delay for cross-device data sync. This API uses a promise to return the result. > **NOTE** > > After the default delay is set, calling [sync](arkts-arkdata-syncmode-e.md) will not trigger the cross- > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
 
 **Since:** 9
 
@@ -2789,7 +2789,7 @@ Starts the transaction in this single KV store. This API uses an asynchronous ca
 | Error Code ID | Error Message |
 | --- | --- |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 **Example**
 
@@ -2867,7 +2867,7 @@ Starts the transaction in this single KV store. This API uses a promise to retur
 | Error Code ID | Error Message |
 | --- | --- |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 **Example**
 
@@ -2898,7 +2898,7 @@ try {
 sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 ```
 
-Starts cross-device data sync manually. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../../database/data-sync-of-kv-store.md). > **NOTE** > > **deviceIds** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md#devicebasicinfo), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > .
+Starts cross-device data sync manually. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../../database/data-sync-of-kv-store.md). > **NOTE** > > **deviceIds** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > .
 
 **Since:** 9
 
@@ -2986,7 +2986,7 @@ export default class EntryAbility extends UIAbility {
 sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: number): void
 ```
 
-Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../../database/data-sync-of-kv-store.md). > **NOTE** > > **deviceIds** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md#devicebasicinfo), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > .
+Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../../database/data-sync-of-kv-store.md). > **NOTE** > > **deviceIds** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > .
 
 **Since:** 9
 

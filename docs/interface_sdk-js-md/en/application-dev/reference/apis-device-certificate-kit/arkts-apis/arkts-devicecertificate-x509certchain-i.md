@@ -9,7 +9,7 @@ Provides APIs for managing the X.509 certificate chain.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## getCertList

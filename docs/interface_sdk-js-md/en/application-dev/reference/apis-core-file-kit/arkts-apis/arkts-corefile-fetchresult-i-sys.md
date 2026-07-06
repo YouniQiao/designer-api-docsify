@@ -6,7 +6,7 @@ Implements file retrieval.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#fetchresult)
+**Substitutes:** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -15,7 +15,7 @@ Implements file retrieval.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from '@ohos.filemanagement.userFileManager';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## close

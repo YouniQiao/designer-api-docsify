@@ -365,7 +365,7 @@ getFirstKey(): K
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getFirstKey method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 **示例：**
 
@@ -450,7 +450,7 @@ getLastKey(): K
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLastKey method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 **示例：**
 

@@ -9,7 +9,7 @@ Defines the **param** field in the **properties** array of **options** used in t
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@ohos.security.huks';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## tag

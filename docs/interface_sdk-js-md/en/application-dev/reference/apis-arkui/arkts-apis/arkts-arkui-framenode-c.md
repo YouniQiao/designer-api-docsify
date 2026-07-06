@@ -92,7 +92,7 @@ Adopts the target node as an affiliated node. The adopted node must not have an 
 appendChild(node: FrameNode): void
 ```
 
-Appends a child node to the end of this FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **appendChild** is called, [typeNode](arkts-arkui-typenode-n.md#typenode) validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](arkts-arkui-typenode-n.md#typenode).
+Appends a child node to the end of this FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **appendChild** is called, [typeNode](arkts-arkui-typenode-n.md) validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](arkts-arkui-typenode-n.md).
 
 **Since:** 12
 
@@ -113,7 +113,7 @@ Appends a child node to the end of this FrameNode. If this FrameNode is not modi
 | Error Code ID | Error Message |
 | --- | --- |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reasonare included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted."<br>**Applicable version:** 22 |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reasonare included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted."<br>**Applicable version:** 22 and later |
 
 ## cancelAnimations
 
@@ -606,7 +606,7 @@ Searches for all child nodes layer by layer from the current node (which is used
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | ID of the child node to be queried, which is the same as the [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common). |
+| id | string | Yes | ID of the child node to be queried, which is the same as the [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). |
 
 **Return value:**
 
@@ -670,7 +670,7 @@ Obtains the position offset of this FrameNode relative to the global display, in
 getId(): string
 ```
 
-Obtains the node ID set by the user, which is the same as the value of the [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common).
+Obtains the node ID set by the user, which is the same as the value of the [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).
 
 **Since:** 12
 
@@ -684,7 +684,7 @@ Obtains the node ID set by the user, which is the same as the value of the [comp
 
 | Type | Description |
 | --- | --- |
-| string | Node ID set by the user, which is the same as the value of the [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common). |
+| string | Node ID set by the user, which is the same as the value of the [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). |
 
 ## getInspectorInfo
 
@@ -1078,7 +1078,7 @@ Obtains the previous sibling node of this FrameNode.
 getRenderNode(): RenderNode | null
 ```
 
-Obtains the [RenderNode](arkts-arkui-rendernode-c.md#rendernode) held by the FrameNode.
+Obtains the [RenderNode](arkts-arkui-rendernode-c.md) held by the FrameNode.
 
 **Since:** 11
 
@@ -1232,7 +1232,7 @@ Inserts a child node after the specified child node of this FrameNode. If this F
 | Error Code ID | Error Message |
 | --- | --- |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reasonare included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted."<br>**Applicable version:** 22 |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reasonare included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted."<br>**Applicable version:** 22 and later |
 
 ## invalidate
 
@@ -1498,7 +1498,7 @@ Measures this FrameNode and calculates its size based on the layout constraints 
 moveTo(targetParent: FrameNode, index?: number): void
 ```
 
-Moves this FrameNode to a specified position within the target FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **targetParent** is a [typeNode](arkts-arkui-typenode-n.md#typenode), the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](arkts-arkui-typenode-n.md#typenode). > **NOTE** > > Currently, only the following types of [TypedFrameNode](arkts-arkui-typedframenode-i.md#typedframenode) are supported for the movement > operations: [Stack](arkts-arkui-stack-t.md#stack), [XComponent](arkts-arkui-xcomponent-t.md#xcomponent). This API does not work for > other node types. > > This API only supports [BuilderNode](arkts-arkui-buildernode-c.md#buildernode) with root components of these types: > [Stack](../arkts-components/arkts-arkui-stack.md), [XComponent](../arkts-components/arkts-arkui-xcomponent.md), [EmbeddedComponent](../arkts-components/arkts-arkui-embeddedcomponent.md). This API > does not work for other component types.
+Moves this FrameNode to a specified position within the target FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **targetParent** is a [typeNode](arkts-arkui-typenode-n.md), the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](arkts-arkui-typenode-n.md). > **NOTE** > > Currently, only the following types of [TypedFrameNode](arkts-arkui-typedframenode-i.md) are supported for the movement > operations: [Stack](arkts-arkui-stack-t.md), [XComponent](arkts-arkui-xcomponent-t.md). This API does not work for > other node types. > > This API only supports [BuilderNode](arkts-arkui-buildernode-c.md) with root components of these types: > [Stack](../arkts-components/arkts-arkui-stack.md), [XComponent](../arkts-components/arkts-arkui-xcomponent.md), [EmbeddedComponent](../arkts-components/arkts-arkui-embeddedcomponent.md). This API > does not work for other component types.
 
 **Since:** 18
 
@@ -1520,7 +1520,7 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 | Error Code ID | Error Message |
 | --- | --- |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-| [100027](../errorcode-node.md#100027-the-current-node-has-been-adopted-as-a-child-node) | The current node has been adopted.<br>**Applicable version:** 22 |
+| [100027](../errorcode-node.md#100027-the-current-node-has-been-adopted-as-a-child-node) | The current node has been adopted.<br>**Applicable version:** 22 and later |
 
 ## onDraw
 
@@ -1528,7 +1528,7 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 onDraw?(context: DrawContext): void
 ```
 
-Implements custom drawing for the FrameNode. This API overrides the default drawing behavior and is invoked during FrameNode content rendering. Note: The Canvas provided in the [DrawContext](arkts-arkui-drawcontext-c.md#drawcontext) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../../ui/arkts-user-defined-arktsNode-frameNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
+Implements custom drawing for the FrameNode. This API overrides the default drawing behavior and is invoked during FrameNode content rendering. Note: The Canvas provided in the [DrawContext](arkts-arkui-drawcontext-c.md) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../../ui/arkts-user-defined-arktsNode-frameNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
 
 **Since:** 12
 
@@ -1704,7 +1704,7 @@ Triggers child component reuse in global reuse scenarios to recycle FrameNode ba
 setCrossLanguageOptions(options: CrossLanguageOptions): void
 ```
 
-Sets the cross-language access options for this FrameNode. For example, for nodes created using ArkTS, this API can set whether non-ArkTS languages are allowed to set the attributes of these nodes. Since API version 26.0.0, this API can set whether non-ArkTS languages are allowed to perform operations on the component tree. If the current FrameNode is not modifiable or does not support setting cross-language access options, an exception will be thrown. > **NOTE** > > Currently, the cross-ArkTS language access option can only be configured for the following components: > [Scroll](arkts-arkui-scroll-t.md#scroll), [Swiper](arkts-arkui-swiper-t.md#swiper), [List](arkts-arkui-list-t.md#list), > [ListItem](arkts-arkui-listitem-t.md#listitem), [ListItemGroup](arkts-arkui-listitemgroup-t.md#listitemgroup), > [WaterFlow](arkts-arkui-waterflow-t.md#waterflow), [FlowItem](arkts-arkui-flowitem-t.md#flowitem), [Grid](arkts-arkui-grid-t.md#grid), > [GridItem](arkts-arkui-griditem-t.md#griditem), [TextInput](arkts-arkui-textinput-t.md#textinput), [TextArea](arkts-arkui-textarea-t.md#textarea), > [Column](arkts-arkui-column-t.md#column), [Row](arkts-arkui-row-t.md#row), [Stack](arkts-arkui-stack-t.md#stack), > [Flex](arkts-arkui-flex-t.md#flex), [RelativeContainer](arkts-arkui-relativecontainer-t.md#relativecontainer), > [Progress](arkts-arkui-progress-t.md#progress), [LoadingProgress](arkts-arkui-loadingprogress-t.md#loadingprogress), > [Image](arkts-arkui-image-t.md#image), [Button](arkts-arkui-button-t.md#button), [CheckBox](arkts-arkui-checkbox-t.md#checkbox), > [Radio](arkts-arkui-radio-t.md#radio), [Slider](arkts-arkui-slider-t.md#slider), [Toggle](arkts-arkui-toggle-t.md#toggle), and > [TypedFrameNode](arkts-arkui-typedframenode-i.md#typedframenode) of the [XComponent](arkts-arkui-xcomponent-t.md#xcomponent) type.
+Sets the cross-language access options for this FrameNode. For example, for nodes created using ArkTS, this API can set whether non-ArkTS languages are allowed to set the attributes of these nodes. Since API version 26.0.0, this API can set whether non-ArkTS languages are allowed to perform operations on the component tree. If the current FrameNode is not modifiable or does not support setting cross-language access options, an exception will be thrown. > **NOTE** > > Currently, the cross-ArkTS language access option can only be configured for the following components: > [Scroll](arkts-arkui-scroll-t.md), [Swiper](arkts-arkui-swiper-t.md), [List](arkts-arkui-list-t.md), > [ListItem](arkts-arkui-listitem-t.md), [ListItemGroup](arkts-arkui-listitemgroup-t.md), > [WaterFlow](arkts-arkui-waterflow-t.md), [FlowItem](arkts-arkui-flowitem-t.md), [Grid](arkts-arkui-grid-t.md), > [GridItem](arkts-arkui-griditem-t.md), [TextInput](arkts-arkui-textinput-t.md), [TextArea](arkts-arkui-textarea-t.md), > [Column](arkts-arkui-column-t.md), [Row](arkts-arkui-row-t.md), [Stack](arkts-arkui-stack-t.md), > [Flex](arkts-arkui-flex-t.md), [RelativeContainer](arkts-arkui-relativecontainer-t.md), > [Progress](arkts-arkui-progress-t.md), [LoadingProgress](arkts-arkui-loadingprogress-t.md), > [Image](arkts-arkui-image-t.md), [Button](arkts-arkui-button-t.md), [CheckBox](arkts-arkui-checkbox-t.md), > [Radio](arkts-arkui-radio-t.md), [Slider](arkts-arkui-slider-t.md), [Toggle](arkts-arkui-toggle-t.md), and > [TypedFrameNode](arkts-arkui-typedframenode-i.md) of the [XComponent](arkts-arkui-xcomponent-t.md) type.
 
 **Since:** 15
 
@@ -1792,7 +1792,7 @@ Marks this FrameNode as needing layout, so that it will be relaid out in the nex
 get commonAttribute(): CommonAttribute
 ```
 
-Obtains the **CommonAttribute** API associated with the FrameNode, which is used to configure [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) and [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common). Note that only the attributes of a custom node can be modified. > **NOTE** > > The visual representation of the FrameNode is similar to that of a [Stack](../arkts-components/arkts-arkui-stack.md) container that is aligned > to the top start edge. > > For details about the supported attributes, see > [attributeModifier Support for Attributes and Events](../../../../ui/arkts-user-defined-extension-attributeModifier.md#attributemodifier-support-for-attributes-and-events).
+Obtains the **CommonAttribute** API associated with the FrameNode, which is used to configure [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) and [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). Note that only the attributes of a custom node can be modified. > **NOTE** > > The visual representation of the FrameNode is similar to that of a [Stack](../arkts-components/arkts-arkui-stack.md) container that is aligned > to the top start edge. > > For details about the supported attributes, see > [attributeModifier Support for Attributes and Events](../../../../ui/arkts-user-defined-extension-attributeModifier.md#attributemodifier-support-for-attributes-and-events).
 
 **Type:** CommonAttribute
 
@@ -1828,7 +1828,7 @@ Obtains the **UICommonEvent** object held in this FrameNode to set basic events.
 get gestureEvent(): UIGestureEvent
 ```
 
-Obtains the **UIGestureEvent** object held by this FrameNode, which is used to set gesture events bound to the component. Gesture events set using the **gestureEvent** API will not override gestures bound using the [declarative gesture API](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common). If both APIs are used to set gestures, the declarative API takes precedence.
+Obtains the **UIGestureEvent** object held by this FrameNode, which is used to set gesture events bound to the component. Gesture events set using the **gestureEvent** API will not override gestures bound using the [declarative gesture API](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). If both APIs are used to set gestures, the declarative API takes precedence.
 
 **Type:** UIGestureEvent
 

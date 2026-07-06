@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { HashMap } from '@ohos.util.HashMap';
+import { HashMap } from '@kit.ArkTS';
 ```
 
 ## Summary

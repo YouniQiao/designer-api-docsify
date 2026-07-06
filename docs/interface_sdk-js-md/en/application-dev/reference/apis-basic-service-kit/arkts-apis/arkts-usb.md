@@ -1,19 +1,19 @@
 # @ohos.usb
 
-The **usb** module provides USB device management functions, including USB device list query, bulk data transfer, control transfer, and permission control. > **NOTE** > > The initial APIs of this module are supported since API version 8. Newly added APIs will be marked with > a superscript to indicate their earliest API version. > The APIs provided by this module are no longer maintained since API version 9. You are advised to use > [@ohos.usbManager](arkts-usbmanager.md#usbmanager).
+The **usb** module provides USB device management functions, including USB device list query, bulk data transfer, control transfer, and permission control. > **NOTE** > > The initial APIs of this module are supported since API version 8. Newly added APIs will be marked with > a superscript to indicate their earliest API version. > The APIs provided by this module are no longer maintained since API version 9. You are advised to use > [@ohos.usbManager](arkts-usbmanager.md).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [usbManager:usbManager](arkts-usbmanager.md#usbmanager)
+**Substitutes:** [usbManager:usbManager](arkts-usbmanager.md)
 
 **System capability:** SystemCapability.USB.USBManager
 
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@ohos.usb';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -54,12 +54,12 @@ import { usb } from '@ohos.usb';
 
 | Name | Description |
 | --- | --- |
-| [USBConfig](arkts-basicservices-usbconfig-i.md) | Represents the USB configuration. One [USBDevice](arkts-basicservices-usbdevice-i.md#usbdevice) can contain multiple **USBConfig** instances. |
+| [USBConfig](arkts-basicservices-usbconfig-i.md) | Represents the USB configuration. One [USBDevice](arkts-basicservices-usbdevice-i.md) can contain multiple **USBConfig** instances. |
 | [USBControlParams](arkts-basicservices-usbcontrolparams-i.md) | Represents control transfer parameters. |
 | [USBDevice](arkts-basicservices-usbdevice-i.md) | Represents the USB device information. |
 | [USBDevicePipe](arkts-basicservices-usbdevicepipe-i.md) | Represents a USB device pipe, which is used to determine a USB device. |
-| [USBEndpoint](arkts-basicservices-usbendpoint-i.md) | Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usbinterface-i.md#usbinterface). |
-| [USBInterface](arkts-basicservices-usbinterface-i.md) | Represents a USB interface. One [USBConfig](arkts-basicservices-usbconfig-i.md#usbconfig) can contain multiple **USBInterface** instances, each providing a specific function. |
+| [USBEndpoint](arkts-basicservices-usbendpoint-i.md) | Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usbinterface-i.md). |
+| [USBInterface](arkts-basicservices-usbinterface-i.md) | Represents a USB interface. One [USBConfig](arkts-basicservices-usbconfig-i.md) can contain multiple **USBInterface** instances, each providing a specific function. |
 
 <!--Del-->
 ### Interfaces（系统接口）

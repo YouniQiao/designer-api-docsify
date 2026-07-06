@@ -9,7 +9,7 @@ FlexDirection enumeration description
 ## Row
 
 ```TypeScript
-Row = 0
+Row
 ```
 
 The main axis is consistent with the row direction as the layout mode.
@@ -25,7 +25,7 @@ The main axis is consistent with the row direction as the layout mode.
 ## Column
 
 ```TypeScript
-Column = 1
+Column
 ```
 
 The main axis is consistent with the column direction as the layout mode.
@@ -41,7 +41,7 @@ The main axis is consistent with the column direction as the layout mode.
 ## RowReverse
 
 ```TypeScript
-RowReverse = 2
+RowReverse
 ```
 
 The layout is in the opposite direction to the Row direction.
@@ -57,7 +57,7 @@ The layout is in the opposite direction to the Row direction.
 ## ColumnReverse
 
 ```TypeScript
-ColumnReverse = 3
+ColumnReverse
 ```
 
 Layout in the opposite direction to the column.

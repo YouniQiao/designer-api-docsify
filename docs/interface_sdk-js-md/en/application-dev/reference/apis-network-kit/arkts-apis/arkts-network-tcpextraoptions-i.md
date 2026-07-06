@@ -2,7 +2,7 @@
 
 Defines other properties of the TCPSocket connection.
 
-**Inheritance/Implementation:** TCPExtraOptions extends [ExtraOptionsBase](arkts-network-extraoptionsbase-i.md#extraoptionsbase)
+**Inheritance/Implementation:** TCPExtraOptions extends [ExtraOptionsBase](arkts-network-extraoptionsbase-i.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Defines other properties of the TCPSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@ohos.net.socket';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## OOBInline

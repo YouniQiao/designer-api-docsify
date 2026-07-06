@@ -30,7 +30,7 @@ function executePeriodically(period: number, task: Task, priority?: Priority): v
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 | [10200028](../errorcode-utils.md#10200028-延时时间小于零) | The period is less than zero. |
 | [10200050](../errorcode-utils.md#10200050-并发任务已执行无法周期执行) | The concurrent task has been executed and cannot be executed periodically. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18 |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
 
 **示例：**
 
@@ -105,7 +105,7 @@ function executePeriodically<A extends Array<Object>, R>(period: number, task: G
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 | [10200028](../errorcode-utils.md#10200028-延时时间小于零) | The period is less than zero. |
 | [10200050](../errorcode-utils.md#10200050-并发任务已执行无法周期执行) | The concurrent task has been executed and cannot be executed periodically. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18 |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
 
 **示例：**
 

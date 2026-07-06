@@ -9,7 +9,7 @@ Provides the drm media key request info optional data.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@ohos.multimedia.drm';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## name

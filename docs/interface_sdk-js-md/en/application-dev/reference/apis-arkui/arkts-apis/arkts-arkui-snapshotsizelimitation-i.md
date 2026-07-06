@@ -9,7 +9,7 @@ Defines the size limit of a component screenshot.
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@ohos.arkui.componentSnapshot';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## maxHeight

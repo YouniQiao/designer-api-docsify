@@ -74,7 +74,7 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-使用[ColorSpace](../arkts-components/arkts-arkui-colorspace-e.md#colorspace)和rgba格式颜色实例化ColorMetrics类。仅部分属性支持在display-p3色彩空间中设置颜色。
+使用[ColorSpace](../arkts-components/arkts-arkui-colorspace-e.md)和rgba格式颜色实例化ColorMetrics类。仅部分属性支持在display-p3色彩空间中设置颜色。
 
 **起始版本：** 20
 

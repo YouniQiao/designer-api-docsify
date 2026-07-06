@@ -6,7 +6,7 @@ Represents a screen hopping message notification.
 
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState](arkts-distributedservice-cooperatestate-e-sys.md#cooperatestate)
+**Substitutes:** [CooperateState](arkts-distributedservice-cooperatestate-e-sys.md)
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 

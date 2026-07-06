@@ -12,7 +12,7 @@ Defines parameters of particles used by emitters. > **NOTE** > > To standardize 
 config: ParticleConfigs[PARTICLE]
 ```
 
-Configuration of the particle type. The value type of **config** is subject to the value of **type**. 1. If the type is ParticleType.POINT, the config type is [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md#pointparticleparameters). 2. If the type is ParticleType.IMAGE, the config type is [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md#imageparticleparameters).
+Configuration of the particle type. The value type of **config** is subject to the value of **type**. 1. If the type is ParticleType.POINT, the config type is [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md). 2. If the type is ParticleType.IMAGE, the config type is [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md).
 
 **Type:** ParticleConfigs[PARTICLE]
 

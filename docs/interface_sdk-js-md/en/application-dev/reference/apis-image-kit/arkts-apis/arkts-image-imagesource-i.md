@@ -9,7 +9,7 @@ Provides APIs to obtain image information. Before calling any API in ImageSource
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@ohos.multimedia.sendableImage';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createPixelMap

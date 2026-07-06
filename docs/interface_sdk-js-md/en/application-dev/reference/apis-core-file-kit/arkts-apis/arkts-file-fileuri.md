@@ -9,7 +9,7 @@ Provides fileUri APIS
 ## Modules to Import
 
 ```TypeScript
-import { fileUri } from '@ohos.file.fileuri';
+import { fileUri } from '@kit.CoreFileKit';
 ```
 
 ## Summary

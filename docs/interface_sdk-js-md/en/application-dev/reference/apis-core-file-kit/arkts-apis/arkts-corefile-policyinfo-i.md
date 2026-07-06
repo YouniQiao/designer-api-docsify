@@ -9,7 +9,7 @@ Policy information to manager permissions on a URI.
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from '@ohos.fileshare';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## operationMode

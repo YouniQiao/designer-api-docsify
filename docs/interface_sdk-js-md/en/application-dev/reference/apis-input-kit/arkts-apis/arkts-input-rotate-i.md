@@ -9,7 +9,7 @@ Defines a rotation gesture event.
 ## Modules to Import
 
 ```TypeScript
-import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from '@ohos.multimodalInput.gestureEvent';
+import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from '@kit.InputKit';
 ```
 
 ## angle

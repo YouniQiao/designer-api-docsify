@@ -1,6 +1,6 @@
 # Rect properties/events
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md#commonmethod), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 **Inheritance/Implementation:** RectAttribute extends [CommonShapeMethod<RectAttribute>](CommonShapeMethod<RectAttribute>)
 

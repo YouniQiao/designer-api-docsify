@@ -2,7 +2,7 @@
 
 Effect resource.
 
-**Inheritance/Implementation:** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md#sceneresource)
+**Inheritance/Implementation:** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md)
 
 **Since:** 21
 

@@ -11,7 +11,7 @@ Provides security event management and security model management. Based on event
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@ohos.security.securityGuard';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## Summary

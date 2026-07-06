@@ -18,7 +18,7 @@ function emit(event: InnerEvent, data?: EventData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | InnerEvent | 是 | 发送的事件，其中[EventPriority](arkts-basicservices-eventpriority-e.md#eventpriority)用于指定事件被发送的优先级。 |
+| event | InnerEvent | 是 | 发送的事件，其中[EventPriority](arkts-basicservices-eventpriority-e.md)用于指定事件被发送的优先级。 |
 | data | EventData | 否 | 事件携带的数据，默认为空。 |
 
 **示例：**

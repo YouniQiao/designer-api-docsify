@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sharing } from '@ohos.net.sharing';
+import { sharing } from '@kit.NetworkKit';
 ```
 
 ## getStatsRxBytes

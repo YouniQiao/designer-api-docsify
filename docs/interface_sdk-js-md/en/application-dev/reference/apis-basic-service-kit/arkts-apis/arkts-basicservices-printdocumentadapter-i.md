@@ -9,7 +9,7 @@ Provides information about the document to print. This API must be implemented b
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@ohos.print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## onJobStateChanged

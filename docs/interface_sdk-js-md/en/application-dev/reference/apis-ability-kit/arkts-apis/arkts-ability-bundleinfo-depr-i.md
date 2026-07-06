@@ -1,12 +1,12 @@
 # BundleInfo
 
-> **NOTE** > > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager-BundleInfo](arkts-ability-bundleinfo-depr-i.md#bundleinfo) instead.
+> **NOTE** > > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager-BundleInfo](arkts-ability-bundleinfo-depr-i.md) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleInfo:BundleInfo](arkts-ability-bundleinfo-depr-i.md#bundleinfo)
+**Substitutes:** [bundleInfo:BundleInfo](arkts-ability-bundleinfo-depr-i.md)
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

@@ -9,7 +9,7 @@ Describes an audio device.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## dmDeviceInfo

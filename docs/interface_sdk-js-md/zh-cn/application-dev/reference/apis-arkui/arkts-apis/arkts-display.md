@@ -21,7 +21,7 @@
 | [getAllDisplayPhysicalResolution](arkts-arkui-getalldisplayphysicalresolution-f.md#getalldisplayphysicalresolution-1) | 获取当前设备支持的所有显示模式及其对应的物理屏幕分辨率信息对象。使用Promise异步回调。 |
 | [getAllDisplays](arkts-arkui-getalldisplays-f.md#getalldisplays-1) | 获取当前所有的Display对象，使用callback异步回调。 |
 | [getAllDisplays](arkts-arkui-getalldisplays-f.md#getalldisplays-2) | 获取当前所有的Display对象，使用Promise异步回调。 |
-| [getBrightnessInfo](arkts-arkui-getbrightnessinfo-f.md#getbrightnessinfo-1) | 获取指定displayId对应屏幕的亮度信息。如果屏幕不支持HDR，返回的[BrightnessInfo](arkts-arkui-brightnessinfo-i.md#brightnessinfo)对象中的currentHeadroom和maxHeadroom 为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。 |
+| [getBrightnessInfo](arkts-arkui-getbrightnessinfo-f.md#getbrightnessinfo-1) | 获取指定displayId对应屏幕的亮度信息。如果屏幕不支持HDR，返回的[BrightnessInfo](arkts-arkui-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom 为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。 |
 | [getCurrentFoldCreaseRegion](arkts-arkui-getcurrentfoldcreaseregion-f.md#getcurrentfoldcreaseregion-1) | 在当前显示模式下获取折叠折痕区域。 |
 | [getDefaultDisplay](arkts-arkui-getdefaultdisplay-f.md#getdefaultdisplay-1) | 获取当前默认的Display对象，使用callback异步回调。 |
 | [getDefaultDisplay](arkts-arkui-getdefaultdisplay-f.md#getdefaultdisplay-2) | 获取当前默认的Display对象，使用Promise异步回调。 |
@@ -49,7 +49,7 @@
 | [on](arkts-arkui-on-f.md#on-6) | 开启折叠设备折叠角度变化的监听。如果是双折轴设备，则有两个角度值；在充电口朝下的状态下，从右到左分别是折轴一和折轴二。 |
 | [on](arkts-arkui-on-f.md#on-7) | 开启设备的屏幕显示信息是否被获取的监听。 |
 | [on](arkts-arkui-on-f.md#on-8) | 开启折叠设备屏幕显示模式变化的监听。 本接口监听设备屏幕显示模式的变化，如果要监听设备物理折叠状态的变化，需要使用 [display.on('foldStatusChange')](arkts-arkui-on-f.md#on-5)接口。 两者存在差异，时序上物理折叠状态变化在前，底层会根据物理折叠状态匹配屏幕显示模式状态。 |
-| [on](arkts-arkui-on-f.md#on-9) | 开启所有屏幕亮度信息变化的监听。如果屏幕不支持HDR，监听到的[BrightnessInfo](arkts-arkui-brightnessinfo-i.md#brightnessinfo)对象中的currentHeadroom和maxHeadroom为默认值。虚拟 屏的BrightnessInfo对象中sdrNits为默认值。 |
+| [on](arkts-arkui-on-f.md#on-9) | 开启所有屏幕亮度信息变化的监听。如果屏幕不支持HDR，监听到的[BrightnessInfo](arkts-arkui-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟 屏的BrightnessInfo对象中sdrNits为默认值。 |
 | [onChangeWithAttribute](arkts-arkui-onchangewithattribute-f.md#onchangewithattribute-1) | 开启显示设备指定属性变化的监听。 |
 | [setVirtualScreenSurface](arkts-arkui-setvirtualscreensurface-f.md#setvirtualscreensurface-1) | 设置虚拟屏幕的surfaceId，surfaceId用于标识一个surface，表示当前虚拟屏用于显示对应surface中的内容。使用Promise异步回调。 |
 

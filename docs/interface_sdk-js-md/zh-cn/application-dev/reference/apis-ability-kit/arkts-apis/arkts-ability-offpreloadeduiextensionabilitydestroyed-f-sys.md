@@ -6,7 +6,7 @@
 function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtensionAbilityDestroyedFn): void
 ```
 
-注销当前进程中预加载的[UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability)实例的销毁监听。
+注销当前进程中预加载的[UIExtensionAbility](arkts-ability-uiextensionability-c.md)实例的销毁监听。
 
 **起始版本：** 23
 

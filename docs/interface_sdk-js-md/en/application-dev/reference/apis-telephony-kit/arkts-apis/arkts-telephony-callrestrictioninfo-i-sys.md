@@ -11,7 +11,7 @@ Indicates the information of call restriction.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@ohos.telephony.call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## mode

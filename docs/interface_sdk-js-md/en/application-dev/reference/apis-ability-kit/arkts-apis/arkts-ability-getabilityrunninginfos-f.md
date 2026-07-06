@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@ohos.app.ability.abilityManager';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## getAbilityRunningInfos

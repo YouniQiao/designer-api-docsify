@@ -11,7 +11,7 @@ Provides APIs to check whether a camera device supports manual ISO setting and o
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getIsoRange
@@ -32,7 +32,7 @@ Obtains the supported ISO range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | ISO range. The value range is [50, 100, ..., 6400]. The actual value depends on thebottom-layer capability. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| Array&lt;number&gt; | ISO range. The value range is [50, 100, ..., 6400]. The actual value depends on thebottom-layer capability. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -78,7 +78,7 @@ Checks whether manual ISO setting is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of manual ISO setting. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| boolean | Check result for the support of manual ISO setting. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 

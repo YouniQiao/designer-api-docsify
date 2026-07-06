@@ -10,7 +10,7 @@ type SecureLevel = 'S1' | 'S2' | 'S3' | 'S4'
 
 **废弃版本：** 8
 
-**替代接口：** [AuthTrustLevel](arkts-userauthentication-authtrustlevel-e.md#authtrustlevel)
+**替代接口：** [AuthTrustLevel](arkts-userauthentication-authtrustlevel-e.md)
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

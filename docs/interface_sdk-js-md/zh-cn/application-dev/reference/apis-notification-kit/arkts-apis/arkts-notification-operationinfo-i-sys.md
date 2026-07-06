@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationSubscribe } from '@ohos.notificationSubscribe';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## actionName
@@ -20,7 +20,7 @@ import { notificationSubscribe } from '@ohos.notificationSubscribe';
 actionName?: string
 ```
 
-描述通知中显示的操作按钮（与通知 [NotificationActionButton](arkts-notification-notificationactionbutton-i.md#notificationactionbutton)中title字段保持一致）。
+描述通知中显示的操作按钮（与通知 [NotificationActionButton](arkts-notification-notificationactionbutton-i.md)中title字段保持一致）。
 
 **类型：** string
 
@@ -68,7 +68,7 @@ operationType?: number
 userInput?: string
 ```
 
-用户输入（用于通知跨设备快捷回复场景传递用户输入，与通知 [NotificationUserInput](arkts-notification-notificationuserinput-i.md#notificationuserinput)中inputKey字段保持一致）。
+用户输入（用于通知跨设备快捷回复场景传递用户输入，与通知 [NotificationUserInput](arkts-notification-notificationuserinput-i.md)中inputKey字段保持一致）。
 
 **类型：** string
 

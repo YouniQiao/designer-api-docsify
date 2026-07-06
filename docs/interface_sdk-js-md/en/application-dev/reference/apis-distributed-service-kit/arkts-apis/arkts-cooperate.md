@@ -11,7 +11,7 @@ The **cooperate** module implements screen hopping for two or more networked dev
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@ohos.cooperate';
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

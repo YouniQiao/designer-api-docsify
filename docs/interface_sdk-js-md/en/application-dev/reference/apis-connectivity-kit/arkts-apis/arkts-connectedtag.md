@@ -9,7 +9,7 @@ Provides methods to operate or manage Connected Tag.
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from '@ohos.connectedTag';
+import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

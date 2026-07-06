@@ -75,7 +75,7 @@ clientToGlobalDisplay(winX: number, winY: number): Position
 convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: number): number
 ```
 
-提供窗口方向、屏幕方向和屏幕角度互相转换的能力。 窗口方向指窗口所在屏幕的方向，以窗口模块对横竖屏的定义方式表示，窗口的方向分别用0、1、2和3表示竖屏、反向横屏、反向竖屏和横屏四个方向，其对横竖屏的定义与 [RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md#rotationchangeinfo)和枚举类 [Orientation](arkts-arkui-orientation-e.md#orientation)中对横竖屏的定义一致，如Orientation设置为LANDSCAPE时，窗口方向为横屏。 > **说明：** > > 示意图和表格展示了直板机窗口方向、屏幕方向和屏幕角度的关系。 > > ![orientationAndRotation](../../../../reference/apis-arkui/figures/orientationAndRotation.PNG) | 屏幕角度 | 屏幕方向 | 窗口方向 | | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
+提供窗口方向、屏幕方向和屏幕角度互相转换的能力。 窗口方向指窗口所在屏幕的方向，以窗口模块对横竖屏的定义方式表示，窗口的方向分别用0、1、2和3表示竖屏、反向横屏、反向竖屏和横屏四个方向，其对横竖屏的定义与 [RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md)和枚举类 [Orientation](arkts-arkui-orientation-e.md)中对横竖屏的定义一致，如Orientation设置为LANDSCAPE时，窗口方向为横屏。 > **说明：** > > 示意图和表格展示了直板机窗口方向、屏幕方向和屏幕角度的关系。 > > ![orientationAndRotation](../../../../reference/apis-arkui/figures/orientationAndRotation.PNG) | 屏幕角度 | 屏幕方向 | 窗口方向 | | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
 
 **起始版本：** 23
 
@@ -211,7 +211,7 @@ destroyWindow(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9 |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9+ |
 
 ## destroyWindow
 
@@ -238,7 +238,7 @@ destroyWindow(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9 |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9+ |
 
 ## disableLandscapeMultiWindow
 
@@ -300,7 +300,7 @@ enableLandscapeMultiWindow(): Promise<void>
 getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 ```
 
-获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。 主窗口/子窗口： - [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下， 仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](arkts-arkui-window-i.md#getwindowavoidarea-1)替代。
+获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。 主窗口/子窗口： - [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下， 仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](arkts-arkui-window-i.md#getwindowavoidarea-1)替代。
 
 **起始版本：** 7
 
@@ -323,7 +323,7 @@ getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
 ```
 
-获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。 主窗口/子窗口： - [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下， 仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](arkts-arkui-window-i.md#getwindowavoidarea-1)替代。
+获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。 主窗口/子窗口： - [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下， 仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](arkts-arkui-window-i.md#getwindowavoidarea-1)替代。
 
 **起始版本：** 7
 
@@ -688,7 +688,7 @@ getUIContext() : UIContext
 getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 ```
 
-获取当前窗口避让区域。 主窗口/子窗口： - [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-windowstatustype-e.md#windowstatustype)）下，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1)方法使能后，才能通过此接口获取避让区域，否则获取的避让区域为空。 该接口一般适用于两种场景： - 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md#onwindowstagecreate-1)方法中，获取应用启动时的初始布局避让区域时可 调用该接口。 - 当应用内子窗需要临时显示，对显示内容做布局避让时可调用该接口。
+获取当前窗口避让区域。 主窗口/子窗口： - [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-windowstatustype-e.md)）下，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1)方法使能后，才能通过此接口获取避让区域，否则获取的避让区域为空。 该接口一般适用于两种场景： - 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md#onwindowstagecreate-1)方法中，获取应用启动时的初始布局避让区域时可 调用该接口。 - 当应用内子窗需要临时显示，对显示内容做布局避让时可调用该接口。
 
 **起始版本：** 9
 
@@ -721,7 +721,7 @@ getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 ```
 
-获取当前应用窗口的避让区域，即使避让区域当前处于不可见状态。 主窗口/子窗口： - 主窗口在非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-windowstatustype-e.md#windowstatustype)）下，仅存在系统栏（ [AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。
+获取当前应用窗口的避让区域，即使避让区域当前处于不可见状态。 主窗口/子窗口： - 主窗口在非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-windowstatustype-e.md)）下，仅存在系统栏（ [AvoidAreaType](arkts-arkui-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。
 
 **起始版本：** 22
 
@@ -1152,7 +1152,7 @@ isFloatNavigationAvoidAreaEnabled(): boolean
 isFocused(): boolean
 ```
 
-判断当前窗口是否已获焦。为获取准确的获焦状态，需要在[WindowEventType](arkts-arkui-windoweventtype-e.md#windoweventtype)生命周期处于WINDOW_ACTIVE之后调用。 可使用[on('windowEvent')](arkts-arkui-window-i.md#on-22)监听对应状态变更， 再执行对应具体业务。
+判断当前窗口是否已获焦。为获取准确的获焦状态，需要在[WindowEventType](arkts-arkui-windoweventtype-e.md)生命周期处于WINDOW_ACTIVE之后调用。 可使用[on('windowEvent')](arkts-arkui-window-i.md#on-22)监听对应状态变更， 再执行对应具体业务。
 
 **起始版本：** 12
 
@@ -1258,7 +1258,7 @@ isInFreeWindowMode(): boolean
 isReceiveDragEventEnabled(): boolean
 ```
 
-获取当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md#dragevent)的状态。
+获取当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md)的状态。
 
 **起始版本：** 23
 
@@ -1402,7 +1402,7 @@ isSupportWideGamut(callback: AsyncCallback<boolean>): void
 isSystemAvoidAreaEnabled(): boolean
 ```
 
-获取悬浮窗、模态窗或WindowType为系统类型的窗口是否可以获取窗口内容的避让区[AvoidArea](arkts-arkui-avoidarea-i.md#avoidarea)。
+获取悬浮窗、模态窗或WindowType为系统类型的窗口是否可以获取窗口内容的避让区[AvoidArea](arkts-arkui-avoidarea-i.md)。
 
 **起始版本：** 18
 
@@ -1431,7 +1431,7 @@ isSystemAvoidAreaEnabled(): boolean
 isWindowHighlighted(): boolean
 ```
 
-获取当前窗口是否为激活态。为准确获取激活态，需要在[WindowEventType](arkts-arkui-windoweventtype-e.md#windoweventtype)生命周期处于WINDOW_ACTIVE之后调用。 可使用 [on('windowHighlightChange')](arkts-arkui-window-i.md#on-27) 监听对应状态变更，再执行对应具体业务。
+获取当前窗口是否为激活态。为准确获取激活态，需要在[WindowEventType](arkts-arkui-windoweventtype-e.md)生命周期处于WINDOW_ACTIVE之后调用。 可使用 [on('windowHighlightChange')](arkts-arkui-window-i.md#on-27) 监听对应状态变更，再执行对应具体业务。
 
 **起始版本：** 18
 
@@ -1589,7 +1589,7 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9 |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9+ |
 
 ## loadContent
 
@@ -1626,7 +1626,7 @@ loadContent(path: string, storage: LocalStorage): Promise<void>
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9 |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9+ |
 
 ## loadContent
 
@@ -3084,7 +3084,7 @@ off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void
 on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void
 ```
 
-开启窗口旋转变化的监听。[RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md#rotationchangeinfo)中窗口旋转事件类型为窗口即将旋转时，必须返回 [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md#rotationchangeresult)。窗口旋转事件类型为窗口旋转结束时返回 [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md#rotationchangeresult)不生效。 该函数只允许在主线程注册。同一个窗口多次注册同类型回调函数，只生效最新注册的同类型回调函数返回值。系统提供了超时保护机制，若20ms内窗口未返回 [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md#rotationchangeresult)，系统不处理该返回值。
+开启窗口旋转变化的监听。[RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md)中窗口旋转事件类型为窗口即将旋转时，必须返回 [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md)。窗口旋转事件类型为窗口旋转结束时返回 [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md)不生效。 该函数只允许在主线程注册。同一个窗口多次注册同类型回调函数，只生效最新注册的同类型回调函数返回值。系统提供了超时保护机制，若20ms内窗口未返回 [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md)，系统不处理该返回值。
 
 **起始版本：** 19
 
@@ -3097,7 +3097,7 @@ on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'rotationChange' | 是 | 监听事件，固定为'rotationChange'，即窗口旋转变化事件。 |
-| callback | RotationChangeCallback&lt;RotationChangeInfo, RotationChangeResult \| void&gt; | 是 | 回调函数。返回窗口旋转信息[RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md#rotationchangeinfo)，应用返回当前窗口变化结果[RotationChangeResult](arkts-arkui-rotationchangeresult-i.md#rotationchangeresult)。 |
+| callback | RotationChangeCallback&lt;RotationChangeInfo, RotationChangeResult \| void&gt; | 是 | 回调函数。返回窗口旋转信息[RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md)，应用返回当前窗口变化结果[RotationChangeResult](arkts-arkui-rotationchangeresult-i.md)。 |
 
 **错误码：**
 
@@ -3153,7 +3153,7 @@ on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'frameMetricsMeasured' | 是 | 监听事件类型，固定为'frameMetricsMeasured'，即窗口帧率指标变化事件。 |
-| callback | Callback&lt;FrameMetrics&gt; | 是 | 窗口帧率指标变化时的回调函数。详情见帧率指标[FrameMetrics](arkts-arkui-framemetrics-i.md#framemetrics)。 |
+| callback | Callback&lt;FrameMetrics&gt; | 是 | 窗口帧率指标变化时的回调函数。详情见帧率指标[FrameMetrics](arkts-arkui-framemetrics-i.md)。 |
 
 **错误码：**
 
@@ -3179,7 +3179,7 @@ on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'occlusionStateChanged' | 是 | 监听事件，固定为'occlusionStateChanged'，即窗口可见性变化事件。 |
-| callback | Callback&lt;OcclusionState&gt; | 是 | 窗口可见性变化时的回调函数。详情见[可见性状态](arkts-arkui-occlusionstate-e.md#occlusionstate)。 |
+| callback | Callback&lt;OcclusionState&gt; | 是 | 窗口可见性变化时的回调函数。详情见[可见性状态](arkts-arkui-occlusionstate-e.md)。 |
 
 **错误码：**
 
@@ -3245,7 +3245,7 @@ on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
 on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 ```
 
-开启当前应用窗口系统避让区域变化的监听。 主窗口/子窗口： - [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-windowstatustype-e.md#windowstatustype)）下触发回调时，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避 让区域。 <!--RP7-->常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。<!--RP7End-->
+开启当前应用窗口系统避让区域变化的监听。 主窗口/子窗口： - [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-windowstatustype-e.md)）下触发回调时，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避 让区域。 <!--RP7-->常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。<!--RP7End-->
 
 **起始版本：** 9
 
@@ -3692,7 +3692,7 @@ on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void
 ```
 
-开启窗口模式变化的监听，当窗口windowStatus发生变化后进行通知（此时窗口[Rect](arkts-arkui-rect-i.md#rect)属性已经完成更新）。
+开启窗口模式变化的监听，当窗口windowStatus发生变化后进行通知（此时窗口[Rect](arkts-arkui-rect-i.md)属性已经完成更新）。
 
 **起始版本：** 20
 
@@ -4120,7 +4120,7 @@ resetSize(width: number, height: number, callback: AsyncCallback<void>): void
 resize(width: number, height: number): Promise<void>
 ```
 
-基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。 调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](arkts-arkui-window-i.md#resizeasync-1)。 窗口存在大小限制[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)，具体尺寸限制范围可以通过 [getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1)接口进行查询。 调用该接口设置的宽度与高度受到此限制约束，规则： 若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制； 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](arkts-arkui-window-i.md#getwindowstatus-1)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。 > **说明：** > > - 主窗口处于自由悬浮窗口模式时，在非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下调用不报错不生效。
+基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。 调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](arkts-arkui-window-i.md#resizeasync-1)。 窗口存在大小限制[WindowLimits](arkts-arkui-windowlimits-i.md)，具体尺寸限制范围可以通过 [getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1)接口进行查询。 调用该接口设置的宽度与高度受到此限制约束，规则： 若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制； 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](arkts-arkui-window-i.md#getwindowstatus-1)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。 > **说明：** > > - 主窗口处于自由悬浮窗口模式时，在非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下调用不报错不生效。
 
 **起始版本：** 9
 
@@ -4155,7 +4155,7 @@ resize(width: number, height: number): Promise<void>
 resize(width: number, height: number, callback: AsyncCallback<void>): void
 ```
 
-基于窗口左上角顶点改变当前窗口大小，使用callback异步回调。 调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](arkts-arkui-window-i.md#resizeasync-1)。 窗口存在大小限制[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)，具体尺寸限制范围可以通过 [getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1)接口进行查询。 调用该接口设置的宽度与高度受到此限制约束，规则： 若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制； 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](arkts-arkui-window-i.md#getwindowstatus-1)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。 > **说明：** > > - 主窗口处于自由悬浮窗口模式时，在非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下调用不报错不生效。
+基于窗口左上角顶点改变当前窗口大小，使用callback异步回调。 调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](arkts-arkui-window-i.md#resizeasync-1)。 窗口存在大小限制[WindowLimits](arkts-arkui-windowlimits-i.md)，具体尺寸限制范围可以通过 [getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1)接口进行查询。 调用该接口设置的宽度与高度受到此限制约束，规则： 若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制； 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](arkts-arkui-window-i.md#getwindowstatus-1)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。 > **说明：** > > - 主窗口处于自由悬浮窗口模式时，在非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下调用不报错不生效。
 
 **起始版本：** 9
 
@@ -4185,7 +4185,7 @@ resize(width: number, height: number, callback: AsyncCallback<void>): void
 resizeAsync(width: number, height: number): Promise<void>
 ```
 
-基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。 调用生效后返回，回调中可使用[getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1)（见示例）立即获取最终生效结果。 窗口存在大小限制[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)，具体尺寸限制范围可以通过 [getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1)接口进行查询。 调用该接口设置的宽度与高度受到此限制约束，规则： 若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制； 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](arkts-arkui-window-i.md#getwindowstatus-1)获取）时调用生效，否则抛出错误码1300010。 > **说明：** > > - 在非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口调用不生效。
+基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。 调用生效后返回，回调中可使用[getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1)（见示例）立即获取最终生效结果。 窗口存在大小限制[WindowLimits](arkts-arkui-windowlimits-i.md)，具体尺寸限制范围可以通过 [getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1)接口进行查询。 调用该接口设置的宽度与高度受到此限制约束，规则： 若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制； 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](arkts-arkui-window-i.md#getwindowstatus-1)获取）时调用生效，否则抛出错误码1300010。 > **说明：** > > - 在非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口调用不生效。
 
 **起始版本：** 12
 
@@ -4251,7 +4251,7 @@ restore(): Promise<void>
 restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 ```
 
-将当前窗口的主窗口恢复到前台显示，如果主窗口已处于前台，则会抬升主窗层级。此接口仅适用于类型为[TYPE_FLOAT](arkts-arkui-windowtype-e.md#windowtype)的窗口，并且需在窗口触发过 [DOWN](../arkts-components/arkts-arkui-touchtype-e.md#touchtype)事件后才能调用。使用Promise异步回调。
+将当前窗口的主窗口恢复到前台显示，如果主窗口已处于前台，则会抬升主窗层级。此接口仅适用于类型为[TYPE_FLOAT](arkts-arkui-windowtype-e.md)的窗口，并且需在窗口触发过 [DOWN](../arkts-components/arkts-arkui-touchtype-e.md)事件后才能调用。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -4299,7 +4299,7 @@ setAspectRatio(ratio: number, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ratio | number | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)和系统限制的交集决定，系统限制优先级高于[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)。ratio的有效范围会随[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)变化而变化。如果先设置了[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
+| ratio | number | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由[WindowLimits](arkts-arkui-windowlimits-i.md)和系统限制的交集决定，系统限制优先级高于[WindowLimits](arkts-arkui-windowlimits-i.md)。ratio的有效范围会随[WindowLimits](arkts-arkui-windowlimits-i.md)变化而变化。如果先设置了[WindowLimits](arkts-arkui-windowlimits-i.md)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的[WindowLimits](arkts-arkui-windowlimits-i.md)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
 | callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
@@ -4328,7 +4328,7 @@ setAspectRatio(ratio: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ratio | number | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)和系统限制的交集决定，系统限制优先级高于[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)。ratio的有效范围会随[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)变化而变化。如果先设置了[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
+| ratio | number | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由[WindowLimits](arkts-arkui-windowlimits-i.md)和系统限制的交集决定，系统限制优先级高于[WindowLimits](arkts-arkui-windowlimits-i.md)。ratio的有效范围会随[WindowLimits](arkts-arkui-windowlimits-i.md)变化而变化。如果先设置了[WindowLimits](arkts-arkui-windowlimits-i.md)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的[WindowLimits](arkts-arkui-windowlimits-i.md)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
 
 **返回值：**
 
@@ -4513,7 +4513,7 @@ setContentAspectRatio(ratio: number, isPersistent?: boolean, needUpdateRect?: bo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ratio | number | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)和系统限制的交集决定，系统限制优先级高于[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)。ratio的有效范围会随[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)变化而变化。如果先设置了[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
+| ratio | number | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由[WindowLimits](arkts-arkui-windowlimits-i.md)和系统限制的交集决定，系统限制优先级高于[WindowLimits](arkts-arkui-windowlimits-i.md)。ratio的有效范围会随[WindowLimits](arkts-arkui-windowlimits-i.md)变化而变化。如果先设置了[WindowLimits](arkts-arkui-windowlimits-i.md)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的[WindowLimits](arkts-arkui-windowlimits-i.md)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
 | isPersistent | boolean | 否 | 是否持久化保存该比例参数。<br/>如为`true`，比例参数会持久化保存，销毁窗口、关闭应用或重启设备后，当再次切换到自由悬浮窗口模式时仍然生效。可通过[resetAspectRatio](arkts-arkui-window-i.md#resetaspectratio-2)清除持久化保存的比例参数。<br/>如为`false`，比例参数仅对当前窗口生效，窗口销毁后清除该数据。<br/>默认值为`true`。 |
 | needUpdateRect | boolean | 否 | 是否立即根据当前比例更新窗口大小。<br/>如为`true`，立即根据当前比例更新窗口大小。<br/>如为`false`，窗口将在拖拽缩放时根据当前比例更新，也可以使用[resize](arkts-arkui-window-i.md#resize-2)或[resizeAsync](arkts-arkui-window-i.md#resizeasync-1)进行主动更新。<br/>默认值为`true`。 |
 
@@ -4721,7 +4721,7 @@ setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise<void>
 setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>
 ```
 
-设置当前窗口是否支持获取三键导航类型的避让区域。未调用此接口设置前，系统默认不支持获取三键导航类型的避让区域。使用Promise异步回调。 调用该接口使能后才可以通过[getWindowAvoidArea()](arkts-arkui-window-i.md#getwindowavoidarea-1)获取到 [TYPE_FLOAT_NAVIGATION](arkts-arkui-avoidareatype-e.md#avoidareatype)避让类型对应的避让区域或通过 [on('avoidAreaChange')](arkts-arkui-window-i.md#on-7)监听 TYPE_FLOAT_NAVIGATION避让类型对应的避让区域的变化。
+设置当前窗口是否支持获取三键导航类型的避让区域。未调用此接口设置前，系统默认不支持获取三键导航类型的避让区域。使用Promise异步回调。 调用该接口使能后才可以通过[getWindowAvoidArea()](arkts-arkui-window-i.md#getwindowavoidarea-1)获取到 [TYPE_FLOAT_NAVIGATION](arkts-arkui-avoidareatype-e.md)避让类型对应的避让区域或通过 [on('avoidAreaChange')](arkts-arkui-window-i.md#on-7)监听 TYPE_FLOAT_NAVIGATION避让类型对应的避让区域的变化。
 
 **起始版本：** 26.0.0
 
@@ -5244,7 +5244,7 @@ setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>)
 setPreferredOrientationWithResult(orientation: Orientation): Promise<OrientationResult>
 ```
 
-设置主窗口的显示方向属性，通过Promise异步返回显示方向的执行结果。非主窗口调用后不生效，OrientationResult返回window. [OrientationExecutionResult](arkts-arkui-orientationexecutionresult-e.md#orientationexecutionresult).ORIENTATION_IGNORED。
+设置主窗口的显示方向属性，通过Promise异步返回显示方向的执行结果。非主窗口调用后不生效，OrientationResult返回window. [OrientationExecutionResult](arkts-arkui-orientationexecutionresult-e.md).ORIENTATION_IGNORED。
 
 **起始版本：** 26.0.0
 
@@ -5366,7 +5366,7 @@ setRaiseByClickEnabled(enable: boolean): Promise<void>
 setReceiveDragEventEnabled(enabled: boolean): Promise<void>
 ```
 
-设置当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md#dragevent)，使用Promise异步回调。 默认场景下为true，能够接收拖拽事件。 当enable为false，当前窗口不能接收拖拽事件。
+设置当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md)，使用Promise异步回调。 默认场景下为true，能够接收拖拽事件。 当enable为false，当前窗口不能接收拖拽事件。
 
 **起始版本：** 23
 
@@ -5633,7 +5633,7 @@ setSubWindowModal(isModal: boolean): Promise<void>
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 20 |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 20+ |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 
 ## setSubWindowModal
@@ -5670,7 +5670,7 @@ setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 20 |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 20+ |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 
 ## setSubWindowZLevel
@@ -5960,7 +5960,7 @@ setUIContent(path: string, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9 |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9+ |
 
 ## setUIContent
 
@@ -5994,7 +5994,7 @@ setUIContent(path: string): Promise<void>
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9 |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9+ |
 
 ## setWindowBackgroundColor
 
@@ -6530,7 +6530,7 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 ```
 
-设置当前窗口的尺寸限制，使用Promise异步回调。 默认存在一个系统尺寸限制，系统尺寸限制由产品配置决定，不可修改。 未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1)或 [getWindowLimitsVP](arkts-arkui-window-i.md#getwindowlimitsvp-1)可获取系统限制。 > **说明：** > > - [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为 > window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)约束。触发场景包括：应用主动 > 改变窗口大小（如调用[resize()](arkts-arkui-window-i.md#resize-2)）；系统调节窗 > 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。 > > - 非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受 > [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)约束，其他类型窗口仍受 > [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)约束。
+设置当前窗口的尺寸限制，使用Promise异步回调。 默认存在一个系统尺寸限制，系统尺寸限制由产品配置决定，不可修改。 未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1)或 [getWindowLimitsVP](arkts-arkui-window-i.md#getwindowlimitsvp-1)可获取系统限制。 > **说明：** > > - [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为 > window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-windowlimits-i.md)约束。触发场景包括：应用主动 > 改变窗口大小（如调用[resize()](arkts-arkui-window-i.md#resize-2)）；系统调节窗 > 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。 > > - 非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受 > [WindowLimits](arkts-arkui-windowlimits-i.md)约束，其他类型窗口仍受 > [WindowLimits](arkts-arkui-windowlimits-i.md)约束。
 
 **起始版本：** 11
 
@@ -6566,7 +6566,7 @@ setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<WindowLimits>
 ```
 
-设置当前窗口的尺寸限制，使用Promise异步回调。 默认存在一个系统尺寸限制，系统尺寸限制由产品配置决定，不可修改。 未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1)或 [getWindowLimitsVP](arkts-arkui-window-i.md#getwindowlimitsvp-1)可获取系统限制。 > **说明：** > > - [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为 > window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)约束。触发场景包括：应用主动 > 改变窗口大小（如调用[resize()](arkts-arkui-window-i.md#resize-2)）；系统调节窗 > 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。 > > - 非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受 > [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)约束，其他类型窗口仍受 > [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits)约束。
+设置当前窗口的尺寸限制，使用Promise异步回调。 默认存在一个系统尺寸限制，系统尺寸限制由产品配置决定，不可修改。 未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1)或 [getWindowLimitsVP](arkts-arkui-window-i.md#getwindowlimitsvp-1)可获取系统限制。 > **说明：** > > - [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为 > window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-windowlimits-i.md)约束。触发场景包括：应用主动 > 改变窗口大小（如调用[resize()](arkts-arkui-window-i.md#resize-2)）；系统调节窗 > 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。 > > - 非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受 > [WindowLimits](arkts-arkui-windowlimits-i.md)约束，其他类型窗口仍受 > [WindowLimits](arkts-arkui-windowlimits-i.md)约束。
 
 **起始版本：** 15
 
@@ -6579,13 +6579,13 @@ setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<Window
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | windowLimits | WindowLimits | 是 | 目标窗口的尺寸限制，单位为px或vp。 |
-| isForcible | boolean | 是 | 是否强制设置窗口的尺寸限制。<br>入参[windowLimits](arkts-arkui-windowlimits-i.md#windowlimits)的单位为vp时：无论设置true还是false，都按照false处理，窗口宽高的最小值和最大值都取决于系统限制。<br>入参[windowLimits](arkts-arkui-windowlimits-i.md#windowlimits)的单位为px时：设置为true，表示窗口宽高最小值以系统限制值和40vp两者中的低数值为准，窗口宽高的最大值仍取决于系统限制；设置为false，表示窗口宽高的最小值和最大值都取决于系统限制。 |
+| isForcible | boolean | 是 | 是否强制设置窗口的尺寸限制。<br>入参[windowLimits](arkts-arkui-windowlimits-i.md)的单位为vp时：无论设置true还是false，都按照false处理，窗口宽高的最小值和最大值都取决于系统限制。<br>入参[windowLimits](arkts-arkui-windowlimits-i.md)的单位为px时：设置为true，表示窗口宽高最小值以系统限制值和40vp两者中的低数值为准，窗口宽高的最大值仍取决于系统限制；设置为false，表示窗口宽高的最小值和最大值都取决于系统限制。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WindowLimits&gt; | Promise对象。返回设置后的窗口尺寸限制。<br>入参[windowLimits](arkts-arkui-windowlimits-i.md#windowlimits)的单位为vp时，返回入参与系统默认窗口尺寸限制的交集。<br>入参[windowLimits](arkts-arkui-windowlimits-i.md#windowlimits)的单位为px时，isForcible为false则返回入参与系统默认窗口尺寸限制的交集；isForcible为true则返回入参与[系统限制的最小值与40vp两者中的低数值，系统限制的最大值]的交集。 |
+| Promise&lt;WindowLimits&gt; | Promise对象。返回设置后的窗口尺寸限制。<br>入参[windowLimits](arkts-arkui-windowlimits-i.md)的单位为vp时，返回入参与系统默认窗口尺寸限制的交集。<br>入参[windowLimits](arkts-arkui-windowlimits-i.md)的单位为px时，isForcible为false则返回入参与系统默认窗口尺寸限制的交集；isForcible为true则返回入参与[系统限制的最小值与40vp两者中的低数值，系统限制的最大值]的交集。 |
 
 **错误码：**
 
@@ -7412,7 +7412,7 @@ snapshotSync(): image.PixelMap
 startMoving(): Promise<void>
 ```
 
-开始移动窗口，使用Promise异步回调。 [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，对系统窗口、应用主窗口、应用子窗口、全局悬浮窗和模态窗口生效。非自由窗口状态下，仅对系统窗口、应用子窗 口、全局悬浮窗和模态窗口生效，应用主窗口调用该接口返回801或1300004错误码。 仅在[onTouch](../../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为 TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标或触摸点移动。 在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](../arkts-components/arkts-arkui-touchtype-e.md#touchtype)（需要保证当前行为已经触发 TouchType.Down事件）时调用此接口，触发移动效果。
+开始移动窗口，使用Promise异步回调。 [自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，对系统窗口、应用主窗口、应用子窗口、全局悬浮窗和模态窗口生效。非自由窗口状态下，仅对系统窗口、应用子窗 口、全局悬浮窗和模态窗口生效，应用主窗口调用该接口返回801或1300004错误码。 仅在[onTouch](../../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为 TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标或触摸点移动。 在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](../arkts-components/arkts-arkui-touchtype-e.md)（需要保证当前行为已经触发 TouchType.Down事件）时调用此接口，触发移动效果。
 
 **起始版本：** 14
 
@@ -7442,7 +7442,7 @@ startMoving(): Promise<void>
 startMoving(offsetX: number, offsetY: number): Promise<void>
 ```
 
-指定鼠标在窗口内的位置并移动窗口，使用Promise异步回调。 在同应用内窗口分合后，且鼠标保持按下状态直接移动新窗口，如果此时鼠标快速移动，窗口移动时鼠标可能会在窗口外。可以使用本接口指定窗口移动时鼠标在窗口内的位置，先移动窗口到鼠标位置，再开始移动窗口。 仅在[onTouch](../../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为 TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标移动。 在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](../arkts-components/arkts-arkui-touchtype-e.md#touchtype)（需要保证当前行为已经触发 TouchType.Down事件）时调用此接口，触发移动效果。
+指定鼠标在窗口内的位置并移动窗口，使用Promise异步回调。 在同应用内窗口分合后，且鼠标保持按下状态直接移动新窗口，如果此时鼠标快速移动，窗口移动时鼠标可能会在窗口外。可以使用本接口指定窗口移动时鼠标在窗口内的位置，先移动窗口到鼠标位置，再开始移动窗口。 仅在[onTouch](../../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为 TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标移动。 在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](../arkts-components/arkts-arkui-touchtype-e.md)（需要保证当前行为已经触发 TouchType.Down事件）时调用此接口，触发移动效果。
 
 **起始版本：** 15
 
@@ -7454,8 +7454,8 @@ startMoving(offsetX: number, offsetY: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offsetX | number | 是 | 窗口移动时预期鼠标位置相对窗口左上角的x轴偏移量，单位为px，该参数仅支持整数输入，浮点数向下取整。负值为非法参数，大于窗口宽度为非法参数，窗口宽度可以在窗口属性[WindowProperties](arkts-arkui-windowproperties-i.md#windowproperties)中获取。 |
-| offsetY | number | 是 | 窗口移动时预期鼠标位置相对窗口左上角的y轴偏移量，单位为px，该参数仅支持整数输入，浮点数向下取整。负值为非法参数，大于窗口高度为非法参数，窗口高度可以在窗口属性[WindowProperties](arkts-arkui-windowproperties-i.md#windowproperties)中获取。 |
+| offsetX | number | 是 | 窗口移动时预期鼠标位置相对窗口左上角的x轴偏移量，单位为px，该参数仅支持整数输入，浮点数向下取整。负值为非法参数，大于窗口宽度为非法参数，窗口宽度可以在窗口属性[WindowProperties](arkts-arkui-windowproperties-i.md)中获取。 |
+| offsetY | number | 是 | 窗口移动时预期鼠标位置相对窗口左上角的y轴偏移量，单位为px，该参数仅支持整数输入，浮点数向下取整。负值为非法参数，大于窗口高度为非法参数，窗口高度可以在窗口属性[WindowProperties](arkts-arkui-windowproperties-i.md)中获取。 |
 
 **返回值：**
 

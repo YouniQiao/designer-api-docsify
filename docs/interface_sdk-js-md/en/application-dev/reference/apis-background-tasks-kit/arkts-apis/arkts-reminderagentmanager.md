@@ -9,7 +9,7 @@ The **reminderAgentManager** module provides APIs related to agent-powered remin
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@ohos.reminderAgentManager';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

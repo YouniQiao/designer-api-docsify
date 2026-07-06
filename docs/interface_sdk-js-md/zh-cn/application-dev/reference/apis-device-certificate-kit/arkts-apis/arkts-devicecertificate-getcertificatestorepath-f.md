@@ -30,7 +30,7 @@ function getCertificateStorePath(property: CertStoreProperty): string
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are leftunspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. For example, CertStoreProperty.certTypeis set to CA_CERT_USER, but CertStoreProperty.certScope is not specified. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
-| [17500009](../errorcode-certManager.md#17500009-不支持指定的证书存储路径) | The device does not support the specified certificate storage path,For example, the device outside China does not support the certificate that uses SM algorithm.<br>**适用版本：** 20 |
+| [17500009](../errorcode-certManager.md#17500009-不支持指定的证书存储路径) | The device does not support the specified certificate storage path,For example, the device outside China does not support the certificate that uses SM algorithm.<br>**适用版本：** 20+ |
 
 **示例：**
 

@@ -9,7 +9,7 @@ Represents data of the file URI type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@ohos.data.uniformDataStruct';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## details
@@ -66,7 +66,7 @@ File path.
 readonly uniformDataType: 'general.file-uri'
 ```
 
-Uniform data type, which has a fixed value of **general.file-uri**. For details, see [UniformDataType](arkts-arkdata-uniformdatatype-e.md#uniformdatatype).
+Uniform data type, which has a fixed value of **general.file-uri**. For details, see [UniformDataType](arkts-arkdata-uniformdatatype-e.md).
 
 **Type:** 'general.file-uri'
 

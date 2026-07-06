@@ -10,7 +10,7 @@ type AuthType = 'ALL' | 'FACE_ONLY'
 
 **废弃版本：** 8
 
-**替代接口：** [UserAuthType](arkts-userauthentication-userauthtype-e.md#userauthtype)
+**替代接口：** [UserAuthType](arkts-userauthentication-userauthtype-e.md)
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

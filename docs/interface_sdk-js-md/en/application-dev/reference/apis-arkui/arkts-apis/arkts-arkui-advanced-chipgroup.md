@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@ohos.arkui.advanced.ChipGroup';
+import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -12,7 +12,7 @@ import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixI
 
 | Name | Description |
 | --- | --- |
-| [ChipGroup](arkts-arkui-chipgroup-s.md) | &gt; **NOTE** &gt; &gt; 1. When **multiple** is set to **false**, if **selectedIndexes** is not passed in, the first chip is automatically &gt; selected by default. However, if the provided **selectedIndexes** includes multiple elements, the chip at the first &gt; index is selected by default. &gt; &gt; 2. To use the suffix functionality, the **IconGroupSuffix** API must be imported. If this API is not provided, the &gt; suffix area will remain empty. &gt; &gt; 3. The icon fill colors (**fillColor** and **activedFillColor**) must match the font color (**fontColor**). If &gt; different colors need to be set, use **prefixSymbol** when passing in &gt; [ChipGroupSpaceOptions](arkts-arkui-chipgroupspaceoptions-i.md#chipgroupspaceoptions). |
+| [ChipGroup](arkts-arkui-chipgroup-s.md) | &gt; **NOTE** &gt; &gt; 1. When **multiple** is set to **false**, if **selectedIndexes** is not passed in, the first chip is automatically &gt; selected by default. However, if the provided **selectedIndexes** includes multiple elements, the chip at the first &gt; index is selected by default. &gt; &gt; 2. To use the suffix functionality, the **IconGroupSuffix** API must be imported. If this API is not provided, the &gt; suffix area will remain empty. &gt; &gt; 3. The icon fill colors (**fillColor** and **activedFillColor**) must match the font color (**fontColor**). If &gt; different colors need to be set, use **prefixSymbol** when passing in &gt; [ChipGroupSpaceOptions](arkts-arkui-chipgroupspaceoptions-i.md). |
 | [IconGroupSuffix](arkts-arkui-icongroupsuffix-s.md) | The **ChipGroup** component provides a set of chips for organizing and categorizing files or resource content. &gt; **NOTE** &gt; &gt; With **SymbolGlyphModifier**, neither modifying the animation type with **symbolEffect** nor setting the effect &gt; strategy with [effectStrategy](SymbolGlyphAttribute#effectStrategy) is supported. |
 
 ### Interfaces
@@ -26,6 +26,6 @@ import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixI
 | [IconItemOptions](arkts-arkui-iconitemoptions-i.md) | Defines the configuration for the trailing builder, with constraints applied to background size and color settings. |
 | [IconOptions](arkts-arkui-iconoptions-i.md) | Defines the common attributes of icons. |
 | [LabelOptions](arkts-arkui-labeloptions-i.md) | Defines the label configuration options. |
-| [SuffixImageIconOptions](arkts-arkui-suffiximageiconoptions-i.md) | Defines the configuration options for suffix icons. Inherits from [IconOptions](arkts-arkui-iconoptions-i.md#iconoptions). |
+| [SuffixImageIconOptions](arkts-arkui-suffiximageiconoptions-i.md) | Defines the configuration options for suffix icons. Inherits from [IconOptions](arkts-arkui-iconoptions-i.md). |
 | [SymbolItemOptions](arkts-arkui-symbolitemoptions-i.md) | Suffix icon option type of ChipGroup. |
 

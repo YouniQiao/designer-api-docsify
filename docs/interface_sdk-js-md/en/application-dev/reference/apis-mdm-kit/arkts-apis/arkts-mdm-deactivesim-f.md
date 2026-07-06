@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { telephonyManager } from '@ohos.enterprise.telephonyManager';
+import { telephonyManager } from '@kit.MDMKit';
 ```
 
 ## deactiveSim

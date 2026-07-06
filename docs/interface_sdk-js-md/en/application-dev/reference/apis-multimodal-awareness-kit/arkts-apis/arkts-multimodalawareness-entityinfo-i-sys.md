@@ -11,7 +11,7 @@ Provides entity information perceived, including content, links, images, and oth
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@ohos.multimodalAwareness.onScreen';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## entityInfo

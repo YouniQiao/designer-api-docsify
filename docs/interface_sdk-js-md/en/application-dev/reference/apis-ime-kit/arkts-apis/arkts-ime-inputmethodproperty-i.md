@@ -9,7 +9,7 @@ input method property
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@ohos.inputMethod';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## enabledState

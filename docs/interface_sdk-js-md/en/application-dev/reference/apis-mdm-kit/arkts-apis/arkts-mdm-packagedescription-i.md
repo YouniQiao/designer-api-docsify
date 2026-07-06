@@ -9,7 +9,7 @@ Represents the description of a system update package.
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@ohos.enterprise.systemManager';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## notify

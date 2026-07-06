@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from '@ohos.hiTraceChain';
+import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## isFlagEnabled

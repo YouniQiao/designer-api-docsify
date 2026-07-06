@@ -9,7 +9,7 @@ Defines the print attributes.
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@ohos.print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## colorMode

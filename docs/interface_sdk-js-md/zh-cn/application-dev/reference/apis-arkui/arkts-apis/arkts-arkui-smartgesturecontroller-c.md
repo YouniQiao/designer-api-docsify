@@ -66,7 +66,7 @@ enableSmartTapAndSlideGestures(enabled: boolean): void
 registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHandlingResolution>): void
 ```
 
-注册智慧手势监听回调。在系统处理当前智慧手势前，应用可接收当前手势的默认动作处理并进行自定义干预。使用callback异步回调。 > **说明：** > > - 该接口使应用能够在系统处理当前智慧手势事件前接收其处理意图，并进行自定义干预。 > > - 用户可通过该回调自定义决策本次智慧手势的行为。 > > - 用户可注册多个监听回调，按照后注册先执行的顺序触发，当某个监听回调消费智慧手势事件后，即返回值[GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md#gesturehandlingresolution). > isConsumed为true时，后续监听回调不再执行。 > > - 当用户重复注册相同回调时，只会保存首次注册的回调，重复注册不生效。 > > - 回调返回值必须是合法的[GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md#gesturehandlingresolution)实例，否则本次改写不生效。
+注册智慧手势监听回调。在系统处理当前智慧手势前，应用可接收当前手势的默认动作处理并进行自定义干预。使用callback异步回调。 > **说明：** > > - 该接口使应用能够在系统处理当前智慧手势事件前接收其处理意图，并进行自定义干预。 > > - 用户可通过该回调自定义决策本次智慧手势的行为。 > > - 用户可注册多个监听回调，按照后注册先执行的顺序触发，当某个监听回调消费智慧手势事件后，即返回值[GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md). > isConsumed为true时，后续监听回调不再执行。 > > - 当用户重复注册相同回调时，只会保存首次注册的回调，重复注册不生效。 > > - 回调返回值必须是合法的[GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md)实例，否则本次改写不生效。
 
 **起始版本：** 26.0.0
 

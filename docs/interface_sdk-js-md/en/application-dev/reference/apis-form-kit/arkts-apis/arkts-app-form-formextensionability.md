@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FormExtensionAbility } from '@ohos.app.form.FormExtensionAbility';
+import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## Summary

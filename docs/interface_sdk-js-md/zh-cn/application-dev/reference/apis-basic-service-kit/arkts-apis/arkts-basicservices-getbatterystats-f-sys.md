@@ -59,7 +59,7 @@ function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;BatteryStatsInfo&gt;&gt; | 是 | 回调函数。当获取耗电信息列表成功，err为undefined，data为获取到的Array&lt;[BatteryStatsInfo](arkts-basicservices-batterystatsinfo-i-sys.md#batterystatsinfo)&gt;&gt;；否则为错误对象；AsyncCallback封装了一个BatteryStatsInfo类型的接口。 |
+| callback | AsyncCallback&lt;Array&lt;BatteryStatsInfo&gt;&gt; | 是 | 回调函数。当获取耗电信息列表成功，err为undefined，data为获取到的Array&lt;[BatteryStatsInfo](arkts-basicservices-batterystatsinfo-i-sys.md)&gt;&gt;；否则为错误对象；AsyncCallback封装了一个BatteryStatsInfo类型的接口。 |
 
 **错误码：**
 

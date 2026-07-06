@@ -12,7 +12,7 @@
 getAverageColor(): Color
 ```
 
-读取图像平均的颜色值，结果写入[Color](arkts-arkgraphics2d-color-i.md#color)里，使用同步方式返回。
+读取图像平均的颜色值，结果写入[Color](arkts-arkgraphics2d-color-i.md)里，使用同步方式返回。
 
 **起始版本：** 10
 
@@ -63,7 +63,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getHighestSaturationColor(): Color
 ```
 
-读取图像饱和度最高的颜色值，结果写入[Color](arkts-arkgraphics2d-color-i.md#color)里，使用同步方式返回。
+读取图像饱和度最高的颜色值，结果写入[Color](arkts-arkgraphics2d-color-i.md)里，使用同步方式返回。
 
 **起始版本：** 10
 
@@ -114,7 +114,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getLargestProportionColor(): Color
 ```
 
-读取图像中占比最多的颜色值，结果写入[Color](arkts-arkgraphics2d-color-i.md#color)里，使用同步方式返回。该接口使用中位切分算法划分颜色空间，获取占比最多的颜色空间的平均颜色。
+读取图像中占比最多的颜色值，结果写入[Color](arkts-arkgraphics2d-color-i.md)里，使用同步方式返回。该接口使用中位切分算法划分颜色空间，获取占比最多的颜色空间的平均颜色。
 
 **起始版本：** 10
 
@@ -165,7 +165,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getMainColor(): Promise<Color>
 ```
 
-读取图像主色的颜色值，结果写入[Color](arkts-arkgraphics2d-color-i.md#color)里，使用Promise异步回调。该接口通过图像缩放算法，根据周围像素的加权计算，将原图缩小到1个像素以得到主色。
+读取图像主色的颜色值，结果写入[Color](arkts-arkgraphics2d-color-i.md)里，使用Promise异步回调。该接口通过图像缩放算法，根据周围像素的加权计算，将原图缩小到1个像素以得到主色。
 
 **起始版本：** 9
 
@@ -218,7 +218,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getMainColorSync(): Color
 ```
 
-读取图像主色的颜色值，结果写入[Color](arkts-arkgraphics2d-color-i.md#color)里，使用同步方式返回。该接口通过图像缩放算法，根据周围像素的加权计算，将原图缩小到1个像素以得到主色。
+读取图像主色的颜色值，结果写入[Color](arkts-arkgraphics2d-color-i.md)里，使用同步方式返回。该接口通过图像缩放算法，根据周围像素的加权计算，将原图缩小到1个像素以得到主色。
 
 **起始版本：** 9
 
@@ -269,7 +269,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getTopProportionColors(colorCount: number): Array<Color | null>
 ```
 
-读取图像占比靠前的颜色值，个数由`colorCount`指定，结果写入[Color](arkts-arkgraphics2d-color-i.md#color)的数组里，使用同步方式返回。
+读取图像占比靠前的颜色值，个数由`colorCount`指定，结果写入[Color](arkts-arkgraphics2d-color-i.md)的数组里，使用同步方式返回。
 
 **起始版本：** 12
 

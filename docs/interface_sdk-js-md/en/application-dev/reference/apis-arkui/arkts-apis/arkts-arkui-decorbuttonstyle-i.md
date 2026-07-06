@@ -9,7 +9,7 @@ Describes the button style of the system decoration bar.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## buttonBackgroundCornerRadius

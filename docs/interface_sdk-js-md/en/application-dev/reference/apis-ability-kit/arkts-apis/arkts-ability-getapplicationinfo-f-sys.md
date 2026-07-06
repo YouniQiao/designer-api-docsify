@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getApplicationInfo
@@ -28,7 +28,7 @@ Obtains the application information based on the given bundle name and applicati
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | appFlags | number | Yes | Type of the application information to obtain. |
-| callback | AsyncCallback&lt;ApplicationInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return theresult. If the operation is successful, **err** is **null** and **data** is the application informationobtained. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;ApplicationInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null** and **data** is the application informationobtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -89,7 +89,7 @@ Obtains the application information based on the given bundle name, application 
 | bundleName | string | Yes | Bundle name. |
 | appFlags | number | Yes | Type of the application information to obtain. |
 | userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
-| callback | AsyncCallback&lt;ApplicationInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return theresult. If the operation is successful, **err** is **null** and **data** is the application informationobtained. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;ApplicationInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null** and **data** is the application informationobtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

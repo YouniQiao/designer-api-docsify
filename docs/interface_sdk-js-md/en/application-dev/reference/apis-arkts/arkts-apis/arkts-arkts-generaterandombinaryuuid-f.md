@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## generateRandomBinaryUUID

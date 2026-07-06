@@ -1,8 +1,8 @@
 # TapGestureHandlerOptions
 
-Provides the parameters of the tap gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions).
+Provides the parameters of the tap gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
-**Inheritance/Implementation:** TapGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions)
+**Inheritance/Implementation:** TapGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
 **Since:** 12
 

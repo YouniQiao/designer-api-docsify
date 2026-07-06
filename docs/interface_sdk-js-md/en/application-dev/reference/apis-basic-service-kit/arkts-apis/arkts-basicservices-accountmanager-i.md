@@ -9,7 +9,7 @@ Provides APIs for managing OS accounts.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@ohos.account.osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## checkMultiOsAccountEnabled
@@ -827,7 +827,7 @@ Obtains information about the OS account to which the current process belongs. T
 
 **Required permissions:** 
 - API version 10+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
-- API version 9 - 9: ohos.permission.MANAGE_LOCAL_ACCOUNTS
+- API version 9: ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -879,7 +879,7 @@ Obtains information about the OS account to which the current process belongs. T
 
 **Required permissions:** 
 - API version 10+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
-- API version 9 - 9: ohos.permission.MANAGE_LOCAL_ACCOUNTS
+- API version 9: ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **System capability:** SystemCapability.Account.OsAccount
 

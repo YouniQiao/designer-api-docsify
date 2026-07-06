@@ -2,7 +2,7 @@
 
 RestrictedWorker类包含所有Worker功能。
 
-**继承/实现关系：** RestrictedWorker extends [ThreadWorker](arkts-arkts-threadworker-c.md#threadworker)
+**继承/实现关系：** RestrictedWorker extends [ThreadWorker](arkts-arkts-threadworker-c.md)
 
 **起始版本：** 11
 

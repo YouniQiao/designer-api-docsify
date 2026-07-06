@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentExecutor } from '@ohos.app.ability.InsightIntentExecutor';
+import { InsightIntentExecutor } from '@kit.AbilityKit';
 ```
 
 ## Summary

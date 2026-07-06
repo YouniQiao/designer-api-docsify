@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appRecovery } from '@ohos.app.ability.appRecovery';
+import { appRecovery } from '@kit.AbilityKit';
 ```
 
 ## setRestartWant

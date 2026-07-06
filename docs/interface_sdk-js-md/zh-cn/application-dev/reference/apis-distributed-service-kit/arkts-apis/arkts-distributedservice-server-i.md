@@ -71,7 +71,7 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | 是 | 事件回调类型，支持的事件为'connectionAccepted'，收到对端连接，触发该事件。 |
-| callback | Callback&lt;Connection&gt; | 否 | 注册的回调函数。[Connection](arkts-distributedservice-connection-i.md#connection)返回的连接对象。 |
+| callback | Callback&lt;Connection&gt; | 否 | 注册的回调函数。[Connection](arkts-distributedservice-connection-i.md)返回的连接对象。 |
 
 **错误码：**
 
@@ -187,7 +187,7 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | 是 | 事件回调类型，支持的事件为'connectionAccepted'，收到对端连接，触发该事件。 |
-| callback | Callback&lt;Connection&gt; | 是 | 注册的回调函数。[Connection](arkts-distributedservice-connection-i.md#connection)返回的连接对象。 |
+| callback | Callback&lt;Connection&gt; | 是 | 注册的回调函数。[Connection](arkts-distributedservice-connection-i.md)返回的连接对象。 |
 
 **错误码：**
 

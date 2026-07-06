@@ -9,7 +9,7 @@ TreeMap stores key-value (KV) pairs. Each key must be unique and have only one v
 ## Modules to Import
 
 ```TypeScript
-import { TreeMap } from '@ohos.util.TreeMap';
+import { TreeMap } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -366,7 +366,7 @@ Obtains the first sorted key in the treemap. Or returns undefined if tree map is
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirstKey method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 
@@ -449,7 +449,7 @@ Obtains the last sorted key in the treemap. Or returns undefined if tree map is 
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastKey method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 

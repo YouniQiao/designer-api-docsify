@@ -2,7 +2,7 @@
 
 Quick shot photo session object.
 
-**Inheritance/Implementation:** QuickShotPhotoSession extends [Session](arkts-camera-session-i.md#session), [AutoExposure](arkts-camera-autoexposure-i.md#autoexposure), [ColorEffect](arkts-camera-coloreffect-i-sys.md#coloreffect), [ColorManagement](arkts-camera-colormanagement-i.md#colormanagement), [EffectSuggestion](arkts-camera-effectsuggestion-i-sys.md#effectsuggestion), [Flash](arkts-camera-flash-i.md#flash), [Focus](arkts-camera-focus-i.md#focus), [Zoom](arkts-camera-zoom-i.md#zoom), [Beauty](arkts-camera-beauty-i-sys.md#beauty)
+**Inheritance/Implementation:** QuickShotPhotoSession extends [Session](arkts-camera-session-i.md), [AutoExposure](arkts-camera-autoexposure-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md), [ColorManagement](arkts-camera-colormanagement-i.md), [EffectSuggestion](arkts-camera-effectsuggestion-i-sys.md), [Flash](arkts-camera-flash-i.md), [Focus](arkts-camera-focus-i.md), [Zoom](arkts-camera-zoom-i.md), [Beauty](arkts-camera-beauty-i-sys.md)
 
 **Since:** 12
 
@@ -13,7 +13,7 @@ Quick shot photo session object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')
@@ -143,7 +143,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. This event is triggered and the error message is returned when an error occurs during thecalling of a session-related API such as[beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and[addInput](arkts-camera-session-i.md#addinput-1). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

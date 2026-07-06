@@ -9,7 +9,7 @@ The result for closing a WebSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@ohos.net.webSocket';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## code

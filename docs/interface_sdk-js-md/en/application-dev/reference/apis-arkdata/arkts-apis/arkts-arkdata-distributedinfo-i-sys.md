@@ -11,7 +11,7 @@ Manages the distributed info of the table.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@ohos.data.relationalStore';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## flag

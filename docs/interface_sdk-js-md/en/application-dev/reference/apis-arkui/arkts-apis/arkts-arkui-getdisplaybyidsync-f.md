@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@ohos.display';
+import { display } from '@kit.ArkUI';
 ```
 
 ## getDisplayByIdSync
@@ -24,7 +24,7 @@ Obtains a Display object based on the display ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | Display ID. The value must be an integer greater than or equal to 0. An object can beobtained only when the passed-in display ID is correct. You can use the value of the **displayId** property in[WindowProperties](arkts-arkui-windowproperties-i.md#windowproperties) as the input parameter. |
+| displayId | number | Yes | Display ID. The value must be an integer greater than or equal to 0. An object can beobtained only when the passed-in display ID is correct. You can use the value of the **displayId** property in[WindowProperties](arkts-arkui-windowproperties-i.md) as the input parameter. |
 
 **Return value:**
 

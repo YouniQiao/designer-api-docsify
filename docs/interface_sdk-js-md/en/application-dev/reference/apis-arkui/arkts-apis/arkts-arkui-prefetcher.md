@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@ohos.arkui.Prefetcher';
+import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -18,6 +18,6 @@ import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@ohos.arku
 
 | Name | Description |
 | --- | --- |
-| [IDataSourcePrefetching](arkts-arkui-idatasourceprefetching-i.md) | Extends the [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md#idatasource) API to add data prefetching capability to your data source. |
+| [IDataSourcePrefetching](arkts-arkui-idatasourceprefetching-i.md) | Extends the [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md) API to add data prefetching capability to your data source. |
 | [IPrefetcher](arkts-arkui-iprefetcher-i.md) | Provides prefetching capabilities. |
 

@@ -10,7 +10,7 @@ Enumerates the authentication event information types. It consists of the fields
 
 **Deprecated since:** 11
 
-**Substitutes:** [UserAuthResult](arkts-userauthentication-userauthresult-i.md#userauthresult)
+**Substitutes:** [UserAuthResult](arkts-userauthentication-userauthresult-i.md)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

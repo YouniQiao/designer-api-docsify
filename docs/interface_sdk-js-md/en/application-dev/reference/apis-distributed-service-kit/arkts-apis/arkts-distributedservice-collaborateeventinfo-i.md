@@ -9,7 +9,7 @@ Collaboration event information.
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@ohos.distributedsched.abilityConnectionManager';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## eventMsg

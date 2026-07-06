@@ -2,7 +2,7 @@
 
 Manager pan profile.
 
-**Inheritance/Implementation:** PanProfile extends [BaseProfile](arkts-connectivity-baseprofile-i.md#baseprofile)
+**Inheritance/Implementation:** PanProfile extends [BaseProfile](arkts-connectivity-baseprofile-i.md)
 
 **Since:** 9
 
@@ -15,7 +15,7 @@ Manager pan profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@ohos.bluetoothManager';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## disconnect
@@ -34,7 +34,7 @@ Disconnect to device with pan. On API 10 and above, the permission required by t
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
-- API version 9 - 9: ohos.permission.USE_BLUETOOTH
+- API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -109,7 +109,7 @@ Enable bluetooth tethering. On API 10 and above, the permission required by this
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
-- API version 9 - 9: ohos.permission.DISCOVER_BLUETOOTH
+- API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

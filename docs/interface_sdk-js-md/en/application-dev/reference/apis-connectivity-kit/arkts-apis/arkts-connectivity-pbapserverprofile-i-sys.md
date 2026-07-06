@@ -2,7 +2,7 @@
 
 Manager PBAP server profile.
 
-**Inheritance/Implementation:** PbapServerProfile extends [BaseProfile](arkts-connectivity-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** PbapServerProfile extends [BaseProfile](arkts-connectivity-baseprofile-t.md)
 
 **Since:** 11
 
@@ -11,7 +11,7 @@ Manager PBAP server profile.
 ## Modules to Import
 
 ```TypeScript
-import { pbap } from '@ohos.bluetooth.pbap';
+import { pbap } from '@kit.ConnectivityKit';
 ```
 
 ## disconnect

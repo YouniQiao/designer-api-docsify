@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LightWeightSet } from '@ohos.util.LightWeightSet';
+import { LightWeightSet } from '@kit.ArkTS';
 ```
 
 ## Summary

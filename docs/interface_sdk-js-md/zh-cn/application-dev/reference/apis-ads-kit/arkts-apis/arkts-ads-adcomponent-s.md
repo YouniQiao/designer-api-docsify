@@ -32,7 +32,7 @@ adRenderer?: () => void
 
 **起始版本：** 12
 
-**装饰器类型：** @Builder
+**装饰器类型：** @BuilderParam
 
 **元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
 

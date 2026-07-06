@@ -9,7 +9,7 @@ Represents data of the content widget type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@ohos.data.uniformDataStruct';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## appIcon

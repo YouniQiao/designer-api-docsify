@@ -70,7 +70,7 @@ scale?: AnimationRange<number>
 transition?: TransitionEffect
 ```
 
-设置菜单显示和退出的过渡效果。 **说明：** 在菜单退出动效过程中，横竖屏切换时，菜单会避让。二级菜单不继承自定义动效。弹出过程中可以点击二级菜单，但在退出动效执行过程中不允许点击二级菜单。 详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect)对象说明。
+设置菜单显示和退出的过渡效果。 **说明：** 在菜单退出动效过程中，横竖屏切换时，菜单会避让。二级菜单不继承自定义动效。弹出过程中可以点击二级菜单，但在退出动效执行过程中不允许点击二级菜单。 详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md)对象说明。
 
 **类型：** TransitionEffect
 

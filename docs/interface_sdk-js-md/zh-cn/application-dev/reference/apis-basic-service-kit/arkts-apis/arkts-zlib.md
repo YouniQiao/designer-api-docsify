@@ -51,12 +51,12 @@
 | [CompressFlushMode](arkts-basicservices-compressflushmode-e.md) | 压缩刷新模式。 |
 | [CompressLevel](arkts-basicservices-compresslevel-e.md) | 压缩等级。 |
 | [CompressMethod](arkts-basicservices-compressmethod-e.md) | 压缩模式。 |
-| [CompressStrategy](arkts-basicservices-compressstrategy-e.md) | CompressStrategy作为[Options](arkts-basicservices-options-i.md#options)的一个属性，用于指定压缩时的压缩策略。 |
+| [CompressStrategy](arkts-basicservices-compressstrategy-e.md) | CompressStrategy作为[Options](arkts-basicservices-options-i.md)的一个属性，用于指定压缩时的压缩策略。 |
 | [ErrorCode](arkts-basicservices-errorcode-e.md) | 错误码。 |
 | [MemLevel](arkts-basicservices-memlevel-e.md) | 内存等级。 |
 | [OffsetReferencePoint](arkts-basicservices-offsetreferencepoint-e.md) | 偏移参考点。 |
-| [ParallelStrategy](arkts-basicservices-parallelstrategy-e.md) | ParallelStrategy作为[Options](arkts-basicservices-options-i.md#options)的一个属性，用于指定压缩或解压时的串行或并行策略。 |
-| [PathSeparatorStrategy](arkts-basicservices-pathseparatorstrategy-e.md) | PathSeparatorStrategy作为[Options](arkts-basicservices-options-i.md#options)的一个属性，用于指定解压时目标压缩包内文件路径中分隔符的处理策略。 |
+| [ParallelStrategy](arkts-basicservices-parallelstrategy-e.md) | ParallelStrategy作为[Options](arkts-basicservices-options-i.md)的一个属性，用于指定压缩或解压时的串行或并行策略。 |
+| [PathSeparatorStrategy](arkts-basicservices-pathseparatorstrategy-e.md) | PathSeparatorStrategy作为[Options](arkts-basicservices-options-i.md)的一个属性，用于指定解压时目标压缩包内文件路径中分隔符的处理策略。 |
 | [ReturnStatus](arkts-basicservices-returnstatus-e.md) | 压缩/解压缩函数的返回代码。 |
 
 ### 类型

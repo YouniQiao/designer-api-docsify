@@ -6,14 +6,14 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 
 **Deprecated since:** 11
 
-**Substitutes:** [DeviceManager](arkts-distributedservice-devicemanager-i.md#devicemanager)
+**Substitutes:** [DeviceManager](arkts-distributedservice-devicemanager-i.md)
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@ohos.distributedHardware.deviceManager';
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## authenticateDevice

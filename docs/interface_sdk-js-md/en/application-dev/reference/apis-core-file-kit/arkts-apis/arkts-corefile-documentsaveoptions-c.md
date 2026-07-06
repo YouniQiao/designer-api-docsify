@@ -9,7 +9,7 @@ Defines the options for saving documents.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@ohos.file.picker';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## autoCreateEmptyFile

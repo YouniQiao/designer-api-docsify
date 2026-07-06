@@ -1,8 +1,8 @@
 # OrientationResponse
 
-Describes the orientation sensor data. It extends from [Response](arkts-sensorservice-response-i.md#response).
+Describes the orientation sensor data. It extends from [Response](arkts-sensorservice-response-i.md).
 
-**Inheritance/Implementation:** OrientationResponse extends [Response](arkts-sensorservice-response-i.md#response)
+**Inheritance/Implementation:** OrientationResponse extends [Response](arkts-sensorservice-response-i.md)
 
 **Since:** 8
 
@@ -11,7 +11,7 @@ Describes the orientation sensor data. It extends from [Response](arkts-sensorse
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@ohos.sensor';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## alpha

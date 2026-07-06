@@ -9,7 +9,7 @@ Declare class TreeListenerManager
 ## Modules to Import
 
 ```TypeScript
-import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeController, TreeListenerManager } from '@ohos.arkui.advanced.TreeView';
+import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeController, TreeListenerManager } from '@kit.ArkUI';
 ```
 
 ## getInstance

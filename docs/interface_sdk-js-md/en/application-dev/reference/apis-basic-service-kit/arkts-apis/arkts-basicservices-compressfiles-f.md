@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@ohos.zlib';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## compressFiles
@@ -24,7 +24,7 @@ Compresses multiple specified files. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFiles | Array&lt;string&gt; | Yes | Path of the folder or file to compress. The path must be an application sandboxpath, which can be obtained from the context. For details about the context, see[FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context). The folder to compress cannot be empty.Otherwise, an error will be reported when[decompressFile](zlib.decompressFile(inFile: string, outFile: string, options: Options,callback: AsyncCallback&lt;void&gt;)) is used to decompress the folder. |
+| inFiles | Array&lt;string&gt; | Yes | Path of the folder or file to compress. The path must be an application sandboxpath, which can be obtained from the context. For details about the context, see[FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). The folder to compress cannot be empty.Otherwise, an error will be reported when[decompressFile](zlib.decompressFile(inFile: string, outFile: string, options: Options,callback: AsyncCallback&lt;void&gt;)) is used to decompress the folder. |
 | outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, thevalues of **outFile** must be different. |
 | options | Options | Yes | Compression parameters. |
 

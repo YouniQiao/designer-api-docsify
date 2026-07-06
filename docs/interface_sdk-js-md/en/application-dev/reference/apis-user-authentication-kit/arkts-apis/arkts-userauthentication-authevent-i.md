@@ -6,14 +6,14 @@ Provides an asynchronous callback to return the authentication event information
 
 **Deprecated since:** 11
 
-**Substitutes:** [IAuthCallback](arkts-userauthentication-iauthcallback-i.md#iauthcallback)
+**Substitutes:** [IAuthCallback](arkts-userauthentication-iauthcallback-i.md)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@ohos.userIAM.userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## callback

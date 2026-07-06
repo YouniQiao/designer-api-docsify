@@ -11,7 +11,7 @@ Indicates the cause of a call disconnection.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@ohos.telephony.call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## message

@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Driver](arkts-test-driver-c.md#driver)
+**替代接口：** [Driver](arkts-test-driver-c.md)
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -482,7 +482,7 @@ triggerKey(keyCode: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | number | 是 | 键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。 |
+| keyCode | number | 是 | 键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。 |
 
 **返回值：**
 

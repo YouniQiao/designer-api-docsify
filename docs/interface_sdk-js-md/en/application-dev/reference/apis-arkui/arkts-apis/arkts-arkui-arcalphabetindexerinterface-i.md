@@ -9,7 +9,7 @@ The **ArcAlphabetIndexer** component is an arc-shaped component designed for qui
 ## Modules to Import
 
 ```TypeScript
-import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@ohos.arkui.ArcAlphabetIndexer';
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
 ```
 
 ## constructor

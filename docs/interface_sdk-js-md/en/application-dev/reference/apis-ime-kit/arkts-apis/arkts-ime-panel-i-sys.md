@@ -9,7 +9,7 @@ In the following API examples, you must first use [createPanel](arkts-ime-inputm
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@ohos.inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## off('sizeUpdate')
@@ -83,7 +83,7 @@ panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine
 setShadow(radius: number, color: string, offsetX: number, offsetY: number): void
 ```
 
-Sets the shadow effect of the input method window. > **NOTE** > > Panels whose [PanelType](arkts-ime-paneltype-e.md#paneltype) is **SOFT_KEYBOARD** and > [PanelFlag](arkts-ime-panelflag-e.md#panelflag) is **FLG_FIXED** are not supported.
+Sets the shadow effect of the input method window. > **NOTE** > > Panels whose [PanelType](arkts-ime-paneltype-e.md) is **SOFT_KEYBOARD** and > [PanelFlag](arkts-ime-panelflag-e.md) is **FLG_FIXED** are not supported.
 
 **Since:** 22
 

@@ -9,7 +9,7 @@ Provides APIs to decode byte arrays into strings. It supports multiple formats, 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor

@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [BackgroundMode](arkts-backgroundtasks-backgroundmode-e.md#backgroundmode)
+**替代接口：** [BackgroundMode](arkts-backgroundtasks-backgroundmode-e.md)
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

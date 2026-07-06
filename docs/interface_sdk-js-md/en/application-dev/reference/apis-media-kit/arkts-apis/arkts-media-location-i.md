@@ -9,7 +9,7 @@ Provides the geographical location definitions for media resources.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## latitude

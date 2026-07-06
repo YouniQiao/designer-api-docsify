@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## verifyAbc
@@ -28,7 +28,7 @@ Verifies an .abc file. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | abcPaths | Array&lt;string&gt; | Yes | Path of the .abc file. |
 | deleteOriginalFiles | boolean | Yes | Whether to delete the .abc file. **true** to delete, **false** otherwise. |
-| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return the result. Ifthe operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. Ifthe operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -37,7 +37,7 @@ Verifies an .abc file. This API uses an asynchronous callback to return the resu
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [17700201](../errorcode-bundle.md#17700201-abc-file-verification-failure) | Failed to verify the abc file. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -100,7 +100,7 @@ Verifies an .abc file. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [17700201](../errorcode-bundle.md#17700201-abc-file-verification-failure) | Failed to verify the abc file. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 **Example**
 

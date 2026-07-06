@@ -9,7 +9,7 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 ## Modules to Import
 
 ```TypeScript
-import { FormExtensionAbility } from '@ohos.app.form.FormExtensionAbility';
+import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## onAcquireFormState
@@ -75,7 +75,7 @@ Called to notify the widget provider that a widget is being created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information of the widget. You can set the **parameters** field to one or more valuesenumerated in [widget parameters](arkts-form-formparam-e.md#formparam), such as widget ID, widget name,and widget style. The information must be managed as persistent data to facilitate subsequent widget update anddeletion. |
+| want | Want | Yes | Want information of the widget. You can set the **parameters** field to one or more valuesenumerated in [widget parameters](arkts-form-formparam-e.md), such as widget ID, widget name,and widget style. The information must be managed as persistent data to facilitate subsequent widget update anddeletion. |
 
 **Return value:**
 
@@ -469,7 +469,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 context: FormExtensionContext
 ```
 
-Context of the FormExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext). This API can be used in atomic services since API version 11.
+Context of the FormExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). This API can be used in atomic services since API version 11.
 
 **Type:** FormExtensionContext
 

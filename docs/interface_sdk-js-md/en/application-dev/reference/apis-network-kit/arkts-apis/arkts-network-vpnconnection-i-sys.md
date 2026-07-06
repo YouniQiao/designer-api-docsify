@@ -11,7 +11,7 @@ Defines a VPN connection.
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@ohos.net.vpn';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## destroy

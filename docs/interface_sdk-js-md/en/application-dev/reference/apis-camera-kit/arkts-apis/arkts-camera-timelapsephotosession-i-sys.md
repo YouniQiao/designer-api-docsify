@@ -1,8 +1,8 @@
 # TimeLapsePhotoSession (System API)
 
-TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect Implements a time-lapse photo session, which sets the parameters of the time-lapse photo mode and saves all [CameraInput](arkts-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md#session).
+TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect Implements a time-lapse photo session, which sets the parameters of the time-lapse photo mode and saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md).
 
-**Inheritance/Implementation:** TimeLapsePhotoSession extends [Session](arkts-camera-session-i.md#session), [Focus](arkts-camera-focus-i.md#focus), [ManualFocus](arkts-camera-manualfocus-i-sys.md#manualfocus), [AutoExposure](arkts-camera-autoexposure-i.md#autoexposure), [ManualExposure](arkts-camera-manualexposure-i.md#manualexposure), [ManualIso](arkts-camera-manualiso-i-sys.md#manualiso), [WhiteBalance](arkts-camera-whitebalance-i.md#whitebalance), [Zoom](arkts-camera-zoom-i.md#zoom), [ColorEffect](arkts-camera-coloreffect-i-sys.md#coloreffect)
+**Inheritance/Implementation:** TimeLapsePhotoSession extends [Session](arkts-camera-session-i.md), [Focus](arkts-camera-focus-i.md), [ManualFocus](arkts-camera-manualfocus-i-sys.md), [AutoExposure](arkts-camera-autoexposure-i.md), [ManualExposure](arkts-camera-manualexposure-i.md), [ManualIso](arkts-camera-manualiso-i-sys.md), [WhiteBalance](arkts-camera-whitebalance-i.md), [Zoom](arkts-camera-zoom-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md)
 
 **Since:** 12
 
@@ -13,7 +13,7 @@ TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualE
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getSupportedTimeLapseIntervalRange
@@ -34,7 +34,7 @@ Obtains the supported time-lapse shooting interval range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Interval range, in ms. The value depends on the underlying capability. If the operationfails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) isreturned. |
+| Array&lt;number&gt; | Interval range, in ms. The value depends on the underlying capability. If the operationfails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) isreturned. |
 
 **Error codes:**
 
@@ -126,7 +126,7 @@ Obtains the time-lapse preview type.
 
 | Type | Description |
 | --- | --- |
-| TimeLapsePreviewType | Preview type. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| TimeLapsePreviewType | Preview type. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -172,7 +172,7 @@ Obtains the time-lapse shooting state.
 
 | Type | Description |
 | --- | --- |
-| TimeLapseRecordState | Shooting state. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| TimeLapseRecordState | Shooting state. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -218,7 +218,7 @@ Checks whether Try AE is required.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether Try AE is required. **true** if required, **false** otherwise. Theerror code type is defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| boolean | Check result for whether Try AE is required. **true** if required, **false** otherwise. Theerror code type is defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -481,7 +481,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. This event is triggered and the error message is returned when an error occurs during thecalling of a session-related API such as[beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and[addInput](arkts-camera-session-i.md#addinput-1). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

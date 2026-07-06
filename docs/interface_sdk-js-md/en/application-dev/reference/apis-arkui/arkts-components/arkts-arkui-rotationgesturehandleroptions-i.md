@@ -1,8 +1,8 @@
 # RotationGestureHandlerOptions
 
-Provides the parameters of the rotation gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions).
+Provides the parameters of the rotation gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
-**Inheritance/Implementation:** RotationGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions)
+**Inheritance/Implementation:** RotationGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
 **Since:** 12
 

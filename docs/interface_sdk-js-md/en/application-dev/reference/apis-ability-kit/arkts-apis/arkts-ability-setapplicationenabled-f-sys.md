@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## setApplicationEnabled
@@ -162,7 +162,7 @@ Enables or disables an application. This API uses an asynchronous callback to re
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
-| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return the result. Ifthe operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. Ifthe operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [AuthTipInfo](arkts-userauthentication-authtipinfo-i.md#authtipinfo)
+**替代接口：** [AuthTipInfo](arkts-userauthentication-authtipinfo-i.md)
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

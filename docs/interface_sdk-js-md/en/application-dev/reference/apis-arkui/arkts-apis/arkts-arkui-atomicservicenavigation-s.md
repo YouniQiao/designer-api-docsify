@@ -9,7 +9,7 @@ Defines AtomicServiceNavigation.
 ## Modules to Import
 
 ```TypeScript
-import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from '@ohos.atomicservice.AtomicServiceNavigation';
+import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from '@kit.ArkUI';
 ```
 
 ## gradientBackground
@@ -60,7 +60,7 @@ The layout style users defined and inserted.
 
 **Since:** 18
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -172,7 +172,7 @@ The builder of navDestination.
 
 **Since:** 12
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -208,7 +208,7 @@ the content of Navigation.
 
 **Since:** 12
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -226,7 +226,7 @@ Set side bar content.
 
 **Since:** 18
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

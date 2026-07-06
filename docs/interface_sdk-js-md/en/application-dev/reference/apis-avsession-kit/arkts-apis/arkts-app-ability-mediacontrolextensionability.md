@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { MediaControlExtensionAbility } from '@ohos.app.ability.MediaControlExtensionAbility';
+import { MediaControlExtensionAbility } from '@kit.AVSessionKit';
 ```
 
 ## Summary

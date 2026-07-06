@@ -2,7 +2,7 @@
 
 定义前缀图标选项。
 
-**继承/实现关系：** ChipV2PrefixImageIconConfig extends [ChipV2ImageIconConfig](arkts-arkui-chipv2imageiconconfig-i.md#chipv2imageiconconfig)
+**继承/实现关系：** ChipV2PrefixImageIconConfig extends [ChipV2ImageIconConfig](arkts-arkui-chipv2imageiconconfig-i.md)
 
 **起始版本：** 26.0.0
 

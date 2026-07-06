@@ -9,7 +9,7 @@ Describes a rectangle, which can be defined by two coordinate points: upper left
 ## Modules to Import
 
 ```TypeScript
-import { common2D } from '@ohos.graphics.common2D';
+import { common2D } from '@kit.ArkGraphics2D';
 ```
 
 ## bottom

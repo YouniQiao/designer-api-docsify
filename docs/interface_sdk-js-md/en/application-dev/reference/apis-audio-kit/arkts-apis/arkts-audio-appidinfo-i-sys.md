@@ -11,7 +11,7 @@ Describes app ID information.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## appFullTokenId

@@ -272,7 +272,7 @@ windowLeft?: number
 windowMode?: number
 ```
 
-启动UIAbility时的窗口模式，详见[WindowMode](arkts-ability-windowmode-e.md#windowmode)。
+启动UIAbility时的窗口模式，详见[WindowMode](arkts-ability-windowmode-e.md)。
 
 **类型：** number
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManagerExt } from '@ohos.wifiManagerExt';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getPowerMode

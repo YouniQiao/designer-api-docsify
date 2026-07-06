@@ -9,7 +9,7 @@ Defines the album change infos.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@ohos.file.photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumChangeDatas

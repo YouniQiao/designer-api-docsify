@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@ohos.curves';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## interpolatingSpring
@@ -35,7 +35,7 @@ Creates an interpolating spring curve animated from 0 to 1. The actual animation
 
 | Type | Description |
 | --- | --- |
-| ICurve | Curve.<br>Note: The spring animation curve is physics-based. Its duration depends on the **interpolatingSpring**parameters, rather than the **duration** parameter in [animation](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), [animateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), or[pageTransition](../arkts-components/arkts-arkui-pagetransitionenter.md). The time cannot be normalized. Therefore, the interpolation cannot beobtained using the [interpolate](arkts-arkui-icurve-i.md#interpolate-1) function of the curve. |
+| ICurve | Curve.<br>Note: The spring animation curve is physics-based. Its duration depends on the **interpolatingSpring**parameters, rather than the **duration** parameter in [animation](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), [animateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), or[pageTransition](../arkts-components/arkts-arkui-pagetransitionenter.md). The time cannot be normalized. Therefore, the interpolation cannot beobtained using the [interpolate](arkts-arkui-icurve-i.md#interpolate-1) function of the curve. |
 
 **Example**
 

@@ -84,7 +84,7 @@ ERR_SIGNIFICANT_CHANGE = -5
 ERR_DURATION_OUT_OF_RANGE = -6
 ```
 
-在[BlanklessLoadingParam](arkts-arkweb-blanklessloadingparam-i.md#blanklessloadingparam)设置的历史帧失效时间超出范围。 此接口仅可在Stage模型下使用。
+在[BlanklessLoadingParam](arkts-arkweb-blanklessloadingparam-i.md)设置的历史帧失效时间超出范围。 此接口仅可在Stage模型下使用。
 
 **起始版本：** 23
 
@@ -98,7 +98,7 @@ ERR_DURATION_OUT_OF_RANGE = -6
 ERR_EXPIRATION_TIME_OUT_OF_RANGE = -7
 ```
 
-在[BlanklessLoadingParam](arkts-arkweb-blanklessloadingparam-i.md#blanklessloadingparam)设置的历史帧失效时间超出范围。 此接口仅可在Stage模型下使用。
+在[BlanklessLoadingParam](arkts-arkweb-blanklessloadingparam-i.md)设置的历史帧失效时间超出范围。 此接口仅可在Stage模型下使用。
 
 **起始版本：** 23
 

@@ -29,7 +29,7 @@ static addMonitor(target: object, path: string | string[], monitorCallback: Moni
 | target | object | 是 | 目标对象，仅支持[@ComponentV2](../../../../ui/state-management/arkts-create-custom-components.md#componentv2)和[@ObservedV2](../../../../ui/state-management/arkts-new-observedV2-and-trace.md)实例。&lt;/br&gt;对于不支持的类型，会抛出运行时错误。 |
 | path | string \| string[] | 是 | 添加监听的变量名路径。可指定一个路径或者传入string数组用于一次性指定多个监听的变量路径。&lt;/br&gt;仅支持string和string数组，对于不支持的类型，会抛出运行时错误。 |
 | monitorCallback | MonitorCallback | 是 | 给对应的状态变量注册的监听函数，即path路径对应的状态变量改变时，会回调对应的函数。&lt;/br&gt;对于不支持的类型，会抛出运行时错误。 |
-| options | MonitorOptions | 否 | 监听函数的配置项，具体可见[MonitorOptions](arkts-arkui-monitoroptions-i.md#monitoroptions)。默认为异步回调。 |
+| options | MonitorOptions | 否 | 监听函数的配置项，具体可见[MonitorOptions](arkts-arkui-monitoroptions-i.md)。默认为异步回调。 |
 
 **错误码：**
 
@@ -507,7 +507,7 @@ struct Index {
 static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext
 ```
 
-返回给定@Component(V1)或@ComponentV2的[CustomComponentContext](arkts-arkui-customcomponentcontext-i.md#customcomponentcontext)。使用它来访问组件的复用池。有关复用池的详细信息，请参阅 [全局复用池：集中化的组件回收与复用](../../../../ui/state-management/arkts-global-reuse-pool.md)。
+返回给定@Component(V1)或@ComponentV2的[CustomComponentContext](arkts-arkui-customcomponentcontext-i.md)。使用它来访问组件的复用池。有关复用池的详细信息，请参阅 [全局复用池：集中化的组件回收与复用](../../../../ui/state-management/arkts-global-reuse-pool.md)。
 
 **起始版本：** 26.0.0
 
@@ -928,7 +928,7 @@ static makeV1Observed<T extends object>(source: T): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | T | 是 | 数据源。支持普通class、Array、Map、Set、Date类型。&lt;/br&gt;不支持[@arkts.collections (ArkTS容器集)](../../apis-arkts/arkts-apis/arkts-collections.md#collections)和[@Sendable](../../../../arkts-utils/arkts-sendable.md)修饰的class。&lt;/br&gt;不支持undefined和null。不支持状态管理V2的数据和[makeObserved](arkts-arkui-uiutils-c.md#makeobserved-1)的返回值。 |
+| source | T | 是 | 数据源。支持普通class、Array、Map、Set、Date类型。&lt;/br&gt;不支持[@arkts.collections (ArkTS容器集)](../../apis-arkts/arkts-apis/arkts-collections.md)和[@Sendable](../../../../arkts-utils/arkts-sendable.md)修饰的class。&lt;/br&gt;不支持undefined和null。不支持状态管理V2的数据和[makeObserved](arkts-arkui-uiutils-c.md#makeobserved-1)的返回值。 |
 
 **返回值：**
 

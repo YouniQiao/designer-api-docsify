@@ -208,7 +208,7 @@ Distributed notification options. Not supported currently.
 extraInfo?: { [key: string]: any }
 ```
 
-Extended parameters, used to provide custom services for applications. This parameter is left blank by default. The key value is assigned by the system. Manual modification does not take effect. The system automatically changes the value to the actual value during data transmission. - **ohos.notificationManager.wantUri**: **uri** field in the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md#want) object, which is passed to the application when the user taps a notification. This field can be obtained via the [getActiveNotifications](arkts-notification-getactivenotifications-depr-f.md#getactivenotifications-1) API call.
+Extended parameters, used to provide custom services for applications. This parameter is left blank by default. The key value is assigned by the system. Manual modification does not take effect. The system automatically changes the value to the actual value during data transmission. - **ohos.notificationManager.wantUri**: **uri** field in the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) object, which is passed to the application when the user taps a notification. This field can be obtained via the [getActiveNotifications](arkts-notification-getactivenotifications-depr-f.md#getactivenotifications-1) API call.
 
 **Type:** { [key: string]: any }
 
@@ -264,7 +264,7 @@ Notification ID. The default value is **0**. If a notification with the same ID 
 isAlertOnce?: boolean
 ```
 
-Whether to send a notification only once when the notification is published or updated. The default value is **false**. - **true**: A notification is sent only when the notification is published for the first time. For subsequent update, the notification mode is changed to [LEVEL_LOW](arkts-notification-slotlevel-e.md#slotlevel). - **false**: A notification is sent based on the configured notification mode.
+Whether to send a notification only once when the notification is published or updated. The default value is **false**. - **true**: A notification is sent only when the notification is published for the first time. For subsequent update, the notification mode is changed to [LEVEL_LOW](arkts-notification-slotlevel-e.md). - **false**: A notification is sent based on the configured notification mode.
 
 **Type:** boolean
 
@@ -423,7 +423,7 @@ Notification priority type. The default value is **OTHER**. If this parameter is
 removalWantAgent?: WantAgent
 ```
 
-Behavior intent of an application, which is triggered when a notification is removed. This parameter is left empty by default. Currently, redirection to UIAbility is not supported. Only common events can be published (that is, the **actionType** field of [WantAgentInfo](../../apis-ability-kit/arkts-apis/arkts-ability-wantagentinfo-i.md#wantagentinfo) is set to **4**).
+Behavior intent of an application, which is triggered when a notification is removed. This parameter is left empty by default. Currently, redirection to UIAbility is not supported. Only common events can be published (that is, the **actionType** field of [WantAgentInfo](../../apis-ability-kit/arkts-apis/arkts-ability-wantagentinfo-i.md) is set to **4**).
 
 **Type:** WantAgent
 

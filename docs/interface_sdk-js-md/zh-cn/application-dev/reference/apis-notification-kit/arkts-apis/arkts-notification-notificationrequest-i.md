@@ -208,7 +208,7 @@ distributedOption?: DistributedOptions
 extraInfo?: { [key: string]: any }
 ```
 
-扩展参数。为应用提供定制服务。默认为空。 以下Key由系统赋值，开发者手动修改也不会生效，系统在数据传递时会自动修改为实际值。 - 'ohos.notificationManager.wantUri'：用户点击通知时传递给应用的[Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md#want) 中的uri字段，使用 [getActiveNotifications](arkts-notification-getactivenotifications-depr-f.md#getactivenotifications-1) 接口获取该信息。
+扩展参数。为应用提供定制服务。默认为空。 以下Key由系统赋值，开发者手动修改也不会生效，系统在数据传递时会自动修改为实际值。 - 'ohos.notificationManager.wantUri'：用户点击通知时传递给应用的[Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) 中的uri字段，使用 [getActiveNotifications](arkts-notification-getactivenotifications-depr-f.md#getactivenotifications-1) 接口获取该信息。
 
 **类型：** { [key: string]: any }
 
@@ -264,7 +264,7 @@ id?: number
 isAlertOnce?: boolean
 ```
 
-发布或更新该通知时，是否只进行一次通知提醒，默认为false。 - true：仅首次发布通知时进行提醒，后续更新该通知时，提醒方式变更为[LEVEL_LOW](arkts-notification-slotlevel-e.md#slotlevel)。 - false：每次均按照配置的通知提醒方式进行提醒。
+发布或更新该通知时，是否只进行一次通知提醒，默认为false。 - true：仅首次发布通知时进行提醒，后续更新该通知时，提醒方式变更为[LEVEL_LOW](arkts-notification-slotlevel-e.md)。 - false：每次均按照配置的通知提醒方式进行提醒。
 
 **类型：** boolean
 
@@ -376,7 +376,7 @@ largeIcon?: image.PixelMap
 notificationFlags?: NotificationFlags
 ```
 
-设置或获取NotificationFlags，默认为空。从API version 23开始成为可写参数，设置该参数可削减通知的提醒方式，当通知渠道类型为 [LIVE_VIEW](arkts-notification-slottype-e.md#slottype)时，该参数设置不生效。
+设置或获取NotificationFlags，默认为空。从API version 23开始成为可写参数，设置该参数可削减通知的提醒方式，当通知渠道类型为 [LIVE_VIEW](arkts-notification-slottype-e.md)时，该参数设置不生效。
 
 **类型：** NotificationFlags
 
@@ -420,7 +420,7 @@ priorityNotificationType?: notificationManager.PriorityNotificationType
 removalWantAgent?: WantAgent
 ```
 
-封装了应用的行为意图，移除通知时触发该行为，默认为空。 当前不支持跳转UIAbility，只支持发布公共事件（即[WantAgentInfo](../../apis-ability-kit/arkts-apis/arkts-ability-wantagentinfo-i.md#wantagentinfo)的actionType字段取值为4）。
+封装了应用的行为意图，移除通知时触发该行为，默认为空。 当前不支持跳转UIAbility，只支持发布公共事件（即[WantAgentInfo](../../apis-ability-kit/arkts-apis/arkts-ability-wantagentinfo-i.md)的actionType字段取值为4）。
 
 **类型：** WantAgent
 

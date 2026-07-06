@@ -9,7 +9,7 @@ Provides the nnrt device description
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@ohos.ai.mindSporeLite';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## deviceID

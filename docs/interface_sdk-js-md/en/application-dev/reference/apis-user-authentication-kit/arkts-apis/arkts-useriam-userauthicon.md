@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UserAuthIcon } from '@ohos.userIAM.userAuthIcon';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary

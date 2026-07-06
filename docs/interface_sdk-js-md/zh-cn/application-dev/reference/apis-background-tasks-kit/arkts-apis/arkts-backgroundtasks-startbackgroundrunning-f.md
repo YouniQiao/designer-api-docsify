@@ -20,7 +20,7 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文。<br><br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文。<br><br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 | bgMode | BackgroundMode | 是 | 长时任务类型。 |
 | wantAgent | WantAgent | 是 | 通知参数，用于指定点击长时任务通知后跳转的界面。 |
 | callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，申请长时任务成功时，err为undefined，否则为错误对象。 |
@@ -115,7 +115,7 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文。<br><br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文。<br><br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 | bgMode | BackgroundMode | 是 | 长时任务类型。 |
 | wantAgent | WantAgent | 是 | 通知参数，用于指定点击长时任务通知后跳转的界面。 |
 
@@ -211,7 +211,7 @@ function startBackgroundRunning(context: Context, bgModes: string[], wantAgent: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 | bgModes | string[] | 是 | 长时任务类型<br>取值范围请参考长时任务类型中的[配置项](../../../../task-management/continuous-task.md#使用场景)。<br>**说明：** 支持传入一个或多个类型。 |
 | wantAgent | WantAgent | 是 | 通知参数，用于指定点击长时任务通知后跳转的界面。 |
 
@@ -219,7 +219,7 @@ function startBackgroundRunning(context: Context, bgModes: string[], wantAgent: 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ContinuousTaskNotification&gt; | Promise对象，返回[ContinuousTaskNotification](arkts-backgroundtasks-continuoustasknotification-i.md#continuoustasknotification)类型对象。 |
+| Promise&lt;ContinuousTaskNotification&gt; | Promise对象，返回[ContinuousTaskNotification](arkts-backgroundtasks-continuoustasknotification-i.md)类型对象。 |
 
 **错误码：**
 
@@ -336,7 +336,7 @@ export default class EntryAbility extends UIAbility {
 function startBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise<ContinuousTaskNotification>
 ```
 
-申请长时任务，一个UIAbility（FA模型则为ServiceAbility）下支持通过本接口申请多个长时任务，使用Promise异步回调。通过本接口申请长时任务时，支持与已存在的长时任务合并通知，具体请参考 [ContinuousTaskRequest](arkts-backgroundtasks-continuoustaskrequest-c.md#continuoustaskrequest)。</br>同一时间最多可存在10个长时任务，长时任务申请成功后，会有通知栏消息， 没有提示音。</br>如果通过本接口申请的一个长时任务中同时包含多种类型，且包含数据传输类型，则在通知栏会发送2个长时任务通知，一个为数据传输类型，另一个为其他类型的合并通知。任意一个通知被移除时，长时任务取消，且另一个通知也会同 步移除。接口返回的长时任务通知Id为数据传输类型的Id，主要用于数据传输的进度更新。
+申请长时任务，一个UIAbility（FA模型则为ServiceAbility）下支持通过本接口申请多个长时任务，使用Promise异步回调。通过本接口申请长时任务时，支持与已存在的长时任务合并通知，具体请参考 [ContinuousTaskRequest](arkts-backgroundtasks-continuoustaskrequest-c.md)。</br>同一时间最多可存在10个长时任务，长时任务申请成功后，会有通知栏消息， 没有提示音。</br>如果通过本接口申请的一个长时任务中同时包含多种类型，且包含数据传输类型，则在通知栏会发送2个长时任务通知，一个为数据传输类型，另一个为其他类型的合并通知。任意一个通知被移除时，长时任务取消，且另一个通知也会同 步移除。接口返回的长时任务通知Id为数据传输类型的Id，主要用于数据传输的进度更新。
 
 **起始版本：** 21
 
@@ -350,7 +350,7 @@ function startBackgroundRunning(context: Context, request: ContinuousTaskRequest
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文<br><br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文<br><br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 | request | ContinuousTaskRequest | 是 | 长时任务请求信息，包括长时任务主类型、子类型等。 |
 
 **返回值：**

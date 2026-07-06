@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { metadataBinding } from '@ohos.multimodalAwareness.metadataBinding';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## submitMetadata

@@ -21,7 +21,7 @@ function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProv
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundleName。 |
-| callback | AsyncCallback&lt;AppProvisionInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为指定bundleName的provision配置文件信息。 |
+| callback | AsyncCallback&lt;AppProvisionInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为指定bundleName的provision配置文件信息。 |
 
 **错误码：**
 
@@ -79,7 +79,7 @@ function getAppProvisionInfo(bundleName: string, userId: number, callback: Async
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundleName。 |
 | userId | number | 是 | 指定用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。 |
-| callback | AsyncCallback&lt;AppProvisionInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为指定bundleName的provision配置文件信息。 |
+| callback | AsyncCallback&lt;AppProvisionInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为指定bundleName的provision配置文件信息。 |
 
 **错误码：**
 

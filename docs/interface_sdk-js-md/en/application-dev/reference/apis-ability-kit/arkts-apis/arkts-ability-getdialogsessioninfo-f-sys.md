@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from '@ohos.app.ability.dialogSession';
+import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## getDialogSessionInfo

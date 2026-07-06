@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@ohos.app.ability.insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## getInsightIntentInfoByFilter

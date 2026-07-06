@@ -1,8 +1,8 @@
 # ClickEvent
 
-Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#baseevent).
+Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
-**Inheritance/Implementation:** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**Inheritance/Implementation:** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 7
 

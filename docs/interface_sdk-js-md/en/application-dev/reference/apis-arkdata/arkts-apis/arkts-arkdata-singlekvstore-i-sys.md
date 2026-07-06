@@ -9,7 +9,7 @@ Provides APIs for data management in a single KV store, such as adding data, del
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@ohos.data.distributedKVStore';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## delete
@@ -43,7 +43,7 @@ Deletes the key-value pairs based on the dataSharePredicates.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 ## delete
 
@@ -81,7 +81,7 @@ Deletes the key-value pairs based on the dataSharePredicates.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 ## getResultSet
 
@@ -114,7 +114,7 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 ## getResultSet
 
@@ -152,7 +152,7 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 ## putBatch
 
@@ -185,7 +185,7 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 ## putBatch
 
@@ -223,5 +223,5 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 

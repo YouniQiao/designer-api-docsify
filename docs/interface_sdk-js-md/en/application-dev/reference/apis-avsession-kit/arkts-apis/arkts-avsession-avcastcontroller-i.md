@@ -9,7 +9,7 @@ AVCastController definition used to implement a remote control when a cast is co
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@ohos.multimedia.avsession';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## getAVPlaybackState

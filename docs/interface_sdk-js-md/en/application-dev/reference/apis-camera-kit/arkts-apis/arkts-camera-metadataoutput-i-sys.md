@@ -1,8 +1,8 @@
 # MetadataOutput
 
-Implements metadata streams. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput).
+Implements metadata streams. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
 
-**Inheritance/Implementation:** MetadataOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput)
+**Inheritance/Implementation:** MetadataOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Implements metadata streams. It inherits from [CameraOutput](arkts-camera-camera
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## addMetadataObjectTypes

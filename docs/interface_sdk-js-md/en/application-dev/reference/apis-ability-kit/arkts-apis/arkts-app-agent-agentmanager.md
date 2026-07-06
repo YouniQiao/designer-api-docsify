@@ -11,7 +11,7 @@ The module provides the capability to interact with agents in the system.
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from '@ohos.app.agent.agentManager';
+import { agentManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

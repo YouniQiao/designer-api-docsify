@@ -1,6 +1,6 @@
 # WaterFlow properties/events
 
-In addition to [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) and [scrollable component common attributes](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported. In addition to [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) and [scrollable component common events](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
+In addition to [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) and [scrollable component common attributes](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported. In addition to [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) and [scrollable component common events](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
 
 **Inheritance/Implementation:** WaterFlowAttribute extends [ScrollableCommonMethod<WaterFlowAttribute>](ScrollableCommonMethod<WaterFlowAttribute>)
 
@@ -135,7 +135,7 @@ Sets whether to support the scrolling gesture. > **NOTE** > > The component cann
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger ormouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affectthe scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md#scroller).<br>Default value: **true** |
+| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger ormouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affectthe scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).<br>Default value: **true** |
 
 ## friction
 
@@ -351,7 +351,7 @@ Sets the number of rows in the layout. If this attribute is not set, one row is 
 supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 ```
 
-Defines whether the **WaterFlow** component supports the generation of empty branch nodes that do not contain any child components using the **if/else** rendering control syntax in **LazyForEach** or **Repeat**. If this attribute is not set, empty branch nodes are not supported. This attribute cannot be updated after being set. Therefore, you cannot switch between the behavior of supporting empty branches and the behavior of not supporting empty branches after setting this attribute. > **NOTE** > > When [WaterFlowSections](arkts-arkui-waterflowsections-c.md#waterflowsections) is set using the [sections](arkts-arkui-waterflowoptions-i.md#waterflowoptions) parameter, > or when the [SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md#waterflowlayoutmode) layout mode is set using the > [layoutMode](arkts-arkui-waterflowoptions-i.md#waterflowoptions) parameter, the **FlowItem** after the empty branch is displayed regardless > of the **supportEmptyBranchInLazyLoading** setting.
+Defines whether the **WaterFlow** component supports the generation of empty branch nodes that do not contain any child components using the **if/else** rendering control syntax in **LazyForEach** or **Repeat**. If this attribute is not set, empty branch nodes are not supported. This attribute cannot be updated after being set. Therefore, you cannot switch between the behavior of supporting empty branches and the behavior of not supporting empty branches after setting this attribute. > **NOTE** > > When [WaterFlowSections](arkts-arkui-waterflowsections-c.md) is set using the [sections](arkts-arkui-waterflowoptions-i.md) parameter, > or when the [SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md) layout mode is set using the > [layoutMode](arkts-arkui-waterflowoptions-i.md) parameter, the **FlowItem** after the empty branch is displayed regardless > of the **supportEmptyBranchInLazyLoading** setting.
 
 **Since:** 26.0.0
 

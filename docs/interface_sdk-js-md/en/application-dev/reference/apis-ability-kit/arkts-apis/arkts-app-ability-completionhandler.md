@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandler } from '@ohos.app.ability.CompletionHandler';
+import { CompletionHandler } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Describes the properties of the status bar. These properties are valid for the p
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## statusBarContentColor

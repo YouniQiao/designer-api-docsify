@@ -11,7 +11,7 @@ Search result.
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@ohos.distributedHardware.mechanicManager';
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## targetCount

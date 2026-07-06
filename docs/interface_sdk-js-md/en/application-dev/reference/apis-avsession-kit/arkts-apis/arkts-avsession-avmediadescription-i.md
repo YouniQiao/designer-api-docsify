@@ -9,7 +9,7 @@ The description of the media for an item in the playlist of the session
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@ohos.multimedia.avsession';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## albumCoverUri

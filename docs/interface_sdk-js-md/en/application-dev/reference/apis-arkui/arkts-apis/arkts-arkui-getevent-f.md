@@ -66,7 +66,7 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | undefined
 ```
 
-Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-arkui-waterflow-t.md#waterflow) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
+Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-arkui-waterflow-t.md) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
 

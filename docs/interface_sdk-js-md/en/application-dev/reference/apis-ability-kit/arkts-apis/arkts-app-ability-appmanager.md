@@ -9,7 +9,7 @@ The appManager module implements application management. You can use the APIs of
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@ohos.app.ability.appManager';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -41,10 +41,10 @@ import { appManager } from '@ohos.app.ability.appManager';
 | [clearUpAppData](arkts-ability-clearupappdata-f-sys.md#clearupappdata-1) | Clears data of a specified application based on the bundle name and application clone index. This API uses a promise to return the result. |
 | [clearUpApplicationData](arkts-ability-clearupapplicationdata-f-sys.md#clearupapplicationdata-1) | Clears application data by bundle name. This API uses a promise to return the result. |
 | [clearUpApplicationData](arkts-ability-clearupapplicationdata-f-sys.md#clearupapplicationdata-2) | Clears application data by bundle name. This API uses an asynchronous callback to return the result. |
-| [getForegroundApplications](arkts-ability-getforegroundapplications-f-sys.md#getforegroundapplications-1) | Obtains applications that are running in the foreground. The application information is defined by [AppStateData](arkts-ability-appstatedata-c.md#appstatedata). This API uses an asynchronous callback to return the result. |
-| [getForegroundApplications](arkts-ability-getforegroundapplications-f-sys.md#getforegroundapplications-2) | Obtains applications that are running in the foreground. The application information is defined by [AppStateData](arkts-ability-appstatedata-c.md#appstatedata). This API uses a promise to return the result. |
-| [getKeepAliveAppServiceExtensions](arkts-ability-getkeepaliveappserviceextensions-f-sys.md#getkeepaliveappserviceextensions-1) | Obtains information about all AppServiceExtensionAbility components that are kept alive. The information is defined by [KeepAliveBundleInfo](arkts-ability-keepalivebundleinfo-i-sys.md#keepalivebundleinfo). This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is returned. |
-| [getKeepAliveBundles](arkts-ability-getkeepalivebundles-f-sys.md#getkeepalivebundles-1) | Obtains information about a specified type of keep-alive application of a user. The application information is defined by [KeepAliveBundleInfo](arkts-ability-keepalivebundleinfo-i-sys.md#keepalivebundleinfo). This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is returned. **Required permissions**: ohos.permission.MANAGE_APP_KEEP_ALIVE |
+| [getForegroundApplications](arkts-ability-getforegroundapplications-f-sys.md#getforegroundapplications-1) | Obtains applications that are running in the foreground. The application information is defined by [AppStateData](arkts-ability-appstatedata-c.md). This API uses an asynchronous callback to return the result. |
+| [getForegroundApplications](arkts-ability-getforegroundapplications-f-sys.md#getforegroundapplications-2) | Obtains applications that are running in the foreground. The application information is defined by [AppStateData](arkts-ability-appstatedata-c.md). This API uses a promise to return the result. |
+| [getKeepAliveAppServiceExtensions](arkts-ability-getkeepaliveappserviceextensions-f-sys.md#getkeepaliveappserviceextensions-1) | Obtains information about all AppServiceExtensionAbility components that are kept alive. The information is defined by [KeepAliveBundleInfo](arkts-ability-keepalivebundleinfo-i-sys.md). This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is returned. |
+| [getKeepAliveBundles](arkts-ability-getkeepalivebundles-f-sys.md#getkeepalivebundles-1) | Obtains information about a specified type of keep-alive application of a user. The application information is defined by [KeepAliveBundleInfo](arkts-ability-keepalivebundleinfo-i-sys.md). This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is returned. **Required permissions**: ohos.permission.MANAGE_APP_KEEP_ALIVE |
 | [getProcessMemoryByPid](arkts-ability-getprocessmemorybypid-f-sys.md#getprocessmemorybypid-1) | Obtains the memory size of a process. This API uses a promise to return the result. |
 | [getProcessMemoryByPid](arkts-ability-getprocessmemorybypid-f-sys.md#getprocessmemorybypid-2) | Obtains the memory size of a process. This API uses an asynchronous callback to return the result. |
 | [getProcessRunningInfos](arkts-ability-getprocessrunninginfos-f-sys.md#getprocessrunninginfos-1) | Obtains information about the running processes of the current application. This API uses a promise to return the result. |
@@ -97,12 +97,12 @@ import { appManager } from '@ohos.app.ability.appManager';
 
 | Name | Description |
 | --- | --- |
-| [ApplicationState](arkts-ability-applicationstate-e-sys.md) | Enumerates the application states. This enum can be used together with [AbilityStateData](arkts-ability-abilitystatedata-c.md#abilitystatedata) to return the application state. |
-| [FilterAbilityStateType](arkts-ability-filterabilitystatetype-e-sys.md) | Enumerates the types of ability states to filter. It can be used with [AppStateFilter](arkts-ability-appstatefilter-i-sys.md#appstatefilter) to filter the ability state types you want to listen for. |
-| [FilterAppStateType](arkts-ability-filterappstatetype-e-sys.md) | Enumerates the types of application states to filter. It can be used with [AppStateFilter](arkts-ability-appstatefilter-i-sys.md#appstatefilter) to filter the application state types you want to listen for. |
-| [FilterBundleType](arkts-ability-filterbundletype-e-sys.md) | Enumerates the types of applications to filter. It can be used with [AppStateFilter](arkts-ability-appstatefilter-i-sys.md#appstatefilter) to filter the application types you want to listen for. |
-| [FilterCallback](arkts-ability-filtercallback-e-sys.md) | Enumerates the callbacks to filter. It can be used with [AppStateFilter](arkts-ability-appstatefilter-i-sys.md#appstatefilter) to filter the callbacks you want to listen for. |
-| [FilterProcessStateType](arkts-ability-filterprocessstatetype-e-sys.md) | Enumerates the types of process states to filter. It can be used with [AppStateFilter](arkts-ability-appstatefilter-i-sys.md#appstatefilter) to filter the process state types you want to listen for. |
+| [ApplicationState](arkts-ability-applicationstate-e-sys.md) | Enumerates the application states. This enum can be used together with [AbilityStateData](arkts-ability-abilitystatedata-c.md) to return the application state. |
+| [FilterAbilityStateType](arkts-ability-filterabilitystatetype-e-sys.md) | Enumerates the types of ability states to filter. It can be used with [AppStateFilter](arkts-ability-appstatefilter-i-sys.md) to filter the ability state types you want to listen for. |
+| [FilterAppStateType](arkts-ability-filterappstatetype-e-sys.md) | Enumerates the types of application states to filter. It can be used with [AppStateFilter](arkts-ability-appstatefilter-i-sys.md) to filter the application state types you want to listen for. |
+| [FilterBundleType](arkts-ability-filterbundletype-e-sys.md) | Enumerates the types of applications to filter. It can be used with [AppStateFilter](arkts-ability-appstatefilter-i-sys.md) to filter the application types you want to listen for. |
+| [FilterCallback](arkts-ability-filtercallback-e-sys.md) | Enumerates the callbacks to filter. It can be used with [AppStateFilter](arkts-ability-appstatefilter-i-sys.md) to filter the callbacks you want to listen for. |
+| [FilterProcessStateType](arkts-ability-filterprocessstatetype-e-sys.md) | Enumerates the types of process states to filter. It can be used with [AppStateFilter](arkts-ability-appstatefilter-i-sys.md) to filter the process state types you want to listen for. |
 | [KeepAliveAppType](arkts-ability-keepaliveapptype-e-sys.md) | Enumerates the types of applications to be kept alive. |
 | [KeepAliveSetter](arkts-ability-keepalivesetter-e-sys.md) | Enumerates the types of parties that set to keep applications alive. |
 | [PreloadMode](arkts-ability-preloadmode-e-sys.md) | Enumerates the modes used for preloading an application process. |

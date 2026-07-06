@@ -4,7 +4,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [File](arkts-basicservices-file-i.md#file)
+**替代接口：** [File](arkts-basicservices-file-i.md)
 
 **系统能力：** SystemCapability.MiscServices.Upload
 

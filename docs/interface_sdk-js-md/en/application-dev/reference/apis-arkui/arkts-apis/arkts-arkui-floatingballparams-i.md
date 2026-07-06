@@ -9,7 +9,7 @@ Describes the parameters for starting and updating the floating ball.
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@ohos.window.floatingBall';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## backgroundColor

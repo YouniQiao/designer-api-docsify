@@ -7,7 +7,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [ArcDotIndicator](arkts-arkui-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
-| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性。 |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性。 |
 | [ArcSwiperController](arkts-arkui-arcswipercontroller-c.md) | ArcSwiper容器组件的控制器，可以将此对象绑定至ArcSwiper组件，可以通过它控制翻页。 |
 
 ### 接口

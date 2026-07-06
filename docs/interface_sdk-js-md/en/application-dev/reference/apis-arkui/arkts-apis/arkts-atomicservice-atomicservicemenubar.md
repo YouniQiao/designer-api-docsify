@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceMenuBar } from '@ohos.atomicservice.AtomicServiceMenuBar';
+import { AtomicServiceMenuBar } from '@kit.ArkUI';
 ```
 
 ## Summary

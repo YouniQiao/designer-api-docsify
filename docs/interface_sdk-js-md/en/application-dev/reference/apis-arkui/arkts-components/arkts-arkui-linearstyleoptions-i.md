@@ -1,8 +1,8 @@
 # LinearStyleOptions
 
-Linear style options. Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#scaneffectoptions) and [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions).
+Linear style options. Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
 
-**Inheritance/Implementation:** LinearStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#scaneffectoptions), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
+**Inheritance/Implementation:** LinearStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
 **Since:** 10
 

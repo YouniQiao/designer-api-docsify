@@ -1,6 +1,6 @@
 # GridColOptions
 
-设置栅格列布局组件布局选项。 `span`、`offset`、`order`属性按照`xs`、`sm`、`md`、`lg`、`xl`、`xxl`的顺序具有“继承性”，未设置值的断点将会从前一个断点取值。 API version 20之后，`span`的继承规则见[GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md#gridcolcolumnoption)。
+设置栅格列布局组件布局选项。 `span`、`offset`、`order`属性按照`xs`、`sm`、`md`、`lg`、`xl`、`xxl`的顺序具有“继承性”，未设置值的断点将会从前一个断点取值。 API version 20之后，`span`的继承规则见[GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)。
 
 **起始版本：** 9
 

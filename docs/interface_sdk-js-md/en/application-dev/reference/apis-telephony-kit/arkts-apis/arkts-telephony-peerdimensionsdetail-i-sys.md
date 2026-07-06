@@ -11,7 +11,7 @@ Indicates the peer dimension.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@ohos.telephony.call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## callId

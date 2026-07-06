@@ -11,7 +11,7 @@ Indicates the result of call transfer.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@ohos.telephony.call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## endHour

@@ -32,7 +32,7 @@ bundleName?: string
 intentFlags: number
 ```
 
-意图信息（[InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md#insightintentinfo)）的标识，用于表示查询全量意图信息或者简要意图信息，取值可参考 [GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md#getinsightintentflag)。
+意图信息（[InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md)）的标识，用于表示查询全量意图信息或者简要意图信息，取值可参考 [GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md)。
 
 **类型：** number
 

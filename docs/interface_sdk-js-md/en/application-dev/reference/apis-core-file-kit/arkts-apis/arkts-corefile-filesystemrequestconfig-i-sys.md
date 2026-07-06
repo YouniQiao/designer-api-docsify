@@ -11,7 +11,7 @@ Parameters required to perform garbage collection (GC).
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@ohos.file.backup';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## triggerType

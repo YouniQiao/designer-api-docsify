@@ -9,7 +9,7 @@ Defines the device capability.
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from '@ohos.resourceManager';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## deviceType

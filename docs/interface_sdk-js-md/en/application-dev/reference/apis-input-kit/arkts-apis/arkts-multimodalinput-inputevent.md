@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InputEvent } from '@ohos.multimodalInput.inputEvent';
+import { InputEvent } from '@kit.InputKit';
 ```
 
 ## Summary

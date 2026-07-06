@@ -9,7 +9,7 @@ Defines the ad status change callback.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@ohos.advertising';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## onStatusChanged

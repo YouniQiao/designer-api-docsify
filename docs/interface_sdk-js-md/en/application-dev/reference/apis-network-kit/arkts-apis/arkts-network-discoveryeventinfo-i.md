@@ -9,7 +9,7 @@ Defines the discovery events information of mDNS services.
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from '@ohos.net.mdns';
+import { mdns } from '@kit.NetworkKit';
 ```
 
 ## errorCode

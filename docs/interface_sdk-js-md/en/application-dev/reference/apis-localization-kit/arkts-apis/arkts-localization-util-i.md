@@ -6,14 +6,14 @@ Provides util functions.
 
 **Deprecated since:** 9
 
-**Substitutes:** [I18NUtil](arkts-localization-i18nutil-c.md#i18nutil)
+**Substitutes:** [I18NUtil](arkts-localization-i18nutil-c.md)
 
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@ohos.i18n';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## unitConvert

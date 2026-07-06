@@ -689,7 +689,7 @@ Sets the alignment mode for child elements within the container's drawing area. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Alignment | Yes | Alignment mode for child elements in container drawing area.This setting takes effect only in [Stack](../../apis-arkts/arkts-apis/arkts-arkts-stack-c.md#stack),[FolderStack](FolderStack),[Shape](Shape),[Button](../../apis-input-kit/arkts-apis/arkts-input-button-e.md#button),[Marquee](Marquee),[StepperItem](StepperItem),[Text](Text),[TextArea](TextArea),[TextInput](TextInput),[RichEditor](RichEditor),[Hyperlink](Hyperlink),[SymbolGlyph](SymbolGlyph),[ListItem](ListItem),[GridItem](GridItem),[Scroll](Scroll),[FlowItem](FlowItem),[ImageAnimator](ImageAnimator),[LoadingProgress](LoadingProgress),[PatternLock](PatternLock),[Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-progress-i.md#progress),[QRCode](QRCode),[TextClock](TextClock),[TextTimer](TextTimer),[MenuItem](StMenuItemack),[Toggle](Toggle),[Checkbox](Checkbox), and[NodeContainer](NodeContainer).For the alignment of the **Marquee**, **Text**, **TextArea**, **TextInput**, **RichEditor**, and **Hyperlink**components related to text, see[textAlign](TextAttribute#textAlign).If a component does not support the **textAlign** attribute, horizontal text alignment cannot be configured.<br>Default value: **Alignment.Center**<br>**NOTE**<br>This attribute supports the mirroring capability only in the [Stack](../../apis-arkts/arkts-apis/arkts-arkts-stack-c.md#stack) component.In the **Stack** component, this attribute has the same effect as **alignContent**, which means that it setsthealignment mode of child components in the container |
+| value | Alignment | Yes | Alignment mode for child elements in container drawing area.This setting takes effect only in [Stack](../../apis-arkts/arkts-apis/arkts-arkts-stack-c.md),[FolderStack](FolderStack),[Shape](Shape),[Button](../../apis-input-kit/arkts-apis/arkts-input-button-e.md),[Marquee](Marquee),[StepperItem](StepperItem),[Text](Text),[TextArea](TextArea),[TextInput](TextInput),[RichEditor](RichEditor),[Hyperlink](Hyperlink),[SymbolGlyph](SymbolGlyph),[ListItem](ListItem),[GridItem](GridItem),[Scroll](Scroll),[FlowItem](FlowItem),[ImageAnimator](ImageAnimator),[LoadingProgress](LoadingProgress),[PatternLock](PatternLock),[Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-progress-i.md),[QRCode](QRCode),[TextClock](TextClock),[TextTimer](TextTimer),[MenuItem](StMenuItemack),[Toggle](Toggle),[Checkbox](Checkbox), and[NodeContainer](NodeContainer).For the alignment of the **Marquee**, **Text**, **TextArea**, **TextInput**, **RichEditor**, and **Hyperlink**components related to text, see[textAlign](TextAttribute#textAlign).If a component does not support the **textAlign** attribute, horizontal text alignment cannot be configured.<br>Default value: **Alignment.Center**<br>**NOTE**<br>This attribute supports the mirroring capability only in the [Stack](../../apis-arkts/arkts-apis/arkts-arkts-stack-c.md) component.In the **Stack** component, this attribute has the same effect as **alignContent**, which means that it setsthealignment mode of child components in the container |
 
 **Return value:**
 
@@ -719,7 +719,7 @@ Sets the alignment mode for child elements within the container's drawing area. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignment | Alignment \| LocalizedAlignment | Yes | Alignment mode for child elements in container drawing area.The mirroring capability is supported.The [LocalizedAlignment](arkts-arkui-localizedalignment-e.md#localizedalignment) type is effective only in the followingcomponents: [Shape](Shape),[Button](../../apis-input-kit/arkts-apis/arkts-input-button-e.md#button),[GridItem](GridItem),[FlowItem](FlowItem),[ImageAnimator](ImageAnimator),[LoadingProgress](LoadingProgress),[PatternLock](PatternLock),[Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-progress-i.md#progress),[QRCode](QRCode),[TextClock](TextClock),[TextTimer](TextTimer),[StepperItem](StepperItem),[MenuItem](MenuItem),[Toggle](MenuItem),[Checkbox](Checkbox), and[ListItem](ListItem).For the above components, mirror switching is effective for all except the[ListItem](ListItem), component, which behavesidentically to [Alignment](arkts-arkui-alignment-e.md#alignment). Components where **LocalizedAlignment** is not applicablewill be rendered in accordance with their default behavior.<br>Default value: **Alignment.Center**, **LocalizedAlignment.CENTER**.If an invalid value is passed, the default value will be used, indicating center alignment.<br>**NOTE**<br>The [Alignment](arkts-arkui-alignment-e.md#alignment) type does not support the mirroring capability. The[LocalizedAlignment](arkts-arkui-localizedalignment-e.md#localizedalignment) type supports mirroring based on the layout direction(configurable via [direction](arkts-arkui-commonmethod-c.md#direction-1)) or system language. The **direction** setting takesprecedence over the system language direction. When **direction** is explicitly set to any value other than**auto**, **LocalizedAlignment** mirroring follows the specified direction. If **direction** is set to **auto**or not configured, **LocalizedAlignment** mirroring adapts to the system language direction |
+| alignment | Alignment \| LocalizedAlignment | Yes | Alignment mode for child elements in container drawing area.The mirroring capability is supported.The [LocalizedAlignment](arkts-arkui-localizedalignment-e.md) type is effective only in the followingcomponents: [Shape](Shape),[Button](../../apis-input-kit/arkts-apis/arkts-input-button-e.md),[GridItem](GridItem),[FlowItem](FlowItem),[ImageAnimator](ImageAnimator),[LoadingProgress](LoadingProgress),[PatternLock](PatternLock),[Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-progress-i.md),[QRCode](QRCode),[TextClock](TextClock),[TextTimer](TextTimer),[StepperItem](StepperItem),[MenuItem](MenuItem),[Toggle](MenuItem),[Checkbox](Checkbox), and[ListItem](ListItem).For the above components, mirror switching is effective for all except the[ListItem](ListItem), component, which behavesidentically to [Alignment](arkts-arkui-alignment-e.md). Components where **LocalizedAlignment** is not applicablewill be rendered in accordance with their default behavior.<br>Default value: **Alignment.Center**, **LocalizedAlignment.CENTER**.If an invalid value is passed, the default value will be used, indicating center alignment.<br>**NOTE**<br>The [Alignment](arkts-arkui-alignment-e.md) type does not support the mirroring capability. The[LocalizedAlignment](arkts-arkui-localizedalignment-e.md) type supports mirroring based on the layout direction(configurable via [direction](arkts-arkui-commonmethod-c.md#direction-1)) or system language. The **direction** setting takesprecedence over the system language direction. When **direction** is explicitly set to any value other than**auto**, **LocalizedAlignment** mirroring follows the specified direction. If **direction** is set to **auto**or not configured, **LocalizedAlignment** mirroring adapts to the system language direction |
 
 **Return value:**
 
@@ -2957,7 +2957,7 @@ Sets the preview image displayed during component drag operations.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | CustomBuilder \| DragItemInfo \| string | Yes | Preview image displayed during component drag operations.It only applies to [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1) drag mode.<br>If the component supports dragand drop and a preview is specified through[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1),that specified preview is displayed when the component is dragged. The priority of the background imagereturned in [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1) is lower than that of the preview set in[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string)). This means that,once set, the latter will be used in place of the former. Using[CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline renderingand may increase performance overhead and latency. In light of this, you are advised to use[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md#pixelmap) in [DragItemInfo](arkts-arkui-dragiteminfo-i.md#dragiteminfo) instead.<br> Whenan ID of the string type is passed in, the snapshot of the component assigned the ID is used as the previewimage. If the component assigned the ID cannot be found or its [Visibility](arkts-arkui-visibility-e.md#visibility) attribute is setto **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently,snapshots do not support visual effects, such as brightness, shadow, blur, and rotation.<br>**Since:** 12 |
+| value | CustomBuilder \| DragItemInfo \| string | Yes | Preview image displayed during component drag operations.It only applies to [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1) drag mode.<br>If the component supports dragand drop and a preview is specified through[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1),that specified preview is displayed when the component is dragged. The priority of the background imagereturned in [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1) is lower than that of the preview set in[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string)). This means that,once set, the latter will be used in place of the former. Using[CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline renderingand may increase performance overhead and latency. In light of this, you are advised to use[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) in [DragItemInfo](arkts-arkui-dragiteminfo-i.md) instead.<br> Whenan ID of the string type is passed in, the snapshot of the component assigned the ID is used as the previewimage. If the component assigned the ID cannot be found or its [Visibility](arkts-arkui-visibility-e.md) attribute is setto **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently,snapshots do not support visual effects, such as brightness, shadow, blur, and rotation.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -2985,7 +2985,7 @@ Sets the drag preview for the component. This API specifically configures or dis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| preview | CustomBuilder \| DragItemInfo \| string | Yes | Preview image displayed during component dragoperations. It only applies to [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1) drag mode.<br>If the componentsupports drag and drop and a preview is specified through[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1),that specified preview is displayed when the component is dragged. The priority of the background imagereturned in [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1) is lower than that of the preview set in[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string)). This means that,once set, the latter will be used in place of the former. Using[CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline renderingand may increase performance overhead and latency. In light of this, you are advised to use[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md#pixelmap) in [DragItemInfo](arkts-arkui-dragiteminfo-i.md#dragiteminfo) instead.<br> Whenan ID of the string type is passed in, the snapshot of the component assigned the ID is used as the previewimage. If the component assigned the ID cannot be found or its [Visibility](arkts-arkui-visibility-e.md#visibility) attribute is setto **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently,snapshots do not support visual effects, such as brightness, shadow, blur, and rotation. |
+| preview | CustomBuilder \| DragItemInfo \| string | Yes | Preview image displayed during component dragoperations. It only applies to [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1) drag mode.<br>If the componentsupports drag and drop and a preview is specified through[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1),that specified preview is displayed when the component is dragged. The priority of the background imagereturned in [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1) is lower than that of the preview set in[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string)). This means that,once set, the latter will be used in place of the former. Using[CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline renderingand may increase performance overhead and latency. In light of this, you are advised to use[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) in [DragItemInfo](arkts-arkui-dragiteminfo-i.md) instead.<br> Whenan ID of the string type is passed in, the snapshot of the component assigned the ID is used as the previewimage. If the component assigned the ID cannot be found or its [Visibility](arkts-arkui-visibility-e.md) attribute is setto **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently,snapshots do not support visual effects, such as brightness, shadow, blur, and rotation. |
 | config | PreviewConfiguration | No | Additional settings for the drag preview.<br>This parameter is effectiveonly for previews set using[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string)). |
 
 **Return value:**
@@ -3408,7 +3408,7 @@ Sets whether the component is focusable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the component is focusable.<br>**true**: The component is focusable.<br>**false**: The component is not focusable.<br>**NOTE**<br>Components that have default interaction logic, suchas [Button](arkts-arkui-button.md) and [TextInput](arkts-arkui-textinput.md), are focusable by default. Other components, suchas [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md#text) and [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image), are not focusable by default. Only focusable components cantrigger a [focus event](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common). |
+| value | boolean | Yes | Whether the component is focusable.<br>**true**: The component is focusable.<br>**false**: The component is not focusable.<br>**NOTE**<br>Components that have default interaction logic, suchas [Button](arkts-arkui-button.md) and [TextInput](arkts-arkui-textinput.md), are focusable by default. Other components, suchas [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md) and [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md), are not focusable by default. Only focusable components cantrigger a [focus event](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). |
 
 **Return value:**
 
@@ -3437,7 +3437,7 @@ Applies a foreground blur style to the component. > **NOTE** > > This API can be
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | BlurStyle | Yes | Settings of the foreground blur style. |
-| options | ForegroundBlurStyleOptions | No | Defines the foreground blur options. For details about the defaultvalue, see [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md#foregroundblurstyleoptions). |
+| options | ForegroundBlurStyleOptions | No | Defines the foreground blur options. For details about the defaultvalue, see [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md). |
 
 **Return value:**
 
@@ -3466,7 +3466,7 @@ Applies a foreground blur style to the component. Compared to [foregroundBlurSty
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | Optional&lt;BlurStyle&gt; | Yes | Settings of the foreground blur style.<br>If **style** is set to**undefined**, no blur is applied. |
-| options | ForegroundBlurStyleOptions | No | Defines the foreground blur options. For details about thedefault value, see [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md#foregroundblurstyleoptions). |
+| options | ForegroundBlurStyleOptions | No | Defines the foreground blur options. For details about thedefault value, see [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md). |
 
 **Return value:**
 
@@ -3524,7 +3524,7 @@ Sets the foreground color of the component. Components without explicit foregrou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor \| ColoringStrategy | Yes | Foreground color. The value can be a specific color or acoloring strategy. The [attribute animation](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) is not supported. |
+| value | ResourceColor \| ColoringStrategy | Yes | Foreground color. The value can be a specific color or acoloring strategy. The [attribute animation](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) is not supported. |
 
 **Return value:**
 
@@ -3552,7 +3552,7 @@ Sets the foreground color of the component. Components without explicit foregrou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ResourceColor \| ColoringStrategy&gt; | Yes | Foreground color. The value can be a specific coloror a coloring strategy. Property animations are not supported.<br>If the color value is **undefined**, theprevious setting or the component's default value is retained. The specific behavior may vary acrosscomponents. It is recommended that you use explicit color values or [ColoringStrategy](arkts-arkui-coloringstrategy-e.md#coloringstrategy). |
+| color | Optional&lt;ResourceColor \| ColoringStrategy&gt; | Yes | Foreground color. The value can be a specific coloror a coloring strategy. Property animations are not supported.<br>If the color value is **undefined**, theprevious setting or the component's default value is retained. The specific behavior may vary acrosscomponents. It is recommended that you use explicit color values or [ColoringStrategy](arkts-arkui-coloringstrategy-e.md). |
 
 **Return value:**
 
@@ -4287,8 +4287,8 @@ Sets a keyboard shortcut for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| FunctionKey | Yes | Character key (which can be entered through the keyboard) or[function key](arkts-arkui-functionkey-e.md#functionkey).<br>An empty string means to disable the keyboard shortcut.<br> |
-| keys | Array&lt;ModifierKey&gt; | Yes | Modifier keys.<br>This parameter can be left empty only when **value** is setto a [function key](arkts-arkui-functionkey-e.md#functionkey).<br> |
+| value | string \| FunctionKey | Yes | Character key (which can be entered through the keyboard) or[function key](arkts-arkui-functionkey-e.md).<br>An empty string means to disable the keyboard shortcut.<br> |
+| keys | Array&lt;ModifierKey&gt; | Yes | Modifier keys.<br>This parameter can be left empty only when **value** is setto a [function key](arkts-arkui-functionkey-e.md).<br> |
 | action | () =&gt; void | No | Callback for a custom event after the keyboard shortcut is triggered. |
 
 **Return value:**
@@ -4490,7 +4490,7 @@ Applies a linear gradient foreground blur effect to the component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Blur radius. A larger value indicates a higher blur degree. If the value is 0, thecontent is not blurred.<br>Value range: [0, 1000] |
-| options | LinearGradientBlurOptions | Yes | Linear gradient blur effect.<br>The linear gradient blur effect isdefined by [fractionStops](arkts-arkui-lineargradientbluroptions-i.md#lineargradientbluroptions) and [direction](arkts-arkui-lineargradientbluroptions-i.md#lineargradientbluroptions). |
+| options | LinearGradientBlurOptions | Yes | Linear gradient blur effect.<br>The linear gradient blur effect isdefined by [fractionStops](arkts-arkui-lineargradientbluroptions-i.md) and [direction](arkts-arkui-lineargradientbluroptions-i.md). |
 
 **Return value:**
 
@@ -4519,7 +4519,7 @@ Applies a linear gradient foreground blur effect to the component. Compared with
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | blurRadius | Optional&lt;number&gt; | Yes | Blur radius. A larger value indicates a higher blur degree. If the valueis 0, the content is not blurred.<br>Value range: [0, 1000]<br>If **blurRadius** is **undefined**, the gradientblur effect reverts to **0**. |
-| options | Optional&lt;LinearGradientBlurOptions&gt; | Yes | Linear gradient blur effect.<br>If **options** is**undefined**, the gradient blur effect reverts to **0**.<br>The linear gradient blur effect is defined by[fractionStops](arkts-arkui-lineargradientbluroptions-i.md#lineargradientbluroptions) and [direction](arkts-arkui-lineargradientbluroptions-i.md#lineargradientbluroptions). |
+| options | Optional&lt;LinearGradientBlurOptions&gt; | Yes | Linear gradient blur effect.<br>If **options** is**undefined**, the gradient blur effect reverts to **0**.<br>The linear gradient blur effect is defined by[fractionStops](arkts-arkui-lineargradientbluroptions-i.md) and [direction](arkts-arkui-lineargradientbluroptions-i.md). |
 
 **Return value:**
 
@@ -4973,7 +4973,7 @@ Sets the offset of the component relative to its original position. When **offse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| LocalizedEdges | Yes | Offset of the component relative to its original layoutposition. The **offset** attribute does not affect the layout of the parent container. It adjusts the componentposition only during drawing.If of the [Position](../arkts-apis/arkts-arkui-position-t.md#position) type, this parameter sets the offset relative to the upperleft corner of the component. If of the [Edges](../arkts-apis/arkts-arkui-edges-i.md#edges) type, this parameter sets the offsetrelative to the four edges of the component. **{x: x, y: y}** has the same effect as **{left: x, top: y}** and**{right: -x, bottom: -y}**. The [LocalizedEdges](arkts-arkui-localizededges-i.md#localizededges) type supports the mirror mode:**start** is equivalent to **x** with left-to-right scripts and **-x** with right-to-left scripts.<br>API version 9 and earlier: The default value is **{x: 0, y: 0}**.<br>Default unit: vp<br>API version 10: no default value.<br>This attribute does not take effect when it is set to an abnormal value.<br>**Since:** 12 |
+| value | Position \| Edges \| LocalizedEdges | Yes | Offset of the component relative to its original layoutposition. The **offset** attribute does not affect the layout of the parent container. It adjusts the componentposition only during drawing.If of the [Position](../arkts-apis/arkts-arkui-position-t.md) type, this parameter sets the offset relative to the upperleft corner of the component. If of the [Edges](../arkts-apis/arkts-arkui-edges-i.md) type, this parameter sets the offsetrelative to the four edges of the component. **{x: x, y: y}** has the same effect as **{left: x, top: y}** and**{right: -x, bottom: -y}**. The [LocalizedEdges](arkts-arkui-localizededges-i.md) type supports the mirror mode:**start** is equivalent to **x** with left-to-right scripts and **-x** with right-to-left scripts.<br>API version 9 and earlier: The default value is **{x: 0, y: 0}**.<br>Default unit: vp<br>API version 10: no default value.<br>This attribute does not take effect when it is set to an abnormal value.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -5131,7 +5131,7 @@ Triggered when this component appears. > **NOTE** > > This callback may be calle
 onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 ```
 
-Triggered when the component area changes in size or position due to layout updates. This event is not triggered for render attribute changes caused by re-rendering, such as changes to [translate](arkts-arkui-commonmethod-c.md#translate-1), [offset](arkts-arkui-commonmethod-c.md#offset-1), [markAnchor](arkts-arkui-commonmethod-c.md#markanchor-1), [scale](arkts-arkui-commonmethod-c.md#scale-1), or [transform](arkts-arkui-commonmethod-c.md#transform-1). In addition, if the component position is altered due to drawing changes, for example, through [bindSheet](arkts-arkui-commonmethod-c.md#bindsheet-1), this event is also not triggered. > **NOTE** > > When a component is bound to both the **onAreaChange** event and the [position](arkts-arkui-commonmethod-c.md#position-1) > attribute, the **onAreaChange** event responds to changes in the **position** attribute of type > [Position](../arkts-apis/arkts-arkui-position-t.md#position), but does not respond to changes in the **position** attribute of type > [Edges](../arkts-apis/arkts-arkui-edges-i.md#edges) or [LocalizedEdges](arkts-arkui-localizededges-i.md#localizededges).
+Triggered when the component area changes in size or position due to layout updates. This event is not triggered for render attribute changes caused by re-rendering, such as changes to [translate](arkts-arkui-commonmethod-c.md#translate-1), [offset](arkts-arkui-commonmethod-c.md#offset-1), [markAnchor](arkts-arkui-commonmethod-c.md#markanchor-1), [scale](arkts-arkui-commonmethod-c.md#scale-1), or [transform](arkts-arkui-commonmethod-c.md#transform-1). In addition, if the component position is altered due to drawing changes, for example, through [bindSheet](arkts-arkui-commonmethod-c.md#bindsheet-1), this event is also not triggered. > **NOTE** > > When a component is bound to both the **onAreaChange** event and the [position](arkts-arkui-commonmethod-c.md#position-1) > attribute, the **onAreaChange** event responds to changes in the **position** attribute of type > [Position](../arkts-apis/arkts-arkui-position-t.md), but does not respond to changes in the **position** attribute of type > [Edges](../arkts-apis/arkts-arkui-edges-i.md) or [LocalizedEdges](arkts-arkui-localizededges-i.md).
 
 **Since:** 8
 
@@ -5157,7 +5157,7 @@ Triggered when the component area changes in size or position due to layout upda
 onAreaChange(event: AreaChangeCallback, options?: AreaChangeOptions): T
 ```
 
-Triggered when the component area changes. The interval at which the callback is triggered can be set using expectedUpdateInterval in [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md#areachangeoptions). This event is triggered only in response to changes in component size or position caused by layout updates.
+Triggered when the component area changes. The interval at which the callback is triggered can be set using expectedUpdateInterval in [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md). This event is triggered only in response to changes in component size or position caused by layout updates.
 
 **Since:** 26.0.0
 
@@ -5228,7 +5228,7 @@ Triggered by mouse wheel scrolling, a two-finger sliding gesture, or a pinch ges
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;AxisEvent&gt; | Yes | [AxisEvent](arkts-arkui-axisevent-i.md#axisevent) object. |
+| event | Callback&lt;AxisEvent&gt; | Yes | [AxisEvent](arkts-arkui-axisevent-i.md) object. |
 
 **Return value:**
 
@@ -5296,7 +5296,7 @@ Allows the current component to customize the hit test and control child compone
 onClick(event: (event: ClickEvent) => void): T
 ```
 
-Called when a click event occurs. When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md#sourcetype) is **KEY** or **JOYSTICK**. > **NOTE** > > Since API version 9, the following constraints apply when this API is used in service widgets: > > 1. Click events will not be triggered if the finger is pressed for more than 800 ms. > > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down.
+Called when a click event occurs. When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**. > **NOTE** > > Since API version 9, the following constraints apply when this API is used in service widgets: > > 1. Click events will not be triggered if the finger is pressed for more than 800 ms. > > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down.
 
 **Since:** 7
 
@@ -5324,7 +5324,7 @@ Called when a click event occurs. When triggered by keyboard or gamepad input, t
 onClick(event: Callback<ClickEvent>, distanceThreshold: number): T
 ```
 
-Called when a click event occurs. When triggered by keyboard or gamepad input, the event's [SourceTool](arkts-arkui-sourcetool-e.md#sourcetool) is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md#sourcetype) is **KEY** or **JOYSTICK**. Compared with the original **onClick** API, this API has the **distanceThreshold** parameter that specifies the finger movement threshold for click events. If the finger's movement exceeds the set threshold, the gesture recognition will fail. The click gesture recognition will fail if finger movement exceeds this threshold. For scenarios where there is no restriction on the finger movement distance during a click, the original API is preferred. To limit finger movement range during a click, use this new API. > **NOTE** > > - Since API version 12, the following constraints apply when this API is used in service widgets: > > 1. Click events will not be triggered if the finger is pressed for more than 800 ms. > > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down. > > - This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Called when a click event occurs. When triggered by keyboard or gamepad input, the event's [SourceTool](arkts-arkui-sourcetool-e.md) is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**. Compared with the original **onClick** API, this API has the **distanceThreshold** parameter that specifies the finger movement threshold for click events. If the finger's movement exceeds the set threshold, the gesture recognition will fail. The click gesture recognition will fail if finger movement exceeds this threshold. For scenarios where there is no restriction on the finger movement distance during a click, the original API is preferred. To limit finger movement range during a click, use this new API. > **NOTE** > > - Since API version 12, the following constraints apply when this API is used in service widgets: > > 1. Click events will not be triggered if the finger is pressed for more than 800 ms. > > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down. > > - This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 12
 
@@ -5560,7 +5560,7 @@ The component bound to this event can be used as a drag-response target with hov
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | Callback&lt;SpringLoadingContext&gt; \| null | Yes | Hover detection callback. If the value is **null**,hover detection is disabled. |
-| configuration | DragSpringLoadingConfiguration | No | Hover detection configuration. If the value is**undefined**, the default value of[DragSpringLoadingConfiguration](../arkts-apis/arkts-arkui-dragspringloadingconfiguration-i.md#dragspringloadingconfiguration)is used. |
+| configuration | DragSpringLoadingConfiguration | No | Hover detection configuration. If the value is**undefined**, the default value of[DragSpringLoadingConfiguration](../arkts-apis/arkts-arkui-dragspringloadingconfiguration-i.md)is used. |
 
 **Return value:**
 
@@ -5574,7 +5574,7 @@ The component bound to this event can be used as a drag-response target with hov
 onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | DragItemInfo): T
 ```
 
-In a gesture-based drag scenario, this callback is triggered when a user long-presses a draggable component for more than 500 ms and then moves the finger more than 10 vp. In a mouse-drag scenario, it is triggered when the left mouse button is pressed on a draggable component and moved more than 1 vp. For components that provide drag and drop capabilities by default, a custom **onDragStart** event, if set, is executed and: - If a custom drag preview is returned, it is used in place of the default drag preview. - If drag data is set, it is used in place of the default drag data. The custom drag preview is not supported for dragging selected text in the following components: [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md#text), [Search](arkts-arkui-search.md), [TextInput](arkts-arkui-textinput.md), [TextArea](arkts-arkui-textarea.md), [RichEditor](arkts-arkui-richeditor.md) When **onDragStart** is used with menu preview or any component that provides default drag and drop capabilities, custom content on menu items and the preview cannot be dragged. > **NOTE** > > This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 13.
+In a gesture-based drag scenario, this callback is triggered when a user long-presses a draggable component for more than 500 ms and then moves the finger more than 10 vp. In a mouse-drag scenario, it is triggered when the left mouse button is pressed on a draggable component and moved more than 1 vp. For components that provide drag and drop capabilities by default, a custom **onDragStart** event, if set, is executed and: - If a custom drag preview is returned, it is used in place of the default drag preview. - If drag data is set, it is used in place of the default drag data. The custom drag preview is not supported for dragging selected text in the following components: [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md), [Search](arkts-arkui-search.md), [TextInput](arkts-arkui-textinput.md), [TextArea](arkts-arkui-textarea.md), [RichEditor](arkts-arkui-richeditor.md) When **onDragStart** is used with menu preview or any component that provides default drag and drop capabilities, custom content on menu items and the preview cannot be dragged. > **NOTE** > > This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 13.
 
 **Since:** 8
 
@@ -6040,7 +6040,7 @@ Called when component is focused, the return value indicates whether keyboard is
 onPreDrag(callback: Callback<PreDragStatus>): T
 ```
 
-Triggered when the component enters a state prior to a gesture-based drag operation. For details about the state prior to the drag-and-drop operation, see [PreDragStatus](arkts-arkui-predragstatus-e.md#predragstatus). This API cannot be triggered in mouse-based drag scenarios. > **NOTE** > > This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+Triggered when the component enters a state prior to a gesture-based drag operation. For details about the state prior to the drag-and-drop operation, see [PreDragStatus](arkts-arkui-predragstatus-e.md). This API cannot be triggered in mouse-based drag scenarios. > **NOTE** > > This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 12
 
@@ -6098,7 +6098,7 @@ Triggered when the component size changes due to layout updates. > **NOTE** > > 
 onTouch(event: (event: TouchEvent) => void): T
 ```
 
-Invoked when a touch event is triggered. Touch events [bubble](../../../../ui/arkts-interaction-basic-principles.md#event-bubbling) by default and can be consumed by multiple components. To prevent event bubbling, use the **stopPropagation** API of [TouchEvent](arkts-arkui-touchevent-i.md#touchevent). Mouse left-click events are converted to touch events and will also trigger this callback.
+Invoked when a touch event is triggered. Touch events [bubble](../../../../ui/arkts-interaction-basic-principles.md#event-bubbling) by default and can be consumed by multiple components. To prevent event bubbling, use the **stopPropagation** API of [TouchEvent](arkts-arkui-touchevent-i.md). Mouse left-click events are converted to touch events and will also trigger this callback.
 
 **Since:** 7
 
@@ -6624,7 +6624,7 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptions): T
 ```
 
-Adds an overlay to this component, which can be text, a custom component, or [ComponentContent](arkts-arkui-componentcontent-t.md#componentcontent). The overlay is positioned based on the current component. The overlay is not rendered through the component tree, meaning some APIs (for example, [getRectangleById](../arkts-apis/arkts-arkui-getrectanglebyid-f.md#getrectanglebyid-1)) cannot access components within the overlay. > **NOTE** > > The overlay places the floating layer component above the bound component, blocking all user interactions with > components beneath it. To enable interaction with underlying components, refer to > [Example 2: Setting an Overlay Using a Custom Builder](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#example-2-setting-an-overlay-using-a-custom-builder) > and apply **.hitTestBehavior(HitTestMode.Transparent)** to the outermost component in the overlay builder. This > configuration is particularly crucial for watermark implementations, where the overlay must not interfere with > user interaction with the underlying content.
+Adds an overlay to this component, which can be text, a custom component, or [ComponentContent](arkts-arkui-componentcontent-t.md). The overlay is positioned based on the current component. The overlay is not rendered through the component tree, meaning some APIs (for example, [getRectangleById](../arkts-apis/arkts-arkui-getrectanglebyid-f.md#getrectanglebyid-1)) cannot access components within the overlay. > **NOTE** > > The overlay places the floating layer component above the bound component, blocking all user interactions with > components beneath it. To enable interaction with underlying components, refer to > [Example 2: Setting an Overlay Using a Custom Builder](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#example-2-setting-an-overlay-using-a-custom-builder) > and apply **.hitTestBehavior(HitTestMode.Transparent)** to the outermost component in the overlay builder. This > configuration is particularly crucial for watermark implementations, where the overlay must not interfere with > user interaction with the underlying content.
 
 **Since:** 7
 
@@ -6639,7 +6639,7 @@ Adds an overlay to this component, which can be text, a custom component, or [Co
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | string \| CustomBuilder \| ComponentContent | Yes | Content of the overlay, which can be text or a customcomponent.<br>**NOTE**<br>When the overlay is a custom component, it cannot obtain focus through sequentialkeyboard navigation. Using **CustomBuilder** will cause the overlay content to be destroyed and recreated onpage refresh, which may incur performance overhead. For scenarios with frequent page updates, using**ComponentContent** is recommended.<br>**Since:** 12 |
-| options | OverlayOptions | No | Options for positioning the overlay.<br>**NOTE**<br>In versions earlier thanAPI version 12, **options** is defined as follows:<br>{<br>align?: [Alignment](arkts-arkui-alignment-e.md#alignment), <br>offset?: {x?: number, y?: number}<br>}<br>**Since:** 12 |
+| options | OverlayOptions | No | Options for positioning the overlay.<br>**NOTE**<br>In versions earlier thanAPI version 12, **options** is defined as follows:<br>{<br>align?: [Alignment](arkts-arkui-alignment-e.md), <br>offset?: {x?: number, y?: number}<br>}<br>**Since:** 12 |
 
 **Return value:**
 
@@ -6794,7 +6794,7 @@ Applies a pixel stretch effect to the component. Compared to [pixelStretchEffect
 position(value: Position | Edges | LocalizedEdges): T
 ```
 
-Sets the absolute positioning, which determines the position of a child component relative to the content area of the parent component. Dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) is supported. **NOTE** - This API takes effect after the component's size measurement is complete. - When the parent container is [Row](Row), [Column](Column), or [Flex](Flex), the child component with **position** set does not occupy any space. - The [Position](arkts-arkui-commonmethod-c.md#position-1) type uses the upper left corner of the parent's content area as the reference point. The [Edges](../arkts-apis/arkts-arkui-edges-i.md#edges) type uses all four sides of the parent's content area as reference, where **top**, **left**, **right**, and **bottom** define the margins between the component and corresponding sides of the parent's content area. The [LocalizedEdges](arkts-arkui-localizededges-i.md#localizededges) type provides the same functionality as Edges while supporting layout mirroring. - This attribute is applicable to scenarios where the component's position in the parent container is fixed, for example, where it is pinned to top or floating on the UI. - This attribute is unavailable for a layout container whose width and height are zero. - In [RelativeContainer](../../../../reference/apis-arkui/arkui-ts/ts-container-relativecontainer.md), if the child component has [alignRules](arkts-arkui-commonmethod-c.md#alignrules-1) set, the **position** attribute will not take effect
+Sets the absolute positioning, which determines the position of a child component relative to the content area of the parent component. Dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) is supported. **NOTE** - This API takes effect after the component's size measurement is complete. - When the parent container is [Row](Row), [Column](Column), or [Flex](Flex), the child component with **position** set does not occupy any space. - The [Position](arkts-arkui-commonmethod-c.md#position-1) type uses the upper left corner of the parent's content area as the reference point. The [Edges](../arkts-apis/arkts-arkui-edges-i.md) type uses all four sides of the parent's content area as reference, where **top**, **left**, **right**, and **bottom** define the margins between the component and corresponding sides of the parent's content area. The [LocalizedEdges](arkts-arkui-localizededges-i.md) type provides the same functionality as Edges while supporting layout mirroring. - This attribute is applicable to scenarios where the component's position in the parent container is fixed, for example, where it is pinned to top or floating on the UI. - This attribute is unavailable for a layout container whose width and height are zero. - In [RelativeContainer](../../../../reference/apis-arkui/arkui-ts/ts-container-relativecontainer.md), if the child component has [alignRules](arkts-arkui-commonmethod-c.md#alignrules-1) set, the **position** attribute will not take effect
 
 **Since:** 7
 
@@ -7612,7 +7612,7 @@ Sets the width and height of the component. <br>Since API version 10, this API s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | SizeOptions | Yes | The [SizeOptions](arkts-arkui-sizeoptions-i.md#sizeoptions) type is used to set the width andheight.<br>Exception handling: If the parameter is **undefined**, the attribute setting does not takeeffect. For other invalid values, the **size** attribute reverts to its default behavior whenunconfigured.<br>Unit: vp |
+| value | SizeOptions | Yes | The [SizeOptions](arkts-arkui-sizeoptions-i.md) type is used to set the width andheight.<br>Exception handling: If the parameter is **undefined**, the attribute setting does not takeeffect. For other invalid values, the **size** attribute reverts to its default behavior whenunconfigured.<br>Unit: vp |
 
 **Return value:**
 
@@ -7640,7 +7640,7 @@ Enable or disable specific smart gesture shortcuts, and set response priorities 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SmartGestureShortcutOptions | No | Options for configuring smart gesture shortcuts.In SmartGestureShortcutOptions:enabled is used to configure whether the component responds to smart gestures.selectable is used to set whether the component displays and retains a selected state after being selected by a smart gesture operation.action is used to set the smart gesture response priority. Currently, only GestureShortcut.PRIMARY is supported, which makes the component the primary response target for smart gesture operations such as swiping and tapping.It is recommended to explicitly pass these parameters to avoid inconsistencies caused by default configurations. For default configuration handling, please refer to [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md#smartgestureshortcutoptions). |
+| options | SmartGestureShortcutOptions | No | Options for configuring smart gesture shortcuts.In SmartGestureShortcutOptions:enabled is used to configure whether the component responds to smart gestures.selectable is used to set whether the component displays and retains a selected state after being selected by a smart gesture operation.action is used to set the smart gesture response priority. Currently, only GestureShortcut.PRIMARY is supported, which makes the component the primary response target for smart gesture operations such as swiping and tapping.It is recommended to explicitly pass these parameters to avoid inconsistencies caused by default configurations. For default configuration handling, please refer to [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md). |
 
 **Return value:**
 
@@ -7830,7 +7830,7 @@ Sets the tab navigation order of the component in sequential focus navigation wi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Tab navigation order of the component in sequential focus navigation with the **Tab**key. When components with positive **tabIndex** values are present, only these components are reachable throughsequential focus navigation, and they are navigated cyclically in ascending order based on the **tabIndex**value. When components with positive **tabIndex** values are not present, those components with a **tabIndex**value of **0** are navigated based on the preset focus navigation rule.<br>The[UiExtension](../arkts-apis/arkts-arkui-uiextension.md#uiextension) component does not support **tabIndex**. As such,using **tabIndex** on [hierarchical pages](../../../../ui/arkts-common-events-focus-event.md#basic-concepts) thatcontain **UiExtension** components may lead to disordered focus navigation.<br>- **tabIndex** &gt;= 0: Thecomponent is focusable and can be reached through sequential keyboard navigation.<br>- **tabIndex** &lt; 0 (usually **tabIndex** = -1): The component is focusable, but cannot be reached through sequential keyboardnavigation.<br> **NOTE**<br> **tabIndex** and **focusScopeId** cannot be used together. |
+| index | number | Yes | Tab navigation order of the component in sequential focus navigation with the **Tab**key. When components with positive **tabIndex** values are present, only these components are reachable throughsequential focus navigation, and they are navigated cyclically in ascending order based on the **tabIndex**value. When components with positive **tabIndex** values are not present, those components with a **tabIndex**value of **0** are navigated based on the preset focus navigation rule.<br>The[UiExtension](../arkts-apis/arkts-arkui-uiextension.md) component does not support **tabIndex**. As such,using **tabIndex** on [hierarchical pages](../../../../ui/arkts-common-events-focus-event.md#basic-concepts) thatcontain **UiExtension** components may lead to disordered focus navigation.<br>- **tabIndex** &gt;= 0: Thecomponent is focusable and can be reached through sequential keyboard navigation.<br>- **tabIndex** &lt; 0 (usually **tabIndex** = -1): The component is focusable, but cannot be reached through sequential keyboardnavigation.<br> **NOTE**<br> **tabIndex** and **focusScopeId** cannot be used together. |
 
 **Return value:**
 
@@ -7938,7 +7938,7 @@ Displays the matrix transformation when 2D transformation is performed. If 3D tr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | object | Yes | Transformation matrix of the component. Only the[Matrix4Transit](../arkts-apis/arkts-matrix4.md#matrix4) object type is supported. |
+| value | object | Yes | Transformation matrix of the component. Only the[Matrix4Transit](../arkts-apis/arkts-matrix4.md) object type is supported. |
 
 **Return value:**
 
@@ -7966,7 +7966,7 @@ Displays the matrix transformation when 2D transformation is performed. If 3D tr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | Optional&lt;object&gt; | Yes | Transformation matrix of the component. Only the[Matrix4Transit](../arkts-apis/arkts-matrix4.md#matrix4) object type is supported.<br>If **transform** is **undefined**,the component reverts to the identity matrix (no transformation). |
+| transform | Optional&lt;object&gt; | Yes | Transformation matrix of the component. Only the[Matrix4Transit](../arkts-apis/arkts-matrix4.md) object type is supported.<br>If **transform** is **undefined**,the component reverts to the identity matrix (no transformation). |
 
 **Return value:**
 
@@ -8022,7 +8022,7 @@ Sets the transition effects used when a component is inserted or removed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | TransitionOptions \| TransitionEffect | Yes | Transition effects used when a component is inserted orremoved.<br>**NOTE**<br>For details, see [TransitionOptions](arkts-arkui-transitionoptions-i.md#transitionoptions) and[TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect). |
+| value | TransitionOptions \| TransitionEffect | Yes | Transition effects used when a component is inserted orremoved.<br>**NOTE**<br>For details, see [TransitionOptions](arkts-arkui-transitionoptions-i.md) and[TransitionEffect](arkts-arkui-transitioneffect-c.md). |
 
 **Return value:**
 

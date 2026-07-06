@@ -9,7 +9,7 @@ Describes the data structure of the task progress.
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@ohos.request';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## extras

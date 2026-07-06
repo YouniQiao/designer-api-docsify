@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Component](arkts-test-component-c.md#component)
+**替代接口：** [Component](arkts-test-component-c.md)
 
 **系统能力：** SystemCapability.Test.UiTest
 

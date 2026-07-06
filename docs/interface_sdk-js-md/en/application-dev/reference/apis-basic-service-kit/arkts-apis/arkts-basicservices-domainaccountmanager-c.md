@@ -9,7 +9,7 @@ Provides APIs for domain account management.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@ohos.account.osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## updateAccountInfo

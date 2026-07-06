@@ -9,7 +9,7 @@ The information of sheet item for action sheet style.
 ## Modules to Import
 
 ```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@ohos.arkui.dialog';
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
 ```
 
 ## action

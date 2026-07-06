@@ -1,8 +1,8 @@
 # DepthDataOutput (System API)
 
-Implements depth data output. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput).
+Implements depth data output. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
 
-**Inheritance/Implementation:** DepthDataOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput)
+**Inheritance/Implementation:** DepthDataOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
 **Since:** 13
 
@@ -13,7 +13,7 @@ Implements depth data output. It inherits from [CameraOutput](arkts-camera-camer
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('depthDataAvailable')
@@ -161,7 +161,7 @@ Subscribes to DepthDataOutput error events. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when adepthDataOutput instance is created. |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

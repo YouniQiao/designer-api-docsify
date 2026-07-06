@@ -62,7 +62,7 @@ Indicates whether to recursively obtain the file list in a subdirectory. The val
 success?: (file: FileResponse) => void
 ```
 
-Callback invoked when the API call is successful. **file** is [FileResponse](arkts-corefile-fileresponse-depr-i.md#fileresponse).
+Callback invoked when the API call is successful. **file** is [FileResponse](arkts-corefile-fileresponse-depr-i.md).
 
 **Type:** (file: FileResponse) => void
 

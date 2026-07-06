@@ -2,7 +2,7 @@
 
 Context是Stage模型的上下文基类，主要用于访问特定应用程序的资源，以及执行应用级操作的回调。
 
-**继承/实现关系：** Context extends [BaseContext](arkts-ability-basecontext-c.md#basecontext)
+**继承/实现关系：** Context extends [BaseContext](arkts-ability-basecontext-c.md)
 
 **起始版本：** 9
 
@@ -42,7 +42,7 @@ createAreaModeContext(areaMode: contextConstant.AreaMode): Context
 createDisplayContext(displayId: number): Context
 ```
 
-根据指定的物理屏幕ID创建带有屏幕信息（包括屏幕密度[ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-screendensity-e.md#screendensity)和屏幕方向 [Direction](../../apis-localization-kit/arkts-apis/arkts-localization-direction-e.md#direction)）的应用上下文。
+根据指定的物理屏幕ID创建带有屏幕信息（包括屏幕密度[ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-screendensity-e.md)和屏幕方向 [Direction](../../apis-localization-kit/arkts-apis/arkts-localization-direction-e.md)）的应用上下文。
 
 **起始版本：** 15
 
@@ -271,7 +271,7 @@ area: contextConstant.AreaMode
 bundleCodeDir: string
 ```
 
-安装包目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourcemanager)访问资源，详情参考 [应用沙箱目录](../../../../file-management/app-sandbox-directory.md)。
+安装包目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)访问资源，详情参考 [应用沙箱目录](../../../../file-management/app-sandbox-directory.md)。
 
 **类型：** string
 

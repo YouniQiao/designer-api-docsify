@@ -44,7 +44,7 @@ pending: number
 status: ReturnStatus
 ```
 
-参考[ReturnStatus枚举定义](arkts-basicservices-returnstatus-e.md#returnstatus)。
+参考[ReturnStatus枚举定义](arkts-basicservices-returnstatus-e.md)。
 
 **类型：** ReturnStatus
 

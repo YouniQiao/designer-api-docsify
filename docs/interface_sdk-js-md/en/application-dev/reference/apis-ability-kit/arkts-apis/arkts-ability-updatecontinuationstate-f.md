@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from '@ohos.continuation.continuationManager';
+import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## updateContinuationState

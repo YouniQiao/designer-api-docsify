@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationSubscribe } from '@ohos.notificationSubscribe';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## removeAll

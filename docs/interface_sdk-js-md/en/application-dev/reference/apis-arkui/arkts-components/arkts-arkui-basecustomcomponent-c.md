@@ -2,7 +2,7 @@
 
 Custom Component base class and it is migrated from class CustomComponent.
 
-**Inheritance/Implementation:** BaseCustomComponent extends [CommonAttribute](arkts-arkui-common-attribute.md#commonattribute)
+**Inheritance/Implementation:** BaseCustomComponent extends [CommonAttribute](arkts-arkui-common-attribute.md)
 
 **Since:** 18
 

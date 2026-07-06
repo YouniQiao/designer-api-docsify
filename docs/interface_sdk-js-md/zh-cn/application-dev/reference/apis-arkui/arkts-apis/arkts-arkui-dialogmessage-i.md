@@ -2,7 +2,7 @@
 
 对话框的消息选项。
 
-**继承/实现关系：** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialogtextstyleoptions-i.md#dialogtextstyleoptions)
+**继承/实现关系：** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialogtextstyleoptions-i.md)
 
 **起始版本：** 26.1.0
 

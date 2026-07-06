@@ -11,7 +11,7 @@ Describes the factory reset strategy.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@ohos.update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## scope

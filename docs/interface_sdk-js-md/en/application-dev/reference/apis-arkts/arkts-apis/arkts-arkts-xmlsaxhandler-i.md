@@ -9,7 +9,7 @@ A simple API for XML handling
 ## Modules to Import
 
 ```TypeScript
-import { xml } from '@ohos.xml';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## characters

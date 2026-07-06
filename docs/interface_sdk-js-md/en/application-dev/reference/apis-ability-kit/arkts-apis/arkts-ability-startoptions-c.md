@@ -9,7 +9,7 @@ StartOptions can be used as an input parameter for APIs used to launch a UIAbili
 ## Modules to Import
 
 ```TypeScript
-import { StartOptions } from '@ohos.app.ability.StartOptions';
+import { StartOptions } from '@kit.AbilityKit';
 ```
 
 ## completionHandler
@@ -278,7 +278,7 @@ Distance the window moves along the x-axis, with the top-left vertex of the scre
 windowMode?: number
 ```
 
-Window mode for the UIAbility upon startup. For details, see [WindowMode](arkts-ability-windowmode-e.md#windowmode).
+Window mode for the UIAbility upon startup. For details, see [WindowMode](arkts-ability-windowmode-e.md).
 
 **Type:** number
 

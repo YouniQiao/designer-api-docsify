@@ -74,5 +74,5 @@ Canvas组件初始化完成或者发生大小变化时的事件回调，支持 [
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;DrawingRenderingContext \| undefined&gt; \| undefined | 是 | Canvas组件初始化完成或者发生大小变化时的回调事件。<br/>关于Callback&lt;DrawingRenderingContext \| undefined&gt;类型的入参：<br/>1. 只有使用[CanvasParams](arkts-arkui-canvasparams-i.md#canvasparams)创建的Canvas组件在该回调中返回DrawingRenderingContext对象，否则返回undefined。<br/>2. 该回调返回的DrawingRenderingContext对象不允许作为参数创建Canvas组件，否则会导致应用崩溃。 |
+| event | Callback&lt;DrawingRenderingContext \| undefined&gt; \| undefined | 是 | Canvas组件初始化完成或者发生大小变化时的回调事件。<br/>关于Callback&lt;DrawingRenderingContext \| undefined&gt;类型的入参：<br/>1. 只有使用[CanvasParams](arkts-arkui-canvasparams-i.md)创建的Canvas组件在该回调中返回DrawingRenderingContext对象，否则返回undefined。<br/>2. 该回调返回的DrawingRenderingContext对象不允许作为参数创建Canvas组件，否则会导致应用崩溃。 |
 

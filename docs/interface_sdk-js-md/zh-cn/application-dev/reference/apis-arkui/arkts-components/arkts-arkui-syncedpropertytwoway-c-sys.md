@@ -1,6 +1,6 @@
 # SyncedPropertyTwoWay（系统接口）
 
-继承自[SubscribedAbstractProperty<T>](arkts-arkui-subscribedabstractproperty-c.md#subscribedabstractproperty)。用来定义变量状态的值。
+继承自[SubscribedAbstractProperty<T>](arkts-arkui-subscribedabstractproperty-c.md)。用来定义变量状态的值。
 
 **继承/实现关系：** SyncedPropertyTwoWay extends [SubscribedAbstractProperty<T>](SubscribedAbstractProperty<T>) implements [ISinglePropertyChangeSubscriber<T>](ISinglePropertyChangeSubscriber<T>)
 

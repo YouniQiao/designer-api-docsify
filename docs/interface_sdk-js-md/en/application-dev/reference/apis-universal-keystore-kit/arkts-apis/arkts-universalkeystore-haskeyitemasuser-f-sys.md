@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@ohos.security.huks';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## hasKeyItemAsUser
@@ -28,7 +28,7 @@ Checks whether a key exists for the specified user. This API uses a promise to r
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
 | keyAlias | string | Yes | Alias of the key to check. |
-| huksOptions | HuksOptions | Yes | Attribute tag of the key to be checked. If[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md#huksauthstoragelevel) is used to specify the securitylevel of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, thedefault value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passedin. |
+| huksOptions | HuksOptions | Yes | Attribute tag of the key to be checked. If[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the securitylevel of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, thedefault value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passedin. |
 
 **Return value:**
 
@@ -51,7 +51,7 @@ Checks whether a key exists for the specified user. This API uses a promise to r
 | [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
-| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | Feature is not supported. Possible causes:1. The group key is not supported.2. The crypto extension key is not supported.<br>**Applicable version:** 23 |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | Feature is not supported. Possible causes:1. The group key is not supported.2. The crypto extension key is not supported.<br>**Applicable version:** 23 and later |
 
 **Example**
 

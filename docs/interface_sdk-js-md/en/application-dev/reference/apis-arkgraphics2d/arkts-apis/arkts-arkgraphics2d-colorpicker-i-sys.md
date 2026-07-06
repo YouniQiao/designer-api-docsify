@@ -9,7 +9,7 @@ A class used to obtain the color from an image. Before calling any method of Col
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from '@ohos.effectKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## discriminatePictureLightDegree

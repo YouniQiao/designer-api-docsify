@@ -94,7 +94,7 @@ position?: number
 success?: (data: FileReadTextResponse) => void
 ```
 
-接口调用成功的回调函数。返回[FileReadTextResponse](arkts-corefile-filereadtextresponse-depr-i.md#filereadtextresponse)。
+接口调用成功的回调函数。返回[FileReadTextResponse](arkts-corefile-filereadtextresponse-depr-i.md)。
 
 **类型：** (data: FileReadTextResponse) => void
 

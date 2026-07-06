@@ -6,7 +6,7 @@ The **statfs** module provides APIs for obtaining file system information, inclu
 
 **Deprecated since:** 9
 
-**Substitutes:** [statvfs:statfs](arkts-file-statvfs.md#statfs)
+**Substitutes:** [statvfs:statfs](arkts-file-statvfs.md)
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

@@ -9,7 +9,7 @@ Provides a callback for setting the modal dialog box request result.
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from '@ohos.app.ability.dialogRequest';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## setRequestResult

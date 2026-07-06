@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from '@ohos.app.agent.agentManager';
+import { agentManager } from '@kit.AbilityKit';
 ```
 
 ## updateAgentCard

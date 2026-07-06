@@ -9,7 +9,7 @@ Represents the number and size of local and cloud files of an application.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@ohos.file.cloudSyncManager';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## bothFileCount

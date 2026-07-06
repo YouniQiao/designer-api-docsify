@@ -9,7 +9,7 @@ Defines the device to be synced from the scanner.
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@ohos.scan';
+import { scan } from '@kit.BasicServicesKit';
 ```
 
 ## discoveryMode

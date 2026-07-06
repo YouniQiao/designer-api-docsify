@@ -9,7 +9,7 @@ Represents the storage information about a certificate, including the certificat
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## certAlg

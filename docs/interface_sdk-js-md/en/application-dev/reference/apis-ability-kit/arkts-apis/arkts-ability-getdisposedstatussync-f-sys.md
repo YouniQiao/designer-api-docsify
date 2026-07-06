@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@ohos.bundle.appControl';
+import { appControl } from '@kit.AbilityKit';
 ```
 
 ## getDisposedStatusSync

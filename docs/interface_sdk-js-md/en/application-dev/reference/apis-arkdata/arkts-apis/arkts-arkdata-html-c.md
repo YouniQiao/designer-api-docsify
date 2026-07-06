@@ -1,8 +1,8 @@
 # HTML
 
-Represents the HTML data. It is a child class of [Text](arkts-arkdata-text-c.md#text).
+Represents the HTML data. It is a child class of [Text](arkts-arkdata-text-c.md).
 
-**Inheritance/Implementation:** HTML extends [Text](arkts-arkdata-text-c.md#text)
+**Inheritance/Implementation:** HTML extends [Text](arkts-arkdata-text-c.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Represents the HTML data. It is a child class of [Text](arkts-arkdata-text-c.md#
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@ohos.data.unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## htmlContent

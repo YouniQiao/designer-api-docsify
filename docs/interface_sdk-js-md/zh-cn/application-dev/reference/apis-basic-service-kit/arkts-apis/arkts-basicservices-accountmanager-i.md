@@ -821,7 +821,7 @@ getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 **需要权限：** 
 - API版本10+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
-- API版本9 - 9：ohos.permission.MANAGE_LOCAL_ACCOUNTS
+- API版本9：ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -873,7 +873,7 @@ getCurrentOsAccount(): Promise<OsAccountInfo>
 
 **需要权限：** 
 - API版本10+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
-- API版本9 - 9：ohos.permission.MANAGE_LOCAL_ACCOUNTS
+- API版本9：ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **系统能力：** SystemCapability.Account.OsAccount
 

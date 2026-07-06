@@ -11,7 +11,7 @@ Configuration result for AI-generated text tasks.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@ohos.arkui.intelligence.imageGeneration';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## content

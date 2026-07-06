@@ -9,7 +9,7 @@ Provides **SystemPasteboard** APIs. Before calling any **SystemPasteboard** API,
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@ohos.pasteboard';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## clear
@@ -205,7 +205,7 @@ try {
 detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>
 ```
 
-Detects [patterns](arkts-basicservices-pattern-e.md#pattern) in the system pasteboard. This API uses a promise to return the result.
+Detects [patterns](arkts-basicservices-pattern-e.md) in the system pasteboard. This API uses a promise to return the result.
 
 **Since:** 13
 
@@ -317,7 +317,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API.<br>**Applicable version:** 12 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -366,7 +366,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 | Error Code ID | Error Message |
 | --- | --- |
 | [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API.<br>**Applicable version:** 12 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -452,7 +452,7 @@ Obtains a **PasteData** object from the pasteboard. This API returns the result 
 | Error Code ID | Error Message |
 | --- | --- |
 | [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API.<br>**Applicable version:** 12 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API.<br>**Applicable version:** 12 and later |
 
 **Example**
 

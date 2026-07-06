@@ -11,7 +11,7 @@ Describes the information about the application reminder.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@ohos.notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## bundle

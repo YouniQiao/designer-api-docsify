@@ -39,7 +39,7 @@ function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not found. |
 | [17700304](../errorcode-bundle.md#17700304-动态图标使能失败) | Failed to enable the dynamic icon. |
-| [17700307](../errorcode-bundle.md#17700307-由于存在自定义主题动态图标无法生效) | Dynamic icons cannot take effect due to existing custom themes.<br>**适用版本：** 20 |
+| [17700307](../errorcode-bundle.md#17700307-由于存在自定义主题动态图标无法生效) | Dynamic icons cannot take effect due to existing custom themes.<br>**适用版本：** 20+ |
 
 **示例：**
 

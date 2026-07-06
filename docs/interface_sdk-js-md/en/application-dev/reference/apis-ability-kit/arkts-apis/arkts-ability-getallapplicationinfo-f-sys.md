@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllApplicationInfo
@@ -27,7 +27,7 @@ Obtains all the application information in the system based on the given applica
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appFlags | number | Yes | Type of the application information to obtain. |
-| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used toreturn the result. If the operation is successful, **err** is **null** and **data** is the array of applicationinformation obtained. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used toreturn the result. If the operation is successful, **err** is **null** and **data** is the array of applicationinformation obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -85,7 +85,7 @@ Obtains all the application information in the system based on the given applica
 | --- | --- | --- | --- |
 | appFlags | number | Yes | Type of the application information to obtain. |
 | userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
-| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used toreturn the result. If the operation is successful, **err** is **null** and **data** is the array of applicationinformation obtained. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used toreturn the result. If the operation is successful, **err** is **null** and **data** is the array of applicationinformation obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

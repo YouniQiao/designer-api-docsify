@@ -9,7 +9,7 @@ The message for indicating the of result of JavaScript code execution.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArray

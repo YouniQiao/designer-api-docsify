@@ -104,7 +104,7 @@ executeMode: insightIntent.ExecuteMode
 flags?: number
 ```
 
-意图调用时，意图调用方给意图执行方授权的uris的[flags](arkts-ability-flags-e.md#flags)。 **说明：** 该参数仅支持FLAG_AUTH_READ_URI_PERMISSION、FLAG_AUTH_WRITE_URI_PERMISSION、FLAG_AUTH_READ_URI_PERMISSION| FLAG_AUTH_WRITE_URI_PERMISSION。
+意图调用时，意图调用方给意图执行方授权的uris的[flags](arkts-ability-flags-e.md)。 **说明：** 该参数仅支持FLAG_AUTH_READ_URI_PERMISSION、FLAG_AUTH_WRITE_URI_PERMISSION、FLAG_AUTH_READ_URI_PERMISSION| FLAG_AUTH_WRITE_URI_PERMISSION。
 
 **类型：** number
 

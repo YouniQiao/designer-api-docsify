@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ValueType, ValuesBucket } from '@ohos.data.ValuesBucket';
+import { ValueType, ValuesBucket } from '@kit.ArkData';
 ```
 
 ## Summary

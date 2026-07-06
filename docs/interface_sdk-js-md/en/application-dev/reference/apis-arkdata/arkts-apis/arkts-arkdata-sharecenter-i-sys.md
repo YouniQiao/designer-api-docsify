@@ -11,7 +11,7 @@ Provides APIs for interacting with the sharedCenter service. You need to inherit
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@ohos.data.cloudExtension';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## changeConfirmation

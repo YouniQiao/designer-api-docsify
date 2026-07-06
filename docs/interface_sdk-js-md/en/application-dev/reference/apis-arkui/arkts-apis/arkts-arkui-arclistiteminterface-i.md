@@ -9,7 +9,7 @@ The **ArcListItem** component is used to display individual child components in 
 ## Modules to Import
 
 ```TypeScript
-import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@ohos.arkui.ArcList';
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
 ```
 
 ## constructor

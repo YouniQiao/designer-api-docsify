@@ -20,7 +20,7 @@ function zipFile(inFile: string, outFile: string, options: Options): Promise<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inFile | string | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context)，[Stage模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context)。 |
+| inFile | string | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)，[Stage模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。 |
 | outFile | string | 是 | 指定压缩结果的文件路径（文件的扩展名zip）。 |
 | options | Options | 是 | 压缩的可选参数。 |
 

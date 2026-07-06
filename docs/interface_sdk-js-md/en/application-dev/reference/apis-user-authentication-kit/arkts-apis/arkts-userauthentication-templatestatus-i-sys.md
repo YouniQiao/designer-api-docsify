@@ -11,7 +11,7 @@ Describes the complete status information about a registered companion device au
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@ohos.userIAM.companionDeviceAuth';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## addedTime

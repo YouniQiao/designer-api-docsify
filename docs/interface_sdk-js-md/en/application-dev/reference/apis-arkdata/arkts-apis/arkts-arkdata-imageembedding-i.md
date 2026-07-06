@@ -9,7 +9,7 @@ Describes the image embedding functions of the multi-modal embedding model.
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from '@ohos.data.intelligence';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## getEmbedding

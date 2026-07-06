@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Support](arkts-basicservices-support-e.md#support)
+**替代接口：** [Support](arkts-basicservices-support-e.md)
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

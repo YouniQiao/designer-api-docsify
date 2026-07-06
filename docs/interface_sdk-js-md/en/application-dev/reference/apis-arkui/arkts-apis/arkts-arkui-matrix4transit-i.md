@@ -9,7 +9,7 @@ Implements a **Matrix4Transit** object.
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from '@ohos.matrix4';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## combine

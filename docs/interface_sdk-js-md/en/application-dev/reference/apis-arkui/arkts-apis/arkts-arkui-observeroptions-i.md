@@ -9,7 +9,7 @@ Describes the observer options.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@ohos.arkui.observer';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## id

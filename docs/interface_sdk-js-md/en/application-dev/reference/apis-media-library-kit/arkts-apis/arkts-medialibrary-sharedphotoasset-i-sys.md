@@ -2,7 +2,7 @@
 
 Defines the shared photo asset
 
-**Inheritance/Implementation:** SharedPhotoAsset extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md#isendable)
+**Inheritance/Implementation:** SharedPhotoAsset extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md)
 
 **Since:** 14
 
@@ -13,7 +13,7 @@ Defines the shared photo asset
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from '@ohos.file.sendablePhotoAccessHelper';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cameraShotKey

@@ -11,7 +11,7 @@ Defines the OS account sub-profile manager class.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@ohos.account.osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## createOsAccountSubProfile

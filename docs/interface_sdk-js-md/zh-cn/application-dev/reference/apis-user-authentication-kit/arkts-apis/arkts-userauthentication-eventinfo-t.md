@@ -10,7 +10,7 @@ type EventInfo = AuthResultInfo | TipInfo
 
 **废弃版本：** 11
 
-**替代接口：** [UserAuthResult](arkts-userauthentication-userauthresult-i.md#userauthresult)
+**替代接口：** [UserAuthResult](arkts-userauthentication-userauthresult-i.md)
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AppServiceExtensionAbility } from '@ohos.app.ability.AppServiceExtensionAbility';
+import { AppServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

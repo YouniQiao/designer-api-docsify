@@ -9,7 +9,7 @@ The autoFillManager module provides APIs for saving accounts and passwords. Unli
 ## Modules to Import
 
 ```TypeScript
-import { autoFillManager } from '@ohos.app.ability.autoFillManager';
+import { autoFillManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

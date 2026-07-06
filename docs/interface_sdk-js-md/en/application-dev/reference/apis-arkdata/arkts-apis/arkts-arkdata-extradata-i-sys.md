@@ -11,7 +11,7 @@ Represents the transparently transmitted data, which contains information requir
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@ohos.data.cloudData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## eventId

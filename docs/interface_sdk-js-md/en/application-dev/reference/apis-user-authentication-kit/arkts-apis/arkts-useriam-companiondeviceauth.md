@@ -11,7 +11,7 @@ The **companionDeviceAuth** module is an important part of the OpenHarmony user 
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@ohos.userIAM.companionDeviceAuth';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary

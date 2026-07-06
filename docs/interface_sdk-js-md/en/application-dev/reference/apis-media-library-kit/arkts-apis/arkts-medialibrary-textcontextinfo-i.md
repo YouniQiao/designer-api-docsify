@@ -9,7 +9,7 @@ Represents the text information about the recommended images.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@ohos.file.photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## text

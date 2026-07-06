@@ -11,7 +11,7 @@ Provides APIs for using the **AsyKeyGenerator**. Before using any API of the **A
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## convertKey
@@ -45,7 +45,7 @@ Converts asymmetric key data to a key pair object. This API uses an asynchronous
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## convertKey
 
@@ -78,7 +78,7 @@ Converts data into an asymmetric key pair. This API uses an asynchronous callbac
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -142,7 +142,7 @@ Converts asymmetric key data to a key pair object. This API uses a promise to re
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## convertKey
 
@@ -180,7 +180,7 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -242,7 +242,7 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -307,7 +307,7 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -457,7 +457,7 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 

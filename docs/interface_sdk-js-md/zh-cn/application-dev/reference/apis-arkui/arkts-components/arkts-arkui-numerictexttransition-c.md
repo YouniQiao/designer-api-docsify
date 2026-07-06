@@ -1,8 +1,8 @@
 # NumericTextTransition
 
-数字翻牌动效。仅限正整数，不支持小数和负数。不支持渐变色和Text跑马灯模式。不支持选中，[copyOption](TextAttribute#copyOption)属性无效。当文本存在子组件时或通过属性字符串设置时，数字 翻牌失效。 NumericTextTransition继承自[ContentTransition](arkts-arkui-contenttransition-c.md#contenttransition)。
+数字翻牌动效。仅限正整数，不支持小数和负数。不支持渐变色和Text跑马灯模式。不支持选中，[copyOption](TextAttribute#copyOption)属性无效。当文本存在子组件时或通过属性字符串设置时，数字 翻牌失效。 NumericTextTransition继承自[ContentTransition](arkts-arkui-contenttransition-c.md)。
 
-**继承/实现关系：** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md#contenttransition)
+**继承/实现关系：** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md)
 
 **起始版本：** 20
 

@@ -2,7 +2,7 @@
 
 Worker线程自身的运行环境，GlobalScope类继承WorkerEventTarget。
 
-**继承/实现关系：** GlobalScope extends [WorkerEventTarget](arkts-arkts-workereventtarget-i.md#workereventtarget)
+**继承/实现关系：** GlobalScope extends [WorkerEventTarget](arkts-arkts-workereventtarget-i.md)
 
 **起始版本：** 9
 

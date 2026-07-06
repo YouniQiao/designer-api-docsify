@@ -64,7 +64,7 @@ setStyledString(value: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | StyledString | 是 | 属性字符串。<br/>**说明：** <br/>StyledString的子类[MutableStyledString](arkts-arkui-mutablestyledstring-c.md#mutablestyledstring)也可以作为入参值。 |
+| value | StyledString | 是 | 属性字符串。<br/>**说明：** <br/>StyledString的子类[MutableStyledString](arkts-arkui-mutablestyledstring-c.md)也可以作为入参值。 |
 
 ## setTextSelection
 

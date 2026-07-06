@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundleManager } from '@ohos.bundle.distributedBundleManager';
+import { distributedBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getRemoteBundleVersionCode

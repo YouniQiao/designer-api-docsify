@@ -9,7 +9,7 @@ Describes the page routing state.
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@ohos.router';
+import { router } from '@kit.ArkUI';
 ```
 
 ## message

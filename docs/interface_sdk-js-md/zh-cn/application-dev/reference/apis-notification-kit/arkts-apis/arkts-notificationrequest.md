@@ -7,7 +7,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [DistributedOptions](arkts-notification-distributedoptions-i.md) | 描述跨设备协同选项。预留能力，暂未支持。 |
-| [NotificationParameters](arkts-notification-notificationparameters-i.md) | 描述[NotificationRequest](arkts-notification-notificationrequest-i.md#notificationrequest)中wantAgent的部分信息。 |
+| [NotificationParameters](arkts-notification-notificationparameters-i.md) | 描述[NotificationRequest](arkts-notification-notificationrequest-i.md)中wantAgent的部分信息。 |
 | [NotificationRequest](arkts-notification-notificationrequest-i.md) | 描述通知的请求。 |
 
 <!--Del-->

@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [AuthInstance](arkts-userauthentication-authinstance-i.md#authinstance)
+**替代接口：** [AuthInstance](arkts-userauthentication-authinstance-i.md)
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -100,7 +100,7 @@ cancelAuth(contextID: Uint8Array): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 取消认证的结果，结果为SUCCESS时表示取消成功，其他返回值参见[ResultCode](arkts-userauthentication-resultcode-e.md#resultcode)。 |
+| number | 取消认证的结果，结果为SUCCESS时表示取消成功，其他返回值参见[ResultCode](arkts-userauthentication-resultcode-e.md)。 |
 
 **示例：**
 
@@ -173,7 +173,7 @@ getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): numb
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 查询结果，结果为SUCCESS时表示支持，其他返回值参见[ResultCode](arkts-userauthentication-resultcode-e.md#resultcode)。 |
+| number | 查询结果，结果为SUCCESS时表示支持，其他返回值参见[ResultCode](arkts-userauthentication-resultcode-e.md)。 |
 
 **示例：**
 

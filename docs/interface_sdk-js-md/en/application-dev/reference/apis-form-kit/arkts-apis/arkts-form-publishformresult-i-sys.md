@@ -11,7 +11,7 @@ The result of publish form.
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@ohos.app.form.formInfo';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## code

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from '@ohos.systemparameter';
+import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
 ## setSync

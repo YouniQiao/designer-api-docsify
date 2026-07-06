@@ -9,7 +9,7 @@ The **notificationExtensionSubscription** module provides capabilities for manag
 ## Modules to Import
 
 ```TypeScript
-import { notificationExtensionSubscription } from '@ohos.notificationExtensionSubscription';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## Summary
@@ -31,7 +31,7 @@ import { notificationExtensionSubscription } from '@ohos.notificationExtensionSu
 
 | Name | Description |
 | --- | --- |
-| [getAllSubscriptionBundles](arkts-notification-getallsubscriptionbundles-f-sys.md#getallsubscriptionbundles-1) | Obtains all applications that have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility](arkts-notification-notificationsubscriberextensionability-c.md#notificationsubscriberextensionability). This API uses a promise to return the result. |
+| [getAllSubscriptionBundles](arkts-notification-getallsubscriptionbundles-f-sys.md#getallsubscriptionbundles-1) | Obtains all applications that have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility](arkts-notification-notificationsubscriberextensionability-c.md). This API uses a promise to return the result. |
 | [getUserGrantedEnabledBundles](arkts-notification-getusergrantedenabledbundles-f-sys.md#getusergrantedenabledbundles-1) | Obtains the applications that are allowed to access device notifications. This API uses a promise to return the result. |
 | [getUserGrantedState](arkts-notification-getusergrantedstate-f-sys.md#getusergrantedstate-1) | Obtains the enabling state of the **Allow access to notifications on this device** switch of a specified application. This API uses a promise to return the result. |
 | [setUserGrantedBundleState](arkts-notification-setusergrantedbundlestate-f-sys.md#setusergrantedbundlestate-1) | Sets the enabling state of device notification access for the specified application. This API uses a promise to return the result. |

@@ -9,7 +9,7 @@ This class is used to intercept requests for a specified scheme.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## onRequestStart

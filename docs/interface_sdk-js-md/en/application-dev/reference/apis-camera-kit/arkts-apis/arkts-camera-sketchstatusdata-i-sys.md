@@ -11,7 +11,7 @@ Defines the PiP status data.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## centerPointOffset

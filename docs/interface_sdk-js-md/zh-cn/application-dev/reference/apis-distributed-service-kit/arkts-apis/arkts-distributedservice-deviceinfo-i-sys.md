@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [DeviceBasicInfo](arkts-distributedservice-devicebasicinfo-i.md#devicebasicinfo)
+**替代接口：** [DeviceBasicInfo](arkts-distributedservice-devicebasicinfo-i.md)
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

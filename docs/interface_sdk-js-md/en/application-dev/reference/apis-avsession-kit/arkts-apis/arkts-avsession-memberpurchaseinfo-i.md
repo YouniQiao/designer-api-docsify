@@ -9,7 +9,7 @@ The definition of member purchase information.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@ohos.multimedia.avMusicTemplate';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## diagramContent

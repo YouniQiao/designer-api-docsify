@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WantAgent } from '@ohos.app.ability.wantAgent';
+import { WantAgent } from '@kit.AbilityKit';
 ```
 
 ## getWantAgent

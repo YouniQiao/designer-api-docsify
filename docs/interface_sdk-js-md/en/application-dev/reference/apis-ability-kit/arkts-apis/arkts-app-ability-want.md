@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Want } from '@ohos.app.ability.Want';
+import { Want } from '@kit.AbilityKit';
 ```
 
 ## Summary

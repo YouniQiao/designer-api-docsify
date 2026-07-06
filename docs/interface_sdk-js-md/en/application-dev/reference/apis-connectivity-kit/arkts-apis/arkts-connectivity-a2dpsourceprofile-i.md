@@ -2,7 +2,7 @@
 
 Manager a2dp source profile.
 
-**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-baseprofile-i.md#baseprofile)
+**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-baseprofile-i.md)
 
 **Since:** 9
 
@@ -15,7 +15,7 @@ Manager a2dp source profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@ohos.bluetoothManager';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## connect
@@ -34,7 +34,7 @@ Connect to device with a2dp. On API 10 and above, the permission required by thi
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
-- API version 9 - 9: ohos.permission.DISCOVER_BLUETOOTH
+- API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -72,7 +72,7 @@ Disconnect to device with a2dp. On API 10 and above, the permission required by 
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
-- API version 9 - 9: ohos.permission.DISCOVER_BLUETOOTH
+- API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

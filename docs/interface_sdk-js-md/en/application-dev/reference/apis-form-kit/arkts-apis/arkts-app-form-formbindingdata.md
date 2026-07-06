@@ -9,7 +9,7 @@ The **FormBindingData** module provides APIs for widget data binding. You can us
 ## Modules to Import
 
 ```TypeScript
-import { formBindingData } from '@ohos.app.form.formBindingData';
+import { formBindingData } from '@kit.FormKit';
 ```
 
 ## Summary

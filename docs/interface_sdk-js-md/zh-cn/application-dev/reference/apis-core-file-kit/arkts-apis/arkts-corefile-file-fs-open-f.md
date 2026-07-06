@@ -57,7 +57,7 @@ declare function open(path: string, mode?: number): Promise<File>
 | 13900038 | Value too large for defined data type |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900044 | Network is unreachable<br>**适用版本：** 12 |
+| 13900044 | Network is unreachable<br>**适用版本：** 12+ |
 
 
 ## open

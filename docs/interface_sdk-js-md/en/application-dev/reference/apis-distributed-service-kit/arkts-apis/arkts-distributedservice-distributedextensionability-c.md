@@ -9,7 +9,7 @@ The **DistributedExtensionAbility** module provides distributed extension capabi
 ## Modules to Import
 
 ```TypeScript
-import { DistributedExtensionAbility } from '@ohos.application.DistributedExtensionAbility';
+import { DistributedExtensionAbility } from '@kit.DistributedServiceKit';
 ```
 
 ## onCollaborate

@@ -9,7 +9,7 @@ Defines the rectangular region for capturing the component snapshot.
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@ohos.arkui.componentSnapshot';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## bottom

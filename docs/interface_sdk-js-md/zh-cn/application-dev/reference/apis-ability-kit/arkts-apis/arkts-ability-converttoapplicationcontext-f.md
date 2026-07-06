@@ -26,7 +26,7 @@ function convertToApplicationContext(sendableContext: SendableContext): common.A
 
 | 类型 | 说明 |
 | --- | --- |
-| common.ApplicationContext | [ApplicationContext](arkts-ability-applicationcontext-c.md#applicationcontext)object. |
+| common.ApplicationContext | [ApplicationContext](arkts-ability-applicationcontext-c.md)object. |
 
 **错误码：**
 

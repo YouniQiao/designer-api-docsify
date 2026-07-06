@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAccessCtrl } from '@ohos.userIAM.userAccessCtrl';
+import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 ```
 
 ## verifyAuthToken

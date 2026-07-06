@@ -6,7 +6,7 @@ typedef struct ContentEmbed_Object ContentEmbed_Object
 
 ## Overview
 
-Define the ContentEmbed_Object structure type.Provides methods for Content Embed Kit.
+Declares the ContentEmbed_Object structure. Points to the program object (server-side OE object for short)for embedding and editing the OE document encapsulated by the server.
 
 **Since**: 24
 

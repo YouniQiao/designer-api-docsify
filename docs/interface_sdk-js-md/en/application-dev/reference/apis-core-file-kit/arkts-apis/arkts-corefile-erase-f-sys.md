@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@ohos.file.volumeManager';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## erase

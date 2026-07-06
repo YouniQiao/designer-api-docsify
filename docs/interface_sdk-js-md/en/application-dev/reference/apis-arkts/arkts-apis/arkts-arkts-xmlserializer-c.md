@@ -9,7 +9,7 @@ The XmlSerializer interface is used to generate an xml file.
 ## Modules to Import
 
 ```TypeScript
-import { xml } from '@ohos.xml';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## addEmptyElement

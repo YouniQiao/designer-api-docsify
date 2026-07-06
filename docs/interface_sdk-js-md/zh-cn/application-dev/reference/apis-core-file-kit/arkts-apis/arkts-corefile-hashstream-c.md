@@ -2,7 +2,7 @@
 
 HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createHash](arkts-corefile-createhash-f.md#createhash-1) 接口获得。
 
-**继承/实现关系：** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-transform-c.md#transform)
+**继承/实现关系：** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-transform-c.md)
 
 **起始版本：** 12
 

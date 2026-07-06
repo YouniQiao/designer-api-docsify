@@ -9,7 +9,7 @@ UI font configuration of the system.
 ## Modules to Import
 
 ```TypeScript
-import { font } from '@ohos.font';
+import { font } from '@kit.ArkUI';
 ```
 
 ## fallback

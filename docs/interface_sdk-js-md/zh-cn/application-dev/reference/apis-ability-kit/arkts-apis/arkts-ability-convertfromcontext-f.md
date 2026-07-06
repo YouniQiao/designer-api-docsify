@@ -26,7 +26,7 @@ function convertFromContext(context: common.Context): SendableContext
 
 | 类型 | 说明 |
 | --- | --- |
-| SendableContext | [SendableContext](arkts-ability-sendablecontext-i.md#sendablecontext)对象。 |
+| SendableContext | [SendableContext](arkts-ability-sendablecontext-i.md)对象。 |
 
 **错误码：**
 

@@ -6,7 +6,7 @@
 function closeAccessory(accessoryHandle: USBAccessoryHandle): void
 ```
 
-关闭配件文件描述符。 需要调用[usbManager.openAccessory](arkts-basicservices-openaccessory-f.md#openaccessory-1)获取配件列表，得到 [USBAccessoryHandle](arkts-basicservices-usbaccessoryhandle-i.md#usbaccessoryhandle)作为参数。
+关闭配件文件描述符。 需要调用[usbManager.openAccessory](arkts-basicservices-openaccessory-f.md#openaccessory-1)获取配件列表，得到 [USBAccessoryHandle](arkts-basicservices-usbaccessoryhandle-i.md)作为参数。
 
 **起始版本：** 14
 
@@ -23,7 +23,7 @@ function closeAccessory(accessoryHandle: USBAccessoryHandle): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 | [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) | Service exception. Possible causes:<br>1. No accessory is plugged in. |
 
 **示例：**

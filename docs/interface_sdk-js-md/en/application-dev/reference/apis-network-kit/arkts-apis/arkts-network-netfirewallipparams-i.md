@@ -9,7 +9,7 @@ Firewall IP parameters.
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from '@ohos.net.netFirewall';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## address

@@ -1,6 +1,6 @@
 # InsightIntentContext
 
-本模块提供意图执行上下文，是[意图执行基类](arkts-ability-insightintentexecutor-c.md#insightintentexecutor)和 [@InsightIntentEntry的意图执行基类](arkts-ability-insightintententryexecutor-c.md#insightintententryexecutor)的属性，为意图执行提 供基础能力，例如启动本应用内的[UIAbility组件](arkts-app-ability-uiability.md)。
+本模块提供意图执行上下文，是[意图执行基类](arkts-ability-insightintentexecutor-c.md)和 [@InsightIntentEntry的意图执行基类](arkts-ability-insightintententryexecutor-c.md)的属性，为意图执行提 供基础能力，例如启动本应用内的[UIAbility组件](arkts-app-ability-uiability.md)。
 
 **起始版本：** 11
 
@@ -12,7 +12,7 @@
 setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 ```
 
-设置意图执行结果的返回形式，适用于执行模式为[UI_ABILITY_FOREGROUND](arkts-ability-executemode-e.md#executemode)的意图。
+设置意图执行结果的返回形式，适用于执行模式为[UI_ABILITY_FOREGROUND](arkts-ability-executemode-e.md)的意图。
 
 **起始版本：** 23
 
@@ -84,7 +84,7 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 ```
 
-设置意图执行结果的返回形式，适用于执行模式为[UI_EXTENSION_ABILITY](arkts-ability-executemode-e.md#executemode)的意图。
+设置意图执行结果的返回形式，适用于执行模式为[UI_EXTENSION_ABILITY](arkts-ability-executemode-e.md)的意图。
 
 **起始版本：** 23
 

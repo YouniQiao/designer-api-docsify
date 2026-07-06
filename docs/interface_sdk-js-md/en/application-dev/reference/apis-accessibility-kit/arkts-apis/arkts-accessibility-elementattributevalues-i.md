@@ -208,7 +208,7 @@ Index of the current item. Default value: **0**.
 customComponentType?: string
 ```
 
-Custom component type. It corresponds to [AccessibilityRoleType Enumeration Description](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#accessibilityroletype) of the element.
+Custom component type. It corresponds to [AccessibilityRoleType Enumeration Description](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md) of the element.
 
 **Type:** string
 

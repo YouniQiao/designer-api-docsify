@@ -9,7 +9,7 @@ Provides the capability of simulating key operations. The simulated key operatio
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@ohos.multimodalInput.inputEventClient';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## pressKey

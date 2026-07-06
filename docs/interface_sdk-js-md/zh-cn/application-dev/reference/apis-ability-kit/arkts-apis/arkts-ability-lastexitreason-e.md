@@ -126,7 +126,7 @@ PERFORMANCE_CONTROL = 6
 RESOURCE_CONTROL = 7
 ```
 
-系统资源使用不当导致的应用程序退出。具体错误原因可以通过[LaunchParam.lastExitMessage](arkts-ability-launchparam-i.md#launchparam)获取，可能原因如下: - CPU Highload，CPU高负载。 - CPU_EXT Highload，快速CPU负载检测。 - IO Manage Control，I/O管控。 - App Memory Deterioration，应用内存超限劣化。 - Temperature Control，温度管控。 - Memory Pressure，整机低内存触发按优先级由低到高终止进程。
+系统资源使用不当导致的应用程序退出。具体错误原因可以通过[LaunchParam.lastExitMessage](arkts-ability-launchparam-i.md)获取，可能原因如下: - CPU Highload，CPU高负载。 - CPU_EXT Highload，快速CPU负载检测。 - IO Manage Control，I/O管控。 - App Memory Deterioration，应用内存超限劣化。 - Temperature Control，温度管控。 - Memory Pressure，整机低内存触发按优先级由低到高终止进程。
 
 **起始版本：** 10
 

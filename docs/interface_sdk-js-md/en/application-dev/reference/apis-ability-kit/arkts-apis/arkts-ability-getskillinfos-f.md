@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from '@ohos.bundle.skillManager';
+import { skillManager } from '@kit.AbilityKit';
 ```
 
 ## getSkillInfos

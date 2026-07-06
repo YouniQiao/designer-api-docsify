@@ -9,7 +9,7 @@ The **cloudSync** module provides the device-cloud sync capabilities for applica
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@ohos.file.cloudSync';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -62,9 +62,9 @@ import { cloudSync } from '@ohos.file.cloudSync';
 | [ChangeData](arkts-corefile-changedata-i.md) | Represents the data change information. |
 | [DownloadProgress](arkts-corefile-downloadprogress-i.md) | Represents information about the download progress of a cloud file. |
 | [FailedFileInfo](arkts-corefile-failedfileinfo-i.md) | Represents a list of files that fail to be downloaded from the Drive Kit and failure causes. |
-| [HistoryVersion](arkts-corefile-historyversion-i.md) | Represents the historical version information of the device-cloud file when the [gethistoryversionlist](arkts-corefile-fileversion-c.md#gethistoryversionlist-1) method of the [FileVersion](arkts-corefile-fileversion-c.md#fileversion) class is called. |
+| [HistoryVersion](arkts-corefile-historyversion-i.md) | Represents the historical version information of the device-cloud file when the [gethistoryversionlist](arkts-corefile-fileversion-c.md#gethistoryversionlist-1) method of the [FileVersion](arkts-corefile-fileversion-c.md) class is called. |
 | [SyncProgress](arkts-corefile-syncprogress-i.md) | Represents information about the device-cloud sync progress. |
-| [VersionDownloadProgress](arkts-corefile-versiondownloadprogress-i.md) | Represents the download state and progress information of historical version files when the [downloadHistoryVersion](arkts-corefile-fileversion-c.md#downloadhistoryversion-1) method of the [FileVersion](arkts-corefile-fileversion-c.md#fileversion) class is called. |
+| [VersionDownloadProgress](arkts-corefile-versiondownloadprogress-i.md) | Represents the download state and progress information of historical version files when the [downloadHistoryVersion](arkts-corefile-fileversion-c.md#downloadhistoryversion-1) method of the [FileVersion](arkts-corefile-fileversion-c.md) class is called. |
 
 <!--Del-->
 ### Interfaces（系统接口）

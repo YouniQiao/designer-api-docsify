@@ -2,7 +2,7 @@
 
 Represents the cloud asset information.
 
-**Inheritance/Implementation:** CloudAsset extends [relationalStore.Asset](arkts-arkdata-asset-i.md#asset)
+**Inheritance/Implementation:** CloudAsset extends [relationalStore.Asset](arkts-arkdata-asset-i.md)
 
 **Since:** 11
 
@@ -13,7 +13,7 @@ Represents the cloud asset information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@ohos.data.cloudExtension';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## assetId

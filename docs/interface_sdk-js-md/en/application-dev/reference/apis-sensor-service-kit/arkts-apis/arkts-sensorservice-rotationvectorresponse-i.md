@@ -1,8 +1,8 @@
 # RotationVectorResponse
 
-Describes the rotation vector sensor data. It extends from [Response](arkts-sensorservice-response-i.md#response).
+Describes the rotation vector sensor data. It extends from [Response](arkts-sensorservice-response-i.md).
 
-**Inheritance/Implementation:** RotationVectorResponse extends [Response](arkts-sensorservice-response-i.md#response)
+**Inheritance/Implementation:** RotationVectorResponse extends [Response](arkts-sensorservice-response-i.md)
 
 **Since:** 8
 
@@ -11,7 +11,7 @@ Describes the rotation vector sensor data. It extends from [Response](arkts-sens
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@ohos.sensor';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## w

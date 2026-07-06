@@ -9,7 +9,7 @@ Represents data of the HTML type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@ohos.data.uniformDataStruct';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## details
@@ -66,7 +66,7 @@ Plaintext without HTML tags. This parameter is optional. By default, it is an em
 readonly uniformDataType: 'general.html'
 ```
 
-Uniform data type, which has a fixed value of **general.html**. For details, see [UniformDataType](arkts-arkdata-uniformdatatype-e.md#uniformdatatype).
+Uniform data type, which has a fixed value of **general.html**. For details, see [UniformDataType](arkts-arkdata-uniformdatatype-e.md).
 
 **Type:** 'general.html'
 

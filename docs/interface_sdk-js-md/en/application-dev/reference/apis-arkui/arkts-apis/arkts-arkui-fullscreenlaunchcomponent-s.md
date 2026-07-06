@@ -9,7 +9,7 @@ Declares the FullScreenLaunchComponent, a component provided by ArkUI that allow
 ## Modules to Import
 
 ```TypeScript
-import { FullScreenLaunchComponent } from '@ohos.arkui.advanced.FullScreenLaunchComponent';
+import { FullScreenLaunchComponent } from '@kit.ArkUI';
 ```
 
 ## appId
@@ -40,7 +40,7 @@ Sets the component content.
 
 **Since:** 12
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

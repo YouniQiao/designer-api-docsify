@@ -9,7 +9,7 @@ The message received or sent from web message port.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArray

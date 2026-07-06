@@ -1,6 +1,6 @@
 # URIErrorConstructor
 
-**Inheritance/Implementation:** URIErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md#errorconstructor)
+**Inheritance/Implementation:** URIErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md)
 
 ## constructor
 

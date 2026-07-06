@@ -9,7 +9,7 @@ ArrayList is a linear data structure that is implemented based on arrays. ArrayL
 ## Modules to Import
 
 ```TypeScript
-import { ArrayList } from '@ohos.util.ArrayList';
+import { ArrayList } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

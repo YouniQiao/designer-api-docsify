@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from '@ohos.PiPWindow';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## isPiPEnabled

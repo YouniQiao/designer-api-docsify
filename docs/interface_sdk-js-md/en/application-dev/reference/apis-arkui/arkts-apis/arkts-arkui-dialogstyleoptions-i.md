@@ -2,7 +2,7 @@
 
 Options for the fixed-style dialog.
 
-**Inheritance/Implementation:** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialogbaseoptions-i.md#dialogbaseoptions)
+**Inheritance/Implementation:** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialogbaseoptions-i.md)
 
 **Since:** 26.1.0
 
@@ -11,7 +11,7 @@ Options for the fixed-style dialog.
 ## Modules to Import
 
 ```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@ohos.arkui.dialog';
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
 ```
 
 ## buttonDirection

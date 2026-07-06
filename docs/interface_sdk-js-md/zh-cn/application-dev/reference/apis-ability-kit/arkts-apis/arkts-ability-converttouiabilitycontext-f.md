@@ -26,7 +26,7 @@ function convertToUIAbilityContext(sendableContext: SendableContext): common.UIA
 
 | 类型 | 说明 |
 | --- | --- |
-| common.UIAbilityContext | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#uiabilitycontext)object. |
+| common.UIAbilityContext | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)object. |
 
 **错误码：**
 

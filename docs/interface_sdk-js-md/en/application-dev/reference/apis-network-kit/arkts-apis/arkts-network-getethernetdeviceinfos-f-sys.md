@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@ohos.net.ethernet';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## getEthernetDeviceInfos

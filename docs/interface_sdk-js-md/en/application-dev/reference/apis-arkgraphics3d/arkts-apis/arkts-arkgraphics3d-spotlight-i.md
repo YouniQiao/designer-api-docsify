@@ -2,7 +2,7 @@
 
 Defines spot light.
 
-**Inheritance/Implementation:** SpotLight extends [Light](arkts-arkgraphics3d-light-i.md#light)
+**Inheritance/Implementation:** SpotLight extends [Light](arkts-arkgraphics3d-light-i.md)
 
 **Since:** 12
 

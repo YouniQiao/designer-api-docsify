@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## getAllWindowLayoutInfo
@@ -24,7 +24,7 @@ Obtains the layout information array of all windows visible on a display. The la
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | ID of the display where the windows are located. The value must be an integer and canbe obtained from [WindowProperties](arkts-arkui-windowproperties-i.md#windowproperties). |
+| displayId | number | Yes | ID of the display where the windows are located. The value must be an integer and canbe obtained from [WindowProperties](arkts-arkui-windowproperties-i.md). |
 
 **Return value:**
 

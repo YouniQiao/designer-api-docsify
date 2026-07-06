@@ -9,7 +9,7 @@ Declare the SubHeaderV2OperationItem
 ## Modules to Import
 
 ```TypeScript
-import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2OperationItemType, SubHeaderV2OperationType, SubHeaderV2Title, SubHeaderV2OperationItem } from '@ohos.arkui.advanced.SubHeaderV2';
+import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2OperationItemType, SubHeaderV2OperationType, SubHeaderV2Title, SubHeaderV2OperationItem } from '@kit.ArkUI';
 ```
 
 ## constructor

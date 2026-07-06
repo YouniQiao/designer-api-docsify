@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@ohos.taskpool';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## executeDelayed
@@ -39,10 +39,10 @@ Executes a task after a given delay. In this execution mode, you can set the tas
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) | The delayTime is less than zero. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization.<br>**Applicable version:** 12 |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent.<br>**Applicable version:** 12 |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization.<br>**Applicable version:** 12 and later |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent.<br>**Applicable version:** 12 and later |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
 
 **Example**
 
@@ -101,7 +101,7 @@ Executes the generic task with a delay without verifying the parameter type and 
 | --- | --- |
 | [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) | The delayTime is less than zero. |
 | [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
 
 **Example**
 

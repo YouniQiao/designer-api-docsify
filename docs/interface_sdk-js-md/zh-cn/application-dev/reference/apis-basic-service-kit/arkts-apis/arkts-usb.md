@@ -1,12 +1,12 @@
 # @ohos.usb
 
-本模块主要提供管理USB设备的相关功能，包括查询USB设备列表、批量数据传输、控制命令传输、权限控制等。 > **说明：** > > 本模块首批接口从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > 从API version 9开始，该接口不再维护，推荐使用新接口[@ohos.usbManager](arkts-usbmanager.md#usbmanager)。
+本模块主要提供管理USB设备的相关功能，包括查询USB设备列表、批量数据传输、控制命令传输、权限控制等。 > **说明：** > > 本模块首批接口从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > 从API version 9开始，该接口不再维护，推荐使用新接口[@ohos.usbManager](arkts-usbmanager.md)。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [usbManager:usbManager](arkts-usbmanager.md#usbmanager)
+**替代接口：** [usbManager:usbManager](arkts-usbmanager.md)
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -48,12 +48,12 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [USBConfig](arkts-basicservices-usbconfig-i.md) | USB配置，一个[USBDevice](arkts-basicservices-usbdevice-i.md#usbdevice)中可以含有多个配置。 |
+| [USBConfig](arkts-basicservices-usbconfig-i.md) | USB配置，一个[USBDevice](arkts-basicservices-usbdevice-i.md)中可以含有多个配置。 |
 | [USBControlParams](arkts-basicservices-usbcontrolparams-i.md) | 控制传输参数。 |
 | [USBDevice](arkts-basicservices-usbdevice-i.md) | USB设备信息。 |
 | [USBDevicePipe](arkts-basicservices-usbdevicepipe-i.md) | USB设备消息传输通道，用于确定设备。 |
-| [USBEndpoint](arkts-basicservices-usbendpoint-i.md) | 通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usbinterface-i.md#usbinterface)获取。 |
-| [USBInterface](arkts-basicservices-usbinterface-i.md) | 一个[USBConfig](arkts-basicservices-usbconfig-i.md#usbconfig)中可以含有多个USBInterface，每个USBInterface提供一个功能。 |
+| [USBEndpoint](arkts-basicservices-usbendpoint-i.md) | 通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usbinterface-i.md)获取。 |
+| [USBInterface](arkts-basicservices-usbinterface-i.md) | 一个[USBConfig](arkts-basicservices-usbconfig-i.md)中可以含有多个USBInterface，每个USBInterface提供一个功能。 |
 
 <!--Del-->
 ### 接口（系统接口）

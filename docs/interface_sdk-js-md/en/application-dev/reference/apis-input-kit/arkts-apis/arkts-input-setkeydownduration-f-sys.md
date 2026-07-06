@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortKey } from '@ohos.multimodalInput.shortKey';
+import { shortKey } from '@kit.InputKit';
 ```
 
 ## setKeyDownDuration

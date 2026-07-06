@@ -9,7 +9,7 @@ Provides methods to accessing bluetooth PAN(Personal Area Networking Profile)-re
 ## Modules to Import
 
 ```TypeScript
-import { pan } from '@ohos.bluetooth.pan';
+import { pan } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

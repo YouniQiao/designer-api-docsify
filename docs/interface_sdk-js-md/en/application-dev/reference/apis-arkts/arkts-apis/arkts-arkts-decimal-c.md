@@ -9,7 +9,7 @@ An arbitrary-precision Decimal type
 ## Modules to Import
 
 ```TypeScript
-import { Decimal } from '@arkts.math.Decimal';
+import { Decimal } from '@kit.ArkTS';
 ```
 
 ## abs
@@ -2061,7 +2061,7 @@ Return the sign of the passed value to the method. 1 if x > 0, -1 if x < 0, 0 if
 | Type | Description |
 | --- | --- |
 | Decimal | the Decimal type<br>**Applicable version:** 12 - 17 |
-| number | the Decimal type<br>**Applicable version:** 18 |
+| number | the Decimal type<br>**Applicable version:** 18 and later |
 
 **Error codes:**
 

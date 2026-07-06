@@ -9,7 +9,7 @@ Declare Color options interface of the ProgressButtonV2.
 ## Modules to Import
 
 ```TypeScript
-import { ProgressButtonV2, ProgressButtonV2ColorOptions, ProgressButtonV2Color } from '@ohos.arkui.advanced.ProgressButtonV2';
+import { ProgressButtonV2, ProgressButtonV2ColorOptions, ProgressButtonV2Color } from '@kit.ArkUI';
 ```
 
 ## backgroundColor

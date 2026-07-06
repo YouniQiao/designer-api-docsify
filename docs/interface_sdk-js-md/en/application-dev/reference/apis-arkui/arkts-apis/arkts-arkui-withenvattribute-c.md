@@ -9,7 +9,7 @@ Define the WithEnv attribute functions.
 ## Modules to Import
 
 ```TypeScript
-import { WithEnvAttribute, WithEnv } from '@ohos.arkui.WithEnv';
+import { WithEnvAttribute, WithEnv } from '@kit.ArkUI';
 ```
 
 ## customEnv

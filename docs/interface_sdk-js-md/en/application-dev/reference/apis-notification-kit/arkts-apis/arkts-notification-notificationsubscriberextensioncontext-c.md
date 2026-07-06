@@ -2,7 +2,7 @@
 
 The **NotificationSubscriberExtensionContext** module provides the context for the **NotificationSubscriberExtensionAbility**. > **NOTE** > > The APIs of this module can be used only in the stage model.
 
-**Inheritance/Implementation:** NotificationSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext)
+**Inheritance/Implementation:** NotificationSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 22
 
@@ -13,6 +13,6 @@ The **NotificationSubscriberExtensionContext** module provides the context for t
 ## Modules to Import
 
 ```TypeScript
-import { NotificationSubscriberExtensionContext } from '@ohos.application.NotificationSubscriberExtensionContext';
+import { NotificationSubscriberExtensionContext } from '@kit.NotificationKit';
 ```
 

@@ -1,8 +1,8 @@
 # ForegroundBlurStyleOptions
 
-继承自[BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#blurstyleoptions)，设置内容模糊选项。
+继承自[BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)，设置内容模糊选项。
 
-**继承/实现关系：** ForegroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#blurstyleoptions)
+**继承/实现关系：** ForegroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)
 
 **起始版本：** 11
 

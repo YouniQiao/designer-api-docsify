@@ -9,7 +9,7 @@ Provides basic parameters for creating an **ArcList** component.
 ## Modules to Import
 
 ```TypeScript
-import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@ohos.arkui.ArcList';
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
 ```
 
 ## header

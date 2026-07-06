@@ -9,7 +9,7 @@ Object used to abort an async operation. An instance of this class must be acces
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from '@arkts.utils';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## aborted

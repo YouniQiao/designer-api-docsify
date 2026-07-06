@@ -1,8 +1,8 @@
 # File
 
-Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md#unifiedrecord) and a base class of the data of the file type. You are advised to use the child class of **File**, for example, [Image](arkts-arkdata-image-c.md#image), [Video](arkts-arkdata-video-c.md#video), and [Folder](arkts-arkdata-folder-c.md#folder), to describe data.
+Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md) and a base class of the data of the file type. You are advised to use the child class of **File**, for example, [Image](arkts-arkdata-image-c.md), [Video](arkts-arkdata-video-c.md), and [Folder](arkts-arkdata-folder-c.md), to describe data.
 
-**Inheritance/Implementation:** File extends [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md#unifiedrecord)
+**Inheritance/Implementation:** File extends [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-u
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@ohos.data.unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## details

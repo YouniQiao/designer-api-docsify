@@ -13,7 +13,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [AbilityResult](arkts-ability-abilityresult-t.md) | 定义Ability被拉起并退出后返回的结果码和数据。 |
-| [AbilityStageContext](arkts-ability-abilitystagecontext-t.md) | [AbilityStage](arkts-ability-abilitystage-c.md#abilitystage)组件上下文，继承自Context。 |
+| [AbilityStageContext](arkts-ability-abilitystagecontext-t.md) | [AbilityStage](arkts-ability-abilitystage-c.md)组件上下文，继承自Context。 |
 | [AbilityStartCallback](arkts-ability-abilitystartcallback-t.md) | 定义了拉起UIExtensionAbility的回调结果，通常作为 [UIAbilityContext.startAbilityByType](arkts-ability-uiabilitycontext-c.md#startabilitybytype-1) / [UIExtensionContext.startAbilityByType](arkts-ability-uiextensioncontentsession-c.md#startabilitybytype-1) 的入参传入。 |
 | [AgentAppInfo](arkts-ability-agentappinfo-t.md) | agent的应用程序相关信息。 |
 | [AgentCapabilities](arkts-ability-agentcapabilities-t.md) | AgentCard中的功能表示特定的skills、服务和功能 agent可以在系统内执行或提供。 |
@@ -27,16 +27,16 @@
 | [BaseContext](arkts-ability-basecontext-t.md) | 所有Context类型的父类。 |
 | [ConnectOptions](arkts-ability-connectoptions-t.md) | 在连接指定的后台服务时作为入参，用于接收与后台服务的连接状态。 |
 | [Context](arkts-ability-context-t.md) | [Stage模型](../../../../application-models/ability-terminology.md#stage模型)的上下文基类。 |
-| [EmbeddableUIAbilityContext](arkts-ability-embeddableuiabilitycontext-t.md) | [EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md#embeddableuiability)组件上下文，继承自Context。 |
+| [EmbeddableUIAbilityContext](arkts-ability-embeddableuiabilitycontext-t.md) | [EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md)组件上下文，继承自Context。 |
 | [EventHub](arkts-ability-eventhub-t.md) | EventHub是系统提供的基于发布-订阅模式实现的事件通信机制。 |
-| [ExtensionContext](arkts-ability-extensioncontext-t.md) | [ExtensionAbility](arkts-ability-extensionability-c.md#extensionability)组件上下文，继承自Context。 |
+| [ExtensionContext](arkts-ability-extensioncontext-t.md) | [ExtensionAbility](arkts-ability-extensionability-c.md)组件上下文，继承自Context。 |
 | [FormEditExtensionContext](arkts-ability-formeditextensioncontext-t.md) | The context of form edit extension. It allows access to formEditExtension-specific resources. |
 | [FormExtensionContext](arkts-ability-formextensioncontext-t.md) | The context of form extension. It allows access to formExtension-specific resources. |
 | [LiveFormExtensionContext](arkts-ability-liveformextensioncontext-t.md) | The context of live form extension. It allows access to liveFormExtension-specific resources. |
 | [PacMap](arkts-ability-pacmap-t.md) | 存储基础数据类型的容器。 |
 | [PhotoEditorExtensionContext](arkts-ability-photoeditorextensioncontext-t.md) | The context of an photo editor extension ability. |
 | [UIAbilityContext](arkts-ability-uiabilitycontext-t.md) | [UIAbility](arkts-app-ability-uiability.md)组件上下文，继承自Context。 |
-| [UIExtensionContext](arkts-ability-uiextensioncontext-t.md) | [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability)组件上下文，继承自Context。 |
+| [UIExtensionContext](arkts-ability-uiextensioncontext-t.md) | [UIExtensionAbility](arkts-ability-uiextensionability-c.md)组件上下文，继承自Context。 |
 | [UIServiceExtensionConnectCallback](arkts-ability-uiserviceextensionconnectcallback-t.md) | 在连接指定的UIServiceExtensionAbility服务时作为入参，用于提供UIServiceExtensionAbility连接回调数据能力。 |
 | [UIServiceProxy](arkts-ability-uiserviceproxy-t.md) | UIServiceProxy提供了与UIServiceExtensionAbility服务端数据通信的能力。UIServiceExtensionAbility是一类特殊的ExtensionAbility组件，这类组件由系统提供，通 常用于提供浮窗组件相关扩展能力。 |
 | [VpnExtensionContext](arkts-ability-vpnextensioncontext-t.md) | The context of vpn extension. It allows access to vpnExtension-specific resources. The class of auto startup info. |

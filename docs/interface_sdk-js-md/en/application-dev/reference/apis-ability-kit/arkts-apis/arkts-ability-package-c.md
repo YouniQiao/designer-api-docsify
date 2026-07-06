@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } from '@system.package';
+import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } from '@kit.AbilityKit';
 ```
 
 ## hasInstalled

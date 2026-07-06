@@ -11,7 +11,7 @@ for interrupting batch operations.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@ohos.file.photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancel

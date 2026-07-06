@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemDateTime } from '@ohos.systemDateTime';
+import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
 ## setAutoTimeStatus
@@ -41,7 +41,7 @@ Sets the status of the automatic time setting. This API uses a promise to return
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-network-or-os-error) | Network connection error or OS error. Possible causes:1. System memory is insufficient;2. Calls the underlying system interface failed. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 26.0.0 |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 

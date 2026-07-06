@@ -9,7 +9,7 @@ Describes detail of the cloud sync {@code Progress}.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@ohos.data.relationalStore';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## code

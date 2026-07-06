@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wearDetection } from '@ohos.bluetooth.wearDetection';
+import { wearDetection } from '@kit.ConnectivityKit';
 ```
 
 ## disableWearDetection

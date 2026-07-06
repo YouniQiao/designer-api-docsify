@@ -217,6 +217,7 @@ NAPI_EXTERN napi_status napi_queue_async_work_with_qos(napi_env env, napi_async_
 | [NAPI_EXTERN napi_status napi_delete_callsite_info(napi_env env, napi_callsite_info info)](#napi_delete_callsite_info) | - | Deletes a callsite info handle and releases associated cache resources. |
 | [NAPI_EXTERN napi_status napi_get_property_with_callsite_info(napi_env env, napi_value object, napi_value key, napi_callsite_info info, napi_value* result, bool* hit)](#napi_get_property_with_callsite_info) | - | Uses callsite info to quickly get an object property value. When the IC hits (the object has the samehidden class), it skips the regular hash table lookup and prototype chain traversal. The info parametercan be NULL, in which case the behavior is equivalent to napi_get_property. |
 | [NAPI_EXTERN napi_status napi_set_property_with_callsite_info(napi_env env, napi_value object, napi_value key, napi_value value, napi_callsite_info info, bool* hit)](#napi_set_property_with_callsite_info) | - | Uses callsite info to quickly set an object property value. When the IC hits (the object has the samehidden class), it skips the regular property setting process. The info parameter can be NULL, in whichcase the behavior is equivalent to napi_set_property. |
+| [NAPI_EXTERN napi_status napi_get_global_handle_count(napi_env env, size_t* count)](#napi_get_global_handle_count) | - | To obtain the count of global object in current ArkTS runtime thread. |
 
 ## Function description
 
@@ -5072,5 +5073,30 @@ Uses callsite info to quickly set an object property value. When the IC hits (th
 | Type | Description |
 | -- | -- |
 | NAPI_EXTERN napi_status | Returns the function execution status.<br>         {@link napi_ok } If the function executed successfully.<br>         {@link napi_invalid_arg } If env, object, key or value is nullptr.<br>         {@link napi_object_expected } If the param object is not an ArkTS Object.<br>         {@link napi_pending_exception } If have uncaught exception, or exception occurred in execution. |
+
+### napi_get_global_handle_count()
+
+```c
+NAPI_EXTERN napi_status napi_get_global_handle_count(napi_env env, size_t* count)
+```
+
+**Description**
+
+To obtain the count of global object in current ArkTS runtime thread.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| napi_env env | Current running virtual machine context. |
+| size_t* count | The count number of global object. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| NAPI_EXTERN napi_status | Returns the function execution status.<br>         <ul><li>{@link napi_ok } If the function executed successfully.</li><br>         <li>{@link napi_invalid_arg } If env or count is nullptr.</li><br>         <li>{@link napi_pending_exception } There is an uncaught exception occurred before execution.</li></ul> |
 
 

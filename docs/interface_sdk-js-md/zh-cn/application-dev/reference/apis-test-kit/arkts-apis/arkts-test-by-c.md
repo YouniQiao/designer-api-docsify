@@ -6,7 +6,7 @@ UiTest框架在**By**类中提供了丰富的UI组件特征描述API，用于过
 
 **废弃版本：** 9
 
-**替代接口：** [On](arkts-test-on-c.md#on)
+**替代接口：** [On](arkts-test-on-c.md)
 
 **系统能力：** SystemCapability.Test.UiTest
 

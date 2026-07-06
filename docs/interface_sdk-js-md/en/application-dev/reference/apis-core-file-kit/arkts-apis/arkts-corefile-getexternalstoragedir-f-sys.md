@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Environment } from '@ohos.file.environment';
+import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## getExternalStorageDir

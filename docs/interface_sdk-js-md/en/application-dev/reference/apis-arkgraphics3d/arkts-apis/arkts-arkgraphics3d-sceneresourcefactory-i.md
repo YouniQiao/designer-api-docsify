@@ -2,7 +2,7 @@
 
 The scene resource factory.
 
-**Inheritance/Implementation:** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-renderresourcefactory-i.md#renderresourcefactory)
+**Inheritance/Implementation:** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-renderresourcefactory-i.md)
 
 **Since:** 12
 

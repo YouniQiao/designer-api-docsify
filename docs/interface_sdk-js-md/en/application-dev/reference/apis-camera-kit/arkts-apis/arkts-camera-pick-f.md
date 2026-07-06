@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cameraPicker } from '@ohos.multimedia.cameraPicker';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## pick
@@ -32,7 +32,7 @@ Starts the camera picker and enters the corresponding mode based on the media ty
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PickerResult&gt; | Promise used to return the processing result ([PickerResult](arkts-camera-pickerresult-c.md#pickerresult)) of the camera picker. |
+| Promise&lt;PickerResult&gt; | Promise used to return the processing result ([PickerResult](arkts-camera-pickerresult-c.md)) of the camera picker. |
 
 **Example**
 

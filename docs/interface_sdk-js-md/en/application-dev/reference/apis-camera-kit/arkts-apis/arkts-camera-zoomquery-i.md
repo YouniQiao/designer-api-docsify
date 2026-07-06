@@ -9,7 +9,7 @@ Provides the API to obtain the equivalent focal length information list in the c
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getRAWCaptureZoomRatioRange
@@ -59,7 +59,7 @@ Obtains the supported zoom ratio range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails,undefined is returned and an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is thrown. |
+| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails,undefined is returned and an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 

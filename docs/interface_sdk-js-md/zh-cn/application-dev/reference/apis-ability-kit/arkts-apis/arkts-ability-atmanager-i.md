@@ -287,7 +287,7 @@ try {
 openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>
 ```
 
-用于[UIAbility](arkts-ability-uiability-c.md#uiability)/ [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability)拉起权限设置页面。调用成功后会打开权限设置页面，用户在页面中 操作后，返回用户在设置页面中的选择结果。使用Promise异步回调。 适用于 [manual_settings](../../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings手动设置授权) 类型权限无法通过普通授权弹窗申请、必须引导用户进入系统设置完成授权的场景。manual_settings类型权限是指只能由用户在系统设置中手动开启的权限，无法通过普通授权弹窗直接申请。
+用于[UIAbility](arkts-ability-uiability-c.md)/ [UIExtensionAbility](arkts-ability-uiextensionability-c.md)拉起权限设置页面。调用成功后会打开权限设置页面，用户在页面中 操作后，返回用户在设置页面中的选择结果。使用Promise异步回调。 适用于 [manual_settings](../../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings手动设置授权) 类型权限无法通过普通授权弹窗申请、必须引导用户进入系统设置完成授权的场景。manual_settings类型权限是指只能由用户在系统设置中手动开启的权限，无法通过普通授权弹窗直接申请。
 
 **起始版本：** 22
 
@@ -381,7 +381,7 @@ requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>
 requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>
 ```
 
-用于[UIAbility](arkts-ability-uiability-c.md#uiability)/ [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability)二次拉起权限设置弹窗，返回授权状态数组。使用Promise异 步回调。 适用于用户在首次弹窗中已拒绝过该权限授予，需要通过设置页面继续申请权限的场景。 在调用此接口前，应用需要先调用 [requestPermissionsFromUser](arkts-ability-atmanager-i.md#requestpermissionsfromuser-1)。 如果用户已在首次弹窗中授权，则调用当前接口不会拉起授权弹窗。 <!--RP4--> ![requestPermissionOnSetting](../../../../reference/apis-ability-kit/figures/requestPermissionOnSetting.png) <!--RP4End-->
+用于[UIAbility](arkts-ability-uiability-c.md)/ [UIExtensionAbility](arkts-ability-uiextensionability-c.md)二次拉起权限设置弹窗，返回授权状态数组。使用Promise异 步回调。 适用于用户在首次弹窗中已拒绝过该权限授予，需要通过设置页面继续申请权限的场景。 在调用此接口前，应用需要先调用 [requestPermissionsFromUser](arkts-ability-atmanager-i.md#requestpermissionsfromuser-1)。 如果用户已在首次弹窗中授权，则调用当前接口不会拉起授权弹窗。 <!--RP4--> ![requestPermissionOnSetting](../../../../reference/apis-ability-kit/figures/requestPermissionOnSetting.png) <!--RP4End-->
 
 **起始版本：** 12
 
@@ -413,7 +413,7 @@ requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>)
 | [12100010](../errorcode-access-token.md#12100010-存在未被处理的请求) | The request already exists.<br>**适用版本：** 12 - 20 |
 | [12100011](../errorcode-access-token.md#12100011-输入的所有权限均已被授权) | All permissions in the permission list have been granted. |
 | [12100012](../errorcode-access-token.md#12100012-输入的权限中存在未被用户拒绝过的权限) | The permission list contains the permission that has not beenrevoked by the user. |
-| [12100014](../errorcode-access-token.md#12100014-非预期的权限) | Unexpected permission. You cannot request this type of permissionfrom users via a pop-up window.<br>**适用版本：** 21 |
+| [12100014](../errorcode-access-token.md#12100014-非预期的权限) | Unexpected permission. You cannot request this type of permissionfrom users via a pop-up window.<br>**适用版本：** 21+ |
 
 ## requestPermissionsFromUser
 
@@ -421,7 +421,7 @@ requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>)
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void
 ```
 
-用于<!--RP1-->[UIAbility](arkts-ability-uiability-c.md#uiability)<!--RP1End-->拉起弹窗请求 [用户授权](../../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用callback异步回调。 适用于应用首次访问受保护资源前主动向用户申请 [user_grant](../../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant用户授权) 权限的场景。 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用 [requestPermissionOnSetting](arkts-ability-atmanager-i.md#requestpermissiononsetting-1)拉起权限设置弹窗，引导用户完成授权。 <!--RP3--> ![requestPermissionsFromUser](../../../../reference/apis-ability-kit/figures/requestPermissionsFromUser.png) <!--RP3End-->
+用于<!--RP1-->[UIAbility](arkts-ability-uiability-c.md)<!--RP1End-->拉起弹窗请求 [用户授权](../../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用callback异步回调。 适用于应用首次访问受保护资源前主动向用户申请 [user_grant](../../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant用户授权) 权限的场景。 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用 [requestPermissionOnSetting](arkts-ability-atmanager-i.md#requestpermissiononsetting-1)拉起权限设置弹窗，引导用户完成授权。 <!--RP3--> ![requestPermissionsFromUser](../../../../reference/apis-ability-kit/figures/requestPermissionsFromUser.png) <!--RP3End-->
 
 **起始版本：** 9
 
@@ -480,7 +480,7 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: 
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>
 ```
 
-用于<!--RP1-->[UIAbility](arkts-ability-uiability-c.md#uiability)<!--RP1End-->拉起弹窗请求 [用户授权](../../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用Promise异步回调。 适用于应用首次访问受保护资源前主动向用户申请user_grant权限的场景。 > **说明** > 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用 > [requestPermissionOnSetting](arkts-ability-atmanager-i.md#requestpermissiononsetting-1)拉起权限设置弹窗，引导用户完成授权。
+用于<!--RP1-->[UIAbility](arkts-ability-uiability-c.md)<!--RP1End-->拉起弹窗请求 [用户授权](../../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用Promise异步回调。 适用于应用首次访问受保护资源前主动向用户申请user_grant权限的场景。 > **说明** > 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用 > [requestPermissionOnSetting](arkts-ability-atmanager-i.md#requestpermissiononsetting-1)拉起权限设置弹窗，引导用户完成授权。
 
 **起始版本：** 9
 
@@ -509,7 +509,7 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>)
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are leftunspecified; 2. Incorrect parameter types. |
 | [12100001](../errorcode-access-token.md#12100001-入参错误) | (Deprecated in 12) Invalid parameter. The context is invalid when itdoes not belong to the application itself. |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window orobtaining the user operation result.<br>**适用版本：** 11 |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window orobtaining the user operation result.<br>**适用版本：** 11+ |
 
 **示例：**
 

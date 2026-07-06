@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DataShareExtensionAbility } from '@ohos.application.DataShareExtensionAbility';
+import { DataShareExtensionAbility } from '@kit.ArkData';
 ```
 
 ## Summary

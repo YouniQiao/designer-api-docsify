@@ -2,7 +2,7 @@
 
 Define a sphere.
 
-**Inheritance/Implementation:** SphereGeometry extends [GeometryDefinition](arkts-arkgraphics3d-geometrydefinition-c.md#geometrydefinition)
+**Inheritance/Implementation:** SphereGeometry extends [GeometryDefinition](arkts-arkgraphics3d-geometrydefinition-c.md)
 
 **Since:** 18
 

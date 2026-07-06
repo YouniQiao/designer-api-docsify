@@ -2,7 +2,7 @@
 
 Manager handsfree AG profile.
 
-**Inheritance/Implementation:** HandsFreeAudioGatewayProfile extends [BaseProfile](arkts-connectivity-baseprofile-i.md#baseprofile)
+**Inheritance/Implementation:** HandsFreeAudioGatewayProfile extends [BaseProfile](arkts-connectivity-baseprofile-i.md)
 
 **Since:** 9
 
@@ -15,7 +15,7 @@ Manager handsfree AG profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@ohos.bluetoothManager';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## connect
@@ -34,7 +34,7 @@ Connect to device with hfp. On API 10 and above, the permission required by this
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
-- API version 9 - 9: ohos.permission.DISCOVER_BLUETOOTH
+- API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -85,7 +85,7 @@ Disconnect to device with hfp. On API 10 and above, the permission required by t
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
-- API version 9 - 9: ohos.permission.DISCOVER_BLUETOOTH
+- API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

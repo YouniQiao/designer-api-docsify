@@ -28,7 +28,7 @@ Account ID, which must be greater than or equal to 0. You can call [getOsAccount
 appIdentifier: string
 ```
 
-应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md#signatureinfo)，如果应用没有appIdentifier可使用appId代替，可以通过接口 [bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfo-f.md#getbundleinfo-3) 获取bundleInfo.signatureInfo.appIdentifier和bundleInfo.signatureInfo.appId。
+应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md)，如果应用没有appIdentifier可使用appId代替，可以通过接口 [bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfo-f.md#getbundleinfo-3) 获取bundleInfo.signatureInfo.appIdentifier和bundleInfo.signatureInfo.appId。
 
 **类型：** string
 

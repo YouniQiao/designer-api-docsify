@@ -1,8 +1,8 @@
 # NumberStyleOptions
 
-NumberStyleOptions定义了列表型和紧凑型Counter的属性和事件。 继承于[InlineStyleOptions](arkts-arkui-inlinestyleoptions-c.md#inlinestyleoptions)。
+NumberStyleOptions定义了列表型和紧凑型Counter的属性和事件。 继承于[InlineStyleOptions](arkts-arkui-inlinestyleoptions-c.md)。
 
-**继承/实现关系：** NumberStyleOptions extends [InlineStyleOptions](arkts-arkui-inlinestyleoptions-c.md#inlinestyleoptions)
+**继承/实现关系：** NumberStyleOptions extends [InlineStyleOptions](arkts-arkui-inlinestyleoptions-c.md)
 
 **起始版本：** 11
 

@@ -1,6 +1,6 @@
 # Run
 
-文本排版单元。 下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-textline-c.md#textline)类的[getGlyphRuns()](arkts-arkgraphics2d-textline-c.md#getglyphruns-1)接口获取Run对象实例，再通过此实例调 用对应方法。
+文本排版单元。 下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-textline-c.md#getglyphruns-1)接口获取Run对象实例，再通过此实例调 用对应方法。
 
 **起始版本：** 12
 
@@ -30,7 +30,7 @@ getAdvances(range: Range): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Returns the glyph width array of each glyph in the run unit relative to thehorizontal direction. In [common2D.Point](arkts-arkgraphics2d-point-i.md#point), the x valuerepresents the glyph width of each glyph relative to the horizontal direction, in physical pixels (px). The yvalue is a reserved field and returns **0** by default. |
+| Array&lt;common2D.Point&gt; | Returns the glyph width array of each glyph in the run unit relative to thehorizontal direction. In [common2D.Point](arkts-arkgraphics2d-point-i.md), the x valuerepresents the glyph width of each glyph relative to the horizontal direction, in physical pixels (px). The yvalue is a reserved field and returns **0** by default. |
 
 **示例：**
 

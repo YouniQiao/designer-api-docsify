@@ -6,14 +6,14 @@ Provides the API for accessing unicode character properties. For example, determ
 
 **Deprecated since:** 9
 
-**Substitutes:** [Unicode](arkts-localization-unicode-c.md#unicode)
+**Substitutes:** [Unicode](arkts-localization-unicode-c.md)
 
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@ohos.i18n';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getType

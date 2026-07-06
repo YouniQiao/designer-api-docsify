@@ -9,7 +9,7 @@ Defines a binary data array in encoding format.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## data

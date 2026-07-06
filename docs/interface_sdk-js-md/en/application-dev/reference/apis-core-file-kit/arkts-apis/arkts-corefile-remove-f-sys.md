@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { recent } from '@ohos.file.recent';
+import { recent } from '@kit.CoreFileKit';
 ```
 
 ## remove

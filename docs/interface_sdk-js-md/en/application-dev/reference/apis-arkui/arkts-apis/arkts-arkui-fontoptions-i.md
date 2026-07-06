@@ -9,7 +9,7 @@ Information about the custom font to register. > **NOTE** > > Directly using **f
 ## Modules to Import
 
 ```TypeScript
-import { font } from '@ohos.font';
+import { font } from '@kit.ArkUI';
 ```
 
 ## familyName

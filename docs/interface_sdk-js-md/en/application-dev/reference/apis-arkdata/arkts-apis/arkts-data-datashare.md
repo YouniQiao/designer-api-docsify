@@ -11,7 +11,7 @@ The **DataShare** module allows an application to manage its own data and share 
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from '@ohos.data.dataShare';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -52,7 +52,7 @@ import { dataShare } from '@ohos.data.dataShare';
 | --- | --- |
 | [ChangeInfo](arkts-arkdata-changeinfo-i-sys.md) | Represents the data change information, including the data change type, URI of the data changed, and changed data content. |
 | [DataShareHelper](arkts-arkdata-datasharehelper-i-sys.md) | Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by **DataShareHelper**, you must create a **DataShareHelper** instance using [createDataShareHelper](arkts-arkdata-createdatasharehelper-f-sys.md#createdatasharehelper-1) . |
-| [DataShareHelperOptions](arkts-arkdata-datasharehelperoptions-i-sys.md) | Represents the optional parameters of [DataShareHelper](arkts-arkdata-datasharehelperoptions-i-sys.md#datasharehelperoptions). |
+| [DataShareHelperOptions](arkts-arkdata-datasharehelperoptions-i-sys.md) | Represents the optional parameters of [DataShareHelper](arkts-arkdata-datasharehelperoptions-i-sys.md). |
 | [OperationResult](arkts-arkdata-operationresult-i-sys.md) | Defines the result of the operation for subscribing to or unsubscribing from the data changes or published data. |
 | [PublishedDataChangeNode](arkts-arkdata-publisheddatachangenode-i-sys.md) | Defines the subscription/unsubscription result of the changes in the published data. |
 | [PublishedItem](arkts-arkdata-publisheditem-i-sys.md) | Defines the data to publish. |

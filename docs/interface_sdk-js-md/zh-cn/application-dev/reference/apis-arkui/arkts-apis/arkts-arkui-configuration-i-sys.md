@@ -28,7 +28,7 @@ defaultDensityEnabled?: boolean
 zIndex?: number
 ```
 
-当前系统窗口的层级，仅在[WindowType](arkts-arkui-windowtype-e.md#windowtype)为TYPE_DYNAMIC时生效。
+当前系统窗口的层级，仅在[WindowType](arkts-arkui-windowtype-e.md)为TYPE_DYNAMIC时生效。
 
 **类型：** number
 

@@ -9,7 +9,7 @@ The **deviceStatus** module provides the device status awareness functionality.
 ## Modules to Import
 
 ```TypeScript
-import { deviceStatus } from '@ohos.multimodalAwareness.deviceStatus';
+import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary

@@ -2,7 +2,7 @@
 
 Specifies the worker thread running environment, which is isolated from the host thread environment.
 
-**Inheritance/Implementation:** WorkerGlobalScope extends [EventTarget](arkts-arkts-eventtarget-i.md#eventtarget)
+**Inheritance/Implementation:** WorkerGlobalScope extends [EventTarget](arkts-arkts-eventtarget-i.md)
 
 **Since:** 7
 
@@ -15,7 +15,7 @@ Specifies the worker thread running environment, which is isolated from the host
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@ohos.worker';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## name

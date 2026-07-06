@@ -9,7 +9,7 @@ Describes the timestamp of the sensor data.
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@ohos.sensor';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## accuracy

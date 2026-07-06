@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PhotoEditorExtensionAbility } from '@ohos.app.ability.PhotoEditorExtensionAbility';
+import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

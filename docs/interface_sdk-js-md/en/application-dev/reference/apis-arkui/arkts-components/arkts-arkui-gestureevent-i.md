@@ -1,8 +1,8 @@
 # GestureEvent
 
-Defines the gesture event information. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#baseevent).
+Defines the gesture event information. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
-**Inheritance/Implementation:** GestureEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**Inheritance/Implementation:** GestureEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 7
 

@@ -11,7 +11,7 @@ Object used for thread synchronization.
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from '@arkts.utils';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## constructor

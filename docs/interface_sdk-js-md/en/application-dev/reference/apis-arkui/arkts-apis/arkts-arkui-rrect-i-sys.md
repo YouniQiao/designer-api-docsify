@@ -11,7 +11,7 @@ Round rect.
 ## Modules to Import
 
 ```TypeScript
-import { windowAnimationManager } from '@ohos.animation.windowAnimationManager';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## height

@@ -1,8 +1,8 @@
 # TypedFrameNode
 
-TypedFrameNode继承自[FrameNode](arkts-arkui-framenode-c.md#framenode)，用于声明具体类型的FrameNode。
+TypedFrameNode继承自[FrameNode](arkts-arkui-framenode-c.md)，用于声明具体类型的FrameNode。
 
-**继承/实现关系：** TypedFrameNode extends [FrameNode](arkts-arkui-framenode-c.md#framenode)
+**继承/实现关系：** TypedFrameNode extends [FrameNode](arkts-arkui-framenode-c.md)
 
 **起始版本：** 12
 

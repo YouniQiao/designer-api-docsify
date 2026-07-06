@@ -11,7 +11,7 @@ Represents a listener object used to listen for background task state changes.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@ohos.resourceschedule.backgroundTaskManager';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## onContinuousTaskStart

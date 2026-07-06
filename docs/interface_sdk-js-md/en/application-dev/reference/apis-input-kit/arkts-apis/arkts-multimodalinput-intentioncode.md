@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { IntentionCode } from '@ohos.multimodalInput.intentionCode';
+import { IntentionCode } from '@kit.InputKit';
 ```
 
 ## Summary

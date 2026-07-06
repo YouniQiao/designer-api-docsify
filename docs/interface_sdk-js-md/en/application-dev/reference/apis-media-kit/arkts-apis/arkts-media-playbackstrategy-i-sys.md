@@ -9,7 +9,7 @@ Provides preferred playback settings for player.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableCameraPostprocessing

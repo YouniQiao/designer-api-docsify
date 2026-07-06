@@ -9,7 +9,7 @@ Defines the parameters for sending data over the TCPSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@ohos.net.socket';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## data

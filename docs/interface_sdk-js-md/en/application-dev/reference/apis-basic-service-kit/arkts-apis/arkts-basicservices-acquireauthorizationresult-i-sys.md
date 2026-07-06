@@ -11,7 +11,7 @@ Defines the result of the authorization.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@ohos.account.osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## isReused

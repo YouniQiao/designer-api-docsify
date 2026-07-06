@@ -9,7 +9,7 @@ Manages the ble scanner. Before calling a ble scanner method, you must use {@lin
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@ohos.bluetooth.ble';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## off('BLEDeviceFind')

@@ -11,7 +11,7 @@ Describes an audio volume group.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## groupId

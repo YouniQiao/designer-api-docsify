@@ -9,7 +9,7 @@ Defines the result of the request for the modal dialog box. It contains **Result
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from '@ohos.app.ability.dialogRequest';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## result

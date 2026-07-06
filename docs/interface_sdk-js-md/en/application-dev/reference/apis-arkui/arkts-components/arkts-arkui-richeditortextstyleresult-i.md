@@ -228,7 +228,7 @@ Get the stroke join style of the text.
 strokeWidth?: number
 ```
 
-Text stroke width. The unit is [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common).
+Text stroke width. The unit is [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).
 
 **Type:** number
 

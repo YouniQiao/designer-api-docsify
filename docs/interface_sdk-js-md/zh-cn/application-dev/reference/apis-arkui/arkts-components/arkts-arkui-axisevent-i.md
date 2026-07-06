@@ -1,8 +1,8 @@
 # AxisEvent
 
-轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md#baseevent)。
+轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**继承/实现关系：** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**继承/实现关系：** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 17
 

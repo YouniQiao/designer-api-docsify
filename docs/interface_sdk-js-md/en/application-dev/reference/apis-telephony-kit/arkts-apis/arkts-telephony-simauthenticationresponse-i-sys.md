@@ -11,7 +11,7 @@ Defines the SIM card authentication response.
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@ohos.telephony.sim';
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## response

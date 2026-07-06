@@ -11,7 +11,7 @@ Represents information about the new version.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@ohos.update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## versionComponents

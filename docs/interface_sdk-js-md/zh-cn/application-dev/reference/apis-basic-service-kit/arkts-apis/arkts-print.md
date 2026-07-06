@@ -101,7 +101,7 @@
 | [updateExtensionInfo](arkts-basicservices-updateextensioninfo-f-sys.md#updateextensioninfo-2) | 更新打印扩展状态，使用Promise异步回调。 |
 | [updatePrintJobState](arkts-basicservices-updateprintjobstate-f-sys.md#updateprintjobstate-1) | 更新打印任务状态，使用callback异步回调。 |
 | [updatePrintJobState](arkts-basicservices-updateprintjobstate-f-sys.md#updateprintjobstate-2) | 更新打印任务状态，使用Promise异步回调。 |
-| [updatePrinterInformation](arkts-basicservices-updateprinterinformation-f-sys.md#updateprinterinformation-1) | 更新系统中打印机的部分信息，使用Promise异步回调。当前仅允许更新[PrinterInformation](arkts-basicservices-printerinformation-i.md#printerinformation)的alias和options字段。 |
+| [updatePrinterInformation](arkts-basicservices-updateprinterinformation-f-sys.md#updateprinterinformation-1) | 更新系统中打印机的部分信息，使用Promise异步回调。当前仅允许更新[PrinterInformation](arkts-basicservices-printerinformation-i.md)的alias和options字段。 |
 | [updatePrinterState](arkts-basicservices-updateprinterstate-f-sys.md#updateprinterstate-1) | 更新打印机状态，使用callback异步回调。 |
 | [updatePrinterState](arkts-basicservices-updateprinterstate-f-sys.md#updateprinterstate-2) | 更新打印机状态，使用Promise异步回调。 |
 | [updatePrinters](arkts-basicservices-updateprinters-f-sys.md#updateprinters-1) | 更新特定打印机的信息，使用callback异步回调。 |

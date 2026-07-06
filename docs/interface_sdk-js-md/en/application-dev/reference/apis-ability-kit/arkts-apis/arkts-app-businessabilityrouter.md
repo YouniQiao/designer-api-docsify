@@ -11,7 +11,7 @@ This module is used to obtain business ability information of various applicatio
 ## Modules to Import
 
 ```TypeScript
-import { businessAbilityRouter } from '@ohos.app.businessAbilityRouter';
+import { businessAbilityRouter } from '@kit.AbilityKit';
 ```
 
 ## Summary

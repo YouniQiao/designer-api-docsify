@@ -11,7 +11,7 @@ Defines a tool class for updating the system online.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@ohos.update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## checkNewVersion

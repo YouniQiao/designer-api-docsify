@@ -40,7 +40,7 @@ Denies the permission requested by the web page.
 getAccessibleResource(): Array<string>
 ```
 
-Obtains the list of accessible resources requested for the web page. For details about the resource types, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md#protectedresourcetype).
+Obtains the list of accessible resources requested for the web page. For details about the resource types, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md).
 
 **Since:** 9
 

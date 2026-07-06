@@ -46,9 +46,9 @@ The file declares the functions for basic display management. You can call the f
 | [void OH_NativeDisplayManager_DestroyDisplay(NativeDisplayManager_DisplayInfo *displayInfo)](#oh_nativedisplaymanager_destroydisplay) | - | Destroys the object that contains the information about a display. |
 | [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreatePrimaryDisplay(NativeDisplayManager_DisplayInfo **displayInfo)](#oh_nativedisplaymanager_createprimarydisplay) | - | Obtains the object that contains the information about the primary display. For devices other than 2-in-1devices, the displayInfo object obtained contains information about the built-in screen. For 2-in-1 devices with anexternal screen, the displayInfo object obtained contains information about the current primary screen. For 2-in-1devices without an external screen, the displayInfo object obtained contains information about the built-in screen. |
 | [typedef void (\*OH_NativeDisplayManager_AvailableAreaChangeCallback)(uint64_t displayId)](#oh_nativedisplaymanager_availableareachangecallback) | OH_NativeDisplayManager_AvailableAreaChangeCallback | Defines a callback function to listen for available area changes of a display. |
-| [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterAvailableAreaChangeListener(OH_NativeDisplayManager_AvailableAreaChangeCallback availableAreaChangeCallback, uint32_t *listenerIndex)](#oh_nativedisplaymanager_registeravailableareachangelistener) | - | Registers a listener for available area changes of the display. |
-| [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterAvailableAreaChangeListener(uint32_t listenerIndex)](#oh_nativedisplaymanager_unregisteravailableareachangelistener) | - | Unregisters a listener for available area changes of the display. |
-| [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAvailableArea(uint64_t displayId, NativeDisplayManager_Rect **availableArea)](#oh_nativedisplaymanager_createavailablearea) | - | Obtains the available area of a display. |
+| [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterAvailableAreaChangeListener(OH_NativeDisplayManager_AvailableAreaChangeCallback availableAreaChangeCallback, uint32_t *listenerIndex)](#oh_nativedisplaymanager_registeravailableareachangelistener) | - | Registers a listener for available area changes of the display.This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported. |
+| [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterAvailableAreaChangeListener(uint32_t listenerIndex)](#oh_nativedisplaymanager_unregisteravailableareachangelistener) | - | Unregisters a listener for available area changes of the display.This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported. |
+| [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAvailableArea(uint64_t displayId, NativeDisplayManager_Rect **availableArea)](#oh_nativedisplaymanager_createavailablearea) | - | Obtains the available area of a display.This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets, but does not work for other device types.To obtain the available screen area on the current device, call[OH_NativeDisplayManager_GetDefaultDisplayWidth](capi-oh-display-manager-h.md#oh_nativedisplaymanager_getdefaultdisplaywidth) and [OH_NativeDisplayManager_GetDefaultDisplayHeight](capi-oh-display-manager-h.md#oh_nativedisplaymanager_getdefaultdisplayheight). |
 | [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_DestroyAvailableArea(NativeDisplayManager_Rect *availableArea)](#oh_nativedisplaymanager_destroyavailablearea) | - | Destroys the available area of a display. |
 | [typedef void (\*OH_NativeDisplayManager_DisplayAddCallback)(uint64_t displayId)](#oh_nativedisplaymanager_displayaddcallback) | OH_NativeDisplayManager_DisplayAddCallback | Defines a callback function to listen for display addition events. |
 | [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayAddListener(OH_NativeDisplayManager_DisplayAddCallback displayAddCallback, uint32_t *listenerIndex)](#oh_nativedisplaymanager_registerdisplayaddlistener) | - | Registers a listener for display addition events (for example, monitor inserted). |
@@ -708,7 +708,7 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterAvailableAreaChan
 
 **Description**
 
-Registers a listener for available area changes of the display.
+Registers a listener for available area changes of the display.This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported.
 
 **Since**: 20
 
@@ -733,7 +733,7 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterAvailableAreaCh
 
 **Description**
 
-Unregisters a listener for available area changes of the display.
+Unregisters a listener for available area changes of the display.This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported.
 
 **Since**: 20
 
@@ -757,7 +757,7 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAvailableArea(uint6
 
 **Description**
 
-Obtains the available area of a display.
+Obtains the available area of a display.This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets, but does not work for other device types.To obtain the available screen area on the current device, call[OH_NativeDisplayManager_GetDefaultDisplayWidth](capi-oh-display-manager-h.md#oh_nativedisplaymanager_getdefaultdisplaywidth) and [OH_NativeDisplayManager_GetDefaultDisplayHeight](capi-oh-display-manager-h.md#oh_nativedisplaymanager_getdefaultdisplayheight).
 
 **Since**: 20
 

@@ -11,7 +11,7 @@ Describes the parameters supported by the [@InsightIntentPage](../../../../refer
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@ohos.app.ability.insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## navDestinationName

@@ -9,7 +9,7 @@ Describes a series of consecutive glyphs with the same attributes in a text blob
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## glyph

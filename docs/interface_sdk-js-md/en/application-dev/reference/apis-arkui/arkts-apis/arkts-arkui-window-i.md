@@ -9,7 +9,7 @@ Represents a window instance, which is the basic unit managed by the window mana
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## clearWindowMask
@@ -81,7 +81,7 @@ Converts relative coordinates (based on the top-left corner of the current windo
 convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: number): number
 ```
 
-Enables conversion between window orientation, screen orientation, and screen angle. Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3, corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md#rotationchangeinfo) and the [Orientation](arkts-arkui-orientation-e.md#orientation) enum. For example, setting **Orientation** to **LANDSCAPE** indicates a landscape window orientation. > **NOTE** > > The following figure and table show the relationship between the window orientation, screen orientation, and > screen angle of a bar-type device. > > ![orientationAndRotation](figures/orientationAndRotation.PNG) > | Screen Angle| Screen Orientation| Window Orientation| | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
+Enables conversion between window orientation, screen orientation, and screen angle. Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3, corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md) and the [Orientation](arkts-arkui-orientation-e.md) enum. For example, setting **Orientation** to **LANDSCAPE** indicates a landscape window orientation. > **NOTE** > > The following figure and table show the relationship between the window orientation, screen orientation, and > screen angle of a bar-type device. > > ![orientationAndRotation](figures/orientationAndRotation.PNG) > | Screen Angle| Screen Orientation| Window Orientation| | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
 
 **Since:** 23
 
@@ -217,7 +217,7 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 | Error Code ID | Error Message |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
 
 ## destroyWindow
 
@@ -244,7 +244,7 @@ Destroys this window. This API uses a promise to return the result. It takes eff
 | Error Code ID | Error Message |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
 
 ## disableLandscapeMultiWindow
 
@@ -306,7 +306,7 @@ Enables the landscape multi-window mode for the UI page that supports the horizo
 getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 ```
 
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result. Main window/Child window: - In the free-floating window mode under the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1) is called. Otherwise, the obtained avoidance area is empty.
+Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result. Main window/Child window: - In the free-floating window mode under the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 7
 
@@ -329,7 +329,7 @@ Obtains the area where this window cannot be displayed, for example, the system 
 getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
 ```
 
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result. Main window/Child window: - In the free-floating window mode under the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1) is called. Otherwise, the obtained avoidance area is empty.
+Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result. Main window/Child window: - In the free-floating window mode under the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 7
 
@@ -694,7 +694,7 @@ Obtains a UIContext instance.
 getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 ```
 
-Obtains the avoid area of this window. Main window/Child window: - In the free-floating window mode under the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1) is called. Otherwise, the obtained avoidance area is empty. This API is generally applicable to the following scenarios: - In the [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md#onwindowstagecreate-1) callback, this API is used to obtain the initial layout avoid area when the application starts. - This API is used when a child window needs to temporarily display content and requires layout adjustments to avoid certain areas.
+Obtains the avoid area of this window. Main window/Child window: - In the free-floating window mode under the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1) is called. Otherwise, the obtained avoidance area is empty. This API is generally applicable to the following scenarios: - In the [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md#onwindowstagecreate-1) callback, this API is used to obtain the initial layout avoid area when the application starts. - This API is used when a child window needs to temporarily display content and requires layout adjustments to avoid certain areas.
 
 **Since:** 9
 
@@ -727,7 +727,7 @@ Obtains the avoid area of this window. Main window/Child window: - In the free-f
 getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 ```
 
-Obtains the avoid area of this application window, even if the avoid area is invisible. Main window/Child window: - When the main window is in the free-floating window mode under a non- [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the system bar type ( [AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1) is called. Otherwise, the obtained avoidance area is empty.
+Obtains the avoid area of this application window, even if the avoid area is invisible. Main window/Child window: - When the main window is in the free-floating window mode under a non- [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the system bar type ( [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 22
 
@@ -1264,7 +1264,7 @@ Checks whether this window is in [freeform window](../../../../windowmanager/win
 isReceiveDragEventEnabled(): boolean
 ```
 
-Obtains whether the current window can receive [drag events](../arkts-components/arkts-arkui-dragevent-i.md#dragevent).
+Obtains whether the current window can receive [drag events](../arkts-components/arkts-arkui-dragevent-i.md).
 
 **Since:** 23
 
@@ -1408,7 +1408,7 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 isSystemAvoidAreaEnabled(): boolean
 ```
 
-Checks whether a floating window, modal window, or system window (**WindowType** is a system window) is enabled to access the [avoid area](arkts-arkui-avoidarea-i.md#avoidarea).
+Checks whether a floating window, modal window, or system window (**WindowType** is a system window) is enabled to access the [avoid area](arkts-arkui-avoidarea-i.md).
 
 **Since:** 18
 
@@ -1437,7 +1437,7 @@ Checks whether a floating window, modal window, or system window (**WindowType**
 isWindowHighlighted(): boolean
 ```
 
-Checks whether the window is active. To obtain the active state, call this API when the [WindowEventType](arkts-arkui-windoweventtype-e.md#windoweventtype) lifecycle is **WINDOW_ACTIVE**. You can use [on('windowHighlightChange')](arkts-arkui-window-i.md#on-27) to listen for status changes and then execute the corresponding service.
+Checks whether the window is active. To obtain the active state, call this API when the [WindowEventType](arkts-arkui-windoweventtype-e.md) lifecycle is **WINDOW_ACTIVE**. You can use [on('windowHighlightChange')](arkts-arkui-window-i.md#on-27) to listen for status changes and then execute the corresponding service.
 
 **Since:** 18
 
@@ -1595,7 +1595,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
 
 ## loadContent
 
@@ -1632,7 +1632,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
 
 ## loadContent
 
@@ -3090,7 +3090,7 @@ Unsubscribes from the freeform window mode change event.
 on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void
 ```
 
-Subscribes to the window rotation change event. If the window rotation event type in [RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md#rotationchangeinfo) is **WINDOW_WILL_ROTATE**, [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md#rotationchangeresult) must be returned. If the window rotation event type is **WINDOW_DID_ROTATE**, [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md#rotationchangeresult) does not take effect. This API can be registered only on the main thread. If a window registers multiple callbacks of the same type, only the return value of the most recently registered callback will be effective. The system provides a timeout protection mechanism. If the window does not return [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md#rotationchangeresult) within 20 ms, the system does not process the return value.
+Subscribes to the window rotation change event. If the window rotation event type in [RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md) is **WINDOW_WILL_ROTATE**, [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md) must be returned. If the window rotation event type is **WINDOW_DID_ROTATE**, [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md) does not take effect. This API can be registered only on the main thread. If a window registers multiple callbacks of the same type, only the return value of the most recently registered callback will be effective. The system provides a timeout protection mechanism. If the window does not return [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md) within 20 ms, the system does not process the return value.
 
 **Since:** 19
 
@@ -3103,7 +3103,7 @@ Subscribes to the window rotation change event. If the window rotation event typ
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rotationChange' | Yes | Event type. The value is fixed at **'rotationChange'**, indicating the windowrotation change event. |
-| callback | RotationChangeCallback&lt;RotationChangeInfo, RotationChangeResult \| void&gt; | Yes | Callback used toreturn [RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md#rotationchangeinfo) and[RotationChangeResult](arkts-arkui-rotationchangeresult-i.md#rotationchangeresult). |
+| callback | RotationChangeCallback&lt;RotationChangeInfo, RotationChangeResult \| void&gt; | Yes | Callback used toreturn [RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md) and[RotationChangeResult](arkts-arkui-rotationchangeresult-i.md). |
 
 **Error codes:**
 
@@ -3159,7 +3159,7 @@ Subscribes to events indicating changes in window frame metrics. This API must b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frameMetricsMeasured' | Yes | Event type. The value is fixed at **'frameMetricsMeasured'**, indicatingthe window frame metrics change event. |
-| callback | Callback&lt;FrameMetrics&gt; | Yes | Callback invoked when the window frame metrics change. For details,see [Frame Rate Metrics](arkts-arkui-framemetrics-i.md#framemetrics). |
+| callback | Callback&lt;FrameMetrics&gt; | Yes | Callback invoked when the window frame metrics change. For details,see [Frame Rate Metrics](arkts-arkui-framemetrics-i.md). |
 
 **Error codes:**
 
@@ -3185,7 +3185,7 @@ Subscribes to the visibility status change event of the window. The visibility r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'occlusionStateChanged' | Yes | Event type. The value is fixed at **'occlusionStateChanged'**,indicating the window visibility status change event. |
-| callback | Callback&lt;OcclusionState&gt; | Yes | Callback invoked when the window visibility status changes. Fordetails, see [Window Visibility Status](arkts-arkui-occlusionstate-e.md#occlusionstate). |
+| callback | Callback&lt;OcclusionState&gt; | Yes | Callback invoked when the window visibility status changes. Fordetails, see [Window Visibility Status](arkts-arkui-occlusionstate-e.md). |
 
 **Error codes:**
 
@@ -3251,7 +3251,7 @@ Subscribes to the event indicating changes to the area where this window cannot 
 on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 ```
 
-Subscribes to the event indicating changes to the area where this window cannot be displayed. Main window/Child window: - When the callback is triggered in the free-floating window mode (the window mode is **window.WindowStatusType.FLOATING**) under the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state, only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype) is **TYPE_KEYBOARD**) is available. - When the callback is triggered in the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM**) is available. - When the callback is triggered in the other scenarios of the main window, the calculated avoidance area can be returned only when the window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, an empty avoidance area is returned. - When the callback is triggered for the child window in the non-freeform window state or non-free-floating window mode, the calculated avoidance area of the child window is returned only when the position and size of the child window are the same as those of the main window. Otherwise, an empty avoidance area is returned. Global floating window, modal window, or system window: - The calculated avoidance area is returned only when the callback is triggered after [setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1) is called. Otherwise, an empty avoidance area is returned. <!--RP7-->Common scenarios for triggering this event are as follows: transitions between full-screen mode, floating mode, and split-screen mode of the application window; rotation of the application window; transitions between folded and unfolded states of a foldable device; transfer of the application window between multiple devices.<!--RP7End-->
+Subscribes to the event indicating changes to the area where this window cannot be displayed. Main window/Child window: - When the callback is triggered in the free-floating window mode (the window mode is **window.WindowStatusType.FLOATING**) under the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state, only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - When the callback is triggered in the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - When the callback is triggered in the other scenarios of the main window, the calculated avoidance area can be returned only when the window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, an empty avoidance area is returned. - When the callback is triggered for the child window in the non-freeform window state or non-free-floating window mode, the calculated avoidance area of the child window is returned only when the position and size of the child window are the same as those of the main window. Otherwise, an empty avoidance area is returned. Global floating window, modal window, or system window: - The calculated avoidance area is returned only when the callback is triggered after [setSystemAvoidAreaEnabled](arkts-arkui-window-i.md#setsystemavoidareaenabled-1) is called. Otherwise, an empty avoidance area is returned. <!--RP7-->Common scenarios for triggering this event are as follows: transitions between full-screen mode, floating mode, and split-screen mode of the application window; rotation of the application window; transitions between folded and unfolded states of a foldable device; transfer of the application window between multiple devices.<!--RP7End-->
 
 **Since:** 9
 
@@ -3698,7 +3698,7 @@ Enables the listening for window status changes. When the window status changes,
 on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void
 ```
 
-Subscribes to the event indicating that the window status has changed (the [Rect](arkts-arkui-rect-i.md#rect) property of the window has been updated).
+Subscribes to the event indicating that the window status has changed (the [Rect](arkts-arkui-rect-i.md) property of the window has been updated).
 
 **Since:** 20
 
@@ -4127,7 +4127,7 @@ Changes the size of this window based on the top-left vertex of the window. This
 resize(width: number, height: number): Promise<void>
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [resizeAsync()](arkts-arkui-window-i.md#resizeasync-1). The window size is restricted by [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits). You can call [getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1) to find out the exact limits. The new window width and height you set must meet the following limits: If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions. If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect. This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). If this API is called when the window is in other window modes, error code 1300002 is reported. (The window mode can be obtained through [getWindowStatus()](arkts-arkui-window-i.md#getwindowstatus-1)). > **NOTE** > > - When the main window is in floating window mode, this API does not take effect or return an error if called > in non-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
+Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [resizeAsync()](arkts-arkui-window-i.md#resizeasync-1). The window size is restricted by [WindowLimits](arkts-arkui-windowlimits-i.md). You can call [getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1) to find out the exact limits. The new window width and height you set must meet the following limits: If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions. If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect. This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). If this API is called when the window is in other window modes, error code 1300002 is reported. (The window mode can be obtained through [getWindowStatus()](arkts-arkui-window-i.md#getwindowstatus-1)). > **NOTE** > > - When the main window is in floating window mode, this API does not take effect or return an error if called > in non-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Since:** 9
 
@@ -4162,7 +4162,7 @@ Changes the size of this window based on the top-left vertex of the window. This
 resize(width: number, height: number, callback: AsyncCallback<void>): void
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [resizeAsync()](arkts-arkui-window-i.md#resizeasync-1). The window size is restricted by [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits). You can call [getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1) to find out the exact limits. The new window width and height you set must meet the following limits: If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions. If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect. > **NOTE** > > - When the main window is in floating window mode, this API does not take effect or return an error if called > in non-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
+Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [resizeAsync()](arkts-arkui-window-i.md#resizeasync-1). The window size is restricted by [WindowLimits](arkts-arkui-windowlimits-i.md). You can call [getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1) to find out the exact limits. The new window width and height you set must meet the following limits: If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions. If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect. > **NOTE** > > - When the main window is in floating window mode, this API does not take effect or return an error if called > in non-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Since:** 9
 
@@ -4192,7 +4192,7 @@ Changes the size of this window based on the top-left vertex of the window. This
 resizeAsync(width: number, height: number): Promise<void>
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result. A value is returned once the call takes effect. You can use [getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) in the callback (see the code snippet below) to obtain the final effect immediately. The window size is restricted by [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits). You can call [getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1) to find out the exact limits. The new window width and height you set must meet the following limits: If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions. If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect. This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other scenarios, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](arkts-arkui-window-i.md#getwindowstatus-1)). > **NOTE** > > - In non-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) mode, > this API does not work for the main window.
+Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result. A value is returned once the call takes effect. You can use [getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) in the callback (see the code snippet below) to obtain the final effect immediately. The window size is restricted by [WindowLimits](arkts-arkui-windowlimits-i.md). You can call [getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1) to find out the exact limits. The new window width and height you set must meet the following limits: If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions. If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect. This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other scenarios, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](arkts-arkui-window-i.md#getwindowstatus-1)). > **NOTE** > > - In non-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) mode, > this API does not work for the main window.
 
 **Since:** 12
 
@@ -4258,7 +4258,7 @@ Restores the main window from minimization to the foreground, returning it to it
 restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 ```
 
-Restores the main window of the current window to the foreground. If the main window is already in the foreground , the main window level is raised. This API is applicable only to [TYPE_FLOAT](arkts-arkui-windowtype-e.md#windowtype) windows and can be called only after the [DOWN](DOWN) event is triggered in the windows. This API uses a promise to return the result.
+Restores the main window of the current window to the foreground. If the main window is already in the foreground , the main window level is raised. This API is applicable only to [TYPE_FLOAT](arkts-arkui-windowtype-e.md) windows and can be called only after the [DOWN](DOWN) event is triggered in the windows. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -4306,7 +4306,7 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratio | number | Yes | Aspect ratio of the window content layout (excluding decorations like borders and titlebars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window.The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is themaximum width divided by the minimum height. The maximum and minimum sizes of the window are determined bythe intersection of the setting of [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits) and the systemlimit. The system limit takes precedence over [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits). Thevalid range of **ratio** varies with [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits). If[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits) is set prior to **ratio**, any conflict will result inan error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise withthe subsequently configured [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits), the window's aspect ratiomay not adhere to the initially configured value of **ratio**. |
+| ratio | number | Yes | Aspect ratio of the window content layout (excluding decorations like borders and titlebars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window.The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is themaximum width divided by the minimum height. The maximum and minimum sizes of the window are determined bythe intersection of the setting of [WindowLimits](arkts-arkui-windowlimits-i.md) and the systemlimit. The system limit takes precedence over [WindowLimits](arkts-arkui-windowlimits-i.md). Thevalid range of **ratio** varies with [WindowLimits](arkts-arkui-windowlimits-i.md). If[WindowLimits](arkts-arkui-windowlimits-i.md) is set prior to **ratio**, any conflict will result inan error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise withthe subsequently configured [WindowLimits](arkts-arkui-windowlimits-i.md), the window's aspect ratiomay not adhere to the initially configured value of **ratio**. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -4335,7 +4335,7 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratio | number | Yes | Aspect ratio of the window content layout (excluding decorations like borders and titlebars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window.The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is themaximum width divided by the minimum height. The maximum and minimum sizes of the window are determined bythe intersection of the setting of [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits) and the systemlimit. The system limit takes precedence over [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits). Thevalid range of **ratio** varies with [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits). If[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits) is set prior to **ratio**, any conflict will result inan error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise withthe subsequently configured [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits), the window's aspect ratiomay not adhere to the initially configured value of **ratio**. |
+| ratio | number | Yes | Aspect ratio of the window content layout (excluding decorations like borders and titlebars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window.The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is themaximum width divided by the minimum height. The maximum and minimum sizes of the window are determined bythe intersection of the setting of [WindowLimits](arkts-arkui-windowlimits-i.md) and the systemlimit. The system limit takes precedence over [WindowLimits](arkts-arkui-windowlimits-i.md). Thevalid range of **ratio** varies with [WindowLimits](arkts-arkui-windowlimits-i.md). If[WindowLimits](arkts-arkui-windowlimits-i.md) is set prior to **ratio**, any conflict will result inan error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise withthe subsequently configured [WindowLimits](arkts-arkui-windowlimits-i.md), the window's aspect ratiomay not adhere to the initially configured value of **ratio**. |
 
 **Return value:**
 
@@ -4520,7 +4520,7 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratio | number | Yes | Aspect ratio of the window content layout (excluding decorations like borders and titlebars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window.The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is themaximum width divided by the minimum height. The maximum and minimum sizes of the window are determined bythe intersection of the setting of [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits) and the systemlimit. The system limit takes precedence over [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits). Thevalid range of **ratio** varies with [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits). If[WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits) is set prior to **ratio**, any conflict will result inan error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise withthe subsequently configured [WindowLimits](arkts-arkui-windowlimits-i.md#windowlimits), the window's aspect ratiomay not adhere to the initially configured value of **ratio**. |
+| ratio | number | Yes | Aspect ratio of the window content layout (excluding decorations like borders and titlebars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window.The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is themaximum width divided by the minimum height. The maximum and minimum sizes of the window are determined bythe intersection of the setting of [WindowLimits](arkts-arkui-windowlimits-i.md) and the systemlimit. The system limit takes precedence over [WindowLimits](arkts-arkui-windowlimits-i.md). Thevalid range of **ratio** varies with [WindowLimits](arkts-arkui-windowlimits-i.md). If[WindowLimits](arkts-arkui-windowlimits-i.md) is set prior to **ratio**, any conflict will result inan error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise withthe subsequently configured [WindowLimits](arkts-arkui-windowlimits-i.md), the window's aspect ratiomay not adhere to the initially configured value of **ratio**. |
 | isPersistent | boolean | No | Whether the aspect ratio should be saved persistently.<br>If this parameteris set to **true**, the aspect ratio is saved persistently. This means that the setting is valid in floatingwindow mode even after the window is destroyed, the application is closed, or the device is restarted. Youcan call [resetAspectRatio](arkts-arkui-window-i.md#resetaspectratio-2) to clear the persistently saved aspectratio.<br>If this parameter is set to **false**, the aspect ratio applies only to the current window and iscleared once the window is destroyed.<br>The default value is **true**. |
 | needUpdateRect | boolean | No | Whether the window size should be immediately updated based on the currentaspect ratio.<br>If this parameter is set to **true**, the window size is updated immediately based on thecurrent aspect ratio.<br>If this parameter is set to **false**, the window size is updated based on thecurrent aspect ratio when the window is dragged and resized. You can manually trigger an update by calling[resize](arkts-arkui-window-i.md#resize-2) or[resizeAsync](arkts-arkui-window-i.md#resizeasync-1).<br>The default value is **true**. |
 
@@ -5373,7 +5373,7 @@ Sets whether to enable a child window to raise itself by click. This API uses a 
 setReceiveDragEventEnabled(enabled: boolean): Promise<void>
 ```
 
-Sets whether the current window can receive [drag events](../arkts-components/arkts-arkui-dragevent-i.md#dragevent). This API uses a promise to return the result. By default, the value of **enabled** is **true**, indicating that the window can receive drag events. If the value of **enabled** is **false**, the current window cannot receive drag events.
+Sets whether the current window can receive [drag events](../arkts-components/arkts-arkui-dragevent-i.md). This API uses a promise to return the result. By default, the value of **enabled** is **true**, indicating that the window can receive drag events. If the value of **enabled** is **false**, the current window cannot receive drag events.
 
 **Since:** 23
 
@@ -5640,7 +5640,7 @@ Enables the modal property of the child window. This API uses a promise to retur
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 20 |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 20 and later |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
 
 ## setSubWindowModal
@@ -5677,7 +5677,7 @@ Sets the modality type of the child window. This API uses a promise to return th
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 20 |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 20 and later |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause:Invalid window type. Only subwindows are supported. |
 
 ## setSubWindowZLevel
@@ -6003,7 +6003,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
 
 ## setUIContent
 
@@ -6037,7 +6037,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
 
 ## setWindowBackgroundColor
 
@@ -6622,13 +6622,13 @@ Sets the size limits for this window. This API uses a promise to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowLimits | WindowLimits | Yes | Target size limits, in px or vp. |
-| isForcible | boolean | Yes | Whether to forcibly set the window size limits.<br>When the unit of the inputparameter [windowLimits](arkts-arkui-windowlimits-i.md#windowlimits) is vp, the process is performed based onvalue **false** regardless of whether **isForcible** is set to **true** or **false**. The minimum and maximumvalues of the window width and height depend on the system limit.<br>When the unit of the input parameter[windowLimits](arkts-arkui-windowlimits-i.md#windowlimits) is px: If **isForcible** is set to **true**, theminimum width and height of the window are subject to the smaller value between the system limit and 40 vp,and the maximum width and height of the window are subject to the system limit. If **isForcible** is set to**false**, the minimum and maximum widths and heights of the window are subject to the system limit. |
+| isForcible | boolean | Yes | Whether to forcibly set the window size limits.<br>When the unit of the inputparameter [windowLimits](arkts-arkui-windowlimits-i.md) is vp, the process is performed based onvalue **false** regardless of whether **isForcible** is set to **true** or **false**. The minimum and maximumvalues of the window width and height depend on the system limit.<br>When the unit of the input parameter[windowLimits](arkts-arkui-windowlimits-i.md) is px: If **isForcible** is set to **true**, theminimum width and height of the window are subject to the smaller value between the system limit and 40 vp,and the maximum width and height of the window are subject to the system limit. If **isForcible** is set to**false**, the minimum and maximum widths and heights of the window are subject to the system limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowLimits&gt; | Promise used to return the new window size limits.<br>If the unit of the input parameter [windowLimits](arkts-arkui-windowlimits-i.md#windowlimits) is vp, theintersection of the input parameter and the default window size limit of the system is returned.<br>If the unit of the input parameter [windowLimits](arkts-arkui-windowlimits-i.md#windowlimits) is px: Theintersection of the input parameter and the default window size limit of the system is returned when**isForcible** is set to **false**. The intersection of the input parameter and[the smaller value between the system limit and 40 vp, the maximum value of the system limit] is returnedwhen **isForcible** is set to **true**. |
+| Promise&lt;WindowLimits&gt; | Promise used to return the new window size limits.<br>If the unit of the input parameter [windowLimits](arkts-arkui-windowlimits-i.md) is vp, theintersection of the input parameter and the default window size limit of the system is returned.<br>If the unit of the input parameter [windowLimits](arkts-arkui-windowlimits-i.md) is px: Theintersection of the input parameter and the default window size limit of the system is returned when**isForcible** is set to **false**. The intersection of the input parameter and[the smaller value between the system limit and 40 vp, the maximum value of the system limit] is returnedwhen **isForcible** is set to **true**. |
 
 **Error codes:**
 
@@ -7455,7 +7455,7 @@ Captures this window. This API returns the result synchronously. If privacy mode
 startMoving(): Promise<void>
 ```
 
-In [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) mode, this API takes effect for system windows, application main windows, application child windows, global floating windows, and modal windows. In non-freeform window mode, this API takes effect only for system windows, application child windows, global floating windows, and modal windows. Starts moving this window. This API uses a promise to return the result. The window moves along with the cursor or touch point only when this API is called in the callback function of [onTouch](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md#touchevent), where the event type is **TouchType.Down**. In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is [TouchType.Move](../arkts-components/arkts-arkui-touchtype-e.md#touchtype) (as long as **TouchType.Down** has already been triggered) to start the moving effect.
+In [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) mode, this API takes effect for system windows, application main windows, application child windows, global floating windows, and modal windows. In non-freeform window mode, this API takes effect only for system windows, application child windows, global floating windows, and modal windows. Starts moving this window. This API uses a promise to return the result. The window moves along with the cursor or touch point only when this API is called in the callback function of [onTouch](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md), where the event type is **TouchType.Down**. In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is [TouchType.Move](../arkts-components/arkts-arkui-touchtype-e.md) (as long as **TouchType.Down** has already been triggered) to start the moving effect.
 
 **Since:** 14
 
@@ -7485,7 +7485,7 @@ In [freeform window](../../../../windowmanager/window-terminology.md#freeform-wi
 startMoving(offsetX: number, offsetY: number): Promise<void>
 ```
 
-Specifies the cursor position within the window and moves the window. This API uses a promise to return the result. When windows within the same application are split or merged, and the mouse is pressed down to move the new window directly, the cursor may move outside the window if it moves too quickly. This API allows you to set the cursor position within the window during movement. It first adjusts the window to the cursor position before starting to move the window. The window moves along with the cursor only when this API is called in the callback function of [onTouch](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md#touchevent), where the event type is **TouchType.Down**. In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is [TouchType.Move](../arkts-components/arkts-arkui-touchtype-e.md#touchtype) (as long as **TouchType.Down** has already been triggered) to start the moving effect.
+Specifies the cursor position within the window and moves the window. This API uses a promise to return the result. When windows within the same application are split or merged, and the mouse is pressed down to move the new window directly, the cursor may move outside the window if it moves too quickly. This API allows you to set the cursor position within the window during movement. It first adjusts the window to the cursor position before starting to move the window. The window moves along with the cursor only when this API is called in the callback function of [onTouch](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md), where the event type is **TouchType.Down**. In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is [TouchType.Move](../arkts-components/arkts-arkui-touchtype-e.md) (as long as **TouchType.Down** has already been triggered) to start the moving effect.
 
 **Since:** 15
 
@@ -7497,8 +7497,8 @@ Specifies the cursor position within the window and moves the window. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offsetX | number | Yes | X-axis offset of the cursor position relative to the top-left corner of the windowduring movement, measured in px. This parameter only accepts integer values; any floating-point input will berounded down. Negative values or values exceeding the window width are invalid. The window width can beobtained from [WindowProperties](arkts-arkui-windowproperties-i.md#windowproperties). |
-| offsetY | number | Yes | Y-axis offset of the cursor position relative to the top-left corner of the windowduring movement, measured in px. This parameter only accepts integer values; any floating-point input will berounded down. Negative values or values exceeding the window height are invalid. The window height can beobtained from [WindowProperties](arkts-arkui-windowproperties-i.md#windowproperties). |
+| offsetX | number | Yes | X-axis offset of the cursor position relative to the top-left corner of the windowduring movement, measured in px. This parameter only accepts integer values; any floating-point input will berounded down. Negative values or values exceeding the window width are invalid. The window width can beobtained from [WindowProperties](arkts-arkui-windowproperties-i.md). |
+| offsetY | number | Yes | Y-axis offset of the cursor position relative to the top-left corner of the windowduring movement, measured in px. This parameter only accepts integer values; any floating-point input will berounded down. Negative values or values exceeding the window height are invalid. The window height can beobtained from [WindowProperties](arkts-arkui-windowproperties-i.md). |
 
 **Return value:**
 

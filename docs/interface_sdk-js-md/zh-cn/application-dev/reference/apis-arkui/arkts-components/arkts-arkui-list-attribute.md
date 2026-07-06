@@ -1,6 +1,6 @@
 # List属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)和[滚动组件通用属性](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)外，还支持 以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)和[滚动组件通用事件](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持 以下事件：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)和[滚动组件通用属性](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)外，还支持 以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)和[滚动组件通用事件](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持 以下事件：
 
 **继承/实现关系：** ListAttribute extends [ScrollableCommonMethod<ListAttribute>](ScrollableCommonMethod<ListAttribute>)
 
@@ -50,7 +50,7 @@ backPressBehavior(behavior: ListBackPressBehavior | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| behavior | ListBackPressBehavior \| undefined | 是 | List组件的系统返回键行为选项。当前支持通过[ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md#listbackpressbehavior)参数，配置系统返回键生效时，是否收起已展开的ListItem的划出组件。<br/>设置为undefined时，恢复默认行为，即系统返回键生效时，收起已展开的ListItem的划出组件。 |
+| behavior | ListBackPressBehavior \| undefined | 是 | List组件的系统返回键行为选项。当前支持通过[ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md)参数，配置系统返回键生效时，是否收起已展开的ListItem的划出组件。<br/>设置为undefined时，恢复默认行为，即系统返回键生效时，收起已展开的ListItem的划出组件。 |
 
 ## cachedCount
 
@@ -264,7 +264,7 @@ divider(
   )
 ```
 
-设置ListItem分割线样式，默认无分割线。 List的分割线画在主轴方向两个子组件之间，第一个子组件上方和最后一个子组件下方不会绘制分割线。 多列模式下，ListItem与ListItem之间的分割线起始边距从每一列的交叉轴方向起始边开始计算，单列模式从List交叉轴方向起始边开始计算。 ListItem设置[多态样式](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)时，被按压的子组件上下的分割线不绘制。
+设置ListItem分割线样式，默认无分割线。 List的分割线画在主轴方向两个子组件之间，第一个子组件上方和最后一个子组件下方不会绘制分割线。 多列模式下，ListItem与ListItem之间的分割线起始边距从每一列的交叉轴方向起始边开始计算，单列模式从List交叉轴方向起始边开始计算。 ListItem设置[多态样式](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)时，被按压的子组件上下的分割线不绘制。
 
 **起始版本：** 7
 
@@ -387,7 +387,7 @@ enableScrollInteraction(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroller-c.md#scroller)的滚动接口。<br/>默认值：true |
+| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroller-c.md)的滚动接口。<br/>默认值：true |
 
 ## focusWrapMode
 
@@ -689,7 +689,7 @@ onItemDragStart(event: OnItemDragStartCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | OnItemDragStartCallback | 是 | 列表元素拖拽开始时触发的回调。<br> API version 22及之前版本，该参数类型为(event: ItemDragInfo,itemIndex: number) =&gt; (() =&gt; any) \| void，其中event和itemIndex参数含义参考[OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md#onitemdragstartcallback)。<br>**起始版本：** 23 |
+| event | OnItemDragStartCallback | 是 | 列表元素拖拽开始时触发的回调。<br> API version 22及之前版本，该参数类型为(event: ItemDragInfo,itemIndex: number) =&gt; (() =&gt; any) \| void，其中event和itemIndex参数含义参考[OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md)。<br>**起始版本：** 23 |
 
 ## onItemDrop
 
@@ -851,7 +851,7 @@ onScrollIndex(event: (start: number, end: number, center: number) => void)
 onScrollStart(event: () => void)
 ```
 
-列表滑动开始时触发。手指拖动列表或列表的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md#scroller)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
+列表滑动开始时触发。手指拖动列表或列表的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
 
 **起始版本：** 9
 
@@ -873,7 +873,7 @@ onScrollStart(event: () => void)
 onScrollStop(event: () => void)
 ```
 
-列表滑动停止时触发。手拖动列表或列表的滚动条触发的滑动，手离开屏幕后滑动停止时会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md#scroller)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
+列表滑动停止时触发。手拖动列表或列表的滚动条触发的滑动，手离开屏幕后滑动停止时会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
 
 **起始版本：** 7
 

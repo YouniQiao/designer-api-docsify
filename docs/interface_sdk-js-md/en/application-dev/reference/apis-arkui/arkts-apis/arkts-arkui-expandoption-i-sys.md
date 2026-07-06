@@ -11,7 +11,7 @@ Defines the parameters for expanding a screen.
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@ohos.screen';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## screenId

@@ -9,7 +9,7 @@ Provides APIs for handling data transformations related to state management.
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@ohos.arkui.StateManagement';
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## addMonitor
@@ -35,7 +35,7 @@ Dynamically adds a listener to the state variable of state management V2. For de
 | target | object | Yes | Target object. Only[@ComponentV2](../../../../ui/state-management/arkts-create-custom-components.md#componentv2) and[@ObservedV2](../../../../ui/state-management/arkts-new-observedV2-and-trace.md) instances are supported.<br>If an unsupported type is provided, a runtime error is thrown. |
 | path | string \| string[] | Yes | Name path of the variable to be listened for. You can specify a path or pass astring array to specify multiple variable paths to be listened for at a time.<br>Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
 | monitorCallback | MonitorCallback | Yes | Listener function registered with the corresponding state variable.That is, when the state variable corresponding to the path changes, a specific function is called.<br>If an unsupported type is provided, a runtime error is thrown. |
-| options | MonitorOptions | No | Configuration item of the listener. For details, see[MonitorOptions](arkts-arkui-monitoroptions-i.md#monitoroptions). By default, the asynchronous callback is used. |
+| options | MonitorOptions | No | Configuration item of the listener. For details, see[MonitorOptions](arkts-arkui-monitoroptions-i.md). By default, the asynchronous callback is used. |
 
 **Error codes:**
 
@@ -512,7 +512,7 @@ struct Index {
 static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext
 ```
 
-Obtains [CustomComponentContext](arkts-arkui-customcomponentcontext-i.md#customcomponentcontext) of the given @Component(V1) or @ComponentV2. **CustomComponentContext** can be used to access the reuse pool of the component. For details about the reuse pool, see [Global Reuse: Centralized Component Recycling and Reuse](../../../../ui/state-management/arkts-global-reuse-pool.md).
+Obtains [CustomComponentContext](arkts-arkui-customcomponentcontext-i.md) of the given @Component(V1) or @ComponentV2. **CustomComponentContext** can be used to access the reuse pool of the component. For details about the reuse pool, see [Global Reuse: Centralized Component Recycling and Reuse](../../../../ui/state-management/arkts-global-reuse-pool.md).
 
 **Since:** 26.0.0
 
@@ -932,7 +932,7 @@ Wraps an unobservable object into an object that is observable by V1 state manag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported.<br>[@arkts.collections](../../apis-arkts/arkts-apis/arkts-collections.md#collections) (ArkTS containers) andclasses decorated with [@Sendable](../../../../arkts-utils/arkts-sendable.md) are not supported.<br>**undefined** and **null** are not supported. V2 state management data andthe return value of [makeObserved](arkts-arkui-uiutils-c.md#makeobserved-1) are not supported. |
+| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported.<br>[@arkts.collections](../../apis-arkts/arkts-apis/arkts-collections.md) (ArkTS containers) andclasses decorated with [@Sendable](../../../../arkts-utils/arkts-sendable.md) are not supported.<br>**undefined** and **null** are not supported. V2 state management data andthe return value of [makeObserved](arkts-arkui-uiutils-c.md#makeobserved-1) are not supported. |
 
 **Return value:**
 

@@ -102,7 +102,7 @@ Triggered when the rating value changes. Compared with [onChange](RatingAttribut
 starStyle(options: StarStyleOptions)
 ```
 
-Sets the star style. For details about the supported image types, see [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image). Local and network images are supported. The PixelMap type is not supported. By default, the image is loaded in asynchronous mode. Synchronous loading is not supported.
+Sets the star style. For details about the supported image types, see [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md). Local and network images are supported. The PixelMap type is not supported. By default, the image is loaded in asynchronous mode. Synchronous loading is not supported.
 
 **Since:** 7
 
@@ -124,7 +124,7 @@ Sets the star style. For details about the supported image types, see [Image](..
 starStyle(options: Optional<StarStyleOptions>)
 ```
 
-Sets the star style. For details about the supported image types, see [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image). Local and network images are supported. The PixelMap type is not supported. By default, the image is loaded in asynchronous mode. Synchronous loading is not supported. Compared with [starStyle](RatingAttribute#starStyle(options: StarStyleOptions)), this API supports the **undefined** type for the **options** parameter.
+Sets the star style. For details about the supported image types, see [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md). Local and network images are supported. The PixelMap type is not supported. By default, the image is loaded in asynchronous mode. Synchronous loading is not supported. Compared with [starStyle](RatingAttribute#starStyle(options: StarStyleOptions)), this API supports the **undefined** type for the **options** parameter.
 
 **Since:** 18
 

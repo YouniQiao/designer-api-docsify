@@ -6,7 +6,7 @@ typedef struct ContentEmbed_Object* ContentEmbed_ObjectHandle
 
 ## Overview
 
-Define the ContentEmbed_ObjectHandle type.Provides methods for Content Embed Kit.
+Declares the pointer type of the ContentEmbed_Object object.
 
 **Since**: 24
 

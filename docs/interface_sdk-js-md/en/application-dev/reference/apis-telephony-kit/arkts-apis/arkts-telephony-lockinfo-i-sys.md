@@ -11,7 +11,7 @@ Defines the personalized lock information.
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@ohos.telephony.sim';
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## lockType

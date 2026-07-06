@@ -9,7 +9,7 @@ Defines chipGroupV2.
 ## Modules to Import
 
 ```TypeScript
-import { ChipGroupV2ItemConfig, ChipGroupV2ItemStyleConfig, ChipGroupV2SpaceConfig, ChipGroupV2IconGroupSuffix, ChipGroupV2Items, ChipGroupV2Padding, ChipGroupV2Item, ChipGroupV2ItemStyle, ChipGroupV2, ChipGroupV2PaddingConfig, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2Space } from '@ohos.arkui.advanced.ChipGroupV2';
+import { ChipGroupV2ItemConfig, ChipGroupV2ItemStyleConfig, ChipGroupV2SpaceConfig, ChipGroupV2IconGroupSuffix, ChipGroupV2Items, ChipGroupV2Padding, ChipGroupV2Item, ChipGroupV2ItemStyle, ChipGroupV2, ChipGroupV2PaddingConfig, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2Space } from '@kit.ArkUI';
 ```
 
 ## build
@@ -202,7 +202,7 @@ The builder function which will be rendered in the suffix of ChipGroupV2.
 
 **Since:** 26.0.0
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

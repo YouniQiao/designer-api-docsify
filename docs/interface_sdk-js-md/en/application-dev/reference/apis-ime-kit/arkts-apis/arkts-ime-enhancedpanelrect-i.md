@@ -9,7 +9,7 @@ Indicates the size of the enhanced input method panel, including the custom avoi
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@ohos.inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## fullScreenMode

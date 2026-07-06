@@ -9,7 +9,7 @@ This interface implements volume management for an audio group. Before calling a
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## adjustSystemVolumeByStep

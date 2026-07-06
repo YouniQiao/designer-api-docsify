@@ -40,7 +40,7 @@ Preloads the process up to the point of process creation completion.
 TYPE_CREATE_ABILITY_STAGE = 2
 ```
 
-Preloads the process up to the point of [AbilityStage](arkts-ability-abilitystage-c.md#abilitystage) creation completion.
+Preloads the process up to the point of [AbilityStage](arkts-ability-abilitystage-c.md) creation completion.
 
 **Since:** 22
 

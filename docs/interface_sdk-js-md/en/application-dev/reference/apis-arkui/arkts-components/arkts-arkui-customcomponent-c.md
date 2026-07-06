@@ -2,7 +2,7 @@
 
 Custom Component
 
-**Inheritance/Implementation:** CustomComponent extends [BaseCustomComponent](arkts-arkui-basecustomcomponent-c.md#basecustomcomponent)
+**Inheritance/Implementation:** CustomComponent extends [BaseCustomComponent](arkts-arkui-basecustomcomponent-c.md)
 
 **Since:** 18
 

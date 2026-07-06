@@ -29,7 +29,7 @@ function getUptime(timeType: TimeType, isNanoseconds?: boolean): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types.<br> 3. Parameter verification failed. This error code was added due to missingissues.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types.<br> 3. Parameter verification failed. This error code was added due to missingissues.<br>**适用版本：** 12+ |
 
 **示例：**
 

@@ -9,7 +9,7 @@ Defines the socket connection information.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@ohos.net.socket';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## message

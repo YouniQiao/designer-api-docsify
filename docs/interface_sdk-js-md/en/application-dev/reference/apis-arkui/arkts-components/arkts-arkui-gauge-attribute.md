@@ -14,7 +14,7 @@ In addition to the [universal attributes](../../../../reference/apis-arkui/arkui
 colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGradient, number]>)
 ```
 
-Sets the colors of the gauge. Since API version 11, this API follows the following rules: If the data type is [ResourceColor](arkts-arkui-resourcecolor-t.md#resourcecolor), the ring is of the monochrome type. If the data type is [LinearGradient](arkts-arkui-lineargradient-i.md#lineargradient), the ring is of the gradient type. If the data type is Array, the ring is of the gradient type. The first parameter indicates the color value. If it is set to a non-color value, the color of 0xFFE84026 is used. The second parameter indicates the color weight. If it is set to a negative number or a non-numeric value, the color weight is 0. A ring of the gradient type contains a maximum of nine color segments. If there are more than nine segments, the excess is not displayed.
+Sets the colors of the gauge. Since API version 11, this API follows the following rules: If the data type is [ResourceColor](arkts-arkui-resourcecolor-t.md), the ring is of the monochrome type. If the data type is [LinearGradient](arkts-arkui-lineargradient-i.md), the ring is of the gradient type. If the data type is Array, the ring is of the gradient type. The first parameter indicates the color value. If it is set to a non-color value, the color of 0xFFE84026 is used. The second parameter indicates the color weight. If it is set to a negative number or a non-numeric value, the color weight is 0. A ring of the gradient type contains a maximum of nine color segments. If there are more than nine segments, the excess is not displayed.
 
 **Since:** 8
 

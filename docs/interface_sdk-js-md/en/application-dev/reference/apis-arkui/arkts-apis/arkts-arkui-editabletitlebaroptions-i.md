@@ -9,7 +9,7 @@ Indicates the options of the editable title bar.
 ## Modules to Import
 
 ```TypeScript
-import { EditableTitleBarOptions, EditableTitleBarMenuItem, EditableTitleBarItem, EditableLeftIconType, EditableTitleBar } from '@ohos.arkui.advanced.EditableTitleBar';
+import { EditableTitleBarOptions, EditableTitleBarMenuItem, EditableTitleBarItem, EditableLeftIconType, EditableTitleBar } from '@kit.ArkUI';
 ```
 
 ## backgroundBlurStyle

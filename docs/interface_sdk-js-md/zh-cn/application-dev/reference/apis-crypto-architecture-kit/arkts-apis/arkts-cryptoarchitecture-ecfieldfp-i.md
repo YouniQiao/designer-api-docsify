@@ -1,8 +1,8 @@
 # ECFieldFp
 
-指定椭圆曲线的素数域。是[ECField](arkts-cryptoarchitecture-ecfield-i.md#ecfield)的子类。
+指定椭圆曲线的素数域。是[ECField](arkts-cryptoarchitecture-ecfield-i.md)的子类。
 
-**继承/实现关系：** ECFieldFp extends [ECField](arkts-cryptoarchitecture-ecfield-i.md#ecfield)
+**继承/实现关系：** ECFieldFp extends [ECField](arkts-cryptoarchitecture-ecfield-i.md)
 
 **起始版本：** 10
 

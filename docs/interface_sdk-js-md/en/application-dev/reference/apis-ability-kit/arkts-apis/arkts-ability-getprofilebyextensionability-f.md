@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getProfileByExtensionAbility
@@ -27,7 +27,7 @@ Obtains the JSON string array of the current application's configuration file ba
 | moduleName | string | Yes | Module name. |
 | extensionAbilityName | string | Yes | Name of the ExtensionAbility component. |
 | metadataName | string | Yes | Metadata name of the ExtensionAbility component, that is, **name** of the**metadata** tag under[extensionAbilities](../../../../quick-start/module-configuration-file.md#extensionabilities) in the**module.json5** file. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return theresult. If the information is successfully obtained, **err** is **null** and **data** is **Array&lt;string&gt;**.Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the information is successfully obtained, **err** is **null** and **data** is **Array&lt;string&gt;**.Otherwise, **err** is an error object. |
 
 **Error codes:**
 

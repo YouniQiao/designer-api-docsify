@@ -1,6 +1,6 @@
 # Video properties/events
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md#commonmethod), the following attributes are supported. In addition to the [universal events](arkts-arkui-commonmethod-c.md#commonmethod), the following events are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported. In addition to the [universal events](arkts-arkui-commonmethod-c.md), the following events are supported.
 
 **Inheritance/Implementation:** VideoAttribute extends [CommonMethod<VideoAttribute>](CommonMethod<VideoAttribute>)
 
@@ -76,7 +76,7 @@ Sets whether to display the video playback control bar. This attribute can be dy
 enableAnalyzer(enable: boolean)
 ```
 
-Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1). After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed. Note that if this attribute and the [overlay](arkts-arkui-commonmethod-c.md#overlay-1) attribute are both set, [CustomBuilder](arkts-arkui-custombuilder-t.md#custombuilder) specified in [overlay](arkts-arkui-commonmethod-c.md#commonmethod) has no effect. > **NOTE** > > This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20. After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
+Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1). After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed. Note that if this attribute and the [overlay](arkts-arkui-commonmethod-c.md#overlay-1) attribute are both set, [CustomBuilder](arkts-arkui-custombuilder-t.md) specified in [overlay](arkts-arkui-commonmethod-c.md) has no effect. > **NOTE** > > This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20. After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
 
 **Since:** 12
 
@@ -172,7 +172,7 @@ Sets the fill mode for the video content. This attribute can be dynamically set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ImageFit | Yes | Fill mode of the video content.<br>Default value: **Cover**<br>Constraints: Theenumerated value **Matrix** in **ImageFit** is not supported and will behave as **Cover**.<br>Invalid values,including **undefined**, **null**, and values outside the [ImageFit](arkts-arkui-imagefit-e.md#imagefit) enumeration range,will result in an effect the same as **Cover**. |
+| value | ImageFit | Yes | Fill mode of the video content.<br>Default value: **Cover**<br>Constraints: Theenumerated value **Matrix** in **ImageFit** is not supported and will behave as **Cover**.<br>Invalid values,including **undefined**, **null**, and values outside the [ImageFit](arkts-arkui-imagefit-e.md) enumeration range,will result in an effect the same as **Cover**. |
 
 ## onError
 

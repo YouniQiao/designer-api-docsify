@@ -9,7 +9,7 @@ This module provides the onscreen awareness capability. > **NOTE** >
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@ohos.multimodalAwareness.onScreen';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary

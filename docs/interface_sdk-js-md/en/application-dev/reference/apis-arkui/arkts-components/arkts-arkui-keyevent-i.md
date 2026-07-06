@@ -136,7 +136,7 @@ ScrollLock state. **true**: locked. **false**: unlocked.
 keyCode: number
 ```
 
-Key value. For details about the key values provided by the key-based input devices, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).
+Key value. For details about the key values provided by the key-based input devices, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).
 
 **Type:** number
 

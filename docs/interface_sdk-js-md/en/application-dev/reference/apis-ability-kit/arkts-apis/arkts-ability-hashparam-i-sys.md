@@ -11,7 +11,7 @@ Defines the hash parameters for bundle installation and uninstall.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@ohos.bundle.installer';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## hashValue

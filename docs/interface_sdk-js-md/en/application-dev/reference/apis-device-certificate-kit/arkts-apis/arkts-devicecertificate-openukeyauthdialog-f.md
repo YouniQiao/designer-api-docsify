@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from '@ohos.security.certManagerDialog';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## openUkeyAuthDialog

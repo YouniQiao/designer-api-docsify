@@ -11,7 +11,7 @@ Defines the list of onscreen awareness parameters, which is used to obtain onscr
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@ohos.multimodalAwareness.onScreen';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## parameters

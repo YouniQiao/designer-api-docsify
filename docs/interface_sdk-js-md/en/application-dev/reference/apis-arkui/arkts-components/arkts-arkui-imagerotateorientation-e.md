@@ -12,7 +12,7 @@ Describes the desired display orientation for image content.
 AUTO = 0
 ```
 
-Use EXIF metadata for display orientation, with support for rotation and mirroring. Images of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md#pixelmap) and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md#drawabledescriptor) types do not contain header information. When this API is called, the image display effect remains unchanged. ![imageRotateOrientation_0](../../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_0.png)
+Use EXIF metadata for display orientation, with support for rotation and mirroring. Images of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) types do not contain header information. When this API is called, the image display effect remains unchanged. ![imageRotateOrientation_0](../../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_0.png)
 
 **Since:** 14
 

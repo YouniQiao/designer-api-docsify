@@ -9,7 +9,7 @@ Manages the audio-haptic feature. Before calling any API in AudioHapticManager, 
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from '@ohos.multimedia.audioHaptic';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## createPlayer
@@ -84,8 +84,8 @@ Registers audio and haptic resources via URIs. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| audioUri | string | Yes | URI of the audio source.<br>- For details about the supported audio resource formatsand path formats in the normal latency mode, see [AVPlayer](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md#media).<br>- Fordetails about the supported audio resource formats in the low-latency mode, see[SoundPool](../../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool). The pathformat must meet the requirements described in[fileIo.open](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).<br>- In both modes, youare advised to pass in the absolute path of the file. |
-| hapticUri | string | Yes | URI of the haptic source.<br>For details about the supported haptic resourceformats, see [HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-hapticfiledescriptor-i.md#hapticfiledescriptor). The path format mustmeet the requirements described in[fileIo.open](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).<br>You are advised topass in the absolute path of the file. |
+| audioUri | string | Yes | URI of the audio source.<br>- For details about the supported audio resource formatsand path formats in the normal latency mode, see [AVPlayer](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md).<br>- Fordetails about the supported audio resource formats in the low-latency mode, see[SoundPool](../../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool). The pathformat must meet the requirements described in[fileIo.open](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).<br>- In both modes, youare advised to pass in the absolute path of the file. |
+| hapticUri | string | Yes | URI of the haptic source.<br>For details about the supported haptic resourceformats, see [HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-hapticfiledescriptor-i.md). The path format mustmeet the requirements described in[fileIo.open](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).<br>You are advised topass in the absolute path of the file. |
 
 **Return value:**
 

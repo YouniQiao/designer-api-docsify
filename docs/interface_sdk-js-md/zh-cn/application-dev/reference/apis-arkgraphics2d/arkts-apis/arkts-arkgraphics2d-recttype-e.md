@@ -1,6 +1,6 @@
 # RectType
 
-定义填充网格的矩形类型的枚举。仅在[Lattice](arkts-graphics-drawing.md#drawing)中使用。
+定义填充网格的矩形类型的枚举。仅在[Lattice](arkts-graphics-drawing.md)中使用。
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ TRANSPARENT = 1
 FIXEDCOLOR = 2
 ```
 
-将[Lattice](arkts-graphics-drawing.md#drawing)中fColors数组的颜色绘制到矩形网格中。
+将[Lattice](arkts-graphics-drawing.md)中fColors数组的颜色绘制到矩形网格中。
 
 **起始版本：** 12
 

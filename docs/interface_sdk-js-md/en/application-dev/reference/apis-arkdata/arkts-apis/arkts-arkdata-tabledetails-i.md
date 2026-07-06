@@ -9,7 +9,7 @@ Defines a struct for statistics of device-cloud upload and download tasks of a d
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@ohos.data.relationalStore';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## download

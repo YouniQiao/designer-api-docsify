@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appMemoryOptimizer } from '@ohos.app.ability.appMemoryOptimizer';
+import { appMemoryOptimizer } from '@kit.AbilityKit';
 ```
 
 ## evictFilePages

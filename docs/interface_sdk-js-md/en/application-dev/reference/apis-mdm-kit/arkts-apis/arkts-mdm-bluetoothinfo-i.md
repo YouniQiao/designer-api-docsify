@@ -9,7 +9,7 @@ Represents the device Bluetooth information.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@ohos.enterprise.bluetoothManager';
+import { bluetoothManager } from '@kit.MDMKit';
 ```
 
 ## connectionState

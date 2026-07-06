@@ -6,7 +6,7 @@ Defines device information.
 
 **Deprecated since:** 11
 
-**Substitutes:** [DeviceBasicInfo](arkts-distributedservice-devicebasicinfo-i.md#devicebasicinfo)
+**Substitutes:** [DeviceBasicInfo](arkts-distributedservice-devicebasicinfo-i.md)
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -15,7 +15,7 @@ Defines device information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@ohos.distributedHardware.deviceManager';
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## authForm

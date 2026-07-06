@@ -6,14 +6,14 @@ Represents the authentication result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [UserAuthResult](arkts-userauthentication-userauthresult-i.md#userauthresult)
+**Substitutes:** [UserAuthResult](arkts-userauthentication-userauthresult-i.md)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@ohos.userIAM.userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## lockoutDuration

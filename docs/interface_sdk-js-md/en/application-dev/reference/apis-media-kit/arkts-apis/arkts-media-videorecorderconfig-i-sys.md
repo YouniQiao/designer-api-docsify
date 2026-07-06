@@ -11,7 +11,7 @@ Provides the video recorder configuration definitions.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## audioSourceType

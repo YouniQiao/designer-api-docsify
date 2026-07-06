@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligentScene } from '@ohos.intelligentScene';
+import { intelligentScene } from '@kit.BasicServicesKit';
 ```
 
 ## isDoNotDisturbEnabled

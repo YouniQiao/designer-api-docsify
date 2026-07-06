@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu, ExpandedMenuOptions } from '@ohos.arkui.advanced.SelectionMenu';
+import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu, ExpandedMenuOptions } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -20,6 +20,6 @@ import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu
 | --- | --- |
 | [EditorEventInfo](arkts-arkui-editoreventinfo-i.md) | Provides the information about the selected content. |
 | [EditorMenuOptions](arkts-arkui-editormenuoptions-i.md) | Describes the edit menu options. |
-| [ExpandedMenuOptions](arkts-arkui-expandedmenuoptions-i.md) | Describes the expanded drop-down menu options. Inherits from [MenuItemOptions](../arkts-components/arkts-arkui-menuitemoptions-i.md#menuitemoptions). |
+| [ExpandedMenuOptions](arkts-arkui-expandedmenuoptions-i.md) | Describes the expanded drop-down menu options. Inherits from [MenuItemOptions](../arkts-components/arkts-arkui-menuitemoptions-i.md). |
 | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | Defines the configuration options of the **SelectionMenu** component. |
 

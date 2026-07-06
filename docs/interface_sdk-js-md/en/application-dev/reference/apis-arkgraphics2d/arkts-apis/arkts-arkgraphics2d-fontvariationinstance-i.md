@@ -9,7 +9,7 @@ Font variable instance information, which stores preset variable font style info
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@ohos.graphics.text';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## coordinates

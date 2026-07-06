@@ -10,7 +10,7 @@ Defines the device information returned by the continuation management entry.
 
 **Deprecated since:** 22
 
-**Substitutes:** [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md#devicebasicinfo)
+**Substitutes:** [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md)
 
 **Model restriction:** This API can be used only in the stage model.
 

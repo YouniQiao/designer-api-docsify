@@ -9,7 +9,7 @@ A picker view to show available streaming device list.
 ## Modules to Import
 
 ```TypeScript
-import { AVCastPicker } from '@ohos.multimedia.avCastPicker';
+import { AVCastPicker } from '@kit.AVSessionKit';
 ```
 
 ## activeColor

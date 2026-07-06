@@ -9,7 +9,7 @@ Defines a DiscoveryService object for discovering mDNS services of the specified
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from '@ohos.net.mdns';
+import { mdns } from '@kit.NetworkKit';
 ```
 
 ## off('discoveryStart')

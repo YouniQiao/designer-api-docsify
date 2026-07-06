@@ -30,6 +30,7 @@ Defines the common property and method types for the native module.
 | [ArkUI_FocusPriority](#arkui_focuspriority) | ArkUI_FocusPriority | Enumerates the priority levels for focus management within the application. These levels determine thesequence in which UI components receive focus during user interaction. |
 | [ArkUI_FocusMove](#arkui_focusmove) | ArkUI_FocusMove | Enumerates the focus movement directions. |
 | [ArkUI_ResponseRegionSupportedTool](#arkui_responseregionsupportedtool) | ArkUI_ResponseRegionSupportedTool | Enumerates the input tool types supported for response region configuration. |
+| [ArkUI_RawInputEventType](#arkui_rawinputeventtype) | ArkUI_RawInputEventType | Enumerates raw input event types. |
 
 ### Function
 
@@ -145,6 +146,23 @@ Enumerates the input tool types supported for response region configuration.
 | ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_FINGER = 1 | Finger. |
 | ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_PEN = 2 | Stylus. |
 | ARKUI_RESPONSE_REGIN_SUPPORTED_TOOL_MOUSE = 3 | Mouse. |
+
+### ArkUI_RawInputEventType
+
+```c
+enum ArkUI_RawInputEventType
+```
+
+**Description**
+
+Enumerates raw input event types.
+
+**Since**: 26.0.0
+
+| Enum item | Description |
+| -- | -- |
+| ARKUI_RAW_INPUT_EVENT_TYPE_TOUCH = 0 |  |
+| ARKUI_RAW_INPUT_EVENT_TYPE_MOUSE = 1 |  |
 
 
 ## Function description

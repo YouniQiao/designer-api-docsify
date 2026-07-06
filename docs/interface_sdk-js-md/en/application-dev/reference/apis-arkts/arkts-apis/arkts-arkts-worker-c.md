@@ -2,7 +2,7 @@
 
 The Worker class contains all Worker functions.
 
-**Inheritance/Implementation:** Worker implements [EventTarget](arkts-arkts-eventtarget-i.md#eventtarget)
+**Inheritance/Implementation:** Worker implements [EventTarget](arkts-arkts-eventtarget-i.md)
 
 **Since:** 7
 
@@ -15,7 +15,7 @@ The Worker class contains all Worker functions.
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@ohos.worker';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## constructor

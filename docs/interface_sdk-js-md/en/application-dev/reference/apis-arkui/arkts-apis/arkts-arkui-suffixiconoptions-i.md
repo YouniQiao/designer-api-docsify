@@ -1,8 +1,8 @@
 # SuffixIconOptions
 
-Defines the suffix icon options. Inherits from [IconCommonOptions](arkts-arkui-iconcommonoptions-i.md#iconcommonoptions).
+Defines the suffix icon options. Inherits from [IconCommonOptions](arkts-arkui-iconcommonoptions-i.md).
 
-**Inheritance/Implementation:** SuffixIconOptions extends [IconCommonOptions](arkts-arkui-iconcommonoptions-i.md#iconcommonoptions)
+**Inheritance/Implementation:** SuffixIconOptions extends [IconCommonOptions](arkts-arkui-iconcommonoptions-i.md)
 
 **Since:** 11
 
@@ -11,7 +11,7 @@ Defines the suffix icon options. Inherits from [IconCommonOptions](arkts-arkui-i
 ## Modules to Import
 
 ```TypeScript
-import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, AccessibilitySelectedType, LabelMarginOptions, LabelOptions, PrefixIconOptions, IconCommonOptions, ChipOptions, ChipSuffixSymbolGlyphOptions, ChipSize, AccessibilityOptions } from '@ohos.arkui.advanced.Chip';
+import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, AccessibilitySelectedType, LabelMarginOptions, LabelOptions, PrefixIconOptions, IconCommonOptions, ChipOptions, ChipSuffixSymbolGlyphOptions, ChipSize, AccessibilityOptions } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription

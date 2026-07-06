@@ -2,7 +2,7 @@
 
 Manager hfp source profile.
 
-**Inheritance/Implementation:** HandsFreeAudioGatewayProfile extends [BaseProfile](arkts-connectivity-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** HandsFreeAudioGatewayProfile extends [BaseProfile](arkts-connectivity-baseprofile-t.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Manager hfp source profile.
 ## Modules to Import
 
 ```TypeScript
-import { hfp } from '@ohos.bluetooth.hfp';
+import { hfp } from '@kit.ConnectivityKit';
 ```
 
 ## connect

@@ -1,8 +1,8 @@
 # AlertDialogButtonOptions
 
-Inherits from [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md#alertdialogbuttonbaseoptions).
+Inherits from [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md).
 
-**Inheritance/Implementation:** AlertDialogButtonOptions extends [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md#alertdialogbuttonbaseoptions)
+**Inheritance/Implementation:** AlertDialogButtonOptions extends [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 10
 

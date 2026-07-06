@@ -9,7 +9,7 @@ Describes the settings for Wi-Fi connection.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@ohos.wifiManager';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## addNetworkToSystem

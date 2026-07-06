@@ -575,7 +575,7 @@ setMaskFilter(filter: MaskFilter | null): void
 setMiterLimit(miter: number): void
 ```
 
-设置折线尖角长度与线宽的最大比值，当画笔绘制一条折线，并且[JoinStyle](arkts-arkgraphics2d-joinstyle-e.md#joinstyle)为MITER_JOIN时，若尖角长度与线宽的比值大 于限制值，则该折角使用BEVEL_JOIN绘制。
+设置折线尖角长度与线宽的最大比值，当画笔绘制一条折线，并且[JoinStyle](arkts-arkgraphics2d-joinstyle-e.md)为MITER_JOIN时，若尖角长度与线宽的比值大 于限制值，则该折角使用BEVEL_JOIN绘制。
 
 **起始版本：** 12
 

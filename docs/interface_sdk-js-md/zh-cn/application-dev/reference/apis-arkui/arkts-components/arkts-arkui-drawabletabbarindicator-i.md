@@ -32,7 +32,7 @@ borderRadius?: Length
 drawable?: DrawableDescriptor
 ```
 
-�»��ߵ�ͼԴ�� ֧��[DrawableDescriptor](../arkts-apis/arkts-arkui-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult)�� [PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-pixelmapdrawabledescriptor-c.md#pixelmapdrawabledescriptor)�� [LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-layereddrawabledescriptor-c.md#layereddrawabledescriptor)�� [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md#animateddrawabledescriptor)���͡���������ЧͼԴʱ����ʾĬ�ϵ�ʵ�����»� �ߡ�
+�»��ߵ�ͼԴ�� ֧��[DrawableDescriptor](../arkts-apis/arkts-arkui-drawabledescriptorloadedresult-i.md)�� [PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-pixelmapdrawabledescriptor-c.md)�� [LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-layereddrawabledescriptor-c.md)�� [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)���͡���������ЧͼԴʱ����ʾĬ�ϵ�ʵ�����»� �ߡ�
 
 **类型：** DrawableDescriptor
 

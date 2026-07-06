@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@ohos.enterprise.applicationManager';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getAllowedKioskApps
@@ -32,7 +32,7 @@ Obtains the applications allowed to run in kiosk mode.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of [unique identifiers](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md#signatureinfo) of anapplication that can run in kiosk mode. |
+| Array&lt;string&gt; | List of [unique identifiers](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md) of anapplication that can run in kiosk mode. |
 
 **Error codes:**
 

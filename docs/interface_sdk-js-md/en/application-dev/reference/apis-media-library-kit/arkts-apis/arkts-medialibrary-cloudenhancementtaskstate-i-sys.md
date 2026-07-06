@@ -11,7 +11,7 @@ Represents the cloud enhancement task information, which includes the cloud enha
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@ohos.file.photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## expectedDuration

@@ -9,7 +9,7 @@ Describes the error message returned when a pre-download error occurs.
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@ohos.request.cacheDownload';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## errorCode

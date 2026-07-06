@@ -26,7 +26,7 @@ getId(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 当前组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。 |
+| string | 当前组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
 
 ## getUniqueId
 

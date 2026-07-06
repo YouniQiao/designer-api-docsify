@@ -11,7 +11,7 @@ Represents the access records of an application or device.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@ohos.privacyManager';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## bundleName

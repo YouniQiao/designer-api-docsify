@@ -60,7 +60,7 @@ Bundle name of the publisher to subscribe to.
 publisherDeviceId?: string
 ```
 
-Device ID. Use [@ohos.deviceInfo](arkts-deviceinfo.md#deviceinfo) to obtain the UDID as the device ID of the subscriber. Not supported currently.
+Device ID. Use [@ohos.deviceInfo](arkts-deviceinfo.md) to obtain the UDID as the device ID of the subscriber. Not supported currently.
 
 **Type:** string
 

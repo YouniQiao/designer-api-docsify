@@ -9,7 +9,7 @@ Parameters for checking certificate revocation status.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## allowDownloadCrl

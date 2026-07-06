@@ -1,8 +1,8 @@
 # SwipeRecognizer
 
-快滑手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer)。
+快滑手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
 
-**继承/实现关系：** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer)
+**继承/实现关系：** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **起始版本：** 18
 

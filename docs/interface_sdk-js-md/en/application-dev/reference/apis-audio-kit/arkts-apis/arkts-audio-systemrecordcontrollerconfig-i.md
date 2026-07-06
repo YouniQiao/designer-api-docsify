@@ -9,7 +9,7 @@ Defines the configuration for the system recording controller panel.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## sourceType

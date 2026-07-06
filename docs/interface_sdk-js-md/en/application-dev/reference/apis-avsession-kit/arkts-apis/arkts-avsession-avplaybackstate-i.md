@@ -9,7 +9,7 @@ Used to indicate the playback state of the current media. If the playback state 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@ohos.multimedia.avsession';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## activeItemId

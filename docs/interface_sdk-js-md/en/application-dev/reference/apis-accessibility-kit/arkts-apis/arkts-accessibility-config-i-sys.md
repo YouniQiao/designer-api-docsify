@@ -11,7 +11,7 @@ Implements configuration, acquisition, and listening for properties.
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@ohos.accessibility.config';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## get

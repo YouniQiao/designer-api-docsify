@@ -9,7 +9,7 @@ Provides the capability to access data under lock screen.
 ## Modules to Import
 
 ```TypeScript
-import { screenLockFileManager } from '@ohos.ability.screenLockFileManager';
+import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Wi-Fi information elements.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@ohos.wifiManager';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## content

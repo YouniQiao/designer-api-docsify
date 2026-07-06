@@ -9,7 +9,7 @@ Defines additional options for binding an input method.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@ohos.inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## isSimpleKeyboardEnabled

@@ -2,16 +2,14 @@
 
 ## Overview
 
-Defines the content embed proxy APIs.
-
-**System capability**: SystemCapability.ContentEmbed.ObjectEditor
+The ContentEmbed module provides the Object Editor (OE) framework and technologies to support documentembedding and collaborative editing between applications.An embedded document (OE document for short) implemented by using the OE technology may be presented as a thumbnailor a snapshot on a client UI, or may be serialized into a segment of binary data in a standard format and stored ina memory or a file (referred to as an OE format file).
 
 **Since**: 24
 ## Files
 
 | Name | Description |
 | -- | -- |
-| [content_embed_proxy.h](capi-content-embed-proxy-h.md) | Defines the content embed proxy APIs. |
-| [content_embed_common.h](capi-content-embed-common-h.md) | Declare the common types for the native ContentEmbed. |
-| [content_embed_extension.h](capi-content-embed-extension-h.md) | Defines the content embed extension APIs. |
-| [content_embed_document.h](capi-content-embed-document-h.md) | Defines the content embed document APIs. |
+| [content_embed_proxy.h](capi-content-embed-proxy-h.md) | Provides the client application with the API for querying the OE Extension information registered by theserver application, the data structures for interacting with the server OE Extension object, and the relatedoperation APIs. |
+| [content_embed_common.h](capi-content-embed-common-h.md) | Provides the error code definitions for the ContentEmbed module and the type enumeration descriptions for thecapabilities supported by embedded documents. |
+| [content_embed_extension.h](capi-content-embed-extension-h.md) | Defines the data structures and operation APIs related to the OE Extension of the server application. |
+| [content_embed_document.h](capi-content-embed-document-h.md) | Provides the data structures and corresponding operation APIs related to the embedded documents (OE documents)implemented using the OE technology. |

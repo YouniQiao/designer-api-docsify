@@ -9,7 +9,7 @@ A control class that encapsulates APIs for input method management, which can on
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@ohos.inputMethod';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## attach

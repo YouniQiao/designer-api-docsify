@@ -9,7 +9,7 @@ This class is used to enable back forward cache supported features.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## constructor

@@ -2,7 +2,7 @@
 
 Describes the region information. It inherits from [lang.ISendable](../../../../arkts-utils/arkts-sendable.md#isendable).
 
-**Inheritance/Implementation:** Region extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md#isendable)
+**Inheritance/Implementation:** Region extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md)
 
 **Since:** 12
 
@@ -11,7 +11,7 @@ Describes the region information. It inherits from [lang.ISendable](../../../../
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@ohos.multimedia.sendableImage';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## size

@@ -11,7 +11,7 @@ Represents information about a participant of device-cloud sharing.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@ohos.data.cloudData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## attachInfo

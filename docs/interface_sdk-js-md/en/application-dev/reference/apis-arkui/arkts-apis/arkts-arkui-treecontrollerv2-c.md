@@ -9,7 +9,7 @@ Declare TreeControllerV2
 ## Modules to Import
 
 ```TypeScript
-import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from '@ohos.arkui.advanced.TreeViewV2';
+import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from '@kit.ArkUI';
 ```
 
 ## addNode

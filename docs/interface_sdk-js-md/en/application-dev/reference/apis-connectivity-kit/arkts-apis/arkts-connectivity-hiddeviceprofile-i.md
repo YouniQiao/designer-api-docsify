@@ -2,7 +2,7 @@
 
 Manager HID device profile.
 
-**Inheritance/Implementation:** HidDeviceProfile extends [BaseProfile](arkts-connectivity-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** HidDeviceProfile extends [BaseProfile](arkts-connectivity-baseprofile-t.md)
 
 **Since:** 23
 
@@ -11,7 +11,7 @@ Manager HID device profile.
 ## Modules to Import
 
 ```TypeScript
-import { hid } from '@ohos.bluetooth.hid';
+import { hid } from '@kit.ConnectivityKit';
 ```
 
 ## connect

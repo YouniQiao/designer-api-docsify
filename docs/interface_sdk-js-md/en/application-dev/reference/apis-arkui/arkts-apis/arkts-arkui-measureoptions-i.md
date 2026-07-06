@@ -9,7 +9,7 @@ Provides attributes of the measured text.
 ## Modules to Import
 
 ```TypeScript
-import { MeasureOptions } from '@ohos.measure';
+import { MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## baselineOffset

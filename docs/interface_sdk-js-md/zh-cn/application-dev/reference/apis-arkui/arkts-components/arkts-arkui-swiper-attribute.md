@@ -1,6 +1,6 @@
 # Swiper属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下事件： > **说明：** > Swiper组件通用属性[clip](arkts-arkui-commonmethod-c.md#clip-1)的默认值为true。
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下事件： > **说明：** > Swiper组件通用属性[clip](arkts-arkui-commonmethod-c.md#clip-1)的默认值为true。
 
 **继承/实现关系：** SwiperAttribute extends [CommonMethod<SwiperAttribute>](CommonMethod<SwiperAttribute>)
 
@@ -133,7 +133,7 @@ cachedCount(count: number, options: CachedCountOptions)
 curve(value: Curve | string | ICurve)
 ```
 
-设置Swiper的动画曲线，默认为弹簧插值曲线，常用曲线参考[Curve](arkts-arkui-curve-e.md#curve)，也可以通过[插值计算](../arkts-apis/arkts-curves.md#curves)模块提供的接口创建自定义的插值曲线对象。
+设置Swiper的动画曲线，默认为弹簧插值曲线，常用曲线参考[Curve](arkts-arkui-curve-e.md)，也可以通过[插值计算](../arkts-apis/arkts-curves.md)模块提供的接口创建自定义的插值曲线对象。
 
 **起始版本：** 8
 
@@ -155,7 +155,7 @@ curve(value: Curve | string | ICurve)
 customContentTransition(transition: SwiperContentAnimatedTransition)
 ```
 
-自定义Swiper页面切换动画。在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发回调，开发者可以在回调中设置透明度、缩放比例、位移等属性来自定义切换动画。 使用说明： 1、循环场景下，设置prevMargin和nextMargin属性，使得Swiper前后端显示同一页面时，该接口不生效。 2、在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md#swipercontenttransitionproxy)回调。例如，当视窗内有下 标为0、1的两个页面时，会每帧触发两次index值分别为0和1的回调。 3、设置displayCount属性的swipeByGroup参数为true时，若同组中至少有一个页面在视窗内时，则会对同组中所有页面触发回调，若同组所有页面均不在视窗内时，则会一起下渲染树。 4、在页面跟手滑动和离手后执行切换动画的过程中，默认动画（页面滑动）依然会发生，若希望页面不滑动，可以设置主轴方向上负的位移（translate属性）来抵消页面滑动。例如：当displayCount属性值为2，视窗内有下标为0、1 的两个页面时，页面水平滑动过程中，可以逐帧设置第0页的translate属性在x轴上的值为-position * mainAxisLength来抵消第0页的位移，设置第1页的translate属性在x轴上的值为-(position - 1) * mainAxisLength来抵消第1页的位移。
+自定义Swiper页面切换动画。在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发回调，开发者可以在回调中设置透明度、缩放比例、位移等属性来自定义切换动画。 使用说明： 1、循环场景下，设置prevMargin和nextMargin属性，使得Swiper前后端显示同一页面时，该接口不生效。 2、在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)回调。例如，当视窗内有下 标为0、1的两个页面时，会每帧触发两次index值分别为0和1的回调。 3、设置displayCount属性的swipeByGroup参数为true时，若同组中至少有一个页面在视窗内时，则会对同组中所有页面触发回调，若同组所有页面均不在视窗内时，则会一起下渲染树。 4、在页面跟手滑动和离手后执行切换动画的过程中，默认动画（页面滑动）依然会发生，若希望页面不滑动，可以设置主轴方向上负的位移（translate属性）来抵消页面滑动。例如：当displayCount属性值为2，视窗内有下标为0、1 的两个页面时，页面水平滑动过程中，可以逐帧设置第0页的translate属性在x轴上的值为-position * mainAxisLength来抵消第0页的位移，设置第1页的translate属性在x轴上的值为-(position - 1) * mainAxisLength来抵消第1页的位移。
 
 **起始版本：** 12
 
@@ -294,7 +294,7 @@ displayMode(value: SwiperDisplayMode)
 duration(value: number)
 ```
 
-设置子组件切换的动画时长。 duration需要和[curve](SwiperAttribute#curve)一起使用。 curve默认曲线为[interpolatingSpring](../arkts-apis/arkts-arkui-interpolatingspring-f.md#interpolatingspring-1)，此时动画时长只受曲线自身参数影响，不再受duration的控制。不受 duration控制的曲线可以查阅[插值计算](../arkts-apis/arkts-curves.md#curves)模块，比如，[springMotion](../arkts-apis/arkts-arkui-springmotion-f.md#springmotion-1)、 [responsiveSpringMotion](../arkts-apis/arkts-arkui-responsivespringmotion-f.md#responsivespringmotion-1)和interpolatingSpring类型的曲线不受duration控制。如果希 望动画时长受到duration控制，需要给curve设置其他曲线。
+设置子组件切换的动画时长。 duration需要和[curve](SwiperAttribute#curve)一起使用。 curve默认曲线为[interpolatingSpring](../arkts-apis/arkts-arkui-interpolatingspring-f.md#interpolatingspring-1)，此时动画时长只受曲线自身参数影响，不再受duration的控制。不受 duration控制的曲线可以查阅[插值计算](../arkts-apis/arkts-curves.md)模块，比如，[springMotion](../arkts-apis/arkts-arkui-springmotion-f.md#springmotion-1)、 [responsiveSpringMotion](../arkts-apis/arkts-arkui-responsivespringmotion-f.md#responsivespringmotion-1)和interpolatingSpring类型的曲线不受duration控制。如果希 望动画时长受到duration控制，需要给curve设置其他曲线。
 
 **起始版本：** 7
 
@@ -649,7 +649,7 @@ onChange(event: Callback<number>)
 onContentDidScroll(handler: ContentDidScrollCallback)
 ```
 
-监听Swiper页面滑动事件。 使用说明： 1、循环场景下，设置prevMargin和nextMargin属性，使得Swiper前后端显示同一页面时，该接口不生效。 2、在页面滑动过程中，会对视窗内所有页面逐帧触发[ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md#contentdidscrollcallback)回调。例如，当视窗内有下标为0、1的两个页面时，会每帧触发两次 index值分别为0和1的回调。 3、设置displayCount属性的swipeByGroup参数为true时，若同组中至少有一个页面在视窗内时，则会对同组中所有页面触发回调。
+监听Swiper页面滑动事件。 使用说明： 1、循环场景下，设置prevMargin和nextMargin属性，使得Swiper前后端显示同一页面时，该接口不生效。 2、在页面滑动过程中，会对视窗内所有页面逐帧触发[ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md)回调。例如，当视窗内有下标为0、1的两个页面时，会每帧触发两次 index值分别为0和1的回调。 3、设置displayCount属性的swipeByGroup参数为true时，若同组中至少有一个页面在视窗内时，则会对同组中所有页面触发回调。
 
 **起始版本：** 12
 

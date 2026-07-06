@@ -9,7 +9,7 @@ Provides a list of contact attributes, which are generally used as arguments. If
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@ohos.contact';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## attributes

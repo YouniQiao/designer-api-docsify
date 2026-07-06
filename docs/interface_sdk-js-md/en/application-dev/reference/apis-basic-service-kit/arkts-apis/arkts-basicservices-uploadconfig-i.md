@@ -9,7 +9,7 @@ Describes the configuration of an upload task.
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@ohos.request';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## begins

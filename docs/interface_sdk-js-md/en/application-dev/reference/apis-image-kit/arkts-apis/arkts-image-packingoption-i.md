@@ -9,7 +9,7 @@ Describes the options for image encoding.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## backgroundColor

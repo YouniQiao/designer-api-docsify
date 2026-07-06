@@ -66,5 +66,5 @@ Sets the range of content selection. The selected content is highlighted. If bot
 | --- | --- | --- | --- |
 | selectionStart | number | Yes | Start position of the selection.<br>Values less than 0 are treated as **0**. |
 | selectionEnd | number | Yes | End position of the selection.<br>If the value exceeds the text length, thecurrent text length is used instead. |
-| options | SelectionOptions | No | Configuration of options. The default value is inherited from[SelectionOptions](arkts-arkui-selectionoptions-i.md#selectionoptions). |
+| options | SelectionOptions | No | Configuration of options. The default value is inherited from[SelectionOptions](arkts-arkui-selectionoptions-i.md). |
 

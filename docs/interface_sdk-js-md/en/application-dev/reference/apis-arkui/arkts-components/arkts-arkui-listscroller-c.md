@@ -1,8 +1,8 @@
 # ListScroller
 
-Implements the scroll controller of the **List** component. A **List** component is bound to a **ListScroller** on a one-to-one basis. > **NOTE** > > **ListScroller** inherits from [Scroller](arkts-arkui-scroller-c.md#scroller) and has all methods of > [Scroller](arkts-arkui-scroller-c.md#scroller).
+Implements the scroll controller of the **List** component. A **List** component is bound to a **ListScroller** on a one-to-one basis. > **NOTE** > > **ListScroller** inherits from [Scroller](arkts-arkui-scroller-c.md) and has all methods of > [Scroller](arkts-arkui-scroller-c.md).
 
-**Inheritance/Implementation:** ListScroller extends [Scroller](arkts-arkui-scroller-c.md#scroller)
+**Inheritance/Implementation:** ListScroller extends [Scroller](arkts-arkui-scroller-c.md)
 
 **Since:** 11
 
@@ -14,7 +14,7 @@ Implements the scroll controller of the **List** component. A **List** component
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-Collapses the [list items](arkts-arkui-listitem.md) in the [EXPANDED](arkts-arkui-swipeactionstate-e.md#swipeactionstate) state and sets callback events.
+Collapses the [list items](arkts-arkui-listitem.md) in the [EXPANDED](arkts-arkui-swipeactionstate-e.md) state and sets callback events.
 
 **Since:** 11
 
@@ -28,7 +28,7 @@ Collapses the [list items](arkts-arkui-listitem.md) in the [EXPANDED](arkts-arku
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | CloseSwipeActionOptions | No | Callback events for collapsing [list items](arkts-arkui-listitem.md) in the[EXPANDED](arkts-arkui-swipeactionstate-e.md#swipeactionstate) state. |
+| options | CloseSwipeActionOptions | No | Callback events for collapsing [list items](arkts-arkui-listitem.md) in the[EXPANDED](arkts-arkui-swipeactionstate-e.md) state. |
 
 **Error codes:**
 

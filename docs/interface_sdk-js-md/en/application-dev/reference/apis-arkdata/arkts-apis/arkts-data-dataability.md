@@ -9,7 +9,7 @@ The **DataAbility** module provides APIs to create predicates for querying data 
 ## Modules to Import
 
 ```TypeScript
-import { dataAbility } from '@ohos.data.dataAbility';
+import { dataAbility } from '@kit.ArkData';
 ```
 
 ## Summary

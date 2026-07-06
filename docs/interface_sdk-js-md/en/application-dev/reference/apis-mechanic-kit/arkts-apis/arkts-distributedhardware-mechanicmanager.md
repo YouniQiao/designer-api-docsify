@@ -9,7 +9,7 @@ Provides capabilities for controlling and interacting with mechanical devices co
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@ohos.distributedHardware.mechanicManager';
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## Summary

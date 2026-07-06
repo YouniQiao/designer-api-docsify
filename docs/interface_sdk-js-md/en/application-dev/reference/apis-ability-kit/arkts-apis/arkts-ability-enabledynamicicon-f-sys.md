@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## enableDynamicIcon
@@ -45,7 +45,7 @@ Enables the dynamic icon based on the given bundle name and module name. This AP
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not found. |
 | [17700304](../errorcode-bundle.md#17700304-failed-to-enable-the-dynamic-icon) | Failed to enable the dynamic icon. |
-| [17700307](../errorcode-bundle.md#17700307-dynamic-icon-does-not-take-effect-because-of-a-custom-theme) | Dynamic icons cannot take effect due to existing custom themes.<br>**Applicable version:** 20 |
+| [17700307](../errorcode-bundle.md#17700307-dynamic-icon-does-not-take-effect-because-of-a-custom-theme) | Dynamic icons cannot take effect due to existing custom themes.<br>**Applicable version:** 20 and later |
 
 **Example**
 

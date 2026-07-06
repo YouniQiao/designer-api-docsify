@@ -48,7 +48,7 @@ digitalCrownSensitivity?: CrownSensitivity
 layoutOptions?: ArcSliderLayoutOptions
 ```
 
-配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arcsliderstyleoptions-c.md#arcsliderstyleoptions)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 **类型：** ArcSliderLayoutOptions
 
@@ -112,7 +112,7 @@ onTouch?: ArcSliderTouchHandler
 styleOptions?: ArcSliderStyleOptions
 ```
 
-配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arcsliderstyleoptions-c.md#arcsliderstyleoptions)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 **类型：** ArcSliderStyleOptions
 
@@ -128,7 +128,7 @@ styleOptions?: ArcSliderStyleOptions
 valueOptions?: ArcSliderValueOptions
 ```
 
-配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arcsliderstyleoptions-c.md#arcsliderstyleoptions)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 **类型：** ArcSliderValueOptions
 

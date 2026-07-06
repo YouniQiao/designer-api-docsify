@@ -20,7 +20,7 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: number): Promise<Arr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceFlags | number | 是 | 指定返回的BundleResourceInfo所包含的信息，取值请参考[ResourceFlag枚举值](arkts-ability-resourceflag-e-sys.md#resourceflag)。 |
+| resourceFlags | number | 是 | 指定返回的BundleResourceInfo所包含的信息，取值请参考[ResourceFlag枚举值](arkts-ability-resourceflag-e-sys.md)。 |
 
 **返回值：**
 

@@ -9,7 +9,7 @@ The **UserStatus** module, designed for user state awareness, empowers the syste
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@ohos.multimodalAwareness.userStatus';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary

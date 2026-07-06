@@ -1,8 +1,8 @@
 # RingStyleOptions
 
-Options of the ring style without scales. Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#scaneffectoptions) and [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions).
+Options of the ring style without scales. Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
 
-**Inheritance/Implementation:** RingStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#scaneffectoptions), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
+**Inheritance/Implementation:** RingStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
 **Since:** 10
 

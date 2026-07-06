@@ -11,7 +11,7 @@ The **conversation** module leverages softbus capabilities to provide agents wit
 ## Modules to Import
 
 ```TypeScript
-import { conversation } from '@ohos.distributedSoftBus.conversation';
+import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

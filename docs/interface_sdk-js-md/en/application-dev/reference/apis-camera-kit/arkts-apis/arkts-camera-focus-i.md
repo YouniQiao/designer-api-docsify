@@ -1,8 +1,8 @@
 # Focus
 
-Focus extends [FocusQuery](arkts-camera-focusquery-i.md#focusquery) Provides APIs to obtain and set the camera focus mode and focus position.
+Focus extends [FocusQuery](arkts-camera-focusquery-i.md) Provides APIs to obtain and set the camera focus mode and focus position.
 
-**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-focusquery-i.md#focusquery)
+**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-focusquery-i.md)
 
 **Since:** 11
 
@@ -11,7 +11,7 @@ Focus extends [FocusQuery](arkts-camera-focusquery-i.md#focusquery) Provides API
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getFocalLength
@@ -32,7 +32,7 @@ Obtains the focal length in use.
 
 | Type | Description |
 | --- | --- |
-| number | Focal length, in units of mm. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| number | Focal length, in units of mm. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -58,7 +58,7 @@ Obtains the focus mode in use.
 
 | Type | Description |
 | --- | --- |
-| FocusMode | Focus mode obtained. If the operation fails, undefined is returned and an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is thrown. |
+| FocusMode | Focus mode obtained. If the operation fails, undefined is returned and an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Obtains the focal point in use.
 
 | Type | Description |
 | --- | --- |
-| Point | Focal point obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| Point | Focal point obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@ Describes information about an application in the shortcut bar.
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@ohos.enterprise.applicationManager';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## abilityName

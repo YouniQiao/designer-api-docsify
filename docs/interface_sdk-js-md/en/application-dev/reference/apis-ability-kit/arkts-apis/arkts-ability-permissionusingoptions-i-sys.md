@@ -11,7 +11,7 @@ Represents the optional parameter set for using a permission.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@ohos.privacyManager';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## enhancedIdentity

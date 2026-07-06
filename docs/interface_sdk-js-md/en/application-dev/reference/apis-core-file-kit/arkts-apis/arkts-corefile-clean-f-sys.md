@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@ohos.file.cloudSyncManager';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## clean
@@ -27,7 +27,7 @@ Callback used to clear the cloud data locally. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
-| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data isto be cleared is a string. [Action](arkts-corefile-action-e-sys.md#action) specifies the action to perform. |
+| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data isto be cleared is a string. [Action](arkts-corefile-action-e-sys.md) specifies the action to perform. |
 
 **Return value:**
 
@@ -83,7 +83,7 @@ Callback used to clear the cloud data locally. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
-| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data isto be cleared is a string. [Action](arkts-corefile-action-e-sys.md#action) specifies the action to perform. |
+| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data isto be cleared is a string. [Action](arkts-corefile-action-e-sys.md) specifies the action to perform. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to clear the cloud data locally. |
 
 **Error codes:**

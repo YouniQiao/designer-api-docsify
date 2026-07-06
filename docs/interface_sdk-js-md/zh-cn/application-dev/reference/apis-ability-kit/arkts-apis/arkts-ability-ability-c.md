@@ -1,6 +1,6 @@
 # Ability
 
-Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-app-ability-uiability.md)和 [ExtensionAbility](arkts-ability-extensionability-c.md#extensionability)的基类，提供系统配置更新回调和系统内存级别变化回调能力。该基类不支持开发者直接继 承，开发者应根据具体的业务场景选择使用[UIAbility](arkts-app-ability-uiability.md)或 [ExtensionAbility](arkts-ability-extensionability-c.md#extensionability)，相关指南参见 [Ability Kit简介](../../../../application-models/abilitykit-overview.md)。
+Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-app-ability-uiability.md)和 [ExtensionAbility](arkts-ability-extensionability-c.md)的基类，提供系统配置更新回调和系统内存级别变化回调能力。该基类不支持开发者直接继 承，开发者应根据具体的业务场景选择使用[UIAbility](arkts-app-ability-uiability.md)或 [ExtensionAbility](arkts-ability-extensionability-c.md)，相关指南参见 [Ability Kit简介](../../../../application-models/abilitykit-overview.md)。
 
 **起始版本：** 9
 
@@ -62,7 +62,7 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见[AbilityConstant.MemoryLevel](arkts-ability-memorylevel-e.md#memorylevel)。 |
+| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见[AbilityConstant.MemoryLevel](arkts-ability-memorylevel-e.md)。 |
 
 **示例：**
 

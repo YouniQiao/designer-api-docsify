@@ -2,7 +2,7 @@
 
 定义Symbol类型后缀图标。
 
-**继承/实现关系：** ChipV2SuffixSymbolIcon extends [ChipV2SymbolIcon](arkts-arkui-chipv2symbolicon-c.md#chipv2symbolicon)
+**继承/实现关系：** ChipV2SuffixSymbolIcon extends [ChipV2SymbolIcon](arkts-arkui-chipv2symbolicon-c.md)
 
 **起始版本：** 26.0.0
 

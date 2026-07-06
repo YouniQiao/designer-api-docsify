@@ -11,7 +11,7 @@ Represents an error message.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@ohos.update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## errorCode

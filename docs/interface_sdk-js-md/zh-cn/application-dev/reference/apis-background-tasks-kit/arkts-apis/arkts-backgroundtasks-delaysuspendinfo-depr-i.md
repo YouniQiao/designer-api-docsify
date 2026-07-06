@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [DelaySuspendInfo](arkts-backgroundtasks-delaysuspendinfo-i.md#delaysuspendinfo)
+**替代接口：** [DelaySuspendInfo](arkts-backgroundtasks-delaysuspendinfo-i.md)
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 

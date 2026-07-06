@@ -64,7 +64,7 @@ Binds to or updates the specified styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | StyledString | Yes | Styled string.<br>**NOTE**<br>The child class[MutableStyledString](arkts-arkui-mutablestyledstring-c.md#mutablestyledstring) of **StyledString** can also serve as the argument. |
+| value | StyledString | Yes | Styled string.<br>**NOTE**<br>The child class[MutableStyledString](arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
 
 ## setTextSelection
 

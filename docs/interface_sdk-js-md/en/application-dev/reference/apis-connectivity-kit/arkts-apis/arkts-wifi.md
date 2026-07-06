@@ -9,7 +9,7 @@ Provides methods to operate or manage Wi-Fi.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@ohos.wifi';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

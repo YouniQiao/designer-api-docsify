@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DriverExtensionContext } from '@ohos.app.ability.DriverExtensionAbility';
+import { DriverExtensionContext } from '@kit.DriverDevelopmentKit';
 ```
 
 ## Summary

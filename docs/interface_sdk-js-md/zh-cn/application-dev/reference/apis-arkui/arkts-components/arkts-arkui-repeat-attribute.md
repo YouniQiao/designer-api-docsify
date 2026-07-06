@@ -1,6 +1,6 @@
 # Repeat属性/事件
 
-除支持[拖拽排序](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)属性外，还支持以下属性。
+除支持[拖拽排序](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)属性外，还支持以下属性。
 
 **继承/实现关系：** RepeatAttribute extends [DynamicNode<RepeatAttribute<T>>](DynamicNode<RepeatAttribute<T>>)
 

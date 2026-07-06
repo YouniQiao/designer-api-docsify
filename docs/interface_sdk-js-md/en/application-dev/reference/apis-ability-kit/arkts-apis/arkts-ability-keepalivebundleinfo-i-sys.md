@@ -11,7 +11,7 @@ Describes the keep-alive application information, which can be obtained by calli
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@ohos.app.ability.appManager';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## allowUserToCancel

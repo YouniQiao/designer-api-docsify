@@ -6,14 +6,14 @@ The Scope interface is used to describe the valid range of a field.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ScopeHelper](arkts-arkts-scopehelper-c.md#scopehelper)
+**Substitutes:** [ScopeHelper](arkts-arkts-scopehelper-c.md)
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## clamp

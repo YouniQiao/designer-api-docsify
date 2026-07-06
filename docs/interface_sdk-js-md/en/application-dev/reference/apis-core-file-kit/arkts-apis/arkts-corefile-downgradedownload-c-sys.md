@@ -11,7 +11,7 @@ Full download: provides the capability of downloading cloud data for application
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@ohos.file.cloudSyncManager';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## constructor

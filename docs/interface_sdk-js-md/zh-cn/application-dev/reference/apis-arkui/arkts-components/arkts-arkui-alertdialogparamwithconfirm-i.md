@@ -1,8 +1,8 @@
 # AlertDialogParamWithConfirm
 
-继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md#alertdialogparam)。 confirm参数优先级：fontColor、backgroundColor > style > defaultFocus
+继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。 confirm参数优先级：fontColor、backgroundColor > style > defaultFocus
 
-**继承/实现关系：** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#alertdialogparam)
+**继承/实现关系：** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md)
 
 **起始版本：** 7
 

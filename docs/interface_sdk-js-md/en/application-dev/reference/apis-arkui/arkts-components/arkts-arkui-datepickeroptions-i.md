@@ -1,6 +1,6 @@
 # DatePickerOptions
 
-Describes the parameters of the date picker. > **NOTE** > > - For details about how to use **Date**, see [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#timepickeroptions). > > - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take > effect. > **NOTE** > > Handle exceptions for the start and end dates first, followed by exceptions for the selected date.
+Describes the parameters of the date picker. > **NOTE** > > - For details about how to use **Date**, see [TimePickerOptions](arkts-arkui-timepickeroptions-i.md). > > - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take > effect. > **NOTE** > > Handle exceptions for the start and end dates first, followed by exceptions for the selected date.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ End date of the picker. Default value: **Date('2100-12-31')** Value range: [Date
 mode?: DatePickerMode
 ```
 
-Date display mode. Default value: **DatePickerMode.DATE**, which means to display three columns: year, month, and day. In [DatePickerDialog](./date_picker), when **showTime** in [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md#datepickerdialogoptions) is **true**, this parameter is ignored and the year, month, day columns are always shown.
+Date display mode. Default value: **DatePickerMode.DATE**, which means to display three columns: year, month, and day. In [DatePickerDialog](./date_picker), when **showTime** in [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) is **true**, this parameter is ignored and the year, month, day columns are always shown.
 
 **Type:** DatePickerMode
 

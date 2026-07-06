@@ -11,7 +11,7 @@ This module enables the File Manager to obtain the sync root information registe
 ## Modules to Import
 
 ```TypeScript
-import { cloudDiskManager } from '@ohos.file.cloudDiskManager';
+import { cloudDiskManager } from '@kit.CoreFileKit';
 ```
 
 ## Summary

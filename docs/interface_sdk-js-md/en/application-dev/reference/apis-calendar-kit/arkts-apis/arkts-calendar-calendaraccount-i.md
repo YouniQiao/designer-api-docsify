@@ -9,7 +9,7 @@ Describes the calendar account information.
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from '@ohos.calendarManager';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## displayName

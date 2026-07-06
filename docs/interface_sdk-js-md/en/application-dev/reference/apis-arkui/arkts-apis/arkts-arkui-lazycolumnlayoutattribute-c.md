@@ -11,7 +11,7 @@ Defines the lazy column layout attribute.
 ## Modules to Import
 
 ```TypeScript
-import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@ohos.arkui.components.ArkLazyColumnLayout';
+import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@kit.ArkUI';
 ```
 
 ## alignItems

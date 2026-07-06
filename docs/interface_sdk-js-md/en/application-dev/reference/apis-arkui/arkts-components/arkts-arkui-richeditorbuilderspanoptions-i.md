@@ -12,7 +12,7 @@ Sets the offset and style of the builder.
 accessibilitySpanOptions?: AccessibilitySpanOptions
 ```
 
-Accessibility settings. By default, the default value of [AccessibilitySpanOptions](arkts-arkui-accessibilityspanoptions-i.md#accessibilityspanoptions) is used.
+Accessibility settings. By default, the default value of [AccessibilitySpanOptions](arkts-arkui-accessibilityspanoptions-i.md) is used.
 
 **Type:** AccessibilitySpanOptions
 

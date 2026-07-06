@@ -126,7 +126,7 @@ class MyAbilityStage extends AbilityStage {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-当系统全局配置（例如系统语言、深浅色等）发生变更时，会触发该回调。配置项均定义在[Configuration](arkts-ability-configuration-i.md#configuration)类中。同步接口 ，不支持异步回调。 > **说明：** > > 该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage-1)接口 > 设置应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见 > [使用场景](../../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
+当系统全局配置（例如系统语言、深浅色等）发生变更时，会触发该回调。配置项均定义在[Configuration](arkts-ability-configuration-i.md)类中。同步接口 ，不支持异步回调。 > **说明：** > > 该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage-1)接口 > 设置应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见 > [使用场景](../../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
 
 **起始版本：** 9
 
@@ -261,7 +261,7 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见[AbilityConstant.MemoryLevel](arkts-ability-memorylevel-e.md#memorylevel)。 |
+| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见[AbilityConstant.MemoryLevel](arkts-ability-memorylevel-e.md)。 |
 
 **示例：**
 

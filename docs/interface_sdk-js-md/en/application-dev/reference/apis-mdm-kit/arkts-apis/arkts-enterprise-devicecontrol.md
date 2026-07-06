@@ -9,7 +9,7 @@ The **deviceControl** module provides APIs for device control. > **NOTE** > > Th
 ## Modules to Import
 
 ```TypeScript
-import { deviceControl } from '@ohos.enterprise.deviceControl';
+import { deviceControl } from '@kit.MDMKit';
 ```
 
 ## Summary

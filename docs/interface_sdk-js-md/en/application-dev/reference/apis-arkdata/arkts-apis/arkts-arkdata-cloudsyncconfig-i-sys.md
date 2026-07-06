@@ -9,7 +9,7 @@ Cloud sync configuration.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@ohos.data.relationalStore';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## downloadOnly

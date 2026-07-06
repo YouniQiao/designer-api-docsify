@@ -9,7 +9,7 @@ In the following API examples, you must first use [createPanel](arkts-ime-inputm
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@ohos.inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## adjustPanelRect
@@ -135,7 +135,7 @@ panel.adjustPanelRect(panelFlag, panelRect);
 changeFlag(flag: PanelFlag): void
 ```
 
-Changes the state type ([PanelFlag](arkts-ime-panelflag-e.md#panelflag)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-paneltype-e.md#paneltype) panels.
+Changes the state type ([PanelFlag](arkts-ime-panelflag-e.md)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-paneltype-e.md) panels.
 
 **Since:** 10
 
@@ -350,7 +350,7 @@ panel.hide().then(() => {
 moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 ```
 
-Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-panelflag-e.md#panelflag) state.
+Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-panelflag-e.md) state.
 
 **Since:** 10
 
@@ -391,7 +391,7 @@ panel.moveTo(300, 300, (err: BusinessError) => {
 moveTo(x: number, y: number): Promise<void>
 ```
 
-Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-panelflag-e.md#panelflag) state.
+Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-panelflag-e.md) state.
 
 **Since:** 10
 
@@ -499,7 +499,7 @@ panel.off('hide');
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
-Disables listening for the panel size change. This API uses an asynchronous callback to return the result. > **NOTE** > > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based > on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain > the actual panel size to refresh the panel layout. > > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory > parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-size-i.md#size) type. > > - Since API version 15, after the > [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2) API > is called, an optional parameter of the [KeyboardArea](arkts-ime-keyboardarea-i.md#keyboardarea) type is added to > the callback function of this API.
+Disables listening for the panel size change. This API uses an asynchronous callback to return the result. > **NOTE** > > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based > on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain > the actual panel size to refresh the panel layout. > > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory > parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-size-i.md) type. > > - Since API version 15, after the > [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2) API > is called, an optional parameter of the [KeyboardArea](arkts-ime-keyboardarea-i.md) type is added to > the callback function of this API.
 
 **Since:** 12
 
@@ -585,7 +585,7 @@ panel.on('hide', () => {
 on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
-Enables listening for the panel size change. This API uses an asynchronous callback to return the result. > **NOTE** > > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based > on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain > the actual panel size to refresh the panel layout. > > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory > parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-size-i.md#size) type. > > - Since API version 15, after the > [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2) API > is called, an optional parameter of the [KeyboardArea](arkts-ime-keyboardarea-i.md#keyboardarea) type is added to > the callback function of this API.
+Enables listening for the panel size change. This API uses an asynchronous callback to return the result. > **NOTE** > > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based > on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain > the actual panel size to refresh the panel layout. > > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory > parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-size-i.md) type. > > - Since API version 15, after the > [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2) API > is called, an optional parameter of the [KeyboardArea](arkts-ime-keyboardarea-i.md) type is added to > the callback function of this API.
 
 **Since:** 12
 
@@ -1149,7 +1149,7 @@ Sends a command to start moving the window. The window can be moved only when th
 | [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes:1.input method panel not created. 2.the input method application does not subscribe to related events. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 | [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported.<br>**Applicable version:** 18 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported.<br>**Applicable version:** 18 and later |
 
 **Example**
 

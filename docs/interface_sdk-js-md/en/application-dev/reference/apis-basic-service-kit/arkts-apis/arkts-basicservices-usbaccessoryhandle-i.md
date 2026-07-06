@@ -9,7 +9,7 @@ Describes the USB accessory handle.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@ohos.usbManager';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## accessoryFd

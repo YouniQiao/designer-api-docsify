@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllBundleInfo
@@ -27,7 +27,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleFlags | number | Yes | Type of the bundle information to obtain. |
-| callback | AsyncCallback&lt;Array&lt;BundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to returnthe result. If the operation is successful, **err** is **null** and **data** is the array of bundle informationobtained. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;Array&lt;BundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to returnthe result. If the operation is successful, **err** is **null** and **data** is the array of bundle informationobtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 | --- | --- | --- | --- |
 | bundleFlags | number | Yes | Type of the bundle information to obtain. |
 | userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
-| callback | AsyncCallback&lt;Array&lt;BundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to returnthe result. If the operation is successful, **err** is **null** and **data** is the array of bundle informationobtained. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;Array&lt;BundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to returnthe result. If the operation is successful, **err** is **null** and **data** is the array of bundle informationobtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

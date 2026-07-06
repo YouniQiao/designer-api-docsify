@@ -20,7 +20,7 @@ Obtains the **AbilityDelegatorArgs** object of the application.
 
 | Type | Description |
 | --- | --- |
-| AbilityDelegatorArgs | [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-i.md#abilitydelegatorargs) object, which can be usedto obtain test parameters. |
+| AbilityDelegatorArgs | [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-i.md) object, which can be usedto obtain test parameters. |
 
 **Example**
 

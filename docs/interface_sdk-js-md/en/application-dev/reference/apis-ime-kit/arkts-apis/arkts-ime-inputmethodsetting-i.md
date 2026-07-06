@@ -9,7 +9,7 @@ In the following API examples, you must first use [getSetting](arkts-ime-getsett
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@ohos.inputMethod';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## displayOptionalInputMethod

@@ -9,7 +9,7 @@ Obtains traffic statistics.
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from '@ohos.net.statistics';
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Rectangular area of the text, indicating the rectangular space occupied by the t
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@ohos.graphics.text';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## direction

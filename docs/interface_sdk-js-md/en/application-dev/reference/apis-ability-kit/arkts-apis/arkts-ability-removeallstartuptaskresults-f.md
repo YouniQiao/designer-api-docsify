@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { startupManager } from '@ohos.app.appstartup.startupManager';
+import { startupManager } from '@kit.AbilityKit';
 ```
 
 ## removeAllStartupTaskResults

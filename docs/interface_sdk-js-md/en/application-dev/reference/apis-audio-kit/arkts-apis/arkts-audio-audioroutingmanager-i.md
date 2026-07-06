@@ -9,7 +9,7 @@ This interface implements audio routing management. Before calling any API in Au
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## declareDeviceTypesCompatibility

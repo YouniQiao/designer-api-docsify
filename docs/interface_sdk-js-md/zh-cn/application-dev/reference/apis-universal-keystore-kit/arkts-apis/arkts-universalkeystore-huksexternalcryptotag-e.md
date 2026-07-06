@@ -60,7 +60,7 @@ HUKS_EXT_CRYPTO_TAG_UID = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT
 HUKS_EXT_CRYPTO_TAG_PURPOSE = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200005
 ```
 
-表示证书链对应密钥的使用类型，具体类型详见 [CertificatePurpose定义](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatepurpose-e.md#certificatepurpose)。
+表示证书链对应密钥的使用类型，具体类型详见 [CertificatePurpose定义](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatepurpose-e.md)。
 
 **起始版本：** 22
 

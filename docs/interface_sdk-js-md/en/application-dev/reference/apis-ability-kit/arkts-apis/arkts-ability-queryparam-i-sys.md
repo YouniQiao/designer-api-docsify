@@ -11,7 +11,7 @@ Param when query insight intent entity.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@ohos.app.ability.insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## bundleName

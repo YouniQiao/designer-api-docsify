@@ -9,7 +9,7 @@ Defines the options used to construct the **MessageOption** object.
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@ohos.rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## constructor

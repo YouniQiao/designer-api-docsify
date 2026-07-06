@@ -9,7 +9,7 @@ Defines the application response information.
 ## Modules to Import
 
 ```TypeScript
-import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from '@system.app';
+import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from '@kit.ArkUI';
 ```
 
 ## appID

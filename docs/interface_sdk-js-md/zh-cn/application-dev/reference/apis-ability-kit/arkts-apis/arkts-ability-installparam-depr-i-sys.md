@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [InstallParam](arkts-ability-installparam-i-sys.md#installparam)
+**替代接口：** [InstallParam](arkts-ability-installparam-i-sys.md)
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

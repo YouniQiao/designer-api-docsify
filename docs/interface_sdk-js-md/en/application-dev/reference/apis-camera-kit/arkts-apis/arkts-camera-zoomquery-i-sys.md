@@ -9,7 +9,7 @@ Provides the API to obtain the equivalent focal length information list in the c
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getZoomPointInfos

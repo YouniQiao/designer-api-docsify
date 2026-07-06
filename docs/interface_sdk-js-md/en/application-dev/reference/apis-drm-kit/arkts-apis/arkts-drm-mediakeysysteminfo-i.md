@@ -9,7 +9,7 @@ Used to indicate the media key system info of media source.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@ohos.multimedia.drm';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## pssh

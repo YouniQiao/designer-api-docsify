@@ -9,7 +9,7 @@ A class that provides VM maintenance and test capabilities for developers.
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## enableLocalHandleDetection

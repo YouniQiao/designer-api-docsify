@@ -1,6 +1,6 @@
 # SecurityComponentMethod
 
-安全控件通用属性模块，提供安全控件的布局、尺寸、文字、图标、颜色、边框和交互等通用属性的统一配置能力。 - 为[PasteButton](./paste_button)、[SaveButton](./save_button)等安全控件统一设置布局、尺寸、文字、图标、颜色、边框和交互相关属性。 - 在满足安全控件规范的前提下，调整安全控件显示效果和交互体验。具体约束请参见[约束与限制](../../../../security/AccessToken/security-component-overview.md#约束与限制)。 - 通过链式调用方式复用安全控件通用属性能力。 ###### 核心枚举类型 - **[SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md#securitycomponentlayoutdirection)：** 安全控件图标和文字排列方向枚举，用于指定横向或纵向布局。 - **[ButtonType](@global:ButtonType)：** 安全控件按钮样式枚举，用于指定胶囊、圆形、圆角矩形或普通按钮样式。 ###### 核心接口类型 - **[SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md#securitycomponentmethod)：** 安全控件通用属性方法集合，用于为具体安全控件配置布局、尺寸、文字、图标、颜色、边框和交互属性。 ###### 子组件 不支持
+安全控件通用属性模块，提供安全控件的布局、尺寸、文字、图标、颜色、边框和交互等通用属性的统一配置能力。 - 为[PasteButton](./paste_button)、[SaveButton](./save_button)等安全控件统一设置布局、尺寸、文字、图标、颜色、边框和交互相关属性。 - 在满足安全控件规范的前提下，调整安全控件显示效果和交互体验。具体约束请参见[约束与限制](../../../../security/AccessToken/security-component-overview.md#约束与限制)。 - 通过链式调用方式复用安全控件通用属性能力。 ###### 核心枚举类型 - **[SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md)：** 安全控件图标和文字排列方向枚举，用于指定横向或纵向布局。 - **[ButtonType](@global:ButtonType)：** 安全控件按钮样式枚举，用于指定胶囊、圆形、圆角矩形或普通按钮样式。 ###### 核心接口类型 - **[SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md)：** 安全控件通用属性方法集合，用于为具体安全控件配置布局、尺寸、文字、图标、颜色、边框和交互属性。 ###### 子组件 不支持
 
 **起始版本：** 10
 
@@ -391,7 +391,7 @@ chainMode(direction: Axis, style: ChainStyle): T
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | direction | Axis | 是 | 链式布局的方向，用于指定以该组件为链头的链在[RelativeContainer](./relative_container)中的排列方向。 |
-| style | ChainStyle | 是 | 链式布局的样式，用于控制链内子组件的分布方式，如均匀分布、两端对齐或紧凑排列等，具体取值及效果请参考[ChainStyle](arkts-arkui-chainstyle-e.md#chainstyle)。 |
+| style | ChainStyle | 是 | 链式布局的样式，用于控制链内子组件的分布方式，如均匀分布、两端对齐或紧凑排列等，具体取值及效果请参考[ChainStyle](arkts-arkui-chainstyle-e.md)。 |
 
 **返回值：**
 
@@ -461,7 +461,7 @@ enabled(respond: boolean): T
 fallbackLineSpacing(enabled: boolean): T
 ```
 
-针对多行文字叠加，支持行高基于文字实际高度自适应。 fallbackLineSpacing属性和[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md#richeditortextstyle)的lineHeight属性强相关。当设置的 lineHeight 值小于文本在当前字号下的实际渲染高度时，将根据fallbackLineSpacing 属性值来确定行高是否要基于文字实际高度自适应。
+针对多行文字叠加，支持行高基于文字实际高度自适应。 fallbackLineSpacing属性和[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)的lineHeight属性强相关。当设置的 lineHeight 值小于文本在当前字号下的实际渲染高度时，将根据fallbackLineSpacing 属性值来确定行高是否要基于文字实际高度自适应。
 
 **起始版本：** 26.0.0
 

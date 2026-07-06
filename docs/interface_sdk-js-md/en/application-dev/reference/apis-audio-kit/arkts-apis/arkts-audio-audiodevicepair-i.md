@@ -9,7 +9,7 @@ Describes an audio device pair including both input and output devices.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## inputDevice

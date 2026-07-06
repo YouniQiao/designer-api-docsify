@@ -11,7 +11,7 @@ A linear data structure that is implemented on arrays. A bit vector stores bit v
 ## Modules to Import
 
 ```TypeScript
-import { collections } from '@arkts.collections';
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

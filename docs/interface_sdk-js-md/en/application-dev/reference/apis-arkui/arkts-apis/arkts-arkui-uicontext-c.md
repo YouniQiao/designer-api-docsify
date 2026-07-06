@@ -9,7 +9,7 @@ Implements a **UIContext** instance. > **NOTE** > > - You can preview how this c
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@ohos.arkui.UIContext';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## addLocalInputEventMonitor
@@ -47,7 +47,7 @@ Registers a local input event monitor. The "Local" in the interface name indicat
 animateTo(value: AnimateParam, event: () => void): void
 ```
 
-Adds transition animations for state changes in closure code. > **NOTE** > > - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**. > > - When **animateTo** is called in > [aboutToAppear](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear), the > component's build method is not executed yet, and internal components are not created. This means the animation > has no initial values to work with and will not function as expected. > > - During execution of > [aboutToDisappear](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear), > the component is being destroyed, so animations should not be used. > > - When a component appears or disappears, animation effects can be added through > [component transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common). > > - For properties that component transitions do not support, refer to > [Example 2: Enabling Component Disappearance After Animation Completion](../../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#example-2-enabling-component-disappearance-after-animation-completion), > which uses **animateTo** to achieve the effect of the component disappearing after the animation finishes. > > - In certain scenarios, using animateTo with > [state management V2](../../../../ui/state-management/arkts-state-management-overview.md#state-management-v2) may > produce unexpected results. For details, see > [Using animateTo Failed in State Management V2](../../../../ui/state-management/arkts-new-local.md#using-animateto-failed-in-state-management-v2). > > > - When a UIAbility switches from the foreground to the background, any limited iteration animations that are > currently running will end immediately, thereby triggering the > [onFinish animation completion callback](../arkts-components/arkts-arkui-animateparam-i.md#animateparam). > > - If transition animations are turned off in Developer options, animations end on the current frame, and the > **onFinish** callback is executed immediately. Avoid placing timing-dependent functional logic inside this > callback.
+Adds transition animations for state changes in closure code. > **NOTE** > > - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**. > > - When **animateTo** is called in > [aboutToAppear](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear), the > component's build method is not executed yet, and internal components are not created. This means the animation > has no initial values to work with and will not function as expected. > > - During execution of > [aboutToDisappear](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear), > the component is being destroyed, so animations should not be used. > > - When a component appears or disappears, animation effects can be added through > [component transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). > > - For properties that component transitions do not support, refer to > [Example 2: Enabling Component Disappearance After Animation Completion](../../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#example-2-enabling-component-disappearance-after-animation-completion), > which uses **animateTo** to achieve the effect of the component disappearing after the animation finishes. > > - In certain scenarios, using animateTo with > [state management V2](../../../../ui/state-management/arkts-state-management-overview.md#state-management-v2) may > produce unexpected results. For details, see > [Using animateTo Failed in State Management V2](../../../../ui/state-management/arkts-new-local.md#using-animateto-failed-in-state-management-v2). > > > - When a UIAbility switches from the foreground to the background, any limited iteration animations that are > currently running will end immediately, thereby triggering the > [onFinish animation completion callback](../arkts-components/arkts-arkui-animateparam-i.md). > > - If transition animations are turned off in Developer options, animations end on the current frame, and the > **onFinish** callback is executed immediately. Avoid placing timing-dependent functional logic inside this > callback.
 
 **Since:** 10
 
@@ -203,7 +203,7 @@ Creates an **Animator** object.
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](arkts-arkui-uicontext-c.md#createanimator-1) API, this API adds support for the [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md#simpleanimatoroptions) type.
+Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](arkts-arkui-uicontext-c.md#createanimator-1) API, this API adds support for the [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
@@ -251,7 +251,7 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext \| common.ExtensionContext | Yes | Context corresponding to[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) or[ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-extensionability-c.md#extensionability). |
+| context | common.UIAbilityContext \| common.ExtensionContext | Yes | Context corresponding to[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) or[ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-extensionability-c.md). |
 
 **Return value:**
 
@@ -798,7 +798,7 @@ Obtains the context of this ability.
 
 | Type | Description |
 | --- | --- |
-| Context | Context of the ability. The context type depends on the ability type. For example,if this API is called in a page within a UIAbility window, the returned context type is[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#uiabilitycontext). If this API is called in a page within anExtensionAbility window, the returned context type is[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext). If the ability context does not exist,**undefined** is returned. |
+| Context | Context of the ability. The context type depends on the ability type. For example,if this API is called in a page within a UIAbility window, the returned context type is[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md). If this API is called in a page within anExtensionAbility window, the returned context type is[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). If the ability context does not exist,**undefined** is returned. |
 
 ## getId
 
@@ -894,7 +894,7 @@ Obtains the UIContext of the UI instance that most recently switched to the fore
 getMagnifier(): Magnifier
 ```
 
-Obtains a [Magnifier](arkts-arkui-magnifier-c.md#magnifier) object, which can be used to control the display and hiding of a magnifier.
+Obtains a [Magnifier](arkts-arkui-magnifier-c.md) object, which can be used to control the display and hiding of a magnifier.
 
 **Since:** 22
 
@@ -1218,7 +1218,7 @@ Get object smart gesture controller.
 getTextMenuController(): TextMenuController
 ```
 
-Obtains a [TextMenuController](arkts-arkui-textmenucontroller-c.md#textmenucontroller) object, which can be used to control the context menu on selection.
+Obtains a [TextMenuController](arkts-arkui-textmenucontroller-c.md) object, which can be used to control the context menu on selection.
 
 **Since:** 16
 
@@ -1284,7 +1284,7 @@ Obtains the **UIObserver** object.
 getWindowHeightBreakpoint(): HeightBreakpoint
 ```
 
-Obtains the height breakpoint value of the window where this instance is located. The specific value is determined based on the window aspect ratio. For details, see [HeightBreakpoint](../arkts-components/arkts-arkui-heightbreakpoint-e.md#heightbreakpoint).
+Obtains the height breakpoint value of the window where this instance is located. The specific value is determined based on the window aspect ratio. For details, see [HeightBreakpoint](../arkts-components/arkts-arkui-heightbreakpoint-e.md).
 
 **Since:** 13
 
@@ -1306,7 +1306,7 @@ Obtains the height breakpoint value of the window where this instance is located
 getWindowId(): number | undefined
 ```
 
-Obtains the ID of the window to which the current application instance belongs. > **NOTE** > > If the UIContext resides inside a > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md#uiextensionability) that runs in the main > application process, the top-level window ID of the main application is returned.
+Obtains the ID of the window to which the current application instance belongs. > **NOTE** > > If the UIContext resides inside a > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md) that runs in the main > application process, the top-level window ID of the main application is returned.
 
 **Since:** 23
 
@@ -1350,7 +1350,7 @@ Obtains the name of the window where this instance is located.
 getWindowWidthBreakpoint(): WidthBreakpoint
 ```
 
-Obtains the width breakpoint value of the window where this instance is located. The specific value is determined by the vp value of the window width. For details, see [WidthBreakpoint](../arkts-components/arkts-arkui-widthbreakpoint-e.md#widthbreakpoint).
+Obtains the width breakpoint value of the window where this instance is located. The specific value is determined by the vp value of the window width. For details, see [WidthBreakpoint](../arkts-components/arkts-arkui-widthbreakpoint-e.md).
 
 **Since:** 13
 
@@ -1438,7 +1438,7 @@ Checks whether current font scale follows the system.
 keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void
 ```
 
-Generates a key frame animation. For details about how to use this API, see [keyframeAnimateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common).
+Generates a key frame animation. For details about how to use this API, see [keyframeAnimateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).
 
 **Since:** 11
 
@@ -1504,7 +1504,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bindSheetContent | ComponentContent&lt;T&gt; | Yes | Content to display on the sheet. |
-| sheetOptions | SheetOptions | No | Style of the sheet.<br>**NOTE**<br>1. **SheetOptions.uiContext** cannot beset. Its value is fixed to the **UIContext** object of the current instance.<br>2. If **targetId** is notpassed in, **SheetOptions.preferType** cannot be set to **POPUP**; if **POPUP** is set, it will be replacedwith **CENTER**.<br>3. If **targetId** is not passed in, **SheetOptions.mode** cannot be set to **EMBEDDED**;the default mode is **OVERLAY**.<br>4. For the default values of other attributes, see[SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md#sheetoptions). |
+| sheetOptions | SheetOptions | No | Style of the sheet.<br>**NOTE**<br>1. **SheetOptions.uiContext** cannot beset. Its value is fixed to the **UIContext** object of the current instance.<br>2. If **targetId** is notpassed in, **SheetOptions.preferType** cannot be set to **POPUP**; if **POPUP** is set, it will be replacedwith **CENTER**.<br>3. If **targetId** is not passed in, **SheetOptions.mode** cannot be set to **EMBEDDED**;the default mode is **OVERLAY**.<br>4. For the default values of other attributes, see[SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md). |
 | targetId | number | No | ID of the component to be bound. If this parameter is not set, no component is bound.If the ID does not exist, the error code 120004 is returned. Returns error code 401 if **undefined** is passedin. |
 
 **Return value:**

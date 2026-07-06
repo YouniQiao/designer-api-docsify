@@ -9,7 +9,7 @@ The **Emitter** module provides the capabilities of sending and processing inter
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from '@ohos.events.emitter';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -11,7 +11,7 @@ Defines the quick fix information at the application level.
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from '@ohos.app.ability.quickFixManager';
+import { quickFixManager } from '@kit.AbilityKit';
 ```
 
 ## bundleName

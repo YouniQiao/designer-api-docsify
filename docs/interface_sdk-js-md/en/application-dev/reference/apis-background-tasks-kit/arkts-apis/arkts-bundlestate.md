@@ -1,4 +1,4 @@
-# @ohos.bundleState
+# @ohos.bundleState (Device Usage Statistics)
 
 This module provides APIs for collecting statistics on device usage.
 
@@ -11,7 +11,7 @@ This module provides APIs for collecting statistics on device usage.
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from '@ohos.bundleState';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

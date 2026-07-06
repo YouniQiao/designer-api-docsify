@@ -9,7 +9,7 @@ The advertising module provides APIs for requesting and displaying ads. > **NOTE
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@ohos.advertising';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## Summary

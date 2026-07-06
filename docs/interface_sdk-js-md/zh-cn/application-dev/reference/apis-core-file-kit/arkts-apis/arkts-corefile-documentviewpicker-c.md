@@ -45,7 +45,7 @@ constructor(context: Context)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context)。 |
+| context | Context | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。 |
 
 **示例：**
 
@@ -92,7 +92,7 @@ constructor(context: Context, window: window.Window)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context)。 |
+| context | Context | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。 |
 | window | window.Window | 是 | 应用创建的窗口实例。 |
 
 **示例：**
@@ -133,7 +133,7 @@ struct Index {
 getSelectedIndex(): number
 ```
 
-获取保存成功后的文件后缀类型的下标。 该方法只在调用 [save()](arkts-corefile-documentviewpicker-c.md#save-1)时使用生效， 其他场景下不适用。该方法需要配置参数[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-documentsaveoptions-c.md#documentsaveoptions)。 该方法返回的是所选后缀类型的下标(number)。所选的后缀类型是开发者所传的参数 [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-documentsaveoptions-c.md#documentsaveoptions)里的某个后缀类型。 如果没有传参，并且调用了getSelectedIndex()方法，返回值为-1。
+获取保存成功后的文件后缀类型的下标。 该方法只在调用 [save()](arkts-corefile-documentviewpicker-c.md#save-1)时使用生效， 其他场景下不适用。该方法需要配置参数[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-documentsaveoptions-c.md)。 该方法返回的是所选后缀类型的下标(number)。所选的后缀类型是开发者所传的参数 [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-documentsaveoptions-c.md)里的某个后缀类型。 如果没有传参，并且调用了getSelectedIndex()方法，返回值为-1。
 
 **起始版本：** 14
 
@@ -145,7 +145,7 @@ getSelectedIndex(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回所选后缀类型在[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-documentsaveoptions-c.md#documentsaveoptions)里的下标(number)。默认返回-1。 |
+| number | 返回所选后缀类型在[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-documentsaveoptions-c.md)里的下标(number)。默认返回-1。 |
 
 ## save
 

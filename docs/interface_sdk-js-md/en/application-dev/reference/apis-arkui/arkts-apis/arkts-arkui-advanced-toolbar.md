@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ToolBarOption, ItemState, ToolBar, ToolBarOptions, ToolBarModifier } from '@ohos.arkui.advanced.ToolBar';
+import { ToolBarOption, ItemState, ToolBar, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
 ```
 
 ## Summary

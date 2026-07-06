@@ -9,7 +9,7 @@ UIExtensionContentSession is the UI operation class for the UIExtensionAbility. 
 ## Modules to Import
 
 ```TypeScript
-import { UIExtensionContentSession } from '@ohos.app.ability.UIExtensionContentSession';
+import { UIExtensionContentSession } from '@kit.AbilityKit';
 ```
 
 ## getUIExtensionWindowProxy
@@ -85,7 +85,7 @@ struct Extension {
 loadContent(path: string, storage?: LocalStorage): void
 ```
 
-Loads a page for the [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability), with state properties passed to the page through [LocalStorage](../../../../ui/state-management/arkts-localstorage.md). This API is used to load a page in the [onSessionCreate](arkts-ability-uiextensionability-c.md#onsessioncreate-1) lifecycle of the UIExtensionAbility.
+Loads a page for the [UIExtensionAbility](arkts-ability-uiextensionability-c.md), with state properties passed to the page through [LocalStorage](../../../../ui/state-management/arkts-localstorage.md). This API is used to load a page in the [onSessionCreate](arkts-ability-uiextensionability-c.md#onsessioncreate-1) lifecycle of the UIExtensionAbility.
 
 **Since:** 10
 
@@ -140,7 +140,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 loadContentByName(name: string, storage?: LocalStorage): void
 ```
 
-Loads a [named route](../../../../ui/arkts-routing.md#named-route) page for a [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability), with state properties passed to the page through [LocalStorage](../../../../ui/state-management/arkts-localstorage.md). This API is used to load a named route page in the [onSessionCreate](arkts-ability-uiextensionability-c.md#onsessioncreate-1) lifecycle of the UIExtensionAbility.
+Loads a [named route](../../../../ui/arkts-routing.md#named-route) page for a [UIExtensionAbility](arkts-ability-uiextensionability-c.md), with state properties passed to the page through [LocalStorage](../../../../ui/state-management/arkts-localstorage.md). This API is used to load a named route page in the [onSessionCreate](arkts-ability-uiextensionability-c.md#onsessioncreate-1) lifecycle of the UIExtensionAbility.
 
 **Since:** 18
 
@@ -378,13 +378,13 @@ Implicitly starts a given type of UIExtensionAbility. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 11 |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 11 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist.<br>**Applicable version:** 11 |
-| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type.<br>**Applicable version:** 11 |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component.<br>**Applicable version:** 11 |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist.<br>**Applicable version:** 11 and later |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type.<br>**Applicable version:** 11 and later |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component.<br>**Applicable version:** 11 and later |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released.<br>**Applicable version:** 11 |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released.<br>**Applicable version:** 11 and later |
 
 **Example**
 
@@ -456,13 +456,13 @@ Implicitly starts a given type of UIExtensionAbility. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 11 |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 11 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist.<br>**Applicable version:** 11 |
-| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type.<br>**Applicable version:** 11 |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component.<br>**Applicable version:** 11 |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist.<br>**Applicable version:** 11 and later |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type.<br>**Applicable version:** 11 and later |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component.<br>**Applicable version:** 11 and later |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released.<br>**Applicable version:** 11 |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released.<br>**Applicable version:** 11 and later |
 
 **Example**
 

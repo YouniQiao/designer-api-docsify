@@ -9,7 +9,7 @@ Defines the request information, which is used as an input parameter for binding
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from '@ohos.app.ability.dialogRequest';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## windowRect

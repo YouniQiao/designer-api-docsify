@@ -9,7 +9,7 @@ Provides methods to operate or manage Bluetooth.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@ohos.bluetooth.ble';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

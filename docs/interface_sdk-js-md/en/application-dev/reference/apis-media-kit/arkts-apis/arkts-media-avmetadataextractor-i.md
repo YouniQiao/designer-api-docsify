@@ -9,7 +9,7 @@ AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtai
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## cancelAllFetchFrames
@@ -109,7 +109,7 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 
 ## fetchFrameByTimeWithTimeout
 
@@ -246,7 +246,7 @@ Obtains the media metadata. This API uses an asynchronous callback to return the
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 
 ## fetchMetadata
 
@@ -272,7 +272,7 @@ Obtains the media metadata. This API uses a promise to return the result.
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 
 ## fetchMetadataWithTimeout
 

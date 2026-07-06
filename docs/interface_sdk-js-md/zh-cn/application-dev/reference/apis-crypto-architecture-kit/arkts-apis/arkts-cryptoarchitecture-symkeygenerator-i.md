@@ -37,7 +37,7 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因：<br>1. 必填参数未指定；<br>2. 参数类型不正确；<br>3. 参数验证失败。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -97,7 +97,7 @@ convertKey(key: DataBlob): Promise<SymKey>
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因：<br>1. 必填参数未指定；<br>2. 参数类型不正确；<br>3. 参数验证失败。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -159,7 +159,7 @@ convertKeySync(key: DataBlob): SymKey
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因：<br>1. 必填参数未指定；<br>2. 参数类型不正确；<br>3. 参数验证失败。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -208,7 +208,7 @@ generateSymKey(callback: AsyncCallback<SymKey>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -249,7 +249,7 @@ generateSymKey(): Promise<SymKey>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -292,7 +292,7 @@ generateSymKeySync(): SymKey
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 

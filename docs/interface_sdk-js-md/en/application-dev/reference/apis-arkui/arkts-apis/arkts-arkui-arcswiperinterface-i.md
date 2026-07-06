@@ -9,7 +9,7 @@ Provide an interface for ArcSwiper.
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@ohos.arkui.ArcSwiper';
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
 ```
 
 ## constructor

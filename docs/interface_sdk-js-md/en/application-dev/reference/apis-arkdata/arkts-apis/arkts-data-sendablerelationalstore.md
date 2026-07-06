@@ -9,7 +9,7 @@ The **sendableRelationalStore** module provides APIs for obtaining **ValuesBucke
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from '@ohos.data.sendableRelationalStore';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -29,16 +29,16 @@ import { sendableRelationalStore } from '@ohos.data.sendableRelationalStore';
 
 | Name | Description |
 | --- | --- |
-| [Asset](arkts-arkdata-asset-i.md) | Represent the asset (such as a document, image, or video). **Asset** inherits from [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md#isendable) and is used to implement cross-thread transfer of asset data. The asset data does not support **Datashare** APIs. Use [sendableRelationalStore.toSendableAsset](arkts-arkdata-tosendableasset-f.md#tosendableasset-1) to create an **Asset** instance. |
+| [Asset](arkts-arkdata-asset-i.md) | Represent the asset (such as a document, image, or video). **Asset** inherits from [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md) and is used to implement cross-thread transfer of asset data. The asset data does not support **Datashare** APIs. Use [sendableRelationalStore.toSendableAsset](arkts-arkdata-tosendableasset-f.md#tosendableasset-1) to create an **Asset** instance. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [Assets](arkts-arkdata-assets-t.md) | Represent an array of [Assets](arkts-arkdata-asset-i.md#asset), which allows assets to be passed across threads. |
+| [Assets](arkts-arkdata-assets-t.md) | Represent an array of [Assets](arkts-arkdata-asset-i.md), which allows assets to be passed across threads. |
 | [NonSendableAsset](arkts-arkdata-nonsendableasset-t.md) | Represents the asset (such as a document, image, or video) that cannot be passed across threads. |
 | [NonSendableBucket](arkts-arkdata-nonsendablebucket-t.md) | Represents the KV pair that cannot be passed across threads. |
-| [NonSendableValues](arkts-arkdata-nonsendablevalues-t.md) | Represents the [ValueType](arkts-arkdata-valuetype-t.md#valuetype) array that cannot be passed across threads. |
+| [NonSendableValues](arkts-arkdata-nonsendablevalues-t.md) | Represents the [ValueType](arkts-arkdata-valuetype-t.md) array that cannot be passed across threads. |
 | [ValueType](arkts-arkdata-valuetype-t.md) | Defines the types of the value in a KV pair. The type varies with the parameter function. |
-| [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Represents the KV pair of the [ValueType](arkts-arkdata-valuetype-t.md#valuetype) data that can be passed across threads. |
+| [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Represents the KV pair of the [ValueType](arkts-arkdata-valuetype-t.md) data that can be passed across threads. |
 

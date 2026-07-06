@@ -12,7 +12,7 @@
 alignment: TextAlign
 ```
 
-段落中制表符之后的文本对齐方式，支持设置[TextAlign](arkts-arkgraphics2d-textalign-e.md#textalign)的LEFT左对齐、RIGHT右对齐和CENTER居中对齐方式，未列出的枚举值将视为左对齐，默认为左对齐。
+段落中制表符之后的文本对齐方式，支持设置[TextAlign](arkts-arkgraphics2d-textalign-e.md)的LEFT左对齐、RIGHT右对齐和CENTER居中对齐方式，未列出的枚举值将视为左对齐，默认为左对齐。
 
 **类型：** TextAlign
 

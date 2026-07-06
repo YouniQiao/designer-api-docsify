@@ -2,7 +2,7 @@
 
 Class inherited for the distributed extension function.
 
-**Inheritance/Implementation:** DistributedExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext)
+**Inheritance/Implementation:** DistributedExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 20
 
@@ -11,7 +11,7 @@ Class inherited for the distributed extension function.
 ## Modules to Import
 
 ```TypeScript
-import { DistributedExtensionContext } from '@ohos.application.DistributedExtensionContext';
+import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
 ```
 
 ## connectServiceExtensionAbility

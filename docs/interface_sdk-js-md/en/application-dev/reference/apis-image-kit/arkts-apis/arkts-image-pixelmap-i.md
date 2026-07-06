@@ -2,7 +2,7 @@
 
 Sendable PixelMap instance.
 
-**Inheritance/Implementation:** PixelMap extends [ISendable](arkts-image-isendable-t.md#isendable)
+**Inheritance/Implementation:** PixelMap extends [ISendable](arkts-image-isendable-t.md)
 
 **Since:** 12
 
@@ -11,7 +11,7 @@ Sendable PixelMap instance.
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@ohos.multimedia.sendableImage';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## applyColorSpace

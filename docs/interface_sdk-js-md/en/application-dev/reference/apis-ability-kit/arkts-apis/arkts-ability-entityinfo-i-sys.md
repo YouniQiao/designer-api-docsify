@@ -1,6 +1,6 @@
 # EntityInfo (System API)
 
-EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-intententitydecoratorinfo-i.md#intententitydecoratorinfo) and is used to describe the information about the intent entity defined by the [@InsightIntentEntity](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity) decorator.
+EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-intententitydecoratorinfo-i.md) and is used to describe the information about the intent entity defined by the [@InsightIntentEntity](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity) decorator.
 
 **Since:** 20
 
@@ -11,7 +11,7 @@ EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-intententityd
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@ohos.app.ability.insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## className

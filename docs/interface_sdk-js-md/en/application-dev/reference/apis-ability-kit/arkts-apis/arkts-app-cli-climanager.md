@@ -11,7 +11,7 @@ The module provides the capability to interact with cli tools in the system.
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from '@ohos.app.cli.cliManager';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

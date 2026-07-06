@@ -9,7 +9,7 @@ Provides interfaces for applications to obtain the network state, cell informati
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@ohos.telephony.radio';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## Summary

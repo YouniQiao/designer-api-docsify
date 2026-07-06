@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [IAuthCallback](arkts-userauthentication-iauthcallback-i.md#iauthcallback)
+**替代接口：** [IAuthCallback](arkts-userauthentication-iauthcallback-i.md)
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

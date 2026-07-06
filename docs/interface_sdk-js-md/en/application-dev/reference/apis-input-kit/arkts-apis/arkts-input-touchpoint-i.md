@@ -9,7 +9,7 @@ Represents information about a single touch point on the display.
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@ohos.multimodalInput.inputEventClient';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## displayId

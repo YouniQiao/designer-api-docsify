@@ -9,7 +9,7 @@ The **workScheduler** module provides the APIs for registering, canceling, and q
 ## Modules to Import
 
 ```TypeScript
-import { workScheduler } from '@ohos.resourceschedule.workScheduler';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

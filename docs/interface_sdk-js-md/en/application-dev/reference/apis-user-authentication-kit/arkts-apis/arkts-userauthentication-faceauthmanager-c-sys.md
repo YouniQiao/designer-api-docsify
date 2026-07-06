@@ -11,7 +11,7 @@ Provides APIs for facial authentication management. It provides management featu
 ## Modules to Import
 
 ```TypeScript
-import { faceAuth } from '@ohos.userIAM.faceAuth';
+import { faceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## constructor

@@ -11,7 +11,7 @@ Describes audio capturer data that contains processed audio data and microphone 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## data

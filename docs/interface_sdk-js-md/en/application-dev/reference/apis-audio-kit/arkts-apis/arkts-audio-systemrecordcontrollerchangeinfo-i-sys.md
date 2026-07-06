@@ -11,7 +11,7 @@ Defines the information carried when the system recording controller state chang
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## enabled

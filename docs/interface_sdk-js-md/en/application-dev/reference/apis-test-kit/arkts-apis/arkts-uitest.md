@@ -1,11 +1,37 @@
 # @ohos.UiTest
 
-The static builder for building {@link On}object conveniently,usage example:ON.text('txt').enabled(true).
+The **UiTest** module provides APIs that you can use to simulate UI actions during testing, such as clicks, double-
+ clicks, long-clicks, and swipes.
+ This module provides the following functions:
+ - [On<sup>9+</sup>](arkts-test-on-c.md): provides UI component feature description APIs for component filtering and matching.
+ - [Component<sup>9+</sup>](arkts-test-component-c.md): represents a component on the UI and provides APIs for obtaining
+ component attributes, clicking a component, scrolling to search for a component, and text injection.
+ - [Driver<sup>9+</sup>](arkts-test-driver-c.md): works as the entry class and provides APIs for features such as component
+ matching/search, key injection, coordinate clicking/sliding, and screenshot.
+ - [UiWindow<sup>9+</sup>](arkts-test-uiwindow-c.md): works as the entry class and provides APIs for obtaining window attributes,
+ dragging windows, and adjusting window sizes.
+ - [By<sup>(deprecated)</sup>](BY): provides UI component feature description APIs for component filtering and
+ matching. This API is supported since API version 8 and deprecated since API version 9.
+ You are advised to use {@link On} instead.
+ - [UiComponent<sup>(deprecated)</sup>](arkts-test-uicomponent-c.md): represents a component on the UI and provides APIs for
+ obtaining component attributes, clicking a component, scrolling to search for a component, and text injection.
+ This API is supported since API version 8 and deprecated since API version 9.
+ You are advised to use [Component<sup>9+</sup>](arkts-test-component-c.md) instead.
+ - [UiDriver<sup>(deprecated)</sup>](arkts-test-uidriver-c.md): works as the entry class and provides APIs for features such as
+ component matching/search, key injection, coordinate clicking/sliding, and screenshot.
+ This API is supported since API version 8 and deprecated since API version 9.
+ You are advised to use [Driver<sup>9+</sup>](arkts-test-driver-c.md) instead.
+ > **NOTE**
+ >
+ > - The APIs of this module can be used only in <!--RP1-->[UITest](../../../../application-test/uitest-guidelines.md)<!--RP1End-->.
+ >
+ > - The APIs of this module do not support concurrent calls.
+
 
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@ohos.UiTest';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ The KioskManager module provides APIs to manage kiosk mode, including entering/e
 ## Modules to Import
 
 ```TypeScript
-import { kioskManager } from '@ohos.app.ability.kioskManager';
+import { kioskManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

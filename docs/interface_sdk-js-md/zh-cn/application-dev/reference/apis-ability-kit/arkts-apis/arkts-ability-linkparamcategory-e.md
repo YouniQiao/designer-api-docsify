@@ -28,7 +28,7 @@ LINK = 'link'
 WANT = 'want'
 ```
 
-表示意图参数类别为'want'。意图参数将通过[Want](arkts-ability-want-c.md#want)的parameters字段传给应用。
+表示意图参数类别为'want'。意图参数将通过[Want](arkts-ability-want-c.md)的parameters字段传给应用。
 
 **起始版本：** 20
 

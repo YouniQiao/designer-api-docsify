@@ -9,7 +9,7 @@ Indicates observer options.
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@ohos.telephony.observer';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## slotId

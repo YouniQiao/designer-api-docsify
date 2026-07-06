@@ -9,7 +9,7 @@ Represents the configuration of a transaction object.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@ohos.data.relationalStore';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## transactionType

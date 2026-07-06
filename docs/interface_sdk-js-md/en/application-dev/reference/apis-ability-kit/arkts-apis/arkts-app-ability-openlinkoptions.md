@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { OpenLinkOptions } from '@ohos.app.ability.OpenLinkOptions';
+import { OpenLinkOptions } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -11,7 +11,7 @@ Specifies a result object that contains the application bundle name and the stat
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@ohos.file.cloudSyncManager';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## bundleName

@@ -9,7 +9,7 @@ Implements a serial queue, in which all tasks are executed in sequence.
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@ohos.taskpool';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -100,8 +100,8 @@ Adds a task to the serial queue for execution. Before using this API, you must c
 | [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 11 - 17 |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200025](../errorcode-utils.md#10200025-failed-to-add-a-task-with-dependent-tasks-to-the-queue) | dependent task not allowed. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
 
 **Example**
 

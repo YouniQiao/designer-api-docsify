@@ -9,7 +9,7 @@ Provides APIs for SM2 cryptographic operations.
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## genCipherTextBySpec

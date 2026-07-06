@@ -11,7 +11,7 @@ Defines arguments for an event query.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from '@ohos.hiSysEvent';
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## beginTime

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@ohos.enterprise.adminManager';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## replaceSuperAdmin

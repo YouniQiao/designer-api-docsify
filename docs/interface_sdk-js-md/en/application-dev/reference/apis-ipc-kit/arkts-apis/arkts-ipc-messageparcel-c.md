@@ -6,14 +6,14 @@ Provides APIs for reading and writing data in specific format. During RPC, the s
 
 **Deprecated since:** 9
 
-**Substitutes:** [MessageSequence](arkts-ipc-messagesequence-c.md#messagesequence)
+**Substitutes:** [MessageSequence](arkts-ipc-messagesequence-c.md)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@ohos.rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## closeFileDescriptor

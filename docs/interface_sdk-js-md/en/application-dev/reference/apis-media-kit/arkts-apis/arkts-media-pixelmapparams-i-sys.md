@@ -9,7 +9,7 @@ Defines the format parameters of the video thumbnail to be obtained.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## autoFlip

@@ -9,7 +9,7 @@ Manager OPP server profile.
 ## Modules to Import
 
 ```TypeScript
-import { opp } from '@ohos.bluetooth.opp';
+import { opp } from '@kit.ConnectivityKit';
 ```
 
 ## cancelTransfer

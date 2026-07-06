@@ -29,7 +29,7 @@ function installPublicCertificate(keystore: Uint8Array, keystorePwd: string) : P
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回安装用户公共凭据的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md#cmresult)对象中的uri属性。 |
+| Promise&lt;CMResult&gt; | Promise对象，返回安装用户公共凭据的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的uri属性。 |
 
 **错误码：**
 

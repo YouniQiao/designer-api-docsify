@@ -9,7 +9,7 @@ InputMethodListDialog({controller: CustomDialogController, patternOptions?: Patt
 ## Modules to Import
 
 ```TypeScript
-import { Pattern, InputMethodListDialog, PatternOptions } from '@ohos.inputMethodList';
+import { Pattern, InputMethodListDialog, PatternOptions } from '@kit.IMEKit';
 ```
 
 ## controller

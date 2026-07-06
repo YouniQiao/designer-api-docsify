@@ -9,7 +9,7 @@ Encapsulates binary data. The core field **data** is of the Uint8Array type. > *
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## data

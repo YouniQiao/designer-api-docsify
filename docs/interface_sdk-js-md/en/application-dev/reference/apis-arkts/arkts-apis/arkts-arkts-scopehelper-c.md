@@ -9,7 +9,7 @@ Provides APIs to define the valid range of a field. The constructor of this clas
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## clamp

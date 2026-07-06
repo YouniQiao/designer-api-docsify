@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@ohos.arkui.ArcSwiper';
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -13,7 +13,7 @@ import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDo
 | Name | Description |
 | --- | --- |
 | [ArcDotIndicator](arkts-arkui-arcdotindicator-c.md) | Describes the properties and behavior of the arc dot navigation indicator. |
-| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following events are supported. |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following events are supported. |
 | [ArcSwiperController](arkts-arkui-arcswipercontroller-c.md) | Implements the controller of the **ArcSwiper** component. You can bind this object to the **ArcSwiper** component and use it to control page switching. |
 
 ### Interfaces

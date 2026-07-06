@@ -9,7 +9,7 @@ Implements an event filter. You can use [filterById()](arkts-calendar-eventfilte
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from '@ohos.calendarManager';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## filterById

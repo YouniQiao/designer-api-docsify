@@ -110,7 +110,7 @@ Whether the source application exits during cross-device migration. The default 
 SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 ```
 
-Display mode of the [EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md#embeddableuiability). The value is an enumerated value of [ShowMode](arkts-ability-showmode-e.md#showmode).
+Display mode of the [EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md). The value is an enumerated value of [ShowMode](arkts-ability-showmode-e.md).
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ Display mode of the [EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md
 PARAMS_STREAM = 'ability.params.stream'
 ```
 
-List of file URIs authorized to the target. The value must be an array of file URIs of the string type. For details about how to obtain the file URI, see [fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-geturifrompath-f.md#geturifrompath-1). This field must be used in conjunction with file URI [read/write flag](arkts-ability-flags-e.md#flags).
+List of file URIs authorized to the target. The value must be an array of file URIs of the string type. For details about how to obtain the file URI, see [fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-geturifrompath-f.md#geturifrompath-1). This field must be used in conjunction with file URI [read/write flag](arkts-ability-flags-e.md).
 
 **Since:** 12
 
@@ -326,7 +326,7 @@ Reason for launching the application. The caller must be a system application an
 ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
 ```
 
-Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md#unifieddatachannel). This field can only be set by system applications, but third-party applications can read it. If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-flags-e.md#flags) or [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-flags-e.md#flags)) and the **PARAMS_STREAM** field is also present, this field does not take effect.
+Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md). This field can only be set by system applications, but third-party applications can read it. If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-flags-e.md) or [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-flags-e.md)) and the **PARAMS_STREAM** field is also present, this field does not take effect.
 
 **Since:** 20
 

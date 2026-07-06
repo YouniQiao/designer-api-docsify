@@ -9,7 +9,7 @@ Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface info
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## id

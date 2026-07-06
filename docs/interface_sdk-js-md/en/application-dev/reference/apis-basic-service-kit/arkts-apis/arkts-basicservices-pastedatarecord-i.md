@@ -9,7 +9,7 @@ Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definiti
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@ohos.pasteboard';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## addEntry

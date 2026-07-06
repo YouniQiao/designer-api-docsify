@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundProcessManager } from '@ohos.resourceschedule.backgroundProcessManager';
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## resetProcessPriority

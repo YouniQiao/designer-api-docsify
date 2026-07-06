@@ -11,7 +11,7 @@ The **FormAgent** module provides APIs related to the widget agent. Currently, y
 ## Modules to Import
 
 ```TypeScript
-import { formAgent } from '@ohos.app.form.formAgent';
+import { formAgent } from '@kit.FormKit';
 ```
 
 ## Summary

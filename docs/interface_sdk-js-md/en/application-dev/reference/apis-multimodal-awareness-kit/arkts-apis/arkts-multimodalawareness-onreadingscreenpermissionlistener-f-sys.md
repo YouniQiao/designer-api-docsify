@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@ohos.multimodalAwareness.onScreen';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## onReadingScreenPermissionListener

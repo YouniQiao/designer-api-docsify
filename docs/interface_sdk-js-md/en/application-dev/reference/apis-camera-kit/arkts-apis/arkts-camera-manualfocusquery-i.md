@@ -9,7 +9,7 @@ Manual Focus Query object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## isFocusDistanceSupported

@@ -1,6 +1,6 @@
 # Button属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性： 支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性： 支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
 
 **继承/实现关系：** ButtonAttribute extends [CommonMethod<ButtonAttribute>](CommonMethod<ButtonAttribute>)
 
@@ -120,7 +120,7 @@ fontFamily(value: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md#font)。 |
+| value | string \| Resource | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md)。 |
 
 ## fontSize
 

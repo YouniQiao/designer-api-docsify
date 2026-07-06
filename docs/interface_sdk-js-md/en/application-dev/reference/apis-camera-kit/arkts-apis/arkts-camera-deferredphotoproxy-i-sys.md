@@ -11,7 +11,7 @@ A class object that functions as a thumbnail proxy.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getThumbnail

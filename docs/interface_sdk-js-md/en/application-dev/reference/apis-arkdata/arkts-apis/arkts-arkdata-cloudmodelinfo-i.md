@@ -9,7 +9,7 @@ Indicates cloud embedding model information.
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from '@ohos.data.intelligence';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## modelType

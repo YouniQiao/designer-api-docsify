@@ -9,7 +9,7 @@ The **Picker** module encapsulates APIs such as **DocumentViewPicker**, **AudioV
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@ohos.file.picker';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -27,7 +27,7 @@ import { picker } from '@ohos.file.picker';
 | [PhotoSaveOptions](arkts-corefile-photosaveoptions-c.md) | Defines the options for saving images or videos. |
 | [PhotoSelectOptions](arkts-corefile-photoselectoptions-c.md) | Defines the options for selecting images or videos. |
 | [PhotoSelectResult](arkts-corefile-photoselectresult-c.md) | Defines information about the images or videos selected. |
-| [PhotoViewPicker](arkts-corefile-photoviewpicker-c.md) | Provides APIs for selecting and saving images or videos. You are advised to use [PhotoViewPicker of PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#photoaccesshelper) to select a file. Before using the APIs of **PhotoViewPicker**, you need to create a **PhotoViewPicker** instance. |
+| [PhotoViewPicker](arkts-corefile-photoviewpicker-c.md) | Provides APIs for selecting and saving images or videos. You are advised to use [PhotoViewPicker of PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md) to select a file. Before using the APIs of **PhotoViewPicker**, you need to create a **PhotoViewPicker** instance. |
 
 <!--Del-->
 ### Classes（系统接口）

@@ -6,7 +6,7 @@ typedef struct ContentEmbed_Capability ContentEmbed_Capability
 
 ## Overview
 
-Define the ContentEmbed_Capability structure type.Provides methods for Content Embed Kit.
+Declares the ContentEmbed_Capability structure.
 
 **Since**: 24
 

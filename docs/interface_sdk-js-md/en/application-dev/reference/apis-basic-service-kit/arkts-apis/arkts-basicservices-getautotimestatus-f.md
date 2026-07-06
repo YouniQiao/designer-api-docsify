@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemDateTime } from '@ohos.systemDateTime';
+import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
 ## getAutoTimeStatus

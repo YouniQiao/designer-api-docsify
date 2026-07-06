@@ -9,7 +9,7 @@ Provides MSTensor definition
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@ohos.ai.mindSporeLite';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## getData

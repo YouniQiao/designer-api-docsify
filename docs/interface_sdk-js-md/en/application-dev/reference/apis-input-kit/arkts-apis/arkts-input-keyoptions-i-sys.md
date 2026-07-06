@@ -11,7 +11,7 @@ Represents combination key options.
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from '@ohos.multimodalInput.inputConsumer';
+import { inputConsumer } from '@kit.InputKit';
 ```
 
 ## finalKey

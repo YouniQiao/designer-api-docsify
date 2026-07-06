@@ -9,7 +9,7 @@ Describes the information about a continuous-task notification.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@ohos.resourceschedule.backgroundTaskManager';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## contentType

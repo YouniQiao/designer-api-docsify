@@ -11,7 +11,7 @@ Details the space usage of system applications or system services.
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@ohos.file.storageStatistics';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## businessName

@@ -9,7 +9,7 @@ Obtains IPC context, including the UID and PID, local and remote device IDs, and
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@ohos.rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## flushCmdBuffer

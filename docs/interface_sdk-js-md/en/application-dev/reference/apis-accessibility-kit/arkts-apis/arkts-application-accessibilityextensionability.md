@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from '@ohos.application.AccessibilityExtensionAbility';
+import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from '@kit.AccessibilityKit';
 ```
 
 ## Summary
@@ -40,17 +40,17 @@ import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, Fo
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md) | Indicates an accessibility element. For details, see [AccessibilityElement](arkts-accessibility-accessibilityelement-i.md#accessibilityelement). |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md) | Defines the context of the accessibility extension. For details, see [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md#accessibilityextensioncontext). |
-| [ElementAttributeKeys](arkts-accessibility-elementattributekeys-t.md) | Describes the attribute name of [ElementAttributeValues](arkts-accessibility-elementattributevalues-i.md#elementattributevalues). |
-| [ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md) | Provides attribute names and value types of a node element. For details, see [ElementAttributeValues](arkts-accessibility-elementattributevalues-i.md#elementattributevalues). |
-| [FocusDirection](arkts-accessibility-focusdirection-t.md) | Enumerates the focus directions. For details, see [FocusDirection](arkts-accessibility-focusdirection-t.md#focusdirection). |
-| [FocusType](arkts-accessibility-focustype-t.md) | Enumerates the focus types. For details, see [FocusType](arkts-accessibility-focustype-t.md#focustype) . |
+| [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md) | Indicates an accessibility element. For details, see [AccessibilityElement](arkts-accessibility-accessibilityelement-i.md). |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md) | Defines the context of the accessibility extension. For details, see [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md). |
+| [ElementAttributeKeys](arkts-accessibility-elementattributekeys-t.md) | Describes the attribute name of [ElementAttributeValues](arkts-accessibility-elementattributevalues-i.md). |
+| [ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md) | Provides attribute names and value types of a node element. For details, see [ElementAttributeValues](arkts-accessibility-elementattributevalues-i.md). |
+| [FocusDirection](arkts-accessibility-focusdirection-t.md) | Enumerates the focus directions. For details, see [FocusDirection](arkts-accessibility-focusdirection-t.md). |
+| [FocusType](arkts-accessibility-focustype-t.md) | Enumerates the focus types. For details, see [FocusType](arkts-accessibility-focustype-t.md) . |
 | [GestureType](arkts-accessibility-gesturetype-t.md) | Enumerates gesture types. |
 | [PageUpdateType](arkts-accessibility-pageupdatetype-t.md) | Enumerates the page update types. |
-| [Rect](arkts-accessibility-rect-t.md) | Defines a rectangle. For details, see [Rect](arkts-accessibility-rect-i.md#rect). |
+| [Rect](arkts-accessibility-rect-t.md) | Defines a rectangle. For details, see [Rect](arkts-accessibility-rect-i.md). |
 | [TouchGuideType](arkts-accessibility-touchguidetype-t.md) | Enumerates the touch guide event types. |
-| [WindowType](arkts-accessibility-windowtype-t.md) | Enumerates the window types. For details, see [WindowType](arkts-accessibility-windowtype-t.md#windowtype). |
+| [WindowType](arkts-accessibility-windowtype-t.md) | Enumerates the window types. For details, see [WindowType](arkts-accessibility-windowtype-t.md). |
 
 <!--Del-->
 ### Types（系统接口）

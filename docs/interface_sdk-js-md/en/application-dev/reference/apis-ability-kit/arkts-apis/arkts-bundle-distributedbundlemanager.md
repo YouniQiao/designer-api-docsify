@@ -11,7 +11,7 @@ The module provides APIs for managing distributed bundles. > **NOTE** > > The AP
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundleManager } from '@ohos.bundle.distributedBundleManager';
+import { distributedBundleManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

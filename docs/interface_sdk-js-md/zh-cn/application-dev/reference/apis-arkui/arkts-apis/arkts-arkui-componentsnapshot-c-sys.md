@@ -44,7 +44,7 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID detected. |
-| [160003](../errorcode-snapshot.md#160003-截图选项不支持的色彩空间或动态范围模式) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23 |
+| [160003](../errorcode-snapshot.md#160003-截图选项不支持的色彩空间或动态范围模式) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
 
 **示例：**
 

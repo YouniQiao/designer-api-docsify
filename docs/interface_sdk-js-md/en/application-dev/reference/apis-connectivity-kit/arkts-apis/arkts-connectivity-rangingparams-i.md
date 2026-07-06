@@ -9,7 +9,7 @@ Parameters for ranging operation.
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from '@ohos.FusionConnectivity.ranging';
+import { ranging } from '@kit.ConnectivityKit';
 ```
 
 ## capabilityType

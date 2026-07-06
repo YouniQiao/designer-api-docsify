@@ -9,7 +9,7 @@ Represents the parameter of the constructor used to create a **PathShape** objec
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@ohos.arkui.shape';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## commands

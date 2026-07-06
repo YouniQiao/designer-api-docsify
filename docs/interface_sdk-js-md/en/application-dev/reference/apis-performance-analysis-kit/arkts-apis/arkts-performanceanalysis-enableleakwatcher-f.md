@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from '@ohos.hiviewdfx.jsLeakWatcher';
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## enableLeakWatcher

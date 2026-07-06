@@ -1,8 +1,8 @@
 # ProfessionalVideoSession (System API)
 
-ProfessionalVideoSession extends Session, AutoExposure, ManualExposure, Focus, ManualFocus, WhiteBalance, ManualIso , Flash, Zoom, ColorEffect, Aperture Implements a professional video session, which sets the parameters of the professional video mode and saves all [CameraInput](arkts-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md#session).
+ProfessionalVideoSession extends Session, AutoExposure, ManualExposure, Focus, ManualFocus, WhiteBalance, ManualIso , Flash, Zoom, ColorEffect, Aperture Implements a professional video session, which sets the parameters of the professional video mode and saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md).
 
-**Inheritance/Implementation:** ProfessionalVideoSession extends [Session](arkts-camera-session-i.md#session), [AutoExposure](arkts-camera-autoexposure-i.md#autoexposure), [ManualExposure](arkts-camera-manualexposure-i.md#manualexposure), [Focus](arkts-camera-focus-i.md#focus), [ManualFocus](arkts-camera-manualfocus-i-sys.md#manualfocus), [WhiteBalance](arkts-camera-whitebalance-i.md#whitebalance), [ManualIso](arkts-camera-manualiso-i-sys.md#manualiso), [Flash](arkts-camera-flash-i.md#flash), [Zoom](arkts-camera-zoom-i.md#zoom), [ColorEffect](arkts-camera-coloreffect-i-sys.md#coloreffect), [Aperture](arkts-camera-aperture-i-sys.md#aperture)
+**Inheritance/Implementation:** ProfessionalVideoSession extends [Session](arkts-camera-session-i.md), [AutoExposure](arkts-camera-autoexposure-i.md), [ManualExposure](arkts-camera-manualexposure-i.md), [Focus](arkts-camera-focus-i.md), [ManualFocus](arkts-camera-manualfocus-i-sys.md), [WhiteBalance](arkts-camera-whitebalance-i.md), [ManualIso](arkts-camera-manualiso-i-sys.md), [Flash](arkts-camera-flash-i.md), [Zoom](arkts-camera-zoom-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md), [Aperture](arkts-camera-aperture-i-sys.md)
 
 **Since:** 12
 
@@ -13,7 +13,7 @@ ProfessionalVideoSession extends Session, AutoExposure, ManualExposure, Focus, M
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')
@@ -287,7 +287,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. This event is triggered and the error message is returned when an error occurs during thecalling of a session-related API such as[beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and[addInput](arkts-camera-session-i.md#addinput-1). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # HdrMetadataKey
 
-Enumerates the keys of HDR metadata used by [pixelmap](arkts-image-pixelmap-i.md#pixelmap).
+Enumerates the keys of HDR metadata used by [pixelmap](arkts-image-pixelmap-i.md).
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ Enumerates the keys of HDR metadata used by [pixelmap](arkts-image-pixelmap-i.md
 HDR_METADATA_TYPE = 0
 ```
 
-Metadata type used by [pixelmap](arkts-image-pixelmap-i.md#pixelmap).
+Metadata type used by [pixelmap](arkts-image-pixelmap-i.md).
 
 **Since:** 12
 

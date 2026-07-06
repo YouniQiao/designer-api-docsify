@@ -1,6 +1,6 @@
 # SoundPool
 
-Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops. Before using these APIs, you must call [media.createSoundPool](../../../../reference/apis-media-kit/arkts-apis-media-f.md) to create a SoundPool instance. > **NOTE** > > - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain > status changes: > > - [on('loadComplete')](arkts-media-soundpool-i.md#on-1): listens for the > event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that > the audio is played after being loaded. > > - > [on('playFinishedWithStreamId')](arkts-media-soundpool-i.md#on-2): > listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes > playing. > > - [on('playFinished')](arkts-media-soundpool-i.md#on-2): listens > for the event indicating that the playback is finished. > > - [on('error')](arkts-media-soundpool-i.md#on-4): listens for error events. > > - [on('errorOccurred')](arkts-media-soundpool-i.md#on-5): listens for > error events and returns [errorInfo](arkts-media-errorinfo-i.md#errorinfo). > > - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or > skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using > SoundPool, see > [Using SoundPool to Play Short Sounds (ArkTS)](../../../../media/media/using-soundpool-for-playback.md).
+Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops. Before using these APIs, you must call [media.createSoundPool](../../../../reference/apis-media-kit/arkts-apis-media-f.md) to create a SoundPool instance. > **NOTE** > > - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain > status changes: > > - [on('loadComplete')](arkts-media-soundpool-i.md#on-1): listens for the > event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that > the audio is played after being loaded. > > - > [on('playFinishedWithStreamId')](arkts-media-soundpool-i.md#on-2): > listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes > playing. > > - [on('playFinished')](arkts-media-soundpool-i.md#on-2): listens > for the event indicating that the playback is finished. > > - [on('error')](arkts-media-soundpool-i.md#on-4): listens for error events. > > - [on('errorOccurred')](arkts-media-soundpool-i.md#on-5): listens for > error events and returns [errorInfo](arkts-media-errorinfo-i.md). > > - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or > skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using > SoundPool, see > [Using SoundPool to Play Short Sounds (ArkTS)](../../../../media/media/using-soundpool-for-playback.md).
 
 **Since:** 10
 
@@ -217,7 +217,7 @@ Unsubscribes from error events of a SoundPool instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. |
-| callback | Callback&lt;ErrorInfo&gt; | No | Callback used to return [ErrorInfo](arkts-media-errorinfo-i.md#errorinfo) if an error occursduring the use of the player. If the callback is not set, no related information is provided. |
+| callback | Callback&lt;ErrorInfo&gt; | No | Callback used to return [ErrorInfo](arkts-media-errorinfo-i.md) if an error occursduring the use of the player. If the callback is not set, no related information is provided. |
 
 ## on('loadComplete')
 
@@ -301,7 +301,7 @@ Subscribes to error events of a [SoundPool](../../../../reference/apis-media-kit
 on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
 ```
 
-Subscribes to error events of a [SoundPool](../../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance and returns [ErrorInfo](arkts-media-errorinfo-i.md#errorinfo) that contains the error code, error stage, resource ID, and audio stream ID. This API uses an asynchronous callback to return the result.
+Subscribes to error events of a [SoundPool](../../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance and returns [ErrorInfo](arkts-media-errorinfo-i.md) that contains the error code, error stage, resource ID, and audio stream ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -312,7 +312,7 @@ Subscribes to error events of a [SoundPool](../../../../reference/apis-media-kit
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. This event can betriggered by both user operations and the system. |
-| callback | Callback&lt;ErrorInfo&gt; | Yes | Callback used to return [ErrorInfo](arkts-media-errorinfo-i.md#errorinfo). |
+| callback | Callback&lt;ErrorInfo&gt; | Yes | Callback used to return [ErrorInfo](arkts-media-errorinfo-i.md). |
 
 ## play
 

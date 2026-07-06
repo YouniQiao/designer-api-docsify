@@ -9,7 +9,7 @@ Provides methods for managing bundle usage statistics, including the methods for
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@ohos.resourceschedule.usageStatistics';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

@@ -5,7 +5,7 @@ The uiEffect module provides basic capabilities to apply an effect, for example,
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@ohos.graphics.uiEffect';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary

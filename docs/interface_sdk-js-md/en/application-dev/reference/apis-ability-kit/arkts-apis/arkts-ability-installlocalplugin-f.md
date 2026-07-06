@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pluginBundleManager } from '@ohos.bundle.pluginBundleManager';
+import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## installLocalPlugin

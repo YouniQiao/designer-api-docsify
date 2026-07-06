@@ -11,7 +11,7 @@ Describes information about controlling the Bluetooth peripheral.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@ohos.bluetooth.connection';
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## controlObject

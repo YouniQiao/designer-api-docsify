@@ -9,7 +9,7 @@ You must first use [on('inputStart')](inputMethodEngine.InputMethodAbility. on(t
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@ohos.inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## deleteBackward
@@ -360,7 +360,7 @@ Obtains the additional options for binding an input method.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 and later |
 
 **Example**
 
@@ -506,7 +506,7 @@ console.info(`Succeeded in getting backward, text: ${text}`);
 getCallingWindowInfo(): Promise<WindowInfo>
 ```
 
-Obtains information about the application window, in which the input box that starts an input method is located. This API uses a promise to return the result. > **NOTE** > > This API applies only to the input method applications that use [Panel](arkts-ime-panel-i.md#panel) as the > soft keyboard window.
+Obtains information about the application window, in which the input box that starts an input method is located. This API uses a promise to return the result. > **NOTE** > > This API applies only to the input method applications that use [Panel](arkts-ime-panel-i.md) as the > soft keyboard window.
 
 **Since:** 12
 
@@ -1195,7 +1195,7 @@ Subscribes to the event indicating that the additional options for binding an in
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 and later |
 
 **Example**
 
@@ -1218,7 +1218,7 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 recvMessage(msgHandler?: MessageHandler): void
 ```
 
-Registers or unregisters MessageHandler. > **NOTE** > > The [MessageHandler](arkts-ime-messagehandler-i.md#messagehandler) object is globally unique. After multiple > registrations, only the last registered object is valid and retained, and the > [onTerminated](arkts-ime-messagehandler-i.md#onterminated-1) callback of the penultimate registered > object is triggered. > > If no parameter is set, unregister [MessageHandler](arkts-ime-messagehandler-i.md#messagehandler). Its > [onTerminated](arkts-ime-messagehandler-i.md#onterminated-1) callback will be triggered.
+Registers or unregisters MessageHandler. > **NOTE** > > The [MessageHandler](arkts-ime-messagehandler-i.md) object is globally unique. After multiple > registrations, only the last registered object is valid and retained, and the > [onTerminated](arkts-ime-messagehandler-i.md#onterminated-1) callback of the penultimate registered > object is triggered. > > If no parameter is set, unregister [MessageHandler](arkts-ime-messagehandler-i.md). Its > [onTerminated](arkts-ime-messagehandler-i.md#onterminated-1) callback will be triggered.
 
 **Since:** 15
 
@@ -1228,7 +1228,7 @@ Registers or unregisters MessageHandler. > **NOTE** > > The [MessageHandler](ark
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | No | This object receives custom communication data from the edit boxapplication attached to the input method application through[onMessage](arkts-ime-messagehandler-i.md#onmessage-1) andreceives a message for terminating the subscription to this object through[onTerminated](arkts-ime-messagehandler-i.md#onterminated-1).<br>If no parameter is set, unregister[MessageHandler](arkts-ime-messagehandler-i.md#messagehandler). Its[onTerminated](arkts-ime-messagehandler-i.md#onterminated-1) callback will be triggered. |
+| msgHandler | MessageHandler | No | This object receives custom communication data from the edit boxapplication attached to the input method application through[onMessage](arkts-ime-messagehandler-i.md#onmessage-1) andreceives a message for terminating the subscription to this object through[onTerminated](arkts-ime-messagehandler-i.md#onterminated-1).<br>If no parameter is set, unregister[MessageHandler](arkts-ime-messagehandler-i.md). Its[onTerminated](arkts-ime-messagehandler-i.md#onterminated-1) callback will be triggered. |
 
 **Error codes:**
 
@@ -1503,7 +1503,7 @@ inputClient.selectByRangeSync(range);
 sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
 
-Sends an extended edit action. This API uses an asynchronous callback to return the result. > **NOTE** > > The input method applications call this API to send extended edit actions to the edit box. The edit box listens > for the corresponding event using > [on('handleExtendAction')](@ohos.inputMethod:inputMethod.InputMethodController.on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void) for further processing. > > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-extendaction-e.md#extendaction), > the edit box application needs to apply for the > [ohos.permission.READ_PASTEBOARD](../../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > permission.
+Sends an extended edit action. This API uses an asynchronous callback to return the result. > **NOTE** > > The input method applications call this API to send extended edit actions to the edit box. The edit box listens > for the corresponding event using > [on('handleExtendAction')](@ohos.inputMethod:inputMethod.InputMethodController.on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void) for further processing. > > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-extendaction-e.md), > the edit box application needs to apply for the > [ohos.permission.READ_PASTEBOARD](../../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > permission.
 
 **Since:** 10
 
@@ -1545,7 +1545,7 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY, (err: Business
 sendExtendAction(action: ExtendAction): Promise<void>
 ```
 
-Sends an extended edit action. This API uses a promise to return the result. > **NOTE** > > The input method applications call this API to send extended edit actions to the edit box. The edit box listens > for the corresponding event using > [on('handleExtendAction')](@ohos.inputMethod:inputMethod.InputMethodController.on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void;) for > further processing. > > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-extendaction-e.md#extendaction), > the edit box application needs to apply for the > [ohos.permission.READ_PASTEBOARD](../../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > permission.
+Sends an extended edit action. This API uses a promise to return the result. > **NOTE** > > The input method applications call this API to send extended edit actions to the edit box. The edit box listens > for the corresponding event using > [on('handleExtendAction')](@ohos.inputMethod:inputMethod.InputMethodController.on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void;) for > further processing. > > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-extendaction-e.md), > the edit box application needs to apply for the > [ohos.permission.READ_PASTEBOARD](../../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > permission.
 
 **Since:** 10
 

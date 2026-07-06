@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AbilityLifecycleCallback } from '@ohos.app.ability.AbilityLifecycleCallback';
+import { AbilityLifecycleCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

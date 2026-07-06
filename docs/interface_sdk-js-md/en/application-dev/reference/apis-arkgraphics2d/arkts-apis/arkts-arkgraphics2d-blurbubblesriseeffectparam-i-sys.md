@@ -11,7 +11,7 @@ The parameters of blur bubbles rise effect.
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@ohos.graphics.uiEffect';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## blurIntensity

@@ -60,7 +60,7 @@ publisherBundleName?: string
 publisherDeviceId?: string
 ```
 
-表示设备ID。通过[@ohos.deviceInfo](arkts-deviceinfo.md#deviceinfo)获取udid，作为订阅者的设备ID。预留能力，暂不支持。
+表示设备ID。通过[@ohos.deviceInfo](arkts-deviceinfo.md)获取udid，作为订阅者的设备ID。预留能力，暂不支持。
 
 **类型：** string
 

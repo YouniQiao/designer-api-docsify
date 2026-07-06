@@ -9,7 +9,7 @@ This interface provides APIs for audio rendering. Before calling any API in Audi
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## drain
@@ -54,7 +54,7 @@ Drains the playback buffer. This API uses a promise to return the result.
 flush(): Promise<void>
 ```
 
-Flushes the buffer. This API is available when [AudioState](arkts-audio-audiostate-e.md#audiostate) is **STATE_RUNNING**, **STATE_PAUSED**, or **STATE_STOPPED**. This API uses a promise to return the result.
+Flushes the buffer. This API is available when [AudioState](arkts-audio-audiostate-e.md) is **STATE_RUNNING**, **STATE_PAUSED**, or **STATE_STOPPED**. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -971,7 +971,7 @@ Unsubscribes from the audio data write event. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'writeData' | Yes | Event type. The event **'writeData'** is triggered when audio data needs to bewritten. |
-| callback | AudioRendererWriteDataCallback | No | Callback used to write the data to the buffer.<br>APIversion 11 does not support the return of the callback result. API version 12 and later support the return ofthe callback result [AudioDataCallbackResult](arkts-audio-audiodatacallbackresult-e.md#audiodatacallbackresult).<br>**Since:** 12 |
+| callback | AudioRendererWriteDataCallback | No | Callback used to write the data to the buffer.<br>APIversion 11 does not support the return of the callback result. API version 12 and later support the return ofthe callback result [AudioDataCallbackResult](arkts-audio-audiodatacallbackresult-e.md).<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -986,7 +986,7 @@ Unsubscribes from the audio data write event. This API uses an asynchronous call
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus. After this API is called, an [InterruptEvent](arkts-audio-interruptevent-i.md#interruptevent) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../../media/audio/audio-playback-concurrency.md).
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus. After this API is called, an [InterruptEvent](arkts-audio-interruptevent-i.md) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 9
 
@@ -1134,7 +1134,7 @@ Subscribes to the audio data write event, which is triggered when audio data nee
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'writeData' | Yes | Event type. The event **'writeData'** is triggered when audio data needs to bewritten. |
-| callback | AudioRendererWriteDataCallback | Yes | Callback used to write the data to the buffer.<br>APIversion 11 does not support the return of the callback result. API version 12 and later support the return ofthe callback result [AudioDataCallbackResult](arkts-audio-audiodatacallbackresult-e.md#audiodatacallbackresult).<br>**Since:** 12 |
+| callback | AudioRendererWriteDataCallback | Yes | Callback used to write the data to the buffer.<br>APIversion 11 does not support the return of the callback result. API version 12 and later support the return ofthe callback result [AudioDataCallbackResult](arkts-audio-audiodatacallbackresult-e.md).<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -1349,7 +1349,7 @@ Sets the independent audio session strategy and behavior parameters. > **NOTE** 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strategy | AudioSessionStrategy | Yes | Audio session strategy. |
-| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise ORcombination of multiple flags.<br>For details about the supported audio session behaviors, see[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md#audiosessionbehaviorflags). |
+| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise ORcombination of multiple flags.<br>For details about the supported audio session behaviors, see[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md). |
 
 **Error codes:**
 

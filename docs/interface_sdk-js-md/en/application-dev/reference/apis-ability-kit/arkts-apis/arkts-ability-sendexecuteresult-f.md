@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentProvider } from '@ohos.app.ability.insightIntentProvider';
+import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
 ## sendExecuteResult

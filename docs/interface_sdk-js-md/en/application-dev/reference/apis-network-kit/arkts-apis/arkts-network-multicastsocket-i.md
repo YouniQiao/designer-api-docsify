@@ -2,7 +2,7 @@
 
 Defines a UDP MulticastSocket connection.
 
-**Inheritance/Implementation:** MulticastSocket extends [UDPSocket](arkts-network-udpsocket-i.md#udpsocket)
+**Inheritance/Implementation:** MulticastSocket extends [UDPSocket](arkts-network-udpsocket-i.md)
 
 **Since:** 12
 
@@ -11,7 +11,7 @@ Defines a UDP MulticastSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@ohos.net.socket';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## addMembership

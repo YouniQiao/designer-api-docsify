@@ -9,7 +9,7 @@ Callback used to return the result.
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@ohos.arkui.dragController';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## event

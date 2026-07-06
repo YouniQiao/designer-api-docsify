@@ -9,7 +9,7 @@ The **abilityConnectionManager** module provides APIs for cross-device connectio
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@ohos.distributedsched.abilityConnectionManager';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

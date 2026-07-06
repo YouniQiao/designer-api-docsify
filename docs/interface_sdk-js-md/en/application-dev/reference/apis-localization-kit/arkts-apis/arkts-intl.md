@@ -9,7 +9,7 @@ The **intl** module provides basic i18n capabilities, such as time and date form
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@ohos.intl';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## Summary

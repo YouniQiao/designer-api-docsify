@@ -9,7 +9,7 @@ Represents information about an OS account.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@ohos.account.osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## constraints

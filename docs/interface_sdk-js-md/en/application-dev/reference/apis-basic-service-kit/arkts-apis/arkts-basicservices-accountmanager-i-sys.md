@@ -9,7 +9,7 @@ Provides APIs for managing OS accounts.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@ohos.account.osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## activateOsAccount
@@ -46,8 +46,8 @@ Activates an OS account. This API uses an asynchronous callback to return the re
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 | [12300009](../../apis-basic-services-kit/errorcode-account.md#12300009-account-already-activated) | Account has been activated.<br>**Applicable version:** 7 - 11 |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is beingoperated.<br>**Applicable version:** 12 |
-| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is beingoperated.<br>**Applicable version:** 12 and later |
+| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -112,8 +112,8 @@ Activates an OS account. This API uses a promise to return the result.
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 | [12300009](../../apis-basic-services-kit/errorcode-account.md#12300009-account-already-activated) | Account has been activated.<br>**Applicable version:** 7 - 11 |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is beingoperated.<br>**Applicable version:** 12 |
-| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is beingoperated.<br>**Applicable version:** 12 and later |
+| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -300,14 +300,14 @@ Creates an OS account. This API uses an asynchronous callback to return the resu
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localName or type. |
-| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
 | [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
 | [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
 | [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
-| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upperlimit.<br>**Applicable version:** 24 |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upperlimit.<br>**Applicable version:** 24 and later |
 
 **Example**
 
@@ -367,15 +367,15 @@ Creates an OS account. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localName, type or options. |
-| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
 | [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
 | [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
 | [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
-| [12300015](../../apis-basic-services-kit/errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 |
-| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upperlimit.<br>**Applicable version:** 24 |
+| [12300015](../../apis-basic-services-kit/errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upperlimit.<br>**Applicable version:** 24 and later |
 
 **Example**
 
@@ -436,15 +436,15 @@ Creates an OS account and associates it with the specified domain account. This 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 12 |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 12 and later |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or domainInfo. |
 | [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 | [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
 | [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
 | [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
-| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upperlimit.<br>**Applicable version:** 24 |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upperlimit.<br>**Applicable version:** 24 and later |
 
 **Example**
 
@@ -506,16 +506,16 @@ Creates an OS account and associates it with the specified domain account. This 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 12 |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 12 and later |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type, domainInfo or options. |
 | [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 | [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
 | [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
 | [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
-| [12300015](../../apis-basic-services-kit/errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 |
-| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upperlimit.<br>**Applicable version:** 24 |
+| [12300015](../../apis-basic-services-kit/errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upperlimit.<br>**Applicable version:** 24 and later |
 
 **Example**
 
@@ -2476,7 +2476,7 @@ Removes an OS account. This API uses an asynchronous callback to return the resu
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -2542,7 +2542,7 @@ Removes an OS account. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |

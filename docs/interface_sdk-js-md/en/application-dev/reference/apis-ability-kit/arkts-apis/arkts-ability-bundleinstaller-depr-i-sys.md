@@ -6,7 +6,7 @@ The module provides APIs for you to install, uninstall, and recover bundles on d
 
 **Deprecated since:** 9
 
-**Substitutes:** [BundleInstaller](arkts-ability-bundleinstaller-i-sys.md#bundleinstaller)
+**Substitutes:** [BundleInstaller](arkts-ability-bundleinstaller-i-sys.md)
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

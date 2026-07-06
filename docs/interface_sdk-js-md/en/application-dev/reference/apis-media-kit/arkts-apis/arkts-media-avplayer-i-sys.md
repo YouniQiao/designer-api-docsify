@@ -9,7 +9,7 @@ AVPlayer is a playback management class. It provides APIs to manage and play med
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableCameraPostprocessing

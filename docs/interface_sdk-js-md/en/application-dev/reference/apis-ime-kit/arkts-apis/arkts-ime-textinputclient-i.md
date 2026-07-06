@@ -6,14 +6,14 @@ In the following API examples, you must first use [on('inputStart')](inputMethod
 
 **Deprecated since:** 9
 
-**Substitutes:** [InputClient](arkts-ime-inputclient-i.md#inputclient)
+**Substitutes:** [InputClient](arkts-ime-inputclient-i.md)
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@ohos.inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## deleteBackward

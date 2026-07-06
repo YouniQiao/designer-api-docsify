@@ -9,7 +9,7 @@ Defines the frame interpolation state information in the scenario where the ArkW
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## key

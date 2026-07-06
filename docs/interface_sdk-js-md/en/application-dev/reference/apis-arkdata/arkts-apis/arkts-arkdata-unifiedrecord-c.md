@@ -9,7 +9,7 @@ An abstract definition of the data content supported by the UDMF. A **UnifiedRec
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@ohos.data.unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## addEntry
@@ -32,7 +32,7 @@ Adds data of a specified data type and content to the current data record. You c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the data to add. For details, see[UniformDataType](arkts-arkdata-uniformdatatype-e.md#uniformdatatype). |
+| type | string | Yes | Type of the data to add. For details, see[UniformDataType](arkts-arkdata-uniformdatatype-e.md). |
 | value | ValueType | Yes | Value of the data to add. |
 
 **Error codes:**
@@ -98,7 +98,7 @@ let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
 constructor(type: string, value: ValueType)
 ```
 
-Defines a constructor used to create a data record with the specified type and value. If **value** is of the [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image) type, **type** must be the value of **OPENHARMONY_PIXEL_MAP** in [UniformDataType](arkts-arkdata-uniformdatatype-e.md#uniformdatatype). If **value** is of the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md#want) type, **type** must be the value of **OPENHARMONY_WANT** in [UniformDataType](arkts-arkdata-uniformdatatype-e.md#uniformdatatype).
+Defines a constructor used to create a data record with the specified type and value. If **value** is of the [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) type, **type** must be the value of **OPENHARMONY_PIXEL_MAP** in [UniformDataType](arkts-arkdata-uniformdatatype-e.md). If **value** is of the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) type, **type** must be the value of **OPENHARMONY_WANT** in [UniformDataType](arkts-arkdata-uniformdatatype-e.md).
 
 **Since:** 12
 
@@ -243,7 +243,7 @@ Obtains data of the specified type from the data record.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the data to obtain. For details, see[UniformDataType](arkts-arkdata-uniformdatatype-e.md#uniformdatatype). |
+| type | string | Yes | Type of the data to obtain. For details, see[UniformDataType](arkts-arkdata-uniformdatatype-e.md). |
 
 **Return value:**
 
@@ -326,7 +326,7 @@ Obtains the type of this **UnfiedRecord**. The data obtained by [getRecords](ark
 
 | Type | Description |
 | --- | --- |
-| string | Data type obtained. For details, see[UniformDataType](arkts-arkdata-uniformdatatype-e.md#uniformdatatype). |
+| string | Data type obtained. For details, see[UniformDataType](arkts-arkdata-uniformdatatype-e.md). |
 
 **Example**
 
@@ -369,7 +369,7 @@ Obtains all the data types in the data record. This API can be called using the 
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Array of[UniformDataType](arkts-arkdata-uniformdatatype-e.md#uniformdatatype)s obtained. |
+| Array&lt;string&gt; | Array of[UniformDataType](arkts-arkdata-uniformdatatype-e.md)s obtained. |
 
 **Example**
 

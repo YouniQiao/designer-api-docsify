@@ -9,7 +9,7 @@ Defines parameters when an application obtains the Data from the pasteboard, inc
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@ohos.pasteboard';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## destUri
@@ -88,7 +88,7 @@ Defines a listener for progress data changes. If the default progress indicator 
 progressSignal?: ProgressSignal
 ```
 
-Function for canceling the paste task. This parameter is valid only when [ProgressIndicator](arkts-basicservices-progressindicator-e.md#progressindicator) is set to **NONE**. This parameter is left empty by default.
+Function for canceling the paste task. This parameter is valid only when [ProgressIndicator](arkts-basicservices-progressindicator-e.md) is set to **NONE**. This parameter is left empty by default.
 
 **Type:** ProgressSignal
 

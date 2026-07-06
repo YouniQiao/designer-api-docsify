@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Stack } from '@ohos.util.Stack';
+import { Stack } from '@kit.ArkTS';
 ```
 
 ## Summary

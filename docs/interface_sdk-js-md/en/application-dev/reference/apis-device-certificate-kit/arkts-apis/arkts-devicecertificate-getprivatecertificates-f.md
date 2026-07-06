@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## getPrivateCertificates
@@ -24,7 +24,7 @@ Obtains the credentials for installing the application. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return credentials obtained, which is **credentialList** in[CMResult](arkts-devicecertificate-cmresult-i.md#cmresult). |
+| Promise&lt;CMResult&gt; | Promise used to return credentials obtained, which is **credentialList** in[CMResult](arkts-devicecertificate-cmresult-i.md). |
 
 **Error codes:**
 

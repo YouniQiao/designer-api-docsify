@@ -2,7 +2,7 @@
 
 The context of an ability or an application. It allows access to application-specific resources, request and verification permissions. Can only be obtained through the ability.
 
-**Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md#basecontext)
+**Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
 
 **Since:** 6
 

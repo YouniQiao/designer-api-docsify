@@ -6,7 +6,7 @@ Listens for file change. You can call the **Watcher.stop()** method synchronousl
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:Watcher](arkts-corefile-watcher-i.md#watcher)
+**Substitutes:** [fs:Watcher](arkts-corefile-watcher-i.md)
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

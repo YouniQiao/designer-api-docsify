@@ -11,7 +11,7 @@ Defines the key event information injected by the user.
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@ohos.multimodalInput.inputEventClient';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## KeyEvent

@@ -9,7 +9,7 @@ Defines the dynamic layout container.
 ## Modules to Import
 
 ```TypeScript
-import { DynamicLayoutAttribute, DynamicLayout } from '@ohos.arkui.components.ArkDynamicLayout';
+import { DynamicLayoutAttribute, DynamicLayout } from '@kit.ArkUI';
 ```
 
 ## constructor

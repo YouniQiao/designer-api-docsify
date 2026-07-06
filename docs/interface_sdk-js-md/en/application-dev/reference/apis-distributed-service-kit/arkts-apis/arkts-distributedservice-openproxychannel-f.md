@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { proxyChannelManager } from '@ohos.distributedsched.proxyChannelManager';
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## openProxyChannel
@@ -39,7 +39,7 @@ Opens a proxy channel. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because bluetooth proxy function hasbeen trimmed.<br>**Applicable version:** 26.0.0 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because bluetooth proxy function hasbeen trimmed.<br>**Applicable version:** 26.0.0 and later |
 | [32390001](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390001-bluetooth-disabled) | BR is disabled. |
 | [32390002](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390002-bluetooth-unpaired) | Device not paired. |
 | [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |

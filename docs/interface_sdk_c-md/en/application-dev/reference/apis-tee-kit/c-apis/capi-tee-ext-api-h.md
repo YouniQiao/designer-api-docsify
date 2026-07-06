@@ -27,7 +27,7 @@ Provides extended interfaces.
 | INVALID_USERID 0xFFFFFFFFU | Defines the value of invalid user ID.<br>**Since**: 20 |
 | TEE_SMC_FROM_USR 0 | Defines the SMC from user mode.<br>**Since**: 20 |
 | TEE_SMC_FROM_KERNEL 1 | Defines the SMC from kernel mode.<br>**Since**: 20 |
-| RESERVED_BUF_SIZE 32 | Defines the szie of reserved buffer.<br>**Since**: 20 |
+| RESERVED_BUF_SIZE 32 | Defines the size of reserved buffer.<br>**Since**: 20 |
 | SESSION_FROM_CA   0 | Defines the session caller from CA.<br>**Since**: 20 |
 | SESSION_FROM_TA   1 | Defines the session caller from TA.<br>**Since**: 20 |
 | SESSION_FROM_NOT_SUPPORTED   0xFE | Defines the TA task is not found, for example, from TA sub thread.<br>**Since**: 20 |

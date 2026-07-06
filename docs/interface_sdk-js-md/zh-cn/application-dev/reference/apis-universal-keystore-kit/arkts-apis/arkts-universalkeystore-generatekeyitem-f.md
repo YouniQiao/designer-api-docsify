@@ -38,14 +38,14 @@ function generateKeyItem(keyAlias: string, options: HuksOptions, callback: Async
 | [12000013](../errorcode-huks.md#12000013-密钥设置生物访问控制时待绑定的凭据不存在) | queried credential does not exist |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
 | [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM |
-| [12000017](../errorcode-huks.md#12000017-同名密钥已存在) | The key with the same alias already exists<br>**适用版本：** 20 |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23 |
-| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The queried entity does not exist. This may happen becausethe key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**适用版本：** 26.0.0 |
-| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed<br>**适用版本：** 26.0.0 |
-| [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) | the UKey PIN is locked<br>**适用版本：** 26.0.0 |
-| [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) | the UKey PIN not authenticated<br>**适用版本：** 26.0.0 |
-| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | the provider or UKey is busy<br>**适用版本：** 26.0.0 |
-| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0 |
+| [12000017](../errorcode-huks.md#12000017-同名密钥已存在) | The key with the same alias already exists<br>**适用版本：** 20+ |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The queried entity does not exist. This may happen becausethe key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**适用版本：** 26.0.0+ |
+| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed<br>**适用版本：** 26.0.0+ |
+| [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) | the UKey PIN is locked<br>**适用版本：** 26.0.0+ |
+| [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) | the UKey PIN not authenticated<br>**适用版本：** 26.0.0+ |
+| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | the provider or UKey is busy<br>**适用版本：** 26.0.0+ |
+| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -218,14 +218,14 @@ function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 | [12000013](../errorcode-huks.md#12000013-密钥设置生物访问控制时待绑定的凭据不存在) | queried credential does not exist |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
 | [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM |
-| [12000017](../errorcode-huks.md#12000017-同名密钥已存在) | The key with the same alias already exists<br>**适用版本：** 20 |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23 |
-| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The queried entity does not exist. This may happen becausethe key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**适用版本：** 26.0.0 |
-| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed<br>**适用版本：** 26.0.0 |
-| [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) | the UKey PIN is locked<br>**适用版本：** 26.0.0 |
-| [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) | the UKey PIN not authenticated<br>**适用版本：** 26.0.0 |
-| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | the provider or UKey is busy<br>**适用版本：** 26.0.0 |
-| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0 |
+| [12000017](../errorcode-huks.md#12000017-同名密钥已存在) | The key with the same alias already exists<br>**适用版本：** 20+ |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The queried entity does not exist. This may happen becausethe key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**适用版本：** 26.0.0+ |
+| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed<br>**适用版本：** 26.0.0+ |
+| [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) | the UKey PIN is locked<br>**适用版本：** 26.0.0+ |
+| [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) | the UKey PIN not authenticated<br>**适用版本：** 26.0.0+ |
+| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | the provider or UKey is busy<br>**适用版本：** 26.0.0+ |
+| [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 

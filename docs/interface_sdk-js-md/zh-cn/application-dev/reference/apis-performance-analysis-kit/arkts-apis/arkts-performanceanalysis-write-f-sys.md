@@ -6,7 +6,7 @@
 function write(info: SysEventInfo): Promise<void>
 ```
 
-系统事件打点方法，接收[SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md#syseventinfo)类型的对象作为事件参数，使用promise方式作为异步回调。
+系统事件打点方法，接收[SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md)类型的对象作为事件参数，使用promise方式作为异步回调。
 
 **起始版本：** 9
 
@@ -85,7 +85,7 @@ try {
 function write(info: SysEventInfo, callback: AsyncCallback<void>): void
 ```
 
-系统事件打点方法，接收[SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md#syseventinfo)类型的对象作为事件参数，使用callback方式作为异步回调。
+系统事件打点方法，接收[SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md)类型的对象作为事件参数，使用callback方式作为异步回调。
 
 **起始版本：** 9
 

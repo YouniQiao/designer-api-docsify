@@ -11,7 +11,7 @@ Provides APIs for message authentication code (MAC) operations. Before using any
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## doFinal

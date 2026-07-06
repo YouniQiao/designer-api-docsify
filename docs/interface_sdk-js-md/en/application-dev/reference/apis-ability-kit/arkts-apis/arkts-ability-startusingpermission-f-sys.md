@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@ohos.privacyManager';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## startUsingPermission
@@ -186,7 +186,7 @@ A system application can call this API to report the application's permission us
 | permissionName | Permissions | Yes | Name of the permission to be used. Passing an invalid value returns errorcode 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
 | pid | number | No | Process PID of the caller, used to manage the permission usage status based on the processlifecycle. Pass this parameter when you need to precisely control the permission usage status of a specificprocess (for example, automatically stopping permission usage when the process exits). It must be the same asthe pid passed to [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1).<br>The value should be an integer. Default value: -1, indicating no response based on the process lifecycle. |
 | usedType | PermissionUsedType | No | Access mode for the sensitive permission.<br>Default value: NORMAL_TYPE. |
-| options | PermissionUsingOptions | No | Optional parameter for permission usage, used to specify theextension identity. This parameter is passed in when the caller's extension identity information needs to beidentified.<br>Default value: Please refer to [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md#permissionusingoptions) forthe default values of each property in the structure. |
+| options | PermissionUsingOptions | No | Optional parameter for permission usage, used to specify theextension identity. This parameter is passed in when the caller's extension identity information needs to beidentified.<br>Default value: Please refer to [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md) forthe default values of each property in the structure. |
 
 **Return value:**
 

@@ -1,12 +1,12 @@
 # AudioRecorder
 
-> **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorder](arkts-media-media-n.md#media)替代。 音频录制管理类，用于录制音频媒体。在调用AudioRecorder的方法前，需要先通过 [createAudioRecorder()](arkts-media-createaudiorecorder-f.md#createaudiorecorder-1) 构建一个AudioRecorder实例。
+> **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorder](arkts-media-media-n.md)替代。 音频录制管理类，用于录制音频媒体。在调用AudioRecorder的方法前，需要先通过 [createAudioRecorder()](arkts-media-createaudiorecorder-f.md#createaudiorecorder-1) 构建一个AudioRecorder实例。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [media:media](arkts-media-media-n.md#media)
+**替代接口：** [media:media](arkts-media-media-n.md)
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -238,7 +238,7 @@ prepare(config: AudioRecorderConfig): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied.<br>**适用版本：** 12 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied.<br>**适用版本：** 12+ |
 
 ## release
 

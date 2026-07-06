@@ -11,7 +11,7 @@ This module provides ExtensionAbility for word selection, allowing users to sear
 ## Modules to Import
 
 ```TypeScript
-import { SelectionExtensionAbility } from '@ohos.selectionInput.SelectionExtensionAbility';
+import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## onConnect
@@ -107,7 +107,7 @@ class ServiceExtAbility extends SelectionExtensionAbility {
 context: SelectionExtensionContext
 ```
 
-Context of the SelectionExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext).
+Context of the SelectionExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
 **Type:** SelectionExtensionContext
 

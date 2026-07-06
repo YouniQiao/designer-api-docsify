@@ -6,14 +6,14 @@ Writes objects of classes to a **MessageParcel** and reads them from the **Messa
 
 **Deprecated since:** 9
 
-**Substitutes:** [Parcelable](arkts-ipc-parcelable-i.md#parcelable)
+**Substitutes:** [Parcelable](arkts-ipc-parcelable-i.md)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@ohos.rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## marshalling

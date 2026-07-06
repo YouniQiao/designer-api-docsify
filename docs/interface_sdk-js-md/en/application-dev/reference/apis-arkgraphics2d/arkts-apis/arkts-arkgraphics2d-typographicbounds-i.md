@@ -9,7 +9,7 @@ Describes the typographic boundaries of a text line. These boundaries depend on 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@ohos.graphics.text';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## ascent

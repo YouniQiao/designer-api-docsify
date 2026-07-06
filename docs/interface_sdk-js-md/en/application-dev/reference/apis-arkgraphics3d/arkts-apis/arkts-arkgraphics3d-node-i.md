@@ -2,7 +2,7 @@
 
 Defines Node interface.
 
-**Inheritance/Implementation:** Node extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md#sceneresource)
+**Inheritance/Implementation:** Node extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md)
 
 **Since:** 12
 

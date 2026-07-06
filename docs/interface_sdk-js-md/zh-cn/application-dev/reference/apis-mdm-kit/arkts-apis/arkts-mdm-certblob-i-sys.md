@@ -6,7 +6,7 @@
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [CertBlob](arkts-mdm-certblob-i.md#certblob)
+**替代接口：** [CertBlob](arkts-mdm-certblob-i.md)
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

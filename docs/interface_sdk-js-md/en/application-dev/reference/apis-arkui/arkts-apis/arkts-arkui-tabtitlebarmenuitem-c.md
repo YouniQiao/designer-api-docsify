@@ -9,7 +9,7 @@ Declaration of the menu item on the right side.
 ## Modules to Import
 
 ```TypeScript
-import { TabTitleBar, TabTitleBarTabItem, TabTitleBarMenuItem } from '@ohos.arkui.advanced.TabTitleBar';
+import { TabTitleBar, TabTitleBarTabItem, TabTitleBarMenuItem } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription

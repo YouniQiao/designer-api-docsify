@@ -9,7 +9,7 @@ Provides the container definition for media description key-value pairs.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## key

@@ -9,7 +9,7 @@ Provides APIs for locating certificates or CRLs in a **CertCRLCollection** objec
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## selectCRLs

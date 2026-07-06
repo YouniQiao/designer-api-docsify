@@ -9,7 +9,7 @@ The **Driver** class is the main entry to the UiTest framework. It provides APIs
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@ohos.UiTest';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## assertComponentExist
@@ -1407,7 +1407,7 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 | --- | --- | --- | --- |
 | p | Point | Yes | Coordinates of the end point. |
 | text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | InputTextMode | Yes | Text input mode.For details, see [InputTextMode](arkts-test-inputtextmode-i.md#inputtextmode).**NOTE**If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specifiedtext is input. If the value is **false**, the specified text is input at the coordinate point. |
+| mode | InputTextMode | Yes | Text input mode.For details, see [InputTextMode](arkts-test-inputtextmode-i.md).**NOTE**If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specifiedtext is input. If the value is **false**, the specified text is input at the coordinate point. |
 
 **Return value:**
 
@@ -1791,8 +1791,8 @@ Injects a mouse click action at the specified coordinates, with the optional key
 | --- | --- | --- | --- |
 | p | Point | Yes | Coordinates of the mouse click. |
 | btnId | MouseButton | Yes | Mouse button pressed. |
-| key1 | number | No | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
-| key2 | number | No | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
+| key1 | number | No | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
+| key2 | number | No | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
 
 **Return value:**
 
@@ -1840,8 +1840,8 @@ Injects a double-click action at the specified coordinates, with the optional ke
 | --- | --- | --- | --- |
 | p | Point | Yes | Coordinates of the double-click. |
 | btnId | MouseButton | Yes | Mouse button pressed. |
-| key1 | number | No | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
-| key2 | number | No | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
+| key1 | number | No | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
+| key2 | number | No | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
 
 **Return value:**
 
@@ -2022,8 +2022,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- | --- |
 | p | Point | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | MouseButton | Yes | Mouse button pressed. |
-| key1 | number | No | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
-| key2 | number | No | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
+| key1 | number | No | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
+| key2 | number | No | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
 
 **Return value:**
 
@@ -2071,8 +2071,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- | --- |
 | p | Point | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | MouseButton | Yes | Mouse button pressed. |
-| key1 | number | No | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
-| key2 | number | No | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
+| key1 | number | No | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
+| key2 | number | No | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
 | duration | number | No | Long-click duration.<br>Value range: The value should be &gt;= 1500<br>Unit: ms<br>Default value: 1500 |
 
 **Return value:**
@@ -2216,8 +2216,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | p | Point | Yes | Coordinates of the mouse click. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrollsdownward, and **false** indicates the mouse wheel scrolls upward. |
 | d | number | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px shift to the target point.The value is an integer greater than or equal to 0.<br>Value range: The value should be &gt;= 0<br>Unit: px |
-| key1 | number | No | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
-| key2 | number | No | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
+| key1 | number | No | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
+| key2 | number | No | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
 
 **Return value:**
 
@@ -2266,8 +2266,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | p | Point | Yes | Coordinates of the mouse click. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrollsdownward, and **false** indicates the mouse wheel scrolls upward. |
 | d | number | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px shift to the target point. Thevalue is an integer greater than or equal to 0.<br>Unit: cell |
-| key1 | number | No | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
-| key2 | number | No | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
+| key1 | number | No | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
+| key2 | number | No | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
 | speed | number | No | Scroll speed of the mouse wheel.<br>Value range:[1, 500]<br>Unit: ticks/s<br>Throws error code 401 if negative.<br>Default value: 20 |
 
 **Return value:**
@@ -3141,9 +3141,9 @@ Triggers a combination key event based on the specified key values. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | number | Yes | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode). |
-| key1 | number | Yes | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode). |
-| key2 | number | No | Third key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
+| key0 | number | Yes | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md). |
+| key1 | number | Yes | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md). |
+| key2 | number | No | Third key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
 
 **Return value:**
 
@@ -3189,9 +3189,9 @@ Triggers a combination key event based on the specified key values on the specif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | number | Yes | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode). |
-| key1 | number | Yes | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode). |
-| key2 | number | No | Third key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode).<br>Default value: 0 |
+| key0 | number | Yes | First key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md). |
+| key1 | number | Yes | Second key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md). |
+| key2 | number | No | Third key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md).<br>Default value: 0 |
 | displayId | number | No | Display ID. The value is an integer greater than or equal to 0. The default value is thedefault display ID of the device. |
 
 **Return value:**
@@ -3238,7 +3238,7 @@ Triggers a key event by passing the key value. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | number | Yes | Key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode). |
+| keyCode | number | Yes | Key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md). |
 
 **Return value:**
 
@@ -3285,7 +3285,7 @@ Triggers a key event by passing the key value on the specified screen. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | number | Yes | Key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode). |
+| keyCode | number | Yes | Key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md). |
 | displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.<br> **Note**: If the input **displayId** does not exist, the exception **401** is reported. |
 
 **Return value:**

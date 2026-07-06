@@ -1,6 +1,6 @@
 # HuksCryptoExtensionResultCode
 
-[HuksCryptoExtensionResult](arkts-universalkeystore-hukscryptoextensionresultcode-e.md#hukscryptoextensionresultcode)中的resultCode枚举值。
+[HuksCryptoExtensionResult](arkts-universalkeystore-hukscryptoextensionresultcode-e.md)中的resultCode枚举值。
 
 **起始版本：** 22
 

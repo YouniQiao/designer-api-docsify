@@ -9,7 +9,7 @@ Declare struct ExceptionPromptV2 higher-order component. The exception prompt co
 ## Modules to Import
 
 ```TypeScript
-import { MarginTypeV2, PromptOptionsV2, ExceptionPromptV2, PromptOptionsV2Config } from '@ohos.arkui.advanced.ExceptionPromptV2';
+import { MarginTypeV2, PromptOptionsV2, ExceptionPromptV2, PromptOptionsV2Config } from '@kit.ArkUI';
 ```
 
 ## onActionTextClick

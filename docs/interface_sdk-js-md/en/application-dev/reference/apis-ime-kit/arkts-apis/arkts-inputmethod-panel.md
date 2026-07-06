@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PanelInfo, PanelType, PanelFlag } from '@ohos.inputMethod.Panel';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 ```
 
 ## Summary

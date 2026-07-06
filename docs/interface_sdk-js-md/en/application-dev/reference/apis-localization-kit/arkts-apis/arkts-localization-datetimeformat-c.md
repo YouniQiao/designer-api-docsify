@@ -13,7 +13,7 @@ Performs date and time formatting.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@ohos.intl';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor

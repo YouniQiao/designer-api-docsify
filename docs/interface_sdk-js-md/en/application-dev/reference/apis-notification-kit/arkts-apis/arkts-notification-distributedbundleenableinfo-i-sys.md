@@ -11,7 +11,7 @@ Describes the bundle information of an application that enables cross-device col
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@ohos.notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## bundleName

@@ -25,7 +25,7 @@ function promisify(original: (err: Object, value: Object) => void): Function
 | 类型 | 说明 |
 | --- | --- |
 | function | 返回一个返回 promises 的函数。<br>**适用版本：** 9 - 11 |
-| Function | Promise 函数。<br>**适用版本：** 10 |
+| Function | Promise 函数。<br>**适用版本：** 10+ |
 
 **示例：**
 

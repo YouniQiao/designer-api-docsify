@@ -2,7 +2,7 @@
 
 水平方向线性布局算法类。 > **说明：** > > RowLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](arkts-arkui-components-arkdynamiclayout.md)组件的入参 > 指定布局算法。
 
-**继承/实现关系：** RowLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#layoutalgorithm)
+**继承/实现关系：** RowLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 
 **起始版本：** 24
 

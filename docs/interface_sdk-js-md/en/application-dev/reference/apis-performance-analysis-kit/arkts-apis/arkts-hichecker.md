@@ -9,7 +9,7 @@ The HiChecker module allows you to check issues that may be easily ignored durin
 ## Modules to Import
 
 ```TypeScript
-import { hichecker } from '@ohos.hichecker';
+import { hichecker } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

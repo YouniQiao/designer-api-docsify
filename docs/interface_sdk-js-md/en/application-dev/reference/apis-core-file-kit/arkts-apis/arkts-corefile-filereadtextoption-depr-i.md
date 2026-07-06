@@ -94,7 +94,7 @@ Position where the reading starts, in bytes. The default value is the start posi
 success?: (data: FileReadTextResponse) => void
 ```
 
-Callback invoked when the API call is successful. **data** is [FileReadTextResponse](arkts-corefile-filereadtextresponse-depr-i.md#filereadtextresponse).
+Callback invoked when the API call is successful. **data** is [FileReadTextResponse](arkts-corefile-filereadtextresponse-depr-i.md).
 
 **Type:** (data: FileReadTextResponse) => void
 

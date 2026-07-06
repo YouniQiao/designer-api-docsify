@@ -9,7 +9,7 @@ The three primary colors (red, green, blue) and white as defined by the gamut st
 ## Modules to Import
 
 ```TypeScript
-import { colorSpaceManager } from '@ohos.graphics.colorSpaceManager';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## blueX

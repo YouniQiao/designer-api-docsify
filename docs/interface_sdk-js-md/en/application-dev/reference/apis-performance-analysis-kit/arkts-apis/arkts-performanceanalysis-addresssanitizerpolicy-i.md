@@ -9,7 +9,7 @@ Defines the address sanitizer event configuration policy.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiviewdfx.hiAppEvent';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## pageSwitchLogEnable

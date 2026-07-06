@@ -9,7 +9,7 @@ Provides the API to check whether the focus assist is supported.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## isFocusModeSupported
@@ -36,7 +36,7 @@ Checks whether a focus mode is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus mode. **true** if supported, **false** otherwise.If the operation fails, undefined is returned and an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is thrown. |
+| boolean | Check result for the support of the focus mode. **true** if supported, **false** otherwise.If the operation fails, undefined is returned and an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 

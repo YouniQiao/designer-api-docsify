@@ -16,7 +16,7 @@ function isDefaultApplicationSync(type: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要查询的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md#applicationtype)或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor)类型中的值。 |
+| type | string | 是 | 要查询的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md)或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor)类型中的值。 |
 
 **返回值：**
 

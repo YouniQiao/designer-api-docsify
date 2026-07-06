@@ -11,7 +11,7 @@ Defines the authentication widget manager. It is used to register the custom aut
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@ohos.userIAM.userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## off('command')

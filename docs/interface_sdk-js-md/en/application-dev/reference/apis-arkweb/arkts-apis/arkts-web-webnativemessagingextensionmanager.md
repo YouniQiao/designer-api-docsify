@@ -9,7 +9,7 @@ The webNativeMessagingExtensionManager module provides the capability of managin
 ## Modules to Import
 
 ```TypeScript
-import { webNativeMessagingExtensionManager } from '@ohos.web.webNativeMessagingExtensionManager';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
 ```
 
 ## Summary

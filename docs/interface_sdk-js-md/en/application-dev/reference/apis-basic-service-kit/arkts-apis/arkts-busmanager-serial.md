@@ -9,7 +9,7 @@ Serial port management.
 ## Modules to Import
 
 ```TypeScript
-import { serial } from '@ohos.busManager.serial';
+import { serial } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -1,6 +1,6 @@
 # TextArea properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following events are supported.
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following events are supported.
 
 **Inheritance/Implementation:** TextAreaAttribute extends [CommonMethod<TextAreaAttribute>](CommonMethod<TextAreaAttribute>)
 
@@ -100,7 +100,7 @@ Sets the caret style.
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-Sets whether to enable leading punctuation compression. > **NOTE** > > - Leading punctuation is not compressed by default. > > - For the list of punctuation marks that support compression, see the punctuation range at the beginning of a > line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md#paragraphstyle).
+Sets whether to enable leading punctuation compression. > **NOTE** > > - Leading punctuation is not compressed by default. > > - For the list of punctuation marks that support compression, see the punctuation range at the beginning of a > line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -164,7 +164,7 @@ Sets whether the input text can be copied. If this attribute is set to **CopyOpt
 customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions)
 ```
 
-Sets the custom keyboard. When a custom keyboard is set, activating the text box opens the specified custom component, instead of the system input method. The height of the custom keyboard can be set using the **height** property of the custom component's root node, while the width uses the system default value. The custom keyboard is presented by overlaying the original screen, which is not compressed or lifted if avoid mode is not enabled or avoidance is not needed for the text box. The custom keyboard cannot obtain the focus, but it blocks gesture events. By default, the custom keyboard is closed when the input component loses the focus. You can also use the [TextAreaController](arkts-arkui-textareacontroller-c.md#textareacontroller).[stopEditing](arkts-arkui-textareacontroller-c.md#stopediting-1) API to close the keyboard. When setting a custom keyboard, you can bind the [onKeyPrelme](arkts-arkui-commonmethod-c.md#onkeypreime-1) event to prevent input from the physical keyboard. From API version 23, the [setCustomKeyboardContinueFeature](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature23) API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards, the system changes the keyboard directly without triggering the close and open animations. > **NOTE** > > This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets the custom keyboard. When a custom keyboard is set, activating the text box opens the specified custom component, instead of the system input method. The height of the custom keyboard can be set using the **height** property of the custom component's root node, while the width uses the system default value. The custom keyboard is presented by overlaying the original screen, which is not compressed or lifted if avoid mode is not enabled or avoidance is not needed for the text box. The custom keyboard cannot obtain the focus, but it blocks gesture events. By default, the custom keyboard is closed when the input component loses the focus. You can also use the [TextAreaController](arkts-arkui-textareacontroller-c.md).[stopEditing](arkts-arkui-textareacontroller-c.md#stopediting-1) API to close the keyboard. When setting a custom keyboard, you can bind the [onKeyPrelme](arkts-arkui-commonmethod-c.md#onkeypreime-1) event to prevent input from the physical keyboard. From API version 23, the [setCustomKeyboardContinueFeature](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature23) API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards, the system changes the keyboard directly without triggering the close and open animations. > **NOTE** > > This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 10
 
@@ -363,7 +363,7 @@ Sets whether to enable preview text. The preview content is defined as a tempora
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition. When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default. This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md#copyoptions) is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
+Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition. When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default. This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md) is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
 
 **Since:** 22
 
@@ -696,7 +696,7 @@ Sets the letter spacing for a text style. Percentage values follow default displ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Letter spacing.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | number \| string \| Resource | Yes | Letter spacing.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## lineBreakStrategy
 
@@ -740,7 +740,7 @@ Text line height. If the value is less than or equal to 0, the line height is no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Text line height. String type. Specifies the length[pixel unit](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) explicitly, for example, **'10px'**, or provides the length in percentage, forexample, **'100%'**.<br>Note: If no pixel unit is specified, the default unit is fp, in which case **'10'** isequivalent to 10 fp. |
+| value | number \| string \| Resource | Yes | Text line height. String type. Specifies the length[pixel unit](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) explicitly, for example, **'10px'**, or provides the length in percentage, forexample, **'100%'**.<br>Note: If no pixel unit is specified, the default unit is fp, in which case **'10'** isequivalent to 10 fp. |
 
 ## lineSpacing
 
@@ -829,7 +829,7 @@ Sets the maximum font size. For the string type, numeric string values with opti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Maximum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | number \| string \| Resource | Yes | Maximum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## maxLength
 
@@ -940,7 +940,7 @@ Sets the minimum font size. For the string type, numeric string values with opti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Minimum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | number \| string \| Resource | Yes | Minimum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## minLines
 
@@ -970,7 +970,7 @@ Sets the minimum number of lines displayed for the component. When [constraintSi
 onChange(callback: EditableTextOnChangeCallback)
 ```
 
-Called when the input in the text box changes. In this callback, if caret operations are performed, you must adjust the caret logic based on the **previewText** parameter of [EditableTextOnChangeCallback](arkts-arkui-editabletextonchangecallback-t.md#editabletextonchangecallback) to ensure it works seamlessly within the preview display scenario.
+Called when the input in the text box changes. In this callback, if caret operations are performed, you must adjust the caret logic based on the **previewText** parameter of [EditableTextOnChangeCallback](arkts-arkui-editabletextonchangecallback-t.md) to ensure it works seamlessly within the preview display scenario.
 
 **Since:** 7
 
@@ -1204,7 +1204,7 @@ Called when the text selection changes or the caret position changes during edit
 onWillAttachIME(callback: Callback<IMEClient> | undefined)
 ```
 
-Called when the input box is about to be bound to an input method. <!--Del--> Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-uicontext-c-sys.md#setkeyboardappearanceconfig-1) API of **UIContext** to set the keyboard style.<!--DelEnd--> From API version 22, the [setExtraConfig](arkts-arkui-imeclient-i.md#setextraconfig-1) method of [IMEClient](arkts-arkui-imeclient-i.md#imeclient) can be called to set input method extension information. After the input method is bound, it receives this extension information which can be used to implement custom functionality. **IMEClient** is valid only during the execution of **onWillAttachIME** and cannot be called asynchronously.
+Called when the input box is about to be bound to an input method. <!--Del--> Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-uicontext-c-sys.md#setkeyboardappearanceconfig-1) API of **UIContext** to set the keyboard style.<!--DelEnd--> From API version 22, the [setExtraConfig](arkts-arkui-imeclient-i.md#setextraconfig-1) method of [IMEClient](arkts-arkui-imeclient-i.md) can be called to set input method extension information. After the input method is bound, it receives this extension information which can be used to implement custom functionality. **IMEClient** is valid only during the execution of **onWillAttachIME** and cannot be called asynchronously.
 
 **Since:** 22
 
@@ -1336,7 +1336,7 @@ Called when text is about to be inserted.
 orphanCharOptimization(enabled: Optional<boolean>)
 ```
 
-Sets whether to enable orphan character optimization during text layout. If this attribute is not set, orphan character optimization is disabled by default. Orphan character optimization improves text layout by more efficiently handling isolated characters (the first character on the last line of a paragraph). When enabled, it adjusts line break points to avoid isolated characters whenever possible. This feature takes effect only when [wordBreak](TextAreaAttribute#wordBreak) is not **BREAK_ALL** and the [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md#textstyle) of the first [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md#textstyle) in the text to be laid out is **"zh-Hans"** or **"zh-Hant"**. **Since**: 26.0.0
+Sets whether to enable orphan character optimization during text layout. If this attribute is not set, orphan character optimization is disabled by default. Orphan character optimization improves text layout by more efficiently handling isolated characters (the first character on the last line of a paragraph). When enabled, it adjusts line break points to avoid isolated characters whenever possible. This feature takes effect only when [wordBreak](TextAreaAttribute#wordBreak) is not **BREAK_ALL** and the [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md) of the first [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md) in the text to be laid out is **"zh-Hans"** or **"zh-Hant"**. **Since**: 26.0.0
 
 **Since:** 26.0.0
 
@@ -1725,7 +1725,7 @@ Sets the indent of the first line text.
 textOverflow(value: TextOverflow)
 ```
 
-Sets the display mode when the text is too long. In inline style, the effect of truncating text according to [maxLines](TextAreaAttribute#maxLines(value: number)) only applies when **textOverflow** is set. Text is clipped at the transition between words. To clip text in the middle of a word, set [wordBreak](arkts-arkui-wordbreak-e.md#wordbreak) to **WordBreak.BREAK_ALL**. If **textOverflow** is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**, this attribute must be used with [maxLines](TextAreaAttribute#maxLines(value: number)) for the settings to take effect. **TextOverflow.None** produces the same effect as **TextOverflow.Clip**. > **NOTE** > > The **TextArea** component does not support the **TextOverflow.MARQUEE** mode. If this attribute is set to > **TextOverflow.MARQUEE**, **TextOverflow.Clip** is used instead.
+Sets the display mode when the text is too long. In inline style, the effect of truncating text according to [maxLines](TextAreaAttribute#maxLines(value: number)) only applies when **textOverflow** is set. Text is clipped at the transition between words. To clip text in the middle of a word, set [wordBreak](arkts-arkui-wordbreak-e.md) to **WordBreak.BREAK_ALL**. If **textOverflow** is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**, this attribute must be used with [maxLines](TextAreaAttribute#maxLines(value: number)) for the settings to take effect. **TextOverflow.None** produces the same effect as **TextOverflow.Clip**. > **NOTE** > > The **TextArea** component does not support the **TextOverflow.MARQUEE** mode. If this attribute is set to > **TextOverflow.MARQUEE**, **TextOverflow.Clip** is used instead.
 
 **Since:** 12
 

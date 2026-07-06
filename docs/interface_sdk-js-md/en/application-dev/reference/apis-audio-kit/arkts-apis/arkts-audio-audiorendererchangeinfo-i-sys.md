@@ -9,7 +9,7 @@ Describes the audio renderer change event.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## clientUid

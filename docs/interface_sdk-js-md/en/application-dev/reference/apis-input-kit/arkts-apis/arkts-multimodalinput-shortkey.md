@@ -5,7 +5,7 @@ The shortKey module provides APIs to set the delay for starting an ability using
 ## Modules to Import
 
 ```TypeScript
-import { shortKey } from '@ohos.multimodalInput.shortKey';
+import { shortKey } from '@kit.InputKit';
 ```
 
 ## Summary
@@ -14,7 +14,7 @@ import { shortKey } from '@ohos.multimodalInput.shortKey';
 
 | Name | Description |
 | --- | --- |
-| [shortKey](arkts-input-shortkey-sta-n.md) | The shortKey module provides APIs to set the delay for starting an ability using a shortcut key. For example, you can set the delay to 3 seconds so that a screenshot is taken when you press and hold the shortcut key for 3 seconds. |
+| [shortKey](arkts-input-shortkey-n.md) | The shortKey module provides APIs to set the delay for starting an ability using a shortcut key. For example, you can set the delay to 3 seconds so that a screenshot is taken when you press and hold the shortcut key for 3 seconds. |
 
 <!--Del-->
 ### Interfaces（系统接口）

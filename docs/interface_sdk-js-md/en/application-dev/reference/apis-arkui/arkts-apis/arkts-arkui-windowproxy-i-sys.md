@@ -9,7 +9,7 @@ The proxy of the UIExtension window.
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from '@ohos.arkui.uiExtension';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## hideNonSecureWindows

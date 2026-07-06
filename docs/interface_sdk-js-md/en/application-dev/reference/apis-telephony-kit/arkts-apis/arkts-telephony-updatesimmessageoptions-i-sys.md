@@ -11,7 +11,7 @@ Defines the updating SIM message options.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@ohos.telephony.sms';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## msgIndex

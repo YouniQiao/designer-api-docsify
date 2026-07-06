@@ -26,7 +26,7 @@ readonly action: Action
 readonly ctime: number
 ```
 
-创建任务的Unix时间戳（毫秒），由当前设备的系统生成。 说明：使用 [request.agent.search](arkts-basicservices-search-f.md#search-2)进行 查询时，该值需处于[after,before]区间内才可正常查询到任务id，before和after信息详见 [Filter](arkts-basicservices-filter-i.md#filter)。
+创建任务的Unix时间戳（毫秒），由当前设备的系统生成。 说明：使用 [request.agent.search](arkts-basicservices-search-f.md#search-2)进行 查询时，该值需处于[after,before]区间内才可正常查询到任务id，before和after信息详见 [Filter](arkts-basicservices-filter-i.md)。
 
 **类型：** number
 

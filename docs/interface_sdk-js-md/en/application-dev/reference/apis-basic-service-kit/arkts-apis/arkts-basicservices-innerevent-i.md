@@ -9,7 +9,7 @@ Describes an event to subscribe to or emit. The **EventPriority** settings do no
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from '@ohos.events.emitter';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## eventId

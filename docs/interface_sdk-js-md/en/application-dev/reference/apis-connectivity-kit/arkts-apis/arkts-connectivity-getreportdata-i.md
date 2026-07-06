@@ -9,7 +9,7 @@ Describe the GET_REPORT data is received from remote host.
 ## Modules to Import
 
 ```TypeScript
-import { hid } from '@ohos.bluetooth.hid';
+import { hid } from '@kit.ConnectivityKit';
 ```
 
 ## bufferSize

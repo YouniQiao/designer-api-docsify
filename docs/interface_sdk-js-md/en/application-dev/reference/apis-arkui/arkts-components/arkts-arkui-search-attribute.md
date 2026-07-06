@@ -1,6 +1,6 @@
 # Search properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following events are supported.
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following events are supported.
 
 **Inheritance/Implementation:** SearchAttribute extends [CommonMethod<SearchAttribute>](CommonMethod<SearchAttribute>)
 
@@ -80,7 +80,7 @@ Sets the caret style.
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-Sets whether to enable leading punctuation compression. > **NOTE** > > - Leading punctuation is not compressed by default. > > - For the list of punctuation marks that support compression, see the punctuation range at the beginning of a > line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md#paragraphstyle).
+Sets whether to enable leading punctuation compression. > **NOTE** > > - Leading punctuation is not compressed by default. > > - For the list of punctuation marks that support compression, see the punctuation range at the beginning of a > line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -299,7 +299,7 @@ Sets whether to enable preview text. The preview content is defined as a tempora
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition. When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default. This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md#copyoptions) is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
+Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition. When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default. This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md) is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
 
 **Since:** 22
 
@@ -512,7 +512,7 @@ Sets the letter spacing for a text style. If the value specified is a percentage
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Letter spacing.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | number \| string \| Resource | Yes | Letter spacing.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## lineHeight
 
@@ -578,7 +578,7 @@ Sets the maximum font size. For the string type, numeric string values with opti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Maximum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | number \| string \| Resource | Yes | Maximum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## maxLength
 
@@ -644,7 +644,7 @@ Sets the minimum font size. For the string type, numeric string values with opti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Minimum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | number \| string \| Resource | Yes | Minimum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## onChange
 
@@ -884,7 +884,7 @@ Called when the text selection changes or the caret position changes during edit
 onWillAttachIME(callback: Callback<IMEClient>)
 ```
 
-Called when the search box is about to be bound to an input method. <!--Del--> Before the search box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-uicontext-c-sys.md#setkeyboardappearanceconfig-1) API of **UIContext** to set the keyboard style.<!--DelEnd--> From API version 22, the [setExtraConfig](arkts-arkui-imeclient-i.md#setextraconfig-1) method of [IMEClient](arkts-arkui-imeclient-i.md#imeclient) can be called to set input method extension information. After the input method is bound, it receives this extension information, which can be used to implement custom functionality. **IMEClient** is valid only during the execution of **onWillAttachIME** and cannot be called asynchronously. > **NOTE** > > This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Called when the search box is about to be bound to an input method. <!--Del--> Before the search box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-uicontext-c-sys.md#setkeyboardappearanceconfig-1) API of **UIContext** to set the keyboard style.<!--DelEnd--> From API version 22, the [setExtraConfig](arkts-arkui-imeclient-i.md#setextraconfig-1) method of [IMEClient](arkts-arkui-imeclient-i.md) can be called to set input method extension information. After the input method is bound, it receives this extension information, which can be used to implement custom functionality. **IMEClient** is valid only during the execution of **onWillAttachIME** and cannot be called asynchronously. > **NOTE** > > This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 20
 

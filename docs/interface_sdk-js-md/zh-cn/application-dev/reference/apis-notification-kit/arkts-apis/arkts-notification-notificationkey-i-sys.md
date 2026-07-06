@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationSubscribe } from '@ohos.notificationSubscribe';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## id

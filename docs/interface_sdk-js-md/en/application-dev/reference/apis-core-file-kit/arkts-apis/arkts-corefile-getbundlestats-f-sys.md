@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@ohos.file.storageStatistics';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getBundleStats
@@ -28,7 +28,7 @@ Obtains the storage space of an application, in bytes. This API uses an asynchro
 | --- | --- | --- | --- |
 | packageName | string | Yes | Package name of the application. |
 | callback | AsyncCallback&lt;BundleStats&gt; | Yes | Callback used to return the application storage space obtained. |
-| index | number | No | Index of an application clone. The default value is **0**, which indicates the applicationitself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of[BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md#bundleresourceinfo) The index can be obtained by[getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleresourceinfo-f-sys.md#getbundleresourceinfo-2)<br>**Since:** 12 |
+| index | number | No | Index of an application clone. The default value is **0**, which indicates the applicationitself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of[BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md) The index can be obtained by[getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleresourceinfo-f-sys.md#getbundleresourceinfo-2)<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -94,7 +94,7 @@ Obtains the storage space of an application, in bytes. This API uses a promise t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | packageName | string | Yes | Package name of the application. |
-| index | number | No | Index of an application clone. The default value is **0**, which indicates the applicationitself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of[BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md#bundleresourceinfo) The index can be obtained by[getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleresourceinfo-f-sys.md#getbundleresourceinfo-2)<br>**Since:** 12 |
+| index | number | No | Index of an application clone. The default value is **0**, which indicates the applicationitself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of[BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md) The index can be obtained by[getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleresourceinfo-f-sys.md#getbundleresourceinfo-2)<br>**Since:** 12 |
 
 **Return value:**
 

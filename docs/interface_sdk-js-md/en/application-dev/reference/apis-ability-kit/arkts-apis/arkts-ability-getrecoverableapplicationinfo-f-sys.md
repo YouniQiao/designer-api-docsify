@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getRecoverableApplicationInfo
@@ -26,7 +26,7 @@ Obtains information about all preinstalled applications that can be restored. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)used to return the result. If the operation is successful, **err** is **null** and **data** is the informationabout all preinstalled applications. |
+| callback | AsyncCallback&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)used to return the result. If the operation is successful, **err** is **null** and **data** is the informationabout all preinstalled applications. |
 
 **Error codes:**
 

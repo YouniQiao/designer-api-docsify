@@ -24,7 +24,7 @@ close()
 constructor(value: CustomDialogControllerOptions)
 ```
 
-自定义弹窗的构造器。 > **说明：** > > 自定义弹窗的所有参数，不支持动态刷新，但可以通过设置customStyle为true，并在自定义组件上设置背景色 > [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1)、背景模糊 > [backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle-1) > 、[尺寸设置](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)等属性，通过属性绑定的状态变量来实现动态刷新的效果。 > > 在CustomDialogController作为全局变量以实现全局自定义弹窗的场景下，若对controller重新赋值，则无法通过其关闭之前的弹窗。建议在重新赋值前先关闭弹窗。 > > 在自定义弹窗内拉起另一个自定义弹窗时，不建议直接关闭拉起方。
+自定义弹窗的构造器。 > **说明：** > > 自定义弹窗的所有参数，不支持动态刷新，但可以通过设置customStyle为true，并在自定义组件上设置背景色 > [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1)、背景模糊 > [backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle-1) > 、[尺寸设置](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)等属性，通过属性绑定的状态变量来实现动态刷新的效果。 > > 在CustomDialogController作为全局变量以实现全局自定义弹窗的场景下，若对controller重新赋值，则无法通过其关闭之前的弹窗。建议在重新赋值前先关闭弹窗。 > > 在自定义弹窗内拉起另一个自定义弹窗时，不建议直接关闭拉起方。
 
 **起始版本：** 7
 

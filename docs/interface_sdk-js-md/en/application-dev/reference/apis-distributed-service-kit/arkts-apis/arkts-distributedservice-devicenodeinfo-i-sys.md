@@ -11,7 +11,7 @@ Represents the device node information, including the networkId, device name, de
 ## Modules to Import
 
 ```TypeScript
-import { conversation } from '@ohos.distributedSoftBus.conversation';
+import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## deviceName

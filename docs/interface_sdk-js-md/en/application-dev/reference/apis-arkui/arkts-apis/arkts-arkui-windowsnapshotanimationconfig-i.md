@@ -9,7 +9,7 @@ Configuration for window snapshot animation.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## delay

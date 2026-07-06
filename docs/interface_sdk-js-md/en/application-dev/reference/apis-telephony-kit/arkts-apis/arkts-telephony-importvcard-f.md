@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vcard } from '@ohos.telephony.vcard';
+import { vcard } from '@kit.TelephonyKit';
 ```
 
 ## importVCard

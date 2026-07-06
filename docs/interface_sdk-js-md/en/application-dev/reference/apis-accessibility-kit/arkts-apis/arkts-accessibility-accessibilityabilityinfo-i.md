@@ -9,7 +9,7 @@ Provides information about an accessibility application.
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@ohos.accessibility';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## abilityTypes

@@ -6,14 +6,14 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 
 **Deprecated since:** 9
 
-**Substitutes:** [LRUCache](arkts-arkts-lrucache-c.md#lrucache)
+**Substitutes:** [LRUCache](arkts-arkts-lrucache-c.md)
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

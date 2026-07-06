@@ -9,7 +9,7 @@ Provides APIs for accessing application resources and system resources. > **NOTE
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from '@ohos.resourceManager';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## addResource

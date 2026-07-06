@@ -1,8 +1,8 @@
 # RotationGestureEvent
 
-Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureevent). This object can be passed as the **event** parameter of [onGestureJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturejudgebegin-1).
+Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of [onGestureJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturejudgebegin-1).
 
-**Inheritance/Implementation:** RotationGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureevent)
+**Inheritance/Implementation:** RotationGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
 
 **Since:** 11
 

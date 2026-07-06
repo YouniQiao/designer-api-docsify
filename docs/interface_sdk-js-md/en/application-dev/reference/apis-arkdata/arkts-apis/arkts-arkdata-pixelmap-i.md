@@ -9,7 +9,7 @@ Represents data of the pixel map type defined by the system.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@ohos.data.uniformDataStruct';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## details
@@ -50,7 +50,7 @@ Binary data of the pixel map.
 readonly uniformDataType: 'openharmony.pixel-map'
 ```
 
-Uniform data type, which has a fixed value of **openharmony.pixel-map**. For details, see [UniformDataType](arkts-arkdata-uniformdatatype-e.md#uniformdatatype).
+Uniform data type, which has a fixed value of **openharmony.pixel-map**. For details, see [UniformDataType](arkts-arkdata-uniformdatatype-e.md).
 
 **Type:** 'openharmony.pixel-map'
 

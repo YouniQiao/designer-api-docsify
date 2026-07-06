@@ -5,7 +5,7 @@ Defines a vertical domain panel manager.
 ## Modules to Import
 
 ```TypeScript
-import { verticalPanelManager } from '@ohos.app.ability.verticalPanelManager';
+import { verticalPanelManager } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -14,7 +14,7 @@ import { verticalPanelManager } from '@ohos.app.ability.verticalPanelManager';
 
 | Name | Description |
 | --- | --- |
-| [verticalPanelManager](arkts-ability-verticalpanelmanager-sta-n.md) | Defines a vertical domain panel manager. |
+| [verticalPanelManager](arkts-ability-verticalpanelmanager-n.md) | Defines a vertical domain panel manager. |
 
 <!--Del-->
 ### Types（系统接口）

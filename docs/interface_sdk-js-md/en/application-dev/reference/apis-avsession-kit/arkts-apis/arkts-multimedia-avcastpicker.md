@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AVCastPicker } from '@ohos.multimedia.avCastPicker';
+import { AVCastPicker } from '@kit.AVSessionKit';
 ```
 
 ## Summary

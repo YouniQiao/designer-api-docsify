@@ -9,7 +9,7 @@ Define the certificate content.
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from '@ohos.net.networkSecurity';
+import { networkSecurity } from '@kit.NetworkKit';
 ```
 
 ## data

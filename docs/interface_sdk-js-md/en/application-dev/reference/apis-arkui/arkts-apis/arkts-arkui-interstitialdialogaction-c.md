@@ -9,7 +9,7 @@ Declare dialog action.
 ## Modules to Import
 
 ```TypeScript
-import { IconStyle, TitlePosition, BottomOffset, InterstitialDialogAction } from '@ohos.atomicservice.InterstitialDialogAction';
+import { IconStyle, TitlePosition, BottomOffset, InterstitialDialogAction } from '@kit.ArkUI';
 ```
 
 ## closeDialog

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { businessAbilityRouter } from '@ohos.app.businessAbilityRouter';
+import { businessAbilityRouter } from '@kit.AbilityKit';
 ```
 
 ## queryBusinessAbilityInfo

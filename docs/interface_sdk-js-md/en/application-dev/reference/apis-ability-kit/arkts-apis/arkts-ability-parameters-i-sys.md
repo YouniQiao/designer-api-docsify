@@ -11,7 +11,7 @@ Describes the extended parameter information.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@ohos.bundle.installer';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## key

@@ -1,8 +1,8 @@
 # ControlCenter
 
-ControlCenter inherits from [ControlCenterQuery](arkts-camera-controlcenterquery-i.md#controlcenterquery). It is used to enable the camera controller.
+ControlCenter inherits from [ControlCenterQuery](arkts-camera-controlcenterquery-i.md). It is used to enable the camera controller.
 
-**Inheritance/Implementation:** ControlCenter extends [ControlCenterQuery](arkts-camera-controlcenterquery-i.md#controlcenterquery)
+**Inheritance/Implementation:** ControlCenter extends [ControlCenterQuery](arkts-camera-controlcenterquery-i.md)
 
 **Since:** 20
 
@@ -11,7 +11,7 @@ ControlCenter inherits from [ControlCenterQuery](arkts-camera-controlcenterquery
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## enableControlCenter

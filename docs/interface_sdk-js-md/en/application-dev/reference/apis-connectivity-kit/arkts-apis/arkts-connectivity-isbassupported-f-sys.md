@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bas } from '@ohos.bluetooth.bas';
+import { bas } from '@kit.ConnectivityKit';
 ```
 
 ## isBasSupported

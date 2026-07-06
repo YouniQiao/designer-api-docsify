@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { autoStartupManager } from '@ohos.app.ability.autoStartupManager';
+import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
 ## cancelApplicationAutoStartup

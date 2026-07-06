@@ -11,7 +11,7 @@ Enumerates USB port roles.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@ohos.usbManager';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## currentDataRole

@@ -9,7 +9,7 @@ Describes the application bundle information.
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.enterprise.bundleManager';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## appIndex

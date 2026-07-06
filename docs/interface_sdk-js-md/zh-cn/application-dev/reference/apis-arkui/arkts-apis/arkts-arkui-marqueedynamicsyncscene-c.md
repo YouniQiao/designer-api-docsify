@@ -2,7 +2,7 @@
 
 Represents a dynamic synchronization scene of Marquee.
 
-**继承/实现关系：** MarqueeDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-dynamicsyncscene-c.md#dynamicsyncscene)
+**继承/实现关系：** MarqueeDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-dynamicsyncscene-c.md)
 
 **起始版本：** 14
 

@@ -1,6 +1,6 @@
 # @ohos.util
 
-The util module provides common utility functions, such as [TextEncoder](arkts-arkts-textencoder-c.md#textencoder) and [TextDecoder](arkts-arkts-textdecoderoptions-i.md#textdecoderoptions) for string encoding and decoding, [RationalNumber<sup>8+</sup>](arkts-arkts-rationalnumber-c.md#rationalnumber) for rational number operations, [LRUCache<sup>9+</sup>](arkts-arkts-lrucache-c.md#lrucache) for cache management, [ScopeHelper<sup>9+</sup>](arkts-arkts-scopehelper-c.md#scopehelper) for range determination, [Base64Helper<sup>9+</sup>](arkts-arkts-base64helper-c.md#base64helper) for Base64 encoding and decoding, [types<sup>8+</sup>](arkts-arkts-types-c.md#types) for built-in object type check, and [Aspect<sup>11+</sup>](arkts-arkts-aspect-c.md#aspect) for instrumentation and replacement on methods.
+The util module provides common utility functions, such as [TextEncoder](arkts-arkts-textencoder-c.md) and [TextDecoder](arkts-arkts-textdecoderoptions-i.md) for string encoding and decoding, [RationalNumber<sup>8+</sup>](arkts-arkts-rationalnumber-c.md) for rational number operations, [LRUCache<sup>9+</sup>](arkts-arkts-lrucache-c.md) for cache management, [ScopeHelper<sup>9+</sup>](arkts-arkts-scopehelper-c.md) for range determination, [Base64Helper<sup>9+</sup>](arkts-arkts-base64helper-c.md) for Base64 encoding and decoding, [types<sup>8+</sup>](arkts-arkts-types-c.md) for built-in object type check, and [Aspect<sup>11+</sup>](arkts-arkts-aspect-c.md) for instrumentation and replacement on methods.
 
 **Since:** 7
 
@@ -9,7 +9,7 @@ The util module provides common utility functions, such as [TextEncoder](arkts-a
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## Summary

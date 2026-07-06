@@ -1,8 +1,8 @@
 # GravityResponse
 
-Describes the gravity sensor data. It extends from [Response](arkts-sensorservice-response-i.md#response).
+Describes the gravity sensor data. It extends from [Response](arkts-sensorservice-response-i.md).
 
-**Inheritance/Implementation:** GravityResponse extends [Response](arkts-sensorservice-response-i.md#response)
+**Inheritance/Implementation:** GravityResponse extends [Response](arkts-sensorservice-response-i.md)
 
 **Since:** 8
 
@@ -11,7 +11,7 @@ Describes the gravity sensor data. It extends from [Response](arkts-sensorservic
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@ohos.sensor';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## x

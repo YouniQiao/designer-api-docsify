@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Environment } from '@ohos.file.environment';
+import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## getUserDownloadDir
@@ -17,7 +17,7 @@ Obtains the sandbox path of the pre-authorized **Download** directory.
 **Since:** 11
 
 **Required permissions:** 
-- API version 11 - 11: ohos.permission.READ_WRITE_DOWNLOAD_DIRECTORY
+- API version 11: ohos.permission.READ_WRITE_DOWNLOAD_DIRECTORY
 
 **System capability:** SystemCapability.FileManagement.File.Environment.FolderObtain
 
@@ -31,7 +31,7 @@ Obtains the sandbox path of the pre-authorized **Download** directory.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken.<br>**Applicable version:** 11 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken.<br>**Applicable version:** 11 and later |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 13900042 | Unknown error. |
 

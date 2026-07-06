@@ -11,7 +11,7 @@ Path information for file migration.
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@ohos.file.backup';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## destPath

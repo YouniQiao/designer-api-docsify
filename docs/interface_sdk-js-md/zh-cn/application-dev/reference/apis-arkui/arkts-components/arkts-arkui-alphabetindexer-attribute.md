@@ -1,6 +1,6 @@
 # AlphabetIndexer属性/事件
 
-[width](arkts-arkui-commonmethod-c.md#width-1)属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。 [padding](arkts-arkui-commonmethod-c.md#padding-1)属性默认为4vp。 文本最大的字体缩放倍数[maxFontScale](TextAttribute#maxFontScale)和最小的字体缩放倍数[minFontScale](TextAttribute#minFontScale) 皆为1，不跟随系统字体大小调节变化。 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下事件：
+[width](arkts-arkui-commonmethod-c.md#width-1)属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。 [padding](arkts-arkui-commonmethod-c.md#padding-1)属性默认为4vp。 文本最大的字体缩放倍数[maxFontScale](TextAttribute#maxFontScale)和最小的字体缩放倍数[minFontScale](TextAttribute#minFontScale) 皆为1，不跟随系统字体大小调节变化。 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下事件：
 
 **继承/实现关系：** AlphabetIndexerAttribute extends [CommonMethod<AlphabetIndexerAttribute>](CommonMethod<AlphabetIndexerAttribute>)
 
@@ -489,7 +489,7 @@ selected(index: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 选中项索引值。<br/>取值范围：[0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md#alphabetindexeroptions).length-1]<br/>默认值：0 |
+| index | number | 是 | 选中项索引值。<br/>取值范围：[0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md).length-1]<br/>默认值：0 |
 
 ## selectedBackgroundColor
 

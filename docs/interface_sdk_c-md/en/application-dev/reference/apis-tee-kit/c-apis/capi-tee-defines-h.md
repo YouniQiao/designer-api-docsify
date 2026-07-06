@@ -360,7 +360,7 @@ Enumerates the result codes used in the TEEKit APIs.
 | TEE_ERROR_RETRY_OPEN_SESSION            = 0xFFFF920E | open_session fail becauce of race with close_session. |
 | TEE_ERROR_TA_CTRL_FILE_LOAD_FAIL        = 0xFFFF920F | TA control file load fail. |
 | TEE_ERROR_TA_CTRL_FILE_VERIFY_FAIL      = 0xFFFF9210 | TA control file verify fail. |
-| TEE_ERROR_TA_VER_BELOW_CONTROL_VER      = 0xFFFF9211 | TA version is below the verison in control file. |
+| TEE_ERROR_TA_VER_BELOW_CONTROL_VER      = 0xFFFF9211 | TA version is below the version in control file. |
 | TEE_DSTB_LOCAL_CERT_VALIDITY_ERROR      = 0xFFFF9212 | Local dstb cert chain validity check failed. |
 | TEE_DSTB_REMOTE_CERT_VALIDITY_ERROR     = 0xFFFF9213 | Remote dstb cert chain validity check failed. |
 

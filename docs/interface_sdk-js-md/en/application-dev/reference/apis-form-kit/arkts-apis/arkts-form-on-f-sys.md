@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formObserver } from '@ohos.app.form.formObserver';
+import { formObserver } from '@kit.FormKit';
 ```
 
 ## on('formAdd')

@@ -11,7 +11,7 @@ Provides the SecurityEvent type, including the event id, version info, report co
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@ohos.security.securityGuard';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## content

@@ -2,7 +2,7 @@
 
 The **StaticSubscriberExtensionContext** module, inherited from **StaticSubscriberExtensionAbility**, provides context for StaticSubscriberExtensionAbilities. You can use the APIs of this module to start StaticSubscriberExtensionAbilities.
 
-**Inheritance/Implementation:** StaticSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext)
+**Inheritance/Implementation:** StaticSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 10
 
@@ -13,7 +13,7 @@ The **StaticSubscriberExtensionContext** module, inherited from **StaticSubscrib
 ## Modules to Import
 
 ```TypeScript
-import { StaticSubscriberExtensionContext } from '@ohos.application.StaticSubscriberExtensionContext';
+import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
 ```
 
 ## startAbility

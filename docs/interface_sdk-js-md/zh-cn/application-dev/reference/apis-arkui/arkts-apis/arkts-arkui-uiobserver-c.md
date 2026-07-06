@@ -937,7 +937,7 @@ on(type: 'densityUpdate', callback: Callback<observer.DensityInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'densityUpdate' | 是 | 监听事件，固定为'densityUpdate'，即屏幕像素密度变化。 |
-| callback | Callback&lt;observer.DensityInfo&gt; | 是 | 回调函数。携带[DensityInfo](arkts-arkui-densityinfo-c.md#densityinfo)，返回变化后的屏幕像素密度。 |
+| callback | Callback&lt;observer.DensityInfo&gt; | 是 | 回调函数。携带[DensityInfo](arkts-arkui-densityinfo-c.md)，返回变化后的屏幕像素密度。 |
 
 ## on('willDraw')
 
@@ -1152,7 +1152,7 @@ on(type: 'beforePanStart', callback: PanListenerCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'beforePanStart' | 是 | 监听事件，固定为'beforePanStart'，用于监听Pan手势[onActionStart](../arkts-components/arkts-arkui-pangestureinterface-i.md#onactionstart-1)事件执行前的指令下发情况，所注册回调将于Pan手势[onActionStart](../arkts-components/arkts-arkui-pangestureinterface-i.md#onactionstart-1)事件触发前触发。 |
-| callback | PanListenerCallback | 是 | 回调函数。可以获得Pan手势事件的[GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md#gestureevent)，[GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md#gesturerecognizer)和组件的[FrameNode](arkts-arkui-framenode-c.md#framenode)。 |
+| callback | PanListenerCallback | 是 | 回调函数。可以获得Pan手势事件的[GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md)，[GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 ## on('beforePanEnd')
 
@@ -1175,7 +1175,7 @@ on(type: 'beforePanEnd', callback: PanListenerCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'beforePanEnd' | 是 | 监听事件，固定为'beforePanEnd'，用于监听Pan手势[onActionEnd](../arkts-components/arkts-arkui-pangestureinterface-i.md#onactionend-1)事件执行前的指令下发情况，所注册回调将于Pan手势[onActionEnd](../arkts-components/arkts-arkui-pangestureinterface-i.md#onactionend-1)事件触发前触发。 |
-| callback | PanListenerCallback | 是 | 回调函数。可以获得Pan手势事件的[GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md#gestureevent)，[GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md#gesturerecognizer)和组件的[FrameNode](arkts-arkui-framenode-c.md#framenode)。 |
+| callback | PanListenerCallback | 是 | 回调函数。可以获得Pan手势事件的[GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md)，[GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 ## on('afterPanStart')
 
@@ -1198,7 +1198,7 @@ on(type: 'afterPanStart', callback: PanListenerCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'afterPanStart' | 是 | 监听事件，固定为'afterPanStart'，用于监听Pan手势[onActionStart](../arkts-components/arkts-arkui-pangestureinterface-i.md#onactionstart-1)事件执行后的指令下发情况，所注册回调将于Pan手势[onActionStart](../arkts-components/arkts-arkui-pangestureinterface-i.md#onactionstart-1)事件触发后触发。 |
-| callback | PanListenerCallback | 是 | 回调函数。可以获得Pan手势事件的[GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md#gestureevent)，[GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md#gesturerecognizer)和组件的[FrameNode](arkts-arkui-framenode-c.md#framenode)。 |
+| callback | PanListenerCallback | 是 | 回调函数。可以获得Pan手势事件的[GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md)，[GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 ## on('afterPanEnd')
 
@@ -1221,7 +1221,7 @@ on(type: 'afterPanEnd', callback: PanListenerCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'afterPanEnd' | 是 | 监听事件，固定为'afterPanEnd'，用于监听Pan手势[onActionEnd](../arkts-components/arkts-arkui-pangestureinterface-i.md#onactionend-1)事件执行后的指令下发情况，所注册回调将于Pan手势[onActionEnd](../arkts-components/arkts-arkui-pangestureinterface-i.md#onactionend-1)事件触发后触发。 |
-| callback | PanListenerCallback | 是 | 回调函数。可以获得Pan手势事件的[GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md#gestureevent)，[GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md#gesturerecognizer)和组件的[FrameNode](arkts-arkui-framenode-c.md#framenode)。 |
+| callback | PanListenerCallback | 是 | 回调函数。可以获得Pan手势事件的[GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md)，[GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 ## on('tabContentUpdate')
 
@@ -1362,7 +1362,7 @@ on(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback: NodeRenderStat
 | --- | --- | --- | --- |
 | type | 'nodeRenderState' | 是 | 监听事件，固定为'nodeRenderState'，用于监听节点渲染状态发生改变。 |
 | nodeIdentity | NodeIdentity | 是 | 节点标识。 |
-| callback | NodeRenderStateChangeCallback | 是 | 回调函数。可以获得节点渲染状态改变事件的[NodeRenderState](arkts-arkui-noderenderstate-e.md#noderenderstate)和组件的[FrameNode](arkts-arkui-framenode-c.md#framenode)。 |
+| callback | NodeRenderStateChangeCallback | 是 | 回调函数。可以获得节点渲染状态改变事件的[NodeRenderState](arkts-arkui-noderenderstate-e.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 **错误码：**
 

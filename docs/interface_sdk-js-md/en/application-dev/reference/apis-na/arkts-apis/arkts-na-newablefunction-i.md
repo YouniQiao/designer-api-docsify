@@ -1,6 +1,6 @@
 # NewableFunction
 
-**Inheritance/Implementation:** NewableFunction extends [Function](arkts-na-function-i.md#function)
+**Inheritance/Implementation:** NewableFunction extends [Function](arkts-na-function-i.md)
 
 ## apply
 

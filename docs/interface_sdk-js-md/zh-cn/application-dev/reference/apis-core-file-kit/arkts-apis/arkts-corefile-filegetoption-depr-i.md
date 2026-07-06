@@ -62,7 +62,7 @@ recursive?: boolean
 success?: (file: FileResponse) => void
 ```
 
-接口调用成功的回调函数。 返回[FileResponse](arkts-corefile-fileresponse-depr-i.md#fileresponse)。
+接口调用成功的回调函数。 返回[FileResponse](arkts-corefile-fileresponse-depr-i.md)。
 
 **类型：** (file: FileResponse) => void
 

@@ -9,7 +9,7 @@ Describes a region, which is used to describe the region where the shape can be 
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor

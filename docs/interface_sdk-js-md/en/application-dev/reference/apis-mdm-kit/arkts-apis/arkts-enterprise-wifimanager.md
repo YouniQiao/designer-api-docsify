@@ -1,6 +1,6 @@
 # @ohos.enterprise.wifiManager
 
-The **wifiManager** module provides Wi-Fi management capabilities for enterprise devices, including obtaining the Wi- Fi status. > **NOTE** > > The APIs of this module can be used only in the stage model. > > The APIs of this module can be called only by a device administrator application that is enabled. For details, see > [MDM Kit Development](../../../../mdm/mdm-kit-guide.md). > > The global restriction policies are provided by **restrictions**. To disable Wi-Fi globally, see > [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md#restrictions).
+The **wifiManager** module provides Wi-Fi management capabilities for enterprise devices, including obtaining the Wi- Fi status. > **NOTE** > > The APIs of this module can be used only in the stage model. > > The APIs of this module can be called only by a device administrator application that is enabled. For details, see > [MDM Kit Development](../../../../mdm/mdm-kit-guide.md). > > The global restriction policies are provided by **restrictions**. To disable Wi-Fi globally, see > [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md).
 
 **Since:** 10
 
@@ -9,7 +9,7 @@ The **wifiManager** module provides Wi-Fi management capabilities for enterprise
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@ohos.enterprise.wifiManager';
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## Summary

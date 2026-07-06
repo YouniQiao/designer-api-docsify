@@ -9,7 +9,7 @@ This module provides tools for processing rectangles. Use scenarios: 1. Quickly 
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## centerX

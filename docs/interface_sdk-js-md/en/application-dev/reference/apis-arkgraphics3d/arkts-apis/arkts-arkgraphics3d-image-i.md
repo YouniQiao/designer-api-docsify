@@ -2,7 +2,7 @@
 
 Image resource.
 
-**Inheritance/Implementation:** Image extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md#sceneresource)
+**Inheritance/Implementation:** Image extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md)
 
 **Since:** 12
 

@@ -11,7 +11,7 @@ Provides APIs to obtain and set the beauty effect.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getSupportedBeautyRange

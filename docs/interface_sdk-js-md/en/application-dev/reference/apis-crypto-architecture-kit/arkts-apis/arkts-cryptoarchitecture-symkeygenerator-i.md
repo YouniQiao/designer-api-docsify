@@ -11,7 +11,7 @@ Provides APIs for using the **SymKeyGenerator**. Before using the APIs of this c
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## convertKey
@@ -43,7 +43,7 @@ Converts specified data into a symmetric key. This API uses an asynchronous call
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -103,7 +103,7 @@ Converts specified data into a symmetric key. This API uses a promise to return 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -165,7 +165,7 @@ Converts specified data into a symmetric key. This API can be used only after a 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -214,7 +214,7 @@ Generates a random key using this symmetric key generator. This API uses an asyn
 | Error Code ID | Error Message |
 | --- | --- |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -255,7 +255,7 @@ Generates a random key using this symmetric key generator. This API uses a promi
 | Error Code ID | Error Message |
 | --- | --- |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -298,7 +298,7 @@ Generates a random key using this symmetric key generator. This API returns the 
 | Error Code ID | Error Message |
 | --- | --- |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 

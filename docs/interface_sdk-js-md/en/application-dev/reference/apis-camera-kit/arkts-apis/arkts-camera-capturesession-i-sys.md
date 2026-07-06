@@ -1,19 +1,19 @@
 # CaptureSession
 
-Implements a capture session, which saves all [CameraInput](arkts-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera and requests the camera to complete shooting or video recording.
+Implements a capture session, which saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to complete shooting or video recording.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [VideoSession](arkts-camera-videosession-i.md#videosession)
+**Substitutes:** [VideoSession](arkts-camera-videosession-i.md)
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getBeauty
@@ -168,7 +168,7 @@ function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<c
 setBeauty(type: BeautyType, value: number): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-beautytype-e-sys.md#beautytype) obtained through [getSupportedBeautyTypes](arkts-camera-capturesession-i-sys.md#getsupportedbeautytypes-1) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-beautytype-e-sys.md) obtained through [getSupportedBeautyTypes](arkts-camera-capturesession-i-sys.md#getsupportedbeautytypes-1) are disabled.
 
 **Since:** 10
 

@@ -9,7 +9,7 @@ Declare struct PopoverDialog
 ## Modules to Import
 
 ```TypeScript
-import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, PopoverDialog, LoadingDialog, CustomContentDialog, ConfirmDialog } from '@ohos.arkui.advanced.Dialog';
+import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, PopoverDialog, LoadingDialog, CustomContentDialog, ConfirmDialog } from '@kit.ArkUI';
 ```
 
 ## popover
@@ -44,7 +44,7 @@ Sets the targetBuilder content.
 
 **Since:** 14
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -9,7 +9,7 @@ Lattice object. which is used to divide an image by lattice. > **NOTE** > > - Th
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createImageLattice

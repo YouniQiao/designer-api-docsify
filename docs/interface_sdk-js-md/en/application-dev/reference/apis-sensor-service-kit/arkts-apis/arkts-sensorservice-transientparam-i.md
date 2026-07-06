@@ -9,7 +9,7 @@ Defines the parameters for transient vibration.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@ohos.vibrator';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## frequency

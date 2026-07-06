@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { freeInstall } from '@ohos.bundle.freeInstall';
+import { freeInstall } from '@kit.AbilityKit';
 ```
 
 ## getDispatchInfo
@@ -26,7 +26,7 @@ Obtains the dispatch information. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DispatchInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return theresult. If the operation is successful, **err** is **null**, and **data** is the[DispatchInfo](arkts-ability-dispatchinfo-i-sys.md#dispatchinfo) object obtained. otherwise, **err** is an errorobject. |
+| callback | AsyncCallback&lt;DispatchInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null**, and **data** is the[DispatchInfo](arkts-ability-dispatchinfo-i-sys.md) object obtained. otherwise, **err** is an errorobject. |
 
 **Error codes:**
 
@@ -57,7 +57,7 @@ Obtains the dispatch information. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DispatchInfo&gt; | Promise used to return the[DispatchInfo](arkts-ability-dispatchinfo-i-sys.md#dispatchinfo) object obtained. |
+| Promise&lt;DispatchInfo&gt; | Promise used to return the[DispatchInfo](arkts-ability-dispatchinfo-i-sys.md) object obtained. |
 
 **Error codes:**
 

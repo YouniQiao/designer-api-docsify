@@ -6,7 +6,7 @@ typedef struct ContentEmbed_ExtensionProxy ContentEmbed_ExtensionProxy
 
 ## Overview
 
-Define the ContentEmbed_ExtensionProxy structure type.Provides methods for Content Embed Kit.
+Declares the ContentEmbed_ExtensionProxy structure. Points to the program object (client-side OE object forshort) for embedding and editing the client-side encapsulated and encapsulation documents of the OE.
 
 **Since**: 24
 

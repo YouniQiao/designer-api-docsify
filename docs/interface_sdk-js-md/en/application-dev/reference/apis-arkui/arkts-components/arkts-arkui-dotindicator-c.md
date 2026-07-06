@@ -1,6 +1,6 @@
 # DotIndicator
 
-A constructor used to create a **DotIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md#indicator).
+A constructor used to create a **DotIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
 
 **Inheritance/Implementation:** DotIndicator extends [Indicator<DotIndicator>](Indicator<DotIndicator>)
 

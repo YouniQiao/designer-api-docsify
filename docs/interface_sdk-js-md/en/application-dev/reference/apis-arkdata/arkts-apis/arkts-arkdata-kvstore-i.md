@@ -108,7 +108,7 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-n.md#constants). |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Example**
@@ -158,7 +158,7 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-n.md#constants). |
 
 **Return value:**
 
@@ -570,8 +570,8 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
-| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array,number, string, or boolean. A value of the Uint8Array or string type cannot exceed[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-n.md#constants). |
+| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array,number, string, or boolean. A value of the Uint8Array or string type cannot exceed[MAX_VALUE_LENGTH](arkts-arkdata-constants-n.md#constants). |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Example**
@@ -614,8 +614,8 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
-| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array,number, string, or boolean. A value of the Uint8Array or string type cannot exceed[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-n.md#constants). |
+| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array,number, string, or boolean. A value of the Uint8Array or string type cannot exceed[MAX_VALUE_LENGTH](arkts-arkdata-constants-n.md#constants). |
 
 **Return value:**
 

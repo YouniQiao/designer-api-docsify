@@ -9,7 +9,7 @@ Represents the USB device information.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@ohos.usbManager';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## busNum

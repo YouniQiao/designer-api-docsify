@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AgentExtensionAbility } from '@ohos.app.agent.AgentExtensionAbility';
+import { AgentExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

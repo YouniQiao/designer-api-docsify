@@ -6,7 +6,7 @@ A result set is a set of results returned after the relational database (RDB) qu
 
 **Deprecated since:** 9
 
-**Substitutes:** [relationalStore:relationalStore](arkts-data-relationalstore.md#relationalstore)
+**Substitutes:** [relationalStore:relationalStore](arkts-data-relationalstore.md)
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 

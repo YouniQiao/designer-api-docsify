@@ -2,7 +2,7 @@
 
 Unlit material resource
 
-**Inheritance/Implementation:** UnlitMaterial extends [Material](arkts-arkgraphics3d-material-i.md#material)
+**Inheritance/Implementation:** UnlitMaterial extends [Material](arkts-arkgraphics3d-material-i.md)
 
 **Since:** 23
 

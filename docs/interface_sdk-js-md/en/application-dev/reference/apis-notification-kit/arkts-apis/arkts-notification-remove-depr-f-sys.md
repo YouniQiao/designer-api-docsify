@@ -94,7 +94,7 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCode | string | Yes | Unique notification ID. It is the value of **hashCode**in the [NotificationRequest](arkts-notification-notificationrequest-i.md#notificationrequest) object of[SubscribeCallbackData](arkts-notification-subscribecallbackdata-i-sys.md#subscribecallbackdata) used in the[onConsume](arkts-notification-notificationsubscriber-i-sys.md#onconsume) callback. |
+| hashCode | string | Yes | Unique notification ID. It is the value of **hashCode**in the [NotificationRequest](arkts-notification-notificationrequest-i.md) object of[SubscribeCallbackData](arkts-notification-subscribecallbackdata-i-sys.md) used in the[onConsume](arkts-notification-notificationsubscriber-i-sys.md#onconsume) callback. |
 | reason | RemoveReason | Yes | Reason for deleting a notification. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
 

@@ -9,7 +9,7 @@ Enumerates the lockout status of an identity authentication type. This API is us
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@ohos.userIAM.userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## isLocked

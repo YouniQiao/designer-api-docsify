@@ -1,6 +1,6 @@
 # Timeout
 
-Defines the timeout configuration of a task. The task waiting duration is not counted. For details about the waiting reasons, see [WaitingReason<sup>20+</sup>](arkts-basicservices-waitingreason-e.md#waitingreason) .
+Defines the timeout configuration of a task. The task waiting duration is not counted. For details about the waiting reasons, see [WaitingReason<sup>20+</sup>](arkts-basicservices-waitingreason-e.md) .
 
 **Since:** 20
 
@@ -9,7 +9,7 @@ Defines the timeout configuration of a task. The task waiting duration is not co
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@ohos.request';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## connectionTimeout

@@ -6,14 +6,14 @@ AudioRecorder is a class for audio recording management. It provides APIs to rec
 
 **Deprecated since:** 9
 
-**Substitutes:** [media:media](arkts-multimedia-media.md#media)
+**Substitutes:** [media:media](arkts-multimedia-media.md)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
@@ -244,7 +244,7 @@ Prepares for recording.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied.<br>**Applicable version:** 12 |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied.<br>**Applicable version:** 12 and later |
 
 ## release
 

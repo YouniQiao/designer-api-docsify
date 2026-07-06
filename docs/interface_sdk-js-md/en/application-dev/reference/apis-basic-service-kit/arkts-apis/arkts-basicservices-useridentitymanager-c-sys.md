@@ -11,7 +11,7 @@ Provides APIs for user IDM.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@ohos.account.osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addCredential
@@ -45,17 +45,17 @@ Adds credential information, including the credential type, subtype, and token (
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 |
-| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 |
-| 12300090 | Cross-device capability not supported.<br>**Applicable version:** 23 |
-| 12300091 | Cross-device communication failed.<br>**Applicable version:** 23 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
+| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
+| 12300090 | Cross-device capability not supported.<br>**Applicable version:** 23 and later |
+| 12300091 | Cross-device communication failed.<br>**Applicable version:** 23 and later |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
 | [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
 | [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
 | [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation timeout. |
 | [12300115](../../apis-basic-services-kit/errorcode-account.md#12300115-user-authentication-passwords-reached-the-limit) | The number of credentials reaches the upper limit. |
-| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 |
+| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -168,10 +168,10 @@ Closes this session to terminate IDM.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types.<br>**Applicable version:** 12 |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally.<br>**Applicable version:** 12 |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 |
-| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types.<br>**Applicable version:** 12 and later |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally.<br>**Applicable version:** 12 and later |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -350,7 +350,7 @@ Obtains authentication information. This API uses an asynchronous callback to re
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 |
+| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 **Example**
 
@@ -404,7 +404,7 @@ Obtains authentication information of the specified type. This API uses an async
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 |
+| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 **Example**
 
@@ -464,7 +464,7 @@ Obtains authentication information. This API uses a promise to return the result
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 |
+| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 **Example**
 
@@ -522,7 +522,7 @@ Obtains authentication information. This API uses a promise to return the result
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 |
+| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 **Example**
 
@@ -585,7 +585,7 @@ Obtains the ID of the enrolled credential based on the credential type and accou
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 |
+| 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
 | [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
 
@@ -822,8 +822,8 @@ Opens a session. This API returns a challenge value, which can be used to determ
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 |
-| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -876,13 +876,13 @@ Updates credential information. This API uses an asynchronous callback to return
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
 | [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
 | [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
 | [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
-| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 |
+| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
 
 **Example**
 

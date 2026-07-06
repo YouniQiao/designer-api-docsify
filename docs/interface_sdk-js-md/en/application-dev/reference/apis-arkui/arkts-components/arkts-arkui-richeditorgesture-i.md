@@ -12,7 +12,7 @@ User gesture event.
 onClick?: Callback<ClickEvent>
 ```
 
-Triggered when [ClickEvent](arkts-arkui-clickevent-i.md#clickevent) occurs. It is executed on completion of a single click. On a double-click, the first click triggers the callback event.
+Triggered when [ClickEvent](arkts-arkui-clickevent-i.md) occurs. It is executed on completion of a single click. On a double-click, the first click triggers the callback event.
 
 **Type:** Callback<ClickEvent>
 

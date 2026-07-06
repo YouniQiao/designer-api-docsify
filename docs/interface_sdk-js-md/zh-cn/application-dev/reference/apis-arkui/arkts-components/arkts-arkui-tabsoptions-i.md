@@ -1,6 +1,6 @@
 # TabsOptions
 
-Tabs组件参数，设置Tabs的页签位置，当前显示页签的索引，Tabs控制器和TabBar的[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。
+Tabs组件参数，设置Tabs的页签位置，当前显示页签的索引，Tabs控制器和TabBar的[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
 
 **起始版本：** 15
 
@@ -12,7 +12,7 @@ Tabs组件参数，设置Tabs的页签位置，当前显示页签的索引，Tab
 barModifier?: CommonModifier
 ```
 
-设置TabBar的[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。 **说明：** 动态置为undefined时会保持当前状态不变，不会重置各通用属性。 由一个CommonModifier切换为另一个CommonModifier时，重复属性会进行覆盖，非重复属性会同时生效，不会重置前一个CommonModifier的通用属性。 Tabs的[barWidth](TabsAttribute#barWidth)、[barHeight](TabsAttribute#barHeight(value: Length))、 [barBackgroundColor](TabsAttribute#barBackgroundColor)、 [barBackgroundBlurStyle](TabsAttribute#barBackgroundBlurStyle(style: BlurStyle, options: BackgroundBlurStyleOptions)) 、[barBackgroundEffect](TabsAttribute#barBackgroundEffect)属性会覆盖CommonModifier的 [width](arkts-arkui-commonmethod-c.md#width-1)、[height](arkts-arkui-commonmethod-c.md#height-1)、 [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-2)、 [backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle-2) 、[backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect-2)属性。 [align](arkts-arkui-commonmethod-c.md#align-1)属性仅在 [BarMode.Scrollable](TabsAttribute#barMode(value: BarMode.Scrollable, options: ScrollableBarModeOptions))模式下生 效，且Tabs为横向时还需[nonScrollableLayoutStyle](arkts-arkui-scrollablebarmodeoptions-i.md#scrollablebarmodeoptions)未设置或设置为异常值时才能生效。 [TabContent](arkts-arkui-tabcontent.md)组件的 [tabBar](TabContentAttribute#tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string | Resource | CustomBuilder | TabBarOptions)) 属性为底部页签样式时不支持拖拽功能。
+设置TabBar的[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 **说明：** 动态置为undefined时会保持当前状态不变，不会重置各通用属性。 由一个CommonModifier切换为另一个CommonModifier时，重复属性会进行覆盖，非重复属性会同时生效，不会重置前一个CommonModifier的通用属性。 Tabs的[barWidth](TabsAttribute#barWidth)、[barHeight](TabsAttribute#barHeight(value: Length))、 [barBackgroundColor](TabsAttribute#barBackgroundColor)、 [barBackgroundBlurStyle](TabsAttribute#barBackgroundBlurStyle(style: BlurStyle, options: BackgroundBlurStyleOptions)) 、[barBackgroundEffect](TabsAttribute#barBackgroundEffect)属性会覆盖CommonModifier的 [width](arkts-arkui-commonmethod-c.md#width-1)、[height](arkts-arkui-commonmethod-c.md#height-1)、 [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-2)、 [backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle-2) 、[backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect-2)属性。 [align](arkts-arkui-commonmethod-c.md#align-1)属性仅在 [BarMode.Scrollable](TabsAttribute#barMode(value: BarMode.Scrollable, options: ScrollableBarModeOptions))模式下生 效，且Tabs为横向时还需[nonScrollableLayoutStyle](arkts-arkui-scrollablebarmodeoptions-i.md)未设置或设置为异常值时才能生效。 [TabContent](arkts-arkui-tabcontent.md)组件的 [tabBar](TabContentAttribute#tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string | Resource | CustomBuilder | TabBarOptions)) 属性为底部页签样式时不支持拖拽功能。
 
 **类型：** CommonModifier
 

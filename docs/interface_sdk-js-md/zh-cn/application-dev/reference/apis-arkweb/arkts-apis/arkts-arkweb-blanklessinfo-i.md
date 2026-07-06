@@ -12,7 +12,7 @@
 errCode: WebBlanklessErrorCode
 ```
 
-无白屏加载的异常错误码，见[WebBlanklessErrorCode](arkts-arkweb-webblanklesserrorcode-e.md#webblanklesserrorcode)定义。
+无白屏加载的异常错误码，见[WebBlanklessErrorCode](arkts-arkweb-webblanklesserrorcode-e.md)定义。
 
 **类型：** WebBlanklessErrorCode
 

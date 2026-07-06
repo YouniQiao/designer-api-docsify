@@ -1,8 +1,8 @@
 # FormEditExtensionContext
 
-**FormEditExtensionContext**, inherited from [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#uiextensioncontext), is the context of [FormEditExtensionAbility](arkts-form-formeditextensionability-c.md#formeditextensionability). > **NOTE** > - The APIs of this module can be used only in the stage model.
+**FormEditExtensionContext**, inherited from [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md), is the context of [FormEditExtensionAbility](arkts-form-formeditextensionability-c.md). > **NOTE** > - The APIs of this module can be used only in the stage model.
 
-**Inheritance/Implementation:** FormEditExtensionContext extends [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#uiextensioncontext)
+**Inheritance/Implementation:** FormEditExtensionContext extends [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)
 
 **Since:** 18
 

@@ -21,7 +21,7 @@ function setAppClipboardPolicy(admin: Want, tokenId: number, policy: ClipboardPo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| tokenId | number | 是 | 目标应用的身份标识。可通过[bundleManager.getApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md#applicationinfo)获取accessTokenId。 |
+| tokenId | number | 是 | 目标应用的身份标识。可通过[bundleManager.getApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md)获取accessTokenId。 |
 | policy | ClipboardPolicy | 是 | 剪贴板策略。 |
 
 **错误码：**

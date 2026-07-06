@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { TreeSet } from '@ohos.util.TreeSet';
+import { TreeSet } from '@kit.ArkTS';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Defines the options for creating an application account.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@ohos.account.appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## customData

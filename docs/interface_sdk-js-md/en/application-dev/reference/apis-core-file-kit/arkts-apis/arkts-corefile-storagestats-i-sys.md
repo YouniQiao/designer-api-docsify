@@ -11,7 +11,7 @@ Get the user storage statistics.
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@ohos.file.storageStatistics';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## app

@@ -2,7 +2,7 @@
 
 ReminderRequestAlarm extends ReminderRequest Defines a reminder for an alarm.
 
-**Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderrequest-i.md#reminderrequest)
+**Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderrequest-i.md)
 
 **Since:** 9
 
@@ -11,7 +11,7 @@ ReminderRequestAlarm extends ReminderRequest Defines a reminder for an alarm.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@ohos.reminderAgentManager';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## daysOfWeek

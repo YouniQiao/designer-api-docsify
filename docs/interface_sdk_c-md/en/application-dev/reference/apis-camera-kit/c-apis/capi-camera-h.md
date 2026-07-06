@@ -84,8 +84,6 @@ Defines the basic APIs of the camera.
 | [Camera_ControlCenterEffectType](#camera_controlcentereffecttype) | Camera_ControlCenterEffectType | Enumerates the effect types of a camera controller. |
 | [OH_Camera_OISMode](#oh_camera_oismode) | OH_Camera_OISMode | Enum for OIS (Optical Image Stabilization) mode. |
 | [OH_Camera_OISAxes](#oh_camera_oisaxes) | OH_Camera_OISAxes | Enum for OIS (Optical Image Stabilization) axes. |
-| [OH_Camera_NotificationName](#oh_camera_notificationname) | OH_Camera_NotificationName | Enumerates camera notification names. |
-| [OH_Camera_ProximityStateForFocus](#oh_camera_proximitystateforfocus) | OH_Camera_ProximityStateForFocus | Enumerates proximity states for focus. |
 | [OH_Camera_MetadataObjectEmotion](#oh_camera_metadataobjectemotion) | OH_Camera_MetadataObjectEmotion | Enum for metadata object emotion. |
 
 ### Function
@@ -725,39 +723,6 @@ Enum for OIS (Optical Image Stabilization) axes.
 | -- | -- |
 | OH_CAMERA_OIS_AXES_PITCH = 0 |  |
 | OH_CAMERA_OIS_AXES_YAW = 1 |  |
-
-### OH_Camera_NotificationName
-
-```c
-enum OH_Camera_NotificationName
-```
-
-**Description**
-
-Enumerates camera notification names.
-
-**Since**: 26.0.0
-
-| Enum item | Description |
-| -- | -- |
-| OH_CAMERA_DEFOCUS_FROM_PROXIMITY = 0 |  |
-
-### OH_Camera_ProximityStateForFocus
-
-```c
-enum OH_Camera_ProximityStateForFocus
-```
-
-**Description**
-
-Enumerates proximity states for focus.
-
-**Since**: 26.0.0
-
-| Enum item | Description |
-| -- | -- |
-| OH_CAMERA_PROXIMITY_STATE_IN_RANGE_RAISE_NONE = 0 |  |
-| OH_CAMERA_PROXIMITY_STATE_OUT_OF_RANGE_RAISE_REQUIRED = 1 |  |
 
 ### OH_Camera_MetadataObjectEmotion
 

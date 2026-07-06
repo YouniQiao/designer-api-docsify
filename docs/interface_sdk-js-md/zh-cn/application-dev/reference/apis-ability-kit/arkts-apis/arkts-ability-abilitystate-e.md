@@ -1,6 +1,6 @@
 # AbilityState
 
-Ability的状态，该类型为枚举，可配合[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md#abilityrunninginfo)返回Ability的状态。
+Ability的状态，该类型为枚举，可配合[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)返回Ability的状态。
 
 **起始版本：** 14
 

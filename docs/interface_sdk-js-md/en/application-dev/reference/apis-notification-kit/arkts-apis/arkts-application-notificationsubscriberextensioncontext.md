@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { NotificationSubscriberExtensionContext } from '@ohos.application.NotificationSubscriberExtensionContext';
+import { NotificationSubscriberExtensionContext } from '@kit.NotificationKit';
 ```
 
 ## Summary

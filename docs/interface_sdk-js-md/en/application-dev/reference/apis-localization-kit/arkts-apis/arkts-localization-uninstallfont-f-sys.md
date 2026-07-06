@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from '@ohos.fontManager';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## uninstallFont

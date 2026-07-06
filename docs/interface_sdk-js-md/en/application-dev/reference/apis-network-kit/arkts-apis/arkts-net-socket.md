@@ -9,7 +9,7 @@ Provides TCP and UDP Socket APIs.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@ohos.net.socket';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## Summary

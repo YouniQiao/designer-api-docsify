@@ -9,7 +9,7 @@ Represents Wi-Fi access information containing Service Set Identifier (SSID) and
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@ohos.enterprise.wifiManager';
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## bssid

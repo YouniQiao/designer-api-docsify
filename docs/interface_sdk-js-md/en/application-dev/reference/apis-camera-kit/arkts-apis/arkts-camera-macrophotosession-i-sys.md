@@ -1,8 +1,8 @@
 # MacroPhotoSession (System API)
 
-Implements a macro photo session, which sets the parameters of the macro photo mode and saves all [CameraInput](arkts-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md#session).
+Implements a macro photo session, which sets the parameters of the macro photo mode and saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md).
 
-**Inheritance/Implementation:** MacroPhotoSession extends [Session](arkts-camera-session-i.md#session), [Flash](arkts-camera-flash-i.md#flash), [AutoExposure](arkts-camera-autoexposure-i.md#autoexposure), [Focus](arkts-camera-focus-i.md#focus), [Zoom](arkts-camera-zoom-i.md#zoom), [ColorEffect](arkts-camera-coloreffect-i-sys.md#coloreffect), [ManualFocus](arkts-camera-manualfocus-i-sys.md#manualfocus), [DepthFusion](arkts-camera-depthfusion-i-sys.md#depthfusion), [ColorManagement](arkts-camera-colormanagement-i.md#colormanagement)
+**Inheritance/Implementation:** MacroPhotoSession extends [Session](arkts-camera-session-i.md), [Flash](arkts-camera-flash-i.md), [AutoExposure](arkts-camera-autoexposure-i.md), [Focus](arkts-camera-focus-i.md), [Zoom](arkts-camera-zoom-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md), [ManualFocus](arkts-camera-manualfocus-i-sys.md), [DepthFusion](arkts-camera-depthfusion-i-sys.md), [ColorManagement](arkts-camera-colormanagement-i.md)
 
 **Since:** 12
 
@@ -13,7 +13,7 @@ Implements a macro photo session, which sets the parameters of the macro photo m
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')
@@ -143,7 +143,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. This event is triggered and the error message is returned when an error occurs during thecalling of a session-related API such as[beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and[addInput](arkts-camera-session-i.md#addinput-1). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@ The module provides APIs for querying and adjusting the screen brightness and mo
 ## Modules to Import
 
 ```TypeScript
-import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, GetBrightnessModeOptions, SetBrightnessOptions, GetBrightnessOptions, SetKeepScreenOnOptions } from '@system.brightness';
+import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, GetBrightnessModeOptions, SetBrightnessOptions, GetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
 ```
 
 ## getMode

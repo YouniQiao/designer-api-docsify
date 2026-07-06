@@ -11,7 +11,7 @@ Indicates the results of manual network scan
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@ohos.telephony.radio';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## isFinish

@@ -9,7 +9,7 @@ Provides callbacks to return the authentication result. This API defines the aut
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@ohos.userIAM.userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## onResult

@@ -9,7 +9,7 @@ Provides the train configuration
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@ohos.ai.mindSporeLite';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## lossName

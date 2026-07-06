@@ -1,6 +1,6 @@
 # @ohos.enterprise.usbManager
 
-The **usbManager** module provides APIs for USB management. > **NOTE** > > The APIs of this module can be used only in the stage model. > > The APIs of this module can be called only by a device administrator application that is enabled. For details, see > [MDM Kit Development](../../../../mdm/mdm-kit-guide.md). > > The global restriction policy is provided by **restrictions**. To disable USB globally, see > [@ohos.enterprise.restrictions (restriction policy)](arkts-enterprise-restrictions.md#restrictions).
+The **usbManager** module provides APIs for USB management. > **NOTE** > > The APIs of this module can be used only in the stage model. > > The APIs of this module can be called only by a device administrator application that is enabled. For details, see > [MDM Kit Development](../../../../mdm/mdm-kit-guide.md). > > The global restriction policy is provided by **restrictions**. To disable USB globally, see > [@ohos.enterprise.restrictions (restriction policy)](arkts-enterprise-restrictions.md).
 
 **Since:** 10
 
@@ -9,7 +9,7 @@ The **usbManager** module provides APIs for USB management. > **NOTE** > > The A
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@ohos.enterprise.usbManager';
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## Summary

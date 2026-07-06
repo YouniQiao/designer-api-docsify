@@ -9,7 +9,7 @@ Gzip header information passed to and from zlib routines.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@ohos.zlib';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## comment

@@ -9,7 +9,7 @@ Represents a curve object. Different types of curve objects can be created using
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@ohos.curves';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## interpolate

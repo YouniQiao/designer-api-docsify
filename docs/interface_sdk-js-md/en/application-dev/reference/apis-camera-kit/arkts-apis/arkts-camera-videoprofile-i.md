@@ -1,8 +1,8 @@
 # VideoProfile
 
-Describes the video configuration information. It inherits from [Profile](arkts-camera-profile-i.md#profile).
+Describes the video configuration information. It inherits from [Profile](arkts-camera-profile-i.md).
 
-**Inheritance/Implementation:** VideoProfile extends [Profile](arkts-camera-profile-i.md#profile)
+**Inheritance/Implementation:** VideoProfile extends [Profile](arkts-camera-profile-i.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Describes the video configuration information. It inherits from [Profile](arkts-
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## frameRateRange

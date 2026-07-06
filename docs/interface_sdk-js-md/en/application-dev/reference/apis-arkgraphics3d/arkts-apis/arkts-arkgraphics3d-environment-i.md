@@ -2,7 +2,7 @@
 
 Environment resource.
 
-**Inheritance/Implementation:** Environment extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md#sceneresource)
+**Inheritance/Implementation:** Environment extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md)
 
 **Since:** 12
 

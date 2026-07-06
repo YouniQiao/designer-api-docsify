@@ -9,7 +9,7 @@ The proxy of the UIExtension window.
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from '@ohos.arkui.uiExtension';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## createSubWindowWithOptions
@@ -255,7 +255,7 @@ Sets the events that the component (**EmbeddedComponent** or **UIExtensionCompon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventFlags | number | Yes | Type of events to occupy. For details about the available values, see[EventFlag](arkts-arkui-eventflag-e.md#eventflag). |
+| eventFlags | number | Yes | Type of events to occupy. For details about the available values, see[EventFlag](arkts-arkui-eventflag-e.md). |
 
 **Return value:**
 
@@ -559,7 +559,7 @@ Subscribes to position and size change events of the component (**EmbeddedCompon
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rectChange' | Yes | Event type. The value is fixed at **'rectChange'**, indicating the rectanglechange event for the component (**EmbeddedComponent** or **UIExtensionComponent**). |
-| reasons | number | Yes | Reason why the position and size of the component (**EmbeddedComponent** or**UIExtensionComponent**) change. For details about the values, see[RectChangeReason](arkts-arkui-rectchangereason-e.md#rectchangereason). |
+| reasons | number | Yes | Reason why the position and size of the component (**EmbeddedComponent** or**UIExtensionComponent**) change. For details about the values, see[RectChangeReason](arkts-arkui-rectchangereason-e.md). |
 | callback | Callback&lt;RectChangeOptions&gt; | Yes | Callback used to return the current rectangle change values andthe reason for the change of the component (**EmbeddedComponent** or **UIExtensionComponent**). |
 
 **Error codes:**

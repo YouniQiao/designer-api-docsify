@@ -44,7 +44,7 @@ begins?: number
 data?: string | Array<FormItem>
 ```
 
-- 下载时，data为字符串类型，通常情况下使用json格式（object将被转换为json文本），默认为空。 - 上传时，data是表单项数组Array< [FormItem](arkts-basicservices-formitem-i.md#formitem)>。从API version 15开始，创建单个任务可以上传最多100个文件。默认为空。
+- 下载时，data为字符串类型，通常情况下使用json格式（object将被转换为json文本），默认为空。 - 上传时，data是表单项数组Array< [FormItem](arkts-basicservices-formitem-i.md)>。从API version 15开始，创建单个任务可以上传最多100个文件。默认为空。
 
 **类型：** string | Array<FormItem>
 
@@ -392,7 +392,7 @@ saveas?: string
 timeout?: Timeout
 ```
 
-超时时间自定义设置，连接超时时间默认60秒，总超时时间默认604800秒（1周）。当retry参数为true时， [timeout](arkts-basicservices-timeout-i.md#timeout)事件会触发立即重试，导致 [timeout](arkts-basicservices-timeout-i.md#timeout)在外部观察中被重试动作所掩盖，但 内部[timeout](arkts-basicservices-timeout-i.md#timeout)条件已实际触发。若需显性观察 [timeout](arkts-basicservices-timeout-i.md#timeout)事件，需关闭retry参数。
+超时时间自定义设置，连接超时时间默认60秒，总超时时间默认604800秒（1周）。当retry参数为true时， [timeout](arkts-basicservices-timeout-i.md)事件会触发立即重试，导致 [timeout](arkts-basicservices-timeout-i.md)在外部观察中被重试动作所掩盖，但 内部[timeout](arkts-basicservices-timeout-i.md)条件已实际触发。若需显性观察 [timeout](arkts-basicservices-timeout-i.md)事件，需关闭retry参数。
 
 **类型：** Timeout
 

@@ -6,7 +6,7 @@ Represents the certificate information.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [CertBlob](arkts-mdm-certblob-i.md#certblob)
+**Substitutes:** [CertBlob](arkts-mdm-certblob-i.md)
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -15,7 +15,7 @@ Represents the certificate information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@ohos.enterprise.deviceSettings';
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## alias

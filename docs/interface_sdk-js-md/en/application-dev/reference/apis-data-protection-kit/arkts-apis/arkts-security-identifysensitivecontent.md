@@ -9,7 +9,7 @@ This module identifies sensitive information in a specified file based on the in
 ## Modules to Import
 
 ```TypeScript
-import { identifySensitiveContent } from '@ohos.security.identifySensitiveContent';
+import { identifySensitiveContent } from '@kit.DataProtectionKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ This module provides the capability to get systemLoad.
 ## Modules to Import
 
 ```TypeScript
-import { systemLoad } from '@ohos.resourceschedule.systemload';
+import { systemLoad } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Defines TLS security options. The CA certificate is mandatory, and other paramet
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@ohos.net.socket';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## ca

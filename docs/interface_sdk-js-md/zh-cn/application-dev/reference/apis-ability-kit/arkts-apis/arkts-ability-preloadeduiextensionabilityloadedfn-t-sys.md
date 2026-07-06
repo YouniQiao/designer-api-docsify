@@ -4,7 +4,7 @@
 export type PreloadedUIExtensionAbilityLoadedFn = (preloadId: number) => void
 ```
 
-预加载[UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability)被加载时的回调函数类型。
+预加载[UIExtensionAbility](arkts-ability-uiextensionability-c.md)被加载时的回调函数类型。
 
 **起始版本：** 23
 

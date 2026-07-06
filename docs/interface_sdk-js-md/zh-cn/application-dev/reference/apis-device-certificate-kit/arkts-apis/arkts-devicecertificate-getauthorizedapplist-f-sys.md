@@ -28,7 +28,7 @@ function getAuthorizedAppList(keyUri: string) : Promise<CMResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回获取授权应用列表的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md#cmresult)对象中的appUidList属性。 |
+| Promise&lt;CMResult&gt; | Promise对象，返回获取授权应用列表的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的appUidList属性。 |
 
 **错误码：**
 

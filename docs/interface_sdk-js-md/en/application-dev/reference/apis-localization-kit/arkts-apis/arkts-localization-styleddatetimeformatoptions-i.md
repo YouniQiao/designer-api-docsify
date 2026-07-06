@@ -9,7 +9,7 @@ Optional configuration items for creating the time and date formatting object fo
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@ohos.i18n';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## day

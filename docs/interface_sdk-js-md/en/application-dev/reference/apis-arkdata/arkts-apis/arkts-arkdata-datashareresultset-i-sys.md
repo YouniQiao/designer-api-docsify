@@ -11,7 +11,7 @@ Provides APIs for accessing the result sets returned. The column or key names ar
 ## Modules to Import
 
 ```TypeScript
-import { DataType } from '@ohos.data.DataShareResultSet';
+import { DataType } from '@kit.ArkData';
 ```
 
 ## close

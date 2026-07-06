@@ -9,7 +9,7 @@ The class of a system configuration.
 ## Modules to Import
 
 ```TypeScript
-import { systemConfiguration } from '@ohos.app.ability.systemConfiguration';
+import { systemConfiguration } from '@kit.AbilityKit';
 ```
 
 ## Summary

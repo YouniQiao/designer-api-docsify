@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@ohos.accessibility.config';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## offSeniorModeStateChangeForApp

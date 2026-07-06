@@ -2,7 +2,7 @@
 
 定义平行光.
 
-**继承/实现关系：** DirectionalLight extends [Light](arkts-arkgraphics3d-light-i.md#light)
+**继承/实现关系：** DirectionalLight extends [Light](arkts-arkgraphics3d-light-i.md)
 
 **起始版本：** 12
 

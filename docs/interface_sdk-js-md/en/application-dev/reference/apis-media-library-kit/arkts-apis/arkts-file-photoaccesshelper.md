@@ -9,7 +9,7 @@ Helper functions to access image and video assets
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@ohos.file.photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## Summary
@@ -175,7 +175,7 @@ import { photoAccessHelper } from '@ohos.file.photoAccessHelper';
 | [OperationType](arkts-medialibrary-operationtype-e.md) | Enumeration type of operation. |
 | [PhotoKeys](arkts-medialibrary-photokeys-e.md) | Enumeration of photo asset members |
 | [PhotoSource](arkts-medialibrary-photosource-e.md) | Enumeration of PhotoSource type |
-| [PhotoSubtype](arkts-medialibrary-photosubtype-e.md) | Enumerates the [PhotoAsset](arkts-medialibrary-photoasset-i.md#photoasset) types. |
+| [PhotoSubtype](arkts-medialibrary-photosubtype-e.md) | Enumerates the [PhotoAsset](arkts-medialibrary-photoasset-i.md) types. |
 | [PhotoType](arkts-medialibrary-phototype-e.md) | Enumerates media file types. |
 | [PhotoViewMIMETypes](arkts-medialibrary-photoviewmimetypes-e.md) | PhotoViewMIMETypes represents the type of media resource that photo picker selects. |
 | [PlayMode](arkts-medialibrary-playmode-e.md) | Enumeration type of play mode. |
@@ -227,7 +227,7 @@ import { photoAccessHelper } from '@ohos.file.photoAccessHelper';
 | [PhotoKeys](arkts-medialibrary-photokeys-e-sys.md) | Enumeration of photo asset members |
 | [PhotoPermissionType](arkts-medialibrary-photopermissiontype-e-sys.md) | Enumeration type of permissions for accessing asset uri. |
 | [PhotoRiskStatus](arkts-medialibrary-photoriskstatus-e-sys.md) | Enumeration of photo risk status |
-| [PhotoSubtype](arkts-medialibrary-photosubtype-e-sys.md) | Enumerates the [PhotoAsset](arkts-medialibrary-photoasset-i.md#photoasset) types. |
+| [PhotoSubtype](arkts-medialibrary-photosubtype-e-sys.md) | Enumerates the [PhotoAsset](arkts-medialibrary-photoasset-i.md) types. |
 | [RankingMethod](arkts-medialibrary-rankingmethod-e-sys.md) | Enumerates related entity Ranking Method |
 | [RecommendationType](arkts-medialibrary-recommendationtype-e-sys.md) | Enumerates the types of recommended images. |
 | [RequestPhotoType](arkts-medialibrary-requestphototype-e-sys.md) | Enumerates the types of the operation for obtaining image or video thumbnails. |

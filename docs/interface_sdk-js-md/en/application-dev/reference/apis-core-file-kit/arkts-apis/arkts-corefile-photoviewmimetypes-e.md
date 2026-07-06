@@ -6,7 +6,7 @@ Enumerates the media file types that can be selected.
 
 **Deprecated since:** 12
 
-**Substitutes:** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoviewmimetypes-e.md#photoviewmimetypes)
+**Substitutes:** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoviewmimetypes-e.md)
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from '@ohos.ability.featureAbility';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## getWindow

@@ -6,9 +6,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [BackPressActionProposal](arkts-arkui-backpressactionproposal-c.md) | 智慧手势返回动作处理。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md#gesturehandlingresolution)的selectedProposal为该类型对象，会返回上一页面。 |
+| [BackPressActionProposal](arkts-arkui-backpressactionproposal-c.md) | 智慧手势返回动作处理。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md)的selectedProposal为该类型对象，会返回上一页面。 |
 | [BaseGestureHandlingProposal](arkts-arkui-basegesturehandlingproposal-c.md) | 智慧手势处理基类。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，其回调参数类型为具体的子类类型实例。 |
-| [ClickActionProposal](arkts-arkui-clickactionproposal-c.md) | 智慧手势点击动作处理。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md#gesturehandlingresolution)的selectedProposal为该类型对象，会触发目标组件的点击操作。 |
+| [ClickActionProposal](arkts-arkui-clickactionproposal-c.md) | 智慧手势点击动作处理。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md)的selectedProposal为该类型对象，会触发目标组件的点击操作。 |
 | [ComponentSnapshot](arkts-arkui-componentsnapshot-c.md) | 提供获取组件截图的能力，包括已加载的组件的截图和没有加载的组件的截图。 @link UIContext#getComponentSnapshot}方法获取ComponentSnapshot对象，再通过此实例调用对应方法。 &gt; &gt; - 缩放、平移、旋转等图形变换属性只对被截图组件的子组件生效；对目标组件本身应用图形变换属性不生效，显示的还是图形变换前的效果。 |
 | [ComponentUtils](arkts-arkui-componentutils-c.md) | 提供获取组件绘制区域坐标和大小的能力。 @link UIContext#getComponentUtils}方法获取到ComponentUtils对象，再通过该对象调用对应方法。 |
 | [ContextMenuController](arkts-arkui-contextmenucontroller-c.md) | class ContextMenuController |
@@ -24,14 +24,14 @@
 | [MarqueeDynamicSyncScene](arkts-arkui-marqueedynamicsyncscene-c.md) | Represents a dynamic synchronization scene of Marquee. |
 | [MeasureUtils](arkts-arkui-measureutils-c.md) | class MeasureUtils &lt;p&gt;<strong>NOTE</strong>: <br>You must first use getMeasureUtils() in UIContext to obtain a MeasureUtils instance, and then call the APIs using the obtained instance. &lt;/p&gt; |
 | [MediaQuery](arkts-arkui-mediaquery-c.md) | class MediaQuery |
-| [NoneActionProposal](arkts-arkui-noneactionproposal-c.md) | 智慧手势空动作处理。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md#gesturehandlingresolution)的selectedProposal为该类型对象，不会触发任何动作。 |
+| [NoneActionProposal](arkts-arkui-noneactionproposal-c.md) | 智慧手势空动作处理。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md)的selectedProposal为该类型对象，不会触发任何动作。 |
 | [OverlayManager](arkts-arkui-overlaymanager-c.md) | class OverlayManager |
-| [PageSwitchActionProposal](arkts-arkui-pageswitchactionproposal-c.md) | 智慧手势翻页动作处理，默认方向为向前翻页，包括向右和向下。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md#gesturehandlingresolution)的selectedProposal为该类型对象，会触发目标组件的翻页操作。 |
+| [PageSwitchActionProposal](arkts-arkui-pageswitchactionproposal-c.md) | 智慧手势翻页动作处理，默认方向为向前翻页，包括向右和向下。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md)的selectedProposal为该类型对象，会触发目标组件的翻页操作。 |
 | [PromptAction](arkts-arkui-promptaction-c.md) | class PromptAction |
 | [ResolvedUIContext](arkts-arkui-resolveduicontext-c.md) | ResolvedUIContext实例对象。 @link @ohos.arkui.UIContext}，该类对象包含[UIContext](arkts-arkui-uicontext.md)实例和 &gt; [UIContext](arkts-arkui-uicontext.md)的解析策略。 |
 | [Router](arkts-arkui-router-c.md) | class Router |
-| [ScrollActionProposal](arkts-arkui-scrollactionproposal-c.md) | 智慧手势滚动动作处理，默认方向为向前滚动，包括向右和向下。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md#gesturehandlingresolution)的selectedProposal为该类型对象，会触发目标组件的滚动操作。 |
-| [SelectActionProposal](arkts-arkui-selectactionproposal-c.md) | 智慧手势选中动作处理。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md#gesturehandlingresolution)的selectedProposal为该类型对象，会使目标组件被选中。 |
+| [ScrollActionProposal](arkts-arkui-scrollactionproposal-c.md) | 智慧手势滚动动作处理，默认方向为向前滚动，包括向右和向下。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md)的selectedProposal为该类型对象，会触发目标组件的滚动操作。 |
+| [SelectActionProposal](arkts-arkui-selectactionproposal-c.md) | 智慧手势选中动作处理。当通过[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md)的selectedProposal为该类型对象，会使目标组件被选中。 |
 | [SmartGestureController](arkts-arkui-smartgesturecontroller-c.md) | 提供智慧手势使能、监听、选中态控制，以及动态决策智慧手势行为的能力。 @link UIContext#getSmartGestureController}方法获取SmartGestureController实例， &gt; 再通过该实例调用对应方法。 |
 | [SwiperDynamicSyncScene](arkts-arkui-swiperdynamicsyncscene-c.md) | 提供Swiper组件相关帧率的配置。 &gt; **说明** &gt; SwiperDynamicSyncScene继承自[DynamicSyncScene](arkts-arkui-uicontext.md)，对应Swiper的动态帧率场景。 |
 | [TargetedGestureProposal](arkts-arkui-targetedgestureproposal-c.md) | 带目标节点的智慧手势处理基类。 |

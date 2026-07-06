@@ -1,8 +1,8 @@
 # SheetOptions
 
-继承自[BindOptions](arkts-arkui-bindoptions-i.md#bindoptions)。 半模态页面内容选项。
+继承自[BindOptions](arkts-arkui-bindoptions-i.md)。 半模态页面内容选项。
 
-**继承/实现关系：** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#bindoptions)
+**继承/实现关系：** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
 
 **起始版本：** 10
 
@@ -146,7 +146,7 @@ dragBar?: boolean
 effectEdge?: number
 ```
 
-设置半模态面板内容区边缘回弹效果，支持单边生效。 **默认值**：默认双边生效，即[EffectEdge](arkts-arkui-effectedge-e.md#effectedge).START | [EffectEdge](arkts-arkui-effectedge-e.md#effectedge).END（即数值3）。 **说明：** 1. 仅上边缘生效：[EffectEdge](arkts-arkui-effectedge-e.md#effectedge).START。 2. 仅下边缘生效：[EffectEdge](arkts-arkui-effectedge-e.md#effectedge).END。 3. 双边生效：[EffectEdge](arkts-arkui-effectedge-e.md#effectedge).START | [EffectEdge](arkts-arkui-effectedge-e.md#effectedge).END（即数值3）。 4. 双边不生效：[EffectEdge](arkts-arkui-effectedge-e.md#effectedge).START & [EffectEdge](arkts-arkui-effectedge-e.md#effectedge).END（即数值0）。
+设置半模态面板内容区边缘回弹效果，支持单边生效。 **默认值**：默认双边生效，即[EffectEdge](arkts-arkui-effectedge-e.md).START | [EffectEdge](arkts-arkui-effectedge-e.md).END（即数值3）。 **说明：** 1. 仅上边缘生效：[EffectEdge](arkts-arkui-effectedge-e.md).START。 2. 仅下边缘生效：[EffectEdge](arkts-arkui-effectedge-e.md).END。 3. 双边生效：[EffectEdge](arkts-arkui-effectedge-e.md).START | [EffectEdge](arkts-arkui-effectedge-e.md).END（即数值3）。 4. 双边不生效：[EffectEdge](arkts-arkui-effectedge-e.md).START & [EffectEdge](arkts-arkui-effectedge-e.md).END（即数值0）。
 
 **类型：** number
 
@@ -416,7 +416,7 @@ onWidthDidChange?: Callback<number>
 onWillDismiss?: Callback<DismissSheetAction>
 ```
 
-半模态页面的交互式关闭回调函数。允许开发者注册，以获取关闭操作的类型，并决定是否关闭半模态状态。 **说明：** 当用户执行下拉关闭、侧拉关闭、点击遮罩层关闭、点击关闭按钮的交互操作时，若已注册回调函数，则不会立即关闭页面，而是由开发者通过回调函数[DismissSheetAction](arkts-arkui-dismisssheetaction-i.md#dismisssheetaction)中的 reason参数判断关闭操作的类型，进而根据具体原因自主选择是否关闭半模态页面。 如果不注册该回调函数，则用户执行关闭操作时，正常关闭半模态，无其他行为。 侧拉关闭又包含侧滑（左滑/右滑）、三键back、键盘ESC关闭。 在onWillDismiss回调中，不能再做onWillDismiss拦截。 建议在[二次确认](../../../../ui/arkts-sheet-page.md#二次确认能力)场景使用。
+半模态页面的交互式关闭回调函数。允许开发者注册，以获取关闭操作的类型，并决定是否关闭半模态状态。 **说明：** 当用户执行下拉关闭、侧拉关闭、点击遮罩层关闭、点击关闭按钮的交互操作时，若已注册回调函数，则不会立即关闭页面，而是由开发者通过回调函数[DismissSheetAction](arkts-arkui-dismisssheetaction-i.md)中的 reason参数判断关闭操作的类型，进而根据具体原因自主选择是否关闭半模态页面。 如果不注册该回调函数，则用户执行关闭操作时，正常关闭半模态，无其他行为。 侧拉关闭又包含侧滑（左滑/右滑）、三键back、键盘ESC关闭。 在onWillDismiss回调中，不能再做onWillDismiss拦截。 建议在[二次确认](../../../../ui/arkts-sheet-page.md#二次确认能力)场景使用。
 
 **类型：** Callback<DismissSheetAction>
 

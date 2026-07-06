@@ -9,7 +9,7 @@ Implements an upload or download task. Before using this API, you must obtain a 
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@ohos.request';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## off
@@ -38,7 +38,7 @@ Unsubscribes from task progress events. > **NOTE** > > For details about how to 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 and later |
 
 ## off
 
@@ -66,7 +66,7 @@ Unsubscribes from task completion events. > **NOTE** > > For details about how t
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 
 ## off
 
@@ -94,7 +94,7 @@ Unsubscribes from task failure events. > **NOTE** > > For details about how to o
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 
 ## off
 
@@ -274,7 +274,7 @@ Subscribes to task progress changes. This API uses an asynchronous callback to r
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 and later |
 
 ## on
 
@@ -302,7 +302,7 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 and later |
 
 ## on
 
@@ -330,7 +330,7 @@ Subscribes to task failure events. This API uses an asynchronous callback to ret
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 
 ## on
 
@@ -507,7 +507,7 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 | Error Code ID | Error Message |
 | --- | --- |
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 | [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 ## pause
@@ -533,7 +533,7 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 | Error Code ID | Error Message |
 | --- | --- |
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 | [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 ## resume
@@ -562,7 +562,7 @@ Resumes a paused task. This API uses an asynchronous callback to return the resu
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 | [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 ## resume
@@ -591,7 +591,7 @@ Resumes a paused task. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 | [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
 
 ## setMaxSpeed
@@ -610,7 +610,7 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | number | Yes | Maximum number of bytes that can be transmitted by a task per second, with a minimum of16384 bytes. The value cannot be less than the minimum speed value specified by[MinSpeed](arkts-basicservices-minspeed-i.md#minspeed). |
+| speed | number | Yes | Maximum number of bytes that can be transmitted by a task per second, with a minimum of16384 bytes. The value cannot be less than the minimum speed value specified by[MinSpeed](arkts-basicservices-minspeed-i.md). |
 
 **Return value:**
 

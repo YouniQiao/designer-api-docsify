@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { StartupListener } from '@ohos.app.appstartup.StartupListener';
+import { StartupListener } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -34,7 +34,7 @@ constructor(value: ImageAttachmentInterface)
 constructor(attachment: Optional<AttachmentType>)
 ```
 
-图片对象的构造函数。与value类型入参构造函数相比，attachment参数增加了对undefined类型和[ResourceStr](arkts-arkui-resourcestr-t.md#resourcestr)类型图片的支持。
+图片对象的构造函数。与value类型入参构造函数相比，attachment参数增加了对undefined类型和[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片的支持。
 
 **起始版本：** 15
 
@@ -48,7 +48,7 @@ constructor(attachment: Optional<AttachmentType>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| attachment | Optional&lt;AttachmentType&gt; | 是 | PixelMap类型或[ResourceStr](arkts-arkui-resourcestr-t.md#resourcestr)类型图片设置项。 |
+| attachment | Optional&lt;AttachmentType&gt; | 是 | PixelMap类型或[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片设置项。 |
 
 ## colorFilter
 

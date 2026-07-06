@@ -9,7 +9,7 @@ This module provides the [EnterpriseAdminExtensionAbility](../../../../mdm/mdm-k
 ## Modules to Import
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@ohos.enterprise.EnterpriseAdminExtensionAbility';
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
 ```
 
 ## onAccountAdded
@@ -516,7 +516,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onKeyEvent(keyEvent: systemManager.KeyEvent): void
 ```
 
-[System key event](arkts-mdm-keyevent-i.md#keyevent) callback. The MDM application needs to deliver key event handling policies via the [systemManager.addKeyEventPolicies](arkts-mdm-addkeyeventpolicies-f.md#addkeyeventpolicies-1) API. When a system key event is triggered, if the event matches the delivered policy, this callback will be invoked. The callback parameter [keyEvent](arkts-mdm-keyevent-i.md#keyevent) contains information about currently triggered key events, which are introduced below. Single-key event. When a single key on the device is triggered, the [onKeyEvent](arkts-mdm-enterpriseadminextensionability-c.md#onkeyevent-1) callback will be invoked twice (once on key press and once on key release). You can determine whether the key is pressed or released based on the **keyAction** property in [keyEvent](arkts-mdm-keyevent-i.md#keyevent). The **keyItems** property in [keyEvent](arkts-mdm-keyevent-i.md#keyevent) can be ignored for single-key events. Combined-key event. Only the power button, volume up button, and volume down button can be combined. When a user presses a key combination, the callback for the subsequently pressed key will carry information about all currently pressed keys via the **keyItems** property in [keyEvent](arkts-mdm-keyevent-i.md#keyevent). All other response logic is consistent with that of single-key events. Long-press event. When a single key or key combination is pressed for an extended period, the [onKeyEvent](arkts-mdm-enterpriseadminextensionability-c.md#onkeyevent-1) callback will be triggered continuously at an interval of 50 ms (the actual interval may be slightly longer depending on system status and performance). For each callback event, the **actionTime** property in [keyEvent](arkts-mdm-keyevent-i.md#keyevent) remains the same as the **actionTime** property in the [keyEvent](arkts-mdm-keyevent-i.md#keyevent) of the initial key press callback. All other response logic is consistent with that of single-key and combined key events.
+[System key event](arkts-mdm-keyevent-i.md) callback. The MDM application needs to deliver key event handling policies via the [systemManager.addKeyEventPolicies](arkts-mdm-addkeyeventpolicies-f.md#addkeyeventpolicies-1) API. When a system key event is triggered, if the event matches the delivered policy, this callback will be invoked. The callback parameter [keyEvent](arkts-mdm-keyevent-i.md) contains information about currently triggered key events, which are introduced below. Single-key event. When a single key on the device is triggered, the [onKeyEvent](arkts-mdm-enterpriseadminextensionability-c.md#onkeyevent-1) callback will be invoked twice (once on key press and once on key release). You can determine whether the key is pressed or released based on the **keyAction** property in [keyEvent](arkts-mdm-keyevent-i.md). The **keyItems** property in [keyEvent](arkts-mdm-keyevent-i.md) can be ignored for single-key events. Combined-key event. Only the power button, volume up button, and volume down button can be combined. When a user presses a key combination, the callback for the subsequently pressed key will carry information about all currently pressed keys via the **keyItems** property in [keyEvent](arkts-mdm-keyevent-i.md). All other response logic is consistent with that of single-key events. Long-press event. When a single key or key combination is pressed for an extended period, the [onKeyEvent](arkts-mdm-enterpriseadminextensionability-c.md#onkeyevent-1) callback will be triggered continuously at an interval of 50 ms (the actual interval may be slightly longer depending on system status and performance). For each callback event, the **actionTime** property in [keyEvent](arkts-mdm-keyevent-i.md) remains the same as the **actionTime** property in the [keyEvent](arkts-mdm-keyevent-i.md) of the initial key press callback. All other response logic is consistent with that of single-key and combined key events.
 
 **Since:** 23
 
@@ -901,7 +901,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 context: EnterpriseAdminExtensionContext
 ```
 
-Context of **EnterpriseAdminExtensionAbility**. It inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext).
+Context of **EnterpriseAdminExtensionAbility**. It inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
 **Type:** EnterpriseAdminExtensionContext
 

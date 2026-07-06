@@ -9,7 +9,7 @@ Represents an OTA update policy.
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@ohos.enterprise.systemManager';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## delayUpdateTime

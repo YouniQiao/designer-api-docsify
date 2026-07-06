@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [AuthEvent](arkts-userauthentication-authevent-i.md#authevent)
+**替代接口：** [AuthEvent](arkts-userauthentication-authevent-i.md)
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -34,7 +34,7 @@ onAcquireInfo?: (module: number, acquire: number, extraInfo: any) => void
 onResult: (result: number, extraInfo: AuthResult) => void
 ```
 
-回调函数，返回认证结果。 - **result**: 认证结果，参见[ResultCode](arkts-userauthentication-resultcode-e.md#resultcode)。 - **extraInfo**: 扩展信息，不同情况下的具体信息。如果身份验证通过，则在extraInfo中返回用户认证令牌；如果身份验证失败，则在extraInfo中返回剩余的用户认证次数；如果身份验证执行器被锁定，则在 extraInfo中返回冻结时间，类型为[AuthResult](arkts-userauthentication-authresult-i.md#authresult)。
+回调函数，返回认证结果。 - **result**: 认证结果，参见[ResultCode](arkts-userauthentication-resultcode-e.md)。 - **extraInfo**: 扩展信息，不同情况下的具体信息。如果身份验证通过，则在extraInfo中返回用户认证令牌；如果身份验证失败，则在extraInfo中返回剩余的用户认证次数；如果身份验证执行器被锁定，则在 extraInfo中返回冻结时间，类型为[AuthResult](arkts-userauthentication-authresult-i.md)。
 
 **类型：** (result: number, extraInfo: AuthResult) => void
 

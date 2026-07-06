@@ -9,7 +9,7 @@ Describes the camera output capability.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## photoProfiles

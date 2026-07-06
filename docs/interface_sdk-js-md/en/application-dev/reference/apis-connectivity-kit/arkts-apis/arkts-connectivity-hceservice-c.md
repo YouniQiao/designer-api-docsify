@@ -9,7 +9,7 @@ A class for NFC host application. <p>The NFC host application use this class, th
 ## Modules to Import
 
 ```TypeScript
-import { cardEmulation } from '@ohos.nfc.cardEmulation';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## off('hceCmd')

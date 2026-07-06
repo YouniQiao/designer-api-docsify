@@ -12,7 +12,7 @@
 onClick?: Callback<ClickEvent>
 ```
 
-[ClickEvent](arkts-arkui-clickevent-i.md#clickevent)为用户点击事件。 点击完成时回调事件。 双击时，第一次点击触发回调事件。
+[ClickEvent](arkts-arkui-clickevent-i.md)为用户点击事件。 点击完成时回调事件。 双击时，第一次点击触发回调事件。
 
 **类型：** Callback<ClickEvent>
 

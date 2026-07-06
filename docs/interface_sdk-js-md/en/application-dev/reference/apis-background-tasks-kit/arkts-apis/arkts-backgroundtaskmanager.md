@@ -6,7 +6,7 @@ The **BackgroundTaskManager** module provides APIs to manage background tasks. I
 
 **Deprecated since:** 9
 
-**Substitutes:** [backgroundTaskManager:backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md#backgroundtaskmanager)
+**Substitutes:** [backgroundTaskManager:backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md)
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 

@@ -11,7 +11,7 @@ The parameters of brightness.
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@ohos.graphics.uiEffect';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## cubicCoeff

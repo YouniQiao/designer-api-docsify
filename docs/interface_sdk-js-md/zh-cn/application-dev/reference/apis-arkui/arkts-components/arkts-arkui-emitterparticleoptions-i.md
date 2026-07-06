@@ -12,7 +12,7 @@
 config: ParticleConfigs[PARTICLE]
 ```
 
-表示对应类型的配置。 config类型和type值有关联： 1. 如果type为ParticleType.POINT，则config类型为[PointParticleParameters](arkts-arkui-pointparticleparameters-i.md#pointparticleparameters) 。 2. 如果type为ParticleType.IMAGE，则config类型为[ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md#imageparticleparameters) 。
+表示对应类型的配置。 config类型和type值有关联： 1. 如果type为ParticleType.POINT，则config类型为[PointParticleParameters](arkts-arkui-pointparticleparameters-i.md) 。 2. 如果type为ParticleType.IMAGE，则config类型为[ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md) 。
 
 **类型：** ParticleConfigs[PARTICLE]
 

@@ -424,7 +424,7 @@ readonly nativeLibraryPath: string
 readonly permissions: Array<string>
 ```
 
-访问应用程序所需的权限列表<!--Del-->，可以通过调用 [getApplicationInfo](arkts-ability-getapplicationinfo-f-sys.md#getapplicationinfo-2) 接口，appFlags参数传入GET_APPLICATION_INFO_WITH_PERMISSION获取<!--DelEnd-->。 [getBundleInfoForSelf](arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)或 者 [getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-2) 接口获取ApplicationInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md#bundleinfo).reqPermissionDetails信息获取权限列表。
+访问应用程序所需的权限列表<!--Del-->，可以通过调用 [getApplicationInfo](arkts-ability-getapplicationinfo-f-sys.md#getapplicationinfo-2) 接口，appFlags参数传入GET_APPLICATION_INFO_WITH_PERMISSION获取<!--DelEnd-->。 [getBundleInfoForSelf](arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)或 者 [getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-2) 接口获取ApplicationInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md).reqPermissionDetails信息获取权限列表。
 
 **类型：** Array<string>
 
@@ -456,7 +456,7 @@ readonly process: string
 readonly releaseType: string
 ```
 
-标识应用打包时使用的SDK的发布类型。当前SDK的发布类型为Canary、Beta或Release，其中Canary和Beta通过序号进一步细分，例如Canary1、Canary2、Beta1、Beta2等。开发者可通过对比应用打 包依赖的SDK发布类型和OS的发布类型（[deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#deviceinfo)）来判断兼容性。
+标识应用打包时使用的SDK的发布类型。当前SDK的发布类型为Canary、Beta或Release，其中Canary和Beta通过序号进一步细分，例如Canary1、Canary2、Beta1、Beta2等。开发者可通过对比应用打 包依赖的SDK发布类型和OS的发布类型（[deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md)）来判断兼容性。
 
 **类型：** string
 

@@ -128,7 +128,7 @@ Whether to start scrolling. **true**: yes; **false**: no **NOTE** This parameter
 step?: number
 ```
 
-Step length of the scrolling animation text. If the value is greater than the text width of the marquee, the default value is used. Default value: **6** Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)
+Step length of the scrolling animation text. If the value is greater than the text width of the marquee, the default value is used. Default value: **6** Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)
 
 **Type:** number
 

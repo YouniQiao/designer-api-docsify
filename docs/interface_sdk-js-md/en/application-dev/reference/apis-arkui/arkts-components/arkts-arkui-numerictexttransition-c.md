@@ -1,8 +1,8 @@
 # NumericTextTransition
 
-Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the [copyOption](TextAttribute#copyOption) property is ineffective. The flip animation fails if the text contains child components or is set via a styled string. **NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md#contenttransition).
+Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the [copyOption](TextAttribute#copyOption) property is ineffective. The flip animation fails if the text contains child components or is set via a styled string. **NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md).
 
-**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md#contenttransition)
+**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md)
 
 **Since:** 20
 
@@ -28,7 +28,7 @@ A constructor used to create a **NumericTextTransition** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | NumericTextTransitionOptions | No | Options of the numeric flip animation. The default value isinherited from [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md#numerictexttransitionoptions). |
+| options | NumericTextTransitionOptions | No | Options of the numeric flip animation. The default value isinherited from [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md). |
 
 ## enableBlur
 

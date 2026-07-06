@@ -11,7 +11,7 @@ Describes the custom ringtone information.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@ohos.notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## ringtoneFileName

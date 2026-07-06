@@ -11,7 +11,7 @@ Transition Controller
 ## Modules to Import
 
 ```TypeScript
-import { uiExtensionHost } from '@ohos.uiExtensionHost';
+import { uiExtensionHost } from '@kit.ArkUI';
 ```
 
 ## createSubWindowWithOptions
@@ -275,10 +275,10 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameters types.3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes:1. Permission denied. Interface caller does not have permission "ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS".2. The UIExtension window proxy is abnormal.<br>**Applicable version:** 12 |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 12 |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes:1. Permission denied. Interface caller does not have permission "ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS".2. The UIExtension window proxy is abnormal.<br>**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 12 and later |
 
 **Example**
 

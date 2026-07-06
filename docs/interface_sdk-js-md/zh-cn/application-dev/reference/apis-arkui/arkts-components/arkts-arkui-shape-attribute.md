@@ -1,6 +1,6 @@
 # Shape属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性：
 
 **继承/实现关系：** ShapeAttribute extends [CommonMethod<ShapeAttribute>](CommonMethod<ShapeAttribute>)
 
@@ -50,7 +50,7 @@ fill(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor | 是 | 填充区域颜色。<br/>默认值：[Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md#color).Black <br/>异常值undefined、null、NaN和Infinity按照默认值处理。 |
+| value | ResourceColor | 是 | 填充区域颜色。<br/>默认值：[Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md).Black <br/>异常值undefined、null、NaN和Infinity按照默认值处理。 |
 
 ## fillOpacity
 
@@ -80,7 +80,7 @@ fillOpacity(value: number | string | Resource)
 mesh(value: Array<any>, column: number, row: number)
 ```
 
-设置网格效果。将图像分割为（row + 1）* (column + 1)的网格，每个网格交点坐标存储在数组中（每两个元素表示一个交点的x、y坐标）。通过数组value中的坐标值，重新定位网格顶点位置，实现图像局部扭曲。支持 [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)动态设置属性方法。 > **说明：** > > mesh只对shape传入pixelMap时生效，且效果作用于传入的pixelMap。与[绘制模块](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-drawing.md#drawing)的 > [drawPixelMapMesh<sup>12+</sup>](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-canvas-c.md#drawpixelmapmesh-1)效果一致，建议使用 > drawPixelMapMesh。
+设置网格效果。将图像分割为（row + 1）* (column + 1)的网格，每个网格交点坐标存储在数组中（每两个元素表示一个交点的x、y坐标）。通过数组value中的坐标值，重新定位网格顶点位置，实现图像局部扭曲。支持 [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)动态设置属性方法。 > **说明：** > > mesh只对shape传入pixelMap时生效，且效果作用于传入的pixelMap。与[绘制模块](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-drawing.md)的 > [drawPixelMapMesh<sup>12+</sup>](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-canvas-c.md#drawpixelmapmesh-1)效果一致，建议使用 > drawPixelMapMesh。
 
 **起始版本：** 8
 
@@ -118,7 +118,7 @@ stroke(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor | 是 | 边框颜色。<br/>默认值：[Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md#color).Transparent<br/>异常值undefined和null按照默认值处理，NaN和Infinity按照[Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md#color).Black处理。 |
+| value | ResourceColor | 是 | 边框颜色。<br/>默认值：[Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md).Transparent<br/>异常值undefined和null按照默认值处理，NaN和Infinity按照[Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md).Black处理。 |
 
 ## strokeDashArray
 

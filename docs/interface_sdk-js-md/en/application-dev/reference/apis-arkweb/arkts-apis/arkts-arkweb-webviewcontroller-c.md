@@ -9,7 +9,7 @@ Represents a **WebviewController** object used to control various behaviors of *
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## accessBackward
@@ -122,7 +122,7 @@ Add bypassing hosts for Intelligent Tracking Prevention.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## avoidVisibleViewportBottom
 
@@ -304,7 +304,7 @@ Clear bypassing hosts for Intelligent Tracking Prevention.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## clearMatches
 
@@ -551,7 +551,7 @@ Create web message ports
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed.<br>**Applicable version:** 10 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed.<br>**Applicable version:** 10 and later |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error.The WebviewController must be associated with a Web component. |
 
 ## createWebPrintDocumentAdapter
@@ -610,7 +610,7 @@ Grant the Web kernel the permission to initiate cross-domain requests for custom
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) | Failed to register custom schemes.<br>**Applicable version:** 12 |
+| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) | Failed to register custom schemes.<br>**Applicable version:** 12 and later |
 
 ## customizeSchemes
 
@@ -694,7 +694,7 @@ Enable the ability to block Ads, disabled by default.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Parameter string is too long. 3.Parameter verification failed. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error.The WebviewController must be associated with a Web component. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## enableAdvancedSecurityMode
 
@@ -760,7 +760,7 @@ Enable the ability to use Intelligent Tracking Prevention; default is disabled.
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error.The WebviewController must be associated with a Web component. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## enablePrivateNetworkAccess
 
@@ -889,7 +889,7 @@ Obtains the current ArkWeb kernel version.
 
 | Type | Description |
 | --- | --- |
-| ArkWebEngineVersion | The ArkWeb kernel version defined by[ArkWebEngineVersion](arkts-arkweb-arkwebengineversion-e.md#arkwebengineversion). |
+| ArkWebEngineVersion | The ArkWeb kernel version defined by[ArkWebEngineVersion](arkts-arkweb-arkwebengineversion-e.md). |
 
 ## getAttachState
 
@@ -941,7 +941,7 @@ Get back forward stack list from current webview. <p><strong>API Note</strong>:<
 getBlanklessInfoWithKey(key: string) : BlanklessInfo
 ```
 
-Obtains the prediction information about blankless loading (for details, see [BlanklessInfo](arkts-arkweb-blanklessinfo-i.md#blanklessinfo)) and starts to generate the loading transition frame. The application determines whether to enable blankless loading based on the information. This API must be used together with the [setBlanklessLoadingWithKey](arkts-arkweb-webviewcontroller-c.md#setblanklessloadingwithkey-1) API before the page loading API is triggered or in **onLoadIntercept**, and after the **WebViewController** is bound to the **Web** component. > **NOTE** > > - The default size of the persistent cache capacity is 30 MB (about 30 pages). You can set the cache capacity > by calling [setBlanklessLoadingCacheCapacity](arkts-arkweb-webviewcontroller-c.md#setblanklessloadingcachecapacity-1) > . For details, see the description of this API. When the maximum capacity is exceeded, the cache is updated > based on the Least Recently Used (LRU) mechanism. The persistent cache data that has been stored for more than > seven days is automatically cleared. After the cache is cleared, the optimization effect appears when the page > is loaded for the third time. > > - If the snapshot similarity (**similarity** in [BlanklessInfo](arkts-arkweb-blanklessinfo-i.md#blanklessinfo)) > is extremely low, check whether the **key** value is correct. > > - After this API is called, page loading snapshot detection and transition frame generation calculation are > enabled, which generates certain resource overhead. > > - Blankless loading consumes certain resources, which depends on the resolution of the **Web** component. When > the width and height of the resolution are respectively **w** and **h**, the peak memory usage increases by > about **12 × w × h** B in the page-opening phase. After the page is opened, the memory is reclaimed, which does > not affect the stable memory usage. When the size of the solid-state application cache is increased, the > increased cache of each page is about **w × h/10** B and the cache is located in the application cache. > > - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5** > . For details, see > [Declaring Permissions in the Configuration File](../../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
+Obtains the prediction information about blankless loading (for details, see [BlanklessInfo](arkts-arkweb-blanklessinfo-i.md)) and starts to generate the loading transition frame. The application determines whether to enable blankless loading based on the information. This API must be used together with the [setBlanklessLoadingWithKey](arkts-arkweb-webviewcontroller-c.md#setblanklessloadingwithkey-1) API before the page loading API is triggered or in **onLoadIntercept**, and after the **WebViewController** is bound to the **Web** component. > **NOTE** > > - The default size of the persistent cache capacity is 30 MB (about 30 pages). You can set the cache capacity > by calling [setBlanklessLoadingCacheCapacity](arkts-arkweb-webviewcontroller-c.md#setblanklessloadingcachecapacity-1) > . For details, see the description of this API. When the maximum capacity is exceeded, the cache is updated > based on the Least Recently Used (LRU) mechanism. The persistent cache data that has been stored for more than > seven days is automatically cleared. After the cache is cleared, the optimization effect appears when the page > is loaded for the third time. > > - If the snapshot similarity (**similarity** in [BlanklessInfo](arkts-arkweb-blanklessinfo-i.md)) > is extremely low, check whether the **key** value is correct. > > - After this API is called, page loading snapshot detection and transition frame generation calculation are > enabled, which generates certain resource overhead. > > - Blankless loading consumes certain resources, which depends on the resolution of the **Web** component. When > the width and height of the resolution are respectively **w** and **h**, the peak memory usage increases by > about **12 × w × h** B in the page-opening phase. After the page is opened, the memory is reclaimed, which does > not affect the stable memory usage. When the size of the solid-state application cache is increased, the > increased cache of each page is about **w × h/10** B and the cache is located in the application cache. > > - Add the **ohos.permission.INTERNET** and **ohos.permission.GET_NETWORK_INFO** permissions to **module.json5** > . For details, see > [Declaring Permissions in the Configuration File](../../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
 
 **Since:** 20
 
@@ -1813,7 +1813,7 @@ Get whether Ads block is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## isAdsBlockEnabledForCurPage
 
@@ -1839,7 +1839,7 @@ Get whether Ads block is enabled for current Webpage.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## isAutoPreconnectEnabled
 
@@ -1910,7 +1910,7 @@ Get whether Intelligent Tracking Prevention is enabled.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error.The WebviewController must be associated with a Web component. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## isPrivateNetworkAccessEnabled
 
@@ -2367,8 +2367,8 @@ Prefetch the resources required by the page, but will not execute js or render t
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URLlength exceeds 2048.<br>**Applicable version:** 21 |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URLlength exceeds 2048.<br>**Applicable version:** 21 |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URLlength exceeds 2048.<br>**Applicable version:** 21 and later |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URLlength exceeds 2048.<br>**Applicable version:** 21 and later |
 
 ## prefetchResource
 
@@ -2584,7 +2584,7 @@ Remove bypassing hosts for Intelligent Tracking Prevention.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## requestFocus
 
@@ -3143,7 +3143,7 @@ Sets whether to enable blankless loading. This API must be used together with [g
 
 | Type | Description |
 | --- | --- |
-| WebBlanklessErrorCode | Whether the API is successfully called. For details, see[WebBlanklessErrorCode](arkts-arkweb-webblanklesserrorcode-e.md#webblanklesserrorcode). |
+| WebBlanklessErrorCode | Whether the API is successfully called. For details, see[WebBlanklessErrorCode](arkts-arkweb-webblanklesserrorcode-e.md). |
 
 **Error codes:**
 
@@ -3482,7 +3482,7 @@ Sets whether this web page is scrollable.
 static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 ```
 
-Sets the global scrollbar mode in the web page. When this API is not explicitly called, [ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-scrollbarmode-e.md#scrollbarmode) is used by default, indicating that the scroll bar is not always displayed. > **NOTE** > > - You can set whether to always display the web scrollbar of the current application based on the scrollbar > mode. > > - If the > [forceDisplayScrollBar](@ohos.web.WebAttribute#forcedisplayscrollbar) > API is set at the same time as this API, the setting of **forceDisplayScrollBar** does not take effect. > > - This API must be called before WebViewController is bound to a **Web** component.
+Sets the global scrollbar mode in the web page. When this API is not explicitly called, [ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-scrollbarmode-e.md) is used by default, indicating that the scroll bar is not always displayed. > **NOTE** > > - You can set whether to always display the web scrollbar of the current application based on the scrollbar > mode. > > - If the > [forceDisplayScrollBar](@ohos.web.WebAttribute#forcedisplayscrollbar) > API is set at the same time as this API, the setting of **forceDisplayScrollBar** does not take effect. > > - This API must be called before WebViewController is bound to a **Web** component.
 
 **Since:** 23
 

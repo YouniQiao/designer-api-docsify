@@ -9,7 +9,7 @@ Defines the type of the param array used for calling the API.
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from '@ohos.security.huksExternalCrypto';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## tag

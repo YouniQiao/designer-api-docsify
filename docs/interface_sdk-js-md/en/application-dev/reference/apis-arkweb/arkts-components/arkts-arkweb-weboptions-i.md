@@ -12,7 +12,7 @@ Defines web options through the [APIs](arkts-arkweb-web.md).
 controller: WebController | WebviewController
 ```
 
-Controller that controls various behaviors of **Web** components, including page navigation, declaration period status, and JavaScript interaction. **WebController** is deprecated since API version 9. You are advised to use [WebviewController](arkts-arkweb-webviewcontroller-t.md#webviewcontroller) instead.
+Controller that controls various behaviors of **Web** components, including page navigation, declaration period status, and JavaScript interaction. **WebController** is deprecated since API version 9. You are advised to use [WebviewController](arkts-arkweb-webviewcontroller-t.md) instead.
 
 **Type:** WebController | WebviewController
 

@@ -6,7 +6,7 @@ Provides detailed file information. Before calling a method of the **Stat** clas
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:Stat](arkts-corefile-stat-i.md#stat)
+**Substitutes:** [fs:Stat](arkts-corefile-stat-i.md)
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

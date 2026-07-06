@@ -81,6 +81,8 @@ Define the result of the function execution.
 | AUDIOSTREAM_ERROR_ILLEGAL_STATE = 2 |  Execution status exception.<br>**Since**: 10 |
 | AUDIOSTREAM_ERROR_SYSTEM = 3 |  An system error has occurred.<br>**Since**: 10 |
 | AUDIOSTREAM_ERROR_UNSUPPORTED_FORMAT = 4 |  Unsupported audio format, such as unsupported encoding type, sample format etc.<br>**Since**: 19 |
+| AUDIOSTREAM_ERROR_UNSUPPORTED_ABILITY = 6800104 |  Unsupported audio stream ability, including function and configuration.<br>**Since**: 26.0.0 |
+| AUDIOSTREAM_ERROR_SERVICE_DIED = 6800302 |  Audio server process died.<br>**Since**: 26.0.0 |
 
 ### OH_AudioStream_Type
 

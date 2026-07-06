@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from '@ohos.bundle.shortcutManager';
+import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## getAllDesktopShortcutInfo

@@ -9,7 +9,7 @@ Defines the properties of PasteData in the pasteboard, including the timestamp, 
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@ohos.pasteboard';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## additions
@@ -34,7 +34,7 @@ Additional property data. It does not allow for dynamic adding of properties. Pr
 localOnly: boolean
 ```
 
-Whether the pasteboard content is for local access only. The default value is **false**. The value will be overwritten by the value of the **shareOption** attribute. You are advised to use the [ShareOption](arkts-basicservices-shareoption-e.md#shareoption) attribute instead.
+Whether the pasteboard content is for local access only. The default value is **false**. The value will be overwritten by the value of the **shareOption** attribute. You are advised to use the [ShareOption](arkts-basicservices-shareoption-e.md) attribute instead.
 
 **Type:** boolean
 

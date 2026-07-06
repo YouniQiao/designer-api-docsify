@@ -144,7 +144,7 @@ Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onhover-1) eve
 setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void
 ```
 
-Sets the callback for the [key event](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common).
+Sets the callback for the [key event](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).
 
 **Since:** 12
 

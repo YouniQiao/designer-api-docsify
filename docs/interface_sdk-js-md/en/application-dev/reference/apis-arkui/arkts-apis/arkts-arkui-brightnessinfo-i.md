@@ -9,7 +9,7 @@ Describes the screen brightness information. The information comes from the unde
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@ohos.display';
+import { display } from '@kit.ArkUI';
 ```
 
 ## brightnessPosition

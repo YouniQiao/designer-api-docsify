@@ -9,7 +9,7 @@ Implements a matrix. A 3 x 3 matrix is shown as below. ![matrix_3x3](../../../..
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor

@@ -9,7 +9,7 @@ HorizontalAlign enumeration description.
 ## Start
 
 ```TypeScript
-Start = 0
+Start
 ```
 
 Aligns the start end in the language direction.
@@ -25,7 +25,7 @@ Aligns the start end in the language direction.
 ## Center
 
 ```TypeScript
-Center = 1
+Center
 ```
 
 Center alignment. The default alignment mode is used.
@@ -41,7 +41,7 @@ Center alignment. The default alignment mode is used.
 ## End
 
 ```TypeScript
-End = 2
+End
 ```
 
 Aligns the ends in the language direction.

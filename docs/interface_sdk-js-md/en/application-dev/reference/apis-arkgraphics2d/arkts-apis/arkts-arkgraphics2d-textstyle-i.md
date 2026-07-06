@@ -9,7 +9,7 @@ Describes a text style.
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@ohos.graphics.text';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## backgroundRect
@@ -358,7 +358,7 @@ Character spacing, a floating-point value in physical pixels (px) with a default
 lineHeightMaximum?: number
 ```
 
-Maximum line height, in physical pixels (px). If the line height is scaled, the maximum line height takes effect when [TextStyle](arkts-arkgraphics2d-textstyle-i.md#textstyle).heightScale is greater than 0. The value is a positive floating point number. The default value is **Number.MAX_VALUE**.
+Maximum line height, in physical pixels (px). If the line height is scaled, the maximum line height takes effect when [TextStyle](arkts-arkgraphics2d-textstyle-i.md).heightScale is greater than 0. The value is a positive floating point number. The default value is **Number.MAX_VALUE**.
 
 **Type:** number
 
@@ -374,7 +374,7 @@ Maximum line height, in physical pixels (px). If the line height is scaled, the 
 lineHeightMinimum?: number
 ```
 
-Minimum line height, in physical pixels (px). If the line height is scaled, the minimum line height takes effect when [TextStyle](arkts-arkgraphics2d-textstyle-i.md#textstyle).heightScale is greater than 0. The value is a non-negative floating point number. The default value is **0**.
+Minimum line height, in physical pixels (px). If the line height is scaled, the minimum line height takes effect when [TextStyle](arkts-arkgraphics2d-textstyle-i.md).heightScale is greater than 0. The value is a non-negative floating point number. The default value is **0**.
 
 **Type:** number
 

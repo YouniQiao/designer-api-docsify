@@ -128,10 +128,10 @@
   - [OPENFLAGS(system api)](arkts-corefile-openflags-e-sys.md)<!--DelEnd--><!--Del-->
   - [Constants(system api)](arkts-corefile-fileaccess-con-sys.md)<!--DelEnd-->
 - [@ohos.file.fileExtensionInfo](arkts-file-fileextensioninfo.md)
-  - [fileExtensionInfo](arkts-corefile-fileextensioninfo-sta-n.md)
-    - [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-sta-n.md)<!--Del-->
+  - [fileExtensionInfo](arkts-corefile-fileextensioninfo-n.md)
+    - [DeviceFlag](arkts-corefile-deviceflag-n.md)<!--Del-->
       - [Constants(system api)](arkts-corefile-deviceflag-con-sys.md)<!--DelEnd-->
-    - [DocumentFlag](arkts-corefile-fileextensioninfo-documentflag-sta-n.md)<!--Del-->
+    - [DocumentFlag](arkts-corefile-documentflag-n.md)<!--Del-->
       - [Constants(system api)](arkts-corefile-documentflag-con-sys.md)<!--DelEnd--><!--Del-->
     - [DeviceType(system api)](arkts-corefile-devicetype-e-sys.md)<!--DelEnd-->
 - [@ohos.file.fileuri](arkts-file-fileuri.md)
@@ -139,7 +139,7 @@
   - [FileUri](arkts-corefile-fileuri-c.md)
 - [@ohos.file.fs](arkts-file-fs.md)
   - [fileIo](arkts-corefile-fileio-n.md)
-    - [OpenMode](arkts-corefile-fileio-openmode-n.md)
+    - [OpenMode](arkts-corefile-openmode-n.md)
       - [Constants](arkts-corefile-openmode-con.md)
   - [access](arkts-corefile-file-fs-access-f.md)
   - [accessSync](arkts-corefile-file-fs-accesssync-f.md)

@@ -1,6 +1,6 @@
 # List properties/events
 
-In addition to [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) and [scrollable component common attributes](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes) , the following attributes are also supported. In addition to [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) and [scrollable component common events](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events) , the following events are also supported.
+In addition to [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) and [scrollable component common attributes](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes) , the following attributes are also supported. In addition to [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) and [scrollable component common events](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events) , the following events are also supported.
 
 **Inheritance/Implementation:** ListAttribute extends [ScrollableCommonMethod<ListAttribute>](ScrollableCommonMethod<ListAttribute>)
 
@@ -50,7 +50,7 @@ Sets the system back button behavior of the **List** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| behavior | ListBackPressBehavior \| undefined | Yes | System back button behavior of the **List** component.Currently, you can use the [ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md#listbackpressbehavior) parameter to configure whetherto collapse the expanded swipe-out component of a **ListItem** when the system back button takes effect.<br>Ifthis parameter is set to **undefined**, the default behavior is restored. That is, when the system back buttontakes effect, the expanded swipe-out component of the **ListItem** is collapsed. |
+| behavior | ListBackPressBehavior \| undefined | Yes | System back button behavior of the **List** component.Currently, you can use the [ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md) parameter to configure whetherto collapse the expanded swipe-out component of a **ListItem** when the system back button takes effect.<br>Ifthis parameter is set to **undefined**, the default behavior is restored. That is, when the system back buttontakes effect, the expanded swipe-out component of the **ListItem** is collapsed. |
 
 ## cachedCount
 
@@ -264,7 +264,7 @@ divider(
   )
 ```
 
-Sets the style of the divider for the list items. By default, there is no divider. The divider is drawn between list items along the main axis, and not above the first list item and below the last list item. In multi-column mode, the value of **startMargin** is calculated from the start edge of the cross axis of each column. In single-column mode, it is calculated from the start edge of the cross axis of the list. When a list item has [polymorphic styles](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) applied, the dividers above and below the pressed child component are not rendered.
+Sets the style of the divider for the list items. By default, there is no divider. The divider is drawn between list items along the main axis, and not above the first list item and below the last list item. In multi-column mode, the value of **startMargin** is calculated from the start edge of the cross axis of each column. In single-column mode, it is calculated from the start edge of the cross axis of the list. When a list item has [polymorphic styles](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) applied, the dividers above and below the pressed child component are not rendered.
 
 **Since:** 7
 
@@ -387,7 +387,7 @@ Sets whether to support the scroll gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support the scroll gesture. With the value **true**, scrolling via finger ormouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affectthe scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md#scroller).<br>Default value: **true** |
+| value | boolean | Yes | Whether to support the scroll gesture. With the value **true**, scrolling via finger ormouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affectthe scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).<br>Default value: **true** |
 
 ## focusWrapMode
 
@@ -689,7 +689,7 @@ Triggered when a list item starts to be dragged. Automatic scrolling of the list
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | OnItemDragStartCallback | Yes | Callback triggered when the dragging of a list item starts.<br> In APIversion 22 and earlier versions, the parameter type is**(event: ItemDragInfo, itemIndex: number) =&gt; (() =&gt; any) \| void**. For details about the **event** and**itemIndex** parameters, see [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md#onitemdragstartcallback).<br>**Since:** 23 |
+| event | OnItemDragStartCallback | Yes | Callback triggered when the dragging of a list item starts.<br> In APIversion 22 and earlier versions, the parameter type is**(event: ItemDragInfo, itemIndex: number) =&gt; (() =&gt; any) \| void**. For details about the **event** and**itemIndex** parameters, see [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md).<br>**Since:** 23 |
 
 ## onItemDrop
 
@@ -851,7 +851,7 @@ Triggered when a child component enters or leaves the list display area.
 onScrollStart(event: () => void)
 ```
 
-Triggered when the list starts scrolling initiated by the user's finger dragging the list or its scrollbar. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroller-c.md#scroller) starts.
+Triggered when the list starts scrolling initiated by the user's finger dragging the list or its scrollbar. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroller-c.md) starts.
 
 **Since:** 9
 
@@ -873,7 +873,7 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 onScrollStop(event: () => void)
 ```
 
-Triggered when the list stops scrolling after the user's finger leaves the screen. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroller-c.md#scroller) stops.
+Triggered when the list stops scrolling after the user's finger leaves the screen. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroller-c.md) stops.
 
 **Since:** 7
 

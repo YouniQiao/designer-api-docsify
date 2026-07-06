@@ -16,7 +16,7 @@ function usbCancelTransfer(transfer: UsbDataTransferParams): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transfer | UsbDataTransferParams | 是 | 在取消传输的接口中，只需要填充[USBDevicePipe](arkts-basicservices-usbdevicepipe-i.md#usbdevicepipe)和[USBEndpoint](arkts-basicservices-usbendpoint-i.md#usbendpoint)即可。 |
+| transfer | UsbDataTransferParams | 是 | 在取消传输的接口中，只需要填充[USBDevicePipe](arkts-basicservices-usbdevicepipe-i.md)和[USBEndpoint](arkts-basicservices-usbendpoint-i.md)即可。 |
 
 **错误码：**
 

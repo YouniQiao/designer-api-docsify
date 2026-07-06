@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@ohos.enterprise.EnterpriseAdminExtensionAbility';
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
 ```
 
 ## Summary

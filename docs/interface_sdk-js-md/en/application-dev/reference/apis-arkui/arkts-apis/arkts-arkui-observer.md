@@ -9,7 +9,7 @@ Provides APIs for listening for UI component behavior changes. > **NOTE** > > - 
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@ohos.arkui.observer';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -69,7 +69,7 @@ import { uiObserver } from '@ohos.arkui.observer';
 | Name | Description |
 | --- | --- |
 | [NavDestinationState](arkts-arkui-navdestinationstate-e.md) | Describes the state of the **NavDestination** component. |
-| [RouterPageState](arkts-arkui-routerpagestate-e.md) | Enumerates the states of a page during routing. **RouterPageState** is used in [RouterPageInfo](arkts-arkui-routerpageinfo-c.md#routerpageinfo) as the callback parameter for passive observation via [routerPageUpdate](uiObserver.on(type: 'routerPageUpdate', context: UIAbilityContext \| UIContext, callback: Callback&lt;RouterPageInfo&gt;)). |
+| [RouterPageState](arkts-arkui-routerpagestate-e.md) | Enumerates the states of a page during routing. **RouterPageState** is used in [RouterPageInfo](arkts-arkui-routerpageinfo-c.md) as the callback parameter for passive observation via [routerPageUpdate](uiObserver.on(type: 'routerPageUpdate', context: UIAbilityContext \| UIContext, callback: Callback&lt;RouterPageInfo&gt;)). |
 | [ScrollEventType](arkts-arkui-scrolleventtype-e.md) | ScrollEvent type. |
 | [TabContentState](arkts-arkui-tabcontentstate-e.md) | TabContent state. |
 

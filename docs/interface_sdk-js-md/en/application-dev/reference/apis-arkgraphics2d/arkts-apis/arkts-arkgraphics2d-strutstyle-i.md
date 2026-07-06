@@ -9,7 +9,7 @@ Describes the strut style, which determines the line spacing, baseline alignment
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@ohos.graphics.text';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## enabled

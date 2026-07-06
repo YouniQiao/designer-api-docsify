@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { CounterType, DateData, CounterComponent, CounterOptions } from '@ohos.arkui.advanced.Counter';
+import { CounterType, DateData, CounterComponent, CounterOptions } from '@kit.ArkUI';
 ```
 
 ## Summary

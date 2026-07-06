@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from '@ohos.bundleState';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryBundleStateInfoByInterval

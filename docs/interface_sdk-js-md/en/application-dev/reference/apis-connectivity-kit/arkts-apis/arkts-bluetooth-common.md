@@ -9,7 +9,7 @@ Provide common Bluetooth interfaces and types.
 ## Modules to Import
 
 ```TypeScript
-import { common } from '@ohos.bluetooth.common';
+import { common } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

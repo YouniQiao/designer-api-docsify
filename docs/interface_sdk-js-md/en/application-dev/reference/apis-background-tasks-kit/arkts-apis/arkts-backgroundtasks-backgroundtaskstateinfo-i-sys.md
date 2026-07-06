@@ -11,7 +11,7 @@ Defines the authorization information of a continuous task.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@ohos.resourceschedule.backgroundTaskManager';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## appIndex

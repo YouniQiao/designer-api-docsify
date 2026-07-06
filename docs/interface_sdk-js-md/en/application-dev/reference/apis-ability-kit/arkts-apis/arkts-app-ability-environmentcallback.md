@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { EnvironmentCallback } from '@ohos.app.ability.EnvironmentCallback';
+import { EnvironmentCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

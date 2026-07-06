@@ -9,7 +9,7 @@ This module provides constants for agent.
 ## Modules to Import
 
 ```TypeScript
-import { agentConstant } from '@ohos.app.agent.agentConstant';
+import { agentConstant } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -1,6 +1,6 @@
 # SideBarContainer properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following events are supported.
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following events are supported.
 
 **Inheritance/Implementation:** SideBarContainerAttribute extends [CommonMethod<SideBarContainerAttribute>](CommonMethod<SideBarContainerAttribute>)
 
@@ -96,7 +96,7 @@ Sets the maximum width of the sidebar. If a value less than 0 is set, the defaul
 maxSideBarWidth(value: Length)
 ```
 
-Sets the maximum width of the sidebar. If a value less than 0 is set, the default value is used. The value cannot exceed the width of the sidebar container. If the specified value exceeds the sidebar container width, the container width is used instead. Compared with [maxSideBarWidth](SideBarContainerAttribute#maxSideBarWidth(value: number)), this API supports percentage strings and other [pixel units](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) for the **value** parameter. **maxSideBarWidth**, whether it is specified or kept at the default value, takes precedence over **maxWidth** of the sidebar child components.
+Sets the maximum width of the sidebar. If a value less than 0 is set, the default value is used. The value cannot exceed the width of the sidebar container. If the specified value exceeds the sidebar container width, the container width is used instead. Compared with [maxSideBarWidth](SideBarContainerAttribute#maxSideBarWidth(value: number)), this API supports percentage strings and other [pixel units](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) for the **value** parameter. **maxSideBarWidth**, whether it is specified or kept at the default value, takes precedence over **maxWidth** of the sidebar child components.
 
 **Since:** 9
 
@@ -158,7 +158,7 @@ Sets the minimum width of the sidebar. If a value less than 0 is set, the defaul
 minSideBarWidth(value: Length)
 ```
 
-Sets the minimum width of the sidebar. If a value less than 0 is set, the default value is used. The value cannot exceed the width of the sidebar container. If the specified value exceeds the sidebar container width, the container width is used instead. Compared to [minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number)), this API supports percentage strings and other [pixel units](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) for the **value** parameter. **minSideBarWidth**, whether it is specified or kept at the default value, takes precedence over **minWidth** of the sidebar child components.
+Sets the minimum width of the sidebar. If a value less than 0 is set, the default value is used. The value cannot exceed the width of the sidebar container. If the specified value exceeds the sidebar container width, the container width is used instead. Compared to [minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number)), this API supports percentage strings and other [pixel units](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) for the **value** parameter. **minSideBarWidth**, whether it is specified or kept at the default value, takes precedence over **minWidth** of the sidebar child components.
 
 **Since:** 9
 
@@ -300,7 +300,7 @@ Sets the width of the sidebar. If a value less than 0 is set, the default value 
 sideBarWidth(value: Length)
 ```
 
-Sets the width of the sidebar. If a value less than 0 is set, the default value is used. The value must comply with the width constraints. If it is not within the valid range, the valid value closest to the set one is used. Compared to [sideBarWidth](SideBarContainerAttribute#sideBarWidth(value: number)), this API supports percentage strings and other [pixel units](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) for the **value** parameter. Since API version 18, this attribute supports two-way binding through [!!](../../../../ui/state-management/arkts-new-binding.md).
+Sets the width of the sidebar. If a value less than 0 is set, the default value is used. The value must comply with the width constraints. If it is not within the valid range, the valid value closest to the set one is used. Compared to [sideBarWidth](SideBarContainerAttribute#sideBarWidth(value: number)), this API supports percentage strings and other [pixel units](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) for the **value** parameter. Since API version 18, this attribute supports two-way binding through [!!](../../../../ui/state-management/arkts-new-binding.md).
 
 **Since:** 9
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodExtraConfig } from '@ohos.inputMethod.ExtraConfig';
+import { InputMethodExtraConfig } from '@kit.IMEKit';
 ```
 
 ## Summary

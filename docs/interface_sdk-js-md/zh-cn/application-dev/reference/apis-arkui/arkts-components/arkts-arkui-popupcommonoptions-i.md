@@ -468,7 +468,7 @@ placement?: Placement
 popupColor?: ResourceColor
 ```
 
-气泡的颜色。如需去除模糊背景填充效果，需将backgroundBlurStyle设置为BlurStyle.NONE。默认值：透明色[TRANSPARENT](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md#color)加模糊背景填充效果 [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#blurstyle)。
+气泡的颜色。如需去除模糊背景填充效果，需将backgroundBlurStyle设置为BlurStyle.NONE。默认值：透明色[TRANSPARENT](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md)加模糊背景填充效果 [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)。
 
 **类型：** ResourceColor
 

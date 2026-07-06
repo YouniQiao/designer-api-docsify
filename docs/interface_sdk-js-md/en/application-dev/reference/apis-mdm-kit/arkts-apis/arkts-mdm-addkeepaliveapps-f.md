@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@ohos.enterprise.applicationManager';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## addKeepAliveApps

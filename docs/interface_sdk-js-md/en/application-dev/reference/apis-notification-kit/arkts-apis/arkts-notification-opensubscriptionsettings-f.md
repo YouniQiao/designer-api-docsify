@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationExtensionSubscription } from '@ohos.notificationExtensionSubscription';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## openSubscriptionSettings

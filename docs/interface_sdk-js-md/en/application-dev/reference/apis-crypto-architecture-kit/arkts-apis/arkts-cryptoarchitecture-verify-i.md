@@ -11,7 +11,7 @@ Provides APIs for signature verification. Before using any API of the **Verify**
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## getVerifySpec
@@ -50,7 +50,7 @@ Obtains signature verification specifications. Currently, only RSA is supported.
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -97,7 +97,7 @@ Initializes the **Verify** object using a public key. This API uses an asynchron
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
 
 ## init
 
@@ -135,7 +135,7 @@ Initializes the **Verify** object using a public key. This API uses a promise to
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
 
 ## initSync
 
@@ -165,7 +165,7 @@ Initializes the **Verify** instance with a public key. This API returns the resu
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
 
 ## recover
 
@@ -201,7 +201,7 @@ Recovers the original data from a signature. This API uses a promise to return t
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -316,7 +316,7 @@ Recovers the original data from a signature. This API returns the result synchro
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 
 ## setVerifySpec
 
@@ -349,7 +349,7 @@ Sets signature verification specifications. You can use this API to set signatur
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -394,9 +394,9 @@ Sets the specified parameter for the Verify object. Currently, only PSS_SALT_LEN
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters.<br>**Applicable version:** 26.0.0 |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
-| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 |
+| [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters.<br>**Applicable version:** 26.0.0 and later |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
 
 ## setVerifySpec
@@ -451,7 +451,7 @@ function testSetVerifySpec() {
 update(data: DataBlob, callback: AsyncCallback<void>): void
 ```
 
-Updates the data for signature verification. This API uses an asynchronous callback to return the result. This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i.md#verify) instance is initialized using [init](arkts-cryptoarchitecture-verify-i.md#init-1) or [initSync](arkts-cryptoarchitecture-verify-i.md#initsync-1). > **NOTE** > > You can call **update** multiple times or do not use **update** (call > [verify](arkts-cryptoarchitecture-verify-i.md#verify-2) > after [init](arkts-cryptoarchitecture-verify-i.md#init-1)), depending on > the data volume. > > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > > For details about the sample code for calling **update()** multiple times in signature verification, see > [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md) > . The operations of other algorithms are similar. > > **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in > data. > > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is > not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+Updates the data for signature verification. This API uses an asynchronous callback to return the result. This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i.md) instance is initialized using [init](arkts-cryptoarchitecture-verify-i.md#init-1) or [initSync](arkts-cryptoarchitecture-verify-i.md#initsync-1). > **NOTE** > > You can call **update** multiple times or do not use **update** (call > [verify](arkts-cryptoarchitecture-verify-i.md#verify-2) > after [init](arkts-cryptoarchitecture-verify-i.md#init-1)), depending on > the data volume. > > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > > For details about the sample code for calling **update()** multiple times in signature verification, see > [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md) > . The operations of other algorithms are similar. > > **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in > data. > > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is > not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 9
 
@@ -476,7 +476,7 @@ Updates the data for signature verification. This API uses an asynchronous callb
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 
 ## update
 
@@ -484,7 +484,7 @@ Updates the data for signature verification. This API uses an asynchronous callb
 update(data: DataBlob): Promise<void>
 ```
 
-Updates the data for signature verification. This API uses a promise to return the result. This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i.md#verify) instance is initialized using [init()](arkts-cryptoarchitecture-verify-i.md#init-1). > **NOTE** > > You can call **update** multiple times or do not use **update** (call > [verify](arkts-cryptoarchitecture-verify-i.md#verify-4) after > [init](arkts-cryptoarchitecture-verify-i.md#init-1)), depending on the data volume. > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > For details about the sample code for calling **update()** multiple times in signature verification, see > [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md) > . The operations of other algorithms are similar. > **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in > data. > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is > not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+Updates the data for signature verification. This API uses a promise to return the result. This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i.md) instance is initialized using [init()](arkts-cryptoarchitecture-verify-i.md#init-1). > **NOTE** > > You can call **update** multiple times or do not use **update** (call > [verify](arkts-cryptoarchitecture-verify-i.md#verify-4) after > [init](arkts-cryptoarchitecture-verify-i.md#init-1)), depending on the data volume. > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > For details about the sample code for calling **update()** multiple times in signature verification, see > [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md) > . The operations of other algorithms are similar. > **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in > data. > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is > not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 9
 
@@ -514,7 +514,7 @@ Updates the data for signature verification. This API uses a promise to return t
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 
 ## updateSync
 
@@ -522,7 +522,7 @@ Updates the data for signature verification. This API uses a promise to return t
 updateSync(data: DataBlob): void
 ```
 
-Updates the data for signature verification. This API returns the result synchronously. This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i.md#verify) instance is initialized by using [initSync()](arkts-cryptoarchitecture-verify-i.md#initsync-1). > **NOTE** > > You can call **updateSync** multiple times or do not use **updateSync** (call > [verifySync](arkts-cryptoarchitecture-verify-i.md#verifysync-1) after [initSync](arkts-cryptoarchitecture-verify-i.md#initsync-1)), > depending on the data volume. > The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is > a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment. > This prevents too much memory from being requested at a time. > For details about the sample code for calling **updateSync** multiple times in signature verification, see > [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md) > . The operations of other algorithms are similar. > **OnlyVerify** cannot be used with **updateSync()**. If **OnlyVerify** is specified, use **verifySync()** to pass > in data. > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **updateSync** > is not supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned. <br><br>**NOTE** <br>It is recommended to prioritize the use of asynchronous API, {@link update}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Updates the data for signature verification. This API returns the result synchronously. This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i.md) instance is initialized by using [initSync()](arkts-cryptoarchitecture-verify-i.md#initsync-1). > **NOTE** > > You can call **updateSync** multiple times or do not use **updateSync** (call > [verifySync](arkts-cryptoarchitecture-verify-i.md#verifysync-1) after [initSync](arkts-cryptoarchitecture-verify-i.md#initsync-1)), > depending on the data volume. > The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is > a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment. > This prevents too much memory from being requested at a time. > For details about the sample code for calling **updateSync** multiple times in signature verification, see > [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md) > . The operations of other algorithms are similar. > **OnlyVerify** cannot be used with **updateSync()**. If **OnlyVerify** is specified, use **verifySync()** to pass > in data. > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **updateSync** > is not supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned. <br><br>**NOTE** <br>It is recommended to prioritize the use of asynchronous API, {@link update}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -544,7 +544,7 @@ Updates the data for signature verification. This API returns the result synchro
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 
 ## verify
 
@@ -578,7 +578,7 @@ Verifies the message, including the update data. This API uses an asynchronous c
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## verify
 
@@ -612,7 +612,7 @@ Verifies the signature of the data. This API uses an asynchronous callback to re
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## verify
 
@@ -651,7 +651,7 @@ Verifies the message, including the update data. This API uses a promise to retu
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## verify
 
@@ -690,7 +690,7 @@ Verifies the signature of the data. This API uses a promise to return the result
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## verifySync
 
@@ -727,7 +727,7 @@ Verifies the signature. This API returns the verification result synchronously. 
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 

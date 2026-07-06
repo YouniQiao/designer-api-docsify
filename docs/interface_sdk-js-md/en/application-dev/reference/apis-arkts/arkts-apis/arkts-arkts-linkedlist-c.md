@@ -9,7 +9,7 @@ LinkedList is implemented based on the doubly linked list. Each node of the doub
 ## Modules to Import
 
 ```TypeScript
-import { LinkedList } from '@ohos.util.LinkedList';
+import { LinkedList } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -382,7 +382,7 @@ Obtains an element at the specified position in this LinkedList.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range.<br>**Applicable version:** 23**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range.<br>**Applicable version:** 23 and later**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 
@@ -425,7 +425,7 @@ Obtains the first element in this LinkedList.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 
@@ -513,7 +513,7 @@ Obtains the last element in this LinkedList.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 
@@ -959,7 +959,7 @@ Replaces an element at the specified position in this LinkedList with a given el
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 

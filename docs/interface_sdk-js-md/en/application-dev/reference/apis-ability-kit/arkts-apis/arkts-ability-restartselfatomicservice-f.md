@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@ohos.app.ability.abilityManager';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## restartSelfAtomicService
@@ -26,7 +26,7 @@ Restarts the current atomic service. > **NOTE** > > - Currently, atomic services
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability.<br>Note: Currently, only[UIAbilityContext](arkts-ability-uiabilitycontext-c.md#uiabilitycontext) is supported.<br> |
+| context | Context | Yes | Context of the ability.<br>Note: Currently, only[UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported.<br> |
 
 **Error codes:**
 

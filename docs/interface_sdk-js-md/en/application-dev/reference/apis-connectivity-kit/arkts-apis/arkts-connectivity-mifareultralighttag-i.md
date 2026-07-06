@@ -2,7 +2,7 @@
 
 Provides methods for accessing MifareUltralight tag.
 
-**Inheritance/Implementation:** MifareUltralightTag extends [TagSession](arkts-connectivity-tagsession-i.md#tagsession)
+**Inheritance/Implementation:** MifareUltralightTag extends [TagSession](arkts-connectivity-tagsession-i.md)
 
 **Since:** 12
 

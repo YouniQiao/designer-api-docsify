@@ -9,7 +9,7 @@ In the following API examples, you must first use [getKeyboardDelegate](arkts-im
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@ohos.inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## abilityName

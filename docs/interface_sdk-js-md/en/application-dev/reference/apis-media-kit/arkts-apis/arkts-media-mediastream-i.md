@@ -9,7 +9,7 @@ Media Stream. AVPlayer use this for mediaData access, current version only suppo
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## bitrate

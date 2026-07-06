@@ -2,7 +2,7 @@
 
 Provides methods for accessing NdefFormatable tag.
 
-**Inheritance/Implementation:** NdefFormatableTag extends [TagSession](arkts-connectivity-tagsession-i.md#tagsession)
+**Inheritance/Implementation:** NdefFormatableTag extends [TagSession](arkts-connectivity-tagsession-i.md)
 
 **Since:** 12
 

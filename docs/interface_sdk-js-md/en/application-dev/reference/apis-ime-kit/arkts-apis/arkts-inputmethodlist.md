@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Pattern, InputMethodListDialog, PatternOptions } from '@ohos.inputMethodList';
+import { Pattern, InputMethodListDialog, PatternOptions } from '@kit.IMEKit';
 ```
 
 ## Summary

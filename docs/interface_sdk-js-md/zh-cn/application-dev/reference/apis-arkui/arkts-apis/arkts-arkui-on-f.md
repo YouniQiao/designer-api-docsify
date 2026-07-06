@@ -301,7 +301,7 @@ display.on('foldDisplayModeChange', callback);
 function on(type: 'brightnessInfoChange', callback: BrightnessCallback<number, BrightnessInfo>): void
 ```
 
-开启所有屏幕亮度信息变化的监听。如果屏幕不支持HDR，监听到的[BrightnessInfo](arkts-arkui-brightnessinfo-i.md#brightnessinfo)对象中的currentHeadroom和maxHeadroom为默认值。虚拟 屏的BrightnessInfo对象中sdrNits为默认值。
+开启所有屏幕亮度信息变化的监听。如果屏幕不支持HDR，监听到的[BrightnessInfo](arkts-arkui-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟 屏的BrightnessInfo对象中sdrNits为默认值。
 
 **起始版本：** 22
 

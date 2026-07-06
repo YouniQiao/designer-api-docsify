@@ -9,7 +9,7 @@ Class BaseSelectOptions, which is extracted from class PhotoSelectOptions
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@ohos.file.photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## MIMEType

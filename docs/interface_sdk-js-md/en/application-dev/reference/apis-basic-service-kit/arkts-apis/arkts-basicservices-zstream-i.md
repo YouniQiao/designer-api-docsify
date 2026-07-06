@@ -9,7 +9,7 @@ Process all the information required for compression and decompression.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@ohos.zlib';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## adler

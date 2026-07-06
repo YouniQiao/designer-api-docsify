@@ -9,7 +9,7 @@ Describes the named route options.
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@ohos.router';
+import { router } from '@kit.ArkUI';
 ```
 
 ## name

@@ -9,7 +9,7 @@ Provides basic profile methods.
 ## Modules to Import
 
 ```TypeScript
-import { baseProfile } from '@ohos.bluetooth.baseProfile';
+import { baseProfile } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

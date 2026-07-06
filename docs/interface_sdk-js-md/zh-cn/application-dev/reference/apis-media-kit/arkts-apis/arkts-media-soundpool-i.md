@@ -1,6 +1,6 @@
 # SoundPool
 
-音频池提供了系统声音的加载、播放、音量设置、循环设置、停止播放和资源卸载等功能，在调用SoundPool的接口前，需要先通过 [media.createSoundPool](../../../../reference/apis-media-kit/arkts-apis-media-f.md) 创建实例。 > **说明：** > > - 在使用SoundPool实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。 > > - [on('loadComplete')](arkts-media-soundpool-i.md#on-1)：监听资源加载完成。建议开发者监听此回调以确 > 保音频在加载完成后进行播放。 > > - > [on('playFinishedWithStreamId')](arkts-media-soundpool-i.md#on-4)：监听播 > 放完成，同时返回播放结束的音频的streamId。 > > - [on('playFinished')](arkts-media-soundpool-i.md#on-4)：监听播放完成。 > > - [on('error')](arkts-media-soundpool-i.md#on-3)：监听错误事件。 > > - [on('errorOccurred')](arkts-media-soundpool-i.md#on-5)：监听错误事件，同时返回 > [errorInfo](arkts-media-errorinfo-i.md#errorinfo)。 > > - SoundPool目前不支持后台播放、设置音频打断等音频焦点策略和跳过音频头尾的静音帧。SoundPool低时延播放可参考 > [使用SoundPool播放短音频(ArkTS)](../../../../media/media/using-soundpool-for-playback.md)。
+音频池提供了系统声音的加载、播放、音量设置、循环设置、停止播放和资源卸载等功能，在调用SoundPool的接口前，需要先通过 [media.createSoundPool](../../../../reference/apis-media-kit/arkts-apis-media-f.md) 创建实例。 > **说明：** > > - 在使用SoundPool实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。 > > - [on('loadComplete')](arkts-media-soundpool-i.md#on-1)：监听资源加载完成。建议开发者监听此回调以确 > 保音频在加载完成后进行播放。 > > - > [on('playFinishedWithStreamId')](arkts-media-soundpool-i.md#on-4)：监听播 > 放完成，同时返回播放结束的音频的streamId。 > > - [on('playFinished')](arkts-media-soundpool-i.md#on-4)：监听播放完成。 > > - [on('error')](arkts-media-soundpool-i.md#on-3)：监听错误事件。 > > - [on('errorOccurred')](arkts-media-soundpool-i.md#on-5)：监听错误事件，同时返回 > [errorInfo](arkts-media-errorinfo-i.md)。 > > - SoundPool目前不支持后台播放、设置音频打断等音频焦点策略和跳过音频头尾的静音帧。SoundPool低时延播放可参考 > [使用SoundPool播放短音频(ArkTS)](../../../../media/media/using-soundpool-for-playback.md)。
 
 **起始版本：** 10
 
@@ -217,7 +217,7 @@ off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'errorOccurred' | 是 | 事件回调类型，取消注册的事件为'errorOccurred'。 |
-| callback | Callback&lt;ErrorInfo&gt; | 否 | 错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-errorinfo-i.md#errorinfo)，不设置callback时不提供相关信息。 |
+| callback | Callback&lt;ErrorInfo&gt; | 否 | 错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-errorinfo-i.md)，不设置callback时不提供相关信息。 |
 
 ## on('loadComplete')
 
@@ -301,7 +301,7 @@ on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
 on(type:'errorOccurred', callback:Callback<ErrorInfo>): void
 ```
 
-监听[SoundPool](../../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool)的错误事件，并返回包含错误码、错误发 生阶段、资源ID和音频流ID的[ErrorInfo](arkts-media-errorinfo-i.md#errorinfo)。使用callback异步回调。
+监听[SoundPool](../../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool)的错误事件，并返回包含错误码、错误发 生阶段、资源ID和音频流ID的[ErrorInfo](arkts-media-errorinfo-i.md)。使用callback异步回调。
 
 **起始版本：** 20
 
@@ -312,7 +312,7 @@ on(type:'errorOccurred', callback:Callback<ErrorInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'errorOccurred' | 是 | 事件回调类型，支持的事件为'errorOccurred'，当用户或系统操作导致错误，触发该事件。 |
-| callback | Callback&lt;ErrorInfo&gt; | 是 | 回调函数，返回错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-errorinfo-i.md#errorinfo)。 |
+| callback | Callback&lt;ErrorInfo&gt; | 是 | 回调函数，返回错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-errorinfo-i.md)。 |
 
 ## play
 

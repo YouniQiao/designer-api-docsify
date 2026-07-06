@@ -2,7 +2,7 @@
 
 固定样式对话框的选项。
 
-**继承/实现关系：** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialogbaseoptions-i.md#dialogbaseoptions)
+**继承/实现关系：** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialogbaseoptions-i.md)
 
 **起始版本：** 26.1.0
 

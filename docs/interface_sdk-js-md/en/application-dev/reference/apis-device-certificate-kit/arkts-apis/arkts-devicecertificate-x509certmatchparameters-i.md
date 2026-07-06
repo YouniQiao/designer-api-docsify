@@ -9,7 +9,7 @@ Defines the parameters used to match a certificate. If no parameter is specified
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## authorityKeyIdentifier

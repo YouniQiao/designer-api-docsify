@@ -9,7 +9,7 @@ Describes the business capabilities of the application.
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from '@ohos.FusionConnectivity.partnerAgent';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## supportMediaControl

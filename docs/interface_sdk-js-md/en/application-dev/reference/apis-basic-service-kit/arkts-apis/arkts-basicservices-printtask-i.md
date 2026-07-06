@@ -9,7 +9,7 @@ Implements event listeners for print jobs.
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@ohos.print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## off('block')

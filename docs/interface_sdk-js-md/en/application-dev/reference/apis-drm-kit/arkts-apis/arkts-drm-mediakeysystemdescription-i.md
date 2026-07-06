@@ -9,7 +9,7 @@ Name and UUID of DRM plugin.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@ohos.multimedia.drm';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## name

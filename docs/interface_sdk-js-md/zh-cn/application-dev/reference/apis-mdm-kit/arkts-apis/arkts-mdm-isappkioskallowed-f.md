@@ -18,7 +18,7 @@ function isAppKioskAllowed(appIdentifier: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appIdentifier | string | 是 | 应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md#signatureinfo)，可以通过接口[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfo-f.md#getbundleinfo-3)获取bundleInfo.signatureInfo.appIdentifier。 |
+| appIdentifier | string | 是 | 应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md)，可以通过接口[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfo-f.md#getbundleinfo-3)获取bundleInfo.signatureInfo.appIdentifier。 |
 
 **返回值：**
 

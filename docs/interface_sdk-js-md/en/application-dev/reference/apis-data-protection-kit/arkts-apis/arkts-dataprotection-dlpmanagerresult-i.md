@@ -9,7 +9,7 @@ Represents information about the trigger of the DLP manager application.
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@ohos.dlpPermission';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## resultCode

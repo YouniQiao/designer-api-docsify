@@ -18,7 +18,7 @@ function getStartupTaskResult(startupTask: string): Object
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startupTask | string | 是 | 启动任务[StartupTask](arkts-ability-startuptask-c.md#startuptask)的名称或预加载so名称。 |
+| startupTask | string | 是 | 启动任务[StartupTask](arkts-ability-startuptask-c.md)的名称或预加载so名称。 |
 
 **返回值：**
 

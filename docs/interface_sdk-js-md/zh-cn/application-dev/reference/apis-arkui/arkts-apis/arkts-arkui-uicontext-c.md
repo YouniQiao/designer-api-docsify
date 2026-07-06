@@ -41,7 +41,7 @@ addLocalInputEventMonitor(eventMask: number, listener: InputEventListener): Inpu
 animateTo(value: AnimateParam, event: () => void): void
 ```
 
-提供animateTo接口，用于为闭包代码中的状态变化添加过渡动画效果。 > **说明：** > > - 不推荐在aboutToAppear、aboutToDisappear中调用动画。 > > - 如果在[aboutToAppear](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中调用动 > 画，自定义组件内的build还未执行，内部组件还未创建，动画时机过早，动画属性没有初值无法对组件产生动画。 > > - 执行[aboutToDisappear](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear) > 时，组件即将销毁，不能在aboutToDisappear里面做动画。 > > - 在组件出现和消失时，可以通过[组件内转场](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)添加动画效果。 > > - 组件内转场不支持的属性，可以参考[显式动画](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)中的 > [示例2](../../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#示例2动画执行结束后组件消失)，使用animateTo实现动画执行结束后组件消失的效 > 果。 > > - 某些场景下，在[状态管理V2](../../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)中使用animateTo动画，会产生异常效果， > 具体可参考：[在状态管理V2中使用animateTo动画效果异常](../../../../ui/state-management/arkts-new-local.md#在状态管理v2中使用animateto动画效果异常)。 > > - UIAbility从前台切换至后台时会立即结束仍在步进中的有限循环动画，从而触发动画播放完成回调[onFinish](../arkts-components/arkts-arkui-animateparam-i.md#animateparam)。 > > - 在设置的开发者选项中关闭过渡动画，动画会当帧结束，onFinish动画播放完成回调会立即执行，请避免在回调中加入时序相关的功能逻辑。
+提供animateTo接口，用于为闭包代码中的状态变化添加过渡动画效果。 > **说明：** > > - 不推荐在aboutToAppear、aboutToDisappear中调用动画。 > > - 如果在[aboutToAppear](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中调用动 > 画，自定义组件内的build还未执行，内部组件还未创建，动画时机过早，动画属性没有初值无法对组件产生动画。 > > - 执行[aboutToDisappear](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear) > 时，组件即将销毁，不能在aboutToDisappear里面做动画。 > > - 在组件出现和消失时，可以通过[组件内转场](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)添加动画效果。 > > - 组件内转场不支持的属性，可以参考[显式动画](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)中的 > [示例2](../../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#示例2动画执行结束后组件消失)，使用animateTo实现动画执行结束后组件消失的效 > 果。 > > - 某些场景下，在[状态管理V2](../../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)中使用animateTo动画，会产生异常效果， > 具体可参考：[在状态管理V2中使用animateTo动画效果异常](../../../../ui/state-management/arkts-new-local.md#在状态管理v2中使用animateto动画效果异常)。 > > - UIAbility从前台切换至后台时会立即结束仍在步进中的有限循环动画，从而触发动画播放完成回调[onFinish](../arkts-components/arkts-arkui-animateparam-i.md)。 > > - 在设置的开发者选项中关闭过渡动画，动画会当帧结束，onFinish动画播放完成回调会立即执行，请避免在回调中加入时序相关的功能逻辑。
 
 **起始版本：** 10
 
@@ -197,7 +197,7 @@ createAnimator(options: AnimatorOptions): AnimatorResult
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-创建animator动画结果对象（AnimatorResult）。与[createAnimator](arkts-arkui-uicontext-c.md#createanimator-1)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md#simpleanimatoroptions)类型入参的支持。
+创建animator动画结果对象（AnimatorResult）。与[createAnimator](arkts-arkui-uicontext-c.md#createanimator-1)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md)类型入参的支持。
 
 **起始版本：** 18
 
@@ -245,7 +245,7 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext \| common.ExtensionContext | 是 | * [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md)或[ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-extensionability-c.md#extensionability)所对应的上下文环境。 |
+| context | common.UIAbilityContext \| common.ExtensionContext | 是 | * [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md)或[ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-extensionability-c.md)所对应的上下文环境。 |
 
 **返回值：**
 
@@ -354,7 +354,7 @@ whether to enable or disable swipe to back event.
 fp2px(value: number): number
 ```
 
-将fp单位的数值转换为以px为单位的数值。 转换公式为：px值 = fp值 × 像素密度 × 字体缩放比例 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-virtualscreenconfig-i.md#virtualscreenconfig).density。 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。 > **说明：** > > getUIContext需在windowStage. > [loadContent](../../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。
+将fp单位的数值转换为以px为单位的数值。 转换公式为：px值 = fp值 × 像素密度 × 字体缩放比例 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-virtualscreenconfig-i.md).density。 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。 > **说明：** > > getUIContext需在windowStage. > [loadContent](../../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。
 
 **起始版本：** 12
 
@@ -438,7 +438,7 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。 |
+| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
 
 **返回值：**
 
@@ -734,7 +734,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。 |
+| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
 
 **返回值：**
 
@@ -790,7 +790,7 @@ getHostContext(): Context | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Context | Context of the ability. The context type depends on the ability type. For example,if this API is called in a page within a UIAbility window, the returned context type is[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#uiabilitycontext). If this API is called in a page within anExtensionAbility window, the returned context type is[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext). If the ability context does not exist,**undefined** is returned. |
+| Context | Context of the ability. The context type depends on the ability type. For example,if this API is called in a page within a UIAbility window, the returned context type is[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md). If this API is called in a page within anExtensionAbility window, the returned context type is[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). If the ability context does not exist,**undefined** is returned. |
 
 ## getId
 
@@ -1276,7 +1276,7 @@ getUIObserver(): UIObserver
 getWindowHeightBreakpoint(): HeightBreakpoint
 ```
 
-获取当前实例所在窗口的高度断点。具体枚举值根据窗口高宽比确定，详见 [HeightBreakpoint](../arkts-components/arkts-arkui-heightbreakpoint-e.md#heightbreakpoint)。
+获取当前实例所在窗口的高度断点。具体枚举值根据窗口高宽比确定，详见 [HeightBreakpoint](../arkts-components/arkts-arkui-heightbreakpoint-e.md)。
 
 **起始版本：** 13
 
@@ -1298,7 +1298,7 @@ getWindowHeightBreakpoint(): HeightBreakpoint
 getWindowId(): number | undefined
 ```
 
-获取当前应用实例所属的窗口ID。 > **说明：** > > 若UIContext位于主应用程序进程中的[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md#uiextensionability)内，则返回主应用程 > 序的顶层窗口ID。
+获取当前应用实例所属的窗口ID。 > **说明：** > > 若UIContext位于主应用程序进程中的[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md)内，则返回主应用程 > 序的顶层窗口ID。
 
 **起始版本：** 23
 
@@ -1342,7 +1342,7 @@ getWindowName(): string | undefined
 getWindowWidthBreakpoint(): WidthBreakpoint
 ```
 
-获取当前实例所在窗口的宽度断点枚举值。具体枚举值根据窗口宽度vp值确定，详见 [WidthBreakpoint](../arkts-components/arkts-arkui-widthbreakpoint-e.md#widthbreakpoint)。
+获取当前实例所在窗口的宽度断点枚举值。具体枚举值根据窗口宽度vp值确定，详见 [WidthBreakpoint](../arkts-components/arkts-arkui-widthbreakpoint-e.md)。
 
 **起始版本：** 13
 
@@ -1430,7 +1430,7 @@ Checks whether current font scale follows the system.
 keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void
 ```
 
-产生关键帧动画。该接口的使用说明请参考[keyframeAnimateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。
+产生关键帧动画。该接口的使用说明请参考[keyframeAnimateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
 
 **起始版本：** 11
 
@@ -1494,7 +1494,7 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bindSheetContent | ComponentContent&lt;T&gt; | 是 | 半模态页面中显示的组件内容。 |
-| sheetOptions | SheetOptions | 否 | 半模态页面样式。<br/>**说明：** <br/>1. 不支持设置SheetOptions.uiContext，该属性的值固定为当前实例的UIContext。<br/>2. 若不传递targetId，则不支持设置SheetOptions.preferType为POPUP样式，若设置了POPUP样式则使用CENTER样式替代。<br/>3. 若不传递targetId，则不支持设置SheetOptions.mode为EMBEDDED模式，默认为OVERLAY模式。<br/>4. 其余属性的默认值参考[SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md#sheetoptions)文档。 |
+| sheetOptions | SheetOptions | 否 | 半模态页面样式。<br/>**说明：** <br/>1. 不支持设置SheetOptions.uiContext，该属性的值固定为当前实例的UIContext。<br/>2. 若不传递targetId，则不支持设置SheetOptions.preferType为POPUP样式，若设置了POPUP样式则使用CENTER样式替代。<br/>3. 若不传递targetId，则不支持设置SheetOptions.mode为EMBEDDED模式，默认为OVERLAY模式。<br/>4. 其余属性的默认值参考[SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md)文档。 |
 | targetId | number | 否 | 需要绑定组件的ID，若不指定则不绑定任何组件。id不存在时返回错误码120004。在传入undefined时返回错误码401。 |
 
 **返回值：**
@@ -1565,7 +1565,7 @@ postFrameCallback(frameCallback: FrameCallback): void
 px2fp(value: number): number
 ```
 
-将px单位的数值转换为以fp为单位的数值。 转换公式为：fp值 = px值 ÷ 像素密度 ÷ 字体缩放比例 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-virtualscreenconfig-i.md#virtualscreenconfig).density。 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。 > **说明：** > > getUIContext需在windowStage. > [loadContent](../../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。
+将px单位的数值转换为以fp为单位的数值。 转换公式为：fp值 = px值 ÷ 像素密度 ÷ 字体缩放比例 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-virtualscreenconfig-i.md).density。 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。 > **说明：** > > getUIContext需在windowStage. > [loadContent](../../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。
 
 **起始版本：** 12
 
@@ -1617,7 +1617,7 @@ px2lpx(value: number): number
 px2vp(value: number): number
 ```
 
-将px单位的数值转换为以vp为单位的数值。 转换公式为：vp值 = px值 ÷ 像素密度 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-virtualscreenconfig-i.md#virtualscreenconfig).density。 > **说明：** > > 1. getUIContext需在windowStage. > [loadContent](../../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。 > > 2. UI实例未创建时，[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)中的px2vp接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考 > [像素单位转换接口替换为UIContext接口](../../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
+将px单位的数值转换为以vp为单位的数值。 转换公式为：vp值 = px值 ÷ 像素密度 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-virtualscreenconfig-i.md).density。 > **说明：** > > 1. getUIContext需在windowStage. > [loadContent](../../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。 > > 2. UI实例未创建时，[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)中的px2vp接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考 > [像素单位转换接口替换为UIContext接口](../../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
 
 **起始版本：** 12
 
@@ -1679,7 +1679,7 @@ requireDynamicSyncScene(id: string): Array<DynamicSyncScene>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。 |
+| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
 
 **返回值：**
 
@@ -2144,7 +2144,7 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 vp2px(value: number): number
 ```
 
-将vp单位的数值转换为以px为单位的数值。 转换公式为：px值 = vp值 × 像素密度 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-virtualscreenconfig-i.md#virtualscreenconfig).density。 > **说明：** > > 1. getUIContext需在windowStage. > [loadContent](../../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。 > > 2. UI实例未创建时，[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)中的vp2px接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考 > [像素单位转换接口替换为UIContext接口](../../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
+将vp单位的数值转换为以px为单位的数值。 转换公式为：px值 = vp值 × 像素密度 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-virtualscreenconfig-i.md).density。 > **说明：** > > 1. getUIContext需在windowStage. > [loadContent](../../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。 > > 2. UI实例未创建时，[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)中的vp2px接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考 > [像素单位转换接口替换为UIContext接口](../../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
 
 **起始版本：** 12
 

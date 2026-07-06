@@ -9,7 +9,7 @@ Describes the network registration state.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@ohos.telephony.radio';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## cfgTech

@@ -9,7 +9,7 @@ The clientCert field of the client certificate, which includes three attributes:
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@ohos.net.webSocket';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## certPath

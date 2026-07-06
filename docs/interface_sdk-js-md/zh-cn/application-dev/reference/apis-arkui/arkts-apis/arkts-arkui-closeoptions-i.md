@@ -1,8 +1,8 @@
 # CloseOptions
 
-CloseOptions用于定义Chip组件默认的关闭图标功能属性，包括无障碍功能属性，其中accessibilityText默认为"删除"。 继承于[AccessibilityOptions](arkts-arkui-accessibilityoptions-i.md#accessibilityoptions)。
+CloseOptions用于定义Chip组件默认的关闭图标功能属性，包括无障碍功能属性，其中accessibilityText默认为"删除"。 继承于[AccessibilityOptions](arkts-arkui-accessibilityoptions-i.md)。
 
-**继承/实现关系：** CloseOptions extends [AccessibilityOptions](arkts-arkui-accessibilityoptions-i.md#accessibilityoptions)
+**继承/实现关系：** CloseOptions extends [AccessibilityOptions](arkts-arkui-accessibilityoptions-i.md)
 
 **起始版本：** 14
 

@@ -2,7 +2,7 @@
 
 Defines the lazy custom layout algorithm.
 
-**Inheritance/Implementation:** LazyCustomLayoutAlgorithm implements [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md#lazylayoutalgorithm)
+**Inheritance/Implementation:** LazyCustomLayoutAlgorithm implements [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md)
 
 **Since:** 26.0.0
 

@@ -20,7 +20,7 @@ function getAllBundleInfo(bundleFlag: BundleFlag, userId: number, callback: Asyn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleFlag | BundleFlag | 是 | 用于指定返回的应用信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundleflag-e.md#bundleflag)中包信息相关flag。 |
+| bundleFlag | BundleFlag | 是 | 用于指定返回的应用信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundleflag-e.md)中包信息相关flag。 |
 | userId | number | 是 | 用户ID。默认值：调用方所在用户，取值范围：大于等于0。 |
 | callback | AsyncCallback&lt;Array&lt;BundleInfo&gt;&gt; | 是 | 程序启动作为入参的回调函数，返回指定用户下所有包的BundleInfo。 |
 
@@ -45,7 +45,7 @@ function getAllBundleInfo(bundleFlag: BundleFlag, callback: AsyncCallback<Array<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleFlag | BundleFlag | 是 | 用于指定返回的应用信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundleflag-e.md#bundleflag)中包信息相关flag。 |
+| bundleFlag | BundleFlag | 是 | 用于指定返回的应用信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundleflag-e.md)中包信息相关flag。 |
 | callback | AsyncCallback&lt;Array&lt;BundleInfo&gt;&gt; | 是 | 程序启动作为入参的回调函数，返回所有可用的BundleInfo。 |
 
 
@@ -69,7 +69,7 @@ function getAllBundleInfo(bundleFlag: BundleFlag, userId?: number): Promise<Arra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleFlag | BundleFlag | 是 | 用于指定返回的包信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundleflag-e.md#bundleflag)中包信息相关flag。 |
+| bundleFlag | BundleFlag | 是 | 用于指定返回的包信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundleflag-e.md)中包信息相关flag。 |
 | userId | number | 否 | 用户ID。默认值：调用方所在用户，取值范围：大于等于0。 |
 
 **返回值：**

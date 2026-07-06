@@ -9,7 +9,7 @@ Describes the point coordinates, which are used for focus and exposure configura
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## x

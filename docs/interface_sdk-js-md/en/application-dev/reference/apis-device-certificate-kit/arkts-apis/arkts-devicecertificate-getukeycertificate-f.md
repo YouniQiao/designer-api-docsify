@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## getUkeyCertificate
@@ -31,7 +31,7 @@ Obtains the details of a USB Key credential. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the obtained USB Key credential details.The return value is the credentialDetailList attribute of the[CMResult](arkts-devicecertificate-cmresult-i.md#cmresult) object. |
+| Promise&lt;CMResult&gt; | Promise used to return the obtained USB Key credential details.The return value is the credentialDetailList attribute of the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

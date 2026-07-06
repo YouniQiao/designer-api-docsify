@@ -2,7 +2,7 @@
 
 Animation resource.
 
-**Inheritance/Implementation:** Animation extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md#sceneresource)
+**Inheritance/Implementation:** Animation extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md)
 
 **Since:** 12
 

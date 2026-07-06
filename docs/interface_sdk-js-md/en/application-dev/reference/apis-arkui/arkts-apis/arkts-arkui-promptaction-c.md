@@ -9,7 +9,7 @@ Provides APIs to create and display toasts, dialog boxes, action menus, and cust
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@ohos.arkui.UIContext';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## closeCustomDialog
@@ -244,7 +244,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dialogContent | ComponentContent&lt;T&gt; | Yes | Content of the custom dialog box. |
-| options | promptAction.BaseDialogOptions | No | Dialog box style.<br>Note: If both [isModal](arkts-arkui-basedialogoptions-i.md#basedialogoptions) and [showInSubWindow](arkts-arkui-basedialogoptions-i.md#basedialogoptions)in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect.In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | promptAction.BaseDialogOptions | No | Dialog box style.<br>Note: If both [isModal](arkts-arkui-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-basedialogoptions-i.md)in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect.In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -266,7 +266,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 ```
 
-Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**. + * @param { promptAction.CustomDialogOptions } options - Content of the custom dialog box.<br> + * Note: If both [isModal](arkts-arkui-basedialogoptions-i.md#basedialogoptions) + * and [showInSubWindow](arkts-arkui-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + * @returns { Promise<number> } Promise that returns the dialog box ID for use with **closeCustomDialog**.
+Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**. + * @param { promptAction.CustomDialogOptions } options - Content of the custom dialog box.<br> + * Note: If both [isModal](arkts-arkui-basedialogoptions-i.md) + * and [showInSubWindow](arkts-arkui-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + * @returns { Promise<number> } Promise that returns the dialog box ID for use with **closeCustomDialog**.
 
 **Since:** 12
 
@@ -280,7 +280,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.<br>+ * Note: If both [isModal](arkts-arkui-basedialogoptions-i.md#basedialogoptions)+ * and [showInSubWindow](arkts-arkui-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**,+ * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.+ *  |
+| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.<br>+ * Note: If both [isModal](arkts-arkui-basedialogoptions-i.md)+ * and [showInSubWindow](arkts-arkui-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**,+ * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.+ *  |
 
 **Return value:**
 
@@ -318,7 +318,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | --- | --- | --- | --- |
 | dialogContent | ComponentContent&lt;T&gt; | Yes | Content of the custom dialog box. |
 | controller | promptAction.DialogController | Yes | Controller of the custom dialog box. |
-| options | promptAction.BaseDialogOptions | No | Style of the custom dialog box.<br>Note: If both [isModal](arkts-arkui-basedialogoptions-i.md#basedialogoptions)and [showInSubWindow](arkts-arkui-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**,only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | promptAction.BaseDialogOptions | No | Style of the custom dialog box.<br>Note: If both [isModal](arkts-arkui-basedialogoptions-i.md)and [showInSubWindow](arkts-arkui-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**,only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -340,7 +340,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>
 ```
 
-Opens a menu with the specified content. This API uses a promise to return the result. > **NOTE** > > - If an invalid **target** is provided, the menu will not be displayed. > > - You must maintain the provided **content**, on which [updateMenu](arkts-arkui-promptaction-c.md#updatemenu-1) and > [closeMenu](arkts-arkui-promptaction-c.md#closemenu-1) rely to identify the target menu. > > - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-advanced-popup.md) or > [Chip](arkts-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md#componentcontent) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**. > > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](arkts-arkui-promptaction-c.md#openmenu-1) has > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
+Opens a menu with the specified content. This API uses a promise to return the result. > **NOTE** > > - If an invalid **target** is provided, the menu will not be displayed. > > - You must maintain the provided **content**, on which [updateMenu](arkts-arkui-promptaction-c.md#updatemenu-1) and > [closeMenu](arkts-arkui-promptaction-c.md#closemenu-1) rely to identify the target menu. > > - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-advanced-popup.md) or > [Chip](arkts-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**. > > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](arkts-arkui-promptaction-c.md#openmenu-1) has > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
 
 **Since:** 18
 
@@ -380,7 +380,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>
 ```
 
-Creates and displays a popup with the specified content. This API uses a promise to return the result. > **NOTE** > > - If an invalid **target** is provided, the popup will not be displayed. > > - You must maintain the provided **content**, on which [updatePopup](arkts-arkui-promptaction-c.md#updatepopup-1) and > [closePopup](arkts-arkui-promptaction-c.md#closepopup-1) rely to identify the target popup. > > - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-advanced-popup.md) or > [Chip](arkts-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md#componentcontent) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**.
+Creates and displays a popup with the specified content. This API uses a promise to return the result. > **NOTE** > > - If an invalid **target** is provided, the popup will not be displayed. > > - You must maintain the provided **content**, on which [updatePopup](arkts-arkui-promptaction-c.md#updatepopup-1) and > [closePopup](arkts-arkui-promptaction-c.md#closepopup-1) rely to identify the target popup. > > - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-advanced-popup.md) or > [Chip](arkts-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**.
 
 **Since:** 18
 
@@ -472,7 +472,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 | --- | --- | --- | --- |
 | builder | CustomBuilder \| CustomBuilderWithId | Yes | Content of the custom dialog box. |
 | controller | promptAction.DialogController | No | Controller of the custom dialog box. |
-| options | promptAction.DialogOptions | No | Style of the custom dialog box.<br>Note: If both [isModal](arkts-arkui-basedialogoptions-i.md#basedialogoptions)and [showInSubWindow](arkts-arkui-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**,only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | promptAction.DialogOptions | No | Style of the custom dialog box.<br>Note: If both [isModal](arkts-arkui-basedialogoptions-i.md)and [showInSubWindow](arkts-arkui-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**,only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -721,7 +721,7 @@ Updates a custom dialog box corresponding to **dialogContent**. This API uses a 
 updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions, partialUpdate?: boolean): Promise<void>
 ```
 
-Updates the style of the menu corresponding to the provided **content**. This API uses a promise to return the result. > **NOTE** > > - Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**, > **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**, > **onDidAppear**, **onWillDisappear**, and **onDidDisappear**. > > - The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md#menumasktype). However, this API does not > support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by > setting a boolean value.
+Updates the style of the menu corresponding to the provided **content**. This API uses a promise to return the result. > **NOTE** > > - Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**, > **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**, > **onDidAppear**, **onWillDisappear**, and **onDidDisappear**. > > - The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md). However, this API does not > support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by > setting a boolean value.
 
 **Since:** 18
 
@@ -736,7 +736,7 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | Content displayed in the menu. |
-| options | MenuOptions | Yes | Style of the menu.<br>**NOTE**<br>1. Updating for the following is not supported:**showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**,**onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and**onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md#menumasktype).However, this API does not support mask presence toggling (that is, switching the mask from non-existent toexistent or vice versa) by setting a boolean value. |
+| options | MenuOptions | Yes | Style of the menu.<br>**NOTE**<br>1. Updating for the following is not supported:**showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**,**onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and**onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md).However, this API does not support mask presence toggling (that is, switching the mask from non-existent toexistent or vice versa) by setting a boolean value. |
 | partialUpdate | boolean | No | Whether to update the menu in incremental mode. Default value: **false**.<br>**NOTE**<br>1. **true**: incremental update, where the specified properties in **options** are updated, andother properties stay at their current value.<br>2. **false**: full update, where all properties except thosespecified in **options** are restored to default values. |
 
 **Return value:**

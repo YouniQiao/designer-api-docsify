@@ -9,7 +9,7 @@ Defines a struct for shared configurations.
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from '@ohos.data.dataShare';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## allowList
@@ -82,7 +82,7 @@ Unique ID of a shared configuration, fixed at the format of **"datashareproxy://
 value?: ValueType
 ```
 
-Value of a shared configuration. If not specified, the value is an empty string. The value is a string with a maximum of 4,096 bytes. If this parameter is not set when the shared configuration is published for the first time, the value will be an empty string by default. If this parameter is not set when a shared configuration is updated, the value of the shared configuration will not be updated. In versions earlier than API version 26.0.0, the maximum length of a string is 4096 bytes. In API version 26.0.0 and later versions, the maximum length of a string is 4096 bytes by default, and can be extended to 102,400 bytes by setting the maxValueLength parameter in [DataProxyConfig](arkts-arkdata-dataproxyconfig-i.md#dataproxyconfig).
+Value of a shared configuration. If not specified, the value is an empty string. The value is a string with a maximum of 4,096 bytes. If this parameter is not set when the shared configuration is published for the first time, the value will be an empty string by default. If this parameter is not set when a shared configuration is updated, the value of the shared configuration will not be updated. In versions earlier than API version 26.0.0, the maximum length of a string is 4096 bytes. In API version 26.0.0 and later versions, the maximum length of a string is 4096 bytes by default, and can be extended to 102,400 bytes by setting the maxValueLength parameter in [DataProxyConfig](arkts-arkdata-dataproxyconfig-i.md).
 
 **Type:** ValueType
 

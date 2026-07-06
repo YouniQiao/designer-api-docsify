@@ -13,7 +13,7 @@ Provides the relative time formatting capability.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@ohos.intl';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor

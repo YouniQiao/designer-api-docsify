@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## createRandom
@@ -30,7 +30,7 @@ Creates a **Random** instance for generating random numbers and setting seeds.
 
 | Type | Description |
 | --- | --- |
-| Random | Returns the [Random](arkts-cryptoarchitecture-random-i.md#random) instance created.<br>For details about the supported specifications, see[Supported Algorithms and Specifications](../../../../security/CryptoArchitectureKit/crypto-generate-random-number.md#supported-algorithms-and-specifications). |
+| Random | Returns the [Random](arkts-cryptoarchitecture-random-i.md) instance created.<br>For details about the supported specifications, see[Supported Algorithms and Specifications](../../../../security/CryptoArchitectureKit/crypto-generate-random-number.md#supported-algorithms-and-specifications). |
 
 **Error codes:**
 

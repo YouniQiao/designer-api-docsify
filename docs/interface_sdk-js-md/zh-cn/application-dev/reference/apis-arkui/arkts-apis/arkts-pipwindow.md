@@ -42,10 +42,10 @@
 | [PiPControlType](arkts-arkui-pipcontroltype-e.md) | 控制面板控件类型枚举。 |
 | [PiPState](arkts-arkui-pipstate-e.md) | 画中画生命周期状态枚举。 |
 | [PiPTemplateType](arkts-arkui-piptemplatetype-e.md) | 画中画模板类型枚举。 |
-| [VideoCallControlGroup](arkts-arkui-videocallcontrolgroup-e.md) | 视频通话控件组枚举。仅当[PiPTemplateType](arkts-arkui-piptemplatetype-e.md#piptemplatetype) 为VIDEO_CALL时使用。 |
-| [VideoLiveControlGroup](arkts-arkui-videolivecontrolgroup-e.md) | 视频直播控件组枚举。仅当[PiPTemplateType](arkts-arkui-piptemplatetype-e.md#piptemplatetype) 为VIDEO_LIVE时使用。 |
-| [VideoMeetingControlGroup](arkts-arkui-videomeetingcontrolgroup-e.md) | 视频会议控件组枚举。仅当[PiPTemplateType](arkts-arkui-piptemplatetype-e.md#piptemplatetype) 为VIDEO_MEETING时使用。 |
-| [VideoPlayControlGroup](arkts-arkui-videoplaycontrolgroup-e.md) | 视频播放控件组枚举。仅当[PiPTemplateType](arkts-arkui-piptemplatetype-e.md#piptemplatetype)为VIDEO_PLAY时使用。 |
+| [VideoCallControlGroup](arkts-arkui-videocallcontrolgroup-e.md) | 视频通话控件组枚举。仅当[PiPTemplateType](arkts-arkui-piptemplatetype-e.md) 为VIDEO_CALL时使用。 |
+| [VideoLiveControlGroup](arkts-arkui-videolivecontrolgroup-e.md) | 视频直播控件组枚举。仅当[PiPTemplateType](arkts-arkui-piptemplatetype-e.md) 为VIDEO_LIVE时使用。 |
+| [VideoMeetingControlGroup](arkts-arkui-videomeetingcontrolgroup-e.md) | 视频会议控件组枚举。仅当[PiPTemplateType](arkts-arkui-piptemplatetype-e.md) 为VIDEO_MEETING时使用。 |
+| [VideoPlayControlGroup](arkts-arkui-videoplaycontrolgroup-e.md) | 视频播放控件组枚举。仅当[PiPTemplateType](arkts-arkui-piptemplatetype-e.md)为VIDEO_PLAY时使用。 |
 
 ### 类型
 
@@ -54,7 +54,7 @@
 | [ControlPanelActionEventCallback](arkts-arkui-controlpanelactioneventcallback-t.md) | 描述画中画控制面板控件动作事件回调。 |
 | [PiPActionEventType](arkts-arkui-pipactioneventtype-t.md) | 画中画控制面板控件动作事件类型，支持以下四种。 |
 | [PiPCallActionEvent](arkts-arkui-pipcallactionevent-t.md) | 视频通话控制事件类型。 |
-| [PiPControlGroup](arkts-arkui-pipcontrolgroup-t.md) | 画中画控制面板的可选控件组列表，应用可以配置是否显示可选控件。使用时必须和[PiPTemplateType](arkts-arkui-piptemplatetype-e.md#piptemplatetype)对应，否则 [create](arkts-arkui-create-f.md#create-1)接口抛出401错误码。 |
+| [PiPControlGroup](arkts-arkui-pipcontrolgroup-t.md) | 画中画控制面板的可选控件组列表，应用可以配置是否显示可选控件。使用时必须和[PiPTemplateType](arkts-arkui-piptemplatetype-e.md)对应，否则 [create](arkts-arkui-create-f.md#create-1)接口抛出401错误码。 |
 | [PiPLiveActionEvent](arkts-arkui-pipliveactionevent-t.md) | 直播控制事件类型。 |
 | [PiPMeetingActionEvent](arkts-arkui-pipmeetingactionevent-t.md) | 视频会议控制事件类型。 |
 | [PiPVideoActionEvent](arkts-arkui-pipvideoactionevent-t.md) | 视频播放控制事件类型。 |

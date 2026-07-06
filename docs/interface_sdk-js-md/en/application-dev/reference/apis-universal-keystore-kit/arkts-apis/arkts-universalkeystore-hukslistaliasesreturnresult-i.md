@@ -9,7 +9,7 @@ Defines the returned key alias array.
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@ohos.security.huks';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## keyAliases

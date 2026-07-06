@@ -9,7 +9,7 @@ The **power** module provides APIs for rebooting and shutting down the system, a
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@ohos.power';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -36,7 +36,7 @@ import { power } from '@ohos.power';
 | [refreshActivity](arkts-basicservices-refreshactivity-f-sys.md#refreshactivity-1) | Refreshes the device activity status (for example, resetting the screen-off time). This API takes effect only when the device is active. For details about the device activity status, see [power.isActive](arkts-basicservices-isactive-f.md#isactive-1). |
 | [registerShutdownCallback](arkts-basicservices-registershutdowncallback-f-sys.md#registershutdowncallback-1) | Registers a callback to be invoked when the device is shut down or rebooted. This API uses an asynchronous callback to return the result. |
 | [setPowerConfig](arkts-basicservices-setpowerconfig-f-sys.md#setpowerconfig-1) | Update the power configuration value for a given scene name. |
-| [setPowerKeyFilteringStrategy](arkts-basicservices-setpowerkeyfilteringstrategy-f-sys.md#setpowerkeyfilteringstrategy-1) | Sets the power key filtering strategy. After the power service subscribes to the power key event, this API is used to configure the processing mode of this event. For details about the power key filtering strategy, see [power.PowerKeyFilteringStrategy](arkts-basicservices-powerkeyfilteringstrategy-e.md#powerkeyfilteringstrategy). |
+| [setPowerKeyFilteringStrategy](arkts-basicservices-setpowerkeyfilteringstrategy-f-sys.md#setpowerkeyfilteringstrategy-1) | Sets the power key filtering strategy. After the power service subscribes to the power key event, this API is used to configure the processing mode of this event. For details about the power key filtering strategy, see [power.PowerKeyFilteringStrategy](arkts-basicservices-powerkeyfilteringstrategy-e.md). |
 | [setPowerMode](arkts-basicservices-setpowermode-f-sys.md#setpowermode-1) | Sets the power mode of a device. This API uses an asynchronous callback to return the result. |
 | [setPowerMode](arkts-basicservices-setpowermode-f-sys.md#setpowermode-2) | Sets the power mode of a device. This API uses a promise to return the result. |
 | [setScreenOffTime](arkts-basicservices-setscreenofftime-f-sys.md#setscreenofftime-1) | Sets the screen-off timeout duration, in unit of ms. |

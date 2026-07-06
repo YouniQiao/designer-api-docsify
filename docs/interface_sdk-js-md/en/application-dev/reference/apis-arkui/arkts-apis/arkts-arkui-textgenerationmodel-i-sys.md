@@ -11,7 +11,7 @@ AI Text Model Abstract Interface.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@ohos.arkui.intelligence.imageGeneration';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## cancelTextGeneration

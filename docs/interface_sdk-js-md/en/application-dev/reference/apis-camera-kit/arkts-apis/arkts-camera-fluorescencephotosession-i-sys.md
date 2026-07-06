@@ -2,7 +2,7 @@
 
 Fluorescence photo session object.
 
-**Inheritance/Implementation:** FluorescencePhotoSession extends [Session](arkts-camera-session-i.md#session), [AutoExposure](arkts-camera-autoexposure-i.md#autoexposure), [Focus](arkts-camera-focus-i.md#focus), [Zoom](arkts-camera-zoom-i.md#zoom)
+**Inheritance/Implementation:** FluorescencePhotoSession extends [Session](arkts-camera-session-i.md), [AutoExposure](arkts-camera-autoexposure-i.md), [Focus](arkts-camera-focus-i.md), [Zoom](arkts-camera-zoom-i.md)
 
 **Since:** 13
 
@@ -13,7 +13,7 @@ Fluorescence photo session object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')

@@ -9,7 +9,7 @@ Defines the callback that is invoked when the remote UIAbility state changes in 
 ## Modules to Import
 
 ```TypeScript
-import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@ohos.app.ability.UIAbility';
+import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
 ```
 
 ## constructor

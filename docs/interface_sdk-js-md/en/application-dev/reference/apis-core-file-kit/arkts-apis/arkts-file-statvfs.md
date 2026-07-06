@@ -9,7 +9,7 @@ This module provides APIs for obtaining file system information, including the t
 ## Modules to Import
 
 ```TypeScript
-import { statfs } from '@ohos.file.statvfs';
+import { statfs } from '@kit.CoreFileKit';
 ```
 
 ## Summary

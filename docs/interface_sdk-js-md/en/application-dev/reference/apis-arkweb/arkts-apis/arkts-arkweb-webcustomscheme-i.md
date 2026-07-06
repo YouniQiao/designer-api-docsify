@@ -9,7 +9,7 @@ Defines the configuration of web custom scheme, related to {@link customizeSchem
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## isCodeCacheSupported

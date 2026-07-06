@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from '@ohos.bundle';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## getApplicationInfo
@@ -28,7 +28,7 @@ Obtains the application information of the specified user based on a given bundl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the availableenumerated values, see the application information flags in [BundleFlag](arkts-ability-bundleflag-e.md#bundleflag). |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the availableenumerated values, see the application information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
 | userId | number | Yes | User ID. The value must be greater than or equal to 0. |
 | callback | AsyncCallback&lt;ApplicationInfo&gt; | Yes | Callback used to return the application information. |
 
@@ -54,7 +54,7 @@ Obtains the application information based on a given bundle name. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the availableenumerated values, see the application information flags in [BundleFlag](arkts-ability-bundleflag-e.md#bundleflag). |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the availableenumerated values, see the application information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
 | callback | AsyncCallback&lt;ApplicationInfo&gt; | Yes | Callback used to return the application information. |
 
 
@@ -79,7 +79,7 @@ Obtains the application information based on a given bundle name. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the availableenumerated values, see the application information flags in [BundleFlag](arkts-ability-bundleflag-e.md#bundleflag). |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the availableenumerated values, see the application information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
 | userId | number | No | User ID. The default value is the user ID of the caller. The value must be greater thanor equal to 0. |
 
 **Return value:**

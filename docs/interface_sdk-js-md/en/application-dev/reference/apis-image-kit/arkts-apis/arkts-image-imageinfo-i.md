@@ -9,7 +9,7 @@ Describes image information.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## alphaType
@@ -54,7 +54,7 @@ Pixel density, in ppi.
 isHdr: boolean
 ```
 
-Whether the image is an HDR image. The value **true** means an HDR image, and **false** means an SDR image. For [ImageSource](arkts-image-imagesource-i.md#imagesource), this parameter specifies whether the source image is in HDR format. For [PixelMap](arkts-image-pixelmap-i.md#pixelmap), this parameter specifies whether the decoded PixelMap is in HDR format.
+Whether the image is an HDR image. The value **true** means an HDR image, and **false** means an SDR image. For [ImageSource](arkts-image-imagesource-i.md), this parameter specifies whether the source image is in HDR format. For [PixelMap](arkts-image-pixelmap-i.md), this parameter specifies whether the decoded PixelMap is in HDR format.
 
 **Type:** boolean
 
@@ -68,7 +68,7 @@ Whether the image is an HDR image. The value **true** means an HDR image, and **
 mimeType: string
 ```
 
-Actual image format (MIME type). The supported formats for image decoding and image encoding are different. Do not directly use the actual image format obtained after decoding as the value of **format** in [PackingOption](arkts-image-packingoption-i.md#packingoption) during image encoding. You can use the **supportedFormats** property of [ImageSource](@ohos.multimedia.image: image.ImageSource#supportedFormats) and [ImagePacker](@ohos.multimedia.image: image.ImagePacker#supportedFormats) to view the supported formats for decoding and encoding.
+Actual image format (MIME type). The supported formats for image decoding and image encoding are different. Do not directly use the actual image format obtained after decoding as the value of **format** in [PackingOption](arkts-image-packingoption-i.md) during image encoding. You can use the **supportedFormats** property of [ImageSource](@ohos.multimedia.image: image.ImageSource#supportedFormats) and [ImagePacker](@ohos.multimedia.image: image.ImagePacker#supportedFormats) to view the supported formats for decoding and encoding.
 
 **Type:** string
 

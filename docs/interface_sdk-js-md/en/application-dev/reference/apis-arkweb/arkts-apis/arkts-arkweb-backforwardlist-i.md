@@ -9,7 +9,7 @@ Provides back and forward history list information method. related to {@link His
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getItemAtIndex

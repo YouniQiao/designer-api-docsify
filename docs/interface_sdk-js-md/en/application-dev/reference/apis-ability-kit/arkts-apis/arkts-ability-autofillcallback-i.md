@@ -9,7 +9,7 @@ Auto fill callback.
 ## Modules to Import
 
 ```TypeScript
-import { autoFillManager } from '@ohos.app.ability.autoFillManager';
+import { autoFillManager } from '@kit.AbilityKit';
 ```
 
 ## onFailure

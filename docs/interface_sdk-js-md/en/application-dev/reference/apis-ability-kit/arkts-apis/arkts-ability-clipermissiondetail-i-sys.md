@@ -11,7 +11,7 @@ Represents the status information of a single CLI permission declared by a CLI c
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from '@ohos.abilityAccessCtrl';
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 ```
 
 ## cliPermissionStatus

@@ -6,7 +6,7 @@
 function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Promise<void>
 ```
 
-拉起指定[ShortcutInfo](arkts-ability-shortcutinfo-i.md#shortcutinfo)中的ability。使用Promise异步回调。
+拉起指定[ShortcutInfo](arkts-ability-shortcutinfo-i.md)中的ability。使用Promise异步回调。
 
 **起始版本：** 12
 

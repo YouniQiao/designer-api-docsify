@@ -9,7 +9,7 @@ NotificationSubscriberExtensionAbility is the base class for notification subscr
 ## Modules to Import
 
 ```TypeScript
-import { NotificationSubscriberExtensionAbility } from '@ohos.application.NotificationSubscriberExtensionAbility';
+import { NotificationSubscriberExtensionAbility } from '@kit.NotificationKit';
 ```
 
 ## onCancelMessages

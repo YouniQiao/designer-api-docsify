@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { stationary } from '@ohos.stationary';
+import { stationary } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## off

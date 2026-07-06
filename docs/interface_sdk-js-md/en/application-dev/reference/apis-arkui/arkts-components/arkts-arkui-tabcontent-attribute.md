@@ -1,6 +1,6 @@
 # TabContent properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following events are supported.
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following events are supported.
 
 **Inheritance/Implementation:** TabContentAttribute extends [CommonMethod<TabContentAttribute>](CommonMethod<TabContentAttribute>)
 
@@ -78,7 +78,7 @@ Sets the content displayed on the tab bar. If the icon uses an SVG image source,
 tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 ```
 
-Sets the content displayed on the tab bar. The bottom tab style does not include an indicator. When an icon display error occurs, a gray blank block is displayed. > **NOTE** > > - [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md#subtabbarstyle): text + underline or text + board. The text style can be set. It is > recommended that the subtab be placed at the top or bottom. By default, the animation transition effect is > displayed when a tab is switched. This style is applicable to the top categories (such as Following, Video, > Digital) of information apps and level-2 navigation scenarios of functional modules. > > - [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md#bottomtabbarstyle): icon + text, without underline or board. By default, no animation > transition effect is displayed when a tab is switched. Bottom tabs are usually used for the main navigation of an > app (such as Home, Discover, and Recommended). Side tabs are applicable to wide-screen scenarios. You can set > **vertical(true)** to enable the vertical layout so that the tabs are displayed on the side. By default, the tabs > are displayed on the left.
+Sets the content displayed on the tab bar. The bottom tab style does not include an indicator. When an icon display error occurs, a gray blank block is displayed. > **NOTE** > > - [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md): text + underline or text + board. The text style can be set. It is > recommended that the subtab be placed at the top or bottom. By default, the animation transition effect is > displayed when a tab is switched. This style is applicable to the top categories (such as Following, Video, > Digital) of information apps and level-2 navigation scenarios of functional modules. > > - [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md): icon + text, without underline or board. By default, no animation > transition effect is displayed when a tab is switched. Bottom tabs are usually used for the main navigation of an > app (such as Home, Discover, and Recommended). Side tabs are applicable to wide-screen scenarios. You can set > **vertical(true)** to enable the vertical layout so that the tabs are displayed on the side. By default, the tabs > are displayed on the left.
 
 **Since:** 9
 

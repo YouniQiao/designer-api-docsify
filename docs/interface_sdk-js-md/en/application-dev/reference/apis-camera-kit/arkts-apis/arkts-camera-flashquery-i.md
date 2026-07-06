@@ -9,7 +9,7 @@ Provides APIs to obtain the flash information of a camera device, including whet
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## hasFlash
@@ -30,7 +30,7 @@ Checks whether the camera device has flash.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the camera device has flash. **true** if it has flash, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| boolean | Check result for whether the camera device has flash. **true** if it has flash, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -62,7 +62,7 @@ Checks whether a flash mode is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the flash mode. **true** if supported, **false** otherwise.If the operation fails, undefined is returned and an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is thrown. |
+| boolean | Check result for the support of the flash mode. **true** if supported, **false** otherwise.If the operation fails, undefined is returned and an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 

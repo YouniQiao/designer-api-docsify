@@ -11,7 +11,7 @@ Describes the start animation configuration. This API works only for full-screen
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## animationConfig

@@ -6,7 +6,7 @@ Describes a **FormBindingData** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FormBindingData](arkts-form-formbindingdata-i.md#formbindingdata)
+**Substitutes:** [FormBindingData](arkts-form-formbindingdata-i.md)
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -24,7 +24,7 @@ Data to be displayed on the JS widget. The value can be an object containing mul
 
 **Deprecated since:** 9
 
-**Substitutes:** [FormBindingData](arkts-form-formbindingdata-i.md#formbindingdata)
+**Substitutes:** [FormBindingData](arkts-form-formbindingdata-i.md)
 
 **System capability:** SystemCapability.Ability.Form
 

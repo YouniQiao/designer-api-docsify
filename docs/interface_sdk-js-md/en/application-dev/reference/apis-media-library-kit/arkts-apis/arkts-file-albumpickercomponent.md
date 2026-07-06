@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOptions, AlbumPickerController } from '@ohos.file.AlbumPickerComponent';
+import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOptions, AlbumPickerController } from '@kit.MediaLibraryKit';
 ```
 
 ## Summary

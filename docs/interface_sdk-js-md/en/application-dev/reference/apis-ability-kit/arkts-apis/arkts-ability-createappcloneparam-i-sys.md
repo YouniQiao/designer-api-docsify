@@ -11,7 +11,7 @@ Describes the parameters used for creating an application clone.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@ohos.bundle.installer';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## appIndex

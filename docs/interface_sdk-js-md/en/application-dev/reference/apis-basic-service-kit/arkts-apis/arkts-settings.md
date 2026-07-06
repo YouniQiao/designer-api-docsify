@@ -5,7 +5,7 @@ This module provides settings data access abilities.
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@ohos.settings';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

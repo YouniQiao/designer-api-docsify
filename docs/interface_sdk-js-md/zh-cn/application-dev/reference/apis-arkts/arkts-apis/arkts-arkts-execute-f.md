@@ -26,7 +26,7 @@ function execute(func: Function, ...args: Object[]): Promise<Object>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;unknown&gt; | <br>**适用版本：** 9 - 11 |
-| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11 |
+| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11+ |
 
 **错误码：**
 
@@ -146,7 +146,7 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;unknown&gt; | <br>**适用版本：** 9 - 17 |
-| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11 |
+| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11+ |
 
 **错误码：**
 
@@ -155,8 +155,8 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 | [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failed.<br>**适用版本：** 9 - 17 |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.<br>**适用版本：** 12 |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18 |
+| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.<br>**适用版本：** 12+ |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
 
 **示例：**
 
@@ -217,7 +217,7 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 | [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18 |
+| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
 
 **示例：**
 
@@ -276,7 +276,7 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed.<br>**适用版本：** 24 |
+| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed.<br>**适用版本：** 24+ |
 
 **示例：**
 

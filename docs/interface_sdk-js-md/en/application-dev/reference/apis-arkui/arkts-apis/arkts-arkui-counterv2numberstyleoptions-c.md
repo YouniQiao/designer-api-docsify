@@ -2,7 +2,7 @@
 
 Defines the number style options.
 
-**Inheritance/Implementation:** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-counterv2inlinestyleoptions-c.md#counterv2inlinestyleoptions)
+**Inheritance/Implementation:** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-counterv2inlinestyleoptions-c.md)
 
 **Since:** 26.0.0
 
@@ -11,7 +11,7 @@ Defines the number style options.
 ## Modules to Import
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2Type, CounterV2DateData } from '@ohos.arkui.advanced.CounterV2';
+import { CounterV2Component, CounterV2Options, CounterV2Type, CounterV2DateData } from '@kit.ArkUI';
 ```
 
 ## label

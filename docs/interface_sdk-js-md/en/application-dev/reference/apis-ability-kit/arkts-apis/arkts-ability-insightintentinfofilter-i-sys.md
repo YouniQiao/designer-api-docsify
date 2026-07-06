@@ -11,7 +11,7 @@ Defines an intent filter, which specifies the criteria for selecting target inte
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@ohos.app.ability.insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -38,7 +38,7 @@ Bundle name of the application to which the intent belongs.
 intentFlags: number
 ```
 
-Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md#insightintentinfo)). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md#getinsightintentflag).
+Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md)). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md).
 
 **Type:** number
 

@@ -2,7 +2,7 @@
 
 使用以下方法前，需先构造ThreadWorker实例。ThreadWorker类继承WorkerEventTarget。
 
-**继承/实现关系：** ThreadWorker implements [WorkerEventTarget](arkts-arkts-workereventtarget-i.md#workereventtarget)
+**继承/实现关系：** ThreadWorker implements [WorkerEventTarget](arkts-arkts-workereventtarget-i.md)
 
 **起始版本：** 9
 

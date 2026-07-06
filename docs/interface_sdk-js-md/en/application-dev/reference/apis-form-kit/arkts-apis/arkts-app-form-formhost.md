@@ -11,7 +11,7 @@ The **formHost** module provides APIs related to the widget host, which is an ap
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@ohos.app.form.formHost';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## Summary

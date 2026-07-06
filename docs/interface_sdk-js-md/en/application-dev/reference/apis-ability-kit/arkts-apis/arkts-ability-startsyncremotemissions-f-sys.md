@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from '@ohos.distributedMissionManager';
+import { distributedMissionManager } from '@kit.AbilityKit';
 ```
 
 ## startSyncRemoteMissions

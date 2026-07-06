@@ -11,7 +11,7 @@ The interface is used to monitor network interface status changes.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@ohos.net.ethernet';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## active

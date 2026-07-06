@@ -9,7 +9,7 @@ Used to indicate the media key status with a key and its value.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@ohos.multimedia.drm';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## keyId

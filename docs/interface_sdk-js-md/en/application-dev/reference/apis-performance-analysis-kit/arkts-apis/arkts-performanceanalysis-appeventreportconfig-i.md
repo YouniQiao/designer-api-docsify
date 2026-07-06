@@ -9,7 +9,7 @@ Defines the event configuration for the data processor to report.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiviewdfx.hiAppEvent';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## domain

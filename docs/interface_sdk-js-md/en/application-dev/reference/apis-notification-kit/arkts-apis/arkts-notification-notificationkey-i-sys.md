@@ -11,7 +11,7 @@ Notification key.
 ## Modules to Import
 
 ```TypeScript
-import { notificationSubscribe } from '@ohos.notificationSubscribe';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## id

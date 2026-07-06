@@ -5,7 +5,7 @@ This module provides API for creating and displaying toasts, dialog boxes, and a
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from '@ohos.promptAction';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -26,7 +26,7 @@ function convertToContext(sendableContext: SendableContext): common.Context
 
 | 类型 | 说明 |
 | --- | --- |
-| common.Context | [Context](arkts-ability-context-depr-i.md#context) object. |
+| common.Context | [Context](arkts-ability-context-depr-i.md) object. |
 
 **错误码：**
 

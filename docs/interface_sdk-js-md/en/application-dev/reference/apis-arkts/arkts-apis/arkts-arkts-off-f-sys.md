@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@ohos.process';
+import { process } from '@kit.ArkTS';
 ```
 
 ## off

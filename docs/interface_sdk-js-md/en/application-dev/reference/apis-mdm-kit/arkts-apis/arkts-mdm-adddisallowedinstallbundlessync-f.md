@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.enterprise.bundleManager';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## addDisallowedInstallBundlesSync

@@ -9,7 +9,7 @@ Defines a contact's organization.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@ohos.contact';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## name

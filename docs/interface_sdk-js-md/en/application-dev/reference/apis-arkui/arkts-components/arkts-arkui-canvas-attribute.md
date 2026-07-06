@@ -1,6 +1,6 @@
 # Canvas properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following attributes are supported. The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) are supported.
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported. The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are supported.
 
 **Inheritance/Implementation:** CanvasAttribute extends [CommonMethod<CanvasAttribute>](CommonMethod<CanvasAttribute>)
 
@@ -74,5 +74,5 @@ Triggered when the **Canvas** component is initialized or when its size changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;DrawingRenderingContext \| undefined&gt; \| undefined | Yes | Triggered whenthe **Canvas** component is initialized or when its size changes.<br>Constraints on input parameters of the Callback&lt;DrawingRenderingContext \| undefined&gt; type:<br>1. Only **Canvas** components created using [CanvasParams](arkts-arkui-canvasparams-i.md#canvasparams) will returna **DrawingRenderingContext** object in this callback; otherwise, **undefined** is returned.<br>2. The **DrawingRenderingContext** object returned by this callback must not be used asa parameter to create **Canvas** components, as doing so will cause the application to crash. |
+| event | Callback&lt;DrawingRenderingContext \| undefined&gt; \| undefined | Yes | Triggered whenthe **Canvas** component is initialized or when its size changes.<br>Constraints on input parameters of the Callback&lt;DrawingRenderingContext \| undefined&gt; type:<br>1. Only **Canvas** components created using [CanvasParams](arkts-arkui-canvasparams-i.md) will returna **DrawingRenderingContext** object in this callback; otherwise, **undefined** is returned.<br>2. The **DrawingRenderingContext** object returned by this callback must not be used asa parameter to create **Canvas** components, as doing so will cause the application to crash. |
 

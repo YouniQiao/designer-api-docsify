@@ -1,8 +1,8 @@
 # LinearAccelerometerResponse
 
-Describes the linear acceleration sensor data. It extends from [Response](arkts-sensorservice-response-i.md#response).
+Describes the linear acceleration sensor data. It extends from [Response](arkts-sensorservice-response-i.md).
 
-**Inheritance/Implementation:** LinearAccelerometerResponse extends [Response](arkts-sensorservice-response-i.md#response)
+**Inheritance/Implementation:** LinearAccelerometerResponse extends [Response](arkts-sensorservice-response-i.md)
 
 **Since:** 8
 
@@ -11,7 +11,7 @@ Describes the linear acceleration sensor data. It extends from [Response](arkts-
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@ohos.sensor';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## x

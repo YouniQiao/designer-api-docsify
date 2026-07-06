@@ -2,7 +2,7 @@
 
 定义ScaleSymbolEffect类，继承自父类SymbolEffect。
 
-**继承/实现关系：** ScaleSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#symboleffect)
+**继承/实现关系：** ScaleSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
 **起始版本：** 12
 

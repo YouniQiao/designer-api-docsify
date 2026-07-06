@@ -1,6 +1,6 @@
 # Repeat properties/events
 
-In addition to the [drag-and-drop sorting](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) attribute, the following attributes are supported.
+In addition to the [drag-and-drop sorting](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) attribute, the following attributes are supported.
 
 **Inheritance/Implementation:** RepeatAttribute extends [DynamicNode<RepeatAttribute<T>>](DynamicNode<RepeatAttribute<T>>)
 

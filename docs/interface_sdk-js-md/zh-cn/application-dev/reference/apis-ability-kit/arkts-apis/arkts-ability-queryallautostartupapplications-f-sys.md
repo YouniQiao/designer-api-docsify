@@ -22,7 +22,7 @@ function queryAllAutoStartupApplications(callback: AsyncCallback<Array<AutoStart
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;AutoStartupInfo&gt;&gt; | 是 | 回调函数。当查询自启动应用组件信息成功，err为undefined，data为获取到的Array&lt;[AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md#autostartupinfo)&gt;；否则为错误对象。 |
+| callback | AsyncCallback&lt;Array&lt;AutoStartupInfo&gt;&gt; | 是 | 回调函数。当查询自启动应用组件信息成功，err为undefined，data为获取到的Array&lt;[AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md)&gt;；否则为错误对象。 |
 
 **错误码：**
 

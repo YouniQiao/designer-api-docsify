@@ -68,7 +68,7 @@ Justified, which means that each line (except the last line) is stretched so tha
 START = 4
 ```
 
-Aligned with the start position, which depends on [TextDirection](arkts-arkgraphics2d-textdirection-e.md#textdirection).
+Aligned with the start position, which depends on [TextDirection](arkts-arkgraphics2d-textdirection-e.md).
 
 **Since:** 12
 
@@ -82,7 +82,7 @@ Aligned with the start position, which depends on [TextDirection](arkts-arkgraph
 END = 5
 ```
 
-Aligned with the end position, which depends on [TextDirection](arkts-arkgraphics2d-textdirection-e.md#textdirection).
+Aligned with the end position, which depends on [TextDirection](arkts-arkgraphics2d-textdirection-e.md).
 
 **Since:** 12
 

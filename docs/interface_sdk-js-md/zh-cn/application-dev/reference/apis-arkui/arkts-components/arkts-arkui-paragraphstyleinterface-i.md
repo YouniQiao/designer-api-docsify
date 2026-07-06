@@ -102,7 +102,7 @@ paragraphSpacing?: LengthMetrics
 shaderStyle?: ShaderStyle
 ```
 
-设置文本着色器效果。 该接口与[TextStyleInterface](arkts-arkui-textstyleinterface-i.md#textstyleinterface)的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于 [TextStyleInterface](arkts-arkui-textstyleinterface-i.md#textstyleinterface)中的fontColor。
+设置文本着色器效果。 该接口与[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于 [TextStyleInterface](arkts-arkui-textstyleinterface-i.md)中的fontColor。
 
 **类型：** ShaderStyle
 

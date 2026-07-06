@@ -9,7 +9,7 @@ Provides Range with lower and upper limit.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## max

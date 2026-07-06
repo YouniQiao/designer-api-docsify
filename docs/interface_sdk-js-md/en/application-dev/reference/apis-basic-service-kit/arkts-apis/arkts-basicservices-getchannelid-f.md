@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { customConfig } from '@ohos.customization.customConfig';
+import { customConfig } from '@kit.BasicServicesKit';
 ```
 
 ## getChannelId

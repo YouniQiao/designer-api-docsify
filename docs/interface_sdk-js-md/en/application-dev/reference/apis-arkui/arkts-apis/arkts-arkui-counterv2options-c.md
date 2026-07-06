@@ -9,7 +9,7 @@ Defines the counter options.
 ## Modules to Import
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2Type, CounterV2DateData } from '@ohos.arkui.advanced.CounterV2';
+import { CounterV2Component, CounterV2Options, CounterV2Type, CounterV2DateData } from '@kit.ArkUI';
 ```
 
 ## dateOptions

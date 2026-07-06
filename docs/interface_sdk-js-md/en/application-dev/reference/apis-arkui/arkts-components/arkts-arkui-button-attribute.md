@@ -1,6 +1,6 @@
 # Button properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following attributes are supported. The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) are supported.
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported. The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are supported.
 
 **Inheritance/Implementation:** ButtonAttribute extends [CommonMethod<ButtonAttribute>](CommonMethod<ButtonAttribute>)
 
@@ -120,7 +120,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family. The 'HarmonyOS Sans' font and[registered custom fonts](../arkts-apis/arkts-font.md#font) are supported. |
+| value | string \| Resource | Yes | Font family. The 'HarmonyOS Sans' font and[registered custom fonts](../arkts-apis/arkts-font.md) are supported. |
 
 ## fontSize
 

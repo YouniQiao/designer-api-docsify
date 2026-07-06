@@ -9,7 +9,7 @@ Defines the application account manager, which is used to manage account informa
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@ohos.account.appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addAccount
@@ -4294,7 +4294,7 @@ Sets the access to the data of an account for an application. This API uses an a
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
-| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
 
 **Example**
 
@@ -4350,7 +4350,7 @@ Sets the access to the data of an account for an application. This API uses a pr
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
-| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
 
 **Example**
 

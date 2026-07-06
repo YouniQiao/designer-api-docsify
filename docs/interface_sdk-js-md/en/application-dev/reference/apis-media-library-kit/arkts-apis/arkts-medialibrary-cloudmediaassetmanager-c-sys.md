@@ -11,7 +11,7 @@ A class used for cloud media asset management. It is used to manage download tas
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@ohos.file.photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelDownloadCloudMedia

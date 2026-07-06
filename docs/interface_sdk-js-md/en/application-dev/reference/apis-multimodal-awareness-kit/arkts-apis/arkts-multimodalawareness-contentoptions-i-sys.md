@@ -11,7 +11,7 @@ Defines the options for obtaining the onscreen content.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@ohos.multimodalAwareness.onScreen';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## contentUnderstand

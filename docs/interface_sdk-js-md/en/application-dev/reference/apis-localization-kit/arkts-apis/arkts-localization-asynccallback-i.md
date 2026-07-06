@@ -6,14 +6,14 @@ The ResourceManager callback.
 
 **Deprecated since:** 9
 
-**Substitutes:** [base:AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)
+**Substitutes:** [base:AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)
 
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from '@ohos.resourceManager';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -28,7 +28,7 @@ Defines an asynchronous callback that carries an error parameter and asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [base:AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)
+**Substitutes:** [base:AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)
 
 **System capability:** SystemCapability.Global.ResourceManager
 

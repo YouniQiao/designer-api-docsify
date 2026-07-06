@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { preferences } from '@ohos.data.preferences';
+import { preferences } from '@kit.ArkData';
 ```
 
 ## isStorageTypeSupported

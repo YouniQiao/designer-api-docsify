@@ -1,8 +1,8 @@
 # SuffixIconOptions
 
-SuffixIconOptions定义后缀图标的属性。 继承于[IconCommonOptions](arkts-arkui-iconcommonoptions-i.md#iconcommonoptions)。
+SuffixIconOptions定义后缀图标的属性。 继承于[IconCommonOptions](arkts-arkui-iconcommonoptions-i.md)。
 
-**继承/实现关系：** SuffixIconOptions extends [IconCommonOptions](arkts-arkui-iconcommonoptions-i.md#iconcommonoptions)
+**继承/实现关系：** SuffixIconOptions extends [IconCommonOptions](arkts-arkui-iconcommonoptions-i.md)
 
 **起始版本：** 11
 

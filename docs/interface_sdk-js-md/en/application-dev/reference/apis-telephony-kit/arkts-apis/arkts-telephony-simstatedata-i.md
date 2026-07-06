@@ -9,7 +9,7 @@ Indicates SIM card type and status.
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@ohos.telephony.observer';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## reason

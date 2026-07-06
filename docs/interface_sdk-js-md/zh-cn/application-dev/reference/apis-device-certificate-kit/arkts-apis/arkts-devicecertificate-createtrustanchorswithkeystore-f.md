@@ -6,7 +6,7 @@
 function createTrustAnchorsWithKeyStore(keystore: Uint8Array, pwd: string): Promise<Array<X509TrustAnchor>>
 ```
 
-表示从P12中读取ca证书来构造[TrustAnchor](arkts-devicecertificate-x509trustanchor-i.md#x509trustanchor)对象数组。使用Promise方式返回结果。
+表示从P12中读取ca证书来构造[TrustAnchor](arkts-devicecertificate-x509trustanchor-i.md)对象数组。使用Promise方式返回结果。
 
 **起始版本：** 12
 

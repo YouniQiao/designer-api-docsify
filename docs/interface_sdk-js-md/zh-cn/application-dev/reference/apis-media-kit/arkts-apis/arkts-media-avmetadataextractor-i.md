@@ -103,7 +103,7 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 | [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23 |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
 
 ## fetchFrameByTimeWithTimeout
 
@@ -240,7 +240,7 @@ fetchMetadata(callback: AsyncCallback<AVMetadata>): void
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23 |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
 
 ## fetchMetadata
 
@@ -266,7 +266,7 @@ fetchMetadata(): Promise<AVMetadata>
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23 |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
 
 ## fetchMetadataWithTimeout
 

@@ -1,6 +1,6 @@
 # FolderStack属性/事件
 
-除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下事件：
+除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下事件：
 
 **继承/实现关系：** FolderStackAttribute extends [CommonMethod<FolderStackAttribute>](CommonMethod<FolderStackAttribute>)
 
@@ -50,7 +50,7 @@ autoHalfFold(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否开启自动旋转。<br/>默认值：true，设置true表示FolderStack在半折叠状态（见[FoldStatus](arkts-arkui-foldstatus-e.md#foldstatus)）进行布局时开启自动旋转，设置false表示关闭自动旋转。该属性不区分设备类型。<br />非法值：按默认值处理。 |
+| value | boolean | 是 | 是否开启自动旋转。<br/>默认值：true，设置true表示FolderStack在半折叠状态（见[FoldStatus](arkts-arkui-foldstatus-e.md)）进行布局时开启自动旋转，设置false表示关闭自动旋转。该属性不区分设备类型。<br />非法值：按默认值处理。 |
 
 ## enableAnimation
 

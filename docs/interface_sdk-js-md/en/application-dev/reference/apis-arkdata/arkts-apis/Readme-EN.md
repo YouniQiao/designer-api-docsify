@@ -14,7 +14,7 @@
   - [ValueType](arkts-arkdata-valuetype-t.md)
 - [@ohos.data.cloudData](arkts-data-clouddata.md)
   - [cloudData](arkts-arkdata-clouddata-n.md)
-    - [sharing](arkts-arkdata-clouddata-sharing-sta-n.md)<!--Del-->
+    - [sharing](arkts-arkdata-sharing-n.md)<!--Del-->
       - [allocResourceAndShare(system api)](arkts-arkdata-allocresourceandshare-f-sys.md)<!--DelEnd--><!--Del-->
       - [changeConfirmation(system api)](arkts-arkdata-changeconfirmation-f-sys.md)<!--DelEnd--><!--Del-->
       - [changePrivilege(system api)](arkts-arkdata-changeprivilege-f-sys.md)<!--DelEnd--><!--Del-->
@@ -118,7 +118,7 @@
   - [DataSharePredicates(system api)](arkts-arkdata-datasharepredicates-c-sys.md)<!--DelEnd-->
 - [@ohos.data.distributedData](arkts-data-distributeddata.md)
   - [distributedData](arkts-arkdata-distributeddata-n.md)
-    - [Constants](arkts-arkdata-distributeddata-constants-n.md)
+    - [Constants](arkts-arkdata-constants-n.md)
       - [Constants](arkts-arkdata-constants-con.md)
     - [createKVManager](arkts-arkdata-createkvmanager-f.md)
     - [FieldNode](arkts-arkdata-fieldnode-c.md)

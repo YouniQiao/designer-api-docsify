@@ -1,6 +1,6 @@
 # FirewallRule
 
-Represents a firewall rule. In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22. [LogType](arkts-mdm-logtype-e.md#logtype) is supported since API version 23.
+Represents a firewall rule. In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22. [LogType](arkts-mdm-logtype-e.md) is supported since API version 23.
 
 **Since:** 12
 
@@ -9,7 +9,7 @@ Represents a firewall rule. In API version 21 and earlier versions, only IPv4 is
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@ohos.enterprise.networkManager';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## action
@@ -18,7 +18,7 @@ import { networkManager } from '@ohos.enterprise.networkManager';
 action?: Action
 ```
 
-Action to take, that is, receive or discard the data packets. This parameter is mandatory when a firewall filtering rule is added. This parameter is optional when a firewall is removed. If this parameter is left empty, all [Action](arkts-mdm-action-e.md#action) chains are cleared, and **srcAddr**, **destAddr**, **srcPort**, **destPort**, and **appUid** must be also left empty.
+Action to take, that is, receive or discard the data packets. This parameter is mandatory when a firewall filtering rule is added. This parameter is optional when a firewall is removed. If this parameter is left empty, all [Action](arkts-mdm-action-e.md) chains are cleared, and **srcAddr**, **destAddr**, **srcPort**, **destPort**, and **appUid** must be also left empty.
 
 **Type:** Action
 
@@ -82,7 +82,7 @@ Destination port.
 direction?: Direction
 ```
 
-Direction chains to which the rule applies. This parameter is mandatory when a firewall filtering rule is added. This parameter is optional when a firewall is removed. If this parameter is left empty, all [Direction](arkts-mdm-direction-e.md#direction) chains are cleared, and **srcAddr**, **destAddr**, **srcPort**, **destPort**, and **appUid** must be also left empty.
+Direction chains to which the rule applies. This parameter is mandatory when a firewall filtering rule is added. This parameter is optional when a firewall is removed. If this parameter is left empty, all [Direction](arkts-mdm-direction-e.md) chains are cleared, and **srcAddr**, **destAddr**, **srcPort**, **destPort**, and **appUid** must be also left empty.
 
 **Type:** Direction
 

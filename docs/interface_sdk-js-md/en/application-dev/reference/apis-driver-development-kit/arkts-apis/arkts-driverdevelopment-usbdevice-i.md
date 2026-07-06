@@ -2,7 +2,7 @@
 
 USB device information, which is inherited from [Device](arkts-driverdevelopment-querydevices-f.md#querydevices-1).
 
-**Inheritance/Implementation:** USBDevice extends [Device](arkts-driverdevelopment-device-i.md#device)
+**Inheritance/Implementation:** USBDevice extends [Device](arkts-driverdevelopment-device-i.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ USB device information, which is inherited from [Device](arkts-driverdevelopment
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@ohos.driver.deviceManager';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## productId

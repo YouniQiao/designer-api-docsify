@@ -1,8 +1,8 @@
 # AlertDialogParamWithOptions
 
-Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#alertdialogparam).
+Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
 
-**Inheritance/Implementation:** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#alertdialogparam)
+**Inheritance/Implementation:** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md)
 
 **Since:** 10
 

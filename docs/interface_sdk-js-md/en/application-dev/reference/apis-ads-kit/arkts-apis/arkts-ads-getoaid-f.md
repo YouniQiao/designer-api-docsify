@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { identifier } from '@ohos.identifier.oaid';
+import { identifier } from '@kit.AdsKit';
 ```
 
 ## getOAID

@@ -9,7 +9,7 @@ Defines a brush, which is used to describe the style and color to fill in a shap
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor

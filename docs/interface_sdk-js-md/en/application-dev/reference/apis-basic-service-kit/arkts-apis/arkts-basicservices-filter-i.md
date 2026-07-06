@@ -9,7 +9,7 @@ Defines the filter criteria.
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@ohos.request';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## action

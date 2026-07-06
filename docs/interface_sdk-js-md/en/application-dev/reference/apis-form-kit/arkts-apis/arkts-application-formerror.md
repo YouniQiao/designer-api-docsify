@@ -9,7 +9,7 @@ interface of formError.
 ## Modules to Import
 
 ```TypeScript
-import { formError } from '@ohos.application.formError';
+import { formError } from '@kit.FormKit';
 ```
 
 ## Summary

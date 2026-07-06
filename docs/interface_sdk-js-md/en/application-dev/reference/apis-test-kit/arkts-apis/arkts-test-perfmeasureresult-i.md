@@ -9,7 +9,7 @@ Represents the measurement result data corresponding to the performance metric.
 ## Modules to Import
 
 ```TypeScript
-import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from '@ohos.test.PerfTest';
+import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from '@kit.TestKit';
 ```
 
 ## average

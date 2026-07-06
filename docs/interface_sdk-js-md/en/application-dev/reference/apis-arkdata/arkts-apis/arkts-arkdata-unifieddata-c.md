@@ -9,7 +9,7 @@ Provides APIs for encapsulating a set of data records.
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@ohos.data.unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## addRecord
@@ -205,7 +205,7 @@ Obtains the types of all data records in this **UnifiedData** object.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Array of the[UniformDataType](arkts-arkdata-uniformdatatype-e.md#uniformdatatype) typesobtained. |
+| Array&lt;string&gt; | Array of the[UniformDataType](arkts-arkdata-uniformdatatype-e.md) typesobtained. |
 
 **Example**
 
@@ -252,7 +252,7 @@ Checks whether this **UnifiedData** object contains the specified data type, inc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Data type to check. For details, see[UniformDataType](arkts-arkdata-uniformdatatype-e.md#uniformdatatype). |
+| type | string | Yes | Data type to check. For details, see[UniformDataType](arkts-arkdata-uniformdatatype-e.md). |
 
 **Return value:**
 

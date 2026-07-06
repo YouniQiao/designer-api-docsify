@@ -2,7 +2,7 @@
 
 HeifsMetadata implements Metadata HEIF image sequence metadata.
 
-**Inheritance/Implementation:** HeifsMetadata implements [Metadata](arkts-image-metadata-i.md#metadata)
+**Inheritance/Implementation:** HeifsMetadata implements [Metadata](arkts-image-metadata-i.md)
 
 **Since:** 23
 
@@ -11,7 +11,7 @@ HeifsMetadata implements Metadata HEIF image sequence metadata.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone
@@ -40,7 +40,7 @@ Clones the HEIFS metadata. This API returns the result asynchronously through a 
 static createInstance(): HeifsMetadata
 ```
 
-Creates an empty [HeifsMetadata](arkts-image-heifsmetadata-c.md#heifsmetadata) instance.
+Creates an empty [HeifsMetadata](arkts-image-heifsmetadata-c.md) instance.
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ Creates an empty [HeifsMetadata](arkts-image-heifsmetadata-c.md#heifsmetadata) i
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise. For details about the properties, see [HeifsPropertyKey](arkts-image-heifspropertykey-e.md#heifspropertykey).
+Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise. For details about the properties, see [HeifsPropertyKey](arkts-image-heifspropertykey-e.md).
 
 **Since:** 23
 
@@ -164,7 +164,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [HeifsPropertyKey](arkts-image-heifspropertykey-e.md#heifspropertykey).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [HeifsPropertyKey](arkts-image-heifspropertykey-e.md).
 
 **Since:** 23
 

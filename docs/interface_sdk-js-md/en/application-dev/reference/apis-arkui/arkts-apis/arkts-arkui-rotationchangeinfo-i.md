@@ -9,7 +9,7 @@ Describes the window information obtained during window rotation changes.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## displayId

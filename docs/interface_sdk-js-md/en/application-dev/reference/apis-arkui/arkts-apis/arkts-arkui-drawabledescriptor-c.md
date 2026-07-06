@@ -1,6 +1,6 @@
 # DrawableDescriptor
 
-Represents the base class providing overridable methods for [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md#pixelmap) acquisition and image resource loading.
+Represents the base class providing overridable methods for [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) acquisition and image resource loading.
 
 **Since:** 10
 
@@ -9,7 +9,7 @@ Represents the base class providing overridable methods for [PixelMap](../../api
 ## Modules to Import
 
 ```TypeScript
-import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@ohos.arkui.drawableDescriptor';
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## getPixelMap
@@ -38,7 +38,7 @@ Obtains this **PixelMap** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -50,7 +50,7 @@ For details, see [LayeredDrawableDescriptor](#layereddrawabledescriptor).
 invalidate(): void
 ```
 
-Redraws **DrawableDescriptor**. Currently, this API is supported for the [PictureDrawableDescriptor](arkts-arkui-picturedrawabledescriptor-c.md#picturedrawabledescriptor) type, and does not take effect for other **DrawableDescriptor** subtypes. If no component is bound to **DrawableDescriptor**, no operation is performed.
+Redraws **DrawableDescriptor**. Currently, this API is supported for the [PictureDrawableDescriptor](arkts-arkui-picturedrawabledescriptor-c.md) type, and does not take effect for other **DrawableDescriptor** subtypes. If no component is bound to **DrawableDescriptor**, no operation is performed.
 
 **Since:** 26.0.0
 
@@ -109,7 +109,7 @@ Asynchronously loads the image resource and returns the loading result. This API
 | Error Code ID | Error Message |
 | --- | --- |
 | [111001](../errorcode-drawable-descriptor.md#111001-failed-to-load-resources) | resource loading failed. |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -142,7 +142,7 @@ Synchronously loads the image resource and returns the loading result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [111001](../errorcode-drawable-descriptor.md#111001-failed-to-load-resources) | resource loading failed. |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 

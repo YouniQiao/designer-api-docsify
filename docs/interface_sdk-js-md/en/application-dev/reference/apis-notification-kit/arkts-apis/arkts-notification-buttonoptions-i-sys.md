@@ -11,7 +11,7 @@ Provides the button information of the notification.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@ohos.notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## buttonName

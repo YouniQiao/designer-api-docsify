@@ -1,6 +1,6 @@
 # ChipSymbolGlyphOptions
 
-ChipSymbolGlyphOptions定义前缀图标和后缀图标的属性。 > **说明：** > > 不支持使用[SymbolEffect](../arkts-components/arkts-arkui-symboleffect-c.md#symboleffect)修改动效类型及effectStrategy设置动效。
+ChipSymbolGlyphOptions定义前缀图标和后缀图标的属性。 > **说明：** > > 不支持使用[SymbolEffect](../arkts-components/arkts-arkui-symboleffect-c.md)修改动效类型及effectStrategy设置动效。
 
 **起始版本：** 12
 

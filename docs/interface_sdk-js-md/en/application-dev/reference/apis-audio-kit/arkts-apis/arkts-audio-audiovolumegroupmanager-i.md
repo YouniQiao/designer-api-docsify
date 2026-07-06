@@ -9,7 +9,7 @@ This interface implements volume management for an audio group. Before calling a
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## getMaxAmplitudeForInputDevice
@@ -711,7 +711,7 @@ Unsubscribes from the microphone state change event. This API uses an asynchrono
 on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 ```
 
-Subscribes to the ringer mode change event, which is triggered when the [AudioRingMode](arkts-audio-audioringmode-e.md#audioringmode) changes. This API uses an asynchronous callback to return the result.
+Subscribes to the ringer mode change event, which is triggered when the [AudioRingMode](arkts-audio-audioringmode-e.md) changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 

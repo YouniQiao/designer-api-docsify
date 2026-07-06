@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { motion } from '@ohos.multimodalAwareness.motion';
+import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## offRotateChange

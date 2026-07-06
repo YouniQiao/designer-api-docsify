@@ -233,7 +233,7 @@ getPermissionFlags(tokenID: number, permissionName: Permissions): Promise<number
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回查询到的权限标记值。标记值的含义请参见[PermissionStatusInfo](arkts-ability-permissionstatusinfo-i-sys.md#permissionstatusinfo)中的grantFlags字段说明。 |
+| Promise&lt;number&gt; | Promise对象，返回查询到的权限标记值。标记值的含义请参见[PermissionStatusInfo](arkts-ability-permissionstatusinfo-i-sys.md)中的grantFlags字段说明。 |
 
 **错误码：**
 

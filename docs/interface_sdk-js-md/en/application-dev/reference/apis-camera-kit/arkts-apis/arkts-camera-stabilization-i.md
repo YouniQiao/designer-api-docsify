@@ -1,8 +1,8 @@
 # Stabilization
 
-**Stabilization** inherits from [StabilizationQuery](arkts-camera-stabilizationquery-i.md#stabilizationquery). It provides APIs to set video stabilization. Video stabilization can be set only when the session has a recording stream ( [VideoOutput](arkts-camera-videooutput-i.md#videooutput)). Among the enums of [VideoStabilizationMode](arkts-camera-videostabilizationmode-e.md#videostabilizationmode), the **HIGH** mode only takes effect when the resolution set in [Profile](arkts-camera-profile-i.md#profile) is 1920×1080.
+**Stabilization** inherits from [StabilizationQuery](arkts-camera-stabilizationquery-i.md). It provides APIs to set video stabilization. Video stabilization can be set only when the session has a recording stream ( [VideoOutput](arkts-camera-videooutput-i.md)). Among the enums of [VideoStabilizationMode](arkts-camera-videostabilizationmode-e.md), the **HIGH** mode only takes effect when the resolution set in [Profile](arkts-camera-profile-i.md) is 1920×1080.
 
-**Inheritance/Implementation:** Stabilization extends [StabilizationQuery](arkts-camera-stabilizationquery-i.md#stabilizationquery)
+**Inheritance/Implementation:** Stabilization extends [StabilizationQuery](arkts-camera-stabilizationquery-i.md)
 
 **Since:** 11
 
@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getActiveVideoStabilizationMode

@@ -9,7 +9,7 @@ Implements a path operation iterator. You can read path operation instructions b
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor

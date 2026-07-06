@@ -2,7 +2,7 @@
 
 Class of the photo editor ExtensionAbility, which provides APIs for you to edit photos.
 
-**Inheritance/Implementation:** PhotoEditorExtensionAbility extends [ExtensionAbility](arkts-ability-extensionability-c.md#extensionability)
+**Inheritance/Implementation:** PhotoEditorExtensionAbility extends [ExtensionAbility](arkts-ability-extensionability-c.md)
 
 **Since:** 12
 
@@ -11,7 +11,7 @@ Class of the photo editor ExtensionAbility, which provides APIs for you to edit 
 ## Modules to Import
 
 ```TypeScript
-import { PhotoEditorExtensionAbility } from '@ohos.app.ability.PhotoEditorExtensionAbility';
+import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onBackground

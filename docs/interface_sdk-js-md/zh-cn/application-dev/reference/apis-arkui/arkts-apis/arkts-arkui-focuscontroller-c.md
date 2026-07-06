@@ -87,7 +87,7 @@ requestFocus(key: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。 |
+| key | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
 
 **错误码：**
 
@@ -117,7 +117,7 @@ setAutoFocusTransfer(isAutoFocusTransfer: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isAutoFocusTransfer | boolean | 是 | 设置页面切换时，新的页面是否需要主动获取焦点，例如[Router](arkts-router.md#router)、[Navigation](../arkts-components/arkts-arkui-navigation.md)、[Menu](../arkts-components/arkts-arkui-menu.md)、[Dialog](@ohos.arkui.advanced.Dialog)、[Popup](arkts-arkui-advanced-popup.md)等。true表示需要主动获取焦点，false表示不需要主动获取焦点。默认值为true。 |
+| isAutoFocusTransfer | boolean | 是 | 设置页面切换时，新的页面是否需要主动获取焦点，例如[Router](arkts-router.md)、[Navigation](../arkts-components/arkts-arkui-navigation.md)、[Menu](../arkts-components/arkts-arkui-menu.md)、[Dialog](@ohos.arkui.advanced.Dialog)、[Popup](arkts-arkui-advanced-popup.md)等。true表示需要主动获取焦点，false表示不需要主动获取焦点。默认值为true。 |
 
 ## setKeyProcessingMode
 

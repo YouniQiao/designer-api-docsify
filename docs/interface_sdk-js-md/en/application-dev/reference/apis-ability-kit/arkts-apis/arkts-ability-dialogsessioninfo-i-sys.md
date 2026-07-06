@@ -11,7 +11,7 @@ Provides session information, including the requester information, target abilit
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from '@ohos.app.ability.dialogSession';
+import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## callerAbilityInfo

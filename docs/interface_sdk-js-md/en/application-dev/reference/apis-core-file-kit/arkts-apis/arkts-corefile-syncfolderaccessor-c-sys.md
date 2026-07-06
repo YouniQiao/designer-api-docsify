@@ -11,7 +11,7 @@ A sync root management class that enables the File Manager to access the sync ro
 ## Modules to Import
 
 ```TypeScript
-import { cloudDiskManager } from '@ohos.file.cloudDiskManager';
+import { cloudDiskManager } from '@kit.CoreFileKit';
 ```
 
 ## constructor

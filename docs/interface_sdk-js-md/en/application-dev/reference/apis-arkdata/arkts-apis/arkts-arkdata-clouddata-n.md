@@ -9,7 +9,7 @@ The **cloudData** module provides APIs for implementing device-cloud synergy and
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@ohos.data.cloudData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -18,7 +18,7 @@ import { cloudData } from '@ohos.data.cloudData';
 
 | Name | Description |
 | --- | --- |
-| [sharing](arkts-arkdata-clouddata-sharing-sta-n.md) | Provides APIs for device-cloud data sharing, including sharing or unsharing data, exiting a share, changing the privilege on the shared data, querying participants, confirming an invitation, changing the invitation confirmation state, and querying the shared resource. |
+| [sharing](arkts-arkdata-sharing-n.md) | Provides APIs for device-cloud data sharing, including sharing or unsharing data, exiting a share, changing the privilege on the shared data, querying participants, confirming an invitation, changing the invitation confirmation state, and querying the shared resource. |
 
 ### Functions
 

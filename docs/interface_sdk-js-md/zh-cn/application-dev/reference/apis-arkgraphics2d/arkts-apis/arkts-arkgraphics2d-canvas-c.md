@@ -376,7 +376,7 @@ drawCircle(x: number, y: number, radius: number): void
 drawColor(color: common2D.Color, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-blendmode-e.md#blendmode)对画布当前可绘制区域进行填充。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-blendmode-e.md)对画布当前可绘制区域进行填充。
 
 **起始版本：** 11
 
@@ -401,7 +401,7 @@ drawColor(color: common2D.Color, blendMode?: BlendMode): void
 drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-blendmode-e.md#blendmode)对画布当前可绘制区域进行填充。性能优于 [drawColor](arkts-arkgraphics2d-canvas-c.md#drawcolor-1)接口，推荐使用本接口。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-blendmode-e.md)对画布当前可绘制区域进行填充。性能优于 [drawColor](arkts-arkgraphics2d-canvas-c.md#drawcolor-1)接口，推荐使用本接口。
 
 **起始版本：** 12
 
@@ -429,7 +429,7 @@ drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: B
 drawColor(color: number, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-blendmode-e.md#blendmode)对画布当前可绘制区域进行填充。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-blendmode-e.md)对画布当前可绘制区域进行填充。
 
 **起始版本：** 18
 

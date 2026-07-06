@@ -13,7 +13,7 @@ Defines the information about the code signature file.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@ohos.bundle.installer';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## moduleName

@@ -44,7 +44,7 @@ getVerifySpec(itemType: SignSpecItem): string | number
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该操作不支持。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -91,7 +91,7 @@ init(pubKey: PubKey, callback: AsyncCallback<void>): void
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。可能的原因：<br>1. 密钥类型不正确。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。可能的原因：<br>1. 密钥类型不正确。<br>**适用版本：** 26.0.0+ |
 
 ## init
 
@@ -129,7 +129,7 @@ init(pubKey: PubKey): Promise<void>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。可能的原因：<br>1. 密钥类型不正确。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。可能的原因：<br>1. 密钥类型不正确。<br>**适用版本：** 26.0.0+ |
 
 ## initSync
 
@@ -159,7 +159,7 @@ initSync(pubKey: PubKey): void
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。可能的原因：<br>1. 密钥类型不正确。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。可能的原因：<br>1. 密钥类型不正确。<br>**适用版本：** 26.0.0+ |
 
 ## recover
 
@@ -195,7 +195,7 @@ recover(signatureData: DataBlob): Promise<DataBlob | null>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -310,7 +310,7 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
 
 ## setVerifySpec
 
@@ -343,7 +343,7 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该操作不支持。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -388,9 +388,9 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因：<br>1. 必填参数未指定；<br>2. 参数类型不正确；<br>3. 参数验证失败。 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该操作不支持。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。<br>**适用版本：** 26.0.0 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0 |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。<br>**适用版本：** 26.0.0+ |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
 
 ## setVerifySpec
@@ -445,7 +445,7 @@ function testSetVerifySpec() {
 update(data: DataBlob, callback: AsyncCallback<void>): void
 ```
 
-追加待验签数据，使用callback异步回调完成更新。 必须在对[Verify](arkts-cryptoarchitecture-verify-i.md#verify)实例使用[init](arkts-cryptoarchitecture-verify-i.md#init-1)或 [initSync](arkts-cryptoarchitecture-verify-i.md#initsync-1)初始化后，才能使用本函数。 > **说明：** > > 根据数据量，可以不调用update（即[init](arkts-cryptoarchitecture-verify-i.md#init-1) > 完成后直接调用 > [verify](arkts-cryptoarchitecture-verify-i.md#verify-2) > ）或多次调用update。 > > 算法库目前没有对update（单次或累计）的数据量设置大小限制，建议对于大数据量的验签操作，采用多次update的方式传入数据，避免一次性申请 > 过大内存。 > > 验签使用多次update操作的示例代码详见 > [使用RSA密钥对分段签名验签](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md) > ，其余算法操作类似。 > > OnlyVerify模式下，不支持update操作，直接使用verify传入数据即可。 > > 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
+追加待验签数据，使用callback异步回调完成更新。 必须在对[Verify](arkts-cryptoarchitecture-verify-i.md)实例使用[init](arkts-cryptoarchitecture-verify-i.md#init-1)或 [initSync](arkts-cryptoarchitecture-verify-i.md#initsync-1)初始化后，才能使用本函数。 > **说明：** > > 根据数据量，可以不调用update（即[init](arkts-cryptoarchitecture-verify-i.md#init-1) > 完成后直接调用 > [verify](arkts-cryptoarchitecture-verify-i.md#verify-2) > ）或多次调用update。 > > 算法库目前没有对update（单次或累计）的数据量设置大小限制，建议对于大数据量的验签操作，采用多次update的方式传入数据，避免一次性申请 > 过大内存。 > > 验签使用多次update操作的示例代码详见 > [使用RSA密钥对分段签名验签](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md) > ，其余算法操作类似。 > > OnlyVerify模式下，不支持update操作，直接使用verify传入数据即可。 > > 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
 
 **起始版本：** 9
 
@@ -470,7 +470,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
 
 ## update
 
@@ -478,7 +478,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 update(data: DataBlob): Promise<void>
 ```
 
-追加待验签数据，使用Promise异步回调完成更新。 必须在对[Verify](arkts-cryptoarchitecture-verify-i.md#verify)实例使用[init()](arkts-cryptoarchitecture-verify-i.md#init-1)初始化后，才能使 用本函数。 > **说明：** > > 根据数据量，可以不调用update（即[init](arkts-cryptoarchitecture-verify-i.md#init-1)完成后直接调用 > [verify](arkts-cryptoarchitecture-verify-i.md#verify-4)）或多次调用update。 > > 算法库目前没有对update（单次或累计）的数据量设置大小限制，建议对于大数据量的验签操作，采用多次update的方式传入数据，避免一次性申请 > 过大内存。 > > 验签使用多次update操作的示例代码详见 > [使用RSA密钥对分段签名验签](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md) > ，其余算法操作类似。 > > OnlyVerify模式下，不支持update操作，直接使用verify传入数据即可。 > > 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
+追加待验签数据，使用Promise异步回调完成更新。 必须在对[Verify](arkts-cryptoarchitecture-verify-i.md)实例使用[init()](arkts-cryptoarchitecture-verify-i.md#init-1)初始化后，才能使 用本函数。 > **说明：** > > 根据数据量，可以不调用update（即[init](arkts-cryptoarchitecture-verify-i.md#init-1)完成后直接调用 > [verify](arkts-cryptoarchitecture-verify-i.md#verify-4)）或多次调用update。 > > 算法库目前没有对update（单次或累计）的数据量设置大小限制，建议对于大数据量的验签操作，采用多次update的方式传入数据，避免一次性申请 > 过大内存。 > > 验签使用多次update操作的示例代码详见 > [使用RSA密钥对分段签名验签](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md) > ，其余算法操作类似。 > > OnlyVerify模式下，不支持update操作，直接使用verify传入数据即可。 > > 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
 
 **起始版本：** 9
 
@@ -508,7 +508,7 @@ update(data: DataBlob): Promise<void>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
 
 ## updateSync
 
@@ -516,7 +516,7 @@ update(data: DataBlob): Promise<void>
 updateSync(data: DataBlob): void
 ```
 
-追加待验签数据，通过同步方式完成更新。 必须在对[Verify](arkts-cryptoarchitecture-verify-i.md#verify)实例使用[initSync()](arkts-cryptoarchitecture-verify-i.md#initsync-1)初始化后，才 能使用本函数。 > **说明：** > > 根据数据量，可以不调用updateSync（即[initSync](arkts-cryptoarchitecture-verify-i.md#initsync-1)完成后直接调用 > [verifySync](arkts-cryptoarchitecture-verify-i.md#verifysync-1)）或多次调用updateSync。 > > 算法库目前没有对updateSync（单次或累计）的数据量设置大小限制，建议对于大数据量的验签操作，采用多次updateSync的方式传入数据，避免 > 一次性申请过大内存。 > > 验签使用多次updateSync操作的示例代码详见 > [使用RSA密钥对分段签名验签](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md)， > 其余算法操作类似。 > > OnlyVerify模式下，不支持updateSync操作，需要直接使用verifySync传入数据。 > > 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持updateSync操作，updateSync接口会返回错误码ERR_CRYPTO_OPERATION。 <br><br>**说明：** <br>建议优先使用异步API{@link update}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+追加待验签数据，通过同步方式完成更新。 必须在对[Verify](arkts-cryptoarchitecture-verify-i.md)实例使用[initSync()](arkts-cryptoarchitecture-verify-i.md#initsync-1)初始化后，才 能使用本函数。 > **说明：** > > 根据数据量，可以不调用updateSync（即[initSync](arkts-cryptoarchitecture-verify-i.md#initsync-1)完成后直接调用 > [verifySync](arkts-cryptoarchitecture-verify-i.md#verifysync-1)）或多次调用updateSync。 > > 算法库目前没有对updateSync（单次或累计）的数据量设置大小限制，建议对于大数据量的验签操作，采用多次updateSync的方式传入数据，避免 > 一次性申请过大内存。 > > 验签使用多次updateSync操作的示例代码详见 > [使用RSA密钥对分段签名验签](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md)， > 其余算法操作类似。 > > OnlyVerify模式下，不支持updateSync操作，需要直接使用verifySync传入数据。 > > 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持updateSync操作，updateSync接口会返回错误码ERR_CRYPTO_OPERATION。 <br><br>**说明：** <br>建议优先使用异步API{@link update}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -538,7 +538,7 @@ updateSync(data: DataBlob): void
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0 |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | 无效的函数调用。<br>**适用版本：** 26.0.0+ |
 
 ## verify
 
@@ -572,7 +572,7 @@ verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## verify
 
@@ -606,7 +606,7 @@ verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<b
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## verify
 
@@ -645,7 +645,7 @@ verify(data: DataBlob, signatureData: DataBlob): Promise<boolean>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## verify
 
@@ -684,7 +684,7 @@ verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## verifySync
 
@@ -721,7 +721,7 @@ verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 

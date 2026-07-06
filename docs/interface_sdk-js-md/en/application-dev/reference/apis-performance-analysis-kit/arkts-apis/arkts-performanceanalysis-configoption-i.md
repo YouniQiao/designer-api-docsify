@@ -9,7 +9,7 @@ Provides configuration options for application event logging.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiviewdfx.hiAppEvent';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## disable

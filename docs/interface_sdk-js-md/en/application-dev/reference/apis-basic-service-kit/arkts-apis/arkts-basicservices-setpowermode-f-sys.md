@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@ohos.power';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## setPowerMode
@@ -36,7 +36,7 @@ Sets the power mode of a device. This API uses an asynchronous callback to retur
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4900301](../../apis-basic-services-kit/errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.<br>**Applicable version:** 23 |
+| [4900301](../../apis-basic-services-kit/errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.<br>**Applicable version:** 23 and later |
 
 **Example**
 
@@ -87,7 +87,7 @@ Sets the power mode of a device. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4900301](../../apis-basic-services-kit/errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.<br>**Applicable version:** 23 |
+| [4900301](../../apis-basic-services-kit/errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.<br>**Applicable version:** 23 and later |
 
 **Example**
 

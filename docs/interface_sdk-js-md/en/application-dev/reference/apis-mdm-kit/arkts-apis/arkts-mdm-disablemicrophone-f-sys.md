@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@ohos.enterprise.restrictions';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## disableMicrophone

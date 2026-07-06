@@ -11,7 +11,7 @@ Defines the TransferProgress data structure.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@ohos.file.cloudSyncManager';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## failedCount

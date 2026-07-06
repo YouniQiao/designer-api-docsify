@@ -20,7 +20,7 @@ function find(id: string, callback: AsyncCallback<Window>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-configuration-i.md#configuration)中的name。 |
+| id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-configuration-i.md)中的name。 |
 | callback | AsyncCallback&lt;Window&gt; | 是 | 回调函数。返回当前查找到的窗口对象。 |
 
 **示例：**
@@ -62,7 +62,7 @@ function find(id: string): Promise<Window>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-configuration-i.md#configuration)中的name。 |
+| id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-configuration-i.md)中的name。 |
 
 **返回值：**
 

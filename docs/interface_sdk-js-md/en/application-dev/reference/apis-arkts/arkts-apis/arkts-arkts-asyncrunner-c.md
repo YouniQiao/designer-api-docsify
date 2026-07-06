@@ -9,7 +9,7 @@ Implements an asynchronous queue, for which you can specify the task execution c
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@ohos.taskpool';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## constructor

@@ -30,7 +30,7 @@ Font color. Default value: theme color.
 fontConfigs?: FontConfigs
 ```
 
-Font configuration. The default value is inherited from [FontConfigs](arkts-arkui-fontconfigs-i.md#fontconfigs).
+Font configuration. The default value is inherited from [FontConfigs](arkts-arkui-fontconfigs-i.md).
 
 **Type:** FontConfigs
 
@@ -66,7 +66,7 @@ Font family. Default value: theme font.
 fontSize?: LengthMetrics
 ```
 
-Font size. Default value: 16 fp. If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 16 fp is used instead. Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)
+Font size. Default value: 16 fp. If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 16 fp is used instead. Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)
 
 **Type:** LengthMetrics
 

@@ -6,14 +6,14 @@ Provides APIs for managing the **Authenticator** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** [AuthInstance](arkts-userauthentication-authinstance-i.md#authinstance)
+**Substitutes:** [AuthInstance](arkts-userauthentication-authinstance-i.md)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@ohos.userIAM.userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## execute
@@ -40,7 +40,7 @@ Starts user authentication. This API uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | type | AuthType | Yes | Authentication type. Currently, only **FACE_ONLY** is supported.<br>**ALL** is reserved and not supported by the current version. |
 | level | SecureLevel | Yes | Security level of the authentication. It can be **S1** (lowest), **S2**, **S3**,or **S4** (highest).<br>Devices capable of 3D facial recognition support S3 and lower-level authentication.<br>Devices capable of 2D facial recognition support S2 and lower-level authentication. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. **number** indicates the[AuthenticationResult](arkts-userauthentication-authenticationresult-e.md#authenticationresult). |
+| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. **number** indicates the[AuthenticationResult](arkts-userauthentication-authenticationresult-e.md). |
 
 **Example**
 
@@ -87,7 +87,7 @@ Starts user authentication. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the authentication result, which is a number. For details,see [AuthenticationResult](arkts-userauthentication-authenticationresult-e.md#authenticationresult). |
+| Promise&lt;number&gt; | Promise used to return the authentication result, which is a number. For details,see [AuthenticationResult](arkts-userauthentication-authenticationresult-e.md). |
 
 **Example**
 

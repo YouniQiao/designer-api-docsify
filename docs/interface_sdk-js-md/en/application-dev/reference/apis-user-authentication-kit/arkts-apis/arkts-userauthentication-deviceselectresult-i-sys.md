@@ -11,7 +11,7 @@ Returns the result of companion device selection. It is used to return the devic
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@ohos.userIAM.companionDeviceAuth';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## deviceKeys

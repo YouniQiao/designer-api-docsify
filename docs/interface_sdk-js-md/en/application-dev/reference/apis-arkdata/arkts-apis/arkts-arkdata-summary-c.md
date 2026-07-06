@@ -9,7 +9,7 @@ Summarizes the data information of the **unifiedData** object, including the dat
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@ohos.data.unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## overview

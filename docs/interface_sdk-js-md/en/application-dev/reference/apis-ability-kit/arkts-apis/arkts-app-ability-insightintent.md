@@ -9,7 +9,7 @@ This module provides basic definitions of the [InsightIntent framework](../../..
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@ohos.app.ability.insightIntent';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## Summary

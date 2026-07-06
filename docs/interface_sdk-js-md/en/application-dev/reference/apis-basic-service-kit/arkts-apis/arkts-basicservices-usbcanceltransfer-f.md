@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@ohos.usbManager';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## usbCancelTransfer
@@ -22,7 +22,7 @@ Cancels an asynchronous USB data transfer request. > **NOTE** > > This API is us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transfer | UsbDataTransferParams | Yes | Only the [USBDevicePipe](arkts-basicservices-usbdevicepipe-i.md#usbdevicepipe) and[USBEndpoint](arkts-basicservices-usbendpoint-i.md#usbendpoint) parameters should be specified in this API. |
+| transfer | UsbDataTransferParams | Yes | Only the [USBDevicePipe](arkts-basicservices-usbdevicepipe-i.md) and[USBEndpoint](arkts-basicservices-usbendpoint-i.md) parameters should be specified in this API. |
 
 **Error codes:**
 

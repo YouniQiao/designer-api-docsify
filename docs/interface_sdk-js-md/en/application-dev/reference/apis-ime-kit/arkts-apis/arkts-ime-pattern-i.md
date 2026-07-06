@@ -9,7 +9,7 @@ Define pattern of keyboard. The caller must be the current inputmethod.
 ## Modules to Import
 
 ```TypeScript
-import { Pattern, InputMethodListDialog, PatternOptions } from '@ohos.inputMethodList';
+import { Pattern, InputMethodListDialog, PatternOptions } from '@kit.IMEKit';
 ```
 
 ## icon

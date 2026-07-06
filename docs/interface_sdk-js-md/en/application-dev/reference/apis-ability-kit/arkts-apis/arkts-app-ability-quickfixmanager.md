@@ -11,7 +11,7 @@ The quickFixManager module provides APIs for quick fix. With quick fix, you can 
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from '@ohos.app.ability.quickFixManager';
+import { quickFixManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

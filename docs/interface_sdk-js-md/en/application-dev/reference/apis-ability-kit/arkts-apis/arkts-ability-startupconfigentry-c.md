@@ -9,7 +9,7 @@ The module provides the capability to configure [AppStartup](../../../../applica
 ## Modules to Import
 
 ```TypeScript
-import { StartupConfigEntry } from '@ohos.app.appstartup.StartupConfigEntry';
+import { StartupConfigEntry } from '@kit.AbilityKit';
 ```
 
 ## onConfig

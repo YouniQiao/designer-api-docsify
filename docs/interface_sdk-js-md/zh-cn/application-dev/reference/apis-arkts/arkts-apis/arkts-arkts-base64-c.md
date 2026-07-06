@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Base64Helper](arkts-arkts-base64helper-c.md#base64helper)
+**替代接口：** [Base64Helper](arkts-arkts-base64helper-c.md)
 
 **系统能力：** SystemCapability.Utils.Lang
 

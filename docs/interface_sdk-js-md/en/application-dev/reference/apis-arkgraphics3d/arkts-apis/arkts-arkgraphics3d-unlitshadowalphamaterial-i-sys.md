@@ -2,7 +2,7 @@
 
 Unlit shadow alpha material resource
 
-**Inheritance/Implementation:** UnlitShadowAlphaMaterial extends [Material](arkts-arkgraphics3d-material-i.md#material)
+**Inheritance/Implementation:** UnlitShadowAlphaMaterial extends [Material](arkts-arkgraphics3d-material-i.md)
 
 **Since:** 23
 

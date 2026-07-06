@@ -2,7 +2,7 @@
 
 Occlusion material resource
 
-**Inheritance/Implementation:** OcclusionMaterial extends [Material](arkts-arkgraphics3d-material-i.md#material)
+**Inheritance/Implementation:** OcclusionMaterial extends [Material](arkts-arkgraphics3d-material-i.md)
 
 **Since:** 23
 

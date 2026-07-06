@@ -1,6 +1,6 @@
 # SyntaxErrorConstructor
 
-**Inheritance/Implementation:** SyntaxErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md#errorconstructor)
+**Inheritance/Implementation:** SyntaxErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md)
 
 ## constructor
 

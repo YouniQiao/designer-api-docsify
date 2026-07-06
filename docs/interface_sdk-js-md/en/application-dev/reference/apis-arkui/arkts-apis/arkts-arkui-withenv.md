@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WithEnvAttribute, WithEnv } from '@ohos.arkui.WithEnv';
+import { WithEnvAttribute, WithEnv } from '@kit.ArkUI';
 ```
 
 ## Summary

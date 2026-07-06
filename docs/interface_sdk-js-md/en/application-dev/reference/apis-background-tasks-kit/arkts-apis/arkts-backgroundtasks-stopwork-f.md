@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { workScheduler } from '@ohos.resourceschedule.workScheduler';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## stopWork

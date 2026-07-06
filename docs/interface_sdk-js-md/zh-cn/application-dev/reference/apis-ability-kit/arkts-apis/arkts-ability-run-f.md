@@ -18,7 +18,7 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | 是 | 表示准备执行的启动任务[StartupTask](arkts-ability-startuptask-c.md#startuptask)的名称或预加载so名称的数组。 |
+| startupTasks | Array&lt;string&gt; | 是 | 表示准备执行的启动任务[StartupTask](arkts-ability-startuptask-c.md)的名称或预加载so名称的数组。 |
 | config | StartupConfig | 否 | 表示启动任务配置信息，包含启动框架超时时间与启动任务监听器配置。 |
 
 **返回值：**
@@ -75,7 +75,7 @@ export default class EntryAbility extends UIAbility {
 function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>
 ```
 
-执行启动框架启动任务或加载so文件。支持指定[AbilityStageContext](arkts-ability-abilitystagecontext-c.md#abilitystagecontext)用于启动任务的加载。使 用Promise异步回调。
+执行启动框架启动任务或加载so文件。支持指定[AbilityStageContext](arkts-ability-abilitystagecontext-c.md)用于启动任务的加载。使 用Promise异步回调。
 
 **起始版本：** 20
 
@@ -87,8 +87,8 @@ function run(startupTasks: Array<string>, context: common.AbilityStageContext, c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | 是 | 表示准备执行的启动任务[StartupTask](arkts-ability-startuptask-c.md#startuptask)的名称或预加载so名称的数组。 |
-| context | common.AbilityStageContext | 是 | 表示执行启动任务[StartupTask](arkts-ability-startuptask-c.md#startuptask)的AbilityStage上下文，作为入参传给启动任务的[init](arkts-ability-startuptask-c.md#init-1)。 |
+| startupTasks | Array&lt;string&gt; | 是 | 表示准备执行的启动任务[StartupTask](arkts-ability-startuptask-c.md)的名称或预加载so名称的数组。 |
+| context | common.AbilityStageContext | 是 | 表示执行启动任务[StartupTask](arkts-ability-startuptask-c.md)的AbilityStage上下文，作为入参传给启动任务的[init](arkts-ability-startuptask-c.md#init-1)。 |
 | config | StartupConfig | 是 | 表示启动任务配置信息，包含启动框架超时时间与启动任务监听器配置。 |
 
 **返回值：**

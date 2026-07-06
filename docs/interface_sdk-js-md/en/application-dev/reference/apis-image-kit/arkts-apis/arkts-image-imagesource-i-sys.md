@@ -9,7 +9,7 @@ The **ImageSource** class provides APIs to obtain image information. Before call
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createWideGamutSdrPixelMap

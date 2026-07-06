@@ -9,7 +9,7 @@ Defines shortcut key options.
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from '@ohos.multimodalInput.inputConsumer';
+import { inputConsumer } from '@kit.InputKit';
 ```
 
 ## finalKey
@@ -18,7 +18,7 @@ import { inputConsumer } from '@ohos.multimodalInput.inputConsumer';
 finalKey: number
 ```
 
-Modified key, which can be any key except the modifier keys and Meta key. For details about the keys, see [@ohos.multimodalInput.keyCode (Keycode)](arkts-input-keycode-e.md#keycode). For example, in **Ctrl+Shift+Esc**, **Esc** is the modifier key.
+Modified key, which can be any key except the modifier keys and Meta key. For details about the keys, see [@ohos.multimodalInput.keyCode (Keycode)](arkts-input-keycode-e.md). For example, in **Ctrl+Shift+Esc**, **Esc** is the modifier key.
 
 **Type:** number
 

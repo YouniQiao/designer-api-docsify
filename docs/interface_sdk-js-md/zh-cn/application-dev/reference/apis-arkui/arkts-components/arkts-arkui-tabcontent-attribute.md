@@ -1,6 +1,6 @@
 # TabContent属性/事件
 
-��֧��[ͨ������](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)�⣬��֧���������ԣ� ��֧��[ͨ���¼�](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)�⣬��֧�������¼���
+��֧��[ͨ������](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)�⣬��֧���������ԣ� ��֧��[ͨ���¼�](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)�⣬��֧�������¼���
 
 **继承/实现关系：** TabContentAttribute extends [CommonMethod<TabContentAttribute>](CommonMethod<TabContentAttribute>)
 
@@ -78,7 +78,7 @@ tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 ```
 
-����TabBar����ʾ���ݡ��ײ���ʽû���»���Ч����icon�쳣ʱ��ʾ��ɫͼ�顣 > **˵����** > - ��ҳǩ��[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md#subtabbarstyle)����ʽ��ͨ��Ϊ����+�»��ߣ�����+�����ҳǩ������������ı���ʽ����������ڶ������ߵײ�ʹ�á��л�ҳǩʱĬ��֧�ֶ�����תЧ������������Ѷ > ��Ӧ�õĶ������ࣨ��"��ע����Ƶ������"��������ģ��Ķ������������� > > - �ײ�ҳǩ/���ҳǩ��[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md#bottomtabbarstyle)����ʽ�����»��ߺͱ���Ч����ҳǩ��ʽͨ��Ϊͼ��+���ֵ���Ϸ�ʽ���л�ҳǩʱĬ���޶�����תЧ�����ײ�ҳǩͨ������Ӧ�� > ������������ҳ�����֡��Ƽ��������ҳǩ�����ڿ���������������vertical(true)�������򲼾֣���ҳǩ�ڲ����ʾ��Ĭ�������ʾ��
+����TabBar����ʾ���ݡ��ײ���ʽû���»���Ч����icon�쳣ʱ��ʾ��ɫͼ�顣 > **˵����** > - ��ҳǩ��[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)����ʽ��ͨ��Ϊ����+�»��ߣ�����+�����ҳǩ������������ı���ʽ����������ڶ������ߵײ�ʹ�á��л�ҳǩʱĬ��֧�ֶ�����תЧ������������Ѷ > ��Ӧ�õĶ������ࣨ��"��ע����Ƶ������"��������ģ��Ķ������������� > > - �ײ�ҳǩ/���ҳǩ��[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)����ʽ�����»��ߺͱ���Ч����ҳǩ��ʽͨ��Ϊͼ��+���ֵ���Ϸ�ʽ���л�ҳǩʱĬ���޶�����תЧ�����ײ�ҳǩͨ������Ӧ�� > ������������ҳ�����֡��Ƽ��������ҳǩ�����ڿ���������������vertical(true)�������򲼾֣���ҳǩ�ڲ����ʾ��Ĭ�������ʾ��
 
 **起始版本：** 9
 

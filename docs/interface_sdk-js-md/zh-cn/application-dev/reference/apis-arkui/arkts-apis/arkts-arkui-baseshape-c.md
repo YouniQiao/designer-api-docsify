@@ -1,6 +1,6 @@
 # BaseShape
 
-继承自[CommonShapeMethod](arkts-arkui-commonshapemethod-c.md#commonshapemethod)。
+继承自[CommonShapeMethod](arkts-arkui-commonshapemethod-c.md)。
 
 **继承/实现关系：** BaseShape extends [CommonShapeMethod<T>](CommonShapeMethod<T>)
 

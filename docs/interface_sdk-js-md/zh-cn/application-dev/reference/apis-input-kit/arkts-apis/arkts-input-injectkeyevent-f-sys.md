@@ -29,7 +29,7 @@ function injectKeyEvent(keyEvent: KeyEventData): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 12 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 12+ |
 
 **示例：**
 

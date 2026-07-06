@@ -9,7 +9,7 @@ Provides an instance to obtain information about a distributed KV store. Before 
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@ohos.data.distributedKVStore';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## closeKVStore
@@ -31,7 +31,7 @@ Closes a distributed KV store. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
-| storeId | string | Yes | Unique identifier of the KV store to close. The KV store ID allows only letters, digits, andunderscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-i.md#constants) in length. |
+| storeId | string | Yes | Unique identifier of the KV store to close. The KV store ID allows only letters, digits, andunderscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-i.md) in length. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -102,7 +102,7 @@ Closes a distributed KV store. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
-| storeId | string | Yes | Unique identifier of the KV store to close. The KV store ID allows only letters, digits, andunderscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-i.md#constants) in length. |
+| storeId | string | Yes | Unique identifier of the KV store to close. The KV store ID allows only letters, digits, andunderscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-i.md) in length. |
 | kvConfig | Options | No | Indicates the {@code Options} object used for close the KVStore database.<br>**Since:** 24 |
 
 **Return value:**
@@ -136,7 +136,7 @@ Deletes a distributed KV store. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
-| storeId | string | Yes | Unique identifier of the KV store to delete. The KV store ID allows only letters, digits,and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-i.md#constants) in length. |
+| storeId | string | Yes | Unique identifier of the KV store to delete. The KV store ID allows only letters, digits,and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-i.md) in length. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -209,7 +209,7 @@ Deletes a distributed KV store. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
-| storeId | string | Yes | Unique identifier of the KV store to delete. The KV store ID allows only letters, digits,and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-i.md#constants) in length. |
+| storeId | string | Yes | Unique identifier of the KV store to delete. The KV store ID allows only letters, digits,and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-i.md) in length. |
 | kvConfig | Options | No | Indicates the {@code Options} object used for delete the KVStore database.<br>**Since:** 24 |
 
 **Return value:**
@@ -345,7 +345,7 @@ Creates and obtains a distributed KV store based on the specified **options** an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| storeId | string | Yes | Unique identifier of the KV store. The KV store ID allows only letters, digits, andunderscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-i.md#constants) in length. |
+| storeId | string | Yes | Unique identifier of the KV store. The KV store ID allows only letters, digits, andunderscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-i.md) in length. |
 | options | Options | Yes | Configuration of the KV store to create. |
 | callback | AsyncCallback&lt;T&gt; | Yes | Callback used to return the **SingleKVStore** or **DeviceKVStore** instancecreated. |
 
@@ -409,7 +409,7 @@ Creates and obtains a distributed KV store based on the specified **options** an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| storeId | string | Yes | Unique identifier of the KV store. The KV store ID allows only letters, digits, andunderscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-i.md#constants) in length. |
+| storeId | string | Yes | Unique identifier of the KV store. The KV store ID allows only letters, digits, andunderscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-constants-i.md) in length. |
 | options | Options | Yes | Configuration of the KV store to create. |
 
 **Return value:**

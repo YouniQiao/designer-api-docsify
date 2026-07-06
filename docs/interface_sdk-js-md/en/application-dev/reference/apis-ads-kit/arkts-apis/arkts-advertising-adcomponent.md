@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from '@ohos.advertising.AdComponent';
+import { AdComponent } from '@kit.AdsKit';
 ```
 
 ## Summary

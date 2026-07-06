@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { TreeMap } from '@ohos.util.TreeMap';
+import { TreeMap } from '@kit.ArkTS';
 ```
 
 ## Summary

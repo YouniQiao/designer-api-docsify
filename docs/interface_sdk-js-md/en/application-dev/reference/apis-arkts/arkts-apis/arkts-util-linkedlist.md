@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LinkedList } from '@ohos.util.LinkedList';
+import { LinkedList } from '@kit.ArkTS';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Describes the information returned by the application during window rotation cha
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## rectType

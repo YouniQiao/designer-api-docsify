@@ -11,7 +11,7 @@ System panel status.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodSystemPanelManager } from '@ohos.inputMethodSystemPanelManager';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## inputType

@@ -1,8 +1,8 @@
 # RichEditorStyledStringController
 
-Represents the controller of the **RichEditor** component constructed using the styled string. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#richeditorbasecontroller).
+Represents the controller of the **RichEditor** component constructed using the styled string. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
 
-**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#richeditorbasecontroller) and implements [StyledStringController](arkts-arkui-styledstringcontroller-i.md#styledstringcontroller)
+**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) and implements [StyledStringController](arkts-arkui-styledstringcontroller-i.md)
 
 **Since:** 12
 
@@ -94,5 +94,5 @@ Sets the styled string displayed in the **RichEditor** component. > **NOTE** > >
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | StyledString | Yes | Styled string.<br>**NOTE**<br>The child class[MutableStyledString](arkts-arkui-mutablestyledstring-c.md#mutablestyledstring) of **StyledString** can also serve as theargument. |
+| styledString | StyledString | Yes | Styled string.<br>**NOTE**<br>The child class[MutableStyledString](arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as theargument. |
 

@@ -9,7 +9,7 @@ HiRetrieval functionality config.
 ## Modules to Import
 
 ```TypeScript
-import { hiRetrieval } from '@ohos.hiviewdfx.hiRetrieval';
+import { hiRetrieval } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## deviceModel

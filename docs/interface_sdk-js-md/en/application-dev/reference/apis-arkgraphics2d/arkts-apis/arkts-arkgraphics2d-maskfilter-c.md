@@ -9,7 +9,7 @@ Implements a mask filter. > **NOTE** > > - The initial APIs of this class are su
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createBlurMaskFilter

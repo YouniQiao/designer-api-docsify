@@ -2,7 +2,7 @@
 
 Context是Stage模型的上下文基类，主要用于访问特定应用程序的资源，以及执行应用级操作的回调。
 
-**继承/实现关系：** Context extends [BaseContext](arkts-ability-basecontext-c.md#basecontext)
+**继承/实现关系：** Context extends [BaseContext](arkts-ability-basecontext-c.md)
 
 **起始版本：** 9
 
@@ -134,7 +134,7 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 createSystemHspModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager
 ```
 
-该接口用于OEM厂商预置的[系统级HSP](../../../../quick-start/application-package-glossary.md#系统级hsp)创建自己的 [ResourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourcemanager)。
+该接口用于OEM厂商预置的[系统级HSP](../../../../quick-start/application-package-glossary.md#系统级hsp)创建自己的 [ResourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)。
 
 **起始版本：** 12
 

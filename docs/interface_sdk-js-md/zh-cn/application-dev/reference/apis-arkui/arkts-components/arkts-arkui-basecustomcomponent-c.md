@@ -2,7 +2,7 @@
 
 自定义组件基类，它是从类CustomComponent迁移过来的。
 
-**继承/实现关系：** BaseCustomComponent extends [CommonAttribute](arkts-arkui-common-attribute.md#commonattribute)
+**继承/实现关系：** BaseCustomComponent extends [CommonAttribute](arkts-arkui-common-attribute.md)
 
 **起始版本：** 18
 

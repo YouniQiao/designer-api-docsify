@@ -9,7 +9,7 @@ The **CommonEventManager** module provides common event capabilities to publish,
 ## Modules to Import
 
 ```TypeScript
-import { commonEventManager } from '@ohos.commonEventManager';
+import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

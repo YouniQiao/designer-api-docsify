@@ -9,7 +9,7 @@ Describes the capability of a partner device.
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from '@ohos.FusionConnectivity.partnerAgent';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## supportBR

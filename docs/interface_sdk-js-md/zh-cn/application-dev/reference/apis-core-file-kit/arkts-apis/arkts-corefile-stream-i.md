@@ -326,7 +326,7 @@ read(
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
 | 13900042 | Unknown error |
-| 13900044 | Network is unreachable<br>**适用版本：** 12 |
+| 13900044 | Network is unreachable<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -517,7 +517,7 @@ readSync(
 | 13900020 | Invalid argument |
 | 13900034 | Operation would block |
 | 13900042 | Unknown error |
-| 13900044 | Network is unreachable<br>**适用版本：** 12 |
+| 13900044 | Network is unreachable<br>**适用版本：** 12+ |
 
 **示例：**
 

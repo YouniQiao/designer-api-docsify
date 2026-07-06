@@ -6,7 +6,7 @@
 function saveAppState(): boolean
 ```
 
-保存当前App状态，可以配合[errorManager](arkts-app-ability-errormanager.md#errormanager)相关接口使用。
+保存当前App状态，可以配合[errorManager](arkts-app-ability-errormanager.md)相关接口使用。
 
 **起始版本：** 9
 
@@ -50,7 +50,7 @@ try {
 function saveAppState(context?: UIAbilityContext): boolean
 ```
 
-主动保存Ability的状态，这个状态将在下次恢复启动时使用。可以配合[errorManager](arkts-app-ability-errormanager.md#errormanager)相关接口使用。
+主动保存Ability的状态，这个状态将在下次恢复启动时使用。可以配合[errorManager](arkts-app-ability-errormanager.md)相关接口使用。
 
 **起始版本：** 10
 

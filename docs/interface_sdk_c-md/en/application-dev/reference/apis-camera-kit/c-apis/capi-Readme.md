@@ -2,7 +2,6 @@
     - [camera.h](capi-camera-h.md)
     - [capture_session.h](capi-capture-session-h.md)
     - [photo_native.h](capi-photo-native-h.md)
-    - [camera_notification_info.h](capi-camera-notification-info-h.md)
     - [metadata_output.h](capi-metadata-output-h.md)
     - [metadata_object_ext.h](capi-metadata-object-ext-h.md)
     - [camera_manager.h](capi-camera-manager-h.md)
@@ -13,7 +12,6 @@
     - [preview_output.h](capi-preview-output-h.md)
 - Module
     - [OH_Camera](capi-oh-camera.md)
-    - [CameraNotificationInfo](capi-cameranotificationinfo.md)
     - [MetadataObjectExt](capi-metadataobjectext.md)
 - Struct
     - [Camera_Size](capi-oh-camera-camera-size.md)
@@ -48,7 +46,6 @@
     - [CaptureSession_Callbacks](capi-oh-camera-capturesession-callbacks.md)
     - [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)
     - [OH_PhotoNative](capi-oh-camera-oh-photonative.md)
-    - [OH_Camera_NotificationInfo](capi-cameranotificationinfo-oh-camera-notificationinfo.md)
     - [MetadataOutput_Callbacks](capi-oh-camera-metadataoutput-callbacks.md)
     - [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)
     - [OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)

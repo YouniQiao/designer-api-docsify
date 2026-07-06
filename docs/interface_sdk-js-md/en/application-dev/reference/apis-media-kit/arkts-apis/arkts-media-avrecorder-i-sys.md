@@ -1,6 +1,6 @@
 # AVRecorder
 
-AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-createavrecorder-f.md#createavrecorder-1) to create an AVRecorder instance. For details about the audio and video recording demo, see [Audio Recording](../../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../../media/media/video-recording.md). > **NOTE** > > > To use the camera to record videos, the camera module is required. For details about how to use the APIs > provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md#camera).
+AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-createavrecorder-f.md#createavrecorder-1) to create an AVRecorder instance. For details about the audio and video recording demo, see [Audio Recording](../../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../../media/media/video-recording.md). > **NOTE** > > > To use the camera to record videos, the camera module is required. For details about how to use the APIs > provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md).
 
 **Since:** 9
 
@@ -9,7 +9,7 @@ AVRecorder is a class for audio and video recording management. It provides APIs
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getInputMetaSurface
@@ -106,9 +106,9 @@ Set metadata (key-value pairs) for the recording file of the recorder. This meta
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 19 - 24 |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory.<br>**Applicable version:** 26.0.0 |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed.<br>**Applicable version:** 26.0.0 |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed.<br>**Applicable version:** 26.0.0 |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory.<br>**Applicable version:** 26.0.0 and later |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed.<br>**Applicable version:** 26.0.0 and later |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## setWatermark
 

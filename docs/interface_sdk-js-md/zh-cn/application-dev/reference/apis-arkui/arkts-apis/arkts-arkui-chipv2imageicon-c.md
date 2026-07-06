@@ -2,7 +2,7 @@
 
 ChipV2的icon属性
 
-**继承/实现关系：** ChipV2ImageIcon extends [ChipV2Icon](arkts-arkui-chipv2icon-c.md#chipv2icon)
+**继承/实现关系：** ChipV2ImageIcon extends [ChipV2Icon](arkts-arkui-chipv2icon-c.md)
 
 **起始版本：** 26.0.0
 

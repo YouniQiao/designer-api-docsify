@@ -9,7 +9,7 @@ Defines APIs to access the result set obtained by querying the RDB store. This r
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@ohos.data.relationalStore';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## close
@@ -32,7 +32,7 @@ Closes this **resultSet** to release memory. If the **resultSet** is not closed,
 getAsset(columnIndex: number): Asset
 ```
 
-Obtains the value in the specified column in the current row as an [Asset](arkts-arkdata-asset-i.md#asset). If the data type of the current column is Asset, the value is returned as an Asset. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Asset, 14800041 is returned.
+Obtains the value in the specified column in the current row as an [Asset](arkts-arkdata-asset-i.md). If the data type of the current column is Asset, the value is returned as an Asset. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Asset, 14800041 is returned.
 
 **Since:** 23
 
@@ -67,7 +67,7 @@ Obtains the value in the specified column in the current row as an [Asset](arkts
 getAssets(columnIndex: number): Assets
 ```
 
-Obtains the value in the specified column in the current row as [Assets](arkts-arkdata-assets-t.md#assets). If the data type of the current column is Assets, the value is returned as Assets. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Assets, 14800041 is returned.
+Obtains the value in the specified column in the current row as [Assets](arkts-arkdata-assets-t.md). If the data type of the current column is Assets, the value is returned as Assets. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Assets, 14800041 is returned.
 
 **Since:** 23
 
@@ -469,7 +469,7 @@ Obtains data for the current row.
 getRows(maxCount: number, position?: number): Promise<Array<ValuesBucket>>
 ```
 
-Obtains a specified amount of data from the result set. This API uses a promise to return the result. Do not call this API concurrently with other APIs of [LiteResultSet](arkts-data-relationalstore.md#relationalstore). Otherwise, unexpected data may be obtained.
+Obtains a specified amount of data from the result set. This API uses a promise to return the result. Do not call this API concurrently with other APIs of [LiteResultSet](arkts-data-relationalstore.md). Otherwise, unexpected data may be obtained.
 
 **Since:** 23
 
@@ -511,7 +511,7 @@ Obtains a specified amount of data from the result set. This API uses a promise 
 getRowsData(maxCount: number, position?: number): Promise<RowsData>
 ```
 
-Obtains data of a specified number of rows from the specified position. This API uses a promise to return the result. Do not call this API concurrently with other APIs of [ResultSet](arkts-data-relationalstore.md#relationalstore). Otherwise, unexpected data may be obtained.
+Obtains data of a specified number of rows from the specified position. This API uses a promise to return the result. Do not call this API concurrently with other APIs of [ResultSet](arkts-data-relationalstore.md). Otherwise, unexpected data may be obtained.
 
 **Since:** 23
 

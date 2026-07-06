@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { missionManager } from '@ohos.app.ability.missionManager';
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## moveMissionsToBackground

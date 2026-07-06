@@ -9,7 +9,7 @@ Defines AtomicServiceTabs.
 ## Modules to Import
 
 ```TypeScript
-import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from '@ohos.atomicservice.AtomicServiceTabs';
+import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from '@kit.ArkUI';
 ```
 
 ## barBackgroundColor
@@ -220,7 +220,7 @@ The TabContent array of tabs.
 
 **Since:** 12
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

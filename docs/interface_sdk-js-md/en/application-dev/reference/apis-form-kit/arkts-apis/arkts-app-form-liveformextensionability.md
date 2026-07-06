@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LiveFormInfo } from '@ohos.app.form.LiveFormExtensionAbility';
+import { LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## Summary

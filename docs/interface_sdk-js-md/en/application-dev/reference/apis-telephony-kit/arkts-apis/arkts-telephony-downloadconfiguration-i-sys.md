@@ -11,7 +11,7 @@ Specifies the download configuration.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@ohos.telephony.esim';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## forceDisableProfile

@@ -32,7 +32,7 @@ backgroundSystemMaterial?: uiMaterial.Material
 chipGroupPadding?: ChipGroupPaddingOptions
 ```
 
-设置ChipGroup的上下内边距，以控制整体高度。类型为[ChipGroupPaddingOptions](arkts-arkui-chipgrouppaddingoptions-i.md#chipgrouppaddingoptions)。 默认值：{ top: 14, bottom: 14 } 单位：vp 值为undefined时，按默认值处理。
+设置ChipGroup的上下内边距，以控制整体高度。类型为[ChipGroupPaddingOptions](arkts-arkui-chipgrouppaddingoptions-i.md)。 默认值：{ top: 14, bottom: 14 } 单位：vp 值为undefined时，按默认值处理。
 
 **类型：** ChipGroupPaddingOptions
 
@@ -52,7 +52,7 @@ chipGroupPadding?: ChipGroupPaddingOptions
 chipGroupSpace?: ChipGroupSpaceOptions
 ```
 
-左右内边距及Chip之间间距。参考[ChipGroupSpaceOptions](arkts-arkui-chipgroupspaceoptions-i.md#chipgroupspaceoptions)类型。 默认值：{ itemSpace: 8, startSpace: 16, endSpace: 16 } 单位：vp 值为undefined时，按默认值处理。
+左右内边距及Chip之间间距。参考[ChipGroupSpaceOptions](arkts-arkui-chipgroupspaceoptions-i.md)类型。 默认值：{ itemSpace: 8, startSpace: 16, endSpace: 16 } 单位：vp 值为undefined时，按默认值处理。
 
 **类型：** ChipGroupSpaceOptions
 
@@ -72,7 +72,7 @@ chipGroupSpace?: ChipGroupSpaceOptions
 itemStyle?: ChipItemStyle
 ```
 
-`Chip`的`style`属性，如颜色，大小等，参考[ChipItemStyle](arkts-arkui-chipitemstyle-i.md#chipitemstyle)类型。 默认值： { size: ChipSize.NORMAL, backgroundColor: $r('sys.color.ohos_id_color_button_normal'), fontColor: $r(' sys.color.ohos_id_color_text_primary'), selectedFontColor: $r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: $r('sys.color.ohos_id_color_emphasize') } 值为undefined时，按默认值处理。
+`Chip`的`style`属性，如颜色，大小等，参考[ChipItemStyle](arkts-arkui-chipitemstyle-i.md)类型。 默认值： { size: ChipSize.NORMAL, backgroundColor: $r('sys.color.ohos_id_color_button_normal'), fontColor: $r(' sys.color.ohos_id_color_text_primary'), selectedFontColor: $r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: $r('sys.color.ohos_id_color_emphasize') } 值为undefined时，按默认值处理。
 
 **类型：** ChipItemStyle
 
@@ -190,13 +190,13 @@ selectedIndexes?: Array<number>
 suffix?: Callback<void>
 ```
 
-支持开发者自定义builder，如需在组件最右侧显示自定义内容可配置suffix属性，使用属性suffix需引用[IconGroupSuffix](arkts-arkui-icongroupsuffix-s.md#icongroupsuffix)接口。 默认不传入时，没有suffix。 值为undefined时，没有suffix。
+支持开发者自定义builder，如需在组件最右侧显示自定义内容可配置suffix属性，使用属性suffix需引用[IconGroupSuffix](arkts-arkui-icongroupsuffix-s.md)接口。 默认不传入时，没有suffix。 值为undefined时，没有suffix。
 
 **类型：** Callback<void>
 
 **起始版本：** 12
 
-**装饰器类型：** @Builder
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

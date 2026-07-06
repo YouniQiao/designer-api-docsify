@@ -9,7 +9,7 @@ Monitors telephony state updates of a device, including updates of the network s
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@ohos.telephony.observer';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## Summary

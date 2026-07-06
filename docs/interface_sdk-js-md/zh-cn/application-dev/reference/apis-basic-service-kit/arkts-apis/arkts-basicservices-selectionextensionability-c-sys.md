@@ -101,7 +101,7 @@ class ServiceExtAbility extends SelectionExtensionAbility {
 context: SelectionExtensionContext
 ```
 
-SelectionExtensionAbility的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext)。
+SelectionExtensionAbility的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
 
 **类型：** SelectionExtensionContext
 

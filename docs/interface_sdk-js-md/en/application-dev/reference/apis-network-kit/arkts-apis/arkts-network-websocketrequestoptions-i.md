@@ -9,7 +9,7 @@ Defines the optional parameters carried in the request for establishing a WebSoc
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@ohos.net.webSocket';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## caPath

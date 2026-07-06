@@ -2,7 +2,7 @@
 
 场景资源工厂.
 
-**继承/实现关系：** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-renderresourcefactory-i.md#renderresourcefactory)
+**继承/实现关系：** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-renderresourcefactory-i.md)
 
 **起始版本：** 12
 

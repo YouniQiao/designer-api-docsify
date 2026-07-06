@@ -11,7 +11,7 @@ The **fontManager** module provides APIs for system applications to install and 
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from '@ohos.fontManager';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## Summary

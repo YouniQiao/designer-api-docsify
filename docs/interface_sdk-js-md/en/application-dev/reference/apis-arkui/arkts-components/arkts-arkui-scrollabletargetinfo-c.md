@@ -1,8 +1,8 @@
 # ScrollableTargetInfo
 
-Provides the information about the scrollable container component corresponding to the gesture recognizer. It inherits from [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md#eventtargetinfo).
+Provides the information about the scrollable container component corresponding to the gesture recognizer. It inherits from [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md).
 
-**Inheritance/Implementation:** ScrollableTargetInfo extends [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md#eventtargetinfo)
+**Inheritance/Implementation:** ScrollableTargetInfo extends [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md)
 
 **Since:** 12
 

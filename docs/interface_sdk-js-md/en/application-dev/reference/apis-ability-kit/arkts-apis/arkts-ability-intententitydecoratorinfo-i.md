@@ -9,7 +9,7 @@ Describes the parameters supported by the [@InsightIntentEntity](../../../../ref
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from '@ohos.app.ability.InsightIntentDecorator';
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from '@kit.AbilityKit';
 ```
 
 ## entityCategory

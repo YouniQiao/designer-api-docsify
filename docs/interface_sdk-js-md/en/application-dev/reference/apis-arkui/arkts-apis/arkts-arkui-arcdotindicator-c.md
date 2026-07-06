@@ -9,7 +9,7 @@ Describes the properties and behavior of the arc dot navigation indicator.
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@ohos.arkui.ArcSwiper';
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
 ```
 
 ## arcDirection

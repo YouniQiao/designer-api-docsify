@@ -2,7 +2,7 @@
 
 Defines user blow data.
 
-**Inheritance/Implementation:** UserBlowData extends [UserStatusData](arkts-multimodalawareness-userstatusdata-i-sys.md#userstatusdata)
+**Inheritance/Implementation:** UserBlowData extends [UserStatusData](arkts-multimodalawareness-userstatusdata-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -13,7 +13,7 @@ Defines user blow data.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@ohos.multimodalAwareness.userStatus';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## blowDirection

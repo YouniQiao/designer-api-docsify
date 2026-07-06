@@ -9,7 +9,7 @@ Channel represents an [ISO 7816-4] channel opened to a SE. It can be either a lo
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from '@ohos.secureElement';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## close

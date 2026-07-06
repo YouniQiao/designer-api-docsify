@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@ohos.app.ability.insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## getInsightIntentInfoByIntentName
@@ -31,7 +31,7 @@ Obtains the intent information on the current device based on the bundle name, m
 | bundleName | string | Yes | Bundle name of the application.<br>**NOTE**<br> If the bundle name does not exist, anempty object is returned. |
 | moduleName | string | Yes | Module name.<br>**NOTE**<br> If the module name does not exist, an empty object isreturned. |
 | intentName | string | Yes | Intent name.<br>**NOTE**<br> If the intent name does not exist, an empty object isreturned. |
-| intentFlags | number | Yes | Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md#insightintentinfo)). It is used to query full or brief intentinformation. For details, see [GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md#getinsightintentflag). |
+| intentFlags | number | Yes | Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md)). It is used to query full or brief intentinformation. For details, see [GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md). |
 
 **Return value:**
 

@@ -9,7 +9,7 @@ Defines the APN info.
 ## Modules to Import
 
 ```TypeScript
-import { data } from '@ohos.telephony.data';
+import { data } from '@kit.TelephonyKit';
 ```
 
 ## apn

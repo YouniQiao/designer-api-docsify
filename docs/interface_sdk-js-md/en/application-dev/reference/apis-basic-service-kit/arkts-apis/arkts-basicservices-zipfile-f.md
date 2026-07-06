@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@ohos.zlib';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## zipFile
@@ -26,7 +26,7 @@ Zips a file. The execution result is returned after the compression is complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFile | string | Yes | Path of the folder or file to zip. The path must be an application sandbox path, whichcan be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context) and[Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context). |
+| inFile | string | Yes | Path of the folder or file to zip. The path must be an application sandbox path, whichcan be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and[Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
 | outFile | string | Yes | Path of the zipped file. The file name extension is .zip. |
 | options | Options | Yes | Optional parameters for the zip operation. |
 

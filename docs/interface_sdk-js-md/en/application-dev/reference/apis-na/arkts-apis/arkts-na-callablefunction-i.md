@@ -1,6 +1,6 @@
 # CallableFunction
 
-**Inheritance/Implementation:** CallableFunction extends [Function](arkts-na-function-i.md#function)
+**Inheritance/Implementation:** CallableFunction extends [Function](arkts-na-function-i.md)
 
 ## apply
 

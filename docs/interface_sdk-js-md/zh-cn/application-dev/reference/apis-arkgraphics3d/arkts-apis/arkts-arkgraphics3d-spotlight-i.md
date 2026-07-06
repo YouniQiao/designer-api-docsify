@@ -2,7 +2,7 @@
 
 定义聚光灯.
 
-**继承/实现关系：** SpotLight extends [Light](arkts-arkgraphics3d-light-i.md#light)
+**继承/实现关系：** SpotLight extends [Light](arkts-arkgraphics3d-light-i.md)
 
 **起始版本：** 12
 

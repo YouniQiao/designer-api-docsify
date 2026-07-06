@@ -1,8 +1,8 @@
 # USBDriverInfo（系统接口）
 
-USB设备驱动详细信息，继承自[DriverInfo](arkts-driverdevelopment-driverinfo-i-sys.md#driverinfo)。
+USB设备驱动详细信息，继承自[DriverInfo](arkts-driverdevelopment-driverinfo-i-sys.md)。
 
-**继承/实现关系：** USBDriverInfo extends [DriverInfo](arkts-driverdevelopment-driverinfo-i-sys.md#driverinfo)
+**继承/实现关系：** USBDriverInfo extends [DriverInfo](arkts-driverdevelopment-driverinfo-i-sys.md)
 
 **起始版本：** 12
 

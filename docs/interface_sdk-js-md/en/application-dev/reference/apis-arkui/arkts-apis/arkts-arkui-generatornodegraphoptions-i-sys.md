@@ -11,7 +11,7 @@ Parameters used to open the NodeGraphComponent.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@ohos.arkui.intelligence.imageGeneration';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## customIcons

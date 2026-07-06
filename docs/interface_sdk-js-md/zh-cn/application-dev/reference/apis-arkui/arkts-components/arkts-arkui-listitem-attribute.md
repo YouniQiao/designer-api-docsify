@@ -1,6 +1,6 @@
 # ListItem属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性：
 
 **继承/实现关系：** ListItemAttribute extends [CommonMethod<ListItemAttribute>](CommonMethod<ListItemAttribute>)
 

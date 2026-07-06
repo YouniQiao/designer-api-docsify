@@ -9,7 +9,7 @@ The module provides the base class for intent execution. You can use this module
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentExecutor } from '@ohos.app.ability.InsightIntentExecutor';
+import { InsightIntentExecutor } from '@kit.AbilityKit';
 ```
 
 ## onExecuteInServiceExtensionAbility
@@ -323,7 +323,7 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIExtensionAbility lifecycle when the [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported. - The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution: [onCreate](arkts-ability-uiextensionability-c.md#oncreate-1), [onSessionCreate](arkts-ability-uiextensionability-c.md#onsessioncreate-1), onExecuteInUIExtensionAbility, and [onForeground](arkts-ability-uiextensionability-c.md#onforeground-1).
+Called during the UIExtensionAbility lifecycle when the [UIExtensionAbility](arkts-ability-uiextensionability-c.md) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported. - The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution: [onCreate](arkts-ability-uiextensionability-c.md#oncreate-1), [onSessionCreate](arkts-ability-uiextensionability-c.md#onsessioncreate-1), onExecuteInUIExtensionAbility, and [onForeground](arkts-ability-uiextensionability-c.md#onforeground-1).
 
 **Since:** 11
 

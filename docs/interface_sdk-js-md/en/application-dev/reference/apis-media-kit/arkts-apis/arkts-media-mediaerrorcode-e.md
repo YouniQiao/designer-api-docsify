@@ -6,7 +6,7 @@ Enumerates the media error codes.
 
 **Deprecated since:** 11
 
-**Substitutes:** [AVErrorCode](arkts-media-averrorcode-e.md#averrorcode)
+**Substitutes:** [AVErrorCode](arkts-media-averrorcode-e.md)
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 

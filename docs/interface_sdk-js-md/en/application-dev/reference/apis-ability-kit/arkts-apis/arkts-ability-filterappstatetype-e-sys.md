@@ -1,6 +1,6 @@
 # FilterAppStateType (System API)
 
-Enumerates the types of application states to filter. It can be used with [AppStateFilter](arkts-ability-appstatefilter-i-sys.md#appstatefilter) to filter the application state types you want to listen for.
+Enumerates the types of application states to filter. It can be used with [AppStateFilter](arkts-ability-appstatefilter-i-sys.md) to filter the application state types you want to listen for.
 
 **Since:** 21
 

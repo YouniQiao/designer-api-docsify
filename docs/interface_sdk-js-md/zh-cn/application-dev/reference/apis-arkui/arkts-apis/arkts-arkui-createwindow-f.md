@@ -6,7 +6,7 @@
 function createWindow(config: Configuration, callback: AsyncCallback<Window>): void
 ```
 
-创建子窗口或者系统窗口，使用callback异步回调。 非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是 [沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。 自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-configuration-i.md#configuration)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口 创建后为非沉浸式布局。
+创建子窗口或者系统窗口，使用callback异步回调。 非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是 [沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。 自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-configuration-i.md)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口 创建后为非沉浸式布局。
 
 **起始版本：** 9
 
@@ -30,10 +30,10 @@ function createWindow(config: Configuration, callback: AsyncCallback<Window>): v
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow can not work correctly due to limited devicecapabilities.<br>**适用版本：** 12 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow can not work correctly due to limited devicecapabilities.<br>**适用版本：** 12+ |
 | [1300001](../errorcode-window.md#1300001-重复操作) | Repeated operation.Possible cause: The window has been created and can not be created again. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**适用版本：** 12 |
-| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window type in the configuration isinvalid.<br>**适用版本：** 12 |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**适用版本：** 12+ |
+| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window type in the configuration isinvalid.<br>**适用版本：** 12+ |
 | [1300006](../errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
 | [1300008](../errorcode-window.md#1300008-显示设备异常) | The display device is abnormal.<br>**适用版本：** 9 - 16 |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
@@ -79,7 +79,7 @@ export default class EntryAbility extends UIAbility {
 function createWindow(config: Configuration): Promise<Window>
 ```
 
-创建子窗口或者系统窗口，使用Promise异步回调。 非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是 [沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。 自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-configuration-i.md#configuration)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口 创建后为非沉浸式布局。
+创建子窗口或者系统窗口，使用Promise异步回调。 非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是 [沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。 自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-configuration-i.md)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口 创建后为非沉浸式布局。
 
 **起始版本：** 9
 
@@ -108,10 +108,10 @@ function createWindow(config: Configuration): Promise<Window>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow can not work correctly due to limited devicecapabilities.<br>**适用版本：** 12 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow can not work correctly due to limited devicecapabilities.<br>**适用版本：** 12+ |
 | [1300001](../errorcode-window.md#1300001-重复操作) | Repeated operation.Possible cause: The window has been created and can not be created again. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**适用版本：** 12 |
-| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window type in the configuration isinvalid.<br>**适用版本：** 12 |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**适用版本：** 12+ |
+| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window type in the configuration isinvalid.<br>**适用版本：** 12+ |
 | [1300006](../errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
 | [1300008](../errorcode-window.md#1300008-显示设备异常) | The display device is abnormal.<br>**适用版本：** 9 - 16 |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |

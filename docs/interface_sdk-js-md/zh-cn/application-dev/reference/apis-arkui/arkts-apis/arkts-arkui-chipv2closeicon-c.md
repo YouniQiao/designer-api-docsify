@@ -2,7 +2,7 @@
 
 定义默认的关闭图标。
 
-**继承/实现关系：** ChipV2CloseIcon extends [ChipV2Accessibility](arkts-arkui-chipv2accessibility-c.md#chipv2accessibility)
+**继承/实现关系：** ChipV2CloseIcon extends [ChipV2Accessibility](arkts-arkui-chipv2accessibility-c.md)
 
 **起始版本：** 26.0.0
 

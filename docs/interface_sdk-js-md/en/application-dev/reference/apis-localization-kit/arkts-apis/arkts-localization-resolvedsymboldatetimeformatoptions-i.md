@@ -2,7 +2,7 @@
 
 Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. Define the resolved symbol element and value that need to get.
 
-**Inheritance/Implementation:** ResolvedSymbolDateTimeFormatOptions extends [Intl.ResolvedDateTimeFormatOptions](../../apis-na/arkts-apis/arkts-na-resolveddatetimeformatoptions-i.md#resolveddatetimeformatoptions)
+**Inheritance/Implementation:** ResolvedSymbolDateTimeFormatOptions extends [Intl.ResolvedDateTimeFormatOptions](../../apis-na/arkts-apis/arkts-na-resolveddatetimeformatoptions-i.md)
 
 **Since:** 26.0.0
 
@@ -11,7 +11,7 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@ohos.i18n';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## amPMSymbol

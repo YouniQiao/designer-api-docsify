@@ -9,7 +9,7 @@ Defines a content form card.
 ## Modules to Import
 
 ```TypeScript
-import { ContentFormCard, FormType } from '@ohos.data.UdmfComponents';
+import { ContentFormCard, FormType } from '@kit.ArkData';
 ```
 
 ## contentFormData

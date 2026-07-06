@@ -9,7 +9,7 @@ Defines the certificate chain data, which is passed in as input parameters durin
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## count

@@ -2,7 +2,7 @@
 
 Defines directional light.
 
-**Inheritance/Implementation:** DirectionalLight extends [Light](arkts-arkgraphics3d-light-i.md#light)
+**Inheritance/Implementation:** DirectionalLight extends [Light](arkts-arkgraphics3d-light-i.md)
 
 **Since:** 12
 

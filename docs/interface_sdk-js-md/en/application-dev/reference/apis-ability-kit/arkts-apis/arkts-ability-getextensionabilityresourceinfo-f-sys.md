@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleResourceManager } from '@ohos.bundle.bundleResourceManager';
+import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## getExtensionAbilityResourceInfo

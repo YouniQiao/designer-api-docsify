@@ -2,7 +2,7 @@
 
 Control center session object.
 
-**Inheritance/Implementation:** ControlCenterSession extends [Beauty](arkts-camera-beauty-i-sys.md#beauty), [Aperture](arkts-camera-aperture-i-sys.md#aperture), [ColorEffect](arkts-camera-coloreffect-i-sys.md#coloreffect)
+**Inheritance/Implementation:** ControlCenterSession extends [Beauty](arkts-camera-beauty-i-sys.md), [Aperture](arkts-camera-aperture-i-sys.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md)
 
 **Since:** 20
 
@@ -13,7 +13,7 @@ Control center session object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## enableAutoFraming

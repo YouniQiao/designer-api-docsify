@@ -9,7 +9,7 @@ Line Join Style
 ## Miter
 
 ```TypeScript
-Miter = 0
+Miter
 ```
 
 Connect path segments using bevels.
@@ -25,7 +25,7 @@ Connect path segments using bevels.
 ## Round
 
 ```TypeScript
-Round = 1
+Round
 ```
 
 Connect path segments using sharp corners.
@@ -41,7 +41,7 @@ Connect path segments using sharp corners.
 ## Bevel
 
 ```TypeScript
-Bevel = 2
+Bevel
 ```
 
 Connect path segments using fillets.

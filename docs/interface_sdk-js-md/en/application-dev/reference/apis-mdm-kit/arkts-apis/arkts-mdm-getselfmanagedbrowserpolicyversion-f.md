@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { browser } from '@ohos.enterprise.browser';
+import { browser } from '@kit.MDMKit';
 ```
 
 ## getSelfManagedBrowserPolicyVersion

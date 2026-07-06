@@ -4,7 +4,7 @@
 export type EmbeddableUIAbilityContext = _EmbeddableUIAbilityContext.default
 ```
 
-[EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md#embeddableuiability)组件上下文，继承自Context。
+[EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md)组件上下文，继承自Context。
 
 **起始版本：** 12
 

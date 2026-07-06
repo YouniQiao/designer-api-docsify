@@ -9,7 +9,7 @@ Defines the createFormBindingData result interface.
 ## Modules to Import
 
 ```TypeScript
-import { formBindingData } from '@ohos.app.form.formBindingData';
+import { formBindingData } from '@kit.FormKit';
 ```
 
 ## data

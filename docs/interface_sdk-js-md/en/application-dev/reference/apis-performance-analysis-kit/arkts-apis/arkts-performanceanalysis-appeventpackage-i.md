@@ -9,7 +9,7 @@ Defines parameters of an **AppEventPackage** object. This API is used to obtain 
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiviewdfx.hiAppEvent';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## appEventInfos

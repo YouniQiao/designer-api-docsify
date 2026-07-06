@@ -11,7 +11,7 @@ Represents CLI (Command Line Interface) information.
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from '@ohos.abilityAccessCtrl';
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 ```
 
 ## cliName

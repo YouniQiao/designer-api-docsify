@@ -11,7 +11,7 @@ System sound manager object.
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from '@ohos.multimedia.systemSoundManager';
+import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## addCustomizedTone
@@ -53,9 +53,9 @@ Add customized tone into ringtone library.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation is not allowed, e.g. ringtone to add is not customized. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. Possible causes:1. The target file size exceeds 2 GB;2. Failed to find the specified file;3. System sound manager service error. |
-| [20700004](../errorcode-audio-ringtone-sys.md#20700004-data-size-exceeds-the-upper-limit) | Data size exceeds the limit. Note:This error is returned when the file size is between 200MB and 2GB.<br>**Applicable version:** 20 |
-| [20700005](../errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 |
-| [20700006](../errorcode-audio-ringtone-sys.md#20700006-insufficient-rom-space) | Insufficient ROM space.<br>**Applicable version:** 20 |
+| [20700004](../errorcode-audio-ringtone-sys.md#20700004-data-size-exceeds-the-upper-limit) | Data size exceeds the limit. Note:This error is returned when the file size is between 200MB and 2GB.<br>**Applicable version:** 20 and later |
+| [20700005](../errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 and later |
+| [20700006](../errorcode-audio-ringtone-sys.md#20700006-insufficient-rom-space) | Insufficient ROM space.<br>**Applicable version:** 20 and later |
 
 **Example**
 
@@ -127,9 +127,9 @@ Add customized tone into ringtone library.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation is not allowed, e.g. ringtone to add is not customized. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. Possible causes:1. The target file size exceeds 2 GB;2. Failed to find the specified file;3. Ringtone library error.4. System sound manager service error. |
-| [20700004](../errorcode-audio-ringtone-sys.md#20700004-data-size-exceeds-the-upper-limit) | Data size exceeds the limit. Note:This error is returned when the file size is between 200MB and 2GB.<br>**Applicable version:** 20 |
-| [20700005](../errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 |
-| [20700006](../errorcode-audio-ringtone-sys.md#20700006-insufficient-rom-space) | Insufficient ROM space.<br>**Applicable version:** 20 |
+| [20700004](../errorcode-audio-ringtone-sys.md#20700004-data-size-exceeds-the-upper-limit) | Data size exceeds the limit. Note:This error is returned when the file size is between 200MB and 2GB.<br>**Applicable version:** 20 and later |
+| [20700005](../errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 and later |
+| [20700006](../errorcode-audio-ringtone-sys.md#20700006-insufficient-rom-space) | Insufficient ROM space.<br>**Applicable version:** 20 and later |
 
 **Example**
 

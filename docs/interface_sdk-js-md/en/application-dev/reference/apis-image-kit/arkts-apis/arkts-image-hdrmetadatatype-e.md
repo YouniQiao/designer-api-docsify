@@ -1,6 +1,6 @@
 # HdrMetadataType
 
-Enumerates the values available for **HDR_METADATA_TYPE** in [HdrMetadataKey](arkts-image-hdrmetadatakey-e.md#hdrmetadatakey).
+Enumerates the values available for **HDR_METADATA_TYPE** in [HdrMetadataKey](arkts-image-hdrmetadatakey-e.md).
 
 **Since:** 12
 

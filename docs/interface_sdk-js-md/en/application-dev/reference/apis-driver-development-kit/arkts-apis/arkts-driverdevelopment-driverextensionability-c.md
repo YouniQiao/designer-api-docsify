@@ -9,7 +9,7 @@ The **DriverExtensionAbility** module provides the ExtensionAbility related to d
 ## Modules to Import
 
 ```TypeScript
-import { DriverExtensionContext } from '@ohos.app.ability.DriverExtensionAbility';
+import { DriverExtensionContext } from '@kit.DriverDevelopmentKit';
 ```
 
 ## onConnect

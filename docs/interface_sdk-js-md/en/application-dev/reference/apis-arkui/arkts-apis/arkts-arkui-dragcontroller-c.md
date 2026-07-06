@@ -9,7 +9,7 @@ Provides APIs for initiating drag actions. When receiving a gesture event, such 
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@ohos.arkui.UIContext';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## cancelDataLoading
@@ -83,7 +83,7 @@ Creates a drag action object for initiating drag and drop operations. You need t
 enableDropDisallowedBadge(enabled: boolean): void
 ```
 
-Specifies whether to enable the display of a disallowed badge when dragged content is incompatible with a component 's configured [allowDrop](../arkts-components/arkts-arkui-commonmethod-c.md#allowdrop-1) types. When a component can accept or process dragged data or returns **DragBehavior.COPY** to indicate copy mode processing, the drag preview shows a plus icon with data count badge. When the component returns **DragBehavior.MOVE** to indicate cut mode processing, only the data count badge appears. When this feature is enabled, the system automatically displays a disallowed badge during drag operations if the dragged data types are incompatible with the target component's allowed drop types. This API currently does not support [UIExtension](arkts-arkui-uiextension.md#uiextension).
+Specifies whether to enable the display of a disallowed badge when dragged content is incompatible with a component 's configured [allowDrop](../arkts-components/arkts-arkui-commonmethod-c.md#allowdrop-1) types. When a component can accept or process dragged data or returns **DragBehavior.COPY** to indicate copy mode processing, the drag preview shows a plus icon with data count badge. When the component returns **DragBehavior.MOVE** to indicate cut mode processing, only the data count badge appears. When this feature is enabled, the system automatically displays a disallowed badge during drag operations if the dragged data types are incompatible with the target component's allowed drop types. This API currently does not support [UIExtension](arkts-arkui-uiextension.md).
 
 **Since:** 20
 
@@ -120,7 +120,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| custom | CustomBuilder \| DragItemInfo | Yes | Object to be dragged.<br> **NOTE**<br>The global builder is notsupported. If the [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image) component is used in the builder, enable synchronous loading, that is,set the [syncLoad](ImageAttribute#syncLoad) attribute of the component to **true**. The builder is usedonly to generate the image displayed during the current dragging. If the root component of the builder has zerowidth or height, it will cause failure in drag image generation, which in turn breaks the entire dragoperation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
+| custom | CustomBuilder \| DragItemInfo | Yes | Object to be dragged.<br> **NOTE**<br>The global builder is notsupported. If the [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) component is used in the builder, enable synchronous loading, that is,set the [syncLoad](ImageAttribute#syncLoad) attribute of the component to **true**. The builder is usedonly to generate the image displayed during the current dragging. If the root component of the builder has zerowidth or height, it will cause failure in drag image generation, which in turn breaks the entire dragoperation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
 | dragInfo | dragController.DragInfo | Yes | Drag information. |
 | callback | AsyncCallback&lt;dragController.DragEventParam&gt; | Yes | Callback used to return the result.<br>-**event**: drag event information that includes only the drag result.<br>- **extraParams**: extra informationabout the drag event.<br>**Since:** 12 |
 

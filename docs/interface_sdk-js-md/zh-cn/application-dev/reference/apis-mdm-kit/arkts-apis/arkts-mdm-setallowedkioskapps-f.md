@@ -21,7 +21,7 @@ function setAllowedKioskApps(admin: Want, appIdentifiers: Array<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| appIdentifiers | Array&lt;string&gt; | 是 | 应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md#signatureinfo)的数组，可以通过接口[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfo-f.md#getbundleinfo-3)获取bundleInfo.signatureInfo.appIdentifier。重复设置时，新设置的数组会覆盖旧的设置，最多设置200个。 |
+| appIdentifiers | Array&lt;string&gt; | 是 | 应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md)的数组，可以通过接口[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfo-f.md#getbundleinfo-3)获取bundleInfo.signatureInfo.appIdentifier。重复设置时，新设置的数组会覆盖旧的设置，最多设置200个。 |
 
 **错误码：**
 

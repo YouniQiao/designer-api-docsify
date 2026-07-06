@@ -9,7 +9,7 @@ Provides WebSocket APIs.
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@ohos.net.webSocket';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## Summary

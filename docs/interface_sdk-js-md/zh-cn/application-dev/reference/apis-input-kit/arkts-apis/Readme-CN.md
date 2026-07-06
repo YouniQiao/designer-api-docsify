@@ -160,7 +160,7 @@
   - [PrimaryButton](arkts-input-primarybutton-e.md)
   - [RightClickType](arkts-input-rightclicktype-e.md)
 - [@ohos.multimodalInput.shortKey](arkts-multimodalinput-shortkey.md)
-  - [shortKey](arkts-input-shortkey-sta-n.md)<!--Del-->
+  - [shortKey](arkts-input-shortkey-n.md)<!--Del-->
     - [setKeyDownDuration(系统接口)](arkts-input-setkeydownduration-f-sys.md)<!--DelEnd--><!--Del-->
   - [FingerprintEvent(系统接口)](arkts-input-fingerprintevent-i-sys.md)<!--DelEnd--><!--Del-->
   - [FingerprintAction(系统接口)](arkts-input-fingerprintaction-e-sys.md)<!--DelEnd-->

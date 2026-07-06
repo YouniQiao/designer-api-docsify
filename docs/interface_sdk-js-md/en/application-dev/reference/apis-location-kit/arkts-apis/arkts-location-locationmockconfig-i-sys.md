@@ -11,7 +11,7 @@ Parameters for configuring the location simulation function.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@ohos.geoLocationManager';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## locations

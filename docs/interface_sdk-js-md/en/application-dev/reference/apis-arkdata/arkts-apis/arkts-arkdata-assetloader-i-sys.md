@@ -11,7 +11,7 @@ Provides APIs for uploading and downloading assets.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@ohos.data.cloudExtension';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## download

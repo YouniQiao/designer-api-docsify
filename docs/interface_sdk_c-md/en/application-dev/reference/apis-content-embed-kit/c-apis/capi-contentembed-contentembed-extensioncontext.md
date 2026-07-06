@@ -6,7 +6,7 @@ typedef struct ContentEmbed_ExtensionContext ContentEmbed_ExtensionContext
 
 ## Overview
 
-Define the ContentEmbed_ExtensionContext structure type.Provides methods for Content Embed Kit.
+Defines the structure type of the OE Extension context.
 
 **Since**: 24
 

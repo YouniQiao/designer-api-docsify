@@ -1,6 +1,6 @@
 # Video属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下事件：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下事件：
 
 **继承/实现关系：** VideoAttribute extends [CommonMethod<VideoAttribute>](CommonMethod<VideoAttribute>)
 
@@ -172,7 +172,7 @@ objectFit(value: ImageFit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ImageFit | 是 | 视频填充模式。<br/>默认值：Cover<br/>约束：不支持ImageFit类型中的枚举值MATRIX，若设置，则作用效果与Cover一致。<br/>异常值：若设置异常值undefined、null，或不在[ImageFit](arkts-arkui-imagefit-e.md#imagefit)枚举范围内的值，作用效果均与Cover一致。 |
+| value | ImageFit | 是 | 视频填充模式。<br/>默认值：Cover<br/>约束：不支持ImageFit类型中的枚举值MATRIX，若设置，则作用效果与Cover一致。<br/>异常值：若设置异常值undefined、null，或不在[ImageFit](arkts-arkui-imagefit-e.md)枚举范围内的值，作用效果均与Cover一致。 |
 
 ## onError
 
@@ -192,7 +192,7 @@ onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | VoidCallback \| import('../api/@ohos.base').ErrorCallback | 是 | 视频播放失败时的回调函数。其中[ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-i.md#errorcallback)类型入参的回调函数用于接收异常信息，回调返回的错误码详细介绍请参见[Video组件错误码](../../../../reference/apis-arkui/errorcode-video.md)和[Media错误码](../../../../reference/apis-media-kit/errorcode-media.md)。<br>**起始版本：** 20 |
+| event | VoidCallback \| import('../api/@ohos.base').ErrorCallback | 是 | 视频播放失败时的回调函数。其中[ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-i.md)类型入参的回调函数用于接收异常信息，回调返回的错误码详细介绍请参见[Video组件错误码](../../../../reference/apis-arkui/errorcode-video.md)和[Media错误码](../../../../reference/apis-media-kit/errorcode-media.md)。<br>**起始版本：** 20 |
 
 ## onFinish
 

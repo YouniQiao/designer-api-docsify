@@ -9,7 +9,7 @@ Media file descriptor. The caller needs to ensure that the fd is valid and the o
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## fd

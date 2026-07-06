@@ -13,7 +13,7 @@ Defines the configuration options for a **RelativeTimeFormat** object. Since API
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@ohos.intl';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## localeMatcher

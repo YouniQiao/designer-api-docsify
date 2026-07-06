@@ -1,8 +1,8 @@
 # TouchEvent
 
-继承于[BaseEvent](arkts-arkui-baseevent-i.md#baseevent)。在非事件注入场景下，changedTouches是按屏幕刷新率重采样的点，而touches是按器件刷新率上报的点，因此changedTouches与touches的数据可 能不同。
+继承于[BaseEvent](arkts-arkui-baseevent-i.md)。在非事件注入场景下，changedTouches是按屏幕刷新率重采样的点，而touches是按器件刷新率上报的点，因此changedTouches与touches的数据可 能不同。
 
-**继承/实现关系：** TouchEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**继承/实现关系：** TouchEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 7
 
@@ -14,7 +14,7 @@
 getHistoricalPoints(): Array<HistoricalPoint>
 ```
 
-获取当前帧的所有历史点。不同设备每帧的触摸事件频率不同，且该接口仅能在[TouchEvent](arkts-arkui-touchevent-i.md#touchevent)中调用，用于获取触发 [onTouch](arkts-arkui-commonmethod-c.md#ontouch-1)时当前帧历史点的相关信息。[onTouch](arkts-arkui-commonmethod-c.md#ontouch-1)一帧通常只会调用一次，如果当前帧收到的 [TouchEvent](arkts-arkui-touchevent-i.md#touchevent)数目大于1，会将该帧最后一个点通过[onTouch](arkts-arkui-commonmethod-c.md#ontouch-1)返回，其余点作为历史点。如果多指在同一 帧上报事件，可能触发多次onTouch。
+获取当前帧的所有历史点。不同设备每帧的触摸事件频率不同，且该接口仅能在[TouchEvent](arkts-arkui-touchevent-i.md)中调用，用于获取触发 [onTouch](arkts-arkui-commonmethod-c.md#ontouch-1)时当前帧历史点的相关信息。[onTouch](arkts-arkui-commonmethod-c.md#ontouch-1)一帧通常只会调用一次，如果当前帧收到的 [TouchEvent](arkts-arkui-touchevent-i.md)数目大于1，会将该帧最后一个点通过[onTouch](arkts-arkui-commonmethod-c.md#ontouch-1)返回，其余点作为历史点。如果多指在同一 帧上报事件，可能触发多次onTouch。
 
 **起始版本：** 10
 

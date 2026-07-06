@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AbilityStage } from '@ohos.app.ability.AbilityStage';
+import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## Summary

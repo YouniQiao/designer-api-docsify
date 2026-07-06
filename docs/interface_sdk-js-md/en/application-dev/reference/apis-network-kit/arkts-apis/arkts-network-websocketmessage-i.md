@@ -9,7 +9,7 @@ Info about the message received from a specific client.
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@ohos.net.webSocket';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## clientConnection

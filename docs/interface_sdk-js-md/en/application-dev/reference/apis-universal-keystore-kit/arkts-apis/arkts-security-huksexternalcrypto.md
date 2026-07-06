@@ -9,7 +9,7 @@ Provides the functionalities such as registration and deregistration of external
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from '@ohos.security.huksExternalCrypto';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## Summary

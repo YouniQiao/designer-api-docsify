@@ -12,6 +12,6 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [IDataSourcePrefetching](arkts-arkui-idatasourceprefetching-i.md) | 继承自[IDataSource](../arkts-components/arkts-arkui-idatasource-i.md#idatasource)。实现该接口，提供具备预取能力的DataSource。 |
+| [IDataSourcePrefetching](arkts-arkui-idatasourceprefetching-i.md) | 继承自[IDataSource](../arkts-components/arkts-arkui-idatasource-i.md)。实现该接口，提供具备预取能力的DataSource。 |
 | [IPrefetcher](arkts-arkui-iprefetcher-i.md) | 实现此接口以提供预取能力。 |
 

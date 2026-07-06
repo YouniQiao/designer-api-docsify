@@ -11,7 +11,7 @@ Provides APIs for setting different **DataSharePredicates** objects. This type i
 ## Modules to Import
 
 ```TypeScript
-import { dataSharePredicates } from '@ohos.data.dataSharePredicates';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## and

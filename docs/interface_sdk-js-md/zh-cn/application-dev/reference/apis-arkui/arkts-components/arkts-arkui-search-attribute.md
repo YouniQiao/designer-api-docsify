@@ -1,6 +1,6 @@
 # Search属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下事件：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下事件：
 
 **继承/实现关系：** SearchAttribute extends [CommonMethod<SearchAttribute>](CommonMethod<SearchAttribute>)
 
@@ -80,7 +80,7 @@ caretStyle(value: CaretStyle)
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-设置是否开启行首标点符号压缩。 > **说明：** > > - 行首标点符号默认不压缩。 > > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md#paragraphstyle)的行首压缩的标点范围。
+设置是否开启行首标点符号压缩。 > **说明：** > > - 行首标点符号默认不压缩。 > > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md)的行首压缩的标点范围。
 
 **起始版本：** 23
 
@@ -299,7 +299,7 @@ enablePreviewText(enable: boolean)
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-设置是否对选中文本进行实体识别。该接口依赖设备底层应具有文本识别能力，否则设置不会生效。 当enableSelectedDataDetector设置为true时，默认识别所有类型的实体。 需要[CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md#copyoptions)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。
+设置是否对选中文本进行实体识别。该接口依赖设备底层应具有文本识别能力，否则设置不会生效。 当enableSelectedDataDetector设置为true时，默认识别所有类型的实体。 需要[CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。
 
 **起始版本：** 22
 
@@ -1245,7 +1245,7 @@ strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strokeJoinStyle | StrokeJoinStyle \| undefined | 是 | 文本描边拐角样式。<br/>值为undefined时，按照StrokeJoinStyle.MITER_JOIN处理，请参考[StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md#strokejoinstyle)，文本拐角处表现为锐角。 |
+| strokeJoinStyle | StrokeJoinStyle \| undefined | 是 | 文本描边拐角样式。<br/>值为undefined时，按照StrokeJoinStyle.MITER_JOIN处理，请参考[StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)，文本拐角处表现为锐角。 |
 
 ## strokeWidth
 

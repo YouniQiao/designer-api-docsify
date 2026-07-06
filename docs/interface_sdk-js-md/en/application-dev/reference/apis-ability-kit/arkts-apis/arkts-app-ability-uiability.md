@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@ohos.app.ability.UIAbility';
+import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Describes a coordinate position in the relative coordinate system, with the orig
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@ohos.display';
+import { display } from '@kit.ArkUI';
 ```
 
 ## displayId

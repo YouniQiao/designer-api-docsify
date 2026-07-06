@@ -1,6 +1,6 @@
 # InterruptHint
 
-Enumerates the hints provided along with audio interruption. The hint is obtained when an [InterruptEvent](arkts-audio-interruptevent-i.md#interruptevent) is received. The hint specifies the operation (such as audio pause or volume adjustment) to be performed on audio streams based on the focus strategy. You can determine whether the operation is forcibly performed by the system based on [InterruptForceType](arkts-audio-interruptforcetype-e.md#interruptforcetype) in **InterruptEvent**. For details, see [Introduction to Audio Focus](../../../../media/audio/audio-playback-concurrency.md).
+Enumerates the hints provided along with audio interruption. The hint is obtained when an [InterruptEvent](arkts-audio-interruptevent-i.md) is received. The hint specifies the operation (such as audio pause or volume adjustment) to be performed on audio streams based on the focus strategy. You can determine whether the operation is forcibly performed by the system based on [InterruptForceType](arkts-audio-interruptforcetype-e.md) in **InterruptEvent**. For details, see [Introduction to Audio Focus](../../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ None.
 INTERRUPT_HINT_RESUME = 1
 ```
 
-A hint is displayed, indicating that the audio stream is restored. The application can proactively trigger operations related to rendering or recording. This operation cannot be forcibly performed by the system, and the corresponding [InterruptForceType](arkts-audio-interruptforcetype-e.md#interruptforcetype) must be **INTERRUPT_SHARE**.
+A hint is displayed, indicating that the audio stream is restored. The application can proactively trigger operations related to rendering or recording. This operation cannot be forcibly performed by the system, and the corresponding [InterruptForceType](arkts-audio-interruptforcetype-e.md) must be **INTERRUPT_SHARE**.
 
 **Since:** 7
 

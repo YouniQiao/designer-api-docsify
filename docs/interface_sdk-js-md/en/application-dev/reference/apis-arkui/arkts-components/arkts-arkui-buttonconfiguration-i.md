@@ -1,6 +1,6 @@
 # ButtonConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md#commonconfiguration).
+You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** ButtonConfiguration extends [CommonConfiguration<ButtonConfiguration>](CommonConfiguration<ButtonConfiguration>)
 

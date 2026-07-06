@@ -9,7 +9,7 @@ Describes the parameters for the startup animation. The configuration is valid o
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## type

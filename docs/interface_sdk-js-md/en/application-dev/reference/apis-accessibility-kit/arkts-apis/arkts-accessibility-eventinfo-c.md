@@ -9,7 +9,7 @@ Describes a GUI change event.
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@ohos.accessibility';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## constructor

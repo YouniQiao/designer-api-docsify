@@ -1,12 +1,12 @@
 # ApplicationInfo
 
-The module provides application information. Unless otherwise specified, the information is obtained through [bundle.getApplicationInfo](arkts-ability-getapplicationinfo-f.md#getapplicationinfo-3) . > **NOTE** > > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-ApplicationInfo](arkts-ability-applicationinfo-depr-i.md#applicationinfo) instead.
+The module provides application information. Unless otherwise specified, the information is obtained through [bundle.getApplicationInfo](arkts-ability-getapplicationinfo-f.md#getapplicationinfo-3) . > **NOTE** > > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-ApplicationInfo](arkts-ability-applicationinfo-depr-i.md) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [applicationInfo:ApplicationInfo](arkts-ability-applicationinfo-depr-i.md#applicationinfo)
+**Substitutes:** [applicationInfo:ApplicationInfo](arkts-ability-applicationinfo-depr-i.md)
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -36,7 +36,7 @@ Access token ID of the application.
 readonly codePath: string
 ```
 
-Installation directory of the application. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourcemanager) instead.
+Installation directory of the application. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md) instead.
 
 **Type:** string
 
@@ -134,7 +134,7 @@ Type of the application, for example, gaming, social networking, movies, and new
 readonly entryDir: string
 ```
 
-Path for storing application files. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourcemanager) instead.
+Path for storing application files. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md) instead.
 
 **Type:** string
 
@@ -272,7 +272,7 @@ Application module information.
 readonly moduleSourceDirs: Array<string>
 ```
 
-Relative paths for storing application resources. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourcemanager) instead.
+Relative paths for storing application resources. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md) instead.
 
 **Type:** Array<string>
 

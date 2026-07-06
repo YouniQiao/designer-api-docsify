@@ -9,7 +9,7 @@ Represents the information presented on the user authentication page. This API i
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@ohos.userIAM.userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## navigationButtonText

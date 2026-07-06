@@ -1,8 +1,8 @@
 # Beauty (System API)
 
-Beauty extends [BeautyQuery](arkts-camera-beautyquery-i-sys.md#beautyquery) Provides APIs to obtain and set the beauty effect.
+Beauty extends [BeautyQuery](arkts-camera-beautyquery-i-sys.md) Provides APIs to obtain and set the beauty effect.
 
-**Inheritance/Implementation:** Beauty extends [BeautyQuery](arkts-camera-beautyquery-i-sys.md#beautyquery)
+**Inheritance/Implementation:** Beauty extends [BeautyQuery](arkts-camera-beautyquery-i-sys.md)
 
 **Since:** 11
 
@@ -13,7 +13,7 @@ Beauty extends [BeautyQuery](arkts-camera-beautyquery-i-sys.md#beautyquery) Prov
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getBeauty
@@ -75,7 +75,7 @@ function getBeauty(portraitPhotoSession: camera.PortraitPhotoSession): number {
 setBeauty(type: BeautyType, value: number): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-beautytype-e-sys.md#beautytype) obtained through [getSupportedBeautyTypes](arkts-camera-beautyquery-i-sys.md#getsupportedbeautytypes-1) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-beautytype-e-sys.md) obtained through [getSupportedBeautyTypes](arkts-camera-beautyquery-i-sys.md#getsupportedbeautytypes-1) are disabled.
 
 **Since:** 11
 

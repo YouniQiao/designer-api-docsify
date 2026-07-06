@@ -1,8 +1,8 @@
 # PreviewOutput
 
-Implements preview output. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput).
+Implements preview output. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
 
-**Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput)
+**Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Implements preview output. It inherits from [CameraOutput](arkts-camera-cameraou
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## addDeferredSurface
@@ -69,8 +69,8 @@ Attaches a surface for PiP preview.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -120,8 +120,8 @@ Enables or disables PiP preview.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 **Example**
 

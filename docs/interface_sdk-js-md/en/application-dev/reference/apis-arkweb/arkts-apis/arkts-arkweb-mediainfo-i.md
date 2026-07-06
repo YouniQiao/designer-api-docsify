@@ -1,6 +1,6 @@
 # MediaInfo
 
-Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md#createnativemediaplayercallback) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page.
+Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page.
 
 **Since:** 12
 
@@ -9,7 +9,7 @@ Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaP
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## attributes

@@ -9,7 +9,7 @@ Implements a window manager, which manages each basic window unit, that is, [Win
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## disableWindowDecor
@@ -32,7 +32,7 @@ Disables window decorators. When window decorators are disabled and the main win
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
@@ -82,7 +82,7 @@ Removes the image that the application has set to be displayed in the multitaski
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not havethe permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not havethe permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 22 - 24 |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
@@ -124,7 +124,7 @@ Sets the image displayed in the multitasking view and on dock hover. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not havethe permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not havethe permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 22 - 24 |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause:1. The window is not created or destroyed.2. The WindowStage is running in the background.3. Internal task error. |
@@ -226,7 +226,7 @@ Sets whether to display the window of the application on the lock screen.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
 
 **Example**
 

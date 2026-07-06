@@ -17,7 +17,7 @@ function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.Value
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strategy | StrategyType | 是 | 配置的策略类型。 |
-| param | Array&lt;commonType.ValueType&gt; | 否 | 策略参数，类型为Array&lt;commonType.ValueType&gt;，实际传入值为[NetWorkStrategy](arkts-arkdata-networkstrategy-e.md#networkstrategy)枚举值，取值范围为WIFI和CELLULAR，默认支持WIFI和蜂窝网络策略。 |
+| param | Array&lt;commonType.ValueType&gt; | 否 | 策略参数，类型为Array&lt;commonType.ValueType&gt;，实际传入值为[NetWorkStrategy](arkts-arkdata-networkstrategy-e.md)枚举值，取值范围为WIFI和CELLULAR，默认支持WIFI和蜂窝网络策略。 |
 
 **返回值：**
 

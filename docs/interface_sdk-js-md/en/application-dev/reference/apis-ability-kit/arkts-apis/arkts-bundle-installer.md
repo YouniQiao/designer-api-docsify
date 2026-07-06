@@ -11,7 +11,7 @@ The module provides APIs for you to install, uninstall, and recover bundles on d
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@ohos.bundle.installer';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## Summary

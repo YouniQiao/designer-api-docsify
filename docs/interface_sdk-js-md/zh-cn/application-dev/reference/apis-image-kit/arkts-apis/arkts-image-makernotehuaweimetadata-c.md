@@ -2,7 +2,7 @@
 
 MakerNoteHuaweiMetadata implements Metadata 来自Huawei相机的照片元数据。
 
-**继承/实现关系：** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-metadata-i.md#metadata)
+**继承/实现关系：** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-metadata-i.md)
 
 **起始版本：** 23
 
@@ -14,7 +14,7 @@ MakerNoteHuaweiMetadata implements Metadata 来自Huawei相机的照片元数据
 clone(): Promise<MakerNoteHuaweiMetadata>
 ```
 
-对[MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md#makernotehuaweimetadata)元数据进行克隆。使用Promise异步回调。
+对[MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md)元数据进行克隆。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ clone(): Promise<MakerNoteHuaweiMetadata>
 static createInstance(): MakerNoteHuaweiMetadata
 ```
 
-返回[MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md#makernotehuaweimetadata)的空实例。
+返回[MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md)的空实例。
 
 **起始版本：** 23
 
@@ -94,7 +94,7 @@ getBlob(): Promise<ArrayBuffer>
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-获取图像中属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[PropertyKey](arkts-image-propertykey-e.md#propertykey)。
+获取图像中属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[PropertyKey](arkts-image-propertykey-e.md)。
 
 **起始版本：** 23
 
@@ -158,7 +158,7 @@ setBlob(blob: ArrayBuffer): Promise<void>
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-批量设置图片元数据中的指定属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[PropertyKey](arkts-image-propertykey-e.md#propertykey)。
+批量设置图片元数据中的指定属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[PropertyKey](arkts-image-propertykey-e.md)。
 
 **起始版本：** 23
 
@@ -670,7 +670,7 @@ xmageTop?: number
 xmageWatermarkMode?: number
 ```
 
-XMAGE水印模式。具体取值请参考[Constants](arkts-multimedia-image.md#image)。
+XMAGE水印模式。具体取值请参考[Constants](arkts-multimedia-image.md)。
 
 **类型：** number
 

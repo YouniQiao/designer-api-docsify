@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { BundleVersion } from '@ohos.application.BackupExtensionAbility';
+import { BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## Summary

@@ -28,7 +28,7 @@ function getAllowedDistributeAbilityConnBundles(admin: Want | null, serviceType:
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 允许使用指定类型的分布式能力的应用的[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md#signatureinfo)的数组。 |
+| Array&lt;string&gt; | 允许使用指定类型的分布式能力的应用的[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md)的数组。 |
 
 **错误码：**
 

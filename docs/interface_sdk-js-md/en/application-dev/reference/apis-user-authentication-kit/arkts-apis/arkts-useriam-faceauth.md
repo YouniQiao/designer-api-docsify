@@ -9,7 +9,7 @@ The **faceAuth** module is an important part of the OpenHarmony user identity an
 ## Modules to Import
 
 ```TypeScript
-import { faceAuth } from '@ohos.userIAM.faceAuth';
+import { faceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary

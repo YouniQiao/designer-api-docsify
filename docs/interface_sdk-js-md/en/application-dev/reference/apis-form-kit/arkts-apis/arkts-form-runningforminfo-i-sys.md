@@ -11,7 +11,7 @@ The class of a running form information.
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@ohos.app.form.formInfo';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName

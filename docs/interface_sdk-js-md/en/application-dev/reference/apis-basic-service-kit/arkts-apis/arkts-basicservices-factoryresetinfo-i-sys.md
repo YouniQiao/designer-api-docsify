@@ -11,7 +11,7 @@ Describes the information of restoring factory settings.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@ohos.update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## duration

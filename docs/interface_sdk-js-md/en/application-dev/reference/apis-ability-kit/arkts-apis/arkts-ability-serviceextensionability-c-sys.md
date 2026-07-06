@@ -11,7 +11,7 @@ The ServiceExtensionAbility module provides extended capabilities for background
 ## Modules to Import
 
 ```TypeScript
-import { ServiceExtensionAbility } from '@ohos.app.ability.ServiceExtensionAbility';
+import { ServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate

@@ -6,7 +6,7 @@ Provides a stream for file operations. Before calling any API of the **Stream** 
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:Stream](arkts-corefile-stream-i.md#stream)
+**Substitutes:** [fs:Stream](arkts-corefile-stream-i.md)
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

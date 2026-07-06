@@ -12,7 +12,7 @@
 START = 0
 ```
 
-屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md#localizedbarrierstyle)的最左/右侧，LTR模式时为最左侧，RTL模式时为最右侧。
+屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的最左/右侧，LTR模式时为最左侧，RTL模式时为最右侧。
 
 **起始版本：** 12
 
@@ -28,7 +28,7 @@ START = 0
 END = 1
 ```
 
-屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md#localizedbarrierstyle)的最左/右侧, LTR模式时为最右侧，RTL模式时为最左侧。
+屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的最左/右侧, LTR模式时为最右侧，RTL模式时为最左侧。
 
 **起始版本：** 12
 
@@ -44,7 +44,7 @@ END = 1
 TOP = 2
 ```
 
-屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md#localizedbarrierstyle)的最上方。
+屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的最上方。
 
 **起始版本：** 12
 
@@ -60,7 +60,7 @@ TOP = 2
 BOTTOM = 3
 ```
 
-屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md#localizedbarrierstyle)的最下方。
+屏障在其所有[referencedId](arkts-arkui-localizedbarrierstyle-i.md)的最下方。
 
 **起始版本：** 12
 

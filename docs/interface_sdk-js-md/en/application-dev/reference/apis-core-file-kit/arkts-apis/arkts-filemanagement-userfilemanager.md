@@ -4,7 +4,7 @@
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [photoAccessHelper:photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#photoaccesshelper)
+**Substitutes:** [photoAccessHelper:photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -13,7 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from '@ohos.filemanagement.userFileManager';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## Summary

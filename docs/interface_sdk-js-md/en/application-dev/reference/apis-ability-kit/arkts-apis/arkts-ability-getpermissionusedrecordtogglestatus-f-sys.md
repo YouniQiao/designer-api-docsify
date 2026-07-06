@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@ohos.privacyManager';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## getPermissionUsedRecordToggleStatus

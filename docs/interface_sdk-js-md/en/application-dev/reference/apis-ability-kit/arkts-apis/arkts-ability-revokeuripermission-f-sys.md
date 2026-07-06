@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uriPermissionManager } from '@ohos.application.uriPermissionManager';
+import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
 ## revokeUriPermission
@@ -40,7 +40,7 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 and later |
 
 **Example**
 
@@ -100,7 +100,7 @@ Revokes the URI permission from an application. This API uses a promise to retur
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 and later |
 
 **Example**
 
@@ -158,7 +158,7 @@ Revokes the URI permission from an application. This API uses a promise to retur
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 | [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) | Failed to obtain the target application information. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 and later |
 
 **Example**
 

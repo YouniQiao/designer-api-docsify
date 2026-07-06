@@ -9,7 +9,7 @@ The **locationManager** module provides location service management capabilities
 ## Modules to Import
 
 ```TypeScript
-import { locationManager } from '@ohos.enterprise.locationManager';
+import { locationManager } from '@kit.MDMKit';
 ```
 
 ## Summary

@@ -136,7 +136,7 @@ ScrollLock是否锁定（true: 锁定；false: 解锁）。
 keyCode: number
 ```
 
-按键的键值。按键设备提供的键值请参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。
+按键的键值。按键设备提供的键值请参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。
 
 **类型：** number
 

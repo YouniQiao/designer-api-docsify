@@ -9,7 +9,7 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@ohos.distributedDeviceManager';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## bindTarget

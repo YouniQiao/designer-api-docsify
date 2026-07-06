@@ -17,7 +17,7 @@ function isKeyItemExist(keyAlias: string, options: HuksOptions, callback: AsyncC
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 所需查找的密钥的别名。 |
-| options | HuksOptions | 是 | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md#huksauthstoragelevel)指定需查询密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| options | HuksOptions | 是 | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md)指定需查询密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
 | callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。密钥存在时，data为true；密钥不存在时，data为undefined，err中的错误码为12000011，并附带对应错误描述。 |
 
 **错误码：**
@@ -32,7 +32,7 @@ function isKeyItemExist(keyAlias: string, options: HuksOptions, callback: AsyncC
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23 |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
 
 **示例：**
 
@@ -161,7 +161,7 @@ function isKeyItemExist(keyAlias: string, options: HuksOptions): Promise<boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 所需查找的密钥的别名。 |
-| options | HuksOptions | 是 | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md#huksauthstoragelevel)指定需查询密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| options | HuksOptions | 是 | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md)指定需查询密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
 
 **返回值：**
 
@@ -181,7 +181,7 @@ function isKeyItemExist(keyAlias: string, options: HuksOptions): Promise<boolean
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23 |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
 
 **示例：**
 

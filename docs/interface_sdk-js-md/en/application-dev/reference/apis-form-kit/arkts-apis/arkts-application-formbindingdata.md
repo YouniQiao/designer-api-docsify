@@ -6,7 +6,7 @@ The **FormBindingData** module provides APIs for widget data binding. You can us
 
 **Deprecated since:** 9
 
-**Substitutes:** [formBindingData:formBindingData](arkts-app-form-formbindingdata.md#formbindingdata)
+**Substitutes:** [formBindingData:formBindingData](arkts-app-form-formbindingdata.md)
 
 **System capability:** SystemCapability.Ability.Form
 

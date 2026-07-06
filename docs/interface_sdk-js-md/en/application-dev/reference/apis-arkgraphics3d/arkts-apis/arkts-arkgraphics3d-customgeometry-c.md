@@ -2,7 +2,7 @@
 
 An array of vertices and their data defining a custom geometric shape.
 
-**Inheritance/Implementation:** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-geometrydefinition-c.md#geometrydefinition)
+**Inheritance/Implementation:** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-geometrydefinition-c.md)
 
 **Since:** 18
 

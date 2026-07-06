@@ -22,7 +22,7 @@ function getAllInsightIntentInfo(intentFlags: number): Promise<Array<InsightInte
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| intentFlags | number | 是 | 意图信息（[InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md#insightintentinfo)）的标识，用于表示查询全量意图信息或者简要意图信息，参考[GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md#getinsightintentflag)。 |
+| intentFlags | number | 是 | 意图信息（[InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md)）的标识，用于表示查询全量意图信息或者简要意图信息，参考[GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md)。 |
 
 **返回值：**
 

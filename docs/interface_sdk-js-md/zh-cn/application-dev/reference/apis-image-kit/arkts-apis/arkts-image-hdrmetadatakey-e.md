@@ -1,6 +1,6 @@
 # HdrMetadataKey
 
-表示[PixelMap](arkts-image-pixelmap-i.md#pixelmap)使用的HDR相关元数据信息的关键字的枚举。
+表示[PixelMap](arkts-image-pixelmap-i.md)使用的HDR相关元数据信息的关键字的枚举。
 
 **起始版本：** 12
 
@@ -12,7 +12,7 @@
 HDR_METADATA_TYPE = 0
 ```
 
-[PixelMap](arkts-image-pixelmap-i.md#pixelmap)使用的元数据类型。
+[PixelMap](arkts-image-pixelmap-i.md)使用的元数据类型。
 
 **起始版本：** 12
 

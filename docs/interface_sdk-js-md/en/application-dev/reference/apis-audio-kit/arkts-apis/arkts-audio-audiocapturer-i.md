@@ -9,7 +9,7 @@ This interface provides APIs for audio capture. Before calling any API in AudioC
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## getAudioStreamId
@@ -679,7 +679,7 @@ Subscribes to the audio capturer state change event, which is triggered when the
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. The AudioCapturer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus. After this API is called, an [InterruptEvent](arkts-audio-interruptevent-i.md#interruptevent) is received when the AudioCapturer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../../media/audio/audio-playback-concurrency.md).
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. The AudioCapturer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus. After this API is called, an [InterruptEvent](arkts-audio-interruptevent-i.md) is received when the AudioCapturer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 10
 
@@ -905,7 +905,7 @@ Sets the independent audio session strategy and behavior parameters. > **NOTE** 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strategy | AudioSessionStrategy | Yes | Audio session strategy. |
-| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise ORcombination of multiple flags.<br>For details about the supported audio session behaviors, see[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md#audiosessionbehaviorflags). |
+| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise ORcombination of multiple flags.<br>For details about the supported audio session behaviors, see[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md). |
 
 **Error codes:**
 

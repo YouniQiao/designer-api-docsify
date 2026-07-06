@@ -9,7 +9,7 @@ Defines the properties of the data records in the unified data object, including
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@ohos.data.unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## extras
@@ -54,7 +54,7 @@ Callback for obtaining the deferred data. Currently, it can be used only in the 
 shareOptions?: ShareOptions
 ```
 
-Range, in which [UnifiedData](arkts-arkdata-unifieddataproperties-c.md#unifieddataproperties) can be used. The default value is **CROSS_APP**.
+Range, in which [UnifiedData](arkts-arkdata-unifieddataproperties-c.md) can be used. The default value is **CROSS_APP**.
 
 **Type:** ShareOptions
 
@@ -90,7 +90,7 @@ Customized tag. The default value is an empty string.
 readonly timestamp?: Date
 ```
 
-Timestamp when [UnifiedData](arkts-arkdata-unifieddataproperties-c.md#unifieddataproperties) is generated. The default value is January 1, 1970 (UTC).
+Timestamp when [UnifiedData](arkts-arkdata-unifieddataproperties-c.md) is generated. The default value is January 1, 1970 (UTC).
 
 **Type:** Date
 

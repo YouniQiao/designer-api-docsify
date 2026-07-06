@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@ohos.userIAM.companionDeviceAuth';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## updateEnabledBusinessIds

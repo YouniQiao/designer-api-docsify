@@ -9,7 +9,7 @@ Represents the parameters for obtaining data from UDMF, including the destinatio
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@ohos.data.unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## acceptableInfo

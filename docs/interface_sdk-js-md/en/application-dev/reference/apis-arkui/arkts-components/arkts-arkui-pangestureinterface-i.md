@@ -14,7 +14,7 @@ PanGesture is used to trigger a pan gesture when the movement distance of a fing
 (value?: { fingers?: number; direction?: PanDirection; distance?: number } | PanGestureOptions): PanGestureInterface
 ```
 
-Creates a pan gesture. Inherits from [GestureInterface<T>](arkts-arkui-gestureinterface-i.md#gestureinterface).
+Creates a pan gesture. Inherits from [GestureInterface<T>](arkts-arkui-gestureinterface-i.md).
 
 **Since:** 7
 

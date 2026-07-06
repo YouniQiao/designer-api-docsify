@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { StartupTask } from '@ohos.app.appstartup.StartupTask';
+import { StartupTask } from '@kit.AbilityKit';
 ```
 
 ## Summary

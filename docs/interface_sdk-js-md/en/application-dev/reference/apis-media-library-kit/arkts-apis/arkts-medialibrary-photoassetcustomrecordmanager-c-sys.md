@@ -11,7 +11,7 @@ Defines the class of media asset custom record manager.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@ohos.file.photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addLcdJumpCount

@@ -9,7 +9,7 @@ Implements a **DragPreview** object. This API does not work in the **OnDrop** an
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@ohos.arkui.dragController';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## animate

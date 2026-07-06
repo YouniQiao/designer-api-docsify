@@ -26,7 +26,7 @@ function getAllowedKioskApps(admin: Want): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 允许在Kiosk模式下运行的应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md#signatureinfo)清单。 |
+| Array&lt;string&gt; | 允许在Kiosk模式下运行的应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md)清单。 |
 
 **错误码：**
 

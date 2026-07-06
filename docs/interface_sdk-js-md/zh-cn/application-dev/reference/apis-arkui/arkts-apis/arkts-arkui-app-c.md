@@ -346,7 +346,7 @@ struct Index {
 static terminate(): void
 ```
 
-退出当前Ability。在Stage模型下接口功能不生效。 从API version 7开始，推荐使用[`@ohos.ability.featureAbility`](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md#featureability)。
+退出当前Ability。在Stage模型下接口功能不生效。 从API version 7开始，推荐使用[`@ohos.ability.featureAbility`](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md)。
 
 **起始版本：** 3
 

@@ -2,7 +2,7 @@
 
 自定义弹窗的内容，继承自[BaseDialogOptions](#basedialogoptions11)。
 
-**继承/实现关系：** DialogOptions extends [BaseDialogOptions](arkts-arkui-basedialogoptions-i.md#basedialogoptions)
+**继承/实现关系：** DialogOptions extends [BaseDialogOptions](arkts-arkui-basedialogoptions-i.md)
 
 **起始版本：** 18
 

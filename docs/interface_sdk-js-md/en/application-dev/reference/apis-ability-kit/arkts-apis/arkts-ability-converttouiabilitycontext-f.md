@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from '@ohos.app.ability.sendableContextManager';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## convertToUIAbilityContext
@@ -32,7 +32,7 @@ Converts a SendableContext object to a UIAbilityContext object.
 
 | Type | Description |
 | --- | --- |
-| common.UIAbilityContext | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#uiabilitycontext)object. |
+| common.UIAbilityContext | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)object. |
 
 **Error codes:**
 

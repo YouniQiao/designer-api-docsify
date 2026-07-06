@@ -11,7 +11,7 @@ Contract request data
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@ohos.telephony.esim';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## nonce

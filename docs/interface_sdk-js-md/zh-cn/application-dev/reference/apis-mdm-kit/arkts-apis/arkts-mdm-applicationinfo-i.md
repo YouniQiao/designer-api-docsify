@@ -28,7 +28,7 @@ readonly accessTokenId: number
 readonly appDistributionType: string
 ```
 
-应用程序签名证书的分发类型，详细信息请参考[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md#applicationinfo)的appProvisionType字段。
+应用程序签名证书的分发类型，详细信息请参考[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md)的appProvisionType字段。
 
 **类型：** string
 
@@ -364,7 +364,7 @@ readonly process: string
 readonly releaseType: string
 ```
 
-标识应用打包时使用的SDK的发布类型。当前SDK的发布类型可能为Canary、Beta、Release，其中Canary和Beta可能通过序号进一步细分，例如Canary1、Canary2、Beta1、Beta2等。开发者可通 过对比应用打包依赖的SDK发布类型和OS的发布类型（[deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#deviceinfo)）来判断兼容性。
+标识应用打包时使用的SDK的发布类型。当前SDK的发布类型可能为Canary、Beta、Release，其中Canary和Beta可能通过序号进一步细分，例如Canary1、Canary2、Beta1、Beta2等。开发者可通 过对比应用打包依赖的SDK发布类型和OS的发布类型（[deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md)）来判断兼容性。
 
 **类型：** string
 

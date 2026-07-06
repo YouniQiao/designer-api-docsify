@@ -9,7 +9,7 @@ The **distributedAccount** module provides APIs for managing distributed account
 ## Modules to Import
 
 ```TypeScript
-import { distributedAccount } from '@ohos.account.distributedAccount';
+import { distributedAccount } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

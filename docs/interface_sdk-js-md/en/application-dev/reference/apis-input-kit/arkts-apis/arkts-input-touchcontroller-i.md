@@ -9,7 +9,7 @@ Provides the capability of simulating touch operations. The simulated touch oper
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@ohos.multimodalInput.inputEventClient';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## touchDown

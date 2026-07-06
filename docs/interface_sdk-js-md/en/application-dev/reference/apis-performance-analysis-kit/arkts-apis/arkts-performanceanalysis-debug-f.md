@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hilog } from '@ohos.hilog';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## debug

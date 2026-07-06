@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from '@ohos.app.ability.childProcessManager';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## startNativeChildProcess

@@ -1,6 +1,6 @@
 # DrawableDescriptor
 
-父类对象提供可重写的方法，包含：获取[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md#pixelmap)实例，图片资源加载能力。
+父类对象提供可重写的方法，包含：获取[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)实例，图片资源加载能力。
 
 **起始版本：** 10
 
@@ -32,7 +32,7 @@ getPixelMap(): image.PixelMap
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced bythe drawableDescriptor has been released.<br>**适用版本：** 26.0.0 |
+| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced bythe drawableDescriptor has been released.<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -44,7 +44,7 @@ getPixelMap(): image.PixelMap
 invalidate(): void
 ```
 
-重新绘制DrawableDescriptor。当前仅支持 [PictureDrawableDescriptor](arkts-arkui-picturedrawabledescriptor-c.md#picturedrawabledescriptor)类型，其他DrawableDescriptor子类型触 发后无效果。若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
+重新绘制DrawableDescriptor。当前仅支持 [PictureDrawableDescriptor](arkts-arkui-picturedrawabledescriptor-c.md)类型，其他DrawableDescriptor子类型触 发后无效果。若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
 
 **起始版本：** 26.0.0
 
@@ -101,7 +101,7 @@ load(): Promise<DrawableDescriptorLoadedResult>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) | resource loading failed. |
-| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced bythe drawableDescriptor has been released.<br>**适用版本：** 26.0.0 |
+| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced bythe drawableDescriptor has been released.<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -132,7 +132,7 @@ loadSync(): DrawableDescriptorLoadedResult
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) | resource loading failed. |
-| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced bythe drawableDescriptor has been released.<br>**适用版本：** 26.0.0 |
+| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced bythe drawableDescriptor has been released.<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 

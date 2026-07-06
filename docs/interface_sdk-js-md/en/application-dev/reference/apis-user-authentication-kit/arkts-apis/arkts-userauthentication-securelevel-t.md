@@ -10,7 +10,7 @@ Enumerates the authentication security levels.
 
 **Deprecated since:** 8
 
-**Substitutes:** [AuthTrustLevel](arkts-userauthentication-authtrustlevel-e.md#authtrustlevel)
+**Substitutes:** [AuthTrustLevel](arkts-userauthentication-authtrustlevel-e.md)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

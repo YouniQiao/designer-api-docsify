@@ -9,7 +9,7 @@ Describes the screenshot options.
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from '@ohos.screenshot';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## pickRect

@@ -9,7 +9,7 @@ AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtai
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getFrameIndexByTime

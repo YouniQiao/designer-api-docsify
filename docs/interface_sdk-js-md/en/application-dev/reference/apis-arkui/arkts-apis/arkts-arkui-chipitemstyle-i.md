@@ -9,7 +9,7 @@ Defines the common attributes shared by all chips. > **NOTE** > > 1. The size se
 ## Modules to Import
 
 ```TypeScript
-import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@ohos.arkui.advanced.ChipGroup';
+import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@kit.ArkUI';
 ```
 
 ## backgroundColor

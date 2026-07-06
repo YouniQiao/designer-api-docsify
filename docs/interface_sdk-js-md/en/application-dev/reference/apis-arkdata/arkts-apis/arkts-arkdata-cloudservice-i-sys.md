@@ -11,7 +11,7 @@ Provides APIs for interacting with the cloud sync service. You need to inherit t
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@ohos.data.cloudExtension';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## connectAssetLoader

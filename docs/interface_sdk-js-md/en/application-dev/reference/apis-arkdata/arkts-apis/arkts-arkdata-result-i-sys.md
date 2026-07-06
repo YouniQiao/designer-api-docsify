@@ -11,7 +11,7 @@ Represents the data sharing result.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@ohos.data.cloudExtension';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## code

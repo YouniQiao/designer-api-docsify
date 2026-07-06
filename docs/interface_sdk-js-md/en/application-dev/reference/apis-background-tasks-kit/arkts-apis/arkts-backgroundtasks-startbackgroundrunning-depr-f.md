@@ -22,7 +22,7 @@ Requests a continuous task from the system. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context). |
+| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | bgMode | BackgroundMode | Yes | Background mode requested. |
 | wantAgent | WantAgent | Yes | Notification parameter, which is used to specify the target page that isredirected to when a continuous task notification is clicked. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
@@ -129,7 +129,7 @@ Requests a continuous task from the system. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context). |
+| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | bgMode | BackgroundMode | Yes | Background mode requested. |
 | wantAgent | WantAgent | Yes | Notification parameter, which is used to specify the target page that isredirected to when a continuous task notification is clicked. |
 

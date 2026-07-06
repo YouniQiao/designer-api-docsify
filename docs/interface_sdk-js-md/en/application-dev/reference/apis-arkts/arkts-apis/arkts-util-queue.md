@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Queue } from '@ohos.util.Queue';
+import { Queue } from '@kit.ArkTS';
 ```
 
 ## Summary

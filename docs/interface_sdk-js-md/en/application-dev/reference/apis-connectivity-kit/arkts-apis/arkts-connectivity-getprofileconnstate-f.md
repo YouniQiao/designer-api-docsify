@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@ohos.bluetooth';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## getProfileConnState

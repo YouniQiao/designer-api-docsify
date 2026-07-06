@@ -9,7 +9,7 @@ Defines the left and right padding of the chip group, and the spacing between ch
 ## Modules to Import
 
 ```TypeScript
-import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@ohos.arkui.advanced.ChipGroup';
+import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@kit.ArkUI';
 ```
 
 ## endSpace

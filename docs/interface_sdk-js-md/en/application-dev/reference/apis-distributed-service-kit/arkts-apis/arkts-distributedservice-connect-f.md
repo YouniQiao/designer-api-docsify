@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@ohos.distributedsched.abilityConnectionManager';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## connect
@@ -30,7 +30,7 @@ Sets up a UIAbility connection after a collaboration session is created and the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ConnectResult&gt; | Promise used to return the[connection result](arkts-distributedservice-connectresult-i.md#connectresult). |
+| Promise&lt;ConnectResult&gt; | Promise used to return the[connection result](arkts-distributedservice-connectresult-i.md). |
 
 **Error codes:**
 

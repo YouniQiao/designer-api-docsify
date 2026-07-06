@@ -2,7 +2,7 @@
 
 Aperture video session object.
 
-**Inheritance/Implementation:** ApertureVideoSession extends [Session](arkts-camera-session-i.md#session), [Flash](arkts-camera-flash-i.md#flash), [AutoExposure](arkts-camera-autoexposure-i.md#autoexposure), [Focus](arkts-camera-focus-i.md#focus), [Zoom](arkts-camera-zoom-i.md#zoom), [ColorEffect](arkts-camera-coloreffect-i-sys.md#coloreffect), [Aperture](arkts-camera-aperture-i-sys.md#aperture)
+**Inheritance/Implementation:** ApertureVideoSession extends [Session](arkts-camera-session-i.md), [Flash](arkts-camera-flash-i.md), [AutoExposure](arkts-camera-autoexposure-i.md), [Focus](arkts-camera-focus-i.md), [Zoom](arkts-camera-zoom-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md), [Aperture](arkts-camera-aperture-i-sys.md)
 
 **Since:** 12
 
@@ -13,7 +13,7 @@ Aperture video session object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')
@@ -116,7 +116,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. This event is triggered and the error message is returned when an error occurs during thecalling of a session-related API such as[beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and[addInput](arkts-camera-session-i.md#addinput-1). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

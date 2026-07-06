@@ -9,7 +9,7 @@ Defines the configuration options for ContainerReader component. Used to specify
 ## Modules to Import
 
 ```TypeScript
-import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@ohos.arkui.components.ContainerReader';
+import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@kit.ArkUI';
 ```
 
 ## heightBreakpoint

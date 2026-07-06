@@ -1,8 +1,8 @@
 # PhotoOutput
 
-Implements output information used in a photo session. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput).
+Implements output information used in a photo session. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
 
-**Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput)
+**Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Implements output information used in a photo session. It inherits from [CameraO
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## capture
@@ -32,7 +32,7 @@ Captures a photo with the default photo capture parameters. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the photo is successfullycaptured with the default parameters, **err** is **undefined**; otherwise, **err** is an error object with anerror code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the photo is successfullycaptured with the default parameters, **err** is **undefined**; otherwise, **err** is an error object with anerror code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -87,7 +87,7 @@ Captures a photo with the specified photo capture parameters. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | setting | PhotoCaptureSetting | Yes | Photo capture settings. If the input data is of the **undefined** type,a photo capture operation is triggered based on the default settings. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an errorcode defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an errorcode defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -850,7 +850,7 @@ Subscribes to PhotoOutput error events. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when aphotoOutput instance is created. This event is triggered and the corresponding error message is returned whenan error occurs during the calling of a photo-related API. |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 ## onCapturePhotoAvailable
 

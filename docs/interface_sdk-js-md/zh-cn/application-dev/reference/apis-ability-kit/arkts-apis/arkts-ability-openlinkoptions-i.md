@@ -68,7 +68,7 @@ hideFailureTipDialog?: boolean
 parameters?: Record<string, Object>
 ```
 
-表示WantParams参数。 **说明**：具体使用规则请参考[want](arkts-ability-want-c.md#want)中的parameters属性。
+表示WantParams参数。 **说明**：具体使用规则请参考[want](arkts-ability-want-c.md)中的parameters属性。
 
 **类型：** Record<string, Object>
 

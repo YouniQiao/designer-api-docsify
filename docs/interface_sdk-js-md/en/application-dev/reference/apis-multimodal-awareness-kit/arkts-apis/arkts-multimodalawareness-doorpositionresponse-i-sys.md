@@ -11,7 +11,7 @@ Interface for indoor or outdoor identify result
 ## Modules to Import
 
 ```TypeScript
-import { spatialAwareness } from '@ohos.multimodalAwareness.spatialAwareness';
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## deviceId

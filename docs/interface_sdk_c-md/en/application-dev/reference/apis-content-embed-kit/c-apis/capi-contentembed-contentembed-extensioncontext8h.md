@@ -6,7 +6,7 @@ typedef struct ContentEmbed_ExtensionContext* ContentEmbed_ExtensionContextHandl
 
 ## Overview
 
-Define the ContentEmbed_ExtensionContextHandle type.Provides methods for Content Embed Kit.
+Declares the pointer type of the context object of the OE Extension.
 
 **Since**: 24
 

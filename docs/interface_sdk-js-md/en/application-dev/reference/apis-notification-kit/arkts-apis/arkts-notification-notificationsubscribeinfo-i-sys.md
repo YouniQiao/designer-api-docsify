@@ -30,7 +30,7 @@ Bundle names of the applications whose notifications to subscribe to. If this pa
 deviceType?: string
 ```
 
-Device type. If this parameter is not specified, the subscription defaults to notifications from the current device. The value is obtained based on [device information](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#deviceinfo).
+Device type. If this parameter is not specified, the subscription defaults to notifications from the current device. The value is obtained based on [device information](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md).
 
 **Type:** string
 
@@ -64,7 +64,7 @@ Whether to enable the notification classification. - true: enabled. - false: dis
 filterLimit?: number
 ```
 
-Notification filtering range. The default value is **0**. The options are as follows: - **0**: All notifications are included in the subscription. - **1**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-slottype-e.md#slottype) and [userInput](arkts-notification-notificationactionbutton-i.md#notificationactionbutton) is empty. - **2**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-slottype-e.md#slottype) and [userInput](arkts-notification-notificationactionbutton-i.md#notificationactionbutton) is not empty.
+Notification filtering range. The default value is **0**. The options are as follows: - **0**: All notifications are included in the subscription. - **1**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-i.md) is empty. - **2**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-i.md) is not empty.
 
 **Type:** number
 

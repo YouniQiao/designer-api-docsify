@@ -9,7 +9,7 @@ Contents, events, and styles of the select area.
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@ohos.atomicservice.AtomicServiceSearch';
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
 ```
 
 ## arrowPosition

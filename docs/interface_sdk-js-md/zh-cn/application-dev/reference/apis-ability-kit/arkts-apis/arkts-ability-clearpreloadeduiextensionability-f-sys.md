@@ -6,7 +6,7 @@
 function clearPreloadedUIExtensionAbility(preloadId: number): Promise<void>
 ```
 
-清除指定的[UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability)实例。使用Promise异步回调。
+清除指定的[UIExtensionAbility](arkts-ability-uiextensionability-c.md)实例。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -22,7 +22,7 @@ function clearPreloadedUIExtensionAbility(preloadId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| preloadId | number | 是 | 预加载[UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability)实例的ID。 |
+| preloadId | number | 是 | 预加载[UIExtensionAbility](arkts-ability-uiextensionability-c.md)实例的ID。 |
 
 **返回值：**
 

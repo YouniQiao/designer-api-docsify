@@ -18,6 +18,6 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [MediaQueryListener](arkts-arkui-mediaquerylistener-i.md) | 媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。 继承自[MediaQueryResult](arkts-arkui-mediaqueryresult-i.md#mediaqueryresult)。 |
+| [MediaQueryListener](arkts-arkui-mediaquerylistener-i.md) | 媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。 继承自[MediaQueryResult](arkts-arkui-mediaqueryresult-i.md)。 |
 | [MediaQueryResult](arkts-arkui-mediaqueryresult-i.md) | 用于执行媒体查询操作。 |
 

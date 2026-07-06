@@ -1,6 +1,6 @@
 # Shape properties/events
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md#commonmethod), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 **Inheritance/Implementation:** ShapeAttribute extends [CommonMethod<ShapeAttribute>](CommonMethod<ShapeAttribute>)
 
@@ -50,7 +50,7 @@ Sets the color of the fill area. This attribute can be dynamically set using [at
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Color of the fill area.<br>Default value: [Color](arkts-arkui-color-e.md#color).Black<br>The**undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. |
+| value | ResourceColor | Yes | Color of the fill area.<br>Default value: [Color](arkts-arkui-color-e.md).Black<br>The**undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. |
 
 ## fillOpacity
 
@@ -80,7 +80,7 @@ Sets the opacity of the fill area. This attribute can be dynamically set using [
 mesh(value: Array<any>, column: number, row: number)
 ```
 
-Sets the mesh effect. An image is divided into (row + 1) × (column + 1) meshes. The coordinates of each mesh intersection point are stored in the array. (Every two elements indicate the x and y coordinates of an intersection point.) The mesh vertex position is relocated based on the coordinates in the array value to implement partial image distortion. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) . > **NOTE** > > **mesh** takes effect only when a **pixelMap** object is passed to the shape, and the effect applies to the > passed **pixelMap** object. It produces the same result as > [drawPixelMapMesh<sup>12+</sup>](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-canvas-c.md#drawpixelmapmesh-1) in the > [drawing module](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-drawing.md#drawing). It is recommended that you use > **drawPixelMapMesh**.
+Sets the mesh effect. An image is divided into (row + 1) × (column + 1) meshes. The coordinates of each mesh intersection point are stored in the array. (Every two elements indicate the x and y coordinates of an intersection point.) The mesh vertex position is relocated based on the coordinates in the array value to implement partial image distortion. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) . > **NOTE** > > **mesh** takes effect only when a **pixelMap** object is passed to the shape, and the effect applies to the > passed **pixelMap** object. It produces the same result as > [drawPixelMapMesh<sup>12+</sup>](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-canvas-c.md#drawpixelmapmesh-1) in the > [drawing module](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-drawing.md). It is recommended that you use > **drawPixelMapMesh**.
 
 **Since:** 8
 
@@ -118,7 +118,7 @@ Sets the stroke color. This attribute can be dynamically set using [attributeMod
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Stroke color.<br>Default value: [Color](arkts-arkui-color-e.md#color).Transparent<br>Invalidvalues **undefined** and **null** values are treated as the default value, and invalid values **NaN** and**Infinity** are treated as [Color](arkts-arkui-color-e.md#color).Black. |
+| value | ResourceColor | Yes | Stroke color.<br>Default value: [Color](arkts-arkui-color-e.md).Transparent<br>Invalidvalues **undefined** and **null** values are treated as the default value, and invalid values **NaN** and**Infinity** are treated as [Color](arkts-arkui-color-e.md).Black. |
 
 ## strokeDashArray
 

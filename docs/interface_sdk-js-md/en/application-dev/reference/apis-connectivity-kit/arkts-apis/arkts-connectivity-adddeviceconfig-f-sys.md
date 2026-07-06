@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@ohos.wifi';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## addDeviceConfig

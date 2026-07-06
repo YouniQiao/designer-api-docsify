@@ -9,7 +9,7 @@ Represents a **Server** object, which provides methods for starting, stopping, a
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from '@ohos.distributedsched.linkEnhance';
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## close
@@ -77,7 +77,7 @@ Unregisters the callback listener for **connectionAccepted** events. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | Yes | Event type, which is **connectionAccepted**. This event is triggered whena connection from the peer end is received. |
-| callback | Callback&lt;Connection&gt; | No | Registered callback, which is used to return the[Connection](arkts-distributedservice-connection-i.md#connection) object. |
+| callback | Callback&lt;Connection&gt; | No | Registered callback, which is used to return the[Connection](arkts-distributedservice-connection-i.md) object. |
 
 **Error codes:**
 
@@ -193,7 +193,7 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | Yes | Event type, which is **connectionAccepted**. This event is triggered whena connection from the peer end is received. |
-| callback | Callback&lt;Connection&gt; | Yes | Registered callback, which is used to return the[Connection](arkts-distributedservice-connection-i.md#connection) object. |
+| callback | Callback&lt;Connection&gt; | Yes | Registered callback, which is used to return the[Connection](arkts-distributedservice-connection-i.md) object. |
 
 **Error codes:**
 

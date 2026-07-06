@@ -9,7 +9,7 @@ In the following API examples, you must first use [getKeyboardDelegate](arkts-im
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@ohos.inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## off('keyDown' | 'keyUp')
@@ -311,7 +311,7 @@ Enables listening for a keyboard event. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyEvent' | Yes | Event type, which is **'keyEvent'**. |
-| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key eventinformation and the return value is of the Boolean type.<br>- Input parameter: [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-keyevent-i.md#keyevent).<br>- If the event is consumed by the eventsubscriber, **true** is returned. Otherwise, **false** is returned. |
+| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key eventinformation and the return value is of the Boolean type.<br>- Input parameter: [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-keyevent-i.md).<br>- If the event is consumed by the eventsubscriber, **true** is returned. Otherwise, **false** is returned. |
 
 **Example**
 

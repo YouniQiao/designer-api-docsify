@@ -13,7 +13,7 @@ Provides an iterator object of the device root directory.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@ohos.file.fileAccess';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## next

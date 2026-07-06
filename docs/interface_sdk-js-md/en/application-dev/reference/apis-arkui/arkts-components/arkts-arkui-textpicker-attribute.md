@@ -210,7 +210,7 @@ Sets the text color, font size, and font weight of edge items (the second item a
 disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-Sets the text style of edge items (the second item above or below the selected item), covering the following: text color, font size, font weight, maximum font size, minimum font size, text overflow mode. Compared with [disappearTextStyle](TextPickerAttribute#disappearTextStyle(style: Optional<PickerTextStyle>))<sup>18+</sup>, this API supports the [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md#textpickertextstyle) type for the **style** parameter.
+Sets the text style of edge items (the second item above or below the selected item), covering the following: text color, font size, font weight, maximum font size, minimum font size, text overflow mode. Compared with [disappearTextStyle](TextPickerAttribute#disappearTextStyle(style: Optional<PickerTextStyle>))<sup>18+</sup>, this API supports the [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md) type for the **style** parameter.
 
 **Since:** 20
 
@@ -232,7 +232,7 @@ Sets the text style of edge items (the second item above or below the selected i
 divider(value: DividerOptions | null)
 ```
 
-Sets the divider style. If not explicitly set, the divider uses the default style. If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md#divideroptions) exceeds the component's width, both margins are automatically reset to 0.
+Sets the divider style. If not explicitly set, the divider uses the default style. If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md) exceeds the component's width, both margins are automatically reset to 0.
 
 **Since:** 12
 
@@ -254,7 +254,7 @@ Sets the divider style. If not explicitly set, the divider uses the default styl
 divider(textDivider: Optional<DividerOptions | null>)
 ```
 
-Sets the divider style. If not explicitly set, the divider uses the default style. Compared with [divider<sup>12+</sup>](TextPickerAttribute#divider(value: DividerOptions | null)), this API supports the **undefined** type for the **textDivider** parameter. If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md#divideroptions) exceeds the component's width, both margins are automatically reset to 0.
+Sets the divider style. If not explicitly set, the divider uses the default style. Compared with [divider<sup>12+</sup>](TextPickerAttribute#divider(value: DividerOptions | null)), this API supports the **undefined** type for the **textDivider** parameter. If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md) exceeds the component's width, both margins are automatically reset to 0.
 
 **Since:** 18
 
@@ -268,7 +268,7 @@ Sets the divider style. If not explicitly set, the divider uses the default styl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textDivider | Optional&lt;DividerOptions \| null&gt; | Yes | Default value:<br>{<br>strokeWidth: '2px', <br>startMargin: 0, <br>endMargin: 0, <br>color: '#33000000'<br>}<br>1. If the value of **textDivider** is**undefined**, the default value is used.<br>2. If **textDivider** is a valid[DividerOptions](arkts-arkui-divideroptions-i.md#divideroptions) object, the divider is rendered using the specified style.<br>3. If**textDivider** is **null**, the divider is hidden. |
+| textDivider | Optional&lt;DividerOptions \| null&gt; | Yes | Default value:<br>{<br>strokeWidth: '2px', <br>startMargin: 0, <br>endMargin: 0, <br>color: '#33000000'<br>}<br>1. If the value of **textDivider** is**undefined**, the default value is used.<br>2. If **textDivider** is a valid[DividerOptions](arkts-arkui-divideroptions-i.md) object, the divider is rendered using the specified style.<br>3. If**textDivider** is **null**, the divider is hidden. |
 
 ## enableHapticFeedback
 
@@ -512,7 +512,7 @@ Sets the background style of selected items.
 selectedIndex(value: number | number[])
 ```
 
-Sets the index of the selected item or items in the data list. This setting takes precedence over the **value** property in [TextPickerOptions](arkts-arkui-textpickeroptions-i.md#textpickeroptions). Use the number type for single-column pickers. Use the number[] type for multi-column pickers.
+Sets the index of the selected item or items in the data list. This setting takes precedence over the **value** property in [TextPickerOptions](arkts-arkui-textpickeroptions-i.md). Use the number type for single-column pickers. Use the number[] type for multi-column pickers.
 
 **Since:** 10
 
@@ -534,7 +534,7 @@ Sets the index of the selected item or items in the data list. This setting take
 selectedIndex(index: Optional<number | number[]>)
 ```
 
-Sets the index of the selected item or items in the data list. This setting takes precedence over the **value** property in [TextPickerOptions](arkts-arkui-textpickeroptions-i.md#textpickeroptions). Use the number type for single-column pickers. Use the number[] type for multi-column pickers. Compared with [selectedIndex<sup>10+</sup>](TextPickerAttribute#selectedIndex(value: number | number[])), this API supports the **undefined** type for the **index** parameter.
+Sets the index of the selected item or items in the data list. This setting takes precedence over the **value** property in [TextPickerOptions](arkts-arkui-textpickeroptions-i.md). Use the number type for single-column pickers. Use the number[] type for multi-column pickers. Compared with [selectedIndex<sup>10+</sup>](TextPickerAttribute#selectedIndex(value: number | number[])), this API supports the **undefined** type for the **index** parameter.
 
 **Since:** 18
 
@@ -548,7 +548,7 @@ Sets the index of the selected item or items in the data list. This setting take
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | Optional&lt;number \| number[]&gt; | Yes | Index of the selected item or items in the data list. The index iszero-based.<br>Default value: **0**<br>If **index** is **undefined**, the **selected** value of[TextPickerOptions](arkts-arkui-textpickeroptions-i.md#textpickeroptions) is used.<br>If it is negative or exceeds the maximum index, thedefault value is used.<br> |
+| index | Optional&lt;number \| number[]&gt; | Yes | Index of the selected item or items in the data list. The index iszero-based.<br>Default value: **0**<br>If **index** is **undefined**, the **selected** value of[TextPickerOptions](arkts-arkui-textpickeroptions-i.md) is used.<br>If it is negative or exceeds the maximum index, thedefault value is used.<br> |
 
 ## selectedTextStyle
 
@@ -600,7 +600,7 @@ Sets the text color, font size, and font weight of the selected item. Compared w
 selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-Sets the text style of the selected item, covering the following: text color, font size, font weight, maximum font size, minimum font size, text overflow mode. Compared with [selectedTextStyle](TextPickerAttribute#selectedTextStyle(style: Optional<PickerTextStyle>))<sup>18+</sup>, this API supports the [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md#textpickertextstyle) type for the **style** parameter.
+Sets the text style of the selected item, covering the following: text color, font size, font weight, maximum font size, minimum font size, text overflow mode. Compared with [selectedTextStyle](TextPickerAttribute#selectedTextStyle(style: Optional<PickerTextStyle>))<sup>18+</sup>, this API supports the [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md) type for the **style** parameter.
 
 **Since:** 20
 
@@ -666,7 +666,7 @@ Sets the text color, font size, and font weight of candidate items (the first it
 textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-Sets the text style of candidate items (the first item immediately above or below the selected item), covering the following: text color, font size, font weight, maximum font size, minimum font size, text overflow mode. Compared with [textStyle](TextPickerAttribute#textStyle(style: Optional<PickerTextStyle>))<sup>18+</sup>, this API supports the [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md#textpickertextstyle) type for the **style** parameter.
+Sets the text style of candidate items (the first item immediately above or below the selected item), covering the following: text color, font size, font weight, maximum font size, minimum font size, text overflow mode. Compared with [textStyle](TextPickerAttribute#textStyle(style: Optional<PickerTextStyle>))<sup>18+</sup>, this API supports the [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md) type for the **style** parameter.
 
 **Since:** 20
 

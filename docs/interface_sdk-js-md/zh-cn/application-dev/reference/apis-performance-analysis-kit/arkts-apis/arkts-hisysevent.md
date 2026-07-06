@@ -15,10 +15,10 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [addWatcher](arkts-performanceanalysis-addwatcher-f-sys.md#addwatcher-1) | 订阅系统事件，接收[Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-i.md#watcher)类型的对象作为事件参数。 |
+| [addWatcher](arkts-performanceanalysis-addwatcher-f-sys.md#addwatcher-1) | 订阅系统事件，接收[Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-i.md)类型的对象作为事件参数。 |
 | [exportSysEvents](arkts-performanceanalysis-exportsysevents-f-sys.md#exportsysevents-1) | 批量导出系统事件，以文件格式写入应用沙箱固定目录(/data/storage/el2/base/cache/hiview/event/)。 |
 | [query](arkts-performanceanalysis-query-f-sys.md#query-1) | 查询系统事件。 |
-| [removeWatcher](arkts-performanceanalysis-removewatcher-f-sys.md#removewatcher-1) | 取消订阅系统事件，接收[Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-i.md#watcher)类型的对象作为事件参数。 |
+| [removeWatcher](arkts-performanceanalysis-removewatcher-f-sys.md#removewatcher-1) | 取消订阅系统事件，接收[Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-i.md)类型的对象作为事件参数。 |
 | [subscribe](arkts-performanceanalysis-subscribe-f-sys.md#subscribe-1) | 订阅实时系统事件(事件需满足低频率或偶发性的约束条件)，事件发生时立即以文件格式写入应用沙箱固定目录(/data/storage/el2/base/cache/hiview/event/)。 |
 | [unsubscribe](arkts-performanceanalysis-unsubscribe-f-sys.md#unsubscribe-1) | 取消订阅系统事件。 |
 | [write](arkts-performanceanalysis-write-f-sys.md#write-1) | 系统事件打点方法，接收[SysEventInfo](SysEventInfo)类型的对象作为事件参数，使用promise方式作为异步回调。 |

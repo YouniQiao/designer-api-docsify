@@ -2,7 +2,7 @@
 
 Defines camera.
 
-**Inheritance/Implementation:** Camera extends [Node](arkts-arkgraphics3d-node-i.md#node)
+**Inheritance/Implementation:** Camera extends [Node](arkts-arkgraphics3d-node-i.md)
 
 **Since:** 12
 

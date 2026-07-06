@@ -11,7 +11,7 @@ Indicates the voip call detail information.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@ohos.telephony.call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## abilityName

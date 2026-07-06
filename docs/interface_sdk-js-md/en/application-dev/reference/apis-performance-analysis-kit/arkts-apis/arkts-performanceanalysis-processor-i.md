@@ -9,7 +9,7 @@ Defines a data processor for reporting and managing events. You can customize pr
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiviewdfx.hiAppEvent';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## appId

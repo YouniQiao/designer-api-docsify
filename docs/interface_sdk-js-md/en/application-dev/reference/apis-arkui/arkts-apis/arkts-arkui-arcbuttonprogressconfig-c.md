@@ -9,7 +9,7 @@ Defines the progress indicator configuration options of the **ArcButton** compon
 ## Modules to Import
 
 ```TypeScript
-import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from '@ohos.arkui.advanced.ArcButton';
+import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from '@kit.ArkUI';
 ```
 
 ## color
@@ -18,7 +18,7 @@ import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcB
 color?: ResourceColor
 ```
 
-Foreground color of the progress indicator. If the component's background color ( [backgroundColor](arkts-arkui-arcbuttonoptions-c.md#arcbuttonoptions)) is set, it is used as the default foreground color of the progress indicator. The foreground color of the progress indicator is not affected by the button style ( [ArcButtonStyleMode](arkts-arkui-arcbuttonstylemode-e.md#arcbuttonstylemode)). The progress indicator's background color is derived solely from its foreground color, with an opacity value of 25%. Default value: **"#1F71FF"**, which is blue.
+Foreground color of the progress indicator. If the component's background color ( [backgroundColor](arkts-arkui-arcbuttonoptions-c.md)) is set, it is used as the default foreground color of the progress indicator. The foreground color of the progress indicator is not affected by the button style ( [ArcButtonStyleMode](arkts-arkui-arcbuttonstylemode-e.md)). The progress indicator's background color is derived solely from its foreground color, with an opacity value of 25%. Default value: **"#1F71FF"**, which is blue.
 
 **Type:** ResourceColor
 

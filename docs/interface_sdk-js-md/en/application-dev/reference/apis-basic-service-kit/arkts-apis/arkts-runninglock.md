@@ -1,6 +1,6 @@
 # @ohos.runningLock
 
-The **runningLock** module provides APIs for creating, querying, holding, and releasing running locks. A running lock enables the proximity sensor to turn on or off the screen, or prevents the device from entering sleep mode when the screen is off. For details about the running lock types, see [RunningLockType](arkts-basicservices-runninglocktype-e.md#runninglocktype).
+The **runningLock** module provides APIs for creating, querying, holding, and releasing running locks. A running lock enables the proximity sensor to turn on or off the screen, or prevents the device from entering sleep mode when the screen is off. For details about the running lock types, see [RunningLockType](arkts-basicservices-runninglocktype-e.md).
 
 **Since:** 7
 
@@ -9,7 +9,7 @@ The **runningLock** module provides APIs for creating, querying, holding, and re
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from '@ohos.runningLock';
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

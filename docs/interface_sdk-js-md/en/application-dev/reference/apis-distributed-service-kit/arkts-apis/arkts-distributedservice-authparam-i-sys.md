@@ -13,7 +13,7 @@ Defines the authentication parameters.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@ohos.distributedHardware.deviceManager';
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## authType

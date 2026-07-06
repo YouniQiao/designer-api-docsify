@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WorkSchedulerExtensionContext } from '@ohos.WorkSchedulerExtensionAbility';
+import { WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary
@@ -18,5 +18,5 @@ import { WorkSchedulerExtensionContext } from '@ohos.WorkSchedulerExtensionAbili
 
 | Name | Description |
 | --- | --- |
-| [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md) | WorkSchedulerExtensionContext represents the context of WorkSchedulerExtensionAbility and is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext). |
+| [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md) | WorkSchedulerExtensionContext represents the context of WorkSchedulerExtensionAbility and is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). |
 

@@ -110,7 +110,7 @@ SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceEx
 SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 ```
 
-表示[EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md#embeddableuiability)的显示模式，值为枚举类型 [ShowMode](arkts-ability-showmode-e.md#showmode)
+表示[EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md)的显示模式，值为枚举类型 [ShowMode](arkts-ability-showmode-e.md)
 
 **起始版本：** 12
 
@@ -124,7 +124,7 @@ SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 PARAMS_STREAM = 'ability.params.stream'
 ```
 
-表示授权给目标方的文件URI列表。对应的value必须是string类型的文件URI数组。文件URI的获取参考[fileUri](./@ohos.file.fileuri:fileUri.getUriFromPath) 。该字段需要与文件URI读写[Flags](arkts-ability-flags-e.md#flags)配合使用。
+表示授权给目标方的文件URI列表。对应的value必须是string类型的文件URI数组。文件URI的获取参考[fileUri](./@ohos.file.fileuri:fileUri.getUriFromPath) 。该字段需要与文件URI读写[Flags](arkts-ability-flags-e.md)配合使用。
 
 **起始版本：** 12
 
@@ -326,7 +326,7 @@ LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'
 ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
 ```
 
-表示基于[UDMF](./@ohos.data.unifiedDataChannel:unifiedDataChannel)进行文件分享时使用的唯一标识。该字段只允许系统应用设置，三方应用可以读取。 当Want中存在URI授权Flag字段（即[FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-flags-e.md#flags)或[FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-flags-e.md#flags)） ，且同时存在PARAMS_STREAM字段时，该字段将不生效。
+表示基于[UDMF](./@ohos.data.unifiedDataChannel:unifiedDataChannel)进行文件分享时使用的唯一标识。该字段只允许系统应用设置，三方应用可以读取。 当Want中存在URI授权Flag字段（即[FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-flags-e.md)或[FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-flags-e.md)） ，且同时存在PARAMS_STREAM字段时，该字段将不生效。
 
 **起始版本：** 20
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { trash } from '@ohos.file.trash';
+import { trash } from '@kit.CoreFileKit';
 ```
 
 ## recover

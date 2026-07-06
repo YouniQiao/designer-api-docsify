@@ -6,14 +6,14 @@ AudioPlayer is a class for audio playback management. It provides APIs to manage
 
 **Deprecated since:** 9
 
-**Substitutes:** [media:media](arkts-multimedia-media.md#media)
+**Substitutes:** [media:media](arkts-multimedia-media.md)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getTrackDescription
@@ -81,7 +81,7 @@ Subscribes to the audio buffering update event. This API works only under online
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of[BufferingInfoType](arkts-media-bufferinginfotype-e.md#bufferinginfotype) is fixed at **0**. |
+| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of[BufferingInfoType](arkts-media-bufferinginfotype-e.md) is fixed at **0**. |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -273,7 +273,7 @@ Subscribes to the **'timeUpdate'** event. This event is reported every second wh
 on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 ```
 
-Subscribes to the audio interruption event. For details, see [audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-interruptevent-i.md#interruptevent).
+Subscribes to the audio interruption event. For details, see [audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-interruptevent-i.md).
 
 **Since:** 9
 

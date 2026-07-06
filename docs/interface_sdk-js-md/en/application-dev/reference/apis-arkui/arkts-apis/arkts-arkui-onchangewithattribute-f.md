@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@ohos.display';
+import { display } from '@kit.ArkUI';
 ```
 
 ## onChangeWithAttribute
@@ -24,7 +24,7 @@ Subscribes to changes of specified attributes of a display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayAttributeOption | Array&lt;string&gt; | Yes | Attribute names. Only attributes contained in[Display](arkts-arkui-display-i.md#display) are supported. |
+| displayAttributeOption | Array&lt;string&gt; | Yes | Attribute names. Only attributes contained in[Display](arkts-arkui-display-i.md) are supported. |
 | callback | Callback&lt;number&gt; | Yes | Callback used to return the ID of the display, which is an integer. |
 
 **Error codes:**

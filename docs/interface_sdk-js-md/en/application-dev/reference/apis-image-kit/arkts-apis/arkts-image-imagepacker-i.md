@@ -9,7 +9,7 @@ The **ImagePacker** class provides APIs to compress and encode images. Before ca
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## packBinaryImageToTiffData

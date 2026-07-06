@@ -1,6 +1,6 @@
 # EvalErrorConstructor
 
-**Inheritance/Implementation:** EvalErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md#errorconstructor)
+**Inheritance/Implementation:** EvalErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md)
 
 ## constructor
 

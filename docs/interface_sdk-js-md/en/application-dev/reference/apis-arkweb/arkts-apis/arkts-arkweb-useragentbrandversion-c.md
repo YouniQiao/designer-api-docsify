@@ -9,7 +9,7 @@ Class that holds brand name, major version and full version. Brand name and majo
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getBrand

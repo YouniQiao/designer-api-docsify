@@ -1,8 +1,8 @@
 # ISinglePropertyChangeSubscriber（系统接口）
 
-继承自[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md#ipropertysubscriber)。用来定义变量。
+继承自[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md)。用来定义变量。
 
-**继承/实现关系：** ISinglePropertyChangeSubscriber extends [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md#ipropertysubscriber)
+**继承/实现关系：** ISinglePropertyChangeSubscriber extends [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md)
 
 **起始版本：** 7
 

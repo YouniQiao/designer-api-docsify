@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dateTimeManager } from '@ohos.enterprise.dateTimeManager';
+import { dateTimeManager } from '@kit.MDMKit';
 ```
 
 ## isModifyDateTimeDisallowed

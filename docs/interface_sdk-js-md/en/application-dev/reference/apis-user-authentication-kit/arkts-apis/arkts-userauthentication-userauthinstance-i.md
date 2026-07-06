@@ -9,7 +9,7 @@ Provides APIs for user authentication. The user authentication widget is support
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@ohos.userIAM.userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## cancel
@@ -86,7 +86,7 @@ try {
 off(type: 'result', callback?: IAuthCallback): void
 ```
 
-Unsubscribes from the user authentication result. > **NOTE** > The [UserAuthInstance](arkts-userauthentication-userauthinstance-i.md#userauthinstance) instance used to invoke this API must be the one used > to subscribe to the event.
+Unsubscribes from the user authentication result. > **NOTE** > The [UserAuthInstance](arkts-userauthentication-userauthinstance-i.md) instance used to invoke this API must be the one used > to subscribe to the event.
 
 **Since:** 10
 
@@ -159,7 +159,7 @@ try {
 off(type: 'authTip', callback?: AuthTipCallback): void
 ```
 
-Unsubscribes from the event for intermediate authentication status. > **NOTE** > The [UserAuthInstance](arkts-userauthentication-userauthinstance-i.md#userauthinstance) instance used to invoke this API must be the one used > to subscribe to the event.
+Unsubscribes from the event for intermediate authentication status. > **NOTE** > The [UserAuthInstance](arkts-userauthentication-userauthinstance-i.md) instance used to invoke this API must be the one used > to subscribe to the event.
 
 **Since:** 20
 
@@ -229,7 +229,7 @@ try {
 on(type: 'result', callback: IAuthCallback): void
 ```
 
-Subscribes to the user authentication result. This API is used to obtain the final identity authentication result after the user completes identity authentication interaction with the authentication component. Before the authentication widget disappears, the intermediate authentication failures will not be returned through this API. Only the final authentication result (success or failure) is returned through this API. To perceive each authentication failure and intermediate status during the entire authentication process, use the [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2) API for subscription. > **NOTE** > On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a > valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-widgetparam-i.md#widgetparam) is > configured) and receives the authentication result, and if other windows need to be displayed, the application > needs to obtain the flag message released by the component pop-up window and subscribe to the component release > message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the > [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2) API.
+Subscribes to the user authentication result. This API is used to obtain the final identity authentication result after the user completes identity authentication interaction with the authentication component. Before the authentication widget disappears, the intermediate authentication failures will not be returned through this API. Only the final authentication result (success or failure) is returned through this API. To perceive each authentication failure and intermediate status during the entire authentication process, use the [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2) API for subscription. > **NOTE** > On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a > valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-widgetparam-i.md) is > configured) and receives the authentication result, and if other windows need to be displayed, the application > needs to obtain the flag message released by the component pop-up window and subscribe to the component release > message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the > [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2) API.
 
 **Since:** 10
 
@@ -257,7 +257,7 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 on(type: 'authTip', callback: AuthTipCallback): void
 ```
 
-Subscribes to authentication tip information. This API is used to obtain the widget startup and exit messages and each authentication failure. This API uses an asynchronous callback to return the result. > **NOTE** > On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a > valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-widgetparam-i.md#widgetparam) is > configured) and receives the authentication result, and if other windows need to be displayed, the application > needs to obtain the flag message released by the component pop-up window and subscribe to the component release > message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the > [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2) API.
+Subscribes to authentication tip information. This API is used to obtain the widget startup and exit messages and each authentication failure. This API uses an asynchronous callback to return the result. > **NOTE** > On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a > valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-widgetparam-i.md) is > configured) and receives the authentication result, and if other windows need to be displayed, the application > needs to obtain the flag message released by the component pop-up window and subscribe to the component release > message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the > [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2) API.
 
 **Since:** 20
 
@@ -358,7 +358,7 @@ Starts authentication. > **NOTE** > Each **UserAuthInstance** can be used for au
 | [12500009](../errorcode-useriam.md#12500009-authentication-locked) | Authentication is locked out. |
 | [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
 | [12500011](../errorcode-useriam.md#12500011-switched-to-custom-authentication) | Switched to the customized authentication process. |
-| [12500013](../errorcode-useriam.md#12500013-password-expired) | Operation failed because of PIN expired.<br>**Applicable version:** 12 |
+| [12500013](../errorcode-useriam.md#12500013-password-expired) | Operation failed because of PIN expired.<br>**Applicable version:** 12 and later |
 
 **Example**
 

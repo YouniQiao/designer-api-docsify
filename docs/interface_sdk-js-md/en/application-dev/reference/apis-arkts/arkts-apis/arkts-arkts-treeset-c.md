@@ -9,7 +9,7 @@ TreeSet is implemented based on TreeMap. In TreeSet, only value objects are proc
 ## Modules to Import
 
 ```TypeScript
-import { TreeSet } from '@ohos.util.TreeSet';
+import { TreeSet } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -352,7 +352,7 @@ Gets the first elements in a set
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirstValue method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 
@@ -434,7 +434,7 @@ Gets the last elements in a set
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastValue method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 
@@ -593,7 +593,7 @@ Return and delete the first element, returns undefined if tree set is empty
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 
@@ -631,7 +631,7 @@ Return and delete the last element, returns undefined if tree set is empty
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 

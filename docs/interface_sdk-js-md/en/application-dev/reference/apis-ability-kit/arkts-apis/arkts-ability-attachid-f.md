@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataUriUtils } from '@ohos.app.ability.dataUriUtils';
+import { dataUriUtils } from '@kit.AbilityKit';
 ```
 
 ## attachId

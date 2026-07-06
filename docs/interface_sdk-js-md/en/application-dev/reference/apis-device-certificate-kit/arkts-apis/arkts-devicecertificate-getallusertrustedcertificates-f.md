@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## getAllUserTrustedCertificates
@@ -24,7 +24,7 @@ Obtains all user trusted root CA certificates of the device. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **certList** in the[CMResult](arkts-devicecertificate-cmresult-i.md#cmresult) object. |
+| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **certList** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Obtains the user root CA certificates based on the certificate scope. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **certList** in the[CMResult](arkts-devicecertificate-cmresult-i.md#cmresult) object. |
+| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **certList** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

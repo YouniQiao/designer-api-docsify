@@ -17,7 +17,7 @@ function getTargetOverlayModuleInfos(targetModuleName: string, callback: AsyncCa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | targetModuleName | string | 是 | 指定当前应用中的目标module的名称。 |
-| callback | AsyncCallback&lt;Array&lt;OverlayModuleInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取指定的目标module的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#overlaymoduleinfo)成功时，err返回undefined。否则回调函数返回具体错误对象。 |
+| callback | AsyncCallback&lt;Array&lt;OverlayModuleInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取指定的目标module的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)成功时，err返回undefined。否则回调函数返回具体错误对象。 |
 
 **错误码：**
 
@@ -75,7 +75,7 @@ function getTargetOverlayModuleInfos(targetModuleName: string): Promise<Array<Ov
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise对象，返回&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#overlaymoduleinfo)&gt;&gt;。 |
+| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise对象，返回&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)&gt;&gt;。 |
 
 **错误码：**
 

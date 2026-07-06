@@ -2,7 +2,7 @@
 
 AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后台服务的创建、销毁、连接、断开等生命周期回调。
 
-**继承/实现关系：** AppServiceExtensionAbility extends [ExtensionAbility](arkts-ability-extensionability-c.md#extensionability)
+**继承/实现关系：** AppServiceExtensionAbility extends [ExtensionAbility](arkts-ability-extensionability-c.md)
 
 **起始版本：** 20
 
@@ -206,7 +206,7 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 context: AppServiceExtensionContext
 ```
 
-AppServiceExtensionAbility的上下文环境，继承自[ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext)。
+AppServiceExtensionAbility的上下文环境，继承自[ExtensionContext](arkts-ability-extensioncontext-c.md)。
 
 **类型：** AppServiceExtensionContext
 

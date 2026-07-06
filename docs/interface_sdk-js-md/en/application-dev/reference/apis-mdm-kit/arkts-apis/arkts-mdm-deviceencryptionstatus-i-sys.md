@@ -11,7 +11,7 @@ Represents the file system encryption status.
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@ohos.enterprise.securityManager';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## isEncrypted

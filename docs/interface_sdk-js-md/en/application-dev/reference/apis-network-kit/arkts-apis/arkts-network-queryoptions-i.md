@@ -9,7 +9,7 @@ Defines options of DNS query.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@ohos.net.connection';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## family

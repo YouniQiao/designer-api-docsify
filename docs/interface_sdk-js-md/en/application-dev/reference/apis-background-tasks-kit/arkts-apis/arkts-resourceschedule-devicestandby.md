@@ -9,7 +9,7 @@ Provides methods for managing device standby, including the methods for querying
 ## Modules to Import
 
 ```TypeScript
-import { deviceStandby } from '@ohos.resourceschedule.deviceStandby';
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

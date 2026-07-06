@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiext } from '@ohos.wifiext';
+import { wifiext } from '@kit.ConnectivityKit';
 ```
 
 ## getSupportedPowerModel

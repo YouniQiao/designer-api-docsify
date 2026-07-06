@@ -9,7 +9,7 @@ Implements a **GeolocationPermissions** object. > **NOTE** > > - The sample effe
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## allowGeolocation

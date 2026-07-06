@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## shiftAppWindowTouchEvent
@@ -24,7 +24,7 @@ Transfers a touchscreen input event from one window to another within the same a
 | --- | --- | --- | --- |
 | sourceWindowId | number | Yes | ID of the source window. You are advised to call[getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. Thevalue must be an integer greater than 0. If it is less than or equal to 0, error code 1300016 is returned. |
 | targetWindowId | number | Yes | ID of the target window. You are advised to call[getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. Thevalue must be an integer greater than 0. If it is less than or equal to 0, error code 1300016 is returned. |
-| fingerId | number | Yes | Unique ID of the finger in the touchscreen input event. You are advised to use the**touches** attribute in the [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md#touchevent) object to obtainthe ID. This parameter must be an integer greater than or equal to 0. If the value is less than 0, error code 1300016 is returned. |
+| fingerId | number | Yes | Unique ID of the finger in the touchscreen input event. You are advised to use the**touches** attribute in the [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md) object to obtainthe ID. This parameter must be an integer greater than or equal to 0. If the value is less than 0, error code 1300016 is returned. |
 
 **Return value:**
 

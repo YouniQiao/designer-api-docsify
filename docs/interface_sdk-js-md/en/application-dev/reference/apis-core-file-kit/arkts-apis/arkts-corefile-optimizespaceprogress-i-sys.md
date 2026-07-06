@@ -11,7 +11,7 @@ Represents the space optimization states and optimization progress.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@ohos.file.cloudSync';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## progress

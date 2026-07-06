@@ -12,7 +12,7 @@ Defines the particle updater options. > **NOTE** > > To standardize anonymous ob
 config: ParticlePropertyUpdaterConfigs<TYPE>[UPDATER]
 ```
 
-How the property is updated. The available options of **type** are as follows: 1. **ParticleUpdater.NONE**: The property does not change. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#particlepropertyupdaterconfigs)[ParticleUpdater.NONE]. 2. **ParticleUpdater.RANDOM**: The property changes randomly. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#particlepropertyupdaterconfigs)[ParticleUpdater.RANDOM]. 3. **ParticleUpdater.CURVE**: The property changes with the animation curve. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md#particlepropertyupdaterconfigs)[ParticleUpdater.CURVE].
+How the property is updated. The available options of **type** are as follows: 1. **ParticleUpdater.NONE**: The property does not change. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.NONE]. 2. **ParticleUpdater.RANDOM**: The property changes randomly. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM]. 3. **ParticleUpdater.CURVE**: The property changes with the animation curve. In this case, the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE].
 
 **Type:** ParticlePropertyUpdaterConfigs<TYPE>[UPDATER]
 

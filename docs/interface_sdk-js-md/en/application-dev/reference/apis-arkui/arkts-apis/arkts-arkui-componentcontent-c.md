@@ -2,7 +2,7 @@
 
 Inherits from [Content](../../../../reference/apis-arkui/js-apis-arkui-Content.md#content-1).
 
-**Inheritance/Implementation:** ComponentContent extends [Content](arkts-arkui-content-c.md#content)
+**Inheritance/Implementation:** ComponentContent extends [Content](arkts-arkui-content-c.md)
 
 **Since:** 12
 
@@ -228,7 +228,7 @@ Updates the builder function parameters encapsulated by the [WrappedBuilder](../
 updateConfiguration(): void
 ```
 
-Updates the configuration of the entire node by passing in a [system environment change](../../apis-ability-kit/arkts-apis/arkts-ability-configuration-i.md#configuration) event. > **NOTE** > > The updateConfiguration API is used to notify an object of updating the current system environment change.
+Updates the configuration of the entire node by passing in a [system environment change](../../apis-ability-kit/arkts-apis/arkts-ability-configuration-i.md) event. > **NOTE** > > The updateConfiguration API is used to notify an object of updating the current system environment change.
 
 **Since:** 12
 

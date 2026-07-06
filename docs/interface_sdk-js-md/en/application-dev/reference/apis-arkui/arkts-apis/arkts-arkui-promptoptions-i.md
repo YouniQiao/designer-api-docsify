@@ -9,7 +9,7 @@ Configuration parameter of ExceptionPrompt.
 ## Modules to Import
 
 ```TypeScript
-import { ExceptionPrompt, MarginType, PromptOptions } from '@ohos.arkui.advanced.ExceptionPrompt';
+import { ExceptionPrompt, MarginType, PromptOptions } from '@kit.ArkUI';
 ```
 
 ## actionText

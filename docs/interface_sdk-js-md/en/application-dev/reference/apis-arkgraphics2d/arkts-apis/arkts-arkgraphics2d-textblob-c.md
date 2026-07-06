@@ -9,7 +9,7 @@ Defines a block consisting of one or more characters with the same font. > **NOT
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## bounds

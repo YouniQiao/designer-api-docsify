@@ -1,8 +1,8 @@
 # DateStyleOptions
 
-DateStyleOptions定义日期内联型Counter的属性和事件。 继承于[CommonOptions](arkts-arkui-commonoptions-c.md#commonoptions)。
+DateStyleOptions定义日期内联型Counter的属性和事件。 继承于[CommonOptions](arkts-arkui-commonoptions-c.md)。
 
-**继承/实现关系：** DateStyleOptions extends [CommonOptions](arkts-arkui-commonoptions-c.md#commonoptions)
+**继承/实现关系：** DateStyleOptions extends [CommonOptions](arkts-arkui-commonoptions-c.md)
 
 **起始版本：** 11
 

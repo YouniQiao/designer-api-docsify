@@ -32,7 +32,7 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | task mode error.<br>**适用版本：** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | task mode error.<br>**适用版本：** 10+ |
 
 ## off
 
@@ -60,7 +60,7 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
 
 ## off
 
@@ -88,7 +88,7 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
 
 ## off
 
@@ -268,7 +268,7 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | task mode error.<br>**适用版本：** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | task mode error.<br>**适用版本：** 10+ |
 
 ## on
 
@@ -296,7 +296,7 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | task mode error.<br>**适用版本：** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | task mode error.<br>**适用版本：** 10+ |
 
 ## on
 
@@ -324,7 +324,7 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
 
 ## on
 
@@ -501,7 +501,7 @@ pause(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
 | [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 
 ## pause
@@ -527,7 +527,7 @@ pause(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
 | [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 
 ## resume
@@ -556,7 +556,7 @@ resume(callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
 | [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 
 ## resume
@@ -585,7 +585,7 @@ resume(): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10 |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10+ |
 | [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) | Operation with wrong task state. |
 
 ## setMaxSpeed
@@ -604,7 +604,7 @@ setMaxSpeed(speed: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| speed | number | 是 | 设置任务每秒能传输的字节数上限，单位为字节（B），最小值为16384字节，同时该值不得低于[MinSpeed](arkts-basicservices-minspeed-i.md#minspeed)设置的最低速度。 |
+| speed | number | 是 | 设置任务每秒能传输的字节数上限，单位为字节（B），最小值为16384字节，同时该值不得低于[MinSpeed](arkts-basicservices-minspeed-i.md)设置的最低速度。 |
 
 **返回值：**
 

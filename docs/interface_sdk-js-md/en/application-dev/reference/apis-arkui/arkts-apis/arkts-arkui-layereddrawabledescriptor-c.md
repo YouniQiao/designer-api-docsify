@@ -1,8 +1,8 @@
 # LayeredDrawableDescriptor
 
-Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that contains foreground and background resources. Inherits from [DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult). The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below shows the file content:
+Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that contains foreground and background resources. Inherits from [DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md). The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below shows the file content:
 
-**Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md#drawabledescriptor)
+**Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Creates a **LayeredDrawableDescriptor** object when the passed resource ID or na
 ## Modules to Import
 
 ```TypeScript
-import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@ohos.arkui.drawableDescriptor';
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -68,7 +68,7 @@ Obtains the **DrawableDescriptor** object of the background.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -136,7 +136,7 @@ Obtains the **DrawableDescriptor** object of the foreground.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -209,7 +209,7 @@ Obtains the **DrawableDescriptor** object of the mask.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 

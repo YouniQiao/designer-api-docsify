@@ -9,7 +9,7 @@ Provides the screen capture capability.
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from '@ohos.screenshot';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## Summary

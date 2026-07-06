@@ -9,7 +9,7 @@ The policy event.
 ## Modules to Import
 
 ```TypeScript
-import { common } from '@ohos.enterprise.common';
+import { common } from '@kit.MDMKit';
 ```
 
 ## bundleName

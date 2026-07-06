@@ -9,7 +9,7 @@ This module provides the serial port management functions, including enabling an
 ## Modules to Import
 
 ```TypeScript
-import { serialManager } from '@ohos.usbManager.serial';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

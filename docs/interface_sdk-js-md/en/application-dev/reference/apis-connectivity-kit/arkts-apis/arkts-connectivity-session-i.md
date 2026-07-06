@@ -9,7 +9,7 @@ Session represent a connection session to one of the SEs available on the device
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from '@ohos.secureElement';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## close

@@ -11,7 +11,7 @@ Describes the parameters for creating a system window.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## windowType

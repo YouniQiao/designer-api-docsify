@@ -1,6 +1,6 @@
 # NavDestination属性/事件
 
-支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持如下事件：
+支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持如下事件：
 
 **继承/实现关系：** NavDestinationAttribute extends [CommonMethod<NavDestinationAttribute>](CommonMethod<NavDestinationAttribute>)
 
@@ -147,7 +147,7 @@ enableNavigationIndicator(enabled: Optional<boolean>)
 enableStatusBar(enabled: Optional<boolean>, animated?: boolean)
 ```
 
-设置进入该NavDestination后，显示或者隐藏系统的状态栏。 > **说明：** > - 该属性满足如下全部条件时才生效： > > 1. NavDestination属于应用主窗口页面，并且主窗口为全屏窗口； > > 2. NavDestination所属的Navigation的大小占满整个页面； > > 3. NavDestination的大小占满整个Navigation组件； > > 4. NavDestination类型为[NavDestinationMode](arkts-arkui-navdestinationmode-e.md#navdestinationmode).STANDARD。 > > - 设置系统状态栏的实际效果依赖于具体的设备支持情况，具体参考窗口的 > [setSpecificSystemBarEnabled](../../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled11) > 接口。
+设置进入该NavDestination后，显示或者隐藏系统的状态栏。 > **说明：** > - 该属性满足如下全部条件时才生效： > > 1. NavDestination属于应用主窗口页面，并且主窗口为全屏窗口； > > 2. NavDestination所属的Navigation的大小占满整个页面； > > 3. NavDestination的大小占满整个Navigation组件； > > 4. NavDestination类型为[NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD。 > > - 设置系统状态栏的实际效果依赖于具体的设备支持情况，具体参考窗口的 > [setSpecificSystemBarEnabled](../../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled11) > 接口。
 
 **起始版本：** 19
 
@@ -170,7 +170,7 @@ enableStatusBar(enabled: Optional<boolean>, animated?: boolean)
 fullScreenOverlay(fullScreenOverlay: Optional<boolean>)
 ```
 
-设置NavDestination是否以全屏覆盖模式显示。 当参数设置为true时，在Navigation分栏模式下，当前页面会覆盖整个Navigation容器，包括NavBar和内容区。该配置作用于当前NavDestination的所有实例；当路由栈中已有页面以全屏覆盖模式显示时，其后入 栈的[DIALOG](arkts-arkui-navdestinationmode-e.md#navdestinationmode)页面与未设置fullScreenOverlay为false的[STANDARD](arkts-arkui-navdestinationmode-e.md#navdestinationmode)页面也会继承为全屏覆盖显 示。未通过该接口设置时，NavDestination默认是普通显示模式，遵循Navigation分栏显示规则。
+设置NavDestination是否以全屏覆盖模式显示。 当参数设置为true时，在Navigation分栏模式下，当前页面会覆盖整个Navigation容器，包括NavBar和内容区。该配置作用于当前NavDestination的所有实例；当路由栈中已有页面以全屏覆盖模式显示时，其后入 栈的[DIALOG](arkts-arkui-navdestinationmode-e.md)页面与未设置fullScreenOverlay为false的[STANDARD](arkts-arkui-navdestinationmode-e.md)页面也会继承为全屏覆盖显 示。未通过该接口设置时，NavDestination默认是普通显示模式，遵循Navigation分栏显示规则。
 
 **起始版本：** 26.0.0
 
@@ -280,7 +280,7 @@ hideToolBar(hide: boolean, animated?: boolean)
 ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafeAreaEdge>)
 ```
 
-控制组件的布局，使其扩展到非安全区域。 > **说明：** > - 组件设置ignoreLayoutSafeArea之后生效的条件为： > > 设置LayoutSafeAreaType.SYSTEM时，组件的边界与非安全区域重合时组件能够延伸到非安全区域下。 > > - 若组件扩展到非安全区域内，此时在非安全区域里触发的事件（例如：点击事件）等可能会被系统拦截，优先响应状态栏等系统组件。 > > - 组件想要扩展到非安全区域内，需隐藏或者设置标题栏和工具栏为[STACK](arkts-arkui-barstyle-e.md#barstyle)模式。
+控制组件的布局，使其扩展到非安全区域。 > **说明：** > - 组件设置ignoreLayoutSafeArea之后生效的条件为： > > 设置LayoutSafeAreaType.SYSTEM时，组件的边界与非安全区域重合时组件能够延伸到非安全区域下。 > > - 若组件扩展到非安全区域内，此时在非安全区域里触发的事件（例如：点击事件）等可能会被系统拦截，优先响应状态栏等系统组件。 > > - 组件想要扩展到非安全区域内，需隐藏或者设置标题栏和工具栏为[STACK](arkts-arkui-barstyle-e.md)模式。
 
 **起始版本：** 12
 
@@ -303,7 +303,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 menus(value: Array<NavigationMenuItem> | CustomBuilder)
 ```
 
-设置页面右上角菜单。不设置时不显示菜单项。使用Array<[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md#navigationmenuitem)&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标 会被放入自动生成的更多图标。 > **说明：** > - 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。 > > - 不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、symbolEffect属性修改动效类型。
+设置页面右上角菜单。不设置时不显示菜单项。使用Array<[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标 会被放入自动生成的更多图标。 > **说明：** > - 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。 > > - 不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、symbolEffect属性修改动效类型。
 
 **起始版本：** 12
 
@@ -325,7 +325,7 @@ menus(value: Array<NavigationMenuItem> | CustomBuilder)
 menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenuOptions)
 ```
 
-设置页面右上角菜单。不设置时不显示菜单项。与 [menus](NavDestinationAttribute#menus(value: Array<NavigationMenuItem> | CustomBuilder))相比，新增菜单选项。使用Array< [NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md#navigationmenuitem)&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。 > **说明：** > - 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。 > > - 不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、symbolEffect属性修改动效类型。
+设置页面右上角菜单。不设置时不显示菜单项。与 [menus](NavDestinationAttribute#menus(value: Array<NavigationMenuItem> | CustomBuilder))相比，新增菜单选项。使用Array< [NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。 > **说明：** > - 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。 > > - 不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、symbolEffect属性修改动效类型。
 
 **起始版本：** 19
 
@@ -458,7 +458,7 @@ NavDestination处于非激活态（处于非栈顶不可操作，或处于栈顶
 onNewParam(callback: Optional<Callback<ESObject>>)
 ```
 
-当之前存在于栈中的NavDestination页面通过[launchMode.MOVE_TO_TOP_SINGLETON](arkts-arkui-launchmode-e.md#launchmode)或 [launchMode.POP_TO_SINGLETON](arkts-arkui-launchmode-e.md#launchmode)移动到栈顶时，触发该回调。 > **说明：** > - [replacePath](arkts-arkui-navpathstack-c.md#replacepath-1)、 > [replaceDestination](arkts-arkui-navpathstack-c.md#replacedestination-1)不会触发该回调。 > > - 从API version 22开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+当之前存在于栈中的NavDestination页面通过[launchMode.MOVE_TO_TOP_SINGLETON](arkts-arkui-launchmode-e.md)或 [launchMode.POP_TO_SINGLETON](arkts-arkui-launchmode-e.md)移动到栈顶时，触发该回调。 > **说明：** > - [replacePath](arkts-arkui-navpathstack-c.md#replacepath-1)、 > [replaceDestination](arkts-arkui-navpathstack-c.md#replacedestination-1)不会触发该回调。 > > - 从API version 22开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 19
 
@@ -678,7 +678,7 @@ onWillShow(callback: Callback<void>)
 preferredOrientation(orientation: Optional<Orientation>)
 ```
 
-设置NavDestination对应的显示方向。转场到该NavDestination后，系统也会将应用主窗口切到该显示方向。 > **说明：** > - 该属性满足如下全部条件时才有效： > > 1. NavDestination属于应用主窗口页面，并且主窗口为全屏窗口； > > 2. NavDestination所属的Navigation的大小占满整个应用页面； > > 3. NavDestination类型为[NavDestinationMode](arkts-arkui-navdestinationmode-e.md#navdestinationmode).STANDARD。 > > - 设置显示方向的实际效果依赖于具体的设备支持情况，具体参考窗口的 > [setPreferredOrientation](../../../../reference/apis-arkui/arkts-apis-window-Window.md#setpreferredorientation9-1)接 > 口。
+设置NavDestination对应的显示方向。转场到该NavDestination后，系统也会将应用主窗口切到该显示方向。 > **说明：** > - 该属性满足如下全部条件时才有效： > > 1. NavDestination属于应用主窗口页面，并且主窗口为全屏窗口； > > 2. NavDestination所属的Navigation的大小占满整个应用页面； > > 3. NavDestination类型为[NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD。 > > - 设置显示方向的实际效果依赖于具体的设备支持情况，具体参考窗口的 > [setPreferredOrientation](../../../../reference/apis-arkui/arkts-apis-window-Window.md#setpreferredorientation9-1)接 > 口。
 
 **起始版本：** 19
 
@@ -800,6 +800,6 @@ toolbarConfiguration(toolbarParam: Array<ToolbarItem> | CustomBuilder, options?:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| toolbarParam | Array&lt;ToolbarItem&gt; \| CustomBuilder | 是 | 工具栏内容。<br/>使用Array&lt;[ToolbarItem](arkts-arkui-toolbaritem-i.md#toolbaritem)&gt;写法设置的工具栏有如下特性：<br/>-工具栏所有选项均分底部工具栏，在每个均分内容区布局文本和图标。<br/>-竖屏模式最多支持显示5个图标，多余的图标会被放入自动生成的更多图标中，点击更多图标，可以展示剩余内容。横屏模式时，如果为[Split](arkts-arkui-navigationmode-e.md#navigationmode)模式，仍按照竖屏模式显示，如果为[Stack](arkts-arkui-navigationmode-e.md#navigationmode)模式需配合[menus](NavDestinationAttribute#menus(value: Array&lt;NavigationMenuItem&gt; \| CustomBuilder))属性的Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md#navigationmenuitem)&gt;使用，底部工具栏会自动隐藏，同时底部工具栏所有选项移动至页面右上角菜单。<br/>使用[CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)写法为用户自定义工具栏选项，不具备以上功能。 |
+| toolbarParam | Array&lt;ToolbarItem&gt; \| CustomBuilder | 是 | 工具栏内容。<br/>使用Array&lt;[ToolbarItem](arkts-arkui-toolbaritem-i.md)&gt;写法设置的工具栏有如下特性：<br/>-工具栏所有选项均分底部工具栏，在每个均分内容区布局文本和图标。<br/>-竖屏模式最多支持显示5个图标，多余的图标会被放入自动生成的更多图标中，点击更多图标，可以展示剩余内容。横屏模式时，如果为[Split](arkts-arkui-navigationmode-e.md)模式，仍按照竖屏模式显示，如果为[Stack](arkts-arkui-navigationmode-e.md)模式需配合[menus](NavDestinationAttribute#menus(value: Array&lt;NavigationMenuItem&gt; \| CustomBuilder))属性的Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;使用，底部工具栏会自动隐藏，同时底部工具栏所有选项移动至页面右上角菜单。<br/>使用[CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)写法为用户自定义工具栏选项，不具备以上功能。 |
 | options | NavigationToolbarOptions | 否 | 工具栏选项。包含工具栏背景颜色、工具栏背景模糊样式及模糊选项、工具栏背景属性、工具栏布局方式、是否隐藏工具栏的文本、工具栏更多图标的菜单选项。 |
 

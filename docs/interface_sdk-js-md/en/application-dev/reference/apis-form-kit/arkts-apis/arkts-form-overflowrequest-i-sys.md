@@ -11,7 +11,7 @@ Provides OverflowRequest about request/cancel form's overflow
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@ohos.app.form.formInfo';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## formId

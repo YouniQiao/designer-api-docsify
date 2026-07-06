@@ -9,7 +9,7 @@ Describes data passed in the event.
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from '@ohos.events.emitter';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## data

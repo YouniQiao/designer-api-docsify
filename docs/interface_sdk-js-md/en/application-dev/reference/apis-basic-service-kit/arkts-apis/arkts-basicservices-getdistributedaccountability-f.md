@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedAccount } from '@ohos.account.distributedAccount';
+import { distributedAccount } from '@kit.BasicServicesKit';
 ```
 
 ## getDistributedAccountAbility

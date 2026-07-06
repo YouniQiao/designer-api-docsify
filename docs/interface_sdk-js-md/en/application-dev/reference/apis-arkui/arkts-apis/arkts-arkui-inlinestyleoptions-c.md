@@ -2,7 +2,7 @@
 
 Defines the inline style options.
 
-**Inheritance/Implementation:** InlineStyleOptions extends [CommonOptions](arkts-arkui-commonoptions-c.md#commonoptions)
+**Inheritance/Implementation:** InlineStyleOptions extends [CommonOptions](arkts-arkui-commonoptions-c.md)
 
 **Since:** 11
 
@@ -11,7 +11,7 @@ Defines the inline style options.
 ## Modules to Import
 
 ```TypeScript
-import { CounterType, DateData, CounterComponent, CounterOptions } from '@ohos.arkui.advanced.Counter';
+import { CounterType, DateData, CounterComponent, CounterOptions } from '@kit.ArkUI';
 ```
 
 ## max

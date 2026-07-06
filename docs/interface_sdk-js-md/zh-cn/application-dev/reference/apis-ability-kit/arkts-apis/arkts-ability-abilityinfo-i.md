@@ -26,7 +26,7 @@ readonly appIndex: number
 readonly applicationInfo: ApplicationInfo
 ```
 
-应用程序的配置信息<!--Del-->，可以通过调用 [queryAbilityInfo](arkts-ability-queryabilityinfo-f-sys.md#queryabilityinfo-2) 接口，abilityFlags参数传入GET_ABILITY_INFO_WITH_APPLICATION获取<!--DelEnd-->。 [getBundleInfoForSelf](arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)或 者 [getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-2) 接口获取AbilityInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md#bundleinfo).appInfo对象来获取相关信息。
+应用程序的配置信息<!--Del-->，可以通过调用 [queryAbilityInfo](arkts-ability-queryabilityinfo-f-sys.md#queryabilityinfo-2) 接口，abilityFlags参数传入GET_ABILITY_INFO_WITH_APPLICATION获取<!--DelEnd-->。 [getBundleInfoForSelf](arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)或 者 [getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-2) 接口获取AbilityInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md).appInfo对象来获取相关信息。
 
 **类型：** ApplicationInfo
 
@@ -218,7 +218,7 @@ Ability的标签资源id，是编译构建时根据应用配置abilities下的la
 readonly launchType: bundleManager.LaunchType
 ```
 
-Ability的启动模式，在启动的时候是否以多实例启动，详情参考[启动模式枚举](arkts-ability-launchtype-e.md#launchtype) 。
+Ability的启动模式，在启动的时候是否以多实例启动，详情参考[启动模式枚举](arkts-ability-launchtype-e.md) 。
 
 **类型：** bundleManager.LaunchType
 
@@ -282,7 +282,7 @@ Ability名称。
 readonly orientation: bundleManager.DisplayOrientation
 ```
 
-Ability的显示模式。来源于[module.json5](../../../../quick-start/module-configuration-file.md)中abilities标签下配置的orientation字段，如果 module.json5配置文件中orientation配置枚举，orientation属性有值且非0，取值详情参考 [显示模式枚举](arkts-ability-displayorientation-e.md#displayorientation)；如果配置文件中配置的是资源索引，orientation属性值为0。
+Ability的显示模式。来源于[module.json5](../../../../quick-start/module-configuration-file.md)中abilities标签下配置的orientation字段，如果 module.json5配置文件中orientation配置枚举，orientation属性有值且非0，取值详情参考 [显示模式枚举](arkts-ability-displayorientation-e.md)；如果配置文件中配置的是资源索引，orientation属性值为0。
 
 **类型：** bundleManager.DisplayOrientation
 

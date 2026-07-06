@@ -2,7 +2,7 @@
 
 class of static subscriber extension context.
 
-**Inheritance/Implementation:** FenceExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext)
+**Inheritance/Implementation:** FenceExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 14
 
@@ -11,7 +11,7 @@ class of static subscriber extension context.
 ## Modules to Import
 
 ```TypeScript
-import { FenceExtensionContext } from '@ohos.app.ability.FenceExtensionContext';
+import { FenceExtensionContext } from '@kit.LocationKit';
 ```
 
 ## startAbility

@@ -9,7 +9,7 @@ A **Buffer** object represents a byte sequence of a fixed length. It is used to 
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from '@ohos.buffer';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## Summary

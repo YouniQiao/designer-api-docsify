@@ -9,7 +9,7 @@ Beacon fence details.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@ohos.geoLocationManager';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## beaconFenceInfoType

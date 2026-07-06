@@ -40,7 +40,7 @@ TYPE_CREATE_PROCESS = 1
 TYPE_CREATE_ABILITY_STAGE = 2
 ```
 
-进程最终预加载到[AbilityStage](arkts-ability-abilitystage-c.md#abilitystage)创建完成阶段。
+进程最终预加载到[AbilityStage](arkts-ability-abilitystage-c.md)创建完成阶段。
 
 **起始版本：** 22
 

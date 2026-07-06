@@ -1,6 +1,6 @@
 # ListItemGroup属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性：
 
 **继承/实现关系：** ListItemGroupAttribute extends [CommonMethod<ListItemGroupAttribute>](CommonMethod<ListItemGroupAttribute>)
 
@@ -38,7 +38,7 @@ divider(
   )
 ```
 
-设置ListItem分割线样式，默认无分割线。 strokeWidth，startMargin和endMargin不支持设置百分比。 ListItem设置[多态样式](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)时，被按压的子组件上下的分割线不绘制。
+设置ListItem分割线样式，默认无分割线。 strokeWidth，startMargin和endMargin不支持设置百分比。 ListItem设置[多态样式](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)时，被按压的子组件上下的分割线不绘制。
 
 **起始版本：** 9
 

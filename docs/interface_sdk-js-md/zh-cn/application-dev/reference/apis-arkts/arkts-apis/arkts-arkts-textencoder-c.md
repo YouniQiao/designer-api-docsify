@@ -228,7 +228,7 @@ encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo
 | 类型 | 说明 |
 | --- | --- |
 | object | 返回该对象，其中 read 表示已编码的字符数，written 表示已编码字符所占用的字节数。<br>**适用版本：** 9 - 10 |
-| EncodeIntoUint8ArrayInfo | 获取到的对象。**read** 表示已编码的字符数，**written** 表示已编码字符所占用的字节数。<br>**适用版本：** 11 |
+| EncodeIntoUint8ArrayInfo | 获取到的对象。**read** 表示已编码的字符数，**written** 表示已编码字符所占用的字节数。<br>**适用版本：** 11+ |
 
 **示例：**
 

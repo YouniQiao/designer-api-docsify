@@ -46,7 +46,7 @@ fail?: (data: string, code: number) => void
 success?: (data: FileListResponse) => void
 ```
 
-接口调用成功的回调函数。返回[FileListResponse](arkts-corefile-filelistresponse-depr-i.md#filelistresponse)。
+接口调用成功的回调函数。返回[FileListResponse](arkts-corefile-filelistresponse-depr-i.md)。
 
 **类型：** (data: FileListResponse) => void
 

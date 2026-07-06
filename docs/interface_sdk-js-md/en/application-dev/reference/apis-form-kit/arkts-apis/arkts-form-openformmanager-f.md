@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@ohos.app.form.formProvider';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## openFormManager
@@ -24,7 +24,7 @@ Opens the Widget Manager page of the current application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Parameter that must contain the following fields:<br>**bundleName**: bundle name of widget.<br>**abilityName**: ability name of the widget.<br>**parameters**:<br>- **ohos.extra.param.key.form_dimension**:[Widget dimension](arkts-form-formdimension-e.md#formdimension).<br>- **ohos.extra.param.key.form_name**:Widget name.<br>- **ohos.extra.param.key.module_name**: module name of the widget. |
+| want | Want | Yes | Parameter that must contain the following fields:<br>**bundleName**: bundle name of widget.<br>**abilityName**: ability name of the widget.<br>**parameters**:<br>- **ohos.extra.param.key.form_dimension**:[Widget dimension](arkts-form-formdimension-e.md).<br>- **ohos.extra.param.key.form_name**:Widget name.<br>- **ohos.extra.param.key.module_name**: module name of the widget. |
 
 **Error codes:**
 

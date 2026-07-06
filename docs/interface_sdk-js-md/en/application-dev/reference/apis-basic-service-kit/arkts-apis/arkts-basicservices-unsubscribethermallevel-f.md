@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { thermal } from '@ohos.thermal';
+import { thermal } from '@kit.BasicServicesKit';
 ```
 
 ## unsubscribeThermalLevel

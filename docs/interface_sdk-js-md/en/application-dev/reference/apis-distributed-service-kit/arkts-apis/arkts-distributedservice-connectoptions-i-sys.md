@@ -9,7 +9,7 @@ Connection options for the application.
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@ohos.distributedsched.abilityConnectionManager';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## needReceiveStream

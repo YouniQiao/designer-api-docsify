@@ -18,7 +18,7 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;BundleInstaller&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，获取BundleInstaller对象，err为undefined，data为获取到的BundleInstaller对象；否则为错误对象。 |
+| callback | AsyncCallback&lt;BundleInstaller&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，获取BundleInstaller对象，err为undefined，data为获取到的BundleInstaller对象；否则为错误对象。 |
 
 **错误码：**
 

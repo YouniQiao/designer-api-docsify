@@ -12,7 +12,7 @@
 FONT_SIZE = 0
 ```
 
-以字号大小作为缩放基数。最终行高为[TextStyle](arkts-arkgraphics2d-textstyle-i.md#textstyle).fontSize * [TextStyle](arkts-arkgraphics2d-textstyle-i.md#textstyle).heightScale。
+以字号大小作为缩放基数。最终行高为[TextStyle](arkts-arkgraphics2d-textstyle-i.md).fontSize * [TextStyle](arkts-arkgraphics2d-textstyle-i.md).heightScale。
 
 **起始版本：** 21
 
@@ -26,7 +26,7 @@ FONT_SIZE = 0
 FONT_HEIGHT = 1
 ```
 
-以字形高度作为缩放基数。最终行高为塑形后字形高度 * [TextStyle](arkts-arkgraphics2d-textstyle-i.md#textstyle).heightScale。
+以字形高度作为缩放基数。最终行高为塑形后字形高度 * [TextStyle](arkts-arkgraphics2d-textstyle-i.md).heightScale。
 
 **起始版本：** 21
 

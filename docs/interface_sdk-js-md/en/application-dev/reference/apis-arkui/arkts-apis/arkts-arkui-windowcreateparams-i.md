@@ -9,7 +9,7 @@ Describes the window parameters during application startup.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## animationParams

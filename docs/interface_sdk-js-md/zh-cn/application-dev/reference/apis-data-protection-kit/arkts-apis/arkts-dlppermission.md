@@ -40,7 +40,7 @@
 | [setRetentionState](arkts-dataprotection-setretentionstate-f.md#setretentionstate-1) | 设置DLP沙箱的保留状态。默认情况下，打开DLP文件时系统会自动创建沙箱环境，关闭文件后自动销毁沙箱。设置保留状态后，即使关闭DLP文件，沙箱环境也会保留，便于快速重新打开相同DLP文件。适用于需要频繁操作同一DLP文件的场景 ，可提升文件打开效率。仅支持在DLP沙箱应用中调用。使用Promise异步回调。 |
 | [setRetentionState](arkts-dataprotection-setretentionstate-f.md#setretentionstate-2) | 设置DLP沙箱的保留状态。默认情况下，打开DLP文件时系统会自动创建沙箱环境，关闭文件后自动销毁沙箱。设置保留状态后，即使关闭DLP文件，沙箱环境也会保留，便于快速重新打开相同DLP文件。适用于需要频繁操作同一DLP文件的场景 ，可提升文件打开效率。仅支持在DLP沙箱应用中调用。使用callback异步回调。 |
 | [setSandboxAppConfig](arkts-dataprotection-setsandboxappconfig-f.md#setsandboxappconfig-1) | 设置沙箱应用配置信息，配置信息为JSON字符串格式，具体内容由应用自行设置。调用成功后，沙箱应用将按照配置信息运行。使用Promise异步回调。 该接口用于设置沙箱应用的配置信息，以便应用按需传递自定义参数。 |
-| [startDLPManagerForResult](arkts-dataprotection-startdlpmanagerforresult-f.md#startdlpmanagerforresult-1) | 在当前[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md#uiability)界面以无边框形式打开DLP权限管理应用。使用Promise异步回调。 该接口用于拉起DLP权限管理应用配置文件权限，并将用户操作结果返回给调用方。 |
+| [startDLPManagerForResult](arkts-dataprotection-startdlpmanagerforresult-f.md#startdlpmanagerforresult-1) | 在当前[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md)界面以无边框形式打开DLP权限管理应用。使用Promise异步回调。 该接口用于拉起DLP权限管理应用配置文件权限，并将用户操作结果返回给调用方。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -59,7 +59,7 @@
 | [on](arkts-dataprotection-on-f-sys.md#on-2) | 注册监听DLP沙箱卸载事件，用于感知沙箱环境的变化。注册成功后，当DLP沙箱被卸载时，系统会通过回调函数通知应用。 调用on注册监听后，建议在不需要监听时调用 [off](arkts-dataprotection-off-f-sys.md#off-2)取消监听释放资源。 DLP管理应用需要追踪沙箱的创建和销毁状态，以便维护沙箱列表或执行相关的清理操作。 |
 | [openDLPFile](arkts-dataprotection-opendlpfile-f-sys.md#opendlpfile-1) | DLP管理应用调用该接口，打开DLP文件。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用Promise异步回调。 调用openDLPFile()成功后返回DLPFile对象，必须在使用完毕后调用[closeDLPFile](arkts-dataprotection-dlpfile-i-sys.md#closedlpfile-1)释放资源。 DLP管理应用或授权应用需要访问受保护的DLP文件内容时，先打开文件获取管理对象。 |
 | [openDLPFile](arkts-dataprotection-opendlpfile-f-sys.md#opendlpfile-2) | DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用完DLPFile对象后，应调用closeDLPFile释放对象，避免资 源泄露。 |
-| [queryDlpPolicy](arkts-dataprotection-querydlppolicy-f-sys.md#querydlppolicy-1) | 在DLP文件中解析文件头，获取DLP明文策略。返回的策略JSON字符串包含[DLPProperty](arkts-dataprotection-dlpproperty-i.md#dlpproperty)和 [CustomProperty](arkts-dataprotection-customproperty-i.md#customproperty)信息。使用Promise异步回调。 该接口可用于在查看DLP文件权限配置等场景中，获取文件的策略信息以便进行分析。 |
+| [queryDlpPolicy](arkts-dataprotection-querydlppolicy-f-sys.md#querydlppolicy-1) | 在DLP文件中解析文件头，获取DLP明文策略。返回的策略JSON字符串包含[DLPProperty](arkts-dataprotection-dlpproperty-i.md)和 [CustomProperty](arkts-dataprotection-customproperty-i.md)信息。使用Promise异步回调。 该接口可用于在查看DLP文件权限配置等场景中，获取文件的策略信息以便进行分析。 |
 | [uninstallDLPSandbox](arkts-dataprotection-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox-1) | 卸载一个应用的DLP沙箱。使用Promise异步回调。调用成功后，系统销毁指定的DLP沙箱环境并释放相关资源。 需要清理对应的沙箱环境时使用此接口。 必须在调用 [installDLPSandbox](arkts-dataprotection-installdlpsandbox-f-sys.md#installdlpsandbox-1) 安装沙箱后才能调用此方法卸载。 |
 | [uninstallDLPSandbox](arkts-dataprotection-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox-2) | 卸载一个应用的DLP沙箱。使用callback异步回调。调用成功后，系统销毁指定的DLP沙箱环境并释放相关资源。 需要清理沙箱环境时使用此接口。 必须在调用 [installDLPSandbox](arkts-dataprotection-installdlpsandbox-f-sys.md#installdlpsandbox-1) 安装沙箱后才能调用此方法卸载。 |
 <!--DelEnd-->

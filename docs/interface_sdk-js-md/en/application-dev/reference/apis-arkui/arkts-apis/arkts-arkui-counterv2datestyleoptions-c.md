@@ -2,7 +2,7 @@
 
 Defines the date style options.
 
-**Inheritance/Implementation:** CounterV2DateStyleOptions extends [CounterV2CommonOptions](arkts-arkui-counterv2commonoptions-c.md#counterv2commonoptions)
+**Inheritance/Implementation:** CounterV2DateStyleOptions extends [CounterV2CommonOptions](arkts-arkui-counterv2commonoptions-c.md)
 
 **Since:** 26.0.0
 
@@ -11,7 +11,7 @@ Defines the date style options.
 ## Modules to Import
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2Type, CounterV2DateData } from '@ohos.arkui.advanced.CounterV2';
+import { CounterV2Component, CounterV2Options, CounterV2Type, CounterV2DateData } from '@kit.ArkUI';
 ```
 
 ## day

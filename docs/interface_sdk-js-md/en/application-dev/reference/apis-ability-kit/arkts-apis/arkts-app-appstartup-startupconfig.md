@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { StartupConfig } from '@ohos.app.appstartup.StartupConfig';
+import { StartupConfig } from '@kit.AbilityKit';
 ```
 
 ## Summary

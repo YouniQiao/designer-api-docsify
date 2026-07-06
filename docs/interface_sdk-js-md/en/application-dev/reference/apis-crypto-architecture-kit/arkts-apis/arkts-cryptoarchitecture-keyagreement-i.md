@@ -11,7 +11,7 @@ Provides APIs for key agreement operations. Before using any API of the **KeyAgr
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## generateSecret

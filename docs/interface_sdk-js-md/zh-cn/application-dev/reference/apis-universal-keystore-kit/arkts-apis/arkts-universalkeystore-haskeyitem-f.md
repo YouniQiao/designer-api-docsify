@@ -19,7 +19,7 @@ function hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 所需查找的密钥的别名。 |
-| options | HuksOptions | 是 | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md#huksauthstoragelevel)指定需查询密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| options | HuksOptions | 是 | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md)指定需查询密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
 | callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。若密钥存在，data为true，若密钥不存在，data为false。 |
 
 **错误码：**
@@ -33,7 +33,7 @@ function hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallb
 | [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23 |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
 
 **示例：**
 
@@ -81,7 +81,7 @@ function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 所需查找的密钥的别名。 |
-| options | HuksOptions | 是 | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md#huksauthstoragelevel)指定需查询密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| options | HuksOptions | 是 | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md)指定需查询密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
 
 **返回值：**
 
@@ -100,7 +100,7 @@ function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>
 | [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23 |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
 
 **示例：**
 

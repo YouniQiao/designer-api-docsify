@@ -9,7 +9,7 @@ Defines the date data.
 ## Modules to Import
 
 ```TypeScript
-import { CounterType, DateData, CounterComponent, CounterOptions } from '@ohos.arkui.advanced.Counter';
+import { CounterType, DateData, CounterComponent, CounterOptions } from '@kit.ArkUI';
 ```
 
 ## constructor

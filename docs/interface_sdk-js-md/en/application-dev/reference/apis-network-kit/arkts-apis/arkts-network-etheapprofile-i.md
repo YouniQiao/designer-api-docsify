@@ -9,7 +9,7 @@ Eth EAP profile.
 ## Modules to Import
 
 ```TypeScript
-import { eap } from '@ohos.net.eap';
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## altSubjectMatch

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTimer } from '@ohos.systemTimer';
+import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## destroyTimer

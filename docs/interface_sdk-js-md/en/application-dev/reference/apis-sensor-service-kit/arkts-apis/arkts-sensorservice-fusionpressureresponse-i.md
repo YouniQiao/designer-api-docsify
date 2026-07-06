@@ -1,8 +1,8 @@
 # FusionPressureResponse
 
-Describes the fusion pressure sensor data. It extends from [Response](arkts-sensorservice-response-i.md#response).
+Describes the fusion pressure sensor data. It extends from [Response](arkts-sensorservice-response-i.md).
 
-**Inheritance/Implementation:** FusionPressureResponse extends [Response](arkts-sensorservice-response-i.md#response)
+**Inheritance/Implementation:** FusionPressureResponse extends [Response](arkts-sensorservice-response-i.md)
 
 **Since:** 22
 
@@ -11,7 +11,7 @@ Describes the fusion pressure sensor data. It extends from [Response](arkts-sens
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@ohos.sensor';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## fusionPressure

@@ -48,7 +48,7 @@ total?: number
 type?: Type
 ```
 
-指定进度条类型。 默认值：ProgressType.Linear **说明：** 不同的type需分别对应相应的[style](ProgressAttribute#style)属性设置，详细映射关系参考 [ProgressStyleMap](arkts-arkui-progressstylemap-i.md#progressstylemap)。
+指定进度条类型。 默认值：ProgressType.Linear **说明：** 不同的type需分别对应相应的[style](ProgressAttribute#style)属性设置，详细映射关系参考 [ProgressStyleMap](arkts-arkui-progressstylemap-i.md)。
 
 **类型：** Type
 

@@ -25,7 +25,7 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>,
 | --- | --- | --- | --- |
 | deviceId | number | 是 | 设备ID，通过queryDevices获得。 |
 | onDisconnect | AsyncCallback&lt;number&gt; | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
-| callback | AsyncCallback&lt;RemoteDeviceDriver&gt; | 是 | 回调函数。当绑定设备驱动成功时，err为undefined，data为包括设备ID和远程对象的[RemoteDeviceDriver](arkts-driverdevelopment-remotedevicedriver-i.md#remotedevicedriver)对象；否则为错误对象。 |
+| callback | AsyncCallback&lt;RemoteDeviceDriver&gt; | 是 | 回调函数。当绑定设备驱动成功时，err为undefined，data为包括设备ID和远程对象的[RemoteDeviceDriver](arkts-driverdevelopment-remotedevicedriver-i.md)对象；否则为错误对象。 |
 
 **错误码：**
 

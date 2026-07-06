@@ -9,7 +9,7 @@ This module provides APIs for initiating drag actions. When receiving a gesture 
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@ohos.arkui.dragController';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -18,10 +18,10 @@ import { dragController } from '@ohos.arkui.dragController';
 
 | Name | Description |
 | --- | --- |
-| [createDragAction](arkts-arkui-createdragaction-f.md#createdragaction-1) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. &gt; **NOTE** &gt; &gt; - Since API version 11, you can use the &gt; [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1) API in &gt; [UIContext](arkts-arkui-uicontext.md) to obtain the &gt; [DragController](arkts-arkui-dragcontroller-c.md#dragcontroller) object associated with the current UI context. &gt; &gt; - For optimal drag and drop performance, limit the number of drag previews. |
-| [executeDrag](arkts-arkui-executedrag-f.md#executedrag-1) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses an asynchronous callback to return the result. &gt; **NOTE** &gt; &gt; Since API version 11, you can use the [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1) API in &gt; [UIContext](arkts-arkui-uicontext.md) to obtain the [DragController](arkts-arkui-dragcontroller-c.md#dragcontroller) object &gt; associated with the current UI context. |
-| [executeDrag](arkts-arkui-executedrag-f.md#executedrag-2) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. &gt; **NOTE** &gt; &gt; Since API version 11, you can use the [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1) API in &gt; [UIContext](arkts-arkui-uicontext.md) to obtain the [DragController](arkts-arkui-dragcontroller-c.md#dragcontroller) object &gt; associated with the current UI context. |
-| [getDragPreview](arkts-arkui-getdragpreview-f.md#getdragpreview-1) | Obtains the **DragPreview** object, which represents the preview displayed during a drag operation. &gt; **NOTE** &gt; &gt; Since API version 11, you can use the [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1) API in &gt; [UIContext](arkts-arkui-uicontext.md) to obtain the [DragController](arkts-arkui-dragcontroller-c.md#dragcontroller) object &gt; associated with the current UI context. |
+| [createDragAction](arkts-arkui-createdragaction-f.md#createdragaction-1) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. &gt; **NOTE** &gt; &gt; - Since API version 11, you can use the &gt; [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1) API in &gt; [UIContext](arkts-arkui-uicontext.md) to obtain the &gt; [DragController](arkts-arkui-dragcontroller-c.md) object associated with the current UI context. &gt; &gt; - For optimal drag and drop performance, limit the number of drag previews. |
+| [executeDrag](arkts-arkui-executedrag-f.md#executedrag-1) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses an asynchronous callback to return the result. &gt; **NOTE** &gt; &gt; Since API version 11, you can use the [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1) API in &gt; [UIContext](arkts-arkui-uicontext.md) to obtain the [DragController](arkts-arkui-dragcontroller-c.md) object &gt; associated with the current UI context. |
+| [executeDrag](arkts-arkui-executedrag-f.md#executedrag-2) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. &gt; **NOTE** &gt; &gt; Since API version 11, you can use the [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1) API in &gt; [UIContext](arkts-arkui-uicontext.md) to obtain the [DragController](arkts-arkui-dragcontroller-c.md) object &gt; associated with the current UI context. |
+| [getDragPreview](arkts-arkui-getdragpreview-f.md#getdragpreview-1) | Obtains the **DragPreview** object, which represents the preview displayed during a drag operation. &gt; **NOTE** &gt; &gt; Since API version 11, you can use the [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1) API in &gt; [UIContext](arkts-arkui-uicontext.md) to obtain the [DragController](arkts-arkui-dragcontroller-c.md) object &gt; associated with the current UI context. |
 
 ### Classes
 

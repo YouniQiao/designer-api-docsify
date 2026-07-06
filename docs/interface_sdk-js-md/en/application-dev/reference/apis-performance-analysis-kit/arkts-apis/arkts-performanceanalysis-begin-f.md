@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from '@ohos.hiTraceChain';
+import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## begin
@@ -23,7 +23,7 @@ Starts call chain trace. This API returns the result synchronously. If the curre
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Traced service name.<br>It is recommended that the length of this parameter be less thanor equal to 63 bytes. The excess part will be truncated. |
-| flags | number | No | Trace flag combination. For details, see [HiTraceFlag](arkts-performanceanalysis-hitraceflag-e.md#hitraceflag). Thedefault value is **0**. |
+| flags | number | No | Trace flag combination. For details, see [HiTraceFlag](arkts-performanceanalysis-hitraceflag-e.md). Thedefault value is **0**. |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { StartOptions } from '@ohos.app.ability.StartOptions';
+import { StartOptions } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -6,14 +6,14 @@ Defines the response to the request.
 
 **Deprecated since:** 9
 
-**Substitutes:** [RequestResult](arkts-ipc-requestresult-i.md#requestresult)
+**Substitutes:** [RequestResult](arkts-ipc-requestresult-i.md)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@ohos.rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## code

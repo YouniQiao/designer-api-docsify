@@ -20,14 +20,14 @@ function updateBackgroundRunning(context: Context, bgModes: string[]): Promise<C
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文。<br><br>FA模型的应用Context定义见[Context]{@link./app/context}。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文。<br><br>FA模型的应用Context定义见[Context]{@link./app/context}。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 | bgModes | string[] | 是 | 更新后的长时任务类型<br>取值范围请参考长时任务类型中的[配置项](../../../../task-management/continuous-task.md#使用场景)。<br> **说明：** 支持传入一个或多个类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ContinuousTaskNotification&gt; | Promise对象，返回[ContinuousTaskNotification](arkts-backgroundtasks-continuoustasknotification-i.md#continuoustasknotification)类型对象。 |
+| Promise&lt;ContinuousTaskNotification&gt; | Promise对象，返回[ContinuousTaskNotification](arkts-backgroundtasks-continuoustasknotification-i.md)类型对象。 |
 
 **错误码：**
 
@@ -89,7 +89,7 @@ function updateBackgroundRunning(context: Context, request: ContinuousTaskReques
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文<br><br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文<br><br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 | request | ContinuousTaskRequest | 是 | 长时任务请求信息，包括待更新的长时任务ID等。 |
 
 **返回值：**

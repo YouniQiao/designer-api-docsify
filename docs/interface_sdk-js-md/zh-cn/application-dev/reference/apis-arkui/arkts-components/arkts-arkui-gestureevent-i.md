@@ -1,8 +1,8 @@
 # GestureEvent
 
-定义手势的事件信息。继承自[BaseEvent](arkts-arkui-baseevent-i.md#baseevent)。
+定义手势的事件信息。继承自[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**继承/实现关系：** GestureEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**继承/实现关系：** GestureEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 7
 

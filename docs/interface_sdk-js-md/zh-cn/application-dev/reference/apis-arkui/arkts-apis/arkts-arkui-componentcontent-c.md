@@ -2,7 +2,7 @@
 
 继承自[Content](../../../../reference/apis-arkui/js-apis-arkui-Content.md#content-1)。
 
-**继承/实现关系：** ComponentContent extends [Content](arkts-arkui-content-c.md#content)
+**继承/实现关系：** ComponentContent extends [Content](arkts-arkui-content-c.md)
 
 **起始版本：** 12
 
@@ -228,7 +228,7 @@ update(args: T): void
 updateConfiguration(): void
 ```
 
-传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-configuration-i.md#configuration)。 > **说明：** > updateConfiguration接口用于通知对象更新当前的系统环境变化。
+传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-configuration-i.md)。 > **说明：** > updateConfiguration接口用于通知对象更新当前的系统环境变化。
 
 **起始版本：** 12
 

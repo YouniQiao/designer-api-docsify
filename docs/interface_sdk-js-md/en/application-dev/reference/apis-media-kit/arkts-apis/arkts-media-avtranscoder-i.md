@@ -9,7 +9,7 @@ AVTranscoder is a transcoding management class. It provides APIs to transcode vi
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addWatermark
@@ -277,7 +277,7 @@ Sets video transcoding parameters. This API uses a promise to return the result.
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Return by promise.<br>**Applicable version:** 22 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Return by promise.<br>**Applicable version:** 22 and later |
 
 ## release
 

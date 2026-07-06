@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LightWeightMap } from '@ohos.util.LightWeightMap';
+import { LightWeightMap } from '@kit.ArkTS';
 ```
 
 ## Summary

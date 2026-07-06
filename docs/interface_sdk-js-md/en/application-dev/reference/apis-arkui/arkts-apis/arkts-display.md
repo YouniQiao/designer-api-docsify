@@ -9,7 +9,7 @@ The **Display** module provides APIs for managing displays, such as obtaining in
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@ohos.display';
+import { display } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -27,7 +27,7 @@ import { display } from '@ohos.display';
 | [getAllDisplayPhysicalResolution](arkts-arkui-getalldisplayphysicalresolution-f.md#getalldisplayphysicalresolution-1) | Obtains all the display modes supported by the current device, along with the physical screen resolutions for each mode. This API uses a promise to return the result. |
 | [getAllDisplays](arkts-arkui-getalldisplays-f.md#getalldisplays-1) | Obtains all Display objects. This API uses an asynchronous callback to return the result. |
 | [getAllDisplays](arkts-arkui-getalldisplays-f.md#getalldisplays-2) | Obtains all Display objects. This API uses a promise to return the result. |
-| [getBrightnessInfo](arkts-arkui-getbrightnessinfo-f.md#getbrightnessinfo-1) | Obtains the screen brightness information of a display. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo](arkts-arkui-brightnessinfo-i.md#brightnessinfo) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
+| [getBrightnessInfo](arkts-arkui-getbrightnessinfo-f.md#getbrightnessinfo-1) | Obtains the screen brightness information of a display. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo](arkts-arkui-brightnessinfo-i.md) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
 | [getCurrentFoldCreaseRegion](arkts-arkui-getcurrentfoldcreaseregion-f.md#getcurrentfoldcreaseregion-1) | Obtains the crease region of the foldable device in the current display mode. |
 | [getDefaultDisplay](arkts-arkui-getdefaultdisplay-f.md#getdefaultdisplay-1) | Obtains the default Display object. This API uses an asynchronous callback to return the result. |
 | [getDefaultDisplay](arkts-arkui-getdefaultdisplay-f.md#getdefaultdisplay-2) | Obtains the default Display object. This API uses a promise to return the result. |
@@ -55,7 +55,7 @@ import { display } from '@ohos.display';
 | [on](arkts-arkui-on-f.md#on-6) | Subscribes to folding angle change events of the foldable device. Note that there are two folding angles for dual- fold axis devices. When oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. |
 | [on](arkts-arkui-on-f.md#on-7) | Subscribes to events indicating whether the device's screen content is being captured. |
 | [on](arkts-arkui-on-f.md#on-8) | Subscribes to display mode change events of the foldable device. To subscribe to fold status change events of foldable devices, use [display.on('foldStatusChange')](arkts-arkui-on-f.md#on-5). The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status. |
-| [on](arkts-arkui-on-f.md#on-9) | Subscribes to events related to screen brightness information changes. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the [BrightnessInfo](arkts-arkui-brightnessinfo-i.md#brightnessinfo) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
+| [on](arkts-arkui-on-f.md#on-9) | Subscribes to events related to screen brightness information changes. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the [BrightnessInfo](arkts-arkui-brightnessinfo-i.md) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
 | [onChangeWithAttribute](arkts-arkui-onchangewithattribute-f.md#onchangewithattribute-1) | Subscribes to changes of specified attributes of a display. |
 | [setVirtualScreenSurface](arkts-arkui-setvirtualscreensurface-f.md#setvirtualscreensurface-1) | Sets a surface for a virtual screen. **surfaceId** identifies a surface, the content of which will be shown on this virtual screen. This API uses a promise to return the result. |
 

@@ -11,7 +11,7 @@ Provides APIs for setting device-cloud synergy, including enabling and disabling
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@ohos.data.cloudData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## batchQueryLastSyncInfo

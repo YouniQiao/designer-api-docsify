@@ -1,6 +1,6 @@
 # FaultLogExtensionAbility
 
-This module implements the delayed fault notification feature. When the crash and freeze events are subscribed by [HiAppEvent](arkts-performanceanalysis-hiappevent-n.md#hiappevent), the previous event can be received only after the application restarts. If the application fails to start or remains unresponsive for a long time, the fault may not be reported in time. > **NOTE** > > - The APIs of this module can be used only in the stage model. > > - Exceptions may occur if some APIs are called by this module. For details, see > [Appendix](../../../../reference/apis-performance-analysis-kit/js-apis-hiviewdfx-FaultLogExtensionAbility.md#appendix) > .
+This module implements the delayed fault notification feature. When the crash and freeze events are subscribed by [HiAppEvent](arkts-performanceanalysis-hiappevent-n.md), the previous event can be received only after the application restarts. If the application fails to start or remains unresponsive for a long time, the fault may not be reported in time. > **NOTE** > > - The APIs of this module can be used only in the stage model. > > - Exceptions may occur if some APIs are called by this module. For details, see > [Appendix](../../../../reference/apis-performance-analysis-kit/js-apis-hiviewdfx-FaultLogExtensionAbility.md#appendix) > .
 
 **Since:** 21
 
@@ -9,7 +9,7 @@ This module implements the delayed fault notification feature. When the crash an
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogExtensionAbility } from '@ohos.hiviewdfx.FaultLogExtensionAbility';
+import { FaultLogExtensionAbility } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## onConnect
@@ -106,7 +106,7 @@ export default class MyFaultLogExtension extends FaultLogExtensionAbility {
 context: FaultLogExtensionContext
 ```
 
-Context of the FaultLogExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext).
+Context of the FaultLogExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
 **Type:** FaultLogExtensionContext
 

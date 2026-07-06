@@ -2,7 +2,7 @@
 
 网格节点拥有的网格实例
 
-**继承/实现关系：** Mesh extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md#sceneresource)
+**继承/实现关系：** Mesh extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md)
 
 **起始版本：** 12
 

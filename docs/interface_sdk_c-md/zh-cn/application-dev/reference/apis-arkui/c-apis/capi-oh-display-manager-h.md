@@ -46,9 +46,9 @@ The file declares the functions for basic display management. You can call the f
 | [void OH_NativeDisplayManager_DestroyDisplay(NativeDisplayManager_DisplayInfo *displayInfo)](#oh_nativedisplaymanager_destroydisplay) | - | 销毁指定屏幕的信息对象。 |
 | [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreatePrimaryDisplay(NativeDisplayManager_DisplayInfo **displayInfo)](#oh_nativedisplaymanager_createprimarydisplay) | - | 获取主屏信息对象。除2in1之外的设备获取的是设备自带屏幕的屏幕信息；2in1设备外接屏幕时获取的是当前主屏幕的屏幕信息；2in1设备没有外接屏幕时获取的是自带屏幕的屏幕信息。 |
 | [typedef void (\*OH_NativeDisplayManager_AvailableAreaChangeCallback)(uint64_t displayId)](#oh_nativedisplaymanager_availableareachangecallback) | OH_NativeDisplayManager_AvailableAreaChangeCallback | 注册屏幕可用区域变化的回调函数。 |
-| [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterAvailableAreaChangeListener(OH_NativeDisplayManager_AvailableAreaChangeCallback availableAreaChangeCallback, uint32_t *listenerIndex)](#oh_nativedisplaymanager_registeravailableareachangelistener) | - | 注册屏幕可用区域变化监听。 |
-| [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterAvailableAreaChangeListener(uint32_t listenerIndex)](#oh_nativedisplaymanager_unregisteravailableareachangelistener) | - | 取消屏幕可用区域变化的监听。 |
-| [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAvailableArea(uint64_t displayId, NativeDisplayManager_Rect **availableArea)](#oh_nativedisplaymanager_createavailablearea) | - | 获取屏幕的可用区域。 |
+| [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterAvailableAreaChangeListener(OH_NativeDisplayManager_AvailableAreaChangeCallback availableAreaChangeCallback, uint32_t *listenerIndex)](#oh_nativedisplaymanager_registeravailableareachangelistener) | - | 注册屏幕可用区域变化监听。在搭载OpenHarmony 7.0.0及以上版本的设备上，该接口可正常调用。针对低于该版本的设备，该接口在PC/2in1设备、Tablet设备中可正常调用，在其他设备中不生效也不报错。 |
+| [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterAvailableAreaChangeListener(uint32_t listenerIndex)](#oh_nativedisplaymanager_unregisteravailableareachangelistener) | - | 取消屏幕可用区域变化的监听。在搭载OpenHarmony 7.0.0及以上版本的设备上，该接口可正常调用。针对低于该版本的设备，该接口在PC/2in1设备、Tablet设备中可正常调用，在其他设备中不生效也不报错。 |
+| [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAvailableArea(uint64_t displayId, NativeDisplayManager_Rect **availableArea)](#oh_nativedisplaymanager_createavailablearea) | - | 获取屏幕的可用区域。在搭载OpenHarmony 7.0.0及以上版本的设备上，该接口可正常调用。针对低于该版本的设备，该接口在PC/2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过[OH_NativeDisplayManager_GetDefaultDisplayWidth](capi-oh-display-manager-h.md#oh_nativedisplaymanager_getdefaultdisplaywidth)、[OH_NativeDisplayManager_GetDefaultDisplayHeight](capi-oh-display-manager-h.md#oh_nativedisplaymanager_getdefaultdisplayheight)获取当前设备屏幕的可用区域。 |
 | [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_DestroyAvailableArea(NativeDisplayManager_Rect *availableArea)](#oh_nativedisplaymanager_destroyavailablearea) | - | 销毁屏幕的可用区域。 |
 | [typedef void (\*OH_NativeDisplayManager_DisplayAddCallback)(uint64_t displayId)](#oh_nativedisplaymanager_displayaddcallback) | OH_NativeDisplayManager_DisplayAddCallback | 注册屏幕连接的回调函数。 |
 | [NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterDisplayAddListener(OH_NativeDisplayManager_DisplayAddCallback displayAddCallback, uint32_t *listenerIndex)](#oh_nativedisplaymanager_registerdisplayaddlistener) | - | 注册屏幕连接变化监听（如插入显示器）。 |
@@ -708,7 +708,7 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_RegisterAvailableAreaChan
 
 **描述**
 
-注册屏幕可用区域变化监听。
+注册屏幕可用区域变化监听。在搭载OpenHarmony 7.0.0及以上版本的设备上，该接口可正常调用。针对低于该版本的设备，该接口在PC/2in1设备、Tablet设备中可正常调用，在其他设备中不生效也不报错。
 
 **起始版本：** 20
 
@@ -733,7 +733,7 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_UnregisterAvailableAreaCh
 
 **描述**
 
-取消屏幕可用区域变化的监听。
+取消屏幕可用区域变化的监听。在搭载OpenHarmony 7.0.0及以上版本的设备上，该接口可正常调用。针对低于该版本的设备，该接口在PC/2in1设备、Tablet设备中可正常调用，在其他设备中不生效也不报错。
 
 **起始版本：** 20
 
@@ -757,7 +757,7 @@ NativeDisplayManager_ErrorCode OH_NativeDisplayManager_CreateAvailableArea(uint6
 
 **描述**
 
-获取屏幕的可用区域。
+获取屏幕的可用区域。在搭载OpenHarmony 7.0.0及以上版本的设备上，该接口可正常调用。针对低于该版本的设备，该接口在PC/2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过[OH_NativeDisplayManager_GetDefaultDisplayWidth](capi-oh-display-manager-h.md#oh_nativedisplaymanager_getdefaultdisplaywidth)、[OH_NativeDisplayManager_GetDefaultDisplayHeight](capi-oh-display-manager-h.md#oh_nativedisplaymanager_getdefaultdisplayheight)获取当前设备屏幕的可用区域。
 
 **起始版本：** 20
 

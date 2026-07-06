@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { NotificationSubscriberExtensionContext } from '@ohos.application.NotificationSubscriberExtensionContext';
+import { NotificationSubscriberExtensionContext } from '@kit.NotificationKit';
 ```
 
 ## 汇总

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { startupManager } from '@ohos.app.appstartup.startupManager';
+import { startupManager } from '@kit.AbilityKit';
 ```
 
 ## isStartupTaskInitialized
@@ -24,7 +24,7 @@ Checks whether a startup task or .so file preloading task is initialized.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-startuptask-c.md#startuptask) orname of the .so file to be preloaded. |
+| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-startuptask-c.md) orname of the .so file to be preloaded. |
 
 **Return value:**
 

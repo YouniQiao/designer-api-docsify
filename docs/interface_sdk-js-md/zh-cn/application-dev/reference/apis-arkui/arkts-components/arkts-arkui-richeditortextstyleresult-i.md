@@ -228,7 +228,7 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: number
 ```
 
-文本描边宽度。 单位为[vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。
+文本描边宽度。 单位为[vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
 
 **类型：** number
 

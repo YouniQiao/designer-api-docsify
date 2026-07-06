@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { HashSet } from '@ohos.util.HashSet';
+import { HashSet } from '@kit.ArkTS';
 ```
 
 ## Summary

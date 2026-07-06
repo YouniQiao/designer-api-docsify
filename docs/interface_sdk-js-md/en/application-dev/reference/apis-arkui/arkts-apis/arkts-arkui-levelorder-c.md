@@ -9,7 +9,7 @@ Defines the display order of a dialog box.
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from '@ohos.promptAction';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## clamp

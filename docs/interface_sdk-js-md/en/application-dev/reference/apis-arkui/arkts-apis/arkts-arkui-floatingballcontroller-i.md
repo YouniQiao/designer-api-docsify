@@ -9,7 +9,7 @@ Implements a floating ball controller instance, which is used to start, update, 
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@ohos.window.floatingBall';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## getFloatingBallWindowInfo
@@ -458,7 +458,7 @@ Starts the floating ball. This API uses a promise to return the result.
 | [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. |
 | [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. |
-| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause:App has already started float view.<br>**Applicable version:** 26.0.0 |
+| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause:App has already started float view.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 

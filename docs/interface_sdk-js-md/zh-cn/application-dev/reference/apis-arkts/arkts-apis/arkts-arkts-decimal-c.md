@@ -2055,7 +2055,7 @@ static sign(n: Value): number
 | 类型 | 说明 |
 | --- | --- |
 | Decimal | the Decimal type<br>**适用版本：** 12 - 17 |
-| number | the Decimal type<br>**适用版本：** 18 |
+| number | the Decimal type<br>**适用版本：** 18+ |
 
 **错误码：**
 

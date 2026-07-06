@@ -9,7 +9,7 @@ The Buffer object is a method of handling buffers dedicated to binary data.
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from '@ohos.buffer';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## compare
@@ -143,7 +143,7 @@ Creates and returns an iterator that contains key-value pairs of this **Buffer**
 | Type | Description |
 | --- | --- |
 | IterableIterator&lt;[number, number]&gt; | Iterator that contains the key and value, both of which are ofthe number type.<br>**Applicable version:** 9 - 10 |
-| IterableIterator&lt;[number, number]&gt; | <br>**Applicable version:** 11 |
+| IterableIterator&lt;[number, number]&gt; | <br>**Applicable version:** 11 and later |
 
 **Example**
 

@@ -9,7 +9,7 @@ Defines the default or custom style parameters for the **ArcButton** component.
 ## Modules to Import
 
 ```TypeScript
-import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from '@ohos.arkui.advanced.ArcButton';
+import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from '@kit.ArkUI';
 ```
 
 ## backgroundBlurStyle
@@ -210,7 +210,7 @@ Font color of the arc button when pressed. This property takes effect only when 
 progressConfig?: ArcButtonProgressConfig
 ```
 
-Parameters for the progress indicator of the **ArcButton** component. If this property is not set, the **ArcButton** component is displayed as a button (see [Example 1](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-1-setting-an-arc-button) ). If this property is set, the component is displayed as a progress indicator (see [Example 2](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-2-setting-a-device-progress-indicator-button) ). The progress indicator style is not affected by the settings of the [ArcButtonStyleMode](arkts-arkui-arcbuttonstylemode-e.md#arcbuttonstylemode) attribute. Default value: default values of all properties of [ArcButtonProgressConfig](arkts-arkui-arcbuttonprogressconfig-c.md#arcbuttonprogressconfig)
+Parameters for the progress indicator of the **ArcButton** component. If this property is not set, the **ArcButton** component is displayed as a button (see [Example 1](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-1-setting-an-arc-button) ). If this property is set, the component is displayed as a progress indicator (see [Example 2](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-2-setting-a-device-progress-indicator-button) ). The progress indicator style is not affected by the settings of the [ArcButtonStyleMode](arkts-arkui-arcbuttonstylemode-e.md) attribute. Default value: default values of all properties of [ArcButtonProgressConfig](arkts-arkui-arcbuttonprogressconfig-c.md)
 
 **Type:** ArcButtonProgressConfig
 
@@ -276,7 +276,7 @@ Status of the arc button. Default value: **ArcButtonStatus.NORMAL**
 styleMode?: ArcButtonStyleMode
 ```
 
-Style mode for the arc button. This style cannot be used together with the [ArcButtonProgressConfig](arkts-arkui-arcbuttonprogressconfig-c.md#arcbuttonprogressconfig) style. Default value: **ArcButtonStyleMode.EMPHASIZED_LIGHT**
+Style mode for the arc button. This style cannot be used together with the [ArcButtonProgressConfig](arkts-arkui-arcbuttonprogressconfig-c.md) style. Default value: **ArcButtonStyleMode.EMPHASIZED_LIGHT**
 
 **Type:** ArcButtonStyleMode
 

@@ -11,7 +11,7 @@ The **dateTimeManager** module provides APIs for system time management. > **NOT
 ## Modules to Import
 
 ```TypeScript
-import { dateTimeManager } from '@ohos.enterprise.dateTimeManager';
+import { dateTimeManager } from '@kit.MDMKit';
 ```
 
 ## Summary

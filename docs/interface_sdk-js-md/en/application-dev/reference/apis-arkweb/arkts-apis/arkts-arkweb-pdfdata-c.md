@@ -9,7 +9,7 @@ Implements the output data stream class of **createPdf()**. > **NOTE** > > - The
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## pdfArrayBuffer

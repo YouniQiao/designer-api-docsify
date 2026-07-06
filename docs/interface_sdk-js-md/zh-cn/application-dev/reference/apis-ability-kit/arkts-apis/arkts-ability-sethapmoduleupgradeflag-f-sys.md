@@ -24,7 +24,7 @@ function setHapModuleUpgradeFlag(bundleName: string,
 | bundleName | string | 是 | 应用Bundle名称。 |
 | moduleName | string | 是 | 应用程序模块名称。 |
 | upgradeFlag | UpgradeFlag | 是 | 仅供内部系统使用标志位。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)。当函数调用成功，err为undefined，否则为错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)。当函数调用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

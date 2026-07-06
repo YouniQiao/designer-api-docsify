@@ -9,7 +9,7 @@ The **process** module provides process management APIs, for example, APIs for o
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@ohos.process';
+import { process } from '@kit.ArkTS';
 ```
 
 ## Summary

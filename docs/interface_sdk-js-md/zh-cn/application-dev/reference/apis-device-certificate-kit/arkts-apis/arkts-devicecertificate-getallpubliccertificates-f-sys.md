@@ -22,7 +22,7 @@ function getAllPublicCertificates() : Promise<CMResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回获取所有用户公共凭据的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md#cmresult)对象中的credentialDetailList属性。<br>**说明**：用户公共凭据个数为0时，返回CMResult为undefined。 |
+| Promise&lt;CMResult&gt; | Promise对象，返回获取所有用户公共凭据的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的credentialDetailList属性。<br>**说明**：用户公共凭据个数为0时，返回CMResult为undefined。 |
 
 **错误码：**
 

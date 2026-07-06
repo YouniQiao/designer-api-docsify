@@ -9,7 +9,7 @@ Context information of the exit status of PhotoPicker, which can be used for on-
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@ohos.file.photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumUri

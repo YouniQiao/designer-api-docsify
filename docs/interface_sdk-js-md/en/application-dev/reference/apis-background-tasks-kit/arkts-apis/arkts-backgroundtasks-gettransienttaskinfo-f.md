@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@ohos.resourceschedule.backgroundTaskManager';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## getTransientTaskInfo

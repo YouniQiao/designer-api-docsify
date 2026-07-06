@@ -9,7 +9,7 @@ Describes the pre-downloaded network information.
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@ohos.request.cacheDownload';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## dnsServers

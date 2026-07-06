@@ -1,8 +1,8 @@
 # PersistenceV2
 
-Inherits from [AppStorageV2](arkts-arkui-appstoragev2-c.md#appstoragev2). For details, see [PersistenceV2: Persisting Application State](../../../../ui/state-management/arkts-new-persistencev2.md).
+Inherits from [AppStorageV2](arkts-arkui-appstoragev2-c.md). For details, see [PersistenceV2: Persisting Application State](../../../../ui/state-management/arkts-new-persistencev2.md).
 
-**Inheritance/Implementation:** PersistenceV2 extends [AppStorageV2](arkts-arkui-appstoragev2-c.md#appstoragev2)
+**Inheritance/Implementation:** PersistenceV2 extends [AppStorageV2](arkts-arkui-appstoragev2-c.md)
 
 **Since:** 12
 
@@ -11,7 +11,7 @@ Inherits from [AppStorageV2](arkts-arkui-appstoragev2-c.md#appstoragev2). For de
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@ohos.arkui.StateManagement';
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## globalConnect

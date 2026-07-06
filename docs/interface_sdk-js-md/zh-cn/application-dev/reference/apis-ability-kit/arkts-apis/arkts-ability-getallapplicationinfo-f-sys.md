@@ -20,8 +20,8 @@ function getAllApplicationInfo(appFlags: number, callback: AsyncCallback<Array<A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appFlags | number | 是 | 指定返回的ApplicationInfo所包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-applicationflag-e-sys.md#applicationflag)。 |
-| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为获取到的Array&lt;ApplicationInfo&gt;；否则为错误对象。 |
+| appFlags | number | 是 | 指定返回的ApplicationInfo所包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-applicationflag-e-sys.md)。 |
+| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;ApplicationInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -77,9 +77,9 @@ function getAllApplicationInfo(appFlags: number,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appFlags | number | 是 | 指定返回的ApplicationInfo所包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-applicationflag-e-sys.md#applicationflag)。 |
+| appFlags | number | 是 | 指定返回的ApplicationInfo所包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-applicationflag-e-sys.md)。 |
 | userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。 |
-| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为获取到的Array&lt;ApplicationInfo&gt;；否则为错误对象。 |
+| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;ApplicationInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -136,7 +136,7 @@ function getAllApplicationInfo(appFlags: number, userId?: number): Promise<Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appFlags | number | 是 | 指定返回的ApplicationInfo所包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-applicationflag-e-sys.md#applicationflag)。 |
+| appFlags | number | 是 | 指定返回的ApplicationInfo所包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-applicationflag-e-sys.md)。 |
 | userId | number | 否 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取，默认值：调用方所在用户，取值范围：大于等于0。 |
 
 **返回值：**

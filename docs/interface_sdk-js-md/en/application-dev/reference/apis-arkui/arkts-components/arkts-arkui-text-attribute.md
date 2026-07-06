@@ -1,6 +1,6 @@
 # Text properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following attributes are supported. **Layout and Alignment** In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following events are supported.
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported. **Layout and Alignment** In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following events are supported.
 
 **Inheritance/Implementation:** TextAttribute extends [CommonMethod<TextAttribute>](CommonMethod<TextAttribute>)
 
@@ -84,7 +84,7 @@ Sets the color of the text selection handle, also known as the caret, in the tex
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-Sets whether to enable leading punctuation compression. > **NOTE** > > - Leading punctuation is not compressed by default. > > - For the range of punctuation marks that support leading compression, see > [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md#paragraphstyle).
+Sets whether to enable leading punctuation compression. > **NOTE** > > - Leading punctuation is not compressed by default. > > - For the range of punctuation marks that support leading compression, see > [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ Sets whether to enable leading punctuation compression. > **NOTE** > > - Leading
 contentTransition(transition: Optional<ContentTransition>)
 ```
 
-Applies a transition animation to text content. Supports numeric flip animation via [NumericTextTransition](arkts-arkui-numerictexttransition-c.md#numerictexttransition).
+Applies a transition animation to text content. Supports numeric flip animation via [NumericTextTransition](arkts-arkui-numerictexttransition-c.md).
 
 **Since:** 20
 
@@ -194,7 +194,7 @@ Style and color of the text decorative line. > **NOTE** > > When the bottom cont
 draggable(value: boolean)
 ```
 
-Sets the drag effect of the selected text. This attribute cannot be used together with the [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1) event. If set to **true**, **draggable** must be used in conjunction with [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md#copyoptions). When **copyOptions** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**, the selected text becomes draggable and can be copied into a text box.
+Sets the drag effect of the selected text. This attribute cannot be used together with the [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1) event. If set to **true**, **draggable** must be used in conjunction with [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md). When **copyOptions** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**, the selected text becomes draggable and can be copied into a text box.
 
 **Since:** 9
 
@@ -324,7 +324,7 @@ Sets whether to enable haptic feedback. To enable haptic feedback, you must decl
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition. When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default. This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md#copyoptions) is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
+Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition. When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default. This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md) is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
 
 **Since:** 22
 
@@ -459,7 +459,7 @@ Sets the font family. > **NOTE** > > You can use [loadFontSync](../../apis-arkgr
 fontFeature(value: string)
 ```
 
-Sets the font feature, for example, monospaced digits. Format: normal \| \<feature-tag-value\> Format of **\<feature-tag-value\>**: \<string\> \[ \<integer\> \| on \| off ] There can be multiple **\<feature-tag-value\>** values, which are separated by commas (,). For example, the input format for monospaced clock fonts is "ss01" on. > **NOTE** > > The **Text** component cannot contain both text and the child component **Span** or **ImageSpan**. If both of > them exist, only the content in **Span** or **ImageSpan** is displayed. > > The typesetting engine rounds down the value of [width](arkts-arkui-commonmethod-c.md#width-1) to ensure that > the value is an integer. If the typesetting engine rounds up the value instead, the right side of the text may be > clipped. > > When multiple **Text** components are placed in the [Row](arkts-arkui-row.md) container with no specific layout or space > allocation settings configured, the components are laid out based on the maximum size of the container. To make > sure the sum of the components' main axis sizes does not exceed the main axis size of the container, you can set > [layoutWeight](arkts-arkui-commonmethod-c.md#layoutweight-1) or use the [flex layout](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common). > > The system's default font supports the following ligatures: Th, fb, ff, fb, ffb, ffh, ffi, ffk, ffl, fh, fi, fk, > fl, rf, rt, rv, rx, ry. These ligatures may cause unexpected effects of spans and styled strings. Disabling the > ligature feature can avoid this issue. > > Text rendering behavior is closely tied to the font file in use. For instance, the system's default font supports > 8-punctuation compression only for left-side punctuation marks. Right-side punctuation, including exclamation > marks, enumeration commas, and question marks, is not affected by this feature.
+Sets the font feature, for example, monospaced digits. Format: normal \| \<feature-tag-value\> Format of **\<feature-tag-value\>**: \<string\> \[ \<integer\> \| on \| off ] There can be multiple **\<feature-tag-value\>** values, which are separated by commas (,). For example, the input format for monospaced clock fonts is "ss01" on. > **NOTE** > > The **Text** component cannot contain both text and the child component **Span** or **ImageSpan**. If both of > them exist, only the content in **Span** or **ImageSpan** is displayed. > > The typesetting engine rounds down the value of [width](arkts-arkui-commonmethod-c.md#width-1) to ensure that > the value is an integer. If the typesetting engine rounds up the value instead, the right side of the text may be > clipped. > > When multiple **Text** components are placed in the [Row](arkts-arkui-row.md) container with no specific layout or space > allocation settings configured, the components are laid out based on the maximum size of the container. To make > sure the sum of the components' main axis sizes does not exceed the main axis size of the container, you can set > [layoutWeight](arkts-arkui-commonmethod-c.md#layoutweight-1) or use the [flex layout](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). > > The system's default font supports the following ligatures: Th, fb, ff, fb, ffb, ffh, ffi, ffk, ffl, fh, fi, fk, > fl, rf, rt, rv, rx, ry. These ligatures may cause unexpected effects of spans and styled strings. Disabling the > ligature feature can avoid this issue. > > Text rendering behavior is closely tied to the font file in use. For instance, the system's default font supports > 8-punctuation compression only for left-side punctuation marks. Right-side punctuation, including exclamation > marks, enumeration commas, and question marks, is not affected by this feature.
 
 **Since:** 12
 
@@ -563,7 +563,7 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| ResourceStr | Yes | Font weight. For the number type, the value range is[100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier fontweight. For the string type, only strings that represent a number, for example, **400**, and the followingenumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and**medium**.<br>Default value: **FontWeight.Normal**<br>Default value on wearable devices:**FontWeight.Regular**<br>The [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md#resource) type is supported since API version 20.<br>**Since:** 20 |
+| value | number \| FontWeight \| ResourceStr | Yes | Font weight. For the number type, the value range is[100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier fontweight. For the string type, only strings that represent a number, for example, **400**, and the followingenumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and**medium**.<br>Default value: **FontWeight.Normal**<br>Default value on wearable devices:**FontWeight.Regular**<br>The [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md) type is supported since API version 20.<br>**Since:** 20 |
 
 ## fontWeight
 
@@ -587,7 +587,7 @@ Sets the text font weight, with support for font settings. It is only effective 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| weight | number \| FontWeight \| ResourceStr | Yes | Font weight. For the number type, the value ranges from 100to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**.For the string type, only strings that represent a number, for example, **400**, and the following enumeratedvalues of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.<br>The[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md#resource) type is supported since API version 20.<br>**Since:** 20 |
+| weight | number \| FontWeight \| ResourceStr | Yes | Font weight. For the number type, the value ranges from 100to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**.For the string type, only strings that represent a number, for example, **400**, and the following enumeratedvalues of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.<br>The[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md) type is supported since API version 20.<br>**Since:** 20 |
 | options | FontSettingOptions | No | Font setting options.<br>When **enableVariableFontWeight** in **options**is set to **false**, variable font weight adjustment is disabled. If **weight** is set to a value at intervalsof 100 within [100, 900], the font weight uses the specified value. If **weight** is set to a value that is nota multiple of 100, the default value **400** is used.<br>When **enableVariableFontWeight** in **options** isset to **true**, variable font weight adjustment is enabled. If **weight** is set to any integer within[100, 900], the font weight uses the specified value. |
 
 ## halfLeading
@@ -698,7 +698,7 @@ Sets the letter spacing for a text style. If the value specified is a percentage
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| ResourceStr | Yes | Letter spacing.<br>Default value: **0**<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)<br>The[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md#resource) type is supported since API version 20.<br>**Since:** 20 |
+| value | number \| ResourceStr | Yes | Letter spacing.<br>Default value: **0**<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)<br>The[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md) type is supported since API version 20.<br>**Since:** 20 |
 
 ## lineBreakStrategy
 
@@ -877,7 +877,7 @@ Sets the maximum font size. For the string type, numeric string values with opti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Maximum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | number \| string \| Resource | Yes | Maximum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## maxLineHeight
 
@@ -967,7 +967,7 @@ Sets the minimum font size. For the string type, numeric string values with opti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Minimum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | number \| string \| Resource | Yes | Minimum font size.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## minLineHeight
 
@@ -1133,7 +1133,7 @@ Sets whether to optimize trailing spaces at line endings during text layout, res
 orphanCharOptimization(enabled: Optional<boolean>)
 ```
 
-Sets whether to enable orphan character optimization during text typesetting. If this attribute is not set, orphan character optimization is disabled by default. Orphan character optimization improves the text layout by handling the orphan character (the first Chinese character of the last line of a paragraph) more efficiently. When enabled, it adjusts line breaks to avoid orphan characters as much as possible. This feature takes effect only when [wordBreak](TextAttribute#wordBreak) is not **BREAK_ALL** and [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md#textstyle) of the first [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md#textstyle) of the text to be typeset is either **"zh-Hans"** or **"zh-Hant"**. **Since**: 26.0.0
+Sets whether to enable orphan character optimization during text typesetting. If this attribute is not set, orphan character optimization is disabled by default. Orphan character optimization improves the text layout by handling the orphan character (the first Chinese character of the last line of a paragraph) more efficiently. When enabled, it adjusts line breaks to avoid orphan characters as much as possible. This feature takes effect only when [wordBreak](TextAttribute#wordBreak) is not **BREAK_ALL** and [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md) of the first [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md) of the text to be typeset is either **"zh-Hans"** or **"zh-Hant"**. **Since**: 26.0.0
 
 **Since:** 26.0.0
 
@@ -1266,7 +1266,7 @@ Sets text selection. The selected text is highlighted, with selection handles an
 shaderStyle(shader: ShaderStyle)
 ```
 
-Applies gradient or solid color effects to text. Supports [RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md#radialgradientstyle), [LinearGradientStyle](arkts-arkui-lineargradientstyle-c.md#lineargradientstyle), and [ColorShaderStyle](arkts-arkui-colorshaderstyle-c.md#colorshaderstyle). **shaderStyle** takes precedence over [fontColor](SymbolSpanAttribute#fontColor) and AI-based styling. For solid colors, prefer using [fontColor](SymbolSpanAttribute#fontColor).
+Applies gradient or solid color effects to text. Supports [RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md), [LinearGradientStyle](arkts-arkui-lineargradientstyle-c.md), and [ColorShaderStyle](arkts-arkui-colorshaderstyle-c.md). **shaderStyle** takes precedence over [fontColor](SymbolSpanAttribute#fontColor) and AI-based styling. For solid colors, prefer using [fontColor](SymbolSpanAttribute#fontColor).
 
 **Since:** 20
 
@@ -1280,7 +1280,7 @@ Applies gradient or solid color effects to text. Supports [RadialGradientStyle](
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shader | ShaderStyle | Yes | Shader effect.<br>Based on the input, the system applies a radial gradient ([RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md#radialgradientstyle)), linear gradient ([LinearGradientStyle](arkts-arkui-lineargradientstyle-c.md#lineargradientstyle)), or solid color ([ColorShaderStyle](arkts-arkui-colorshaderstyle-c.md#colorshaderstyle)).<br>**NOTE**<br>If [RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md#radialgradientstyle) is used and the **center** parameter (from[RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md#radialgradientoptions)) is outside the component bounds, setting **repeating** to**true** enhances the gradient effect. |
+| shader | ShaderStyle | Yes | Shader effect.<br>Based on the input, the system applies a radial gradient ([RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md)), linear gradient ([LinearGradientStyle](arkts-arkui-lineargradientstyle-c.md)), or solid color ([ColorShaderStyle](arkts-arkui-colorshaderstyle-c.md)).<br>**NOTE**<br>If [RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md) is used and the **center** parameter (from[RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md)) is outside the component bounds, setting **repeating** to**true** enhances the gradient effect. |
 
 ## tailIndents
 
@@ -1412,7 +1412,7 @@ Sets the indent of the first line text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Indent of the first line text.<br>Default value: **0**<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | Length | Yes | Indent of the first line text.<br>Default value: **0**<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## textOverflow
 
@@ -1420,7 +1420,7 @@ Sets the indent of the first line text.
 textOverflow(options: TextOverflowOptions)
 ```
 
-Sets the display mode for overflowing text. When [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md#textoverflowoptions) is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**: - **TextOverflow.None** or **TextOverflow.Clip**: Text is truncated when it exceeds the maximum number of lines. - **TextOverflow.Ellipsis**: Overflowing text is replaced with an ellipsis (...). - This must be used with [maxLines](TextAttribute#maxLines) for the settings to take effect. - Line breaking behavior is controlled by [wordBreak](TextAttribute#wordBreak). By default, it uses **WordBreak.BREAK_WORD**, which breaks text by word (for example, English text is broken at word boundaries). To break text by character, set **wordBreak** to **WordBreak.BREAK_ALL**. - Line wrapping behavior is governed by [lineBreakStrategy](TextAttribute#lineBreakStrategy) which takes effect only when [wordBreak](TextAttribute#wordBreak) is not **WordBreak.BREAK_ALL**. Hyphens are not supported. - Since API version 11, it is recommended that you configure both [textOverflow](TextAttribute#textOverflow) and [wordBreak](TextAttribute#wordBreak) to control truncation behavior. For details, see [Example 4](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-4-setting-text-wrapping-and-line-breaking) <!--RP1--><!--RP1End-->. When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**: - Text scrolls horizontally within a single line. - [maxLines](TextAttribute#maxLines) and[copyOption](TextAttribute#copyOption) are ignored. - The [clip](arkts-arkui-commonmethod-c.md#clip-1) attribute of the **Text** component defaults to **true**. - [CustomSpan](arkts-arkui-customspan-c.md#customspan) is not supported in marquee mode. - Behavior of [textAlign](TextAttribute#textAlign): If the text does not scroll, **textAlign** applies; if the text scrolls, **textAlign** is ignored. - Since API version 12, **TextOverflow.MARQUEE** is available for the **ImageSpan** component, where the text and images are allowed to scroll within a single line.
+Sets the display mode for overflowing text. When [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**: - **TextOverflow.None** or **TextOverflow.Clip**: Text is truncated when it exceeds the maximum number of lines. - **TextOverflow.Ellipsis**: Overflowing text is replaced with an ellipsis (...). - This must be used with [maxLines](TextAttribute#maxLines) for the settings to take effect. - Line breaking behavior is controlled by [wordBreak](TextAttribute#wordBreak). By default, it uses **WordBreak.BREAK_WORD**, which breaks text by word (for example, English text is broken at word boundaries). To break text by character, set **wordBreak** to **WordBreak.BREAK_ALL**. - Line wrapping behavior is governed by [lineBreakStrategy](TextAttribute#lineBreakStrategy) which takes effect only when [wordBreak](TextAttribute#wordBreak) is not **WordBreak.BREAK_ALL**. Hyphens are not supported. - Since API version 11, it is recommended that you configure both [textOverflow](TextAttribute#textOverflow) and [wordBreak](TextAttribute#wordBreak) to control truncation behavior. For details, see [Example 4](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-4-setting-text-wrapping-and-line-breaking) <!--RP1--><!--RP1End-->. When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**: - Text scrolls horizontally within a single line. - [maxLines](TextAttribute#maxLines) and[copyOption](TextAttribute#copyOption) are ignored. - The [clip](arkts-arkui-commonmethod-c.md#clip-1) attribute of the **Text** component defaults to **true**. - [CustomSpan](arkts-arkui-customspan-c.md) is not supported in marquee mode. - Behavior of [textAlign](TextAttribute#textAlign): If the text does not scroll, **textAlign** applies; if the text scrolls, **textAlign** is ignored. - Since API version 12, **TextOverflow.MARQUEE** is available for the **ImageSpan** component, where the text and images are allowed to scroll within a single line.
 
 **Since:** 7
 
@@ -1488,7 +1488,7 @@ Sets the text shadow. Intelligent color extraction is not supported for the **ty
 textVerticalAlign(textVerticalAlign: Optional<TextVerticalAlign>)
 ```
 
-Sets the vertical alignment of the text. > **NOTE** > > - When this API and [halfLeading](TextAttribute#halfLeading) are both set, **halfLeading** does not take > effect. > > - The effect of this attribute is noticeable only when the same font size is used in a paragraph and > [lineHeight](TextAttribute#lineHeight) is set, or when different font sizes are mixed in a paragraph. > Otherwise, the effect is the same regardless of whether this attribute is set or which enum value is used. The > **SuperscriptStyle** in [TextStyle](arkts-arkui-textstyle-i.md#textstyle) takes effect only when the value of > [TextVerticalAlign](arkts-arkui-textverticalalign-e.md#textverticalalign) is set to **TextVerticalAlign.BASELINE**. In other vertical > alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
+Sets the vertical alignment of the text. > **NOTE** > > - When this API and [halfLeading](TextAttribute#halfLeading) are both set, **halfLeading** does not take > effect. > > - The effect of this attribute is noticeable only when the same font size is used in a paragraph and > [lineHeight](TextAttribute#lineHeight) is set, or when different font sizes are mixed in a paragraph. > Otherwise, the effect is the same regardless of whether this attribute is set or which enum value is used. The > **SuperscriptStyle** in [TextStyle](arkts-arkui-textstyle-i.md) takes effect only when the value of > [TextVerticalAlign](arkts-arkui-textverticalalign-e.md) is set to **TextVerticalAlign.BASELINE**. In other vertical > alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
 
 **Since:** 20
 

@@ -11,7 +11,7 @@ The **logLibrary** module provides APIs for obtaining various system maintenance
 ## Modules to Import
 
 ```TypeScript
-import { logLibrary } from '@ohos.logLibrary';
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

@@ -6,7 +6,7 @@ Describes the parameters required for bundle installation, recovery, or uninstal
 
 **Deprecated since:** 9
 
-**Substitutes:** [InstallParam](arkts-ability-installparam-i-sys.md#installparam)
+**Substitutes:** [InstallParam](arkts-ability-installparam-i-sys.md)
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

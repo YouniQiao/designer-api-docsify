@@ -11,7 +11,7 @@ Defines the [physical screen](../../../../displaymanager/display-terminology.md#
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@ohos.screen';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## setDensityDpi
@@ -389,7 +389,7 @@ Sets the active mode of the screen. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modeIndex | number | Yes | Index of the mode to set. The current value and value range of this parameter varyaccording to the screen resolution, refresh rate, and device hardware. The value must be an integer. Theindex is the mode ID in the [ScreenModeInfo](arkts-arkui-screenmodeinfo-i-sys.md#screenmodeinfo) property of the screen. |
+| modeIndex | number | Yes | Index of the mode to set. The current value and value range of this parameter varyaccording to the screen resolution, refresh rate, and device hardware. The value must be an integer. Theindex is the mode ID in the [ScreenModeInfo](arkts-arkui-screenmodeinfo-i-sys.md) property of the screen. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the active mode is successfullyset, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**

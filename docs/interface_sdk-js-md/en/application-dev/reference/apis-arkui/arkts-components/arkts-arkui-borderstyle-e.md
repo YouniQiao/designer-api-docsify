@@ -9,7 +9,7 @@ Border Style
 ## Dotted
 
 ```TypeScript
-Dotted = 0
+Dotted
 ```
 
 Displays as a series of dots with a radius of half the borderWidth.
@@ -25,7 +25,7 @@ Displays as a series of dots with a radius of half the borderWidth.
 ## Dashed
 
 ```TypeScript
-Dashed = 1
+Dashed
 ```
 
 Shows as a series of short square dashed lines.
@@ -41,7 +41,7 @@ Shows as a series of short square dashed lines.
 ## Solid
 
 ```TypeScript
-Solid = 2
+Solid
 ```
 
 Shows as a solid line.

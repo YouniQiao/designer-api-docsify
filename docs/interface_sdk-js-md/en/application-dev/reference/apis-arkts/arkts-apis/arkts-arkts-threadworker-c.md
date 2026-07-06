@@ -2,7 +2,7 @@
 
 Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from WorkerEventTarget.
 
-**Inheritance/Implementation:** ThreadWorker implements [WorkerEventTarget](arkts-arkts-workereventtarget-i.md#workereventtarget)
+**Inheritance/Implementation:** ThreadWorker implements [WorkerEventTarget](arkts-arkts-workereventtarget-i.md)
 
 **Since:** 9
 
@@ -11,7 +11,7 @@ Before using the following APIs, you must create a ThreadWorker instance. The Th
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@ohos.worker';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## addEventListener

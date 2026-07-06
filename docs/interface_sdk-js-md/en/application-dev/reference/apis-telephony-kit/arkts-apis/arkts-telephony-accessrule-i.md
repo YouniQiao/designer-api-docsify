@@ -9,7 +9,7 @@ Establishes a single UICC access rule pursuant to the GlobalPlatform Secure Elem
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@ohos.telephony.esim';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## accessType

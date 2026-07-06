@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@ohos.resourceschedule.backgroundTaskManager';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## updateBackgroundRunning
@@ -26,14 +26,14 @@ Updates continuous tasks of multiple types. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context).<br> Note: Continuous tasks can be requested only by theUIAbility in the stage model and the ServiceAbility in the FA model. |
+| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).<br> Note: Continuous tasks can be requested only by theUIAbility in the stage model and the ServiceAbility in the FA model. |
 | bgModes | string[] | Yes | Types of continuous tasks after the update.<br>For details about the available options,see [Item](../../../../task-management/continuous-task.md#use-cases).<br> Note: One or more types can be passed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ContinuousTaskNotification&gt; | Promise that returns an object of the[ContinuousTaskNotification](arkts-backgroundtasks-continuoustasknotification-i.md#continuoustasknotification) type. |
+| Promise&lt;ContinuousTaskNotification&gt; | Promise that returns an object of the[ContinuousTaskNotification](arkts-backgroundtasks-continuoustasknotification-i.md) type. |
 
 **Error codes:**
 
@@ -95,7 +95,7 @@ Updates a continuous task. This API uses a promise to return the result. After a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context).<br> Note: Continuous tasks can be requested only by theUIAbility in the stage model and the ServiceAbility in the FA model. |
+| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).<br> Note: Continuous tasks can be requested only by theUIAbility in the stage model and the ServiceAbility in the FA model. |
 | request | ContinuousTaskRequest | Yes | Continuous task request information, including the ID of the continuoustask to be updated. |
 
 **Return value:**

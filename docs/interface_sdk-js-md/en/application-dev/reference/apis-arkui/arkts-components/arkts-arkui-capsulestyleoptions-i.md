@@ -1,8 +1,8 @@
 # CapsuleStyleOptions
 
-Capsule style options. Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#scaneffectoptions) and [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions).
+Capsule style options. Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
 
-**Inheritance/Implementation:** CapsuleStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#scaneffectoptions), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
+**Inheritance/Implementation:** CapsuleStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ Text content, which can be customized.
 font?: Font
 ```
 
-Text style. Default value: Font size (percentage values are not supported): **12fp** Other text parameters are subject to the theme values of the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md#text) component.
+Text style. Default value: Font size (percentage values are not supported): **12fp** Other text parameters are subject to the theme values of the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md) component.
 
 **Type:** Font
 

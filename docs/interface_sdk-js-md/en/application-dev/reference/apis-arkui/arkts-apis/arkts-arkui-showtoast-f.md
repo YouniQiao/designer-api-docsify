@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from '@ohos.promptAction';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## showToast

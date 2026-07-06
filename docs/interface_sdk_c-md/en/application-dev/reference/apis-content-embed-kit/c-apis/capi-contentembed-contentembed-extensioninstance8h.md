@@ -6,7 +6,7 @@ typedef struct ContentEmbed_ExtensionInstance* ContentEmbed_ExtensionInstanceHan
 
 ## Overview
 
-Define the ContentEmbed_ExtensionInstanceHandle type.Provides methods for Content Embed Kit.
+Declares the pointer type of the instance object of the ContentEmbed extension.
 
 **Since**: 24
 

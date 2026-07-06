@@ -9,7 +9,7 @@ The FastBuffer class is a container type for dealing with binary data directly. 
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from '@ohos.fastbuffer';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ The **certManager** module provides system-level certificate management capabili
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## Summary

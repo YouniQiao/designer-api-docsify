@@ -9,7 +9,7 @@ The validation context of {@link ValidationCallback}
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@ohos.net.http';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## host

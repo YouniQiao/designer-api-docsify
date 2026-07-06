@@ -13,7 +13,7 @@ Describes the value of the indication or notification sent by the Gatt server.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@ohos.bluetoothManager';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid

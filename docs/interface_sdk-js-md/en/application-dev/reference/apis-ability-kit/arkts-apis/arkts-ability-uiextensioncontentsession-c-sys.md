@@ -9,7 +9,7 @@ UIExtensionContentSession is the UI operation class for the UIExtensionAbility. 
 ## Modules to Import
 
 ```TypeScript
-import { UIExtensionContentSession } from '@ohos.app.ability.UIExtensionContentSession';
+import { UIExtensionContentSession } from '@kit.AbilityKit';
 ```
 
 ## getUIExtensionHostWindowProxy

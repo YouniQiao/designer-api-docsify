@@ -41,7 +41,7 @@ function grantUriPermission(
 | [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
 | [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
 
 **示例：**
 
@@ -112,7 +112,7 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 | [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
 | [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
 
 **示例：**
 
@@ -185,7 +185,7 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 | [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
 | [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
 | [16000081](../errorcode-ability.md#16000081-获取目标应用信息失败) | Failed to obtain the target application information. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
 
 **示例：**
 

@@ -1,8 +1,8 @@
 # Portrait (System API)
 
-Portrait: inherits from [PortraitQuery](arkts-camera-portraitquery-i-sys.md#portraitquery). Provides the APIs for portrait photo settings.
+Portrait: inherits from [PortraitQuery](arkts-camera-portraitquery-i-sys.md). Provides the APIs for portrait photo settings.
 
-**Inheritance/Implementation:** Portrait extends [PortraitQuery](arkts-camera-portraitquery-i-sys.md#portraitquery)
+**Inheritance/Implementation:** Portrait extends [PortraitQuery](arkts-camera-portraitquery-i-sys.md)
 
 **Since:** 11
 
@@ -13,7 +13,7 @@ Portrait: inherits from [PortraitQuery](arkts-camera-portraitquery-i-sys.md#port
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getPortraitEffect
@@ -41,7 +41,7 @@ Obtains the portrait effect in use.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 and later |
 
 **Example**
 
@@ -78,7 +78,7 @@ Sets a portrait effect. Before the setting, use [getSupportedPortraitEffects](ar
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 and later |
 
 **Example**
 

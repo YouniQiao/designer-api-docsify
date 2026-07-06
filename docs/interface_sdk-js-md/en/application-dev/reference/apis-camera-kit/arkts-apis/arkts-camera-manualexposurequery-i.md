@@ -11,7 +11,7 @@ Provides APIs to obtain the manual exposure range supported.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getExposureBiasStep

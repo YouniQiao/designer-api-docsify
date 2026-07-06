@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@ohos.taskpool';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## execute
@@ -32,7 +32,7 @@ Places a function to be executed in the internal queue of the task pool. The fun
 | Type | Description |
 | --- | --- |
 | Promise&lt;unknown&gt; | <br>**Applicable version:** 9 - 11 |
-| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 |
+| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
 
 **Error codes:**
 
@@ -152,7 +152,7 @@ Places a task in the internal queue of the task pool. The task will not be execu
 | Type | Description |
 | --- | --- |
 | Promise&lt;unknown&gt; | <br>**Applicable version:** 9 - 17 |
-| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 |
+| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
 
 **Error codes:**
 
@@ -161,8 +161,8 @@ Places a task in the internal queue of the task pool. The task will not be execu
 | [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 9 - 17 |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
 
 **Example**
 
@@ -223,7 +223,7 @@ Places the generic task in the internal queue of the task pool. The parameter ty
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
 | [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
 
 **Example**
 
@@ -282,7 +282,7 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| 10200059 | TaskGroup cannot be re-executed.<br>**Applicable version:** 24 |
+| 10200059 | TaskGroup cannot be re-executed.<br>**Applicable version:** 24 and later |
 
 **Example**
 

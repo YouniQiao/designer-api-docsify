@@ -529,7 +529,7 @@
   - [OnMCCUpdatedFn](arkts-ability-onmccupdatedfn-t.md)
   - [OnMNCUpdatedFn](arkts-ability-onmncupdatedfn-t.md)
 - [@ohos.app.ability.verticalPanelManager](arkts-app-ability-verticalpanelmanager.md)
-  - [verticalPanelManager](arkts-ability-verticalpanelmanager-sta-n.md)<!--Del-->
+  - [verticalPanelManager](arkts-ability-verticalpanelmanager-n.md)<!--Del-->
     - [startVerticalPanel(system api)](arkts-ability-startverticalpanel-f-sys.md)<!--DelEnd--><!--Del-->
     - [PanelConfig(system api)](arkts-ability-panelconfig-i-sys.md)<!--DelEnd--><!--Del-->
     - [PanelStartCallback(system api)](arkts-ability-panelstartcallback-i-sys.md)<!--DelEnd--><!--Del-->
@@ -911,7 +911,7 @@
   - [BundlePackFlag(system api)](arkts-ability-bundlepackflag-e-sys.md)<!--DelEnd--><!--Del-->
   - [UpgradeFlag(system api)](arkts-ability-upgradeflag-e-sys.md)<!--DelEnd-->
 - [@ohos.bundle.innerBundleManager](arkts-bundle-innerbundlemanager.md)
-  - [innerBundleManager](arkts-ability-innerbundlemanager-sta-n.md)<!--Del-->
+  - [innerBundleManager](arkts-ability-innerbundlemanager-n.md)<!--Del-->
     - [getAllLauncherAbilityInfos(system api)](arkts-ability-getalllauncherabilityinfos-f-sys.md)<!--DelEnd--><!--Del-->
     - [getLauncherAbilityInfos(system api)](arkts-ability-getlauncherabilityinfos-f-sys.md)<!--DelEnd--><!--Del-->
     - [getShortcutInfos(system api)](arkts-ability-getshortcutinfos-f-sys.md)<!--DelEnd--><!--Del-->

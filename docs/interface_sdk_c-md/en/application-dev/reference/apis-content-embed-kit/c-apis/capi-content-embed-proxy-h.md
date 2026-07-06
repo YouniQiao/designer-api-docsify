@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the content embed proxy APIs.
+Provides the client application with the API for querying the OE Extension information registered by theserver application, the data structures for interacting with the server OE Extension object, and the relatedoperation APIs.
 
 **Library**: libcontent_embed_ndk.so
 
@@ -18,52 +18,52 @@ Defines the content embed proxy APIs.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ContentEmbed_Info](capi-contentembed-contentembed-info.md) | ContentEmbed_Info | Define the ContentEmbed_Info structure type.Provides methods for Content Embed Kit. |
-| [ContentEmbed_Format](capi-contentembed-contentembed-format.md) | ContentEmbed_Format | Define the ContentEmbed_Format structure type.Provides methods for Content Embed Kit. |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) | ContentEmbed_ExtensionProxy | Define the ContentEmbed_ExtensionProxy structure type.Provides methods for Content Embed Kit. |
-| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) | ContentEmbed_Document | Define the ContentEmbed_Document structure type.Provides methods for Content Embed Kit. |
-| [ContentEmbed_Capability](capi-contentembed-contentembed-capability.md) | ContentEmbed_Capability | Define the ContentEmbed_Capability structure type.Provides methods for Content Embed Kit. |
+| [ContentEmbed_Info](capi-contentembed-contentembed-info.md) | ContentEmbed_Info | Declares the ContentEmbed_Info structure. Use {@link OH_ContentEmbed_GetContentEmbedInfo} to query theOE document information registered by all server-side applications for the current session.Then, use {@link OH_ContentEmbed_GetFormatCountFromInfo} to obtain the count of {@link ContentEmbed_Format}instances in the current query result, and use {@link OH_ContentEmbed_GetFormatFromInfo} to retrieve theinstance object at the specified index. |
+| [ContentEmbed_Format](capi-contentembed-contentembed-format.md) | ContentEmbed_Format | Declares the ContentEmbed_Info structure. which contains OE document information registered by server-sideapplications for the OE Extension. Specifically, you can use {@link OH_ContentEmbed_GetOEidFromFormat} toobtain the OEID, {@link OH_ContentEmbed_GetNameAndDescriptionFromFormat} to get the name and description,{@link OH_ContentEmbed_GetIconFromFormat} to retrieve the icon, and{@link OH_ContentEmbed_GetFileNameExtensionsFromFormat} to obtain the list of file extensions. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) | ContentEmbed_ExtensionProxy | Declares the ContentEmbed_ExtensionProxy structure. Points to the program object (client-side OE object forshort) for embedding and editing the client-side encapsulated and encapsulation documents of the OE. |
+| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) | ContentEmbed_Document | Declares the structure type of an OE document. Encapsulates the metadata, content, and storage structure ofthe embedded document. |
+| [ContentEmbed_Capability](capi-contentembed-contentembed-capability.md) | ContentEmbed_Capability | Declares the ContentEmbed_Capability structure. |
 
 ### Macro
 
 | Name | Description |
 | -- | -- |
-| MAX_NAME_LENGTH (1 * 1024) | The maximum length of a name.<br>**Since**: 24 |
-| MAX_DESCRIPTION_LENGTH (1 * 1024) | The maximum length of a description.<br>**Since**: 24 |
+| MAX_NAME_LENGTH (1 * 1024) | Defines the maximum number of characters allowed in the name field in [ContentEmbed_Format](capi-contentembed-contentembed-format.md).<br>**Since**: 24 |
+| MAX_DESCRIPTION_LENGTH (1 * 1024) | Defines the maximum number of characters allowed in the description field in [ContentEmbed_Format](capi-contentembed-contentembed-format.md).<br>**Since**: 24 |
 
 ### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateContentEmbedInfo(ContentEmbed_Info **info)](#oh_contentembed_createcontentembedinfo) | - | Create a new [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance.The caller is responsible for destroying the instance by calling[OH_ContentEmbed_DestroyContentEmbedInfo](capi-content-embed-proxy-h.md#oh_contentembed_destroycontentembedinfo) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyContentEmbedInfo(ContentEmbed_Info *info)](#oh_contentembed_destroycontentembedinfo) | - | Destroy an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance and reclaims the memory occupied by the instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_GetContentEmbedInfo(const char *locale, ContentEmbed_Info *info)](#oh_contentembed_getcontentembedinfo) | - | Get an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance based on the locale. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_GetFormatCountFromInfo(const ContentEmbed_Info *info, uint32_t *count)](#oh_contentembed_getformatcountfrominfo) | - | Get format count from an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_GetFormatFromInfo(const ContentEmbed_Info *info, uint32_t index, ContentEmbed_Format **format)](#oh_contentembed_getformatfrominfo) | - | Get [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance from an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance using an index. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateContentEmbedFormat(ContentEmbed_Format **format)](#oh_contentembed_createcontentembedformat) | - | Create a new [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.The caller is responsible for destroying the instance by calling[OH_ContentEmbed_DestroyContentEmbedFormat](capi-content-embed-proxy-h.md#oh_contentembed_destroycontentembedformat) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyContentEmbedFormat(ContentEmbed_Format *format)](#oh_contentembed_destroycontentembedformat) | - | Destroy an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance and reclaims the memory occupied by the instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_GetContentEmbedFormatByOEidAndLocale(const char *oeid, const char *locale, ContentEmbed_Format *format)](#oh_contentembed_getcontentembedformatbyoeidandlocale) | - | Get a [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance using oeid and locale. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_GetOEidFromFormat(const ContentEmbed_Format *format, char *oeid)](#oh_contentembed_getoeidfromformat) | - | Get oeid from [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_GetNameAndDescriptionFromFormat(const ContentEmbed_Format *format, char *name, char *description)](#oh_contentembed_getnameanddescriptionfromformat) | - | Get name and description from [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_GetIconFromFormat(const ContentEmbed_Format *format, OH_PixelmapNative **icon)](#oh_contentembed_geticonfromformat) | - | Get icon from [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.The caller is responsible for destroying the icon by calling{@link OH_PixelmapNative_Destroy} to avoid memory leaks. |
-| [char** OH_ContentEmbed_GetFileNameExtensionsFromFormat(const ContentEmbed_Format *format, unsigned int *count)](#oh_contentembed_getfilenameextensionsfromformat) | - | Get all file name extensions in the [ContentEmbed_Format](capi-contentembed-contentembed-format.md) data. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateExtensionProxy(ContentEmbed_Document *document, ContentEmbed_ExtensionProxy **proxy, void *contextPtr)](#oh_contentembed_createextensionproxy) | - | Create a new [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance through [ContentEmbed_Document](capi-contentembed-contentembed-document.md) object.The caller is responsible for destroying the instance by calling[OH_ContentEmbed_DestroyExtensionProxy](capi-content-embed-proxy-h.md#oh_contentembed_destroyextensionproxy) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyExtensionProxy(ContentEmbed_ExtensionProxy *proxy)](#oh_contentembed_destroyextensionproxy) | - | Destroy an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance and reclaims the memory occupied by the instance. |
-| [typedef void (\*OH_ContentEmbed_ClientCallbackOnUpdateFunc)(ContentEmbed_ExtensionProxy *proxy)](#oh_contentembed_clientcallbackonupdatefunc) | OH_ContentEmbed_ClientCallbackOnUpdateFunc | Called when the server notifies the client to update the content embed document.You need to implement this function, set it to [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) through {@linkOH_ContentEmbed_Proxy_RegisterOnUpdateFunc} to complete the registration. |
-| [typedef void (\*OH_ContentEmbed_ClientCallbackOnErrorFunc)(ContentEmbed_ExtensionProxy *proxy, ContentEmbed_ErrorCode error)](#oh_contentembed_clientcallbackonerrorfunc) | OH_ContentEmbed_ClientCallbackOnErrorFunc | Called when the server notifies the client that an error has occurred.You need to implement this function, set it to [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) through {@linkOH_ContentEmbed_Proxy_RegisterOnErrorFunc} to complete the registration. |
-| [typedef void (\*OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc)(ContentEmbed_ExtensionProxy *proxy, bool dataModified)](#oh_contentembed_clientcallbackoneditingfinishedfunc) | OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc | Called when content embed document editing is completed.You need to implement this function, set it to [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) through {@linkOH_ContentEmbed_Proxy_RegisterOnEditingFinishedFunc} to complete the registration. |
-| [typedef void (\*OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc)(ContentEmbed_ExtensionProxy *proxy)](#oh_contentembed_clientcallbackonextensionstoppedfunc) | OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc | Called when the content embed document extension is stopped.You need to implement this function, set it to [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) through {@linkOH_ContentEmbed_Proxy_RegisterOnExtensionStoppedFunc} to complete the registration. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_RegisterOnUpdateFunc(ContentEmbed_ExtensionProxy *proxy, OH_ContentEmbed_ClientCallbackOnUpdateFunc onUpdateFunc)](#oh_contentembed_proxy_registeronupdatefunc) | - | Register function [OH_ContentEmbed_ClientCallbackOnUpdateFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonupdatefunc) into [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md). |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_RegisterOnErrorFunc(ContentEmbed_ExtensionProxy *proxy, OH_ContentEmbed_ClientCallbackOnErrorFunc onErrorFunc)](#oh_contentembed_proxy_registeronerrorfunc) | - | Register function [OH_ContentEmbed_ClientCallbackOnErrorFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonerrorfunc) into [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md). |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_RegisterOnEditingFinishedFunc(ContentEmbed_ExtensionProxy *proxy, OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc onEditingFinishedFunc)](#oh_contentembed_proxy_registeroneditingfinishedfunc) | - | Register function [OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackoneditingfinishedfunc) into[ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md). |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_RegisterOnExtensionStoppedFunc(ContentEmbed_ExtensionProxy *proxy, OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc onExtensionStoppedFunc)](#oh_contentembed_proxy_registeronextensionstoppedfunc) | - | Register function [OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonextensionstoppedfunc) into[ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md). |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_StartWork(ContentEmbed_ExtensionProxy *proxy)](#oh_contentembed_proxy_startwork) | - | Start the server application. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_StopWork(ContentEmbed_ExtensionProxy *proxy)](#oh_contentembed_proxy_stopwork) | - | Stop the server application. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_GetSnapshot(ContentEmbed_ExtensionProxy *proxy, OH_PixelmapNative **snapshot)](#oh_contentembed_proxy_getsnapshot) | - | Get the document snapshot from the server application. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_DoEdit(ContentEmbed_ExtensionProxy *proxy)](#oh_contentembed_proxy_doedit) | - | Client notifies the server to edit the document. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_GetEditStatus(ContentEmbed_ExtensionProxy *proxy, bool *isEditing, bool *isModified)](#oh_contentembed_proxy_geteditstatus) | - | Client retrieves document editing status from the server. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_GetCapability(ContentEmbed_ExtensionProxy *proxy, uint32_t *bitmask)](#oh_contentembed_proxy_getcapability) | - | Client obtains server capabilities. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_GetDocument(ContentEmbed_ExtensionProxy *proxy, ContentEmbed_Document **ceDocument)](#oh_contentembed_proxy_getdocument) | - | Get the document from the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance.The document can be created by calling {@link OH_ContentEmbed_CreateDocumentByOEid},{@link OH_ContentEmbed_CreateDocumentByFile}, or {@link OH_ContentEmbed_LoadDocumentFromFile}.The document should be destroyed by calling{@link OH_ContentEmbed_DestroyDocument} when it is no longer needed. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateContentEmbedInfo(ContentEmbed_Info **info)](#oh_contentembed_createcontentembedinfo) | - | Creates an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance.<br>You can destroy the instance by calling [OH_ContentEmbed_DestroyContentEmbedInfo](capi-content-embed-proxy-h.md#oh_contentembed_destroycontentembedinfo) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyContentEmbedInfo(ContentEmbed_Info *info)](#oh_contentembed_destroycontentembedinfo) | - | Destroys a [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_GetContentEmbedInfo(const char *locale, ContentEmbed_Info *info)](#oh_contentembed_getcontentembedinfo) | - | Obtains a [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance based on the region settings. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_GetFormatCountFromInfo(const ContentEmbed_Info *info, uint32_t *count)](#oh_contentembed_getformatcountfrominfo) | - | Obtains the number of [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instances in the [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_GetFormatFromInfo(const ContentEmbed_Info *info, uint32_t index, ContentEmbed_Format **format)](#oh_contentembed_getformatfrominfo) | - | Obtains the [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance at the specified index from the [ContentEmbed_Info](capi-contentembed-contentembed-info.md)instance. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateContentEmbedFormat(ContentEmbed_Format **format)](#oh_contentembed_createcontentembedformat) | - | Creates a [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.<br>You can destroy the instance using [OH_ContentEmbed_DestroyContentEmbedFormat](capi-content-embed-proxy-h.md#oh_contentembed_destroycontentembedformat) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyContentEmbedFormat(ContentEmbed_Format *format)](#oh_contentembed_destroycontentembedformat) | - | Destroys an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_GetContentEmbedFormatByOEidAndLocale(const char *oeid, const char *locale, ContentEmbed_Format *format)](#oh_contentembed_getcontentembedformatbyoeidandlocale) | - | Obtains an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance based on the OEID and region settings. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_GetOEidFromFormat(const ContentEmbed_Format *format, char *oeid)](#oh_contentembed_getoeidfromformat) | - | Obtains the OEID of the [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_GetNameAndDescriptionFromFormat(const ContentEmbed_Format *format, char *name, char *description)](#oh_contentembed_getnameanddescriptionfromformat) | - | Obtains the localized display name and description from a [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_GetIconFromFormat(const ContentEmbed_Format *format, OH_PixelmapNative **icon)](#oh_contentembed_geticonfromformat) | - | Obtains the icon of a [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance. |
+| [char** OH_ContentEmbed_GetFileNameExtensionsFromFormat(const ContentEmbed_Format *format, unsigned int *count)](#oh_contentembed_getfilenameextensionsfromformat) | - | Obtains the list of file name extensions of a [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateExtensionProxy(ContentEmbed_Document *document, ContentEmbed_ExtensionProxy **proxy, void *contextPtr)](#oh_contentembed_createextensionproxy) | - | Creates a [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance.<br>You can destroy the instance using [OH_ContentEmbed_DestroyExtensionProxy](capi-content-embed-proxy-h.md#oh_contentembed_destroyextensionproxy) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyExtensionProxy(ContentEmbed_ExtensionProxy *proxy)](#oh_contentembed_destroyextensionproxy) | - | Destroys a [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance. |
+| [typedef void (\*OH_ContentEmbed_ClientCallbackOnUpdateFunc)(ContentEmbed_ExtensionProxy *proxy)](#oh_contentembed_clientcallbackonupdatefunc) | OH_ContentEmbed_ClientCallbackOnUpdateFunc | Callback function type for notifying the client when the OE document is updated.<br>You need to implement this function and register it with the client's OE object through[OH_ContentEmbed_Proxy_RegisterOnUpdateFunc](capi-content-embed-proxy-h.md#oh_contentembed_proxy_registeronupdatefunc). |
+| [typedef void (\*OH_ContentEmbed_ClientCallbackOnErrorFunc)(ContentEmbed_ExtensionProxy *proxy, ContentEmbed_ErrorCode error)](#oh_contentembed_clientcallbackonerrorfunc) | OH_ContentEmbed_ClientCallbackOnErrorFunc | Callback function type for notifying the client when an error occurs in the OE document.<br>You need to implement this function and register it with the client's OE object through[OH_ContentEmbed_Proxy_RegisterOnErrorFunc](capi-content-embed-proxy-h.md#oh_contentembed_proxy_registeronerrorfunc). |
+| [typedef void (\*OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc)(ContentEmbed_ExtensionProxy *proxy, bool dataModified)](#oh_contentembed_clientcallbackoneditingfinishedfunc) | OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc | Callback function type for notifying the client when the OE document editing is complete.<br>You need to implement this function and register it with the client's OE object through[OH_ContentEmbed_Proxy_RegisterOnEditingFinishedFunc](capi-content-embed-proxy-h.md#oh_contentembed_proxy_registeroneditingfinishedfunc). |
+| [typedef void (\*OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc)(ContentEmbed_ExtensionProxy *proxy)](#oh_contentembed_clientcallbackonextensionstoppedfunc) | OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc | Callback function type when the OE Extension stops.<br>You need to implement this function and register it with the client's OE object through[OH_ContentEmbed_Proxy_RegisterOnExtensionStoppedFunc](capi-content-embed-proxy-h.md#oh_contentembed_proxy_registeronextensionstoppedfunc). |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_RegisterOnUpdateFunc(ContentEmbed_ExtensionProxy *proxy, OH_ContentEmbed_ClientCallbackOnUpdateFunc onUpdateFunc)](#oh_contentembed_proxy_registeronupdatefunc) | - | Registers the callback function for updating an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) document with the client. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_RegisterOnErrorFunc(ContentEmbed_ExtensionProxy *proxy, OH_ContentEmbed_ClientCallbackOnErrorFunc onErrorFunc)](#oh_contentembed_proxy_registeronerrorfunc) | - | Registers the callback function for triggering an error when an error occurs in the document of the client'sobject. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_RegisterOnEditingFinishedFunc(ContentEmbed_ExtensionProxy *proxy, OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc onEditingFinishedFunc)](#oh_contentembed_proxy_registeroneditingfinishedfunc) | - | Registers the callback function for the client to be invoked when an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md)document is edited. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_RegisterOnExtensionStoppedFunc(ContentEmbed_ExtensionProxy *proxy, OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc onExtensionStoppedFunc)](#oh_contentembed_proxy_registeronextensionstoppedfunc) | - | Registers the callback function for stopping the OE Extension to the client's OE object. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_StartWork(ContentEmbed_ExtensionProxy *proxy)](#oh_contentembed_proxy_startwork) | - | Connects to the server-side OE Extension and establishes a communication channel with the OE Extension. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_StopWork(ContentEmbed_ExtensionProxy *proxy)](#oh_contentembed_proxy_stopwork) | - | Disconnects the communication channel with the OE Extension. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_GetSnapshot(ContentEmbed_ExtensionProxy *proxy, OH_PixelmapNative **snapshot)](#oh_contentembed_proxy_getsnapshot) | - | Obtains the snapshot image of the current OE document from the client OE object forpreview or thumbnail display. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_DoEdit(ContentEmbed_ExtensionProxy *proxy)](#oh_contentembed_proxy_doedit) | - | Requests the OE Extension instance to enter the edit mode from the client's OE object. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_GetEditStatus(ContentEmbed_ExtensionProxy *proxy, bool *isEditing, bool *isModified)](#oh_contentembed_proxy_geteditstatus) | - | Queries the current editing state and modification state of the OE document by the server-side OE Extensioninstance. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_GetCapability(ContentEmbed_ExtensionProxy *proxy, uint32_t *bitmask)](#oh_contentembed_proxy_getcapability) | - | Obtains the capabilities of the server-side OE Extension instance. The capabilities are returned in the formof bit masks. For details about the meaning of each bit, see [ContentEmbed_CapabilityCode](capi-content-embed-common-h.md#contentembed_capabilitycode). |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_GetDocument(ContentEmbed_ExtensionProxy *proxy, ContentEmbed_Document **ceDocument)](#oh_contentembed_proxy_getdocument) | - | Obtains the associated OE document object from the client's OE object.<br>The OE document object is created in {@link OH_ContentEmbed_CreateDocumentByOEid},{@link OH_ContentEmbed_CreateDocumentByFile}, or {@link OH_ContentEmbed_LoadDocumentFromFile} mode.<br>When the OE document is no longer needed, call {@link OH_ContentEmbed_DestroyDocument} to destroy it. |
 
 ## Function description
 
@@ -75,7 +75,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_CreateContentEmbedInfo(ContentEmbed_Info 
 
 **Description**
 
-Create a new [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance.The caller is responsible for destroying the instance by calling[OH_ContentEmbed_DestroyContentEmbedInfo](capi-content-embed-proxy-h.md#oh_contentembed_destroycontentembedinfo) to avoid memory leaks.
+Creates an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance.<br>You can destroy the instance by calling [OH_ContentEmbed_DestroyContentEmbedInfo](capi-content-embed-proxy-h.md#oh_contentembed_destroycontentembedinfo) to avoid memory leaks.
 
 **Since**: 24
 
@@ -83,13 +83,13 @@ Create a new [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instanc
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Info](capi-contentembed-contentembed-info.md) **info | Represents a pointer to an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance which will be created. |
+| [ContentEmbed_Info](capi-contentembed-contentembed-info.md) **info | Output parameter. This pointer points to the newly created [ContentEmbed_Info](capi-contentembed-contentembed-info.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>         </ul> |
 
 ### OH_ContentEmbed_DestroyContentEmbedInfo()
 
@@ -99,7 +99,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_DestroyContentEmbedInfo(ContentEmbed_Info
 
 **Description**
 
-Destroy an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance and reclaims the memory occupied by the instance.
+Destroys a [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance.
 
 **Since**: 24
 
@@ -107,13 +107,13 @@ Destroy an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance 
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Info](capi-contentembed-contentembed-info.md) *info | Represents a pointer to an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance.After this call, the pointer becomes invalid and must not be used. |
+| [ContentEmbed_Info](capi-contentembed-contentembed-info.md) *info | Pointer to the [ContentEmbed_Info](capi-contentembed-contentembed-info.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>         </ul> |
 
 ### OH_ContentEmbed_GetContentEmbedInfo()
 
@@ -123,7 +123,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_GetContentEmbedInfo(const char *locale, C
 
 **Description**
 
-Get an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance based on the locale.
+Obtains a [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance based on the region settings.
 
 **Required permission**: ohos.permission.CONNECT_OBJECTEDITOR_EXTENSION
 
@@ -133,14 +133,14 @@ Get an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance base
 
 | Parameter | Description |
 | -- | -- |
-| const char *locale | Represents locale value. |
-| [ContentEmbed_Info](capi-contentembed-contentembed-info.md) *info | Represents a pointer to an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance. |
+| const char *locale | Locale ID, which consists of the language, script, and country/region, for example, **zh-Hans-CN**. If the locale is empty, the system locale setting is used by default. |
+| [ContentEmbed_Info](capi-contentembed-contentembed-info.md) *info | Output parameter. This pointer points to the ContentEmbed_Info object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_PERMISSION_DENIED](capi-content-embed-common-h.md#contentembed_errorcode) - permission verification failed.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_SYSTEM_ABNORMAL](capi-content-embed-common-h.md#contentembed_errorcode) - the system service works abnormally.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_PERMISSION_DENIED](capi-content-embed-common-h.md#contentembed_errorcode) - Permission verification failed.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Parameter check failed.</li><br>     <li>[CE_ERR_SYSTEM_ABNORMAL](capi-content-embed-common-h.md#contentembed_errorcode) - The system service is abnormal.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>         </ul> |
 
 ### OH_ContentEmbed_GetFormatCountFromInfo()
 
@@ -150,7 +150,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_GetFormatCountFromInfo(const ContentEmbed
 
 **Description**
 
-Get format count from an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance.
+Obtains the number of [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instances in the [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance.
 
 **Since**: 24
 
@@ -158,14 +158,14 @@ Get format count from an [ContentEmbed_Info](capi-contentembed-contentembed-info
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Info](capi-contentembed-contentembed-info.md) *info | Represents a pointer to an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance. |
-| uint32_t *count | Output parameter indicating the number of [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instancesin the [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance. |
+| [const ContentEmbed_Info](capi-contentembed-contentembed-info.md) *info | Pointer to the [ContentEmbed_Info](capi-contentembed-contentembed-info.md) object. |
+| uint32_t *count | Output parameter. Number of stored [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instances. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>         </ul> |
 
 ### OH_ContentEmbed_GetFormatFromInfo()
 
@@ -175,7 +175,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_GetFormatFromInfo(const ContentEmbed_Info
 
 **Description**
 
-Get [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance from an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance using an index.
+Obtains the [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance at the specified index from the [ContentEmbed_Info](capi-contentembed-contentembed-info.md)instance.
 
 **Since**: 24
 
@@ -183,15 +183,15 @@ Get [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance fro
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Info](capi-contentembed-contentembed-info.md) *info | Represents a pointer to an [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance. |
+| [const ContentEmbed_Info](capi-contentembed-contentembed-info.md) *info | Pointer to the [ContentEmbed_Info](capi-contentembed-contentembed-info.md) object. |
 | uint32_t index | Represents the index of the internal array within the [ContentEmbed_Info](capi-contentembed-contentembed-info.md) instance. |
-| [ContentEmbed_Format](capi-contentembed-contentembed-format.md) **format | Output parameter represents a pointer to an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance. |
+| [ContentEmbed_Format](capi-contentembed-contentembed-format.md) **format | Output parameter. Upon successful retrieval, returns a pointer to the [ContentEmbed_Format](capi-contentembed-contentembed-format.md)instance at the specified index in info. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - Operations are successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameters.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>         </ul> |
 
 ### OH_ContentEmbed_CreateContentEmbedFormat()
 
@@ -201,7 +201,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_CreateContentEmbedFormat(ContentEmbed_For
 
 **Description**
 
-Create a new [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.The caller is responsible for destroying the instance by calling[OH_ContentEmbed_DestroyContentEmbedFormat](capi-content-embed-proxy-h.md#oh_contentembed_destroycontentembedformat) to avoid memory leaks.
+Creates a [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.<br>You can destroy the instance using [OH_ContentEmbed_DestroyContentEmbedFormat](capi-content-embed-proxy-h.md#oh_contentembed_destroycontentembedformat) to avoid memory leaks.
 
 **Since**: 24
 
@@ -209,13 +209,13 @@ Create a new [ContentEmbed_Format](capi-contentembed-contentembed-format.md) ins
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Format](capi-contentembed-contentembed-format.md) **format | Represents a pointer to an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance which will be created. |
+| [ContentEmbed_Format](capi-contentembed-contentembed-format.md) **format | Output parameter. This pointer points to the newly created [ContentEmbed_Format](capi-contentembed-contentembed-format.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - Operations are successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameters.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>         </ul> |
 
 ### OH_ContentEmbed_DestroyContentEmbedFormat()
 
@@ -225,7 +225,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_DestroyContentEmbedFormat(ContentEmbed_Fo
 
 **Description**
 
-Destroy an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance and reclaims the memory occupied by the instance.
+Destroys an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.
 
 **Since**: 24
 
@@ -233,13 +233,13 @@ Destroy an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) insta
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Format](capi-contentembed-contentembed-format.md) *format | Represents a pointer to an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.After this call, the pointer becomes invalid and must not be used. |
+| [ContentEmbed_Format](capi-contentembed-contentembed-format.md) *format | Pointer to the [ContentEmbed_Format](capi-contentembed-contentembed-format.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>         </ul> |
 
 ### OH_ContentEmbed_GetContentEmbedFormatByOEidAndLocale()
 
@@ -249,7 +249,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_GetContentEmbedFormatByOEidAndLocale(cons
 
 **Description**
 
-Get a [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance using oeid and locale.
+Obtains an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance based on the OEID and region settings.
 
 **Required permission**: ohos.permission.CONNECT_OBJECTEDITOR_EXTENSION
 
@@ -259,15 +259,15 @@ Get a [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance u
 
 | Parameter | Description |
 | -- | -- |
-| const char *oeid | Represents the oeid value. |
-| const char *locale | Represents the locale value. |
-| [ContentEmbed_Format](capi-contentembed-contentembed-format.md) *format | Output parameter represents a pointer to an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance. |
+| const char *oeid | Unique identifier string of the document format. |
+| const char *locale | Locale ID, which consists of the language, script, and country/region, for example, **zh-Hans-CN**. If the locale is empty, the system locale setting is used by default. |
+| [ContentEmbed_Format](capi-contentembed-contentembed-format.md) *format | Output parameter. The pointer points to the [ContentEmbed_Format](capi-contentembed-contentembed-format.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_PERMISSION_DENIED](capi-content-embed-common-h.md#contentembed_errorcode) - permission verification failed.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_SYSTEM_ABNORMAL](capi-content-embed-common-h.md#contentembed_errorcode) - the system service works abnormally.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_PERMISSION_DENIED](capi-content-embed-common-h.md#contentembed_errorcode) - Permission verification failed.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Parameter check failed.</li><br>     <li>[CE_ERR_SYSTEM_ABNORMAL](capi-content-embed-common-h.md#contentembed_errorcode) - The system service is abnormal.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>         </ul> |
 
 ### OH_ContentEmbed_GetOEidFromFormat()
 
@@ -277,7 +277,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_GetOEidFromFormat(const ContentEmbed_Form
 
 **Description**
 
-Get oeid from [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.
+Obtains the OEID of the [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.
 
 **Since**: 24
 
@@ -285,14 +285,14 @@ Get oeid from [ContentEmbed_Format](capi-contentembed-contentembed-format.md) in
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Format](capi-contentembed-contentembed-format.md) *format | Represents a pointer to an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance. |
-| char *oeid | Output parameter represents the oeid value. |
+| [const ContentEmbed_Format](capi-contentembed-contentembed-format.md) *format | Pointer to the [ContentEmbed_Format](capi-contentembed-contentembed-format.md) object. |
+| char *oeid | Output parameter. Character array for storing the identifier string of the OEID. The recommended arraylength is {@link MAX_OEID_LENGTH}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - The parameter check fails.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>         </ul> |
 
 ### OH_ContentEmbed_GetNameAndDescriptionFromFormat()
 
@@ -302,7 +302,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_GetNameAndDescriptionFromFormat(const Con
 
 **Description**
 
-Get name and description from [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.
+Obtains the localized display name and description from a [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.
 
 **Since**: 24
 
@@ -310,15 +310,15 @@ Get name and description from [ContentEmbed_Format](capi-contentembed-contentemb
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Format](capi-contentembed-contentembed-format.md) *format | Represents a pointer to an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance. |
-| char *name | Output parameter represents the name value. |
-| char *description | Output parameter represents the description value. |
+| [const ContentEmbed_Format](capi-contentembed-contentembed-format.md) *format | Pointer to the [ContentEmbed_Format](capi-contentembed-contentembed-format.md) object. |
+| char *name | Output parameter. Character array for storing the name. The recommended array length is{@link MAX_NAME_LENGTH}. |
+| char *description | Output parameter. Character array for storing the description. The recommended array length is{@link MAX_DESCRIPTION_LENGTH}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Parameter check failed.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>         </ul> |
 
 ### OH_ContentEmbed_GetIconFromFormat()
 
@@ -328,7 +328,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_GetIconFromFormat(const ContentEmbed_Form
 
 **Description**
 
-Get icon from [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.The caller is responsible for destroying the icon by calling{@link OH_PixelmapNative_Destroy} to avoid memory leaks.
+Obtains the icon of a [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.
 
 **Since**: 24
 
@@ -336,14 +336,14 @@ Get icon from [ContentEmbed_Format](capi-contentembed-contentembed-format.md) in
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Format](capi-contentembed-contentembed-format.md) *format | Represents a pointer to an [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance. |
-| OH_PixelmapNative **icon | The output pixel map of the application. |
+| [const ContentEmbed_Format](capi-contentembed-contentembed-format.md) *format | Pointer to the [ContentEmbed_Format](capi-contentembed-contentembed-format.md) object. |
+| OH_PixelmapNative **icon | Output parameter. Pointer to the {@link OH_PixelmapNative} instance that stores the icon.<br>You need to call {@link OH_PixelmapNative_Destroy} to destroy the instance to avoid memory leaks. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - Operations are successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Parameter check failed.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>         </ul> |
 
 ### OH_ContentEmbed_GetFileNameExtensionsFromFormat()
 
@@ -353,7 +353,7 @@ char** OH_ContentEmbed_GetFileNameExtensionsFromFormat(const ContentEmbed_Format
 
 **Description**
 
-Get all file name extensions in the [ContentEmbed_Format](capi-contentembed-contentembed-format.md) data.
+Obtains the list of file name extensions of a [ContentEmbed_Format](capi-contentembed-contentembed-format.md) instance.
 
 **Since**: 24
 
@@ -361,14 +361,14 @@ Get all file name extensions in the [ContentEmbed_Format](capi-contentembed-cont
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Format](capi-contentembed-contentembed-format.md) *format | Represents a pointer to an instance of [ContentEmbed_Format](capi-contentembed-contentembed-format.md). |
-| unsigned int *count | Represents the file name extensions count that is a output param. |
+| [const ContentEmbed_Format](capi-contentembed-contentembed-format.md) *format | Pointer to the [ContentEmbed_Format](capi-contentembed-contentembed-format.md) object. |
+| unsigned int *count | Output parameter. Stores the number of returned file name extensions. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| char** | Returns string array that in [ContentEmbed_Format](capi-contentembed-contentembed-format.md) when input parameters valid,<br>         otherwise return nullptr. |
+| char** | Pointer to the array of strings that indicate the file name extensions. |
 
 ### OH_ContentEmbed_CreateExtensionProxy()
 
@@ -378,7 +378,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_CreateExtensionProxy(ContentEmbed_Documen
 
 **Description**
 
-Create a new [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance through [ContentEmbed_Document](capi-contentembed-contentembed-document.md) object.The caller is responsible for destroying the instance by calling[OH_ContentEmbed_DestroyExtensionProxy](capi-content-embed-proxy-h.md#oh_contentembed_destroyextensionproxy) to avoid memory leaks.
+Creates a [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance.<br>You can destroy the instance using [OH_ContentEmbed_DestroyExtensionProxy](capi-content-embed-proxy-h.md#oh_contentembed_destroyextensionproxy) to avoid memory leaks.
 
 **Since**: 24
 
@@ -386,15 +386,15 @@ Create a new [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extens
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Represents a pointer to an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) **proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance which will be created. |
-| void *contextPtr | Represents a pointer to an context instance. |
+| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to an OE document instance. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) **proxy | Output parameter. This pointer points to the newly created [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
+| void *contextPtr | Pointer to the context instance, which is used to transfer the application context information. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - The parameter check fails.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is not supported because the application is in the DLP sandbox.<br>     </li><br>         </ul> |
 
 ### OH_ContentEmbed_DestroyExtensionProxy()
 
@@ -404,7 +404,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_DestroyExtensionProxy(ContentEmbed_Extens
 
 **Description**
 
-Destroy an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance and reclaims the memory occupied by the instance.
+Destroys a [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance.
 
 **Since**: 24
 
@@ -412,13 +412,13 @@ Destroy an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensio
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance.After this call, the pointer becomes invalid and must not be used. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Pointer to the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_ClientCallbackOnUpdateFunc()
 
@@ -428,7 +428,7 @@ typedef void (*OH_ContentEmbed_ClientCallbackOnUpdateFunc)(ContentEmbed_Extensio
 
 **Description**
 
-Called when the server notifies the client to update the content embed document.You need to implement this function, set it to [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) through {@linkOH_ContentEmbed_Proxy_RegisterOnUpdateFunc} to complete the registration.
+Callback function type for notifying the client when the OE document is updated.<br>You need to implement this function and register it with the client's OE object through[OH_ContentEmbed_Proxy_RegisterOnUpdateFunc](capi-content-embed-proxy-h.md#oh_contentembed_proxy_registeronupdatefunc).
 
 **Since**: 24
 
@@ -446,7 +446,7 @@ typedef void (*OH_ContentEmbed_ClientCallbackOnErrorFunc)(ContentEmbed_Extension
 
 **Description**
 
-Called when the server notifies the client that an error has occurred.You need to implement this function, set it to [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) through {@linkOH_ContentEmbed_Proxy_RegisterOnErrorFunc} to complete the registration.
+Callback function type for notifying the client when an error occurs in the OE document.<br>You need to implement this function and register it with the client's OE object through[OH_ContentEmbed_Proxy_RegisterOnErrorFunc](capi-content-embed-proxy-h.md#oh_contentembed_proxy_registeronerrorfunc).
 
 **Since**: 24
 
@@ -455,7 +455,7 @@ Called when the server notifies the client that an error has occurred.You need t
 | Parameter | Description |
 | -- | -- |
 | (ContentEmbed_ExtensionProxy \*proxy | Represents a pointer to an[ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance which will be set in. |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) error | Indicates that the Specific error codes. |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) error | Error code. For details, see [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
 
 ### OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc()
 
@@ -465,7 +465,7 @@ typedef void (*OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc)(ContentEmbed
 
 **Description**
 
-Called when content embed document editing is completed.You need to implement this function, set it to [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) through {@linkOH_ContentEmbed_Proxy_RegisterOnEditingFinishedFunc} to complete the registration.
+Callback function type for notifying the client when the OE document editing is complete.<br>You need to implement this function and register it with the client's OE object through[OH_ContentEmbed_Proxy_RegisterOnEditingFinishedFunc](capi-content-embed-proxy-h.md#oh_contentembed_proxy_registeroneditingfinishedfunc).
 
 **Since**: 24
 
@@ -474,7 +474,7 @@ Called when content embed document editing is completed.You need to implement th
 | Parameter | Description |
 | -- | -- |
 | (ContentEmbed_ExtensionProxy \*proxy | Represents a pointer to an[ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance which will be set in. |
-| bool dataModified | Indicates whether the data has been modified. |
+| bool dataModified | Indicates whether the OE document data has been modified. The value true indicates that the OEdocument has been modified, and false indicates that the OE document has not been modified. |
 
 ### OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc()
 
@@ -484,7 +484,7 @@ typedef void (*OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc)(ContentEmbe
 
 **Description**
 
-Called when the content embed document extension is stopped.You need to implement this function, set it to [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) through {@linkOH_ContentEmbed_Proxy_RegisterOnExtensionStoppedFunc} to complete the registration.
+Callback function type when the OE Extension stops.<br>You need to implement this function and register it with the client's OE object through[OH_ContentEmbed_Proxy_RegisterOnExtensionStoppedFunc](capi-content-embed-proxy-h.md#oh_contentembed_proxy_registeronextensionstoppedfunc).
 
 **Since**: 24
 
@@ -502,7 +502,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_RegisterOnUpdateFunc(ContentEmbed_E
 
 **Description**
 
-Register function [OH_ContentEmbed_ClientCallbackOnUpdateFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonupdatefunc) into [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md).
+Registers the callback function for updating an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) document with the client.
 
 **Since**: 24
 
@@ -510,14 +510,14 @@ Register function [OH_ContentEmbed_ClientCallbackOnUpdateFunc](capi-content-embe
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance which will be set function in. |
-| [OH_ContentEmbed_ClientCallbackOnUpdateFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonupdatefunc) onUpdateFunc | Represents function [OH_ContentEmbed_ClientCallbackOnUpdateFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonupdatefunc) which will be set in. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Pointer to the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
+| [OH_ContentEmbed_ClientCallbackOnUpdateFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonupdatefunc) onUpdateFunc | [OH_ContentEmbed_ClientCallbackOnUpdateFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonupdatefunc) callback function to be registered. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Proxy_RegisterOnErrorFunc()
 
@@ -527,7 +527,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_RegisterOnErrorFunc(ContentEmbed_Ex
 
 **Description**
 
-Register function [OH_ContentEmbed_ClientCallbackOnErrorFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonerrorfunc) into [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md).
+Registers the callback function for triggering an error when an error occurs in the document of the client'sobject.
 
 **Since**: 24
 
@@ -535,14 +535,14 @@ Register function [OH_ContentEmbed_ClientCallbackOnErrorFunc](capi-content-embed
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance which will be set function in. |
-| [OH_ContentEmbed_ClientCallbackOnErrorFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonerrorfunc) onErrorFunc | Represents function [OH_ContentEmbed_ClientCallbackOnErrorFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonerrorfunc) which will be set in. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Pointer to the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
+| [OH_ContentEmbed_ClientCallbackOnErrorFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonerrorfunc) onErrorFunc | [OH_ContentEmbed_ClientCallbackOnErrorFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonerrorfunc) callback function to be registered. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Proxy_RegisterOnEditingFinishedFunc()
 
@@ -552,7 +552,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_RegisterOnEditingFinishedFunc(Conte
 
 **Description**
 
-Register function [OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackoneditingfinishedfunc) into[ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md).
+Registers the callback function for the client to be invoked when an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md)document is edited.
 
 **Since**: 24
 
@@ -560,14 +560,14 @@ Register function [OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc](capi-con
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance which will be set function in. |
-| [OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackoneditingfinishedfunc) onEditingFinishedFunc | Represents function [OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackoneditingfinishedfunc)which will be set in. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Pointer to the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
+| [OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackoneditingfinishedfunc) onEditingFinishedFunc | [OH_ContentEmbed_ClientCallbackOnEditingFinishedFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackoneditingfinishedfunc) callback function to beregistered. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Proxy_RegisterOnExtensionStoppedFunc()
 
@@ -577,7 +577,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_RegisterOnExtensionStoppedFunc(Cont
 
 **Description**
 
-Register function [OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonextensionstoppedfunc) into[ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md).
+Registers the callback function for stopping the OE Extension to the client's OE object.
 
 **Since**: 24
 
@@ -585,14 +585,14 @@ Register function [OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc](capi-co
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance which will be set function in. |
-| [OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonextensionstoppedfunc) onExtensionStoppedFunc | Represents function [OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonextensionstoppedfunc)which will be set in. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Pointer to the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
+| [OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonextensionstoppedfunc) onExtensionStoppedFunc | [OH_ContentEmbed_ClientCallbackOnExtensionStoppedFunc](capi-content-embed-proxy-h.md#oh_contentembed_clientcallbackonextensionstoppedfunc) callback function to beregistered. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - The parameter check fails.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Proxy_StartWork()
 
@@ -602,7 +602,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_StartWork(ContentEmbed_ExtensionPro
 
 **Description**
 
-Start the server application.
+Connects to the server-side OE Extension and establishes a communication channel with the OE Extension.
 
 **Required permission**: ohos.permission.CONNECT_OBJECTEDITOR_EXTENSION
 
@@ -612,13 +612,13 @@ Start the server application.
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Pointer to the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_PERMISSION_DENIED](capi-content-embed-common-h.md#contentembed_errorcode) - permission verification failed.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_CLIENT_CALLBACK_NOT_REGISTERED](capi-content-embed-common-h.md#contentembed_errorcode) - the client callback is not registered.<br>     [CE_ERR_SYSTEM_ABNORMAL](capi-content-embed-common-h.md#contentembed_errorcode) - the system service works abnormally.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br>     [CE_ERR_CONNECT_LIMIT_EXCEED](capi-content-embed-common-h.md#contentembed_errorcode) - connections exceeds the limit.<br>     [CE_ERR_FILE_NOT_GRANT](capi-content-embed-common-h.md#contentembed_errorcode) - file is not authorized.<br>     [CE_ERR_DISK_FULL](capi-content-embed-common-h.md#contentembed_errorcode) - the disk is full.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_PERMISSION_DENIED](capi-content-embed-common-h.md#contentembed_errorcode) - Permission verification failed.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Parameter check failed.</li><br>     <li>[CE_ERR_CLIENT_CALLBACK_NOT_REGISTERED](capi-content-embed-common-h.md#contentembed_errorcode) - Necessary client callbacks are not registered.</li><br>     <li>[CE_ERR_SYSTEM_ABNORMAL](capi-content-embed-common-h.md#contentembed_errorcode) - The system service is abnormal.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is not supported because the application is in the DLP sandbox.<br>     </li><br>     <li>[CE_ERR_CONNECT_LIMIT_EXCEED](capi-content-embed-common-h.md#contentembed_errorcode) - The number of connected OE Extensions exceeds the upper limit.</li><br>     <li>[CE_ERR_FILE_NOT_GRANT](capi-content-embed-common-h.md#contentembed_errorcode) - The file is not granted.</li><br>     <li>[CE_ERR_DISK_FULL](capi-content-embed-common-h.md#contentembed_errorcode) - The disk is full.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Proxy_StopWork()
 
@@ -628,7 +628,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_StopWork(ContentEmbed_ExtensionProx
 
 **Description**
 
-Stop the server application.
+Disconnects the communication channel with the OE Extension.
 
 **Required permission**: ohos.permission.CONNECT_OBJECTEDITOR_EXTENSION
 
@@ -638,13 +638,13 @@ Stop the server application.
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Pointer to the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_PERMISSION_DENIED](capi-content-embed-common-h.md#contentembed_errorcode) - permission verification failed.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_SYSTEM_ABNORMAL](capi-content-embed-common-h.md#contentembed_errorcode) - the system service works abnormally.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_PERMISSION_DENIED](capi-content-embed-common-h.md#contentembed_errorcode) - Permission verification failed.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Parameter check failed.</li><br>     <li>[CE_ERR_SYSTEM_ABNORMAL](capi-content-embed-common-h.md#contentembed_errorcode) - The system service is abnormal.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Proxy_GetSnapshot()
 
@@ -654,7 +654,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_GetSnapshot(ContentEmbed_ExtensionP
 
 **Description**
 
-Get the document snapshot from the server application.
+Obtains the snapshot image of the current OE document from the client OE object forpreview or thumbnail display.
 
 **Since**: 24
 
@@ -662,14 +662,14 @@ Get the document snapshot from the server application.
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance. |
-| OH_PixelmapNative **snapshot | The output document snapshot of the document. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Pointer to the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
+| OH_PixelmapNative **snapshot | Output parameter. Pointer to the {@link OH_PixelmapNative} instance that stores the documentsnapshot.<br>You need to call {@link OH_PixelmapNative_Destroy} to destroy the instance to avoid memory leaks. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_EXTENSION_ERROR](capi-content-embed-common-h.md#contentembed_errorcode) - an error occurred in the extension application.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br>     [CE_ERR_EXTENSION_NOT_SUPPORT](capi-content-embed-common-h.md#contentembed_errorcode) - the capability is not supported by OE Extension.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_EXTENSION_ERROR](capi-content-embed-common-h.md#contentembed_errorcode) - An error occurs in the OE Extension.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>     <li>[CE_ERR_EXTENSION_NOT_SUPPORT](capi-content-embed-common-h.md#contentembed_errorcode) - The OE Extension does not support this capability.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Proxy_DoEdit()
 
@@ -679,7 +679,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_DoEdit(ContentEmbed_ExtensionProxy 
 
 **Description**
 
-Client notifies the server to edit the document.
+Requests the OE Extension instance to enter the edit mode from the client's OE object.
 
 **Since**: 24
 
@@ -687,13 +687,13 @@ Client notifies the server to edit the document.
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Pointer to the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_EXTENSION_ERROR](capi-content-embed-common-h.md#contentembed_errorcode) - an error occurred in the extension application.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br>     [CE_ERR_EXTENSION_NOT_SUPPORT](capi-content-embed-common-h.md#contentembed_errorcode) - the capability is not supported by OE Extension.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_EXTENSION_ERROR](capi-content-embed-common-h.md#contentembed_errorcode) - An error occurs in the OE Extension.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>     <li>[CE_ERR_EXTENSION_NOT_SUPPORT](capi-content-embed-common-h.md#contentembed_errorcode) - The OE Extension does not support this capability.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Proxy_GetEditStatus()
 
@@ -703,7 +703,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_GetEditStatus(ContentEmbed_Extensio
 
 **Description**
 
-Client retrieves document editing status from the server.
+Queries the current editing state and modification state of the OE document by the server-side OE Extensioninstance.
 
 **Since**: 24
 
@@ -711,15 +711,15 @@ Client retrieves document editing status from the server.
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance. |
-| bool *isEditing | Output parameter indicating that the content embed document is being edited. |
-| bool *isModified | Output parameter indicating that the content embed document has been modified. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Pointer to the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
+| bool *isEditing | Output parameter. Indicates whether the content embedded document is being edited. true: beingedited; false: not being edited. |
+| bool *isModified | Output parameter. Indicates whether the content embedded in the document has been modified. Thevalue true indicates that the password has been changed, and the value false indicates that the password has notbeen changed. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_EXTENSION_ERROR](capi-content-embed-common-h.md#contentembed_errorcode) - an error occurred in the extension application.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - Operations are successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Parameter check failed.</li><br>     <li>[CE_ERR_EXTENSION_ERROR](capi-content-embed-common-h.md#contentembed_errorcode) - An error occurred in the OE Extension.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Proxy_GetCapability()
 
@@ -729,7 +729,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_GetCapability(ContentEmbed_Extensio
 
 **Description**
 
-Client obtains server capabilities.
+Obtains the capabilities of the server-side OE Extension instance. The capabilities are returned in the formof bit masks. For details about the meaning of each bit, see [ContentEmbed_CapabilityCode](capi-content-embed-common-h.md#contentembed_capabilitycode).
 
 **Since**: 24
 
@@ -737,14 +737,14 @@ Client obtains server capabilities.
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance. |
-| uint32_t *bitmask | Output parameter indicating the capabilities of a content embed extension instance. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Pointer to the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
+| uint32_t *bitmask | Output parameter. Indicates the capabilities of the server-side OE Extension instance, which arecomposed of the values in [ContentEmbed_CapabilityCode](capi-content-embed-common-h.md#contentembed_capabilitycode). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_EXTENSION_ERROR](capi-content-embed-common-h.md#contentembed_errorcode) - an error occurred in the extension application.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_EXTENSION_ERROR](capi-content-embed-common-h.md#contentembed_errorcode) - An error occurs in the OE Extension.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Proxy_GetDocument()
 
@@ -754,7 +754,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Proxy_GetDocument(ContentEmbed_ExtensionP
 
 **Description**
 
-Get the document from the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance.The document can be created by calling {@link OH_ContentEmbed_CreateDocumentByOEid},{@link OH_ContentEmbed_CreateDocumentByFile}, or {@link OH_ContentEmbed_LoadDocumentFromFile}.The document should be destroyed by calling{@link OH_ContentEmbed_DestroyDocument} when it is no longer needed.
+Obtains the associated OE document object from the client's OE object.<br>The OE document object is created in {@link OH_ContentEmbed_CreateDocumentByOEid},{@link OH_ContentEmbed_CreateDocumentByFile}, or {@link OH_ContentEmbed_LoadDocumentFromFile} mode.<br>When the OE document is no longer needed, call {@link OH_ContentEmbed_DestroyDocument} to destroy it.
 
 **Since**: 24
 
@@ -762,13 +762,13 @@ Get the document from the [ContentEmbed_ExtensionProxy](capi-contentembed-conten
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Represents a pointer to an [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) instance. |
-| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) **ceDocument | Represents a pointer to an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) that is a output param. |
+| [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) *proxy | Pointer to the [ContentEmbed_ExtensionProxy](capi-contentembed-contentembed-extensionproxy.md) object. |
+| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) **ceDocument | Output parameter. Pointer to the pointer that stores the OE document instance. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox. |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - The parameter check fails.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 

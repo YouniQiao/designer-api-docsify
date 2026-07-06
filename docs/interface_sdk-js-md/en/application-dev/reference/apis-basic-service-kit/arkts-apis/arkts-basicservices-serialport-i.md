@@ -9,7 +9,7 @@ Represents the parameters of a serial port.
 ## Modules to Import
 
 ```TypeScript
-import { serialManager } from '@ohos.usbManager.serial';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## deviceName

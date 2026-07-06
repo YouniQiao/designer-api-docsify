@@ -9,7 +9,7 @@ Desktop lyric state definition.
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@ohos.multimedia.avsession';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## isLocked

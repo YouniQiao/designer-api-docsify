@@ -6,7 +6,7 @@ Enumerates the device states.
 
 **Deprecated since:** 11
 
-**Substitutes:** [DeviceStateChange](arkts-distributedservice-devicestatechange-e.md#devicestatechange)
+**Substitutes:** [DeviceStateChange](arkts-distributedservice-devicestatechange-e.md)
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 

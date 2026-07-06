@@ -9,7 +9,7 @@ Provides APIs for selecting and saving audio clips. Before using the APIs of **A
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@ohos.file.picker';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -51,7 +51,7 @@ A constructor used to create an **AudioViewPicker** instance. This constructor i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context (only **UIAbilityContext** is supported). For details about theapplication context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context). |
+| context | Context | Yes | Application context (only **UIAbilityContext** is supported). For details about theapplication context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
 
 **Example**
 

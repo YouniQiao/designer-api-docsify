@@ -11,7 +11,7 @@ This module controls the Data Loss Prevention (DLP) feature, including enabling 
 ## Modules to Import
 
 ```TypeScript
-import { dlpSetDlpFeature } from '@ohos.dlpSetDlpFeature';
+import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 ```
 
 ## Summary

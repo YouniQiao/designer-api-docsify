@@ -6,14 +6,14 @@ Represents the tip information displayed during the authentication, which is use
 
 **Deprecated since:** 11
 
-**Substitutes:** [AuthTipInfo](arkts-userauthentication-authtipinfo-i.md#authtipinfo)
+**Substitutes:** [AuthTipInfo](arkts-userauthentication-authtipinfo-i.md)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@ohos.userIAM.userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## module

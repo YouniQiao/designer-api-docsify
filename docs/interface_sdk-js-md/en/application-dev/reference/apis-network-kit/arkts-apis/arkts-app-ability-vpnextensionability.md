@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { VpnExtensionContext } from '@ohos.app.ability.VpnExtensionAbility';
+import { VpnExtensionContext } from '@kit.NetworkKit';
 ```
 
 ## Summary

@@ -16,8 +16,8 @@ function isDefaultApplication(type: string, callback: AsyncCallback<boolean>) : 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要查询的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md#applicationtype)或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor)类型中的值。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为bool值，true表示是默认应用，false表示不是默认应用；否则为错误对象。 |
+| type | string | 是 | 要查询的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md)或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor)类型中的值。 |
+| callback | AsyncCallback&lt;boolean&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为bool值，true表示是默认应用，false表示不是默认应用；否则为错误对象。 |
 
 **错误码：**
 
@@ -59,7 +59,7 @@ function isDefaultApplication(type: string) : Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要查询的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md#applicationtype)或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor)类型中的值。 |
+| type | string | 是 | 要查询的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md)或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor)类型中的值。 |
 
 **返回值：**
 

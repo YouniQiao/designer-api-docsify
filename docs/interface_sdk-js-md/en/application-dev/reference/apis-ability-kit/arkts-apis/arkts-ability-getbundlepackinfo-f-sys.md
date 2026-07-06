@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { freeInstall } from '@ohos.bundle.freeInstall';
+import { freeInstall } from '@kit.AbilityKit';
 ```
 
 ## getBundlePackInfo
@@ -29,7 +29,7 @@ Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API 
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | bundlePackFlag | BundlePackFlag | Yes | Flag of the bundle package. |
-| callback | AsyncCallback&lt;BundlePackInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return theresult. If the operation is successful, **err** is **null** and **data** is the BundlePackInfo object obtained;otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;BundlePackInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null** and **data** is the BundlePackInfo object obtained;otherwise, **err** is an error object. |
 
 **Error codes:**
 

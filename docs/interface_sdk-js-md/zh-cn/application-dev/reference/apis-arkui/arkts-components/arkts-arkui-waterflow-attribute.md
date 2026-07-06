@@ -1,6 +1,6 @@
 # WaterFlow属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)和[滚动组件通用属性](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)外，还支持 以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)和[滚动组件通用事件](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持 以下事件：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)和[滚动组件通用属性](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)外，还支持 以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)和[滚动组件通用事件](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持 以下事件：
 
 **继承/实现关系：** WaterFlowAttribute extends [ScrollableCommonMethod<WaterFlowAttribute>](ScrollableCommonMethod<WaterFlowAttribute>)
 
@@ -135,7 +135,7 @@ enableScrollInteraction(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroller-c.md#scroller)的滚动接口。<br/>默认值：true |
+| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroller-c.md)的滚动接口。<br/>默认值：true |
 
 ## friction
 
@@ -351,7 +351,7 @@ rowsTemplate(value: string)
 supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 ```
 
-设置当前WaterFlow组件是否支持在LazyForEach或Repeat中使用if/else渲染控制语法生成不包含任何子组件的空分支节点。未设置时不支持空分支节点。此属性初次赋值后不支持更新，所以赋值后无法在支持空分支、不支持 空分支行为之间切换。 > **说明：** > > 当通过[sections](../../../../reference/apis-arkui/arkui-ts/ts-container-waterflow.md#waterflowoptions对象说明)参数设置了 > [WaterFlowSections](arkts-arkui-waterflowsections-c.md#waterflowsections)分组，或通过 > [layoutMode](../../../../reference/apis-arkui/arkui-ts/ts-container-waterflow.md#waterflowoptions对象说明)设置 > [SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md#waterflowlayoutmode)布局模式时，supportEmptyBranchInLazyLoading设为true、false、undefined或不设置 > supportEmptyBranchInLazyLoading，空分支后的FlowItem都会显示。
+设置当前WaterFlow组件是否支持在LazyForEach或Repeat中使用if/else渲染控制语法生成不包含任何子组件的空分支节点。未设置时不支持空分支节点。此属性初次赋值后不支持更新，所以赋值后无法在支持空分支、不支持 空分支行为之间切换。 > **说明：** > > 当通过[sections](../../../../reference/apis-arkui/arkui-ts/ts-container-waterflow.md#waterflowoptions对象说明)参数设置了 > [WaterFlowSections](arkts-arkui-waterflowsections-c.md)分组，或通过 > [layoutMode](../../../../reference/apis-arkui/arkui-ts/ts-container-waterflow.md#waterflowoptions对象说明)设置 > [SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md)布局模式时，supportEmptyBranchInLazyLoading设为true、false、undefined或不设置 > supportEmptyBranchInLazyLoading，空分支后的FlowItem都会显示。
 
 **起始版本：** 26.0.0
 

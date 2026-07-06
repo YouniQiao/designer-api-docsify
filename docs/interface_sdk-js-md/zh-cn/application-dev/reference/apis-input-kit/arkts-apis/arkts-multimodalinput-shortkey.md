@@ -8,7 +8,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [shortKey](arkts-input-shortkey-sta-n.md) | 通过本模块接口，可以设置快捷键拉起Ability的延迟时间，如设置长按快捷键3s后再截屏等。 |
+| [shortKey](arkts-input-shortkey-n.md) | 通过本模块接口，可以设置快捷键拉起Ability的延迟时间，如设置长按快捷键3s后再截屏等。 |
 
 <!--Del-->
 ### 接口（系统接口）

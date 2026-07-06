@@ -9,7 +9,7 @@ The **distributedDeviceManager** module provides APIs for distributed device man
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@ohos.distributedDeviceManager';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

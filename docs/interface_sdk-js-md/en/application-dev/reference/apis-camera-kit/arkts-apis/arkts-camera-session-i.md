@@ -1,6 +1,6 @@
 # Session
 
-**Session** implements a session, which saves all [CameraInput](arkts-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera and requests the camera to take a photo or record a video.
+**Session** implements a session, which saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to take a photo or record a video.
 
 **Since:** 11
 
@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## addInput
@@ -18,7 +18,7 @@ import { camera } from '@ohos.multimedia.camera';
 addInput(cameraInput: CameraInput): void
 ```
 
-Adds a [CameraInput](arkts-camera-camerainput-i.md#camerainput) instance to this session.
+Adds a [CameraInput](arkts-camera-camerainput-i.md) instance to this session.
 
 **Since:** 11
 
@@ -39,7 +39,7 @@ Adds a [CameraInput](arkts-camera-camerainput-i.md#camerainput) instance to this
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 11 - 17 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## addOutput
 
@@ -47,7 +47,7 @@ Adds a [CameraInput](arkts-camera-camerainput-i.md#camerainput) instance to this
 addOutput(cameraOutput: CameraOutput): void
 ```
 
-Adds a [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput) instance to this session.
+Adds a [CameraOutput](arkts-camera-cameraoutput-i.md) instance to this session.
 
 **Since:** 11
 
@@ -68,7 +68,7 @@ Adds a [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput) instance to t
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 11 - 17 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## beginConfig
 
@@ -89,7 +89,7 @@ Starts configuration for the session.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400105](../errorcode-camera.md#7400105-session-configuration-locked) | Session config locked. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## canAddInput
 
@@ -161,7 +161,7 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the configuration issuccessfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). For example, if theaspect ratio of the preview stream is different from that of the video output stream, error code 7400201 isreturned. |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the configuration issuccessfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). For example, if theaspect ratio of the preview stream is different from that of the video output stream, error code 7400201 isreturned. |
 
 **Error codes:**
 
@@ -215,7 +215,7 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the session is releasedsuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the session is releasedsuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -255,7 +255,7 @@ Releases this session. This API uses a promise to return the result.
 removeInput(cameraInput: CameraInput): void
 ```
 
-Removes a [CameraInput](arkts-camera-camerainput-i.md#camerainput) instance from this session. This API must be called after [beginConfig](arkts-camera-session-i.md#beginconfig-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
+Removes a [CameraInput](arkts-camera-camerainput-i.md) instance from this session. This API must be called after [beginConfig](arkts-camera-session-i.md#beginconfig-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
 
 **Since:** 11
 
@@ -276,7 +276,7 @@ Removes a [CameraInput](arkts-camera-camerainput-i.md#camerainput) instance from
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 11 - 17 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## removeOutput
 
@@ -284,7 +284,7 @@ Removes a [CameraInput](arkts-camera-camerainput-i.md#camerainput) instance from
 removeOutput(cameraOutput: CameraOutput): void
 ```
 
-Removes a [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput) instance from this session.
+Removes a [CameraOutput](arkts-camera-cameraoutput-i.md) instance from this session.
 
 **Since:** 11
 
@@ -305,7 +305,7 @@ Removes a [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput) instance f
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 11 - 17 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## start
 
@@ -325,7 +325,7 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully,**err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully,**err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -333,7 +333,7 @@ Starts this session. This API uses an asynchronous callback to return the result
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
 
 ## start
 
@@ -361,7 +361,7 @@ Starts this session. This API uses a promise to return the result.
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
 
 ## stop
 
@@ -381,7 +381,7 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully,**err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully,**err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

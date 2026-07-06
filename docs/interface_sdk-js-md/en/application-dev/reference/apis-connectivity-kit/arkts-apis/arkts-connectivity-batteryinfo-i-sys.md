@@ -9,7 +9,7 @@ Describes the contents of the battery information.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@ohos.bluetooth.connection';
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## deviceId

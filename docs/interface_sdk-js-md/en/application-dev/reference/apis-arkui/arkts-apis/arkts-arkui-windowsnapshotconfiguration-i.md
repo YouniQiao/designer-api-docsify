@@ -9,7 +9,7 @@ Describes the configuration of the main window screenshot.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## useCache

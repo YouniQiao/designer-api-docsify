@@ -11,7 +11,7 @@ Defines the MMS message param.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@ohos.telephony.sms';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## data

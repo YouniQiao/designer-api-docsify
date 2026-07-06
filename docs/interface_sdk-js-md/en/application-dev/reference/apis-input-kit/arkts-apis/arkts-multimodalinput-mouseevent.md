@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from '@ohos.multimodalInput.mouseEvent';
+import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from '@kit.InputKit';
 ```
 
 ## Summary

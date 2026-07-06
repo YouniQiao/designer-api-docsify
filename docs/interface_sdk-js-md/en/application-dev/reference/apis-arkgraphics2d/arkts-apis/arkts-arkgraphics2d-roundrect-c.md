@@ -9,7 +9,7 @@ Rounded rectangle. > **NOTE** > > - The initial APIs of this class are supported
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor

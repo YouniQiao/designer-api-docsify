@@ -42,7 +42,7 @@ function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not found. |
 | [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) | Failed to get the profile because the specified profile is not found in theHAP. |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found.<br>**适用版本：** 12 |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found.<br>**适用版本：** 12+ |
 
 **示例：**
 

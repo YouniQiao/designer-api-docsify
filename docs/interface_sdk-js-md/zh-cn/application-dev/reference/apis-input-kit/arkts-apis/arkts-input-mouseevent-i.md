@@ -2,7 +2,7 @@
 
 鼠标事件。
 
-**继承/实现关系：** MouseEvent extends [InputEvent](arkts-input-inputevent-i.md#inputevent)
+**继承/实现关系：** MouseEvent extends [InputEvent](arkts-input-inputevent-i.md)
 
 **起始版本：** 9
 
@@ -112,7 +112,7 @@ fnKey: boolean
 globalX?: number
 ```
 
-该鼠标事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。<!--Del-->作为入参时，若接口参数中的 [MouseEventData.useGlobalCoordinate](arkts-input-mouseeventdata-i-sys.md#mouseeventdata)为 true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。<!--DelEnd-->作为出参时，由系统上报。
+该鼠标事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。<!--Del-->作为入参时，若接口参数中的 [MouseEventData.useGlobalCoordinate](arkts-input-mouseeventdata-i-sys.md)为 true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。<!--DelEnd-->作为出参时，由系统上报。
 
 **类型：** number
 
@@ -126,7 +126,7 @@ globalX?: number
 globalY?: number
 ```
 
-该鼠标事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。<!--Del-->作为入参时，若接口参数中的 [MouseEventData.useGlobalCoordinate](arkts-input-mouseeventdata-i-sys.md#mouseeventdata)为 true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。<!--DelEnd-->作为出参时，由系统上报。
+该鼠标事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。<!--Del-->作为入参时，若接口参数中的 [MouseEventData.useGlobalCoordinate](arkts-input-mouseeventdata-i-sys.md)为 true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。<!--DelEnd-->作为出参时，由系统上报。
 
 **类型：** number
 

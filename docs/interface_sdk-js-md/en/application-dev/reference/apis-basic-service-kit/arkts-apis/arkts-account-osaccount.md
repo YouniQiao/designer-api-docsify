@@ -9,7 +9,7 @@ The **osAccount** module provides basic capabilities for managing system (OS) ac
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@ohos.account.osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -54,7 +54,7 @@ import { osAccount } from '@ohos.account.osAccount';
 | Name | Description |
 | --- | --- |
 | [AccountManager](arkts-basicservices-accountmanager-i.md) | Provides APIs for managing OS accounts. |
-| [CreateOsAccountForDomainOptions](arkts-basicservices-createosaccountfordomainoptions-i.md) | Represents a set of optional parameters for creating an OS account bound to the specified domain account. It inherits from [CreateOsAccountOptions](arkts-basicservices-createosaccountoptions-i-sys.md#createosaccountoptions). |
+| [CreateOsAccountForDomainOptions](arkts-basicservices-createosaccountfordomainoptions-i.md) | Represents a set of optional parameters for creating an OS account bound to the specified domain account. It inherits from [CreateOsAccountOptions](arkts-basicservices-createosaccountoptions-i-sys.md). |
 | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | Represents the domain account information. |
 | [DomainServerConfig](arkts-basicservices-domainserverconfig-i.md) | Represents the configuration of a domain server. |
 | [OsAccountInfo](arkts-basicservices-osaccountinfo-i.md) | Represents information about an OS account. |
@@ -84,7 +84,7 @@ import { osAccount } from '@ohos.account.osAccount';
 | [GetAuthInfoOptions](arkts-basicservices-getauthinfooptions-i-sys.md) | Represents a set of optional parameters for [GetAuthInfo](arkts-basicservices-useridentitymanager-c-sys.md#getauthinfo-4). |
 | [GetDomainAccessTokenOptions](arkts-basicservices-getdomainaccesstokenoptions-i-sys.md) | Defines the options for obtaining a domain access token. |
 | [GetDomainAccountInfoOptions](arkts-basicservices-getdomainaccountinfooptions-i-sys.md) | Defines the options for obtaining domain account information. |
-| [GetDomainAccountInfoPluginOptions](arkts-basicservices-getdomainaccountinfopluginoptions-i-sys.md) | Defines the options for the domain plug-in to obtain the domain account information. The **GetDomainAccountInfoPluginOptions** class inherits from [**GetDomainAccountInfoOptions**](arkts-basicservices-getdomainaccountinfooptions-i-sys.md#getdomainaccountinfooptions). |
+| [GetDomainAccountInfoPluginOptions](arkts-basicservices-getdomainaccountinfopluginoptions-i-sys.md) | Defines the options for the domain plug-in to obtain the domain account information. The **GetDomainAccountInfoPluginOptions** class inherits from [**GetDomainAccountInfoOptions**](arkts-basicservices-getdomainaccountinfooptions-i-sys.md). |
 | [GetInputDataOptions](arkts-basicservices-getinputdataoptions-i-sys.md) | Represents a set of optional parameters for [onGetData](../../../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#ongetdata8). |
 | [GetPropertyRequest](arkts-basicservices-getpropertyrequest-i-sys.md) | Defines the request for obtaining property information. |
 | [IIdmCallback](arkts-basicservices-iidmcallback-i-sys.md) | Provides callbacks for IDM. |

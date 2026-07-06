@@ -56,7 +56,7 @@ The color information consists of three components: R (Red), G (Green), and B (B
 RGBA_8888 = 3
 ```
 
-The color information consists of four components: R (Red), G (Green), B (Blue), and alpha. Each component occupies 8 bits, and the total length is 32 bits. It corresponds to [CAMERA_FORMAT_RGBA_8888 in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-cameraformat-e.md#cameraformat).
+The color information consists of four components: R (Red), G (Green), B (Blue), and alpha. Each component occupies 8 bits, and the total length is 32 bits. It corresponds to [CAMERA_FORMAT_RGBA_8888 in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-cameraformat-e.md).
 
 **Since:** 7
 
@@ -136,7 +136,7 @@ The color information consists of four components: R (Red), G (Green), B (Blue),
 NV21 = 8
 ```
 
-YVU pixel arrangement, where the V component precedes the U component. The color information consists of the luminance component Y and the interleaved chrominance components V and U. The Y component occupies 8 bits, and the UV components occupy 4 bits on average due to 4:2:0 sampling. The total length is 12 bits on average. It corresponds to [CAMERA_FORMAT_YUV_420_SP in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-cameraformat-e.md#cameraformat).
+YVU pixel arrangement, where the V component precedes the U component. The color information consists of the luminance component Y and the interleaved chrominance components V and U. The Y component occupies 8 bits, and the UV components occupy 4 bits on average due to 4:2:0 sampling. The total length is 12 bits on average. It corresponds to [CAMERA_FORMAT_YUV_420_SP in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-cameraformat-e.md).
 
 **Since:** 9
 
@@ -180,7 +180,7 @@ The color information consists of four components: R (Red), G (Green), B (Blue),
 YCBCR_P010 = 11
 ```
 
-The color information consists of the luminance component Y and the chrominance components Cb and Cr. Each component has effective 10 bits. In storage, the Y plane uses 16 bits per pixel (10 of which are effective). The UV plane is interleaved, with every four pixels taking up 32 bits of data (each chrominance component having 10 effective bits), resulting in an average of 15 effective bits overall. It corresponds to [CAMERA_FORMAT_YCBCR_P010 in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-cameraformat-e.md#cameraformat).
+The color information consists of the luminance component Y and the chrominance components Cb and Cr. Each component has effective 10 bits. In storage, the Y plane uses 16 bits per pixel (10 of which are effective). The UV plane is interleaved, with every four pixels taking up 32 bits of data (each chrominance component having 10 effective bits), resulting in an average of 15 effective bits overall. It corresponds to [CAMERA_FORMAT_YCBCR_P010 in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-cameraformat-e.md).
 
 **Since:** 12
 
@@ -192,7 +192,7 @@ The color information consists of the luminance component Y and the chrominance 
 YCRCB_P010 = 12
 ```
 
-The color information consists of the luminance component Y and the chrominance components Cr and Cb. Each component has effective 10 bits. In storage, the Y plane uses 16 bits per pixel (10 of which are effective). The UV plane is interleaved, with every four pixels taking up 32 bits of data (each chrominance component having 10 effective bits), resulting in an average of 15 effective bits overall. It corresponds to [CAMERA_FORMAT_YCRCB_P010 in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-cameraformat-e.md#cameraformat).
+The color information consists of the luminance component Y and the chrominance components Cr and Cb. Each component has effective 10 bits. In storage, the Y plane uses 16 bits per pixel (10 of which are effective). The UV plane is interleaved, with every four pixels taking up 32 bits of data (each chrominance component having 10 effective bits), resulting in an average of 15 effective bits overall. It corresponds to [CAMERA_FORMAT_YCRCB_P010 in CameraFormat](../../apis-camera-kit/arkts-apis/arkts-camera-cameraformat-e.md).
 
 **Since:** 12
 

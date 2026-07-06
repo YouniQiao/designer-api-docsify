@@ -2,7 +2,7 @@
 
 The class of agent extension ability. This class cannot be used in Harmony Archive(HAR).
 
-**Inheritance/Implementation:** AgentExtensionAbility extends [ExtensionAbility](arkts-ability-extensionability-c.md#extensionability)
+**Inheritance/Implementation:** AgentExtensionAbility extends [ExtensionAbility](arkts-ability-extensionability-c.md)
 
 **Since:** 24
 
@@ -11,7 +11,7 @@ The class of agent extension ability. This class cannot be used in Harmony Archi
 ## Modules to Import
 
 ```TypeScript
-import { AgentExtensionAbility } from '@ohos.app.agent.AgentExtensionAbility';
+import { AgentExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onAgentInvoked

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { conversation } from '@ohos.distributedSoftBus.conversation';
+import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## getTrustedDevices
@@ -28,7 +28,7 @@ Obtains device information about all trusted devices. Trusted devices are device
 
 | Type | Description |
 | --- | --- |
-| DeviceNodeInfo[] | list of the obtained device information in[DeviceNodeInfo](arkts-distributedservice-devicenodeinfo-i-sys.md#devicenodeinfo). |
+| DeviceNodeInfo[] | list of the obtained device information in[DeviceNodeInfo](arkts-distributedservice-devicenodeinfo-i-sys.md). |
 
 **Error codes:**
 

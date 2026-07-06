@@ -9,7 +9,7 @@ Set configuration of a watermark. The position starts at top left corner.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## height

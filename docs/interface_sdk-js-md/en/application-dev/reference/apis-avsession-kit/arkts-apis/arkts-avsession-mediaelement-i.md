@@ -2,7 +2,7 @@
 
 The definition of Singer/Radio/Banner.
 
-**Inheritance/Implementation:** MediaElement extends [MediaEntity](arkts-avsession-mediaentity-i.md#mediaentity)
+**Inheritance/Implementation:** MediaElement extends [MediaEntity](arkts-avsession-mediaentity-i.md)
 
 **Since:** 23
 
@@ -13,6 +13,6 @@ The definition of Singer/Radio/Banner.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@ohos.multimedia.avMusicTemplate';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 

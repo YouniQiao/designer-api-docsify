@@ -6,14 +6,14 @@ The continuationManager module provides the continuation/collaboration managemen
 
 **Deprecated since:** 22
 
-**Substitutes:** [distributedDeviceManager:distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md#distributeddevicemanager)
+**Substitutes:** [distributedDeviceManager:distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md)
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from '@ohos.continuation.continuationManager';
+import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

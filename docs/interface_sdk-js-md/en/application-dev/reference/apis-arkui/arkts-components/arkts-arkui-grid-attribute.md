@@ -1,6 +1,6 @@
 # Grid properties/events
 
-In addition to [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) and [scrollable component common attributes](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes) , the following attributes are also supported. In addition to [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) and [scrollable component common events](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events) , the following events are also supported.
+In addition to [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) and [scrollable component common attributes](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes) , the following attributes are also supported. In addition to [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) and [scrollable component common events](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events) , the following events are also supported.
 
 **Inheritance/Implementation:** GridAttribute extends [ScrollableCommonMethod<GridAttribute>](ScrollableCommonMethod<GridAttribute>)
 
@@ -262,7 +262,7 @@ Sets whether to support the scrolling gesture. > **NOTE** > > The component cann
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger ormouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affectthe scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md#scroller).<br>Default value: **true** |
+| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger ormouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affectthe scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).<br>Default value: **true** |
 
 ## focusWrapMode
 
@@ -374,7 +374,7 @@ Sets the minimum number of rows or columns that can be displayed. A value less t
 multiSelectable(value: boolean)
 ```
 
-Sets whether to enable multiselect. After multiselect is enabled, you can use **GridItem**'s **selected** attribute and **onSelect** event to obtain the selection state of **GridItem**. Additionally, you can set the selected state style of **GridItem** using [Polymorphic Style](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) (by default, **GridItem** has no selected state style ).
+Sets whether to enable multiselect. After multiselect is enabled, you can use **GridItem**'s **selected** attribute and **onSelect** event to obtain the selection state of **GridItem**. Additionally, you can set the selected state style of **GridItem** using [Polymorphic Style](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) (by default, **GridItem** has no selected state style ).
 
 **Since:** 8
 
@@ -498,7 +498,7 @@ After binding, a callback is triggered when the drag moves within the range of a
 onItemDragStart(event: OnItemDragStartCallback)
 ```
 
-Triggered when a grid item starts to be dragged. This event is triggered when the user long presses a grid item. Drag gesture recognition is also initiated by a long press, and the event processing mechanism prioritizes child component events. Therefore, when the grid item is bound to the [LongPressGesture](arkts-arkui-longpressgestureinterface-i.md#longpressgestureinterface), it cannot be dragged. In light of this, if both long press and drag operations are required on the grid item, you can use the universal drag event. The floating grid element being dragged can move within the application window. If it is necessary to restrict its movement range, this can be achieved through custom gestures. For details, see [Example 16: Customizing the Drag Effect for GridItem](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-16-customizing-the-drag-effect-for-griditem). Automatic scrolling is not supported when a grid item is dragged to the edge of the grid. You can use the universal drag event to implement this function. For details, see [Example 17: Dragging GridItem Components with Drag Events](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-17-dragging-grid-items-with-drag-events).
+Triggered when a grid item starts to be dragged. This event is triggered when the user long presses a grid item. Drag gesture recognition is also initiated by a long press, and the event processing mechanism prioritizes child component events. Therefore, when the grid item is bound to the [LongPressGesture](arkts-arkui-longpressgestureinterface-i.md), it cannot be dragged. In light of this, if both long press and drag operations are required on the grid item, you can use the universal drag event. The floating grid element being dragged can move within the application window. If it is necessary to restrict its movement range, this can be achieved through custom gestures. For details, see [Example 16: Customizing the Drag Effect for GridItem](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-16-customizing-the-drag-effect-for-griditem). Automatic scrolling is not supported when a grid item is dragged to the edge of the grid. You can use the universal drag event to implement this function. For details, see [Example 17: Dragging GridItem Components with Drag Events](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-17-dragging-grid-items-with-drag-events).
 
 **Since:** 8
 
@@ -510,7 +510,7 @@ Triggered when a grid item starts to be dragged. This event is triggered when th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | OnItemDragStartCallback | Yes | Callback triggered when the dragging of a grid element starts.<br>In APIversion 22 and earlier versions, the parameter type is**(event: ItemDragInfo, itemIndex: number) =&gt; (() =&gt; any) \| void**. For details about the **event** and**itemIndex** parameters, see [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md#onitemdragstartcallback).<br>**Since:** 23 |
+| event | OnItemDragStartCallback | Yes | Callback triggered when the dragging of a grid element starts.<br>In APIversion 22 and earlier versions, the parameter type is**(event: ItemDragInfo, itemIndex: number) =&gt; (() =&gt; any) \| void**. For details about the **event** and**itemIndex** parameters, see [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md).<br>**Since:** 23 |
 
 ## onItemDrop
 
@@ -674,7 +674,7 @@ Called when the first or last item displayed in the grid changes.
 onScrollStart(event: () => void)
 ```
 
-Triggered when the grid starts scrolling initiated by the user's finger dragging the grid or its scrollbar. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroller-c.md#scroller) starts.
+Triggered when the grid starts scrolling initiated by the user's finger dragging the grid or its scrollbar. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroller-c.md) starts.
 
 **Since:** 10
 
@@ -696,7 +696,7 @@ Triggered when the grid starts scrolling initiated by the user's finger dragging
 onScrollStop(event: () => void)
 ```
 
-Triggered when the grid stops scrolling after the user's finger leaves the screen. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroller-c.md#scroller) stops.
+Triggered when the grid stops scrolling after the user's finger leaves the screen. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroller-c.md) stops.
 
 **Since:** 10
 

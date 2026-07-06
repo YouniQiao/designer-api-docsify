@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## queryAbilityInfo
@@ -28,7 +28,7 @@ Obtains the ability information based on the given want and ability flags. This 
 | --- | --- | --- | --- |
 | want | Want | Yes | Want containing the bundle name to query. |
 | abilityFlags | number | Yes | Type of the ability information to obtain. |
-| callback | AsyncCallback&lt;Array&lt;AbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to returnthe result. If the operation is successful, **err** is **null** and **data** is the array of abilityinformation obtained. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;Array&lt;AbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to returnthe result. If the operation is successful, **err** is **null** and **data** is the array of abilityinformation obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -95,7 +95,7 @@ Obtains the ability information based on the given want, ability flags, and user
 | want | Want | Yes | Want containing the bundle name to query. |
 | abilityFlags | number | Yes | Type of the ability information to obtain. |
 | userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
-| callback | AsyncCallback&lt;Array&lt;AbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to returnthe result. If the operation is successful, **err** is **null** and **data** is the array of abilityinformation obtained. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;Array&lt;AbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to returnthe result. If the operation is successful, **err** is **null** and **data** is the array of abilityinformation obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

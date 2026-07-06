@@ -1,19 +1,19 @@
 # AuthenticatorCallback
 
-Provides OAuth authenticator callbacks. > **NOTE** > > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [AuthCallback](arkts-basicservices-authcallback-i.md#authcallback) instead.
+Provides OAuth authenticator callbacks. > **NOTE** > > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [AuthCallback](arkts-basicservices-authcallback-i.md) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [AuthCallback](arkts-basicservices-authcallback-i.md#authcallback)
+**Substitutes:** [AuthCallback](arkts-basicservices-authcallback-i.md)
 
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@ohos.account.appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onRequestRedirected

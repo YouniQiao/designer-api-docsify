@@ -1,8 +1,8 @@
 # MagneticFieldResponse
 
-Describes the magnetic field sensor data. It extends from [Response](arkts-sensorservice-response-i.md#response).
+Describes the magnetic field sensor data. It extends from [Response](arkts-sensorservice-response-i.md).
 
-**Inheritance/Implementation:** MagneticFieldResponse extends [Response](arkts-sensorservice-response-i.md#response)
+**Inheritance/Implementation:** MagneticFieldResponse extends [Response](arkts-sensorservice-response-i.md)
 
 **Since:** 8
 
@@ -11,7 +11,7 @@ Describes the magnetic field sensor data. It extends from [Response](arkts-senso
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@ohos.sensor';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## x

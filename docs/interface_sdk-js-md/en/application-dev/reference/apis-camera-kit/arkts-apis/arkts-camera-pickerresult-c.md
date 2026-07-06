@@ -9,7 +9,7 @@ Defines the processing result of the camera picker.
 ## Modules to Import
 
 ```TypeScript
-import { cameraPicker } from '@ohos.multimedia.cameraPicker';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## mediaType

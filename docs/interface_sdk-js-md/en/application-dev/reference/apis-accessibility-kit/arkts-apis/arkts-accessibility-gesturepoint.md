@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { GesturePoint } from '@ohos.accessibility.GesturePoint';
+import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## Summary

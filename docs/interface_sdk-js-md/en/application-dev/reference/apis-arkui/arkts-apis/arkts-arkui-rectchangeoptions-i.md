@@ -9,7 +9,7 @@ Describes the value and reason returned upon a window rectangle (position and si
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## reason

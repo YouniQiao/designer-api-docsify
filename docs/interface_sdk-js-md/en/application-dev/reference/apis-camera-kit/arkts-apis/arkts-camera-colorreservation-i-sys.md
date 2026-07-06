@@ -1,8 +1,8 @@
 # ColorReservation (System API)
 
-ColorReservation extends [ColorReservationQuery](arkts-camera-colorreservationquery-i-sys.md#colorreservationquery) Provides API for obtaining and setting a color reservation type.
+ColorReservation extends [ColorReservationQuery](arkts-camera-colorreservationquery-i-sys.md) Provides API for obtaining and setting a color reservation type.
 
-**Inheritance/Implementation:** ColorReservation extends [ColorReservationQuery](arkts-camera-colorreservationquery-i-sys.md#colorreservationquery)
+**Inheritance/Implementation:** ColorReservation extends [ColorReservationQuery](arkts-camera-colorreservationquery-i-sys.md)
 
 **Since:** 15
 
@@ -13,7 +13,7 @@ ColorReservation extends [ColorReservationQuery](arkts-camera-colorreservationqu
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getColorReservation

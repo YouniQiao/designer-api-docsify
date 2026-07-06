@@ -9,7 +9,7 @@ Describes information about the automatic synchronization trigger mode.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@ohos.data.cloudData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## mode

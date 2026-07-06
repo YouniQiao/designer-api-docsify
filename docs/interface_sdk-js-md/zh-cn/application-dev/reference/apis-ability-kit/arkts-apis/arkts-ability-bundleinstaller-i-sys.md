@@ -93,7 +93,7 @@ createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待创建应用分身的包名。 |
-| createAppCloneParam | CreateAppCloneParam | 否 | 指定创建应用分身所需的其他参数，默认值：参照[createAppCloneParam](arkts-ability-createappcloneparam-i-sys.md#createappcloneparam)的默认值。 |
+| createAppCloneParam | CreateAppCloneParam | 否 | 指定创建应用分身所需的其他参数，默认值：参照[createAppCloneParam](arkts-ability-createappcloneparam-i-sys.md)的默认值。 |
 
 **返回值：**
 
@@ -234,7 +234,7 @@ destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: Des
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待删除应用分身的包名。 |
 | appIndex | number | 是 | 待删除应用分身的索引。 |
-| destroyAppCloneParam | DestroyAppCloneParam | 否 | 指定删除应用分身所需的其他参数，默认值：参照[DestroyAppCloneParam](arkts-ability-destroyappcloneparam-i-sys.md#destroyappcloneparam)的默认值。 |
+| destroyAppCloneParam | DestroyAppCloneParam | 否 | 指定删除应用分身所需的其他参数，默认值：参照[DestroyAppCloneParam](arkts-ability-destroyappcloneparam-i-sys.md)的默认值。 |
 
 **返回值：**
 
@@ -296,7 +296,7 @@ try {
 install(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void
 ```
 
-安装指定应用。使用callback异步回调。 > **说明：** > > 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md#applicationinfo)中的 > appDistributionType字段说明。
+安装指定应用。使用callback异步回调。 > **说明：** > > 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的 > appDistributionType字段说明。
 
 **起始版本：** 9
 
@@ -304,7 +304,7 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 - API版本23+：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE or (ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE)
 - API版本13 - 22：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE
 - API版本10 - 12：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE
-- API版本9 - 9：ohos.permission.INSTALL_BUNDLE
+- API版本9：ohos.permission.INSTALL_BUNDLE
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -316,7 +316,7 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签名需要保持一致。 |
 | installParam | InstallParam | 是 | 指定安装所需的其他参数。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，安装应用成功，err为undefined，否则为错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -341,15 +341,15 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 | [17700043](../errorcode-bundle.md#17700043-数据代理中的权限配置错误) | Failed to install the HAP because of low APL in the non-system data proxy(required APL: system_basic or system_core). |
 | [17700044](../errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) | Failed to install the HAP because the isolationMode configured is notsupported. |
 | [17700047](../errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) | Failed to install the HAP because the VersionCode to be updated is notgreater than the current VersionCode. |
-| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) | Failed to install the HAP because the code signature verification isfailed.<br>**适用版本：** 10 |
-| [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) | Failed to install the HAP because enterprise normal/MDM bundle cannot beinstalled on non-enterprise device.<br>**适用版本：** 10 |
-| [17700052](../errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) | Failed to install the HAP because debug bundle cannot be installed under non-developer mode.<br>**适用版本：** 11 |
-| [17700054](../errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) | Failed to install the HAP because the HAP requests wrongpermissions.<br>**适用版本：** 11 |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because the device has been controlled.<br>**适用版本：** 12 |
-| [17700066](../errorcode-bundle.md#17700066-安装失败native软件包安装失败) | Failed to install the HAP because installing the native packagefailed.<br>**适用版本：** 12 |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13 |
-| [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) | Failed to install the HAP and restore to preinstalled bundle.<br>**适用版本：** 17 |
-| [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) | Failed to install the HAP or HSP because the app distribution type is notallowed.<br>**适用版本：** 18 |
+| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) | Failed to install the HAP because the code signature verification isfailed.<br>**适用版本：** 10+ |
+| [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) | Failed to install the HAP because enterprise normal/MDM bundle cannot beinstalled on non-enterprise device.<br>**适用版本：** 10+ |
+| [17700052](../errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) | Failed to install the HAP because debug bundle cannot be installed under non-developer mode.<br>**适用版本：** 11+ |
+| [17700054](../errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) | Failed to install the HAP because the HAP requests wrongpermissions.<br>**适用版本：** 11+ |
+| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because the device has been controlled.<br>**适用版本：** 12+ |
+| [17700066](../errorcode-bundle.md#17700066-安装失败native软件包安装失败) | Failed to install the HAP because installing the native packagefailed.<br>**适用版本：** 12+ |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) | Failed to install the HAP and restore to preinstalled bundle.<br>**适用版本：** 17+ |
+| [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) | Failed to install the HAP or HSP because the app distribution type is notallowed.<br>**适用版本：** 18+ |
 
 **示例：**
 
@@ -389,7 +389,7 @@ try {
 install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-安装指定应用。使用callback异步回调。 > **说明：** > > 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md#applicationinfo)中的 > appDistributionType字段说明。
+安装指定应用。使用callback异步回调。 > **说明：** > > 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的 > appDistributionType字段说明。
 
 **起始版本：** 9
 
@@ -397,7 +397,7 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 - API版本23+：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE or (ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE)
 - API版本13 - 22：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE
 - API版本10 - 12：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE
-- API版本9 - 9：ohos.permission.INSTALL_BUNDLE
+- API版本9：ohos.permission.INSTALL_BUNDLE
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -408,7 +408,7 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签名需要保持一致。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，安装应用成功，err为undefined，否则为错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -432,15 +432,15 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 | [17700043](../errorcode-bundle.md#17700043-数据代理中的权限配置错误) | Failed to install the HAP because of low APL in the non-system data proxy(required APL: system_basic or system_core). |
 | [17700044](../errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) | Failed to install the HAP because the isolationMode configured is notsupported. |
 | [17700047](../errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) | Failed to install the HAP because the VersionCode to be updated is notgreater than the current VersionCode. |
-| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) | Failed to install the HAP because the code signature verification isfailed.<br>**适用版本：** 10 |
-| [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) | Failed to install the HAP because enterprise normal/MDM bundle cannot beinstalled on non-enterprise device.<br>**适用版本：** 10 |
-| [17700052](../errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) | Failed to install the HAP because debug bundle cannot be installed under non-developer mode.<br>**适用版本：** 11 |
-| [17700054](../errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) | Failed to install the HAP because the HAP requests wrongpermissions.<br>**适用版本：** 11 |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because the device has been controlled.<br>**适用版本：** 12 |
-| [17700066](../errorcode-bundle.md#17700066-安装失败native软件包安装失败) | Failed to install the HAP because installing the native packagefailed.<br>**适用版本：** 12 |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13 |
-| [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) | Failed to install the HAP and restore to preinstalled bundle.<br>**适用版本：** 17 |
-| [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) | Failed to install the HAP or HSP because the app distribution type is notallowed.<br>**适用版本：** 18 |
+| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) | Failed to install the HAP because the code signature verification isfailed.<br>**适用版本：** 10+ |
+| [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) | Failed to install the HAP because enterprise normal/MDM bundle cannot beinstalled on non-enterprise device.<br>**适用版本：** 10+ |
+| [17700052](../errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) | Failed to install the HAP because debug bundle cannot be installed under non-developer mode.<br>**适用版本：** 11+ |
+| [17700054](../errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) | Failed to install the HAP because the HAP requests wrongpermissions.<br>**适用版本：** 11+ |
+| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because the device has been controlled.<br>**适用版本：** 12+ |
+| [17700066](../errorcode-bundle.md#17700066-安装失败native软件包安装失败) | Failed to install the HAP because installing the native packagefailed.<br>**适用版本：** 12+ |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) | Failed to install the HAP and restore to preinstalled bundle.<br>**适用版本：** 17+ |
+| [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) | Failed to install the HAP or HSP because the app distribution type is notallowed.<br>**适用版本：** 18+ |
 
 **示例：**
 
@@ -475,7 +475,7 @@ try {
 install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
-安装指定应用。使用Promise异步回调。 > **说明：** > > 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md#applicationinfo)中的 > appDistributionType字段说明。
+安装指定应用。使用Promise异步回调。 > **说明：** > > 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的 > appDistributionType字段说明。
 
 **起始版本：** 9
 
@@ -483,7 +483,7 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 - API版本23+：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE or (ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE)
 - API版本13 - 22：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE
 - API版本10 - 12：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE
-- API版本9 - 9：ohos.permission.INSTALL_BUNDLE
+- API版本9：ohos.permission.INSTALL_BUNDLE
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -494,7 +494,7 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签名需要保持一致。 |
-| installParam | InstallParam | 否 | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installparam-i-sys.md#installparam)的默认值。<br>**起始版本：** 12 |
+| installParam | InstallParam | 否 | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installparam-i-sys.md)的默认值。<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -525,15 +525,15 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 | [17700043](../errorcode-bundle.md#17700043-数据代理中的权限配置错误) | Failed to install the HAP because of low APL in the non-system data proxy(required APL: system_basic or system_core). |
 | [17700044](../errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) | Failed to install the HAP because the isolationMode configured is notsupported. |
 | [17700047](../errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) | Failed to install the HAP because the VersionCode to be updated is notgreater than the current VersionCode. |
-| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) | Failed to install the HAP because the code signature verification isfailed.<br>**适用版本：** 10 |
-| [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) | Failed to install the HAP because enterprise normal/MDM bundle cannot beinstalled on non-enterprise device.<br>**适用版本：** 10 |
-| [17700052](../errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) | Failed to install the HAP because debug bundle cannot be installed under non-developer mode.<br>**适用版本：** 11 |
-| [17700054](../errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) | Failed to install the HAP because the HAP requests wrongpermissions.<br>**适用版本：** 11 |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because the device has been controlled.<br>**适用版本：** 12 |
-| [17700066](../errorcode-bundle.md#17700066-安装失败native软件包安装失败) | Failed to install the HAP because installing the native packagefailed.<br>**适用版本：** 12 |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13 |
-| [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) | Failed to install the HAP and restore to preinstalled bundle.<br>**适用版本：** 17 |
-| [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) | Failed to install the HAP or HSP because the app distribution type is notallowed.<br>**适用版本：** 18 |
+| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) | Failed to install the HAP because the code signature verification isfailed.<br>**适用版本：** 10+ |
+| [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) | Failed to install the HAP because enterprise normal/MDM bundle cannot beinstalled on non-enterprise device.<br>**适用版本：** 10+ |
+| [17700052](../errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) | Failed to install the HAP because debug bundle cannot be installed under non-developer mode.<br>**适用版本：** 11+ |
+| [17700054](../errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) | Failed to install the HAP because the HAP requests wrongpermissions.<br>**适用版本：** 11+ |
+| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because the device has been controlled.<br>**适用版本：** 12+ |
+| [17700066](../errorcode-bundle.md#17700066-安装失败native软件包安装失败) | Failed to install the HAP because installing the native packagefailed.<br>**适用版本：** 12+ |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) | Failed to install the HAP and restore to preinstalled bundle.<br>**适用版本：** 17+ |
+| [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) | Failed to install the HAP or HSP because the app distribution type is notallowed.<br>**适用版本：** 18+ |
 
 **示例：**
 
@@ -588,7 +588,7 @@ installPlugin(hostBundleName: string, pluginFilePaths: Array<string>, pluginPara
 | --- | --- | --- | --- |
 | hostBundleName | string | 是 | 待安装插件的应用包名。 |
 | pluginFilePaths | Array&lt;string&gt; | 是 | 存储插件程序包的路径。当传入多个文件路径或者一个目录时，需确保这些文件是同一插件程序的HSP，且这些HSP的签名需要保持一致。 |
-| pluginParam | PluginParam | 否 | 指定安装插件所需的参数，默认值：参照 [PluginParam](arkts-ability-pluginparam-i-sys.md#pluginparam) 的默认值。 |
+| pluginParam | PluginParam | 否 | 指定安装插件所需的参数，默认值：参照 [PluginParam](arkts-ability-pluginparam-i-sys.md) 的默认值。 |
 
 **返回值：**
 
@@ -655,7 +655,7 @@ try {
 installPreexistingApp(bundleName: string, userId?: number): Promise<void>
 ```
 
-在指定用户下安装指定bundleName的应用。使用Promise异步回调。 > **说明：** > > 该接口不支持安装[签名证书的分发类型](arkts-ability-applicationinfo-i.md#applicationinfo)为enterprise，enterprise_mdm和 > enterprise_normal的应用。
+在指定用户下安装指定bundleName的应用。使用Promise异步回调。 > **说明：** > > 该接口不支持安装[签名证书的分发类型](arkts-ability-applicationinfo-i.md)为enterprise，enterprise_mdm和 > enterprise_normal的应用。
 
 **起始版本：** 12
 
@@ -688,7 +688,7 @@ installPreexistingApp(bundleName: string, userId?: number): Promise<void>
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName cannot be found or the bundle is not installed bythe specified user. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The userId is invalid. |
 | [17700071](../errorcode-bundle.md#17700071-不允许企业应用安装) | It is not allowed to install the enterprise bundle. |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**适用版本：** 14 |
+| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**适用版本：** 14+ |
 
 **示例：**
 
@@ -739,7 +739,7 @@ recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待恢复应用的包名。 |
 | installParam | InstallParam | 是 | 指定安装所需的其他参数。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，回滚应用成功，err为undefined，否则为错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，回滚应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -750,8 +750,8 @@ recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13 |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**适用版本：** 14 |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**适用版本：** 14+ |
 
 **示例：**
 
@@ -806,7 +806,7 @@ recover(bundleName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待恢复应用的包名。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，回滚应用成功，err为undefined，否则为错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，回滚应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -816,8 +816,8 @@ recover(bundleName: string, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13 |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**适用版本：** 14 |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**适用版本：** 14+ |
 
 **示例：**
 
@@ -867,7 +867,7 @@ recover(bundleName: string, installParam?: InstallParam): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待卸载应用的包名。 |
-| installParam | InstallParam | 否 | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installparam-i-sys.md#installparam)的默认值。 |
+| installParam | InstallParam | 否 | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installparam-i-sys.md)的默认值。 |
 
 **返回值：**
 
@@ -884,8 +884,8 @@ recover(bundleName: string, installParam?: InstallParam): Promise<void>
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13 |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**适用版本：** 14 |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**适用版本：** 14+ |
 
 **示例：**
 
@@ -1004,7 +1004,7 @@ uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallbac
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待卸载应用的包名。 |
 | installParam | InstallParam | 是 | 指定安装所需的其他参数。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，卸载应用成功，err为undefined，否则为错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，卸载应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1018,9 +1018,9 @@ uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallbac
 | [17700020](../errorcode-bundle.md#17700020-预置应用无法卸载) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
 | [17700040](../errorcode-bundle.md#17700040-不允许卸载应用间共享库) | The specified bundle is a shared bundle and cannot be uninstalled. |
 | [17700045](../errorcode-bundle.md#17700045-企业设备管理不允许卸载该应用) | Failed to uninstall the HAP because uninstall is not allowed by theenterprise device management. |
-| [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) | Failed to uninstall the HAP because uninstalling the native packagefailed.<br>**适用版本：** 12 |
-| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) | The specified application cannot be uninstalled.<br>**适用版本：** 13 |
-| [17700062](../errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) | Failed to uninstall the app because the app is locked.<br>**适用版本：** 15 |
+| [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) | Failed to uninstall the HAP because uninstalling the native packagefailed.<br>**适用版本：** 12+ |
+| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) | The specified application cannot be uninstalled.<br>**适用版本：** 13+ |
+| [17700062](../errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) | Failed to uninstall the app because the app is locked.<br>**适用版本：** 15+ |
 
 **示例：**
 
@@ -1075,7 +1075,7 @@ uninstall(bundleName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待卸载应用的包名。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，卸载应用成功，err为undefined，否则为错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，卸载应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1088,8 +1088,8 @@ uninstall(bundleName: string, callback: AsyncCallback<void>): void
 | [17700020](../errorcode-bundle.md#17700020-预置应用无法卸载) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
 | [17700040](../errorcode-bundle.md#17700040-不允许卸载应用间共享库) | The specified bundle is a shared bundle and cannot be uninstalled. |
 | [17700045](../errorcode-bundle.md#17700045-企业设备管理不允许卸载该应用) | Failed to uninstall the HAP because uninstall is not allowed by theenterprise device management. |
-| [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) | Failed to uninstall the HAP because uninstalling the native packagefailed.<br>**适用版本：** 12 |
-| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) | The specified application cannot be uninstalled.<br>**适用版本：** 13 |
+| [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) | Failed to uninstall the HAP because uninstalling the native packagefailed.<br>**适用版本：** 12+ |
+| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) | The specified application cannot be uninstalled.<br>**适用版本：** 13+ |
 
 **示例：**
 
@@ -1139,7 +1139,7 @@ uninstall(bundleName: string, installParam?: InstallParam): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待卸载应用的包名。 |
-| installParam | InstallParam | 否 | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installparam-i-sys.md#installparam)的默认值。<br>**起始版本：** 15 |
+| installParam | InstallParam | 否 | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installparam-i-sys.md)的默认值。<br>**起始版本：** 15 |
 
 **返回值：**
 
@@ -1159,9 +1159,9 @@ uninstall(bundleName: string, installParam?: InstallParam): Promise<void>
 | [17700020](../errorcode-bundle.md#17700020-预置应用无法卸载) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
 | [17700040](../errorcode-bundle.md#17700040-不允许卸载应用间共享库) | The specified bundle is a shared bundle and cannot be uninstalled. |
 | [17700045](../errorcode-bundle.md#17700045-企业设备管理不允许卸载该应用) | Failed to uninstall the HAP because uninstall is not allowed by theenterprise device management. |
-| [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) | Failed to uninstall the HAP because uninstalling the native packagefailed.<br>**适用版本：** 12 |
-| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) | The specified application cannot be uninstalled.<br>**适用版本：** 13 |
-| [17700062](../errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) | Failed to uninstall the app because the app is locked.<br>**适用版本：** 15 |
+| [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) | Failed to uninstall the HAP because uninstalling the native packagefailed.<br>**适用版本：** 12+ |
+| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) | The specified application cannot be uninstalled.<br>**适用版本：** 13+ |
+| [17700062](../errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) | Failed to uninstall the app because the app is locked.<br>**适用版本：** 15+ |
 
 **示例：**
 
@@ -1215,7 +1215,7 @@ uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uninstallParam | UninstallParam | 是 | 共享包卸载需指定的参数信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，卸载应用成功，err为undefined，否则为错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，卸载应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1410,7 +1410,7 @@ uninstallPlugin(hostBundleName: string, pluginBundleName: string, pluginParam?: 
 | --- | --- | --- | --- |
 | hostBundleName | string | 是 | 待卸载插件的应用包名。 |
 | pluginBundleName | string | 是 | 插件的包名。 |
-| pluginParam | PluginParam | 否 | 指定卸载插件所需的参数，默认值：参照 [PluginParam](arkts-ability-pluginparam-i-sys.md#pluginparam) 的默认值。 |
+| pluginParam | PluginParam | 否 | 指定卸载插件所需的参数，默认值：参照 [PluginParam](arkts-ability-pluginparam-i-sys.md) 的默认值。 |
 
 **返回值：**
 
@@ -1479,7 +1479,7 @@ uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待卸载更新应用的包名。 |
-| installParam | InstallParam | 否 | 指定卸载更新所需的其他参数，默认值：参照[InstallParam](arkts-ability-installparam-i-sys.md#installparam)的默认值。其中userId无法指定，调用本接口将对所有已安装相应应用的用户进行卸载更新操作。 |
+| installParam | InstallParam | 否 | 指定卸载更新所需的其他参数，默认值：参照[InstallParam](arkts-ability-installparam-i-sys.md)的默认值。其中userId无法指定，调用本接口将对所有已安装相应应用的用户进行卸载更新操作。 |
 
 **返回值：**
 
@@ -1497,9 +1497,9 @@ uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 | [17700045](../errorcode-bundle.md#17700045-企业设备管理不允许卸载该应用) | Failed to uninstall because enterprise device management disallow uninstall. |
 | [17700057](../errorcode-bundle.md#17700057-指定的应用不是预置应用) | Failed to uninstall updates because the HAP is not pre-installed. |
-| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) | The specified application cannot be uninstalled.<br>**适用版本：** 13 |
-| [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) | Failed to uninstall the HAP because uninstalling the native packagefailed.<br>**适用版本：** 13 |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13 |
+| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) | The specified application cannot be uninstalled.<br>**适用版本：** 13+ |
+| [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) | Failed to uninstall the HAP because uninstalling the native packagefailed.<br>**适用版本：** 13+ |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
 
 **示例：**
 
@@ -1553,7 +1553,7 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, cal
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签名需要保持一致。 |
 | installParam | InstallParam | 是 | 指定安装所需的其他参数。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，安装应用成功，err为undefined，否则为错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1634,7 +1634,7 @@ updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签名需要保持一致。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，安装应用成功，err为undefined，否则为错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1709,7 +1709,7 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签名需要保持一致。 |
-| installParam | InstallParam | 否 | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installparam-i-sys.md#installparam)的默认值。 |
+| installParam | InstallParam | 否 | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installparam-i-sys.md)的默认值。 |
 
 **返回值：**
 

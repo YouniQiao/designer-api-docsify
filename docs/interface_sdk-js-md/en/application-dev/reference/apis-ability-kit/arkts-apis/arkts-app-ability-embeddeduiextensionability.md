@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { EmbeddedUIExtensionAbility } from '@ohos.app.ability.EmbeddedUIExtensionAbility';
+import { EmbeddedUIExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -12,5 +12,5 @@ import { EmbeddedUIExtensionAbility } from '@ohos.app.ability.EmbeddedUIExtensio
 
 | Name | Description |
 | --- | --- |
-| [EmbeddedUIExtensionAbility](arkts-ability-embeddeduiextensionability-c.md) | EmbeddedUIExtensionAbility is a component that enables cross-process UI embedding. It inherits from [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability). You can implement this class to add cross-process UI embedding capabilities to your applications. A typical use case is embedding a UI, provided by the application's own EmbeddedUIExtensionAbility, into a [UIAbility](arkts-app-ability-uiability.md) page using an [EmbeddedComponent](@internal/component/ets/embedded_component). For details about the inheritance relationship of each ability, see [Inheritance Relationship](../../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship) . This API can be properly called on PCs/2-in-1 devices and tablets. It is unavailable on other devices. |
+| [EmbeddedUIExtensionAbility](arkts-ability-embeddeduiextensionability-c.md) | EmbeddedUIExtensionAbility is a component that enables cross-process UI embedding. It inherits from [UIExtensionAbility](arkts-ability-uiextensionability-c.md). You can implement this class to add cross-process UI embedding capabilities to your applications. A typical use case is embedding a UI, provided by the application's own EmbeddedUIExtensionAbility, into a [UIAbility](arkts-app-ability-uiability.md) page using an [EmbeddedComponent](@internal/component/ets/embedded_component). For details about the inheritance relationship of each ability, see [Inheritance Relationship](../../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship) . This API can be properly called on PCs/2-in-1 devices and tablets. It is unavailable on other devices. |
 

@@ -9,7 +9,7 @@ Provides the media query result.
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from '@ohos.mediaquery';
+import { mediaquery } from '@kit.ArkUI';
 ```
 
 ## matches

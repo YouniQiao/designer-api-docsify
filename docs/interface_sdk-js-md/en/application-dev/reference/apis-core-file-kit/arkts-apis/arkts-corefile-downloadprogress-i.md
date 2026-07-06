@@ -9,7 +9,7 @@ Represents information about the download progress of a cloud file.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@ohos.file.cloudSync';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## error

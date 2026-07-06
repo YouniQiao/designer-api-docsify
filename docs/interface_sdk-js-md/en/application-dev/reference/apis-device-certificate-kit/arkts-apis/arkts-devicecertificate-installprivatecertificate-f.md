@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## installPrivateCertificate
@@ -32,7 +32,7 @@ Installs a private credential. This API uses an asynchronous callback to return 
 | keystore | Uint8Array | Yes | Keystore file with a key pair and certificate. The value contains up to 20480bytes. |
 | keystorePwd | string | Yes | Password of the keystore file. The password cannot exceed 32 bytes. |
 | certAlias | string | Yes | Credential alias. Currently, the alias can contain only digits, letters, andunderscores (_) and should not exceed 32 bytes. |
-| callback | AsyncCallback&lt;CMResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is **uri** in the [CMResult](arkts-devicecertificate-cmresult-i.md#cmresult) object.Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;CMResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is **uri** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -42,7 +42,7 @@ Installs a private credential. This API uses an asynchronous callback to return 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500003](../errorcode-certManager.md#17500003-invalid-certificate-or-credential) | The keystore is in an invalid format or the keystore password is incorrect. |
-| [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) | The number of certificates or credentials reaches the maximum allowed.<br>**Applicable version:** 12 |
+| [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) | The number of certificates or credentials reaches the maximum allowed.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -96,7 +96,7 @@ Installs a private credential. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **uri** in the[CMResult](arkts-devicecertificate-cmresult-i.md#cmresult) object. |
+| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **uri** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 
@@ -106,7 +106,7 @@ Installs a private credential. This API uses a promise to return the result.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500003](../errorcode-certManager.md#17500003-invalid-certificate-or-credential) | The keystore is in an invalid format or the keystore password is incorrect. |
-| [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) | The number of certificates or credentials reaches the maximum allowed.<br>**Applicable version:** 12 |
+| [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) | The number of certificates or credentials reaches the maximum allowed.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -161,7 +161,7 @@ Installs a private credential and specifies its storage level. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **uri** in the[CMResult](arkts-devicecertificate-cmresult-i.md#cmresult) object. |
+| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **uri** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

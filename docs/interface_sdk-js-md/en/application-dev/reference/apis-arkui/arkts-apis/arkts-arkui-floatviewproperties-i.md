@@ -9,7 +9,7 @@ Provides the properties of the float view.
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from '@ohos.window.floatView';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## avoidArea

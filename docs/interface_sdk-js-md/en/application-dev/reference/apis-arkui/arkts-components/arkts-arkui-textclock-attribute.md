@@ -96,7 +96,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceStr | Yes | Font family. Default font: **'HarmonyOS Sans'**<br>The 'HarmonyOS Sans' font and[registered custom fonts](../arkts-apis/arkts-font.md#font) are supported for applications.<br>Only the 'HarmonyOS Sans'font is supported for widgets. |
+| value | ResourceStr | Yes | Font family. Default font: **'HarmonyOS Sans'**<br>The 'HarmonyOS Sans' font and[registered custom fonts](../arkts-apis/arkts-font.md) are supported for applications.<br>Only the 'HarmonyOS Sans'font is supported for widgets. |
 
 ## fontFeature
 

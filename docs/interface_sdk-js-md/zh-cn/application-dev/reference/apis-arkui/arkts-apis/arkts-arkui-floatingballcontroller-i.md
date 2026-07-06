@@ -468,7 +468,7 @@ startFloatingBall(params: FloatingBallParams): Promise<void>
 | [1300023](../errorcode-window.md#1300023-闪控球内部错误) | Floating ball internal error. |
 | [1300024](../errorcode-window.md#1300024-闪控球窗口状态异常) | The floating ball window state is abnormal. |
 | [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) | The floating ball state does not support this operation. |
-| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause:App has already started float view.<br>**适用版本：** 26.0.0 |
+| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause:App has already started float view.<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 

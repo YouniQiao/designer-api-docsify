@@ -11,7 +11,7 @@ Represents the details of a single access record.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@ohos.privacyManager';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## accessDuration

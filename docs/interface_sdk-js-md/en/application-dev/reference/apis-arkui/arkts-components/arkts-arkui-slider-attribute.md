@@ -1,6 +1,6 @@
 # Slider properties/events
 
-All the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) except **responseRegion** are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following events are supported.
+All the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) except **responseRegion** are supported. In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following events are supported.
 
 **Inheritance/Implementation:** SliderAttribute extends [CommonMethod<SliderAttribute>](CommonMethod<SliderAttribute>)
 
@@ -118,7 +118,7 @@ Sets the size of the slider in the block direction. When the slider type is set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | SizeOptions | Yes | Size of the slider in the block direction.<br>Default value:<br>- For[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).OutSet: **{width: 18, height: 18}**<br>- For[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).InSet: **{width: 12, height: 12}**<br>- For[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).NONE: This parameter is not effective.<br>If the set **blockSize** hasdifferent width and height values, the smaller value is taken. If one or both of the width and height valuesare less than or equal to 0, the default value is used instead. |
+| value | SizeOptions | Yes | Size of the slider in the block direction.<br>Default value:<br>- For[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet: **{width: 18, height: 18}**<br>- For[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet: **{width: 12, height: 12}**<br>- For[SliderStyle](arkts-arkui-sliderstyle-e.md).NONE: This parameter is not effective.<br>If the set **blockSize** hasdifferent width and height values, the smaller value is taken. If one or both of the width and height valuesare less than or equal to 0, the default value is used instead. |
 
 ## blockStyle
 
@@ -214,7 +214,7 @@ Specifies whether to enable haptic feedback. To enable haptic feedback, you must
 maxLabel(value: string)
 ```
 
-Sets the maximum value. > **NOTE** > > This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use > **max** instead. **max** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md#slideroptions).
+Sets the maximum value. > **NOTE** > > This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use > **max** instead. **max** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md).
 
 **Since:** 7
 
@@ -236,7 +236,7 @@ Sets the maximum value. > **NOTE** > > This attribute is supported since API ver
 minLabel(value: string)
 ```
 
-Sets the minimum value. > **NOTE** > > This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use > **min** instead. **min** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md#slideroptions).
+Sets the minimum value. > **NOTE** > > This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use > **min** instead. **min** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md).
 
 **Since:** 7
 
@@ -272,7 +272,7 @@ Sets the minimum distance required for the slider to respond.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Minimum distance required for the slider to respond. The slider will only move when thesliding distance exceeds this threshold.<br>Default value: **0**<br>**NOTE**<br>The unit is consistent withthat of the **min** and **max** properties in [SliderOptions](arkts-arkui-slideroptions-i.md#slideroptions).<br>If the value is lessthan 0, greater than the result of (**max** – **min**), or invalid, the default value is used. |
+| value | number | Yes | Minimum distance required for the slider to respond. The slider will only move when thesliding distance exceeds this threshold.<br>Default value: **0**<br>**NOTE**<br>The unit is consistent withthat of the **min** and **max** properties in [SliderOptions](arkts-arkui-slideroptions-i.md).<br>If the value is lessthan 0, greater than the result of (**max** – **min**), or invalid, the default value is used. |
 
 ## onChange
 
@@ -640,7 +640,7 @@ Sets the linear gradient background color of the track.
 trackThickness(value: Length)
 ```
 
-Sets the thickness of the track. If the value is less than or equal to 0, the default value is used. To ensure [SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle) works as expected for the thumb and track, [blockSize](SliderAttribute#blockSize) should increase or decrease proportionally with **trackThickness**. Specially, when **style** is **[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).OutSet**, trackThickness: [blockSize](SliderAttribute#blockSize) = 1:4; when **style** is **[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).InSet**, trackThickness: [blockSize](SliderAttribute#blockSize) = 5:3. If the value of **trackThickness** or [blockSize](SliderAttribute#blockSize) exceeds the width or height of the **Slider** component, the default value is used. When [SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle) is set to **OutSet**, if the specified value of [blockSize](SliderAttribute#blockSize) exceeds the width or height of the **Slider** component, the default value is used, regardless of whether the value of **trackThickness** is valid or not.
+Sets the thickness of the track. If the value is less than or equal to 0, the default value is used. To ensure [SliderStyle](arkts-arkui-sliderstyle-e.md) works as expected for the thumb and track, [blockSize](SliderAttribute#blockSize) should increase or decrease proportionally with **trackThickness**. Specially, when **style** is **[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet**, trackThickness: [blockSize](SliderAttribute#blockSize) = 1:4; when **style** is **[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet**, trackThickness: [blockSize](SliderAttribute#blockSize) = 5:3. If the value of **trackThickness** or [blockSize](SliderAttribute#blockSize) exceeds the width or height of the **Slider** component, the default value is used. When [SliderStyle](arkts-arkui-sliderstyle-e.md) is set to **OutSet**, if the specified value of [blockSize](SliderAttribute#blockSize) exceeds the width or height of the **Slider** component, the default value is used, regardless of whether the value of **trackThickness** is valid or not.
 
 **Since:** 8
 
@@ -654,5 +654,5 @@ Sets the thickness of the track. If the value is less than or equal to 0, the de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Thickness of the track.<br>Default value: 4.0vp when **style** is set to**[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).OutSet**; 20.0vp when **style** is set to**[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).InSet** |
+| value | Length | Yes | Thickness of the track.<br>Default value: 4.0vp when **style** is set to**[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet**; 20.0vp when **style** is set to**[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet** |
 

@@ -9,7 +9,7 @@ Provides the capability of decoding binary streams into strings. The following e
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor

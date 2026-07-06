@@ -1,8 +1,8 @@
 # ManualExposure (System API)
 
-ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md#manualexposurequery) Provides APIs to obtain and set the exposure duration.
+ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md) Provides APIs to obtain and set the exposure duration.
 
-**Inheritance/Implementation:** ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md#manualexposurequery)
+**Inheritance/Implementation:** ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md)
 
 **Since:** 24
 
@@ -13,7 +13,7 @@ ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getExposure
@@ -42,7 +42,7 @@ Obtains the manual exposure duration in use.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -84,5 +84,5 @@ Sets the manual exposure duration. Before using this API, call [getSupportedExpo
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
 

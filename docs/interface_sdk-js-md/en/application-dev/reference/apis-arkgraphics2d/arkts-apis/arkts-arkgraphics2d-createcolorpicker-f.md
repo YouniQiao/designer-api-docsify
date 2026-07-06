@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from '@ohos.effectKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## createColorPicker

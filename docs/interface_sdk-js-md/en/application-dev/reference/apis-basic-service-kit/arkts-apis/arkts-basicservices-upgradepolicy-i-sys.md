@@ -11,7 +11,7 @@ Represents an update policy.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@ohos.update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## autoUpgradePeriods

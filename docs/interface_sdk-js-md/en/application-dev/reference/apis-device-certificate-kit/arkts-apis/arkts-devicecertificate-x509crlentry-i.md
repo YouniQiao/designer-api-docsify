@@ -9,7 +9,7 @@ Provides APIs for operating on a revoked certificate entry in a CRL.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## getCertIssuer

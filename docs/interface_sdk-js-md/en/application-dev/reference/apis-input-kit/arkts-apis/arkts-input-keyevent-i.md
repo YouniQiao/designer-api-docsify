@@ -2,7 +2,7 @@
 
 Key event.
 
-**Inheritance/Implementation:** KeyEvent extends [InputEvent](arkts-input-inputevent-i.md#inputevent)
+**Inheritance/Implementation:** KeyEvent extends [InputEvent](arkts-input-inputevent-i.md)
 
 **Since:** 9
 
@@ -11,7 +11,7 @@ Key event.
 ## Modules to Import
 
 ```TypeScript
-import { KeyEvent, Action, Key } from '@ohos.multimodalInput.keyEvent';
+import { KeyEvent, Action, Key } from '@kit.InputKit';
 ```
 
 ## action

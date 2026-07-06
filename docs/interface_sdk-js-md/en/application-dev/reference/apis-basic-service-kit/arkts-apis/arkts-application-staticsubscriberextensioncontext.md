@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { StaticSubscriberExtensionContext } from '@ohos.application.StaticSubscriberExtensionContext';
+import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

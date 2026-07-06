@@ -9,7 +9,7 @@ Describes the codec information.
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from '@ohos.bluetooth.a2dp';
+import { a2dp } from '@kit.ConnectivityKit';
 ```
 
 ## codecBitRateArray

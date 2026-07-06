@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## minimizeAll
@@ -24,15 +24,15 @@ Minimizes all main windows on a display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | ID of the [display](arkts-arkui-displaystate-e.md#displaystate). The value must be an integer. |
+| id | number | Yes | ID of the [display](arkts-arkui-displaystate-e.md). The value must be an integer. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities.<br>**Applicable version:** 12 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities.<br>**Applicable version:** 12 and later |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Example**
@@ -82,7 +82,7 @@ Minimizes all main windows on a display. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | ID of the [display](arkts-arkui-displaystate-e.md#displaystate). The value must be an integer. |
+| id | number | Yes | ID of the [display](arkts-arkui-displaystate-e.md). The value must be an integer. |
 
 **Return value:**
 
@@ -94,8 +94,8 @@ Minimizes all main windows on a display. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities.<br>**Applicable version:** 12 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities.<br>**Applicable version:** 12 and later |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Example**

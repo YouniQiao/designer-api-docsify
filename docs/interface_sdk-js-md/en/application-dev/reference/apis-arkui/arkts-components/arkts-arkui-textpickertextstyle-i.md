@@ -1,8 +1,8 @@
 # TextPickerTextStyle
 
-Defines the text style options for the text picker. Inherits from [PickerTextStyle](arkts-arkui-pickertextstyle-i.md#pickertextstyle).
+Defines the text style options for the text picker. Inherits from [PickerTextStyle](arkts-arkui-pickertextstyle-i.md).
 
-**Inheritance/Implementation:** TextPickerTextStyle extends [PickerTextStyle](arkts-arkui-pickertextstyle-i.md#pickertextstyle)
+**Inheritance/Implementation:** TextPickerTextStyle extends [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **Since:** 15
 

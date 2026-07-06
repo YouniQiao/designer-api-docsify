@@ -787,7 +787,7 @@ setAsset(assetKey: string, uri: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetKey | string | 是 | 分布式对象中资产类型数据对应的属性名。<br/>**使用约束：** <br/>（1）提供的assetKey对应的文件必须已存在且类型为资产[Asset](arkts-arkdata-asset-i.md#asset)，才可进行正确的设置资产。若assetKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错误。<br/>（2）在协同或接续场景下需要双端满足assetKey对应的文件存在且为资产类型，才可将设置的资产同步到对端设备。 |
+| assetKey | string | 是 | 分布式对象中资产类型数据对应的属性名。<br/>**使用约束：** <br/>（1）提供的assetKey对应的文件必须已存在且类型为资产[Asset](arkts-arkdata-asset-i.md)，才可进行正确的设置资产。若assetKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错误。<br/>（2）在协同或接续场景下需要双端满足assetKey对应的文件存在且为资产类型，才可将设置的资产同步到对端设备。 |
 | uri | string | 是 | 待设置的新资产的uri，表示该资产的存放的分布式路径。必须为真实存在的资产对应的分布式路径。 |
 
 **返回值：**
@@ -864,7 +864,7 @@ setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetsKey | string | 是 | 分布式对象中资产数组类型数据对应的属性名。<br/>**使用约束：** <br/>（1）提供的assetsKey对应的文件已存在且类型必须为资产[Asset](arkts-arkdata-asset-i.md#asset)，才可进行正确的设置资产。若assetsKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错误。<br/>（2）在协同或接续场景下需要双端满足assetsKey对应的文件存在且为资产类型，才可将设置的资产数组同步到对端设备。 |
+| assetsKey | string | 是 | 分布式对象中资产数组类型数据对应的属性名。<br/>**使用约束：** <br/>（1）提供的assetsKey对应的文件已存在且类型必须为资产[Asset](arkts-arkdata-asset-i.md)，才可进行正确的设置资产。若assetsKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错误。<br/>（2）在协同或接续场景下需要双端满足assetsKey对应的文件存在且为资产类型，才可将设置的资产数组同步到对端设备。 |
 | uris | Array&lt;string&gt; | 是 | 待设置的新资产数组的uri集合，表示资产数组内每个资产存放的分布式路径。数组中元素的数量为[1, 50]，元素uri必须为真实存在的资产对应的分布式路径。 |
 
 **返回值：**

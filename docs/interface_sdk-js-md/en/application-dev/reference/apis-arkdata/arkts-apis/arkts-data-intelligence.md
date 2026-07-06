@@ -9,7 +9,7 @@ Provides methods for intelligent data processing.
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from '@ohos.data.intelligence';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## Summary

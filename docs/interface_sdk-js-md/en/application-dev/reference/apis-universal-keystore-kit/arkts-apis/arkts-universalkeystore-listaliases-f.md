@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@ohos.security.huks';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## listAliases
@@ -41,7 +41,7 @@ Lists key aliases. This API uses a promise to return the result.
 | [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
 
 **Example**
 

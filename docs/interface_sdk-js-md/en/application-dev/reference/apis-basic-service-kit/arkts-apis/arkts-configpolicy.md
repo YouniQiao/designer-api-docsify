@@ -11,7 +11,7 @@ The **configPolicy** module provides APIs for obtaining the corresponding direct
 ## Modules to Import
 
 ```TypeScript
-import { configPolicy } from '@ohos.configPolicy';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ VerticalAlign enumeration description
 ## Top
 
 ```TypeScript
-Top = 0
+Top
 ```
 
 Top alignment.
@@ -25,7 +25,7 @@ Top alignment.
 ## Center
 
 ```TypeScript
-Center = 1
+Center
 ```
 
 Center alignment. The default alignment mode is used.
@@ -41,7 +41,7 @@ Center alignment. The default alignment mode is used.
 ## Bottom
 
 ```TypeScript
-Bottom = 2
+Bottom
 ```
 
 Bottom alignment.

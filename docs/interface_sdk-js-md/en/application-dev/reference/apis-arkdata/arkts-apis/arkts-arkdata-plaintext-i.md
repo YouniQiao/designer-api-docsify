@@ -9,7 +9,7 @@ Represents data of the plain text type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@ohos.data.uniformDataStruct';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## abstract
@@ -66,7 +66,7 @@ Plaintext content.
 readonly uniformDataType: 'general.plain-text'
 ```
 
-Uniform data type, which has a fixed value of **general.plain-text**. For details, see [UniformDataType](arkts-arkdata-uniformdatatype-e.md#uniformdatatype).
+Uniform data type, which has a fixed value of **general.plain-text**. For details, see [UniformDataType](arkts-arkdata-uniformdatatype-e.md).
 
 **Type:** 'general.plain-text'
 

@@ -11,7 +11,7 @@ Provides the printer information.
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@ohos.print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## capability

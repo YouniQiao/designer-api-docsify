@@ -9,7 +9,7 @@ This parameter is used to define the input of each filtering dimension.
 ## Modules to Import
 
 ```TypeScript
-import { FilterType, Filter, FilterParams, FilterResult } from '@ohos.arkui.advanced.Filter';
+import { FilterType, Filter, FilterParams, FilterResult } from '@kit.ArkUI';
 ```
 
 ## name

@@ -2,7 +2,7 @@
 
 Describes the common live view.
 
-**Inheritance/Implementation:** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md#notificationbasiccontent)
+**Inheritance/Implementation:** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md)
 
 **Since:** 11
 

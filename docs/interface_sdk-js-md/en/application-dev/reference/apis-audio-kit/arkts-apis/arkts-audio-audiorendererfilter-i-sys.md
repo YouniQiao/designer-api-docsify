@@ -11,7 +11,7 @@ Describes audio renderer filter.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## rendererId

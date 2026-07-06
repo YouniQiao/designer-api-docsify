@@ -9,7 +9,7 @@ Upload task information, which is the callback parameter of the [on('complete' |
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@ohos.request';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## message

@@ -14,7 +14,7 @@
 (value?: { fingers?: number; repeat?: boolean; duration?: number }): LongPressGestureInterface
 ```
 
-Creates a long press gesture. Inherits from [GestureInterface<T>](arkts-arkui-gestureinterface-i.md#gestureinterface). In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**, **Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows: If the long press duration is less than 500 milliseconds, the system prioritizes the long press event over the drag event. If the long press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the long press event.
+Creates a long press gesture. Inherits from [GestureInterface<T>](arkts-arkui-gestureinterface-i.md). In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**, **Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows: If the long press duration is less than 500 milliseconds, the system prioritizes the long press event over the drag event. If the long press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the long press event.
 
 **Since:** 7
 

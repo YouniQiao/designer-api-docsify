@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArrayList } from '@ohos.util.ArrayList';
+import { ArrayList } from '@kit.ArkTS';
 ```
 
 ## Summary

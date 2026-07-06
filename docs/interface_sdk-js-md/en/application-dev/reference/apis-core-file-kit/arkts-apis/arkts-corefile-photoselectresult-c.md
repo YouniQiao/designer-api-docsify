@@ -6,14 +6,14 @@ Defines information about the images or videos selected.
 
 **Deprecated since:** 12
 
-**Substitutes:** [PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoselectresult-c.md#photoselectresult)
+**Substitutes:** [PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoselectresult-c.md)
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@ohos.file.picker';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## isOriginalPhoto

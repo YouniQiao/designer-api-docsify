@@ -475,7 +475,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md#launchmode) specified in the **options** parameter, different behaviors will be implemented. > **NOTE** > > You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation > failures.
+Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be implemented. > **NOTE** > > You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation > failures.
 
 **Since:** 12
 
@@ -615,7 +615,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 pushPath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-Pushes the navigation destination page specified by **info** onto the routing stack. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md#launchmode) specified in the **options** parameter, different behaviors will be implemented.
+Pushes the navigation destination page specified by **info** onto the routing stack. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be implemented.
 
 **Since:** 12
 
@@ -743,7 +743,7 @@ Removes the navigation destination page specified by **name** from the routing s
 removeByNavDestinationId(navDestinationId: string): boolean
 ```
 
-Removes the navigation destination page specified by **navDestinationId** from the routing stack. **navDestinationId** can be obtained from the [onReady](NavDestinationAttribute#onReady) callback of **NavDestination** or from [NavDestinationInfo](../arkts-apis/arkts-arkui-navdestinationinfo-i.md#navdestinationinfo).
+Removes the navigation destination page specified by **navDestinationId** from the routing stack. **navDestinationId** can be obtained from the [onReady](NavDestinationAttribute#onReady) callback of **NavDestination** or from [NavDestinationInfo](../arkts-apis/arkts-arkui-navdestinationinfo-i.md).
 
 **Since:** 12
 
@@ -771,7 +771,7 @@ Removes the navigation destination page specified by **navDestinationId** from t
 replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Performs a replacement operation on the routing stack. This API uses a promise to return the result. Its behavior varies depending on the value of [LaunchMode](arkts-arkui-launchmode-e.md#launchmode) specified in **options**.
+Performs a replacement operation on the routing stack. This API uses a promise to return the result. Its behavior varies depending on the value of [LaunchMode](arkts-arkui-launchmode-e.md) specified in **options**.
 
 **Since:** 18
 
@@ -832,7 +832,7 @@ Replaces the top of the routing stack with the navigation destination page speci
 replacePath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-Replaces the top page on the routing stack. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md#launchmode) specified in the **options** parameter, different behaviors will be implemented.
+Replaces the top page on the routing stack. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be implemented.
 
 **Since:** 12
 
@@ -901,7 +901,7 @@ Sets the interception callback for navigation page redirection.
 setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 ```
 
-Updates the array of route page information in this routing stack to the specified content and performs route transitions. > **NOTE** > > 1. You can add or remove pages in batches based on the existing stack. Among the pages added in batches, only the > visible pages will trigger creation; other pages, although added to the stack, will not be created immediately. > They will only be created when they become visible. > > 2. For routing stacks updated through the batch push functionality, the lifecycle events of each page are > triggered from the top to the bottom of the stack. This differs from the triggering order of other push APIs, > which are triggered from the bottom to the top of the stack. > > 3. You can operate existing pages using **navDestinationId** (unique ID) in [NavPathInfo](arkts-arkui-navpathinfo-c.md#navpathinfo). > This ID is system-generated and globally unique (it can be obtained using the > [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack-1) API and should not be manually reassigned). If the specified ID > does not exist in the current routing stack, it indicates a new page. If it exists and the corresponding name is > the same, it indicates reuse of an existing page.
+Updates the array of route page information in this routing stack to the specified content and performs route transitions. > **NOTE** > > 1. You can add or remove pages in batches based on the existing stack. Among the pages added in batches, only the > visible pages will trigger creation; other pages, although added to the stack, will not be created immediately. > They will only be created when they become visible. > > 2. For routing stacks updated through the batch push functionality, the lifecycle events of each page are > triggered from the top to the bottom of the stack. This differs from the triggering order of other push APIs, > which are triggered from the bottom to the top of the stack. > > 3. You can operate existing pages using **navDestinationId** (unique ID) in [NavPathInfo](arkts-arkui-navpathinfo-c.md). > This ID is system-generated and globally unique (it can be obtained using the > [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack-1) API and should not be manually reassigned). If the specified ID > does not exist in the current routing stack, it indicates a new page. If it exists and the corresponding name is > the same, it indicates reuse of an existing page.
 
 **Since:** 19
 

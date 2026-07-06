@@ -2,7 +2,7 @@
 
 Provides APIs for obtaining and modifying **Preferences** instances. **Preferences** inherits from [ISendable](../../../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference. Before calling any API of **Preferences**, obtain a **Preferences** instance by using [sendablePreferences.getPreferences](arkts-arkdata-getpreferences-f.md#getpreferences-1).
 
-**Inheritance/Implementation:** Preferences extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md#isendable)
+**Inheritance/Implementation:** Preferences extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md)
 
 **Since:** 12
 
@@ -11,7 +11,7 @@ Provides APIs for obtaining and modifying **Preferences** instances. **Preferenc
 ## Modules to Import
 
 ```TypeScript
-import { sendablePreferences } from '@ohos.data.sendablePreferences';
+import { sendablePreferences } from '@kit.ArkData';
 ```
 
 ## clear
@@ -551,7 +551,7 @@ preferences.flush().then(() => {
 off(type: 'multiProcessChange', callback?: Callback<string>): void
 ```
 
-Unsubscribes from inter-process data changes. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-options-i.md#options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+Unsubscribes from inter-process data changes. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 12
 
@@ -695,7 +695,7 @@ preferences.flush().then(() => {
 on(type: 'multiProcessChange', callback: Callback<string>): void
 ```
 
-Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](arkts-arkdata-preferences-i.md#flush-1) in any process (including the current process) will trigger the callback in this API. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-options-i.md#options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](arkts-arkdata-preferences-i.md#flush-1) in any process (including the current process) will trigger the callback in this API. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 12
 

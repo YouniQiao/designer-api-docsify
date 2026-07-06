@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@ohos.app.form.formProvider';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## updateForm

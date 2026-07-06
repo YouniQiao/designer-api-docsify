@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiviewdfx.hiAppEvent';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## write
@@ -12,7 +12,7 @@ import { hiAppEvent } from '@ohos.hiviewdfx.hiAppEvent';
 function write(info: AppEventInfo): Promise<void>
 ```
 
-Writes events of the **AppEventInfo** type. This API uses a promise to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-addwatcher-f.md#addwatcher-1)).
+Writes events of the **AppEventInfo** type. This API uses a promise to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-event-n.md#event)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-addwatcher-f.md#addwatcher-1)).
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ Writes events of the **AppEventInfo** type. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AppEventInfo | Yes | Application event object. You are advised to avoid the conflict between the customevent name and the system event name constant defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event).<br>**Since:** 11 |
+| info | AppEventInfo | Yes | Application event object. You are advised to avoid the conflict between the customevent name and the system event name constant defined in [Event](arkts-performanceanalysis-event-n.md#event).<br>**Since:** 11 |
 
 **Return value:**
 
@@ -77,7 +77,7 @@ hiAppEvent.write({
 function write(info: AppEventInfo, callback: AsyncCallback<void>): void
 ```
 
-Writes events of the **AppEventInfo** type. This API uses an asynchronous callback to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-addwatcher-f.md#addwatcher-1)).
+Writes events of the **AppEventInfo** type. This API uses an asynchronous callback to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-event-n.md#event)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-addwatcher-f.md#addwatcher-1)).
 
 **Since:** 9
 
@@ -89,7 +89,7 @@ Writes events of the **AppEventInfo** type. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AppEventInfo | Yes | Application event object. You are advised to avoid the conflict between the customevent name and the system event name constant defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event). |
+| info | AppEventInfo | Yes | Application event object. You are advised to avoid the conflict between the customevent name and the system event name constant defined in [Event](arkts-performanceanalysis-event-n.md#event). |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**

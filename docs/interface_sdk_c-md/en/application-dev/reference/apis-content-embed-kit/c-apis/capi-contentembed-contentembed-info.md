@@ -6,7 +6,7 @@ typedef struct ContentEmbed_Info ContentEmbed_Info
 
 ## Overview
 
-Define the ContentEmbed_Info structure type.Provides methods for Content Embed Kit.
+Declares the ContentEmbed_Info structure. Use [OH_ContentEmbed_GetContentEmbedInfo](capi-content-embed-proxy-h.md#oh_contentembed_getcontentembedinfo) to query theOE document information registered by all server-side applications for the current session.Then, use [OH_ContentEmbed_GetFormatCountFromInfo](capi-content-embed-proxy-h.md#oh_contentembed_getformatcountfrominfo) to obtain the count of [ContentEmbed_Format](capi-contentembed-contentembed-format.md)instances in the current query result, and use [OH_ContentEmbed_GetFormatFromInfo](capi-content-embed-proxy-h.md#oh_contentembed_getformatfrominfo) to retrieve theinstance object at the specified index.
 
 **Since**: 24
 

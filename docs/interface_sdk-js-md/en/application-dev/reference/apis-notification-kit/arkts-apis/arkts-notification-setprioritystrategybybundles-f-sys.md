@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@ohos.notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setPriorityStrategyByBundles
@@ -28,7 +28,7 @@ Sets the application priority notification strategies in batches. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategies | Map&lt;BundleOption, number&gt; | Yes | Key-value pair set of the application notification prioritystrategies. This parameter is obtained by performing the bitwise OR operation with the enumeration of[PriorityStrategyStatus](arkts-notification-prioritystrategystatus-e-sys.md#prioritystrategystatus). |
+| strategies | Map&lt;BundleOption, number&gt; | Yes | Key-value pair set of the application notification prioritystrategies. This parameter is obtained by performing the bitwise OR operation with the enumeration of[PriorityStrategyStatus](arkts-notification-prioritystrategystatus-e-sys.md). |
 
 **Return value:**
 

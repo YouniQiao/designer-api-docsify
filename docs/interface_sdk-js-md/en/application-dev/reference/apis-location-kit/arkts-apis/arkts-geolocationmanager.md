@@ -9,7 +9,7 @@ Provides interfaces for acquiring location information, managing location switch
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@ohos.geoLocationManager';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## Summary

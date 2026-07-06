@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from '@ohos.test.PerfTest';
+import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from '@kit.TestKit';
 ```
 
 ## Summary

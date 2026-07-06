@@ -9,7 +9,7 @@ This module provides the capability of obtaining and resetting the Open Anonymou
 ## Modules to Import
 
 ```TypeScript
-import { identifier } from '@ohos.identifier.oaid';
+import { identifier } from '@kit.AdsKit';
 ```
 
 ## Summary

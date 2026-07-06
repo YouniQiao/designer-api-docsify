@@ -9,7 +9,7 @@ The **sendableColorSpaceManager** module provides APIs for creating and managing
 ## Modules to Import
 
 ```TypeScript
-import { sendableColorSpaceManager } from '@ohos.graphics.sendableColorSpaceManager';
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary

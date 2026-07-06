@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [AuthResultInfo](arkts-userauthentication-authresultinfo-i.md#authresultinfo)
+**替代接口：** [AuthResultInfo](arkts-userauthentication-authresultinfo-i.md)
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

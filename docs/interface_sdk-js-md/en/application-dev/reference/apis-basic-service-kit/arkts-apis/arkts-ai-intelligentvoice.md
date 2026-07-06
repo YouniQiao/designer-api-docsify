@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from '@ohos.ai.intelligentVoice';
+import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Declare component HalfScreenLaunchComponent
 ## Modules to Import
 
 ```TypeScript
-import { HalfScreenLaunchComponent } from '@ohos.atomicservice.HalfScreenLaunchComponent';
+import { HalfScreenLaunchComponent } from '@kit.ArkUI';
 ```
 
 ## appId
@@ -40,7 +40,7 @@ Sets the component content.
 
 **Since:** 18
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

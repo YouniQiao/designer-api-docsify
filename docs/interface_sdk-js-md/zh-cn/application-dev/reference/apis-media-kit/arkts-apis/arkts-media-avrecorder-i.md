@@ -491,7 +491,7 @@ on(type: 'error', callback: ErrorCallback): void
 | [5400104](../errorcode-media.md#5400104-操作超时) | Time out. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. |
-| [5400107](../errorcode-media.md#5400107-音频焦点冲突) | Audio interrupted.<br>**适用版本：** 11 |
+| [5400107](../errorcode-media.md#5400107-音频焦点冲突) | Audio interrupted.<br>**适用版本：** 11+ |
 
 ## pause
 

@@ -9,7 +9,7 @@ A cleaner for releasing resources managed by developers through a developer-defi
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## register

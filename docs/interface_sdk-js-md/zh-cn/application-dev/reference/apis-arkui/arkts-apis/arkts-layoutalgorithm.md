@@ -18,7 +18,7 @@
 | --- | --- |
 | [ColumnLayoutAlgorithmOptions](arkts-arkui-columnlayoutalgorithmoptions-i.md) | 设置垂直方向线性布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
 | [GridLayoutAlgorithmOptions](arkts-arkui-gridlayoutalgorithmoptions-i.md) | 设置网格布局算法的列数模板、列间距、行间距。 |
-| [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | 动态布局容器[DynamicLayout](arkts-arkui-components-arkdynamiclayout.md)的布局算法基础类型。 @link CustomLayoutAlgorithm}类对象、 &gt; [RowLayoutAlgorithm](arkts-arkui-rowlayoutalgorithm-c.md#rowlayoutalgorithm)类对象等。 |
+| [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | 动态布局容器[DynamicLayout](arkts-arkui-components-arkdynamiclayout.md)的布局算法基础类型。 @link CustomLayoutAlgorithm}类对象、 &gt; [RowLayoutAlgorithm](arkts-arkui-rowlayoutalgorithm-c.md)类对象等。 |
 | [RowLayoutAlgorithmOptions](arkts-arkui-rowlayoutalgorithmoptions-i.md) | 设置水平方向线性布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。 |
 | [StackLayoutAlgorithmOptions](arkts-arkui-stacklayoutalgorithmoptions-i.md) | 设置堆叠布局算法的对齐方式。 |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pan } from '@ohos.bluetooth.pan';
+import { pan } from '@kit.ConnectivityKit';
 ```
 
 ## createPanProfile

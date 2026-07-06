@@ -1,6 +1,6 @@
 # AudioSessionStateChangeHint
 
-Enumerates the hints for audio session state changes. The hint is obtained when an [AudioSessionStateChangedEvent](arkts-audio-audiosessionstatechangedevent-i.md#audiosessionstatechangedevent) is received. The hint specifies the action (such as audio pause or volume adjustment) to take on the audio session based on the focus strategy. For details, see [Audio Session Management](../../../../media/audio/audio-session-management.md).
+Enumerates the hints for audio session state changes. The hint is obtained when an [AudioSessionStateChangedEvent](arkts-audio-audiosessionstatechangedevent-i.md) is received. The hint specifies the action (such as audio pause or volume adjustment) to take on the audio session based on the focus strategy. For details, see [Audio Session Management](../../../../media/audio/audio-session-management.md).
 
 **Since:** 20
 

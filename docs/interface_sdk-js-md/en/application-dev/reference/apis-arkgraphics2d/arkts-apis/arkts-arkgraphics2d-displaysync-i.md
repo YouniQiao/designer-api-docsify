@@ -9,7 +9,7 @@ An object that implements the setting of the frame rate and callback. It provide
 ## Modules to Import
 
 ```TypeScript
-import { displaySync } from '@ohos.graphics.displaySync';
+import { displaySync } from '@kit.ArkGraphics2D';
 ```
 
 ## off('frame')

@@ -70,7 +70,7 @@ Relative scale ratio at the start and end of the animation compared to the origi
 transition?: TransitionEffect
 ```
 
-Transition effect for the entrance and exit of the menu. **NOTE** If the screen orientation is switched during the exit animation of a menu, the menu will avoid obstacles. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the display process, but not during the execution of the exit animation. For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect).
+Transition effect for the entrance and exit of the menu. **NOTE** If the screen orientation is switched during the exit animation of a menu, the menu will avoid obstacles. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the display process, but not during the execution of the exit animation. For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md).
 
 **Type:** TransitionEffect
 

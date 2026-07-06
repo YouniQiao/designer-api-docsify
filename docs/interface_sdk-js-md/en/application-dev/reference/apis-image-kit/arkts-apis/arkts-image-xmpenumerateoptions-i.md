@@ -9,7 +9,7 @@ Describes XMP enumerate option parameters.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## isRecursive

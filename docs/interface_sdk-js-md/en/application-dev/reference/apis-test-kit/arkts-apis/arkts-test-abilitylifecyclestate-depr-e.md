@@ -6,7 +6,7 @@ Enumerates the ability lifecycle states.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AbilityLifecycleState](arkts-test-abilitylifecyclestate-e.md#abilitylifecyclestate)
+**Substitutes:** [AbilityLifecycleState](arkts-test-abilitylifecyclestate-e.md)
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

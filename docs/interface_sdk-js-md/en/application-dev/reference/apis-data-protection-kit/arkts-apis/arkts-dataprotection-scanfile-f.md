@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { identifySensitiveContent } from '@ohos.security.identifySensitiveContent';
+import { identifySensitiveContent } from '@kit.DataProtectionKit';
 ```
 
 ## scanFile

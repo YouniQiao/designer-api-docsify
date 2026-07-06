@@ -2,7 +2,7 @@
 
 触屏输入事件。
 
-**继承/实现关系：** TouchEvent extends [InputEvent](arkts-input-inputevent-i.md#inputevent)
+**继承/实现关系：** TouchEvent extends [InputEvent](arkts-input-inputevent-i.md)
 
 **起始版本：** 9
 

@@ -9,7 +9,7 @@ Provides methods related to anonymous shared memory objects, including creating,
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@ohos.rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## closeAshmem

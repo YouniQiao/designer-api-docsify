@@ -9,7 +9,7 @@ Base class for the test framework. If you want to implement your own unit test f
 ## Modules to Import
 
 ```TypeScript
-import { TestRunner } from '@ohos.application.testRunner';
+import { TestRunner } from '@kit.TestKit';
 ```
 
 ## onPrepare

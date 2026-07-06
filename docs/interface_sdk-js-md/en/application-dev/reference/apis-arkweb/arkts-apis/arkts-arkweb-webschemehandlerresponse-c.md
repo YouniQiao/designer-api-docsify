@@ -9,7 +9,7 @@ Defines the Web resource response used for scheme handler.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## constructor

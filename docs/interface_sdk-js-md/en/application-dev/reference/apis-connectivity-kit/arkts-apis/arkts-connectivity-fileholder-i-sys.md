@@ -11,7 +11,7 @@ Describes the file info for transfer
 ## Modules to Import
 
 ```TypeScript
-import { opp } from '@ohos.bluetooth.opp';
+import { opp } from '@kit.ConnectivityKit';
 ```
 
 ## fileFd

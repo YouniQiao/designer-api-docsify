@@ -9,7 +9,7 @@ Defines the add form options.
 ## Modules to Import
 
 ```TypeScript
-import { AddFormMenuItem, AddFormOptions, FormMenuItemStyle } from '@ohos.arkui.advanced.FormMenu';
+import { AddFormMenuItem, AddFormOptions, FormMenuItemStyle } from '@kit.ArkUI';
 ```
 
 ## callback

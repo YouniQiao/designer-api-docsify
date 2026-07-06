@@ -6,7 +6,7 @@
 function getDeveloperIds(appDistributionType?: number): Array<string>
 ```
 
-根据给定的应用[appDistributionType](arkts-ability-appdistributiontype-e-sys.md#appdistributiontype)获取当前用户下的所有开发者ID列表。
+根据给定的应用[appDistributionType](arkts-ability-appdistributiontype-e-sys.md)获取当前用户下的所有开发者ID列表。
 
 **起始版本：** 12
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { batteryInfo } from '@ohos.batteryInfo';
+import { batteryInfo } from '@kit.BasicServicesKit';
 ```
 
 ## isBatteryConfigSupported

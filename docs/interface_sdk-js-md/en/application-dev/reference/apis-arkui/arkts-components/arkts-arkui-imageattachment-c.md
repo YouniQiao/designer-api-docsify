@@ -34,7 +34,7 @@ A constructor used to create an image object.
 constructor(attachment: Optional<AttachmentType>)
 ```
 
-A constructor used to create an image object. Compared to the constructor with a **value** type parameter, this constructor with an **attachment** type parameter supports images of **undefined** and [ResourceStr](arkts-arkui-resourcestr-t.md#resourcestr) types.
+A constructor used to create an image object. Compared to the constructor with a **value** type parameter, this constructor with an **attachment** type parameter supports images of **undefined** and [ResourceStr](arkts-arkui-resourcestr-t.md) types.
 
 **Since:** 15
 
@@ -48,7 +48,7 @@ A constructor used to create an image object. Compared to the constructor with a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attachment | Optional&lt;AttachmentType&gt; | Yes | Image attachment, which can be of type PixelMap or[ResourceStr](arkts-arkui-resourcestr-t.md#resourcestr). |
+| attachment | Optional&lt;AttachmentType&gt; | Yes | Image attachment, which can be of type PixelMap or[ResourceStr](arkts-arkui-resourcestr-t.md). |
 
 ## colorFilter
 

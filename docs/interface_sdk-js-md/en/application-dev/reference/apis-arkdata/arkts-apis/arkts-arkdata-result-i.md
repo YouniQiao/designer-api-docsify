@@ -9,7 +9,7 @@ Records the number of affected data rows and the result set.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@ohos.data.relationalStore';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## changed

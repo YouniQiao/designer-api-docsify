@@ -9,7 +9,7 @@ Defines callback context information passed to applications during hover detecti
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@ohos.arkui.dragController';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## abort
@@ -56,7 +56,7 @@ Updates the hover detection configuration. This API is effective only when the h
 currentConfig?: DragSpringLoadingConfiguration
 ```
 
-Configuration information in the current callback. Omitted in CANCEL state; uses the [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-i.md#dragspringloadingconfiguration) default value when **undefined**.
+Configuration information in the current callback. Omitted in CANCEL state; uses the [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-i.md) default value when **undefined**.
 
 **Type:** DragSpringLoadingConfiguration
 
@@ -92,7 +92,7 @@ Callback notification sequence number in the current hover detection cycle. The 
 dragInfos?: SpringLoadingDragInfos
 ```
 
-Drag information. Omitted in CANCEL state; uses the [SpringLoadingDragInfos](arkts-arkui-springloadingdraginfos-i.md#springloadingdraginfos) default value when **undefined**.
+Drag information. Omitted in CANCEL state; uses the [SpringLoadingDragInfos](arkts-arkui-springloadingdraginfos-i.md) default value when **undefined**.
 
 **Type:** SpringLoadingDragInfos
 

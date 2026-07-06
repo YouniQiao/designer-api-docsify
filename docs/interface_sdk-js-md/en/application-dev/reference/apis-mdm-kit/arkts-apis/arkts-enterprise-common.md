@@ -9,7 +9,7 @@ The module provides pure type definitions for common capabilities within MDM Kit
 ## Modules to Import
 
 ```TypeScript
-import { common } from '@ohos.enterprise.common';
+import { common } from '@kit.MDMKit';
 ```
 
 ## Summary
@@ -34,5 +34,5 @@ import { common } from '@ohos.enterprise.common';
 
 | Name | Description |
 | --- | --- |
-| [EnterpriseAdminExtensionContext](arkts-mdm-enterpriseadminextensioncontext-t.md) | EnterpriseAdminExtensionContext is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseadminextensionability-c.md#enterpriseadminextensionability) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext). |
+| [EnterpriseAdminExtensionContext](arkts-mdm-enterpriseadminextensioncontext-t.md) | EnterpriseAdminExtensionContext is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseadminextensionability-c.md) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). |
 

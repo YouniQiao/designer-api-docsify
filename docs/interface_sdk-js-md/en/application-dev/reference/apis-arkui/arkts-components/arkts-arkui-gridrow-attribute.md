@@ -1,6 +1,6 @@
 # GridRow properties/events
 
-In addition to the [universal events](arkts-arkui-commonmethod-c.md#commonmethod), the following events are supported.
+In addition to the [universal events](arkts-arkui-commonmethod-c.md), the following events are supported.
 
 **Inheritance/Implementation:** GridRowAttribute extends [CommonMethod<GridRowAttribute>](CommonMethod<GridRowAttribute>)
 

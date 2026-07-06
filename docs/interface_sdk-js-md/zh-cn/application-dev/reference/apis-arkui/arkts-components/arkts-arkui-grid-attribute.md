@@ -1,6 +1,6 @@
 # Grid属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)和[滚动组件通用属性](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)外，还支持以下属性： > **说明：** > > Grid组件使用通用属性[clip<sup>12+</sup>](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12)和通用属性[clip<sup>18+</sup>](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip18)时默认值都为true。 > > 设置Grid的padding后，如果子组件部分位于Grid内容区且部分位于padding区域内，则会显示；如果子组件完全位于padding区域内，则不会显示。如下图所示，GridItem1显示，而GridItem2不显示。 > > ![GridPadding示意图](figures/gridPadding.png) 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)和[滚动组件通用事件](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持以下事件：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)和[滚动组件通用属性](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)外，还支持以下属性： > **说明：** > > Grid组件使用通用属性[clip<sup>12+</sup>](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12)和通用属性[clip<sup>18+</sup>](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip18)时默认值都为true。 > > 设置Grid的padding后，如果子组件部分位于Grid内容区且部分位于padding区域内，则会显示；如果子组件完全位于padding区域内，则不会显示。如下图所示，GridItem1显示，而GridItem2不显示。 > > ![GridPadding示意图](figures/gridPadding.png) 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)和[滚动组件通用事件](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持以下事件：
 
 **继承/实现关系：** GridAttribute extends [ScrollableCommonMethod<GridAttribute>](ScrollableCommonMethod<GridAttribute>)
 
@@ -262,7 +262,7 @@ enableScrollInteraction(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroller-c.md#scroller)的滚动接口。<br/>默认值：true |
+| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroller-c.md)的滚动接口。<br/>默认值：true |
 
 ## focusWrapMode
 
@@ -374,7 +374,7 @@ minCount(value: number)
 multiSelectable(value: boolean)
 ```
 
-设置是否开启鼠标框选。开启框选后，可以配合GridItem的selected属性和onSelect事件获取GridItem的选中状态，还可以通过[多态样式](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)设置GridItem的选中态样式（ GridItem默认无选中态样式）。
+设置是否开启鼠标框选。开启框选后，可以配合GridItem的selected属性和onSelect事件获取GridItem的选中状态，还可以通过[多态样式](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)设置GridItem的选中态样式（ GridItem默认无选中态样式）。
 
 **起始版本：** 8
 
@@ -498,7 +498,7 @@ onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: numb
 onItemDragStart(event: OnItemDragStartCallback)
 ```
 
-开始拖拽网格元素时触发。 手指长按GridItem时触发该事件。 由于拖拽检测也需要长按，且事件处理机制优先触发子组件事件，GridItem上绑定[LongPressGesture](arkts-arkui-longpressgestureinterface-i.md#longpressgestureinterface)时无法触发拖拽。如有长按和拖拽同时使用的需求可以 使用通用拖拽事件。 拖拽浮起的网格元素可在应用窗口内移动，若需限制移动范围，可通过自定义手势实现，具体参考 [示例16（实现GridItem自定义拖拽）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例16实现griditem自定义拖拽)。 不支持拖动到Grid边缘时自动滚动，可使用通用拖拽实现，具体参考 [示例17（通过拖拽事件实现griditem拖拽）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例17通过拖拽事件实现griditem拖拽)。
+开始拖拽网格元素时触发。 手指长按GridItem时触发该事件。 由于拖拽检测也需要长按，且事件处理机制优先触发子组件事件，GridItem上绑定[LongPressGesture](arkts-arkui-longpressgestureinterface-i.md)时无法触发拖拽。如有长按和拖拽同时使用的需求可以 使用通用拖拽事件。 拖拽浮起的网格元素可在应用窗口内移动，若需限制移动范围，可通过自定义手势实现，具体参考 [示例16（实现GridItem自定义拖拽）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例16实现griditem自定义拖拽)。 不支持拖动到Grid边缘时自动滚动，可使用通用拖拽实现，具体参考 [示例17（通过拖拽事件实现griditem拖拽）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例17通过拖拽事件实现griditem拖拽)。
 
 **起始版本：** 8
 
@@ -510,7 +510,7 @@ onItemDragStart(event: OnItemDragStartCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | OnItemDragStartCallback | 是 | 网格元素拖拽开始时触发的回调。<br>API version 22及之前版本，该参数类型为(event: ItemDragInfo,itemIndex: number) =&gt; (() =&gt; any) \| void，其中event和itemIndex参数含义参考[OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md#onitemdragstartcallback)。<br>**起始版本：** 23 |
+| event | OnItemDragStartCallback | 是 | 网格元素拖拽开始时触发的回调。<br>API version 22及之前版本，该参数类型为(event: ItemDragInfo,itemIndex: number) =&gt; (() =&gt; any) \| void，其中event和itemIndex参数含义参考[OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md)。<br>**起始版本：** 23 |
 
 ## onItemDrop
 
@@ -674,7 +674,7 @@ onScrollIndex(event: (first: number, last: number) => void)
 onScrollStart(event: () => void)
 ```
 
-网格滑动开始时触发。手指拖动网格或网格的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md#scroller)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
+网格滑动开始时触发。手指拖动网格或网格的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
 
 **起始版本：** 10
 
@@ -696,7 +696,7 @@ onScrollStart(event: () => void)
 onScrollStop(event: () => void)
 ```
 
-网格滑动停止时触发。手指拖动网格或网格的滚动条触发的滑动，手指离开屏幕后滑动停止时会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md#scroller)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
+网格滑动停止时触发。手指拖动网格或网格的滚动条触发的滑动，手指离开屏幕后滑动停止时会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
 
 **起始版本：** 10
 

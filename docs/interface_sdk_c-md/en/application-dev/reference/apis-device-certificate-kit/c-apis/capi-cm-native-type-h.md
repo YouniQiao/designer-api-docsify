@@ -4,7 +4,7 @@
 
 Provides the enums, structs, macros, and error codes used by **CertManager** APIs.
 
-**Library**: libohcert_manager.so
+**Library**: libohcert_manager.z.so
 
 **System capability**: SystemCapability.Security.CertificateManager
 
@@ -30,6 +30,15 @@ Provides the enums, structs, macros, and error codes used by **CertManager** API
 | [OH_CM_ErrorCode](#oh_cm_errorcode) | OH_CM_ErrorCode | Enumerates error codes. |
 | [OH_CM_CertificatePurpose](#oh_cm_certificatepurpose) | OH_CM_CertificatePurpose | Enumerates the certificate credential purposes. |
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| OH_CM_MAX_LEN_CERTIFICATE_CHAIN   24588 | Maximum size of a certificate chain, in bytes.<br>**Since**: 22 |
+| OH_CM_MAX_LEN_URI              256 | Maximum URI length, in bytes.<br>**Since**: 22 |
+| OH_CM_MAX_LEN_CERT_ALIAS       129 | Maximum length of a certificate alias, in bytes.<br>**Since**: 22 |
+| OH_CM_MAX_LEN_TYPE_NAME       1025 | Maximum length of a certificate type, in bytes.<br>**Since**: 22 |
+
 ## Enum type description
 
 ### OH_CM_ErrorCode
@@ -54,7 +63,7 @@ Enumerates error codes.
 | OH_CM_INVALID_CERT_FORMAT = 17500003 | The keystore format is invalid or the keystore password is incorrect. |
 | OH_CM_MAX_CERT_COUNT_REACHED = 17500004 | The number of certificates or credentials reaches the upper limit. |
 | OH_CM_NO_AUTHORIZATION = 17500005 | The application is not authorized. |
-| OH_CM_DEVICE_ENTER_ADVSECMODE = 17500007 | The device enters the advanced security mode. |
+| OH_CM_DEVICE_ENTER_ADVSECMODE = 17500007 | The device enters the advanced security mode.In this mode, CA certificate installation is restricted. |
 | OH_CM_STORE_PATH_NOT_SUPPORTED = 17500009 | The device does not support the specified certificate storage path. |
 | OH_CM_ACCESS_UKEY_SERVICE_FAILED = 17500010 | Failed to access the USB certificate credential. |
 | OH_CM_PARAMETER_VALIDATION_FAILED = 17500011 | Parameter verification fails. For example, the parameter format or range is invalid. |

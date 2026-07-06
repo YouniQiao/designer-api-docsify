@@ -9,7 +9,7 @@ The module provides basic APIs for manipulating Picture in Picture (PiP). For ex
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from '@ohos.PiPWindow';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -48,10 +48,10 @@ import { PiPWindow } from '@ohos.PiPWindow';
 | [PiPControlType](arkts-arkui-pipcontroltype-e.md) | Enumerates the types of components displayed on the PiP controller. |
 | [PiPState](arkts-arkui-pipstate-e.md) | Enumerates the PiP states. |
 | [PiPTemplateType](arkts-arkui-piptemplatetype-e.md) | Enumerates the PiP template types. |
-| [VideoCallControlGroup](arkts-arkui-videocallcontrolgroup-e.md) | Enumerates the video call component groups. They are used only when [PiPTemplateType](arkts-arkui-piptemplatetype-e.md#piptemplatetype) is set to **VIDEO_CALL**. |
-| [VideoLiveControlGroup](arkts-arkui-videolivecontrolgroup-e.md) | Enumerates the live video component groups. They are used only when [PiPTemplateType](arkts-arkui-piptemplatetype-e.md#piptemplatetype) is set to **VIDEO_LIVE**. |
-| [VideoMeetingControlGroup](arkts-arkui-videomeetingcontrolgroup-e.md) | Enumerates the video meeting component groups. They are used only when [PiPTemplateType](arkts-arkui-piptemplatetype-e.md#piptemplatetype) is set to **VIDEO_MEETING**. |
-| [VideoPlayControlGroup](arkts-arkui-videoplaycontrolgroup-e.md) | Enumerates the video playback component groups. They are used only when [PiPTemplateType](arkts-arkui-piptemplatetype-e.md#piptemplatetype) is set to **VIDEO_PLAY**. |
+| [VideoCallControlGroup](arkts-arkui-videocallcontrolgroup-e.md) | Enumerates the video call component groups. They are used only when [PiPTemplateType](arkts-arkui-piptemplatetype-e.md) is set to **VIDEO_CALL**. |
+| [VideoLiveControlGroup](arkts-arkui-videolivecontrolgroup-e.md) | Enumerates the live video component groups. They are used only when [PiPTemplateType](arkts-arkui-piptemplatetype-e.md) is set to **VIDEO_LIVE**. |
+| [VideoMeetingControlGroup](arkts-arkui-videomeetingcontrolgroup-e.md) | Enumerates the video meeting component groups. They are used only when [PiPTemplateType](arkts-arkui-piptemplatetype-e.md) is set to **VIDEO_MEETING**. |
+| [VideoPlayControlGroup](arkts-arkui-videoplaycontrolgroup-e.md) | Enumerates the video playback component groups. They are used only when [PiPTemplateType](arkts-arkui-piptemplatetype-e.md) is set to **VIDEO_PLAY**. |
 
 <!--Del-->
 ### Enums（系统接口）
@@ -68,7 +68,7 @@ import { PiPWindow } from '@ohos.PiPWindow';
 | [ControlPanelActionEventCallback](arkts-arkui-controlpanelactioneventcallback-t.md) | Describes the action event callback of the PiP controller. |
 | [PiPActionEventType](arkts-arkui-pipactioneventtype-t.md) | Enumerates the types of action events of the PiP controller. |
 | [PiPCallActionEvent](arkts-arkui-pipcallactionevent-t.md) | Defines the PiP action event in a video call. |
-| [PiPControlGroup](arkts-arkui-pipcontrolgroup-t.md) | Describes the optional component groups of the PiP controller. An application can configure whether to display these optional components. This API must match [PiPTemplateType](arkts-arkui-piptemplatetype-e.md#piptemplatetype) when being used. Otherwise, the [create](arkts-arkui-create-f.md#create-1) API returns error code 401. |
+| [PiPControlGroup](arkts-arkui-pipcontrolgroup-t.md) | Describes the optional component groups of the PiP controller. An application can configure whether to display these optional components. This API must match [PiPTemplateType](arkts-arkui-piptemplatetype-e.md) when being used. Otherwise, the [create](arkts-arkui-create-f.md#create-1) API returns error code 401. |
 | [PiPLiveActionEvent](arkts-arkui-pipliveactionevent-t.md) | Defines the PiP action event in a live. |
 | [PiPMeetingActionEvent](arkts-arkui-pipmeetingactionevent-t.md) | Defines the PiP action event in a video meeting. |
 | [PiPVideoActionEvent](arkts-arkui-pipvideoactionevent-t.md) | Defines the PiP action event during video playback. |

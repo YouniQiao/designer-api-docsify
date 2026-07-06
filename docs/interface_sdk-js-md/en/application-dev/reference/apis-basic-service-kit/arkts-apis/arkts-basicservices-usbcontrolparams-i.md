@@ -6,14 +6,14 @@ Represents control transfer parameters.
 
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **System capability:** SystemCapability.USB.USBManager
 
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@ohos.usbManager';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## data
@@ -30,7 +30,7 @@ Buffer for writing or reading data.
 
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -48,7 +48,7 @@ Index of the request parameter.
 
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -66,7 +66,7 @@ Control request type.
 
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -84,7 +84,7 @@ Request type.
 
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -102,7 +102,7 @@ Request target type.
 
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -120,7 +120,7 @@ Request parameter.
 
 **Deprecated since:** 18
 
-**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md#usbdevicerequestparams)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbdevicerequestparams-i.md)
 
 **System capability:** SystemCapability.USB.USBManager
 

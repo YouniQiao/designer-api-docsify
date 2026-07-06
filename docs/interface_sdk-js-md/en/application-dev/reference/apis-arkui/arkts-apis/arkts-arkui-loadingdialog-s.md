@@ -9,7 +9,7 @@ Declare CustomDialog LoadingDialog
 ## Modules to Import
 
 ```TypeScript
-import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, PopoverDialog, LoadingDialog, CustomContentDialog, ConfirmDialog } from '@ohos.arkui.advanced.Dialog';
+import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, PopoverDialog, LoadingDialog, CustomContentDialog, ConfirmDialog } from '@kit.ArkUI';
 ```
 
 ## Controller

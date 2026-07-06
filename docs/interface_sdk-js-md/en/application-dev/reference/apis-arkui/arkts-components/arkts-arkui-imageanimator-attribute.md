@@ -94,7 +94,7 @@ Sets image frame information. Dynamic update is not supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;ImageFrameInfo&gt; | Yes | Image frame information. The information of each frame includes the path,size, position, and playback duration of an image. For details, see [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md#imageframeinfo).<br>Default value: **[]**<br> Note: If the input array is too large, memory usage may increase. Therefore, as thecontroller of memory usage, be sure to assess potential memory consumption before passing in the data to avoidissues such as insufficient memory. |
+| value | Array&lt;ImageFrameInfo&gt; | Yes | Image frame information. The information of each frame includes the path,size, position, and playback duration of an image. For details, see [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md).<br>Default value: **[]**<br> Note: If the input array is too large, memory usage may increase. Therefore, as thecontroller of memory usage, be sure to assess potential memory consumption before passing in the data to avoidissues such as insufficient memory. |
 
 ## iterations
 
@@ -136,7 +136,7 @@ Sets whether the component should automatically pause or resume based on its vis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitorInvisibleArea | boolean | Yes | Whether the component should automatically pause or resume based on itsvisibility, using the system's [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)event.<br> With the value **true**, when the component's [AnimationStatus](arkts-arkui-animationstatus-e.md#animationstatus) is**Running**, the component automatically pauses once it becomes invisible and resumes playback if it becomesvisible again, based on the **onVisibleAreaChange** event.<br>With the value **false**, the pause and playbackof the component are not affected by **onVisibleAreaChange**.<br>Default value: **false**<br> **NOTE**<br>Whenthis parameter is dynamically changed from **true** to **false**, the component will resume from its lastpaused state based on the current [AnimationStatus](arkts-arkui-animationstatus-e.md#animationstatus).<br>Changes to this propertydo not affect the custom [state](ImageAnimatorAttribute#state) value. |
+| monitorInvisibleArea | boolean | Yes | Whether the component should automatically pause or resume based on itsvisibility, using the system's [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)event.<br> With the value **true**, when the component's [AnimationStatus](arkts-arkui-animationstatus-e.md) is**Running**, the component automatically pauses once it becomes invisible and resumes playback if it becomesvisible again, based on the **onVisibleAreaChange** event.<br>With the value **false**, the pause and playbackof the component are not affected by **onVisibleAreaChange**.<br>Default value: **false**<br> **NOTE**<br>Whenthis parameter is dynamically changed from **true** to **false**, the component will resume from its lastpaused state based on the current [AnimationStatus](arkts-arkui-animationstatus-e.md).<br>Changes to this propertydo not affect the custom [state](ImageAnimatorAttribute#state) value. |
 
 ## onCancel
 

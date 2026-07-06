@@ -6,14 +6,14 @@ VideoPlayer is a class for video playback management. It provides APIs to manage
 
 **Deprecated since:** 9
 
-**Substitutes:** [media:media](arkts-multimedia-media.md#media)
+**Substitutes:** [media:media](arkts-multimedia-media.md)
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getTrackDescription
@@ -104,7 +104,7 @@ Subscribes to the video buffering update event. This API works only under online
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of[BufferingInfoType](arkts-media-bufferinginfotype-e.md#bufferinginfotype) is fixed at **0**. |
+| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of[BufferingInfoType](arkts-media-bufferinginfotype-e.md) is fixed at **0**. |
 
 ## on('startRenderFrame')
 
@@ -158,7 +158,7 @@ Subscribes to the video width and height change event.
 on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 ```
 
-Subscribes to the audio interruption event. For details, see [audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-interruptevent-i.md#interruptevent).
+Subscribes to the audio interruption event. For details, see [audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-interruptevent-i.md).
 
 **Since:** 9
 
@@ -565,7 +565,7 @@ Sets the playback speed. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | number | Yes | Video playback speed. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md#playbackspeed). |
+| speed | number | Yes | Video playback speed. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md). |
 | callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the playback speed; otherwise, **err** is an error object. |
 
 ## setSpeed
@@ -588,13 +588,13 @@ Sets the playback speed. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | number | Yes | Video playback speed. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md#playbackspeed). |
+| speed | number | Yes | Video playback speed. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the playback speed. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md#playbackspeed). |
+| Promise&lt;number&gt; | Promise used to return the playback speed. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md). |
 
 ## setVolume
 

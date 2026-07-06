@@ -9,7 +9,7 @@ Describes gzip-related APIs.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@ohos.zlib';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## gzbuffer
@@ -658,7 +658,7 @@ Flushes all pending output into a compressed file. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flush | CompressFlushMode | Yes | Controls the flushing mode. For details, see[CompressFlushMode](arkts-basicservices-compressflushmode-e.md#compressflushmode). |
+| flush | CompressFlushMode | Yes | Controls the flushing mode. For details, see[CompressFlushMode](arkts-basicservices-compressflushmode-e.md). |
 
 **Return value:**
 
@@ -1552,7 +1552,7 @@ Sets the start position to the offset position relative to the next **gzread** o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | number | Yes | Target offset position. |
-| whence | OffsetReferencePoint | Yes | Defines the reference point for the offset. For details, see[OffsetReferencePoint](arkts-basicservices-offsetreferencepoint-e.md#offsetreferencepoint). |
+| whence | OffsetReferencePoint | Yes | Defines the reference point for the offset. For details, see[OffsetReferencePoint](arkts-basicservices-offsetreferencepoint-e.md). |
 
 **Return value:**
 
@@ -1625,8 +1625,8 @@ Dynamically updates the compression level and compression strategy of a file. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | CompressLevel | Yes | Compression level. For details, see [CompressLevel](arkts-basicservices-compresslevel-e.md#compresslevel). |
-| strategy | CompressStrategy | Yes | Compression strategy. For details, see[CompressStrategy](arkts-basicservices-compressstrategy-e.md#compressstrategy). |
+| level | CompressLevel | Yes | Compression level. For details, see [CompressLevel](arkts-basicservices-compresslevel-e.md). |
+| strategy | CompressStrategy | Yes | Compression strategy. For details, see[CompressStrategy](arkts-basicservices-compressstrategy-e.md). |
 
 **Return value:**
 

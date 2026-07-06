@@ -9,7 +9,7 @@ Declare struct SubHeader
 ## Modules to Import
 
 ```TypeScript
-import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from '@ohos.arkui.advanced.SubHeader';
+import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from '@kit.ArkUI';
 ```
 
 ## contentMargin
@@ -279,7 +279,7 @@ Set the title content.
 
 **Since:** 18
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

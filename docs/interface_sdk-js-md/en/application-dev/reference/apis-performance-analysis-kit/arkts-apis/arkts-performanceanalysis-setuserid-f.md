@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiviewdfx.hiAppEvent';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## setUserId
@@ -12,7 +12,7 @@ import { hiAppEvent } from '@ohos.hiviewdfx.hiAppEvent';
 function setUserId(name: string, value: string): void
 ```
 
-Sets a user ID, which is used for association when a [Processor](arkts-performanceanalysis-processor-i.md#processor) is configured.
+Sets a user ID, which is used for association when a [Processor](arkts-performanceanalysis-processor-i.md) is configured.
 
 **Since:** 11
 

@@ -9,7 +9,7 @@ A helper to enable a picker to select output devices
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@ohos.multimedia.avsession';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## constructor

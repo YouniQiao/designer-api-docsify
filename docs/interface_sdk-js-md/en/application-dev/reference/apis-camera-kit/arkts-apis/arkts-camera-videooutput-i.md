@@ -1,8 +1,8 @@
 # VideoOutput
 
-**VideoOutput** implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput).
+**VideoOutput** implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
 
-**Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput)
+**Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getActiveFrameRate
@@ -239,7 +239,7 @@ Subscribes to metadata error events. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when ametadataOutput instance is created. This event is triggered and the corresponding error message is returnedwhen an error occurs during the use of a metadata-related API such as[start](arkts-camera-metadataoutput-i.md#start-2) or[CameraOutput.release](arkts-camera-cameraoutput-i.md#release-2). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 ## setFrameRate
 
@@ -247,7 +247,7 @@ Subscribes to metadata error events. This API uses an asynchronous callback to r
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](arkts-camera-previewoutput-i.md#getsupportedframerates-1). > **NOTE** > > This API is valid only in [PhotoSession](arkts-camera-photosession-i.md#photosession) or > [VideoSession](arkts-camera-videosession-i.md#videosession) mode.
+Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](arkts-camera-previewoutput-i.md#getsupportedframerates-1). > **NOTE** > > This API is valid only in [PhotoSession](arkts-camera-photosession-i.md) or > [VideoSession](arkts-camera-videosession-i.md) mode.
 
 **Since:** 12
 
@@ -287,7 +287,7 @@ Starts video recording. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If video recording startssuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If video recording startssuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

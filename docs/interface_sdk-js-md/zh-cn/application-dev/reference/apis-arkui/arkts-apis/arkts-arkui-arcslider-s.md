@@ -12,7 +12,7 @@
 options: ArcSliderOptions
 ```
 
-配置弧形滑动条的参数。 默认值：[ArcSliderOptions](arkts-arkui-arcslideroptions-c.md#arcslideroptions)的各项子属性均取其默认值。
+配置弧形滑动条的参数。 默认值：[ArcSliderOptions](arkts-arkui-arcslideroptions-c.md)的各项子属性均取其默认值。
 
 **类型：** ArcSliderOptions
 

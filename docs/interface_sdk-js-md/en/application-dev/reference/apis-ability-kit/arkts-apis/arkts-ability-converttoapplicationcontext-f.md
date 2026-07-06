@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from '@ohos.app.ability.sendableContextManager';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## convertToApplicationContext
@@ -32,7 +32,7 @@ Converts a SendableContext object to an ApplicationContext object.
 
 | Type | Description |
 | --- | --- |
-| common.ApplicationContext | [ApplicationContext](arkts-ability-applicationcontext-c.md#applicationcontext)object. |
+| common.ApplicationContext | [ApplicationContext](arkts-ability-applicationcontext-c.md)object. |
 
 **Error codes:**
 

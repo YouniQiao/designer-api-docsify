@@ -9,7 +9,7 @@ Provides information about a live form.
 ## Modules to Import
 
 ```TypeScript
-import { LiveFormInfo } from '@ohos.app.form.LiveFormExtensionAbility';
+import { LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## borderRadius

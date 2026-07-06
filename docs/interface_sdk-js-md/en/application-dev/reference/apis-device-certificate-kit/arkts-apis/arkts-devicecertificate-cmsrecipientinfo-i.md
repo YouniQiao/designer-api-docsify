@@ -9,7 +9,7 @@ Represents recipient information for the CMS message. > **NOTE** > > At least on
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## keyAgreeInfo

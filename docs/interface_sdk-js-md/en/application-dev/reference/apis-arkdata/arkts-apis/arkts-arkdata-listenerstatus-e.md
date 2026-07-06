@@ -76,7 +76,7 @@ An internal error occurs.
 INVALID_PARAMETERS = 201
 ```
 
-[GetDataParams](arkts-arkdata-getdataparams-i.md#getdataparams) contains invalid parameters.
+[GetDataParams](arkts-arkdata-getdataparams-i.md) contains invalid parameters.
 
 **Since:** 15
 

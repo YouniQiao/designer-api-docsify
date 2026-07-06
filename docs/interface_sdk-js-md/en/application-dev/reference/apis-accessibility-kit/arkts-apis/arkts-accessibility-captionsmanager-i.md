@@ -9,7 +9,7 @@ Implements configuration management for captions. Before calling any API of **Ca
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@ohos.accessibility';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## off('enableChange')

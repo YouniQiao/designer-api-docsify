@@ -11,7 +11,7 @@ The callback of start vertical panel.
 ## Modules to Import
 
 ```TypeScript
-import { verticalPanelManager } from '@ohos.app.ability.verticalPanelManager';
+import { verticalPanelManager } from '@kit.AbilityKit';
 ```
 
 ## onError

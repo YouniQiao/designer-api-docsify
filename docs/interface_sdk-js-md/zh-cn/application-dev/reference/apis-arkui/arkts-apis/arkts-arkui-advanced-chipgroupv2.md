@@ -8,7 +8,7 @@
 | --- | --- |
 | [ChipGroupV2Item](arkts-arkui-chipgroupv2item-c.md) | ChipGroupV2Item定义了芯片组中单个芯片项。 |
 | [ChipGroupV2ItemStyle](arkts-arkui-chipgroupv2itemstyle-c.md) | ChipGroupV2ItemStyle定义了ChipV2的共通属性类。 |
-| [ChipGroupV2Items](arkts-arkui-chipgroupv2items-c.md) | ChipGroupV2Items定义了芯片组项的数组类，继承自Array&lt;[ChipGroupV2Item](arkts-arkui-chipgroupv2item-c.md#chipgroupv2item)&gt;。 |
+| [ChipGroupV2Items](arkts-arkui-chipgroupv2items-c.md) | ChipGroupV2Items定义了芯片组项的数组类，继承自Array&lt;[ChipGroupV2Item](arkts-arkui-chipgroupv2item-c.md)&gt;。 |
 | [ChipGroupV2Padding](arkts-arkui-chipgroupv2padding-c.md) | ChipGroupV2Padding定义了ChipGroupV2的上下内边距，用于控制其整体高度。 |
 | [ChipGroupV2Space](arkts-arkui-chipgroupv2space-c.md) | ChipGroupV2Space定义了ChipGroupV2左右内边距，以及Chip与Chip之间的间距。 |
 

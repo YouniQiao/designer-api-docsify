@@ -349,7 +349,7 @@ getFirstValue(): T
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getFirstValue method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 **示例：**
 
@@ -431,7 +431,7 @@ getLastValue(): T
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLastValue method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 **示例：**
 
@@ -592,7 +592,7 @@ popFirst(): T
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The popFirst method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 **示例：**
 
@@ -630,7 +630,7 @@ popLast(): T
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The popLast method cannot be bound. |
-| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 **示例：**
 

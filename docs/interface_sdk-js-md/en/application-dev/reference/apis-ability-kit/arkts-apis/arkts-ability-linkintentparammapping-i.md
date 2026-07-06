@@ -9,7 +9,7 @@ LinkIntentParamMapping defines the mapping between intent parameters and URI inf
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from '@ohos.app.ability.InsightIntentDecorator';
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from '@kit.AbilityKit';
 ```
 
 ## paramCategory

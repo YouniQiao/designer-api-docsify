@@ -9,7 +9,7 @@ Defines the option of ShowActionMenu.
 ## Modules to Import
 
 ```TypeScript
-import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from '@system.prompt';
+import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from '@kit.ArkUI';
 ```
 
 ## buttons

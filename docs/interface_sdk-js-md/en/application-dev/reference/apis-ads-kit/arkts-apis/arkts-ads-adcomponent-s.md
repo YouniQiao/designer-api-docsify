@@ -9,7 +9,7 @@ This module provides the capability of displaying ads, covering native, roll, sp
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from '@ohos.advertising.AdComponent';
+import { AdComponent } from '@kit.AdsKit';
 ```
 
 ## build
@@ -38,7 +38,7 @@ Application self-rendered ad style. The application self-rendered ad style is a 
 
 **Since:** 12
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

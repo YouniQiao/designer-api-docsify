@@ -9,7 +9,7 @@ This module provides the capabilities for life cycle management of sensitive use
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@ohos.security.asset';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## Summary
@@ -67,7 +67,7 @@ import { asset } from '@ohos.security.asset';
 | [OperationType](arkts-assetstore-operationtype-e.md) | Enumerates the types of additional operation to perform. |
 | [ReturnType](arkts-assetstore-returntype-e.md) | Enumerates the type of information returned by an asset query operation. |
 | [SyncType](arkts-assetstore-synctype-e.md) | Enumerates the sync types supported by an asset. |
-| [Tag](arkts-assetstore-tag-e.md) | Enumerate the keys of asset attributes ([AssetMap](arkts-assetstore-assetmap-t.md#assetmap)), which are in key-value (KV) pairs. |
+| [Tag](arkts-assetstore-tag-e.md) | Enumerate the keys of asset attributes ([AssetMap](arkts-assetstore-assetmap-t.md)), which are in key-value (KV) pairs. |
 | [TagType](arkts-assetstore-tagtype-e.md) | Enumerates the asset attribute types. |
 | [WrapType](arkts-assetstore-wraptype-e.md) | Enumerates the encrypted import/export types supported by the asset. |
 
@@ -84,5 +84,5 @@ import { asset } from '@ohos.security.asset';
 | Name | Description |
 | --- | --- |
 | [AssetMap](arkts-assetstore-assetmap-t.md) | Represents a set of asset attributes in the form of KV pairs. |
-| [Value](arkts-assetstore-value-t.md) | Represents the value of each attribute in [AssetMap](arkts-assetstore-assetmap-t.md#assetmap). |
+| [Value](arkts-assetstore-value-t.md) | Represents the value of each attribute in [AssetMap](arkts-assetstore-assetmap-t.md). |
 

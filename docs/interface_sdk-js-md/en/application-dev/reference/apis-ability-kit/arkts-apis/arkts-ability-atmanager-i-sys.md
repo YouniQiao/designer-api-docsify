@@ -9,7 +9,7 @@ Program access control management class, providing capabilities such as permissi
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from '@ohos.abilityAccessCtrl';
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 ```
 
 ## generateCliAuthResult
@@ -239,7 +239,7 @@ Obtains the flags of a specified permission for a specified app. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the queried permission flag value. For details about themeaning of the flag value, see the description of the grantFlags field in[PermissionStatusInfo](arkts-ability-permissionstatusinfo-i-sys.md#permissionstatusinfo). |
+| Promise&lt;number&gt; | Promise used to return the queried permission flag value. For details about themeaning of the flag value, see the description of the grantFlags field in[PermissionStatusInfo](arkts-ability-permissionstatusinfo-i-sys.md). |
 
 **Error codes:**
 

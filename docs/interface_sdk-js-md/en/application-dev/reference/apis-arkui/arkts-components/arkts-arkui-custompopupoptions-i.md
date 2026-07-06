@@ -554,7 +554,7 @@ Preferred position of the popup. If the set position is insufficient for holding
 popupColor?: Color | string | Resource | number
 ```
 
-Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. The default value varies by API version. API version 10: **'#4d4d4d'** API version 11 and later: [TRANSPARENT](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md#color) plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#blurstyle)
+Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. The default value varies by API version. API version 10: **'#4d4d4d'** API version 11 and later: [TRANSPARENT](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
 
 **Type:** Color | string | Resource | number
 

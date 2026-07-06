@@ -9,7 +9,7 @@ Events and styles supported by the search area.
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@ohos.atomicservice.AtomicServiceSearch';
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
 ```
 
 ## cancelIcon

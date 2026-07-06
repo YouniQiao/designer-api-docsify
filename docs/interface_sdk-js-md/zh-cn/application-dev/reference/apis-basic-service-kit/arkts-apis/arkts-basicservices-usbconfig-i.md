@@ -1,12 +1,12 @@
 # USBConfig
 
-USB配置，一个[USBDevice](arkts-basicservices-usbdevice-i.md#usbdevice)中可以含有多个配置。
+USB配置，一个[USBDevice](arkts-basicservices-usbdevice-i.md)中可以含有多个配置。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [USBConfiguration](arkts-basicservices-usbconfiguration-i.md#usbconfiguration)
+**替代接口：** [USBConfiguration](arkts-basicservices-usbconfiguration-i.md)
 
 **系统能力：** SystemCapability.USB.USBManager
 

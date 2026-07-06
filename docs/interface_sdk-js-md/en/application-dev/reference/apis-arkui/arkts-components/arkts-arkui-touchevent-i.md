@@ -1,8 +1,8 @@
 # TouchEvent
 
-Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#baseevent). In non-event injection scenarios, **changedTouches** contains points resampled at the screen refresh rate, while **touches** contains points reported at the device's refresh rate. As such, **changedTouches** data may differ from **touches**.
+Inherits from [BaseEvent](arkts-arkui-baseevent-i.md). In non-event injection scenarios, **changedTouches** contains points resampled at the screen refresh rate, while **touches** contains points reported at the device's refresh rate. As such, **changedTouches** data may differ from **touches**.
 
-**Inheritance/Implementation:** TouchEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**Inheritance/Implementation:** TouchEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 7
 
@@ -14,7 +14,7 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#baseevent). In non-event in
 getHistoricalPoints(): Array<HistoricalPoint>
 ```
 
-Obtains all historical touch points for the current frame. The touch event frequency per frame varies by device. This API can be called only in [TouchEvent](arkts-arkui-touchevent-i.md#touchevent). This API is only available within [TouchEvent](arkts-arkui-touchevent-i.md#touchevent) during [onTouch](arkts-arkui-commonmethod-c.md#ontouch-1) invocations. Typically, [onTouch](arkts-arkui-commonmethod-c.md#ontouch-1) is invoked once per frame. If multiple [TouchEvent](arkts-arkui-touchevent-i.md#touchevent) instances are received in a single frame, the last point is returned through **onTouch**, and the remaining points are stored as historical points. For multi-touch events within the same frame, multiple** onTouch** calls may occur.
+Obtains all historical touch points for the current frame. The touch event frequency per frame varies by device. This API can be called only in [TouchEvent](arkts-arkui-touchevent-i.md). This API is only available within [TouchEvent](arkts-arkui-touchevent-i.md) during [onTouch](arkts-arkui-commonmethod-c.md#ontouch-1) invocations. Typically, [onTouch](arkts-arkui-commonmethod-c.md#ontouch-1) is invoked once per frame. If multiple [TouchEvent](arkts-arkui-touchevent-i.md) instances are received in a single frame, the last point is returned through **onTouch**, and the remaining points are stored as historical points. For multi-touch events within the same frame, multiple** onTouch** calls may occur.
 
 **Since:** 10
 

@@ -9,7 +9,7 @@ Calls **registerPlugin** and **unregisterPlugin** to register or unregister call
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@ohos.dlpPermission';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## constructor
@@ -18,7 +18,7 @@ import { dlpPermission } from '@ohos.dlpPermission';
 constructor()
 ```
 
-Represents a constructor for instantiating [DlpConnManager](arkts-dataprotection-dlpconnmanager-c.md#dlpconnmanager).
+Represents a constructor for instantiating [DlpConnManager](arkts-dataprotection-dlpconnmanager-c.md).
 
 **Since:** 21
 

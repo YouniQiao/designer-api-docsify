@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@ohos.animator';
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
 ```
 
 ## Summary

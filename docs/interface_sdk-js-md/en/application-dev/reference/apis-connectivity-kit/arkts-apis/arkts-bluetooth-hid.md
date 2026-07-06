@@ -9,7 +9,7 @@ Provides methods to accessing bluetooth HID(Human Interface Device)-related capa
 ## Modules to Import
 
 ```TypeScript
-import { hid } from '@ohos.bluetooth.hid';
+import { hid } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

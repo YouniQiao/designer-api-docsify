@@ -9,7 +9,7 @@ Info about the connection from each specific client.
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@ohos.net.webSocket';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## clientIP

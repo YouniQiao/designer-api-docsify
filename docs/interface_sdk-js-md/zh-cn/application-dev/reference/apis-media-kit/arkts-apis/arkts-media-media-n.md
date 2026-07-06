@@ -103,7 +103,7 @@
 | [SoundPool](arkts-media-soundpool-t.md) | 音频池，提供了系统声音的加载、播放、音量设置、循环设置、停止播放、资源卸载等功能。 |
 | [PlayParameters](arkts-media-playparameters-t.md) | 表示音频池播放参数设置。 |
 | [OnFrameFetched](arkts-media-onframefetched-t.md) | 批量获取缩略图回调函数。 |
-| [AVPlayerState](arkts-media-avplayerstate-t.md) | [AVPlayer](arkts-media-media-n.md#media)的状态机，可通过state属性主动获取当前状态，也可通过监听 [stateChange](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)) 事件上报当前状态，状态机之间的切换规则，可参考[音频播放开发指导](../../../../media/media/using-avplayer-for-playback.md)。 |
+| [AVPlayerState](arkts-media-avplayerstate-t.md) | [AVPlayer](arkts-media-media-n.md)的状态机，可通过state属性主动获取当前状态，也可通过监听 [stateChange](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)) 事件上报当前状态，状态机之间的切换规则，可参考[音频播放开发指导](../../../../media/media/using-avplayer-for-playback.md)。 |
 | [OnTrackChangeHandler](arkts-media-ontrackchangehandler-t.md) | track变更事件回调方法。 |
 | [OnAVPlayerStateChangeHandle](arkts-media-onavplayerstatechangehandle-t.md) | 播放状态机切换事件回调方法。 |
 | [OnBufferingUpdateHandler](arkts-media-onbufferingupdatehandler-t.md) | 播放缓存事件回调方法。 |

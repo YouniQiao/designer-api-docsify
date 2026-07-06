@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hichecker } from '@ohos.hichecker';
+import { hichecker } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## addRule

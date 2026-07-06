@@ -11,7 +11,7 @@ Defines the device icon information filter options.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@ohos.distributedDeviceManager';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## imageType

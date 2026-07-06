@@ -9,7 +9,7 @@ Parameter for dynamically enable advertising.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@ohos.bluetooth.ble';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## advertisingId

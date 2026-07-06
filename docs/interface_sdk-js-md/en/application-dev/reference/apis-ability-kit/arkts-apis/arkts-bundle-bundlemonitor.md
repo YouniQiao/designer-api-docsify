@@ -11,7 +11,7 @@ Bundle monitor
 ## Modules to Import
 
 ```TypeScript
-import { bundleMonitor } from '@ohos.bundle.bundleMonitor';
+import { bundleMonitor } from '@kit.AbilityKit';
 ```
 
 ## Summary

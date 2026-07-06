@@ -6,14 +6,14 @@ The **fileAccess** module provides a framework for accessing and operating user 
 
 **Deprecated since:** 23
 
-**Substitutes:** [fs:fileIo](arkts-corefile-fileio-n.md#fileio)
+**Substitutes:** [fs:fileIo](arkts-corefile-fileio-n.md)
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@ohos.file.fileAccess';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## Summary

@@ -22,7 +22,7 @@ particles: Array<
   >
 ```
 
-粒子动画的集合。每个粒子动画（[ParticleOptions](arkts-arkui-particleoptions-i.md#particleoptions)）包含粒子发射，同时可配置粒子的颜色、透明度、大小、速度、加速度与旋转速度，详见 [ParticleOptions](arkts-arkui-particleoptions-i.md#particleoptions)属性说明。
+粒子动画的集合。每个粒子动画（[ParticleOptions](arkts-arkui-particleoptions-i.md)）包含粒子发射，同时可配置粒子的颜色、透明度、大小、速度、加速度与旋转速度，详见 [ParticleOptions](arkts-arkui-particleoptions-i.md)属性说明。
 
 **类型：** Array<
     ParticleOptions<

@@ -9,7 +9,7 @@ Declaration of the menu item on the right side.
 ## Modules to Import
 
 ```TypeScript
-import { ComposeTitleBar, ComposeTitleBarMenuItem } from '@ohos.arkui.advanced.ComposeTitleBar';
+import { ComposeTitleBar, ComposeTitleBarMenuItem } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription

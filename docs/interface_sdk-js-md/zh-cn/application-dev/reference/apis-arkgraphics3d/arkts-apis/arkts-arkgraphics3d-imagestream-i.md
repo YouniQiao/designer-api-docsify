@@ -2,7 +2,7 @@
 
 图像流资源.
 
-**继承/实现关系：** ImageStream extends [Image](arkts-arkgraphics3d-image-i.md#image)
+**继承/实现关系：** ImageStream extends [Image](arkts-arkgraphics3d-image-i.md)
 
 **起始版本：** 26.0.0
 

@@ -2,7 +2,7 @@
 
 Custom elements of mine page.
 
-**Inheritance/Implementation:** CustomElement extends [OperResult](arkts-avsession-operresult-i.md#operresult)
+**Inheritance/Implementation:** CustomElement extends [OperResult](arkts-avsession-operresult-i.md)
 
 **Since:** 23
 
@@ -11,7 +11,7 @@ Custom elements of mine page.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@ohos.multimedia.avMusicTemplate';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## customCompilations

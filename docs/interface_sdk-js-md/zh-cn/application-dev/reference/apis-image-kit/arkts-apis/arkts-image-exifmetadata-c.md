@@ -2,7 +2,7 @@
 
 ExifMetadata implements Metadata Exif（Exchangeable image file format）元数据。
 
-**继承/实现关系：** ExifMetadata implements [Metadata](arkts-image-metadata-i.md#metadata)
+**继承/实现关系：** ExifMetadata implements [Metadata](arkts-image-metadata-i.md)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ clone(): Promise<ExifMetadata>
 static createInstance(): ExifMetadata
 ```
 
-创建一个空的[ExifMetadata](arkts-image-exifmetadata-c.md#exifmetadata)实例。
+创建一个空的[ExifMetadata](arkts-image-exifmetadata-c.md)实例。
 
 **起始版本：** 23
 
@@ -94,7 +94,7 @@ getBlob(): Promise<ArrayBuffer>
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-获取图像的元数据属性值。使用Promise异步回调。 要查询的属性的具体信息请参考[PropertyKey](arkts-image-propertykey-e.md#propertykey)。
+获取图像的元数据属性值。使用Promise异步回调。 要查询的属性的具体信息请参考[PropertyKey](arkts-image-propertykey-e.md)。
 
 **起始版本：** 23
 
@@ -158,7 +158,7 @@ setBlob(blob: ArrayBuffer): Promise<void>
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-批量设置图片元数据中的指定属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[PropertyKey](arkts-image-propertykey-e.md#propertykey)。
+批量设置图片元数据中的指定属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[PropertyKey](arkts-image-propertykey-e.md)。
 
 **起始版本：** 23
 

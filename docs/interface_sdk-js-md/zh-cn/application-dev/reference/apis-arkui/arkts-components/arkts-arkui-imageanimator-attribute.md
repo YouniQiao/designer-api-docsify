@@ -136,7 +136,7 @@ monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| monitorInvisibleArea | boolean | 是 | 当设置为true时，组件将基于系统的[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)可见性判定，控制组件的暂停和播放。<br/> 当组件的运行状态为[AnimationStatus](arkts-arkui-animationstatus-e.md#animationstatus)的Running时，若判定组件不可见，则自动执行暂停操作；若判定为可见，则自动恢复播放。<br/>当设置为false时，组件的暂停和播放不受到onVisibleAreaChange影响。<br/>默认值：false<br/> **说明：** <br/>当该属性由true动态修改为false时，组件将依据当前的[AnimationStatus](arkts-arkui-animationstatus-e.md#animationstatus)状态进行处理。<br/> 例如，若当前状态为Running且因[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)的不可见回调暂停，则在属性由true改为false后，组件会从上次暂停的位置重新开始播放。<br/>由该属性导致的不可见暂停和可见暂停操作不会改变用户设置的[state](ImageAnimatorAttribute#state)值。 |
+| monitorInvisibleArea | boolean | 是 | 当设置为true时，组件将基于系统的[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)可见性判定，控制组件的暂停和播放。<br/> 当组件的运行状态为[AnimationStatus](arkts-arkui-animationstatus-e.md)的Running时，若判定组件不可见，则自动执行暂停操作；若判定为可见，则自动恢复播放。<br/>当设置为false时，组件的暂停和播放不受到onVisibleAreaChange影响。<br/>默认值：false<br/> **说明：** <br/>当该属性由true动态修改为false时，组件将依据当前的[AnimationStatus](arkts-arkui-animationstatus-e.md)状态进行处理。<br/> 例如，若当前状态为Running且因[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)的不可见回调暂停，则在属性由true改为false后，组件会从上次暂停的位置重新开始播放。<br/>由该属性导致的不可见暂停和可见暂停操作不会改变用户设置的[state](ImageAnimatorAttribute#state)值。 |
 
 ## onCancel
 

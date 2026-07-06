@@ -9,7 +9,7 @@ The **request** module provides applications with the basic capabilities of file
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@ohos.request.cacheDownload';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -22,7 +22,7 @@ import { cacheDownload } from '@ohos.request.cacheDownload';
 | [clearFileCache](arkts-basicservices-clearfilecache-f.md#clearfilecache-1) | Clears this file cache. |
 | [clearMemoryCache](arkts-basicservices-clearmemorycache-f.md#clearmemorycache-1) | Clears this memory cache. |
 | [download](arkts-basicservices-download-f.md#download-1) | Downloads a task from a specified URL. If the transfer is successful, the data is downloaded to the memory cache and file cache. - After automatically decompressing during HTTP transmission, the size of the target resource cannot exceed 20971 520 bytes (20 MB). Otherwise, the resource fails to store in the memory cache or file cache. - When caching the downloaded data, if the data already exists in the destination URL, the new data will overwrite the old one. - In addition, the system determines whether to store the target resource in a specified location based on each cache type's size limit in **cacheDownload**. By default, the LRU mode is used to replace the existing cached data. - This API returns the result synchronously, without blocking the calling thread. |
-| [getDownloadInfo](arkts-basicservices-getdownloadinfo-f.md#getdownloadinfo-1) | Obtains the download information based on the URL. The download information is stored in the download information list in memory and is cleared when the application exits. - If the specified URL is found in the download information list, the latest [DownloadInfo](arkts-basicservices-downloadinfo-i.md#downloadinfo) corresponding to the URL is returned. - If the specified URL cannot be found in the download information list, **undefined** is returned. - If the download information has already cached in the URL, the new cached information will overwrite the old one. - When the target information is stored in the memory, the existing cache data is replaced in the LRU mode. |
+| [getDownloadInfo](arkts-basicservices-getdownloadinfo-f.md#getdownloadinfo-1) | Obtains the download information based on the URL. The download information is stored in the download information list in memory and is cleared when the application exits. - If the specified URL is found in the download information list, the latest [DownloadInfo](arkts-basicservices-downloadinfo-i.md) corresponding to the URL is returned. - If the specified URL cannot be found in the download information list, **undefined** is returned. - If the download information has already cached in the URL, the new cached information will overwrite the old one. - When the target information is stored in the memory, the existing cache data is replaced in the LRU mode. |
 | [offDownloadError](arkts-basicservices-offdownloaderror-f.md#offdownloaderror-1) | Unsubscribes from the pre-download error events. This API uses an asynchronous callback to return the result. |
 | [offDownloadSuccess](arkts-basicservices-offdownloadsuccess-f.md#offdownloadsuccess-1) | Unsubscribes from the pre-download completion events. This API uses an asynchronous callback to return the result. |
 | [onDownloadError](arkts-basicservices-ondownloaderror-f.md#ondownloaderror-1) | Subscribes to the pre-download error events. This API uses an asynchronous callback to return the result. |

@@ -9,7 +9,7 @@ Describes the scanned Wi-Fi information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@ohos.wifiManager';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## band

@@ -9,7 +9,7 @@ Provides APIs for domain account management.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@ohos.account.osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## auth
@@ -172,7 +172,7 @@ Authenticates a domain account in a pop-up window.
 **Since:** 10
 
 **Required permissions:** 
-- API version 10 - 10: ohos.permission.ACCESS_USER_AUTH_INTERNAL
+- API version 10: ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -188,7 +188,7 @@ Authenticates a domain account in a pop-up window.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
@@ -201,7 +201,7 @@ Authenticates a domain account in a pop-up window.
 | [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
 | [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | The account authentication service does not exist. |
 | [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | The account authentication service works abnormally. |
-| 12300211 | Server unreachable.<br>**Applicable version:** 11 |
+| 12300211 | Server unreachable.<br>**Applicable version:** 11 and later |
 
 **Example**
 
@@ -233,7 +233,7 @@ Authenticates a domain account in a pop-up window.
 **Since:** 10
 
 **Required permissions:** 
-- API version 10 - 10: ohos.permission.ACCESS_USER_AUTH_INTERNAL
+- API version 10: ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -250,7 +250,7 @@ Authenticates a domain account in a pop-up window.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 10 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
@@ -264,7 +264,7 @@ Authenticates a domain account in a pop-up window.
 | [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
 | [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | The account authentication service does not exist. |
 | [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | The account authentication service works abnormally. |
-| 12300211 | Server unreachable.<br>**Applicable version:** 11 |
+| 12300211 | Server unreachable.<br>**Applicable version:** 11 and later |
 
 **Example**
 
@@ -759,7 +759,7 @@ Registers a domain plug-in.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 | 12300201 | The domain plugin has been registered. |
 
 **Example**
@@ -817,7 +817,7 @@ Unregisters this domain plug-in.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 **Example**
 

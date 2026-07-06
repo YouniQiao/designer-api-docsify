@@ -2,7 +2,7 @@
 
 OIS (Optical Image Stabilization) interface.
 
-**Inheritance/Implementation:** OIS extends [OISQuery](arkts-camera-oisquery-i.md#oisquery)
+**Inheritance/Implementation:** OIS extends [OISQuery](arkts-camera-oisquery-i.md)
 
 **Since:** 24
 
@@ -11,7 +11,7 @@ OIS (Optical Image Stabilization) interface.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## setOISMode

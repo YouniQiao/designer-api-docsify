@@ -12,7 +12,7 @@
 AUTO = 0
 ```
 
-预览图根据[Placement](arkts-arkui-placement-e.md#placement)自动调整预览图宽高及缩放。
+预览图根据[Placement](arkts-arkui-placement-e.md)自动调整预览图宽高及缩放。
 
 **起始版本：** 20
 

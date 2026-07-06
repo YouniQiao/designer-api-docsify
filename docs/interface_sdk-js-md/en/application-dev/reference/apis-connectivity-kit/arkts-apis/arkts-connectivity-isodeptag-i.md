@@ -2,7 +2,7 @@
 
 Provides methods for accessing IsoDep tag.
 
-**Inheritance/Implementation:** IsoDepTag extends [TagSession](arkts-connectivity-tagsession-i.md#tagsession)
+**Inheritance/Implementation:** IsoDepTag extends [TagSession](arkts-connectivity-tagsession-i.md)
 
 **Since:** 12
 

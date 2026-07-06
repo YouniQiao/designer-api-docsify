@@ -9,7 +9,7 @@ Options for creating the **NumberFormat** object. Since API version 9, the **Num
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@ohos.intl';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## compactDisplay

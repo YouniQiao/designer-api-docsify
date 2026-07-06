@@ -6,7 +6,7 @@ Provides the child component layout information.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md#layoutable)
+**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,7 +24,7 @@ Constraint size of the child component.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md#layoutable)
+**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -44,7 +44,7 @@ Position coordinates of the child component.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md#layoutable)
+**Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 

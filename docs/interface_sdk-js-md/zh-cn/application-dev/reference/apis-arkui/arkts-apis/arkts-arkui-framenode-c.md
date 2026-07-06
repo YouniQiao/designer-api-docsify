@@ -92,7 +92,7 @@ adoptChild(child: FrameNode): void
 appendChild(node: FrameNode): void
 ```
 
-在FrameNode最后一个子节点后添加新的子节点。当前FrameNode如果不可修改，抛出异常信息。[typeNode](arkts-arkui-typenode-n.md#typenode)在appendChild时会校验子组件类型或个数，不满足时抛出异常信息，限制 情况请查看[typeNode](arkts-arkui-typenode-n.md#typenode)描述。
+在FrameNode最后一个子节点后添加新的子节点。当前FrameNode如果不可修改，抛出异常信息。[typeNode](arkts-arkui-typenode-n.md)在appendChild时会校验子组件类型或个数，不满足时抛出异常信息，限制 情况请查看[typeNode](arkts-arkui-typenode-n.md)描述。
 
 **起始版本：** 12
 
@@ -113,7 +113,7 @@ appendChild(node: FrameNode): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reasonare included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted."<br>**适用版本：** 22 |
+| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reasonare included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted."<br>**适用版本：** 22+ |
 
 ## cancelAnimations
 
@@ -606,7 +606,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 查询的子节点id，为通用属性设置的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。 |
+| id | string | 是 | 查询的子节点id，为通用属性设置的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
 
 **返回值：**
 
@@ -670,7 +670,7 @@ getGlobalPositionOnDisplay(): Position
 getId(): string
 ```
 
-获取用户设置的节点ID（通用属性设置的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)）。
+获取用户设置的节点ID（通用属性设置的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)）。
 
 **起始版本：** 12
 
@@ -684,7 +684,7 @@ getId(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 用户设置的节点ID（通用属性设置的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)）。 |
+| string | 用户设置的节点ID（通用属性设置的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)）。 |
 
 ## getInspectorInfo
 
@@ -1078,7 +1078,7 @@ getPreviousSibling(): FrameNode | null
 getRenderNode(): RenderNode | null
 ```
 
-获取FrameNode中持有的[RenderNode](arkts-arkui-rendernode-c.md#rendernode)。
+获取FrameNode中持有的[RenderNode](arkts-arkui-rendernode-c.md)。
 
 **起始版本：** 11
 
@@ -1232,7 +1232,7 @@ insertChildAfter(child: FrameNode, sibling: FrameNode | null): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reasonare included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted."<br>**适用版本：** 22 |
+| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reasonare included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted."<br>**适用版本：** 22+ |
 
 ## invalidate
 
@@ -1498,7 +1498,7 @@ measure(constraint: LayoutConstraint): void
 moveTo(targetParent: FrameNode, index?: number): void
 ```
 
-将当前FrameNode移动到目标FrameNode的指定位置。当前FrameNode如果不可修改，抛出异常信息。targetParent为[typeNode](arkts-arkui-typenode-n.md#typenode)时会校验子组件类型或个数，不满足时抛出 异常信息，限制情况请查看[typeNode](arkts-arkui-typenode-n.md#typenode)描述。 > **说明：** > > 当前仅支持以下类型的[TypedFrameNode](arkts-arkui-typedframenode-i.md#typedframenode)进行移动操作：[Stack](arkts-arkui-stack-t.md#stack)、 > [XComponent](arkts-arkui-xcomponent-t.md#xcomponent)。对于其他类型的节点，移动操作不会生效。 > > 当前仅支持根节点为以下类型组件的[BuilderNode](arkts-arkui-buildernode-c.md#buildernode)进行移动操作：[Stack](../arkts-components/arkts-arkui-stack.md)、 > [XComponent](xcomponent)、[EmbeddedComponent](embedded_component)。对于其他类型的组件，移动操作不会生效。
+将当前FrameNode移动到目标FrameNode的指定位置。当前FrameNode如果不可修改，抛出异常信息。targetParent为[typeNode](arkts-arkui-typenode-n.md)时会校验子组件类型或个数，不满足时抛出 异常信息，限制情况请查看[typeNode](arkts-arkui-typenode-n.md)描述。 > **说明：** > > 当前仅支持以下类型的[TypedFrameNode](arkts-arkui-typedframenode-i.md)进行移动操作：[Stack](arkts-arkui-stack-t.md)、 > [XComponent](arkts-arkui-xcomponent-t.md)。对于其他类型的节点，移动操作不会生效。 > > 当前仅支持根节点为以下类型组件的[BuilderNode](arkts-arkui-buildernode-c.md)进行移动操作：[Stack](../arkts-components/arkts-arkui-stack.md)、 > [XComponent](xcomponent)、[EmbeddedComponent](embedded_component)。对于其他类型的组件，移动操作不会生效。
 
 **起始版本：** 18
 
@@ -1520,7 +1520,7 @@ moveTo(targetParent: FrameNode, index?: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
-| [100027](../errorcode-node.md#100027-当前节点已被接纳为附属节点) | The current node has been adopted.<br>**适用版本：** 22 |
+| [100027](../errorcode-node.md#100027-当前节点已被接纳为附属节点) | The current node has been adopted.<br>**适用版本：** 22+ |
 
 ## onDraw
 
@@ -1528,7 +1528,7 @@ moveTo(targetParent: FrameNode, index?: number): void
 onDraw?(context: DrawContext): void
 ```
 
-FrameNode的自绘制方法，该方法会重写默认绘制方法，在FrameNode进行内容绘制时被调用。 该接口的[DrawContext](arkts-arkui-drawcontext-c.md#drawcontext)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见 [调整自定义绘制Canvas的变换矩阵](../../../../ui/arkts-user-defined-arktsNode-frameNode.md#调整自定义绘制canvas的变换矩阵)。
+FrameNode的自绘制方法，该方法会重写默认绘制方法，在FrameNode进行内容绘制时被调用。 该接口的[DrawContext](arkts-arkui-drawcontext-c.md)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见 [调整自定义绘制Canvas的变换矩阵](../../../../ui/arkts-user-defined-arktsNode-frameNode.md#调整自定义绘制canvas的变换矩阵)。
 
 **起始版本：** 12
 
@@ -1704,7 +1704,7 @@ reuse(): void
 setCrossLanguageOptions(options: CrossLanguageOptions): void
 ```
 
-设置当前FrameNode的跨ArkTS语言访问选项。例如ArkTS语言创建的节点，设置该节点是否可通过非ArkTS语言进行属性设置，从API版本26.0.0开始支持设置是否可通过非ArkTS语言进行组件树操作。当前 FrameNode如果不可修改或不可设置跨ArkTS语言访问选项，抛出异常信息。 > **说明：** > > 当前仅支持[Scroll](arkts-arkui-scroll-t.md#scroll), [Swiper](arkts-arkui-swiper-t.md#swiper)，[List](arkts-arkui-list-t.md#list)， > [ListItem](arkts-arkui-listitem-t.md#listitem)，[ListItemGroup](arkts-arkui-listitemgroup-t.md#listitemgroup)， > [WaterFlow](arkts-arkui-waterflow-t.md#waterflow)，[FlowItem](arkts-arkui-flowitem-t.md#flowitem)，[Grid](arkts-arkui-grid-t.md#grid)， > [GridItem](arkts-arkui-griditem-t.md#griditem)，[TextInput](arkts-arkui-textinput-t.md#textinput)，[TextArea](arkts-arkui-textarea-t.md#textarea)， > [Column](arkts-arkui-column-t.md#column)，[Row](arkts-arkui-row-t.md#row)，[Stack](arkts-arkui-stack-t.md#stack)， > [Flex](arkts-arkui-flex-t.md#flex)，[RelativeContainer](arkts-arkui-relativecontainer-t.md#relativecontainer)， > [Progress](arkts-arkui-progress-t.md#progress)，[LoadingProgress](arkts-arkui-loadingprogress-t.md#loadingprogress)， > [Image](arkts-arkui-image-t.md#image)，[Button](arkts-arkui-button-t.md#button)，[CheckBox](arkts-arkui-checkbox-t.md#checkbox)， > [Radio](arkts-arkui-radio-t.md#radio)，[Slider](arkts-arkui-slider-t.md#slider)，[Toggle](arkts-arkui-toggle-t.md#toggle)， > [XComponent](arkts-arkui-xcomponent-t.md#xcomponent)类型的[TypedFrameNode](arkts-arkui-typedframenode-i.md#typedframenode)设置跨ArkTS语言访问选项。
+设置当前FrameNode的跨ArkTS语言访问选项。例如ArkTS语言创建的节点，设置该节点是否可通过非ArkTS语言进行属性设置，从API版本26.0.0开始支持设置是否可通过非ArkTS语言进行组件树操作。当前 FrameNode如果不可修改或不可设置跨ArkTS语言访问选项，抛出异常信息。 > **说明：** > > 当前仅支持[Scroll](arkts-arkui-scroll-t.md), [Swiper](arkts-arkui-swiper-t.md)，[List](arkts-arkui-list-t.md)， > [ListItem](arkts-arkui-listitem-t.md)，[ListItemGroup](arkts-arkui-listitemgroup-t.md)， > [WaterFlow](arkts-arkui-waterflow-t.md)，[FlowItem](arkts-arkui-flowitem-t.md)，[Grid](arkts-arkui-grid-t.md)， > [GridItem](arkts-arkui-griditem-t.md)，[TextInput](arkts-arkui-textinput-t.md)，[TextArea](arkts-arkui-textarea-t.md)， > [Column](arkts-arkui-column-t.md)，[Row](arkts-arkui-row-t.md)，[Stack](arkts-arkui-stack-t.md)， > [Flex](arkts-arkui-flex-t.md)，[RelativeContainer](arkts-arkui-relativecontainer-t.md)， > [Progress](arkts-arkui-progress-t.md)，[LoadingProgress](arkts-arkui-loadingprogress-t.md)， > [Image](arkts-arkui-image-t.md)，[Button](arkts-arkui-button-t.md)，[CheckBox](arkts-arkui-checkbox-t.md)， > [Radio](arkts-arkui-radio-t.md)，[Slider](arkts-arkui-slider-t.md)，[Toggle](arkts-arkui-toggle-t.md)， > [XComponent](arkts-arkui-xcomponent-t.md)类型的[TypedFrameNode](arkts-arkui-typedframenode-i.md)设置跨ArkTS语言访问选项。
 
 **起始版本：** 15
 
@@ -1792,7 +1792,7 @@ setNeedsLayout(): void
 get commonAttribute(): CommonAttribute
 ```
 
-获取FrameNode中持有的CommonAttribute接口，用于设置[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)和[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。 仅可以修改自定义节点的属性。 > **说明：** > > FrameNode的效果参考对齐方式为顶部起始端的[Stack](../arkts-components/arkts-arkui-stack.md)容器组件。 > > FrameNode的属性支持情况参考 > [属性或事件对attributemodifier的支持情况](../../../../ui/arkts-user-defined-extension-attributeModifier.md#属性或事件对attributemodifier的支持情况)。
+获取FrameNode中持有的CommonAttribute接口，用于设置[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)和[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 仅可以修改自定义节点的属性。 > **说明：** > > FrameNode的效果参考对齐方式为顶部起始端的[Stack](../arkts-components/arkts-arkui-stack.md)容器组件。 > > FrameNode的属性支持情况参考 > [属性或事件对attributemodifier的支持情况](../../../../ui/arkts-user-defined-extension-attributeModifier.md#属性或事件对attributemodifier的支持情况)。
 
 **类型：** CommonAttribute
 
@@ -1828,7 +1828,7 @@ get commonEvent(): UICommonEvent
 get gestureEvent(): UIGestureEvent
 ```
 
-获取FrameNode中持有的UIGestureEvent对象，用于设置组件绑定的手势事件。通过gestureEvent接口设置的手势不会覆盖通过[绑定手势事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)绑定的手势，两者同时设置了手势时，优先回 调绑定手势事件设置的手势事件。
+获取FrameNode中持有的UIGestureEvent对象，用于设置组件绑定的手势事件。通过gestureEvent接口设置的手势不会覆盖通过[绑定手势事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)绑定的手势，两者同时设置了手势时，优先回 调绑定手势事件设置的手势事件。
 
 **类型：** UIGestureEvent
 

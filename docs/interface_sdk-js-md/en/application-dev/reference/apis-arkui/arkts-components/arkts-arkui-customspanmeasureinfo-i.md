@@ -12,7 +12,7 @@ Defines the CustomSpanMeasureInfo interface.
 fontSize: number
 ```
 
-Text font size. Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)
+Text font size. Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)
 
 **Type:** number
 
@@ -48,7 +48,7 @@ Width layout policy of the parent component of the custom span. **NOTE** When th
 maxWidth?: number
 ```
 
-Maximum width constraint of the custom span within the parent component's content area. Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) **Since**: 26.0.0
+Maximum width constraint of the custom span within the parent component's content area. Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) **Since**: 26.0.0
 
 **Type:** number
 

@@ -2,7 +2,7 @@
 
 Physically-based metallic roughness material resource.
 
-**Inheritance/Implementation:** MetallicRoughnessMaterial extends [Material](arkts-arkgraphics3d-material-i.md#material)
+**Inheritance/Implementation:** MetallicRoughnessMaterial extends [Material](arkts-arkgraphics3d-material-i.md)
 
 **Since:** 20
 

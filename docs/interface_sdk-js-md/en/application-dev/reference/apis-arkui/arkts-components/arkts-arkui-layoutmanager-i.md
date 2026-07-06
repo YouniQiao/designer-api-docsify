@@ -26,14 +26,14 @@ Obtains the position of the character nearest to the specified coordinate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.<br>Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
-| y | number | Yes | Y coordinate relative to the component.<br>Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| x | number | Yes | X coordinate relative to the component.<br>Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
+| y | number | Yes | Y coordinate relative to the component.<br>Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PositionWithAffinity | Character position. Returns **undefined** when[LayoutManager](arkts-arkui-layoutmanager-i.md#layoutmanager) is not bound to a component. |
+| PositionWithAffinity | Character position. Returns **undefined** when[LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
 ## getCharacterRangeForGlyphRange
 
@@ -61,7 +61,7 @@ Obtains the character range and the actual glyph range based on the specified gl
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextRange&gt; | Contains two elements: the first is the character range, and the secondis the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns**undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md#layoutmanager) is not bound to a component. |
+| Array&lt;TextRange&gt; | Contains two elements: the first is the character range, and the secondis the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns**undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
 ## getGlyphPositionAtCoordinate
 
@@ -83,8 +83,8 @@ Obtains the position of a glyph close to a given coordinate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.<br>Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
-| y | number | Yes | Y coordinate relative to the component.<br>Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| x | number | Yes | X coordinate relative to the component.<br>Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
+| y | number | Yes | Y coordinate relative to the component.<br>Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 **Return value:**
 
@@ -118,7 +118,7 @@ Obtains the glyph range and the actual character range based on the specified ch
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextRange&gt; | Contains two elements: the first is the glyph range, and the second isthe actual character range. When the returned range is invalid, the element in the range is **-1**. Returns**undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md#layoutmanager) is not bound to a component. |
+| Array&lt;TextRange&gt; | Contains two elements: the first is the glyph range, and the second isthe actual character range. When the returned range is invalid, the element in the range is **-1**. Returns**undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
 ## getLineCount
 

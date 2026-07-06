@@ -1,6 +1,6 @@
 # MinSpeed
 
-Defines the minimum speed of a task. If the task speed is lower than the preset value for a specified period of time, the task fails. The failure cause is [LOW_SPEED](arkts-basicservices-faults-e.md#faults).
+Defines the minimum speed of a task. If the task speed is lower than the preset value for a specified period of time, the task fails. The failure cause is [LOW_SPEED](arkts-basicservices-faults-e.md).
 
 **Since:** 20
 
@@ -9,7 +9,7 @@ Defines the minimum speed of a task. If the task speed is lower than the preset 
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@ohos.request';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## duration

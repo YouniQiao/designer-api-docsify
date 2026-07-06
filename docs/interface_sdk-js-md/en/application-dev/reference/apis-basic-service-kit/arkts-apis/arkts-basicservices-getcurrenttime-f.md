@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from '@ohos.systemTime';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## getCurrentTime

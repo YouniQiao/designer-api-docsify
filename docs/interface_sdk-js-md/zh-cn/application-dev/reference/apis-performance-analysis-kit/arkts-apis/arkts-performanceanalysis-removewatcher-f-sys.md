@@ -6,7 +6,7 @@
 function removeWatcher(watcher: Watcher): void
 ```
 
-取消订阅系统事件，接收[Watcher](arkts-performanceanalysis-watcher-i-sys.md#watcher)类型的对象作为事件参数。
+取消订阅系统事件，接收[Watcher](arkts-performanceanalysis-watcher-i-sys.md)类型的对象作为事件参数。
 
 **起始版本：** 9
 

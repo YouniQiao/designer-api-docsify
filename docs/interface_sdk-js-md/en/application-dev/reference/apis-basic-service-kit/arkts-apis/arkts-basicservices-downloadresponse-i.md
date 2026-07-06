@@ -4,14 +4,14 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [UploadConfig](arkts-basicservices-uploadconfig-i.md#uploadconfig)
+**Substitutes:** [UploadConfig](arkts-basicservices-uploadconfig-i.md)
 
 **System capability:** SystemCapability.MiscServices.Download
 
 ## Modules to Import
 
 ```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@system.request';
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
 ```
 
 ## token

@@ -9,7 +9,7 @@ Describes the partner device address.
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from '@ohos.FusionConnectivity.partnerAgent';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## bluetoothAddress

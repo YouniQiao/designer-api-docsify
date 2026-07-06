@@ -9,7 +9,7 @@ Reader represents the SE readers supported by this device.
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from '@ohos.secureElement';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## closeSessions

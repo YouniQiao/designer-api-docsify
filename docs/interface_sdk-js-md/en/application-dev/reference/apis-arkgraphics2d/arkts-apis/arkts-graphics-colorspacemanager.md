@@ -9,7 +9,7 @@ The **colorSpaceManager** module provides APIs for creating and managing color s
 ## Modules to Import
 
 ```TypeScript
-import { colorSpaceManager } from '@ohos.graphics.colorSpaceManager';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary

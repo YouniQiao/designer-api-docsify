@@ -28,5 +28,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [EnterpriseAdminExtensionContext](arkts-mdm-enterpriseadminextensioncontext-t.md) | EnterpriseAdminExtensionContext是 [EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseadminextensionability-c.md#enterpriseadminextensionability) 的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext)。 |
+| [EnterpriseAdminExtensionContext](arkts-mdm-enterpriseadminextensioncontext-t.md) | EnterpriseAdminExtensionContext是 [EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseadminextensionability-c.md) 的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 |
 

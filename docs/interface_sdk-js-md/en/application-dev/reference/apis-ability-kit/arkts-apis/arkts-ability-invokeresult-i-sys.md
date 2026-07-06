@@ -11,7 +11,7 @@ Encapsulates the success or failure status of function invocation.
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from '@ohos.app.function.functionManager';
+import { functionManager } from '@kit.AbilityKit';
 ```
 
 ## data

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { keyManager } from '@ohos.file.keyManager';
+import { keyManager } from '@kit.CoreFileKit';
 ```
 
 ## deactivateUserKey

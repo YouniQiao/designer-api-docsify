@@ -20,10 +20,10 @@ function setDefaultApplication(type: string, elementName: ElementName, userId: n
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要设置的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md#applicationtype)中的值，或者符合媒体类型格式的文件类型，或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型。 |
+| type | string | 是 | 要设置的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md)中的值，或者符合媒体类型格式的文件类型，或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型。 |
 | elementName | ElementName | 是 | 要设置为默认应用的组件信息。 |
 | userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当设置默认应用成功时，err返回undefined。否则回调函数返回具体错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当设置默认应用成功时，err返回undefined。否则回调函数返回具体错误对象。 |
 
 **错误码：**
 
@@ -104,9 +104,9 @@ function setDefaultApplication(type: string, elementName: ElementName, callback:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要设置的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md#applicationtype)中的值，或者符合媒体类型格式的文件类型，或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型。 |
+| type | string | 是 | 要设置的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md)中的值，或者符合媒体类型格式的文件类型，或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型。 |
 | elementName | ElementName | 是 | 要设置为默认应用的组件信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当设置默认应用成功时，err返回undefined。否则回调函数返回具体错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当设置默认应用成功时，err返回undefined。否则回调函数返回具体错误对象。 |
 
 **错误码：**
 
@@ -185,7 +185,7 @@ function setDefaultApplication(type: string, elementName: ElementName, userId?: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要设置的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md#applicationtype)中的值，或者符合媒体类型格式的文件类型，或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型。 |
+| type | string | 是 | 要设置的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md)中的值，或者符合媒体类型格式的文件类型，或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型。 |
 | elementName | ElementName | 是 | 要设置为默认应用的组件信息。 |
 | userId | number | 否 | 表示用户ID，可以通过[getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。默认值：调用方所在用户。 |
 

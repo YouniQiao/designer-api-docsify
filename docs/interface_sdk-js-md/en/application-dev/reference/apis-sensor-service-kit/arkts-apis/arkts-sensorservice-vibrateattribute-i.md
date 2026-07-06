@@ -9,7 +9,7 @@ Describes the vibration attribute.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@ohos.vibrator';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## deviceId
@@ -50,7 +50,7 @@ Vibrator ID. The default value is **0**.
 usage: Usage
 ```
 
-Vibration scenario. The default value is **unknown**. The value must be an enum defined in [Usage](arkts-sensorservice-usage-t.md#usage).
+Vibration scenario. The default value is **unknown**. The value must be an enum defined in [Usage](arkts-sensorservice-usage-t.md).
 
 **Type:** Usage
 

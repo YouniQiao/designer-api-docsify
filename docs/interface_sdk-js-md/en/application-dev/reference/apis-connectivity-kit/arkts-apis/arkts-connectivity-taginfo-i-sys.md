@@ -9,7 +9,7 @@ Provides tag information. <p>This class provides the technology a tag supports, 
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@ohos.nfc.tag';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## extrasData

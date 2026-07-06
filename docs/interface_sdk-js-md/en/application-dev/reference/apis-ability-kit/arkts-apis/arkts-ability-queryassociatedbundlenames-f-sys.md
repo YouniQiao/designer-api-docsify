@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appDomainVerify } from '@ohos.bundle.appDomainVerify';
+import { appDomainVerify } from '@kit.AbilityKit';
 ```
 
 ## queryAssociatedBundleNames

@@ -1,8 +1,8 @@
 # MagneticFieldUncalibratedResponse
 
-Describes the uncalibrated magnetic field sensor data. It extends from [Response](arkts-sensorservice-response-i.md#response).
+Describes the uncalibrated magnetic field sensor data. It extends from [Response](arkts-sensorservice-response-i.md).
 
-**Inheritance/Implementation:** MagneticFieldUncalibratedResponse extends [Response](arkts-sensorservice-response-i.md#response)
+**Inheritance/Implementation:** MagneticFieldUncalibratedResponse extends [Response](arkts-sensorservice-response-i.md)
 
 **Since:** 8
 
@@ -11,7 +11,7 @@ Describes the uncalibrated magnetic field sensor data. It extends from [Response
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@ohos.sensor';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## biasX

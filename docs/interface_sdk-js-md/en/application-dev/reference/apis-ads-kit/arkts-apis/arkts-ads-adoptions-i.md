@@ -9,7 +9,7 @@ Defines the ad configuration.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@ohos.advertising';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## adContentClassification

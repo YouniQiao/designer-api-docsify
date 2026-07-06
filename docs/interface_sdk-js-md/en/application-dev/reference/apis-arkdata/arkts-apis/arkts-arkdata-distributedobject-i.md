@@ -13,7 +13,7 @@ Provides APIs for managing a distributed data object. Before using any API of th
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@ohos.data.distributedDataObject';
+import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## off('change')

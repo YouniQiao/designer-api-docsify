@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from '@ohos.ability.particleAbility';
+import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## connectAbility

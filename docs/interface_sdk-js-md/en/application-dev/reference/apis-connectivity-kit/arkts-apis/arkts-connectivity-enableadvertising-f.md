@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@ohos.bluetooth.ble';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## enableAdvertising
@@ -39,7 +39,7 @@ Enable the advertising with a specific ID temporarily.
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
-| 2902055 | Invalid advertising id.<br>**Applicable version:** 20 |
+| 2902055 | Invalid advertising id.<br>**Applicable version:** 20 and later |
 
 **Example**
 
@@ -153,7 +153,7 @@ Enable the advertising with a specific ID temporarily.
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
-| 2902055 | Invalid advertising id.<br>**Applicable version:** 20 |
+| 2902055 | Invalid advertising id.<br>**Applicable version:** 20 and later |
 
 **Example**
 

@@ -1,8 +1,8 @@
 # PanGestureHandlerOptions
 
-滑动手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions)。
+滑动手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
 
-**继承/实现关系：** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#basehandleroptions)
+**继承/实现关系：** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
 **起始版本：** 12
 

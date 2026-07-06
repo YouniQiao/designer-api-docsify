@@ -2,7 +2,7 @@
 
 Portrait Photo Functions object.
 
-**Inheritance/Implementation:** PortraitPhotoFunctions extends [FlashQuery](arkts-camera-flashquery-i.md#flashquery), [AutoExposureQuery](arkts-camera-autoexposurequery-i.md#autoexposurequery), [FocusQuery](arkts-camera-focusquery-i.md#focusquery), [ZoomQuery](arkts-camera-zoomquery-i.md#zoomquery), [BeautyQuery](arkts-camera-beautyquery-i-sys.md#beautyquery), [ColorEffectQuery](arkts-camera-coloreffectquery-i-sys.md#coloreffectquery), [ColorManagementQuery](arkts-camera-colormanagementquery-i.md#colormanagementquery), [PortraitQuery](arkts-camera-portraitquery-i-sys.md#portraitquery), [ApertureQuery](arkts-camera-aperturequery-i-sys.md#aperturequery), [SceneDetectionQuery](arkts-camera-scenedetectionquery-i-sys.md#scenedetectionquery)
+**Inheritance/Implementation:** PortraitPhotoFunctions extends [FlashQuery](arkts-camera-flashquery-i.md), [AutoExposureQuery](arkts-camera-autoexposurequery-i.md), [FocusQuery](arkts-camera-focusquery-i.md), [ZoomQuery](arkts-camera-zoomquery-i.md), [BeautyQuery](arkts-camera-beautyquery-i-sys.md), [ColorEffectQuery](arkts-camera-coloreffectquery-i-sys.md), [ColorManagementQuery](arkts-camera-colormanagementquery-i.md), [PortraitQuery](arkts-camera-portraitquery-i-sys.md), [ApertureQuery](arkts-camera-aperturequery-i-sys.md), [SceneDetectionQuery](arkts-camera-scenedetectionquery-i-sys.md)
 
 **Since:** 13
 
@@ -13,6 +13,6 @@ Portrait Photo Functions object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 

@@ -88,7 +88,7 @@ Font family of the styled string. Returns **undefined** by default.
 readonly fontSize?: number
 ```
 
-Font size of the styled string. Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)
+Font size of the styled string. Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)
 
 **Type:** number
 
@@ -196,7 +196,7 @@ Text stroke join style of the styled string. Default value: **StrokeJoinStyle.MI
 readonly strokeWidth?: number
 ```
 
-Text stroke width of the styled string. Default value: **0**, in [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common).
+Text stroke width of the styled string. Default value: **0**, in [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).
 
 **Type:** number
 

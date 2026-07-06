@@ -1,8 +1,8 @@
 # MouseEvent
 
-Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#baseevent).
+Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
-**Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 getHistoricalPoints?(): Array<MouseHistoricalPoint>
 ```
 
-Obtains all historical point information of the current frame. Historical points can be used to achieve smoother drawing effects. This API can only be called from [MouseEvent](arkts-arkui-mouseevent-i.md#mouseevent) to obtain information about historical points of the current frame when [onMouse](arkts-arkui-commonmethod-c.md#onmouse-1) is triggered. The mouse event reporting frequency per frame varies across different devices. Typically, only one mouse event is reported per frame. If the number of [MouseEvent](arkts-arkui-mouseevent-i.md#mouseevent) instances received in the current frame is greater than 1, the last point of that frame is returned via [onMouse](arkts-arkui-commonmethod-c.md#onmouse-1), and the remaining points are treated as historical points.
+Obtains all historical point information of the current frame. Historical points can be used to achieve smoother drawing effects. This API can only be called from [MouseEvent](arkts-arkui-mouseevent-i.md) to obtain information about historical points of the current frame when [onMouse](arkts-arkui-commonmethod-c.md#onmouse-1) is triggered. The mouse event reporting frequency per frame varies across different devices. Typically, only one mouse event is reported per frame. If the number of [MouseEvent](arkts-arkui-mouseevent-i.md) instances received in the current frame is greater than 1, the last point of that frame is returned via [onMouse](arkts-arkui-commonmethod-c.md#onmouse-1), and the remaining points are treated as historical points.
 
 **Since:** 26.0.0
 

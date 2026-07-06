@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@ohos.notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## publishAsBundle
@@ -43,7 +43,7 @@ Publishes a notification through the reminder agent. This API uses an asynchrono
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The device does not support geofencing.<br>**Applicable version:** 23 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The device does not support geofencing.<br>**Applicable version:** 23 and later |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
@@ -53,14 +53,14 @@ Publishes a notification through the reminder agent. This API uses an asynchrono
 | [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
 | [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
-| [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 |
+| [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low. |
 | [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permissionsettings. |
-| [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.<br>**Applicable version:** 23 |
-| [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.<br>**Applicable version:** 23 |
-| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**Applicable version:** 23 |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**Applicable version:** 26.0.0 |
+| [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.<br>**Applicable version:** 23 and later |
+| [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.<br>**Applicable version:** 23 and later |
+| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**Applicable version:** 23 and later |
+| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable. |
 
 **Example**
@@ -134,7 +134,7 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The device does not support geofencing.<br>**Applicable version:** 23 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The device does not support geofencing.<br>**Applicable version:** 23 and later |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
@@ -144,14 +144,14 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
 | [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
-| [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 |
+| [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low. |
 | [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permissionsettings. |
-| [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.<br>**Applicable version:** 23 |
-| [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.<br>**Applicable version:** 23 |
-| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**Applicable version:** 23 |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**Applicable version:** 26.0.0 |
+| [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.<br>**Applicable version:** 23 and later |
+| [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.<br>**Applicable version:** 23 and later |
+| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**Applicable version:** 23 and later |
+| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable. |
 
 **Example**
@@ -220,7 +220,7 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The device does not support geofencing.<br>**Applicable version:** 23 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The device does not support geofencing.<br>**Applicable version:** 23 and later |
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
@@ -230,14 +230,14 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
 | [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
-| [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 |
+| [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low. |
 | [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permissionsettings. |
-| [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.<br>**Applicable version:** 23 |
-| [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.<br>**Applicable version:** 23 |
-| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**Applicable version:** 23 |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**Applicable version:** 26.0.0 |
+| [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.<br>**Applicable version:** 23 and later |
+| [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.<br>**Applicable version:** 23 and later |
+| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**Applicable version:** 23 and later |
+| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable. |
 
 **Example**

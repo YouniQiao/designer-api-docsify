@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from '@arkts.utils';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## isSendable

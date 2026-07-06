@@ -1,8 +1,8 @@
 # ReactiveComponentContent
 
-ReactiveComponentContent继承自[Content](../../../../reference/apis-arkui/js-apis-arkui-Content.md#content-1)，是一个用于动态承载和复用 UI内容的容器组件。它通过@Builder函数构建UI，并利用[ReactiveBuilderNode](arkts-arkui-reactivebuildernode-c.md#reactivebuildernode)生成和管理组件树。该组件的核心价值在于为动态内容提供 完整的生命周期管理，使其能够融入ArkUI的组件复用体系，特别适用于长列表等需要高性能渲染的场景。
+ReactiveComponentContent继承自[Content](../../../../reference/apis-arkui/js-apis-arkui-Content.md#content-1)，是一个用于动态承载和复用 UI内容的容器组件。它通过@Builder函数构建UI，并利用[ReactiveBuilderNode](arkts-arkui-reactivebuildernode-c.md)生成和管理组件树。该组件的核心价值在于为动态内容提供 完整的生命周期管理，使其能够融入ArkUI的组件复用体系，特别适用于长列表等需要高性能渲染的场景。
 
-**继承/实现关系：** ReactiveComponentContent extends [Content](arkts-arkui-content-c.md#content)
+**继承/实现关系：** ReactiveComponentContent extends [Content](arkts-arkui-content-c.md)
 
 **起始版本：** 22
 
@@ -71,7 +71,7 @@ flushState(): void
 inheritFreezeOptions(enabled: boolean): void
 ```
 
-设置当前ReactiveComponentContent对象是否继承父组件中自定义组件的冻结策略[ComponentOptions](../arkts-components/arkts-arkui-componentoptions-i.md#componentoptions)。如果设置继承状态为false，则 ReactiveComponentContent对象的冻结策略为false。在这种情况下，节点在不活跃状态下不会被冻结。 > **说明：** > ReactiveComponentContent设置inheritFreezeOptions为true，且父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或 > ReactiveComponentContent时，会继承父组件的冻结策略。当子组件为自定义组件时，其冻结策略不会传递给子组件。
+设置当前ReactiveComponentContent对象是否继承父组件中自定义组件的冻结策略[ComponentOptions](../arkts-components/arkts-arkui-componentoptions-i.md)。如果设置继承状态为false，则 ReactiveComponentContent对象的冻结策略为false。在这种情况下，节点在不活跃状态下不会被冻结。 > **说明：** > ReactiveComponentContent设置inheritFreezeOptions为true，且父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或 > ReactiveComponentContent时，会继承父组件的冻结策略。当子组件为自定义组件时，其冻结策略不会传递给子组件。
 
 **起始版本：** 22
 
@@ -167,7 +167,7 @@ reuse(param?: Object): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | Object | 否 | 用于复用[ReactiveComponentContent](arkts-arkui-reactivecomponentcontent-c.md#reactivecomponentcontent)的参数。该参数将直接用于ReactiveComponentContent中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则会导致未定义行为。调用此方法将同步触发内部自定义组件的[aboutToReuse](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10)生命周期回调，并将该参数作为回调的入参。默认值为undefined，此时ReactiveComponentContent中的自定义组件将直接使用构造时的数据源。 |
+| param | Object | 否 | 用于复用[ReactiveComponentContent](arkts-arkui-reactivecomponentcontent-c.md)的参数。该参数将直接用于ReactiveComponentContent中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则会导致未定义行为。调用此方法将同步触发内部自定义组件的[aboutToReuse](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10)生命周期回调，并将该参数作为回调的入参。默认值为undefined，此时ReactiveComponentContent中的自定义组件将直接使用构造时的数据源。 |
 
 ## updateConfiguration
 
@@ -175,7 +175,7 @@ reuse(param?: Object): void
 updateConfiguration(): void
 ```
 
-传递系统环境变化事件，触发节点的全量更新。可用于通知对象更新，是否更新所使用的系统环境由应用当前的系统环境变化决定。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-configuration-i.md#configuration)。
+传递系统环境变化事件，触发节点的全量更新。可用于通知对象更新，是否更新所使用的系统环境由应用当前的系统环境变化决定。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-configuration-i.md)。
 
 **起始版本：** 22
 

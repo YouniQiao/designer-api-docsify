@@ -20,7 +20,7 @@ function getInstalledBundleList(bundleFlags: number): Promise<Array<BundleInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleFlags | number | 是 | 指定返回的BundleInfo所包含的信息，详情请参考[BundleFlag](arkts-ability-bundleflag-e.md#bundleflag)。 |
+| bundleFlags | number | 是 | 指定返回的BundleInfo所包含的信息，详情请参考[BundleFlag](arkts-ability-bundleflag-e.md)。 |
 
 **返回值：**
 

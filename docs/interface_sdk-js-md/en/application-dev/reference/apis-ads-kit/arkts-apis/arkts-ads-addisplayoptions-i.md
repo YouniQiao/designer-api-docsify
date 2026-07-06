@@ -9,7 +9,7 @@ Defines the ad display parameters.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@ohos.advertising';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## audioFocusType

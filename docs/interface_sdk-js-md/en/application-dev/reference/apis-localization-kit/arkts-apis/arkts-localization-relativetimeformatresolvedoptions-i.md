@@ -13,7 +13,7 @@ Represents the formatting options for the **RelativeTimeFormat** object.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@ohos.intl';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## locale

@@ -9,7 +9,7 @@ Provides APIs to compare rational numbers and obtain numerators and denominators
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## compare

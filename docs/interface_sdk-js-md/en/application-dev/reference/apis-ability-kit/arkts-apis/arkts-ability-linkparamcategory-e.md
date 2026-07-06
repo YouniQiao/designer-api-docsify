@@ -28,7 +28,7 @@ Category of link. Intent parameters are appended to the end of a URI link and pa
 WANT = 'want'
 ```
 
-Category of want. Intent parameters are passed to the application through the **parameters** field in [Want](arkts-ability-want-c.md#want).
+Category of want. Intent parameters are passed to the application through the **parameters** field in [Want](arkts-ability-want-c.md).
 
 **Since:** 20
 

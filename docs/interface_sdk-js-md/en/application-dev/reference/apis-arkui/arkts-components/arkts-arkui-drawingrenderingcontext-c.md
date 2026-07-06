@@ -26,7 +26,7 @@ Creates a **Canvas** object for drawing operations using the drawing API. Config
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | LengthMetricsUnit | No | Unit mode of the **DrawingRenderingContext** object.The value cannot be changed once set. The configuration method is the same as that of[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#canvasrenderingcontext2d).<br>Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT**. |
+| unit | LengthMetricsUnit | No | Unit mode of the **DrawingRenderingContext** object.The value cannot be changed once set. The configuration method is the same as that of[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br>Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT**. |
 
 ## invalidate
 

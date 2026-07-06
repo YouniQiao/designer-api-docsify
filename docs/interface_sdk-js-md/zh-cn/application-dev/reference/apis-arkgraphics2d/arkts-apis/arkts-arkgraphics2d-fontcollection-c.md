@@ -121,7 +121,7 @@ let fontCollection = text.FontCollection.getLocalInstance();
 loadFont(name: string, path: string | Resource): Promise<void>
 ```
 
-加载自定义字体。使用Promise异步回调。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-textstyle-i.md#textstyle)中的fontFamilies属性配置，才能显示自定义字体效果，支持的字体文件格式包含： ttf、otf。
+加载自定义字体。使用Promise异步回调。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-textstyle-i.md)中的fontFamilies属性配置，才能显示自定义字体效果，支持的字体文件格式包含： ttf、otf。
 
 **起始版本：** 18
 
@@ -184,7 +184,7 @@ struct RenderTest {
 loadFontSync(name: string, path: string | Resource): void
 ```
 
-同步接口，加载自定义字体。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-textstyle-i.md#textstyle)中的fontFamilies属性配置，才能显示自定义字体效果。支持的字体文件格式包含：ttf、otf。
+同步接口，加载自定义字体。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-textstyle-i.md)中的fontFamilies属性配置，才能显示自定义字体效果。支持的字体文件格式包含：ttf、otf。
 
 **起始版本：** 12
 
@@ -244,7 +244,7 @@ struct RenderTest {
 loadFontSyncWithCheck(name: string, path: string | Resource, index?: number): void
 ```
 
-同步接口，加载自定义字体。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-textstyle-i.md#textstyle)中的fontFamilies属性配置，才能显示自定义字体效果。支持的字体文件格式包含：ttf、otf、 ttc。
+同步接口，加载自定义字体。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-textstyle-i.md)中的fontFamilies属性配置，才能显示自定义字体效果。支持的字体文件格式包含：ttf、otf、 ttc。
 
 **起始版本：** 23
 
@@ -320,7 +320,7 @@ struct Index {
 loadFontWithCheck(name: string, path: string | Resource, index?: number): Promise<void>
 ```
 
-加载自定义字体，使用Promise异步回调。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-textstyle-i.md#textstyle)中的fontFamilies属性配置，才能显示自定义字体效果，支持的字体文件格式包含： ttf、otf、ttc。
+加载自定义字体，使用Promise异步回调。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-textstyle-i.md)中的fontFamilies属性配置，才能显示自定义字体效果，支持的字体文件格式包含： ttf、otf、ttc。
 
 **起始版本：** 23
 

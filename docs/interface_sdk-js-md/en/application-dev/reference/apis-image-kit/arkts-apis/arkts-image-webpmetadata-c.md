@@ -9,7 +9,7 @@ WebP metadata.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## canvasHeight

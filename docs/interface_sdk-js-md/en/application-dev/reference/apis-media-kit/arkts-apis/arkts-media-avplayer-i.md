@@ -9,7 +9,7 @@ AVPlayer is a playback management class. It provides APIs to manage and play med
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addPlaybackMediaSource
@@ -255,7 +255,7 @@ Deselects the specified track when the AVPlayer plays multimedia resources with 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Track index, which is obtained from[MediaDescription](arkts-media-mediadescription-i.md#mediadescription) by calling[getTrackDescription](arkts-media-avplayer-i.md#gettrackdescription-2). |
+| index | number | Yes | Track index, which is obtained from[MediaDescription](arkts-media-mediadescription-i.md) by calling[getTrackDescription](arkts-media-avplayer-i.md#gettrackdescription-2). |
 
 **Return value:**
 
@@ -639,7 +639,7 @@ Obtains the track selection filter configured for the player. This API uses a pr
 isSeekContinuousSupported() : boolean
 ```
 
-Checks whether the media source supports [seek](arkts-media-avplayer-i.md#seek-1) in SEEK_CONTINUOUS mode (specified by [SeekMode](arkts-media-seekmode-e.md#seekmode)). The actual value is returned when this API is called in the prepared, playing, paused, or completed state. The value **false** is returned if it is called in other states. For devices that do not support the seek operation in SEEK_CONTINUOUS mode, **false** is returned.
+Checks whether the media source supports [seek](arkts-media-avplayer-i.md#seek-1) in SEEK_CONTINUOUS mode (specified by [SeekMode](arkts-media-seekmode-e.md)). The actual value is returned when this API is called in the prepared, playing, paused, or completed state. The value **false** is returned if it is called in other states. For devices that do not support the seek operation in SEEK_CONTINUOUS mode, **false** is returned.
 
 **Since:** 18
 
@@ -680,7 +680,7 @@ Unsubscribes from media key system information changes.
 off(type: 'stateChange', callback?: OnAVPlayerStateChangeHandle): void
 ```
 
-Unsubscribes from [AVPlayerState](arkts-media-avplayerstate-t.md#avplayerstate) state changes.
+Unsubscribes from [AVPlayerState](arkts-media-avplayerstate-t.md) state changes.
 
 **Since:** 9
 
@@ -756,7 +756,7 @@ Unsubscribes from the event that checks whether the seek operation takes effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Event type, which is **'seekDone'** in this case. |
-| callback | Callback&lt;number&gt; | No | Callback invoked when the event is triggered. It reports the time positionrequested by the user.<br>For video playback, [SeekMode](arkts-media-seekmode-e.md#seekmode) maycause the actual position to be different from that requested by the user. The exact position can be obtainedfrom the **currentTime** property. The time in this callback only means that the requested seek operation iscomplete. If this parameter is specified, only the specified callback is unregistered. Otherwise, allcallbacks associated with the **seekDone** event will be unregistered.<br>**Since:** 12 |
+| callback | Callback&lt;number&gt; | No | Callback invoked when the event is triggered. It reports the time positionrequested by the user.<br>For video playback, [SeekMode](arkts-media-seekmode-e.md) maycause the actual position to be different from that requested by the user. The exact position can be obtainedfrom the **currentTime** property. The time in this callback only means that the requested seek operation iscomplete. If this parameter is specified, only the specified callback is unregistered. Otherwise, allcallbacks associated with the **seekDone** event will be unregistered.<br>**Since:** 12 |
 
 ## off('speedDone')
 
@@ -777,7 +777,7 @@ Unsubscribes from the event that checks whether the playback speed is successful
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'speedDone' | Yes | Event type, which is **'speedDone'** in this case. |
-| callback | Callback&lt;number&gt; | No | Callback used to return the result. When the call of **setSpeed** issuccessful, the effective speed mode is reported. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md#playbackspeed). If this parameter is specified, only thespecified callback is unregistered. Otherwise, all callbacks associated with the **speedDone** event will beunregistered.<br>**Since:** 12 |
+| callback | Callback&lt;number&gt; | No | Callback used to return the result. When the call of **setSpeed** issuccessful, the effective speed mode is reported. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md). If this parameter is specified, only thespecified callback is unregistered. Otherwise, all callbacks associated with the **speedDone** event will beunregistered.<br>**Since:** 12 |
 
 ## off('playbackRateDone')
 
@@ -1306,7 +1306,7 @@ Subscribes to the event to check whether the seek operation takes effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Event type, which is **'seekDone'** in this case. This event is triggered each time**seek()** is called, except in SEEK_CONTINUOUS mode. |
-| callback | Callback&lt;number&gt; | Yes | Callback invoked when the event is triggered. It reports the time positionrequested by the user.<br>For video playback, [SeekMode](arkts-media-seekmode-e.md#seekmode) maycause the actual position to be different from that requested by the user. The exact position can be obtainedfrom the **currentTime** property. The time in this callback only means that the requested seek operation iscomplete. |
+| callback | Callback&lt;number&gt; | Yes | Callback invoked when the event is triggered. It reports the time positionrequested by the user.<br>For video playback, [SeekMode](arkts-media-seekmode-e.md) maycause the actual position to be different from that requested by the user. The exact position can be obtainedfrom the **currentTime** property. The time in this callback only means that the requested seek operation iscomplete. |
 
 ## on('speedDone')
 
@@ -1327,7 +1327,7 @@ Subscribes to the event to check whether the playback speed is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'speedDone' | Yes | Event type, which is **'speedDone'** in this case. This event is triggered eachtime **setSpeed()** is called. |
-| callback | Callback&lt;number&gt; | Yes | Callback used to return the result. When the call of **setSpeed** issuccessful, the effective speed mode is reported. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md#playbackspeed). |
+| callback | Callback&lt;number&gt; | Yes | Callback used to return the result. When the call of **setSpeed** issuccessful, the effective speed mode is reported. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md). |
 
 ## on('playbackRateDone')
 
@@ -1482,7 +1482,7 @@ Subscribes to video size (width and height) changes. This subscription is suppor
 on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event. When multiple audio and video assets are played at the same time, this event is triggered based on the audio interruption mode [audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-interruptmode-e.md#interruptmode). The application needs to perform corresponding processing based on different audio interruption events. For details, see [Handling Audio Interruption Events](../../../../media/audio/audio-playback-concurrency.md).
+Subscribes to the audio interruption event. When multiple audio and video assets are played at the same time, this event is triggered based on the audio interruption mode [audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-interruptmode-e.md). The application needs to perform corresponding processing based on different audio interruption events. For details, see [Handling Audio Interruption Events](../../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 9
 
@@ -1524,7 +1524,7 @@ Subscribes to available bitrates of HLS/DASH streams. This event is reported onl
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to [AVPlayer](arkts-multimedia-media.md#media) errors. This event is used only for error prompt and does not require the user to stop playback control. If the [AVPlayerState](arkts-media-avplayerstate-t.md#avplayerstate) is also switched to error, call [reset()](arkts-media-avplayer-i.md#reset-1) or [release()](arkts-media-avplayer-i.md#release-1) to exit the playback. If the playback remains in the error state after the [reset()](arkts-media-avplayer-i.md#reset-1) method is called, you are advised to directly invoke the [release()](arkts-media-avplayer-i.md#release-1) method to exit the playback operation.
+Subscribes to [AVPlayer](arkts-multimedia-media.md) errors. This event is used only for error prompt and does not require the user to stop playback control. If the [AVPlayerState](arkts-media-avplayerstate-t.md) is also switched to error, call [reset()](arkts-media-avplayer-i.md#reset-1) or [release()](arkts-media-avplayer-i.md#release-1) to exit the playback. If the playback remains in the error state after the [reset()](arkts-media-avplayer-i.md#reset-1) method is called, you are advised to directly invoke the [release()](arkts-media-avplayer-i.md#release-1) method to exit the playback operation.
 
 **Since:** 9
 
@@ -1552,19 +1552,19 @@ Subscribes to [AVPlayer](arkts-multimedia-media.md#media) errors. This event is 
 | [5400104](../errorcode-media.md#5400104-operation-timeout) | Time out. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. |
-| [5411001](../errorcode-media.md#5411001-failed-to-parse-or-connect-to-the-server-address) | IO can not find host.<br>**Applicable version:** 14 |
-| [5411002](../errorcode-media.md#5411002-network-connection-timeout) | IO connection timeout.<br>**Applicable version:** 14 |
-| [5411003](../errorcode-media.md#5411003-data-or-link-exception-caused-by-network-exceptions) | IO network abnormal.<br>**Applicable version:** 14 |
-| [5411004](../errorcode-media.md#5411004-network-disabled) | IO network unavailable.<br>**Applicable version:** 14 |
-| [5411005](../errorcode-media.md#5411005-access-denied) | IO no permission.<br>**Applicable version:** 14 |
-| [5411006](../errorcode-media.md#5411006-client-request-parameter-is-incorrect-or-exceeds-the-processing-capability) | IO request denied.<br>**Applicable version:** 14 |
-| [5411007](../errorcode-media.md#5411007-no-resource-available) | IO resource not found.<br>**Applicable version:** 14 |
-| [5411008](../errorcode-media.md#5411008-server-fails-to-verify-the-client-certificate) | IO SSL client cert needed.<br>**Applicable version:** 14 |
-| [5411009](../errorcode-media.md#5411009-ssl-connection-failed) | IO SSL connect fail.<br>**Applicable version:** 14 |
-| [5411010](../errorcode-media.md#5411010-client-fails-to-verify-the-server-certificate) | IO SSL server cert untrusted.<br>**Applicable version:** 14 |
-| [5411011](../errorcode-media.md#5411011-unsupported-request-due-to-network-protocol-errors) | IO unsupported request.<br>**Applicable version:** 14 |
-| [5410002](../errorcode-media.md#5410002-seek-in-seekcontinuous-mode-is-not-supported) | Seek continuous unsupported.<br>**Applicable version:** 18 |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 |
+| [5411001](../errorcode-media.md#5411001-failed-to-parse-or-connect-to-the-server-address) | IO can not find host.<br>**Applicable version:** 14 and later |
+| [5411002](../errorcode-media.md#5411002-network-connection-timeout) | IO connection timeout.<br>**Applicable version:** 14 and later |
+| [5411003](../errorcode-media.md#5411003-data-or-link-exception-caused-by-network-exceptions) | IO network abnormal.<br>**Applicable version:** 14 and later |
+| [5411004](../errorcode-media.md#5411004-network-disabled) | IO network unavailable.<br>**Applicable version:** 14 and later |
+| [5411005](../errorcode-media.md#5411005-access-denied) | IO no permission.<br>**Applicable version:** 14 and later |
+| [5411006](../errorcode-media.md#5411006-client-request-parameter-is-incorrect-or-exceeds-the-processing-capability) | IO request denied.<br>**Applicable version:** 14 and later |
+| [5411007](../errorcode-media.md#5411007-no-resource-available) | IO resource not found.<br>**Applicable version:** 14 and later |
+| [5411008](../errorcode-media.md#5411008-server-fails-to-verify-the-client-certificate) | IO SSL client cert needed.<br>**Applicable version:** 14 and later |
+| [5411009](../errorcode-media.md#5411009-ssl-connection-failed) | IO SSL connect fail.<br>**Applicable version:** 14 and later |
+| [5411010](../errorcode-media.md#5411010-client-fails-to-verify-the-server-certificate) | IO SSL server cert untrusted.<br>**Applicable version:** 14 and later |
+| [5411011](../errorcode-media.md#5411011-unsupported-request-due-to-network-protocol-errors) | IO unsupported request.<br>**Applicable version:** 14 and later |
+| [5410002](../errorcode-media.md#5410002-seek-in-seekcontinuous-mode-is-not-supported) | Seek continuous unsupported.<br>**Applicable version:** 18 and later |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 
 ## on('audioOutputDeviceChangeWithInfo')
 
@@ -2097,7 +2097,7 @@ Seeks to the specified playback position. This API can be called only when the A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeMs | number | Yes | Position to seek to, in ms. The value range is[0, [duration](../../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#properties)].<br>When the seekmode is [SEEK_CONTINUOUS](arkts-media-seekmode-e.md#seekmode), you can set this parameter to **-1**to end the **SEEK_CONTINUOUS** mode. |
+| timeMs | number | Yes | Position to seek to, in ms. The value range is[0, [duration](../../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#properties)].<br>When the seekmode is [SEEK_CONTINUOUS](arkts-media-seekmode-e.md), you can set this parameter to **-1**to end the **SEEK_CONTINUOUS** mode. |
 | mode | SeekMode | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**.**Set this parameter only for video playback.** |
 
 ## seekToDefaultPosition
@@ -2140,7 +2140,7 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the track. You can call[getTrackDescription](arkts-media-avplayer-i.md#gettrackdescription-2) to obtain all track information[MediaDescription](arkts-media-mediadescription-i.md#mediadescription) of the current resource. |
+| index | number | Yes | Index of the track. You can call[getTrackDescription](arkts-media-avplayer-i.md#gettrackdescription-2) to obtain all track information[MediaDescription](arkts-media-mediadescription-i.md) of the current resource. |
 | mode | SwitchMode | No | Video track mode. The default mode is **SMOOTH**. This parameter takes effect onlyfor DASH/HLS network stream video track switching.<br>HLS network stream video is supported since API version24.<br>**Since:** 26.0.0 |
 
 **Return value:**
@@ -2209,7 +2209,7 @@ Sets the decryption configuration. When receiving an [on('mediaKeySystemInfoUpda
 setLoudnessGain(loudnessGain: number): Promise<void>
 ```
 
-Sets the loudness gain of the AVPlayer. After this API is called, the loudness gain takes effect immediately. This API uses a promise to return the result. > **NOTE** > > - This API can be called when the AVPlayer is in the prepared, playing, paused, completed, or stopped state. > > - Before calling this API, ensure that the audio rendering information has been set in > **AVPlayer.audioRendererInfo** and the **usage** parameter in **audioRendererInfo** has been set to > [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-streamusage-e.md#streamusage), > [STREAM_USAGE_MOVIE](../../apis-audio-kit/arkts-apis/arkts-audio-streamusage-e.md#streamusage), or > [STREAM_USAGE_AUDIOBOOK](../../apis-audio-kit/arkts-apis/arkts-audio-streamusage-e.md#streamusage).
+Sets the loudness gain of the AVPlayer. After this API is called, the loudness gain takes effect immediately. This API uses a promise to return the result. > **NOTE** > > - This API can be called when the AVPlayer is in the prepared, playing, paused, completed, or stopped state. > > - Before calling this API, ensure that the audio rendering information has been set in > **AVPlayer.audioRendererInfo** and the **usage** parameter in **audioRendererInfo** has been set to > [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-streamusage-e.md), > [STREAM_USAGE_MOVIE](../../apis-audio-kit/arkts-apis/arkts-audio-streamusage-e.md), or > [STREAM_USAGE_AUDIOBOOK](../../apis-audio-kit/arkts-apis/arkts-audio-streamusage-e.md).
 
 **Since:** 21
 
@@ -2301,7 +2301,7 @@ Sets a source of streaming media that can be pre-downloaded, downloads the media
 setPlaybackRange(startTimeMs: number, endTimeMs: number, mode?: SeekMode) : Promise<void>
 ```
 
-Sets the playback range and seeks to the start position of the range based on the specified [SeekMode](arkts-media-seekmode-e.md#seekmode). After the setting, only the content in the specified range of the audio or video file is played. This API uses a promise to return the result. It can be used in the initialized, prepared, paused, stopped, or completed state.
+Sets the playback range and seeks to the start position of the range based on the specified [SeekMode](arkts-media-seekmode-e.md). After the setting, only the content in the specified range of the audio or video file is played. This API uses a promise to return the result. It can be used in the initialized, prepared, paused, stopped, or completed state.
 
 **Since:** 18
 
@@ -2416,7 +2416,7 @@ Sets the playback speed. This API can be called only when the AVPlayer is in the
 setSuperResolution(enabled: boolean) : Promise<void>
 ```
 
-Enables or disables super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result. Before calling [prepare()](arkts-media-avplayer-i.md#prepare-1), enable super resolution by using [PlaybackStrategy](arkts-media-playbackstrategy-i.md#playbackstrategy).
+Enables or disables super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result. Before calling [prepare()](arkts-media-avplayer-i.md#prepare-1), enable super resolution by using [PlaybackStrategy](arkts-media-playbackstrategy-i.md).
 
 **Since:** 18
 
@@ -2482,7 +2482,7 @@ Sets a track selection filter for the player. The player will use this filter to
 setVideoWindowSize(width: number, height: number) : Promise<void>
 ```
 
-Sets the resolution of the output video after super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result. The input parameter values must be in the range of 320 × 320 to 1920 × 1080 (in px). Before calling [prepare()](arkts-media-avplayer-i.md#prepare-1), enable super resolution by using [PlaybackStrategy](arkts-media-playbackstrategy-i.md#playbackstrategy).
+Sets the resolution of the output video after super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result. The input parameter values must be in the range of 320 × 320 to 1920 × 1080 (in px). Before calling [prepare()](arkts-media-avplayer-i.md#prepare-1), enable super resolution by using [PlaybackStrategy](arkts-media-playbackstrategy-i.md).
 
 **Since:** 18
 
@@ -2622,7 +2622,7 @@ Audio interruption mode. The default value is **SHARE_MODE**. It is a dynamic pr
 audioRendererInfo?: audio.AudioRendererInfo
 ```
 
-Audio renderer information. If the media source contains videos, the default value of **usage** is **STREAM_USAGE_MOVIE**. Otherwise, the default value of **usage** is **STREAM_USAGE_MUSIC**. The default value of **rendererFlags** is 0. If the default value of **usage** does not meet the requirements, configure [audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audiorendererinfo-i.md#audiorendererinfo). This parameter can be set only when the AVPlayer is in the initialized state. To take effect, this property must be set before [prepare()](arkts-media-avplayer-i.md#prepare-1) is called for the first time.
+Audio renderer information. If the media source contains videos, the default value of **usage** is **STREAM_USAGE_MOVIE**. Otherwise, the default value of **usage** is **STREAM_USAGE_MUSIC**. The default value of **rendererFlags** is 0. If the default value of **usage** does not meet the requirements, configure [audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audiorendererinfo-i.md). This parameter can be set only when the AVPlayer is in the initialized state. To take effect, this property must be set before [prepare()](arkts-media-avplayer-i.md#prepare-1) is called for the first time.
 
 **Type:** audio.AudioRendererInfo
 

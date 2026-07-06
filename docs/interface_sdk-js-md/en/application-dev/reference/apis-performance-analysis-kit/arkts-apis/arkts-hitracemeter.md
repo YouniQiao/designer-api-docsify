@@ -9,7 +9,7 @@ The **HiTraceMeter** module provides the functions of tracing service processes 
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from '@ohos.hiTraceMeter';
+import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Provides the media AVScreenCaptureStrategy definition.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableBFrame

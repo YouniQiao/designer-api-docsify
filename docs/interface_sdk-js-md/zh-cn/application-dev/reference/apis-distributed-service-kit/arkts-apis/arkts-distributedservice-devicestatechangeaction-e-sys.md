@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [DeviceStateChange](arkts-distributedservice-devicestatechange-e.md#devicestatechange)
+**替代接口：** [DeviceStateChange](arkts-distributedservice-devicestatechange-e.md)
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

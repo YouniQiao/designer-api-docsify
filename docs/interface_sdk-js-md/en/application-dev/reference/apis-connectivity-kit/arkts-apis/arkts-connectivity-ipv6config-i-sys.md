@@ -11,7 +11,7 @@ Wi-Fi Ipv6 configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@ohos.wifiManager';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## dnsServers

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@ohos.zlib';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## getOriginalSize
@@ -24,7 +24,7 @@ Obtains the original size of a compressed file. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compressedFile | string | Yes | Specifies the path of the compressed file. Only .zip files are supported. Thepath must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context). |
+| compressedFile | string | Yes | Specifies the path of the compressed file. Only .zip files are supported. Thepath must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
 
 **Return value:**
 

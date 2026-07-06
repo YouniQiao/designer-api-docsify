@@ -9,7 +9,7 @@ The cloudExtension module provides APIs for third-party vendors to implement the
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@ohos.data.cloudExtension';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## Summary

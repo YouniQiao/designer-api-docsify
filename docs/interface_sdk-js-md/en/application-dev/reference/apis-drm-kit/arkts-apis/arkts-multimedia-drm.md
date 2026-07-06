@@ -9,7 +9,7 @@ This module provides the DRM capability to multimedia player.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@ohos.multimedia.drm';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## Summary

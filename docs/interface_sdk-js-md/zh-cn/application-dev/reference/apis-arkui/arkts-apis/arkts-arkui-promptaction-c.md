@@ -466,7 +466,7 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
 | --- | --- | --- | --- |
 | builder | CustomBuilder \| CustomBuilderWithId | 是 | 对话框生成器。 |
 | controller | promptAction.DialogController | 否 | Controller of the custom dialog box.<br>**起始版本：** 26.0.0 |
-| options | promptAction.DialogOptions | 否 | Style of the custom dialog box.<br>Note: If both [isModal](arkts-arkui-basedialogoptions-i.md#basedialogoptions)and [showInSubWindow](arkts-arkui-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions**are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayedwithout mask in the subwindow.<br>**起始版本：** 26.0.0 |
+| options | promptAction.DialogOptions | 否 | Style of the custom dialog box.<br>Note: If both [isModal](arkts-arkui-basedialogoptions-i.md)and [showInSubWindow](arkts-arkui-basedialogoptions-i.md) in **BaseDialogOptions**are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayedwithout mask in the subwindow.<br>**起始版本：** 26.0.0 |
 
 **返回值：**
 
@@ -728,7 +728,7 @@ Update menu with frameNode.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | 是 | Content displayed in the menu. |
-| options | MenuOptions | 是 | Style of the menu.<br>**NOTE**<br>1. Updating for the following is not supported:**showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**,**onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and**onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md#menumasktype).However, this API does not support mask presence toggling (that is, switching the mask from non-existent toexistent or vice versa) by setting a boolean value. |
+| options | MenuOptions | 是 | Style of the menu.<br>**NOTE**<br>1. Updating for the following is not supported:**showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**,**onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and**onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md).However, this API does not support mask presence toggling (that is, switching the mask from non-existent toexistent or vice versa) by setting a boolean value. |
 | partialUpdate | boolean | 否 | Whether to update the menu in incremental mode. Default value: **false**.<br>**NOTE**<br>1. **true**: incremental update, where the specified properties in **options** are updated, andother properties stay at their current value.<br>2. **false**: full update, where all properties except thosespecified in **options** are restored to default values. |
 
 **返回值：**

@@ -13,7 +13,7 @@ Defines the input parameters of **cipher.rsa()**.
 ## Modules to Import
 
 ```TypeScript
-import { CipherAesOptions, CipherResponse, CipherRsaOptions } from '@system.cipher';
+import { CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
 ## action

@@ -66,5 +66,5 @@ setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOp
 | --- | --- | --- | --- |
 | selectionStart | number | 是 | 选中开始位置。<br/>取值小于0时，按0处理。 |
 | selectionEnd | number | 是 | 选中结束位置。<br/>取值大于文本长度时，按当前文本长度处理。 |
-| options | SelectionOptions | 否 | 选择项配置。 默认值继承[SelectionOptions](arkts-arkui-selectionoptions-i.md#selectionoptions)。 |
+| options | SelectionOptions | 否 | 选择项配置。 默认值继承[SelectionOptions](arkts-arkui-selectionoptions-i.md)。 |
 

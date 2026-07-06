@@ -9,7 +9,7 @@ Describes the layout information and measurement information of a run of text in
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@ohos.graphics.text';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## fontMetrics

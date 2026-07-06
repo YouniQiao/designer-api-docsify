@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## findWindow
@@ -24,7 +24,7 @@ Finds a window based on the name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Window name. When searching for a child window or system window, use the window name in[Configuration](arkts-arkui-configuration-i.md#configuration). When searching for the main window, use[getWindowName](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getwindowname12) to obtain thewindow name of the current instance. |
+| name | string | Yes | Window name. When searching for a child window or system window, use the window name in[Configuration](arkts-arkui-configuration-i.md). When searching for the main window, use[getWindowName](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getwindowname12) to obtain thewindow name of the current instance. |
 
 **Return value:**
 

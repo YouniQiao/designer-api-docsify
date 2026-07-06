@@ -9,7 +9,7 @@ Definition of the Offline Download Management Interface
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addAVDownloadTask

@@ -40,7 +40,7 @@ createSubWindow(name: string): Promise<Window>
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: The subWindow has been created and can not be created again. |
-| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
+| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9+ |
 
 ## createSubWindow
 
@@ -71,7 +71,7 @@ createSubWindow(name: string, callback: AsyncCallback<Window>): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: The subWindow has been created and can not be created again. |
-| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
+| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9+ |
 
 ## createSubWindowWithOptions
 
@@ -223,7 +223,7 @@ getSubWindow(): Promise<Array<Window>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
+| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9+ |
 
 ## getSubWindow
 
@@ -251,8 +251,8 @@ getSubWindow(callback: AsyncCallback<Array<Window>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.<br>**适用版本：** 10 |
-| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.<br>**适用版本：** 10+ |
+| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9+ |
 
 ## isWindowRectAutoSave
 
@@ -282,7 +282,7 @@ isWindowRectAutoSave(): Promise<boolean>
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: 1. The window is not created or destroyed;2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 20 |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 20+ |
 
 ## loadContent
 
@@ -314,7 +314,7 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
+| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9+ |
 
 ## loadContent
 
@@ -350,7 +350,7 @@ loadContent(path: string, storage?: LocalStorage): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
+| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9+ |
 
 ## loadContent
 
@@ -381,7 +381,7 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
+| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9+ |
 
 ## loadContentByName
 
@@ -829,7 +829,7 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | 是 | 设置主窗的窗口支持模式。<br>- FULL_SCREEN：支持全屏模式。<br>- FLOATING：支持自由悬浮窗口模式。<br>- SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。<br> 注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的[module.json5配置文件][module.json5 file](../../../../quick-start/module-configuration-file.md)中[abilities标签](../../../../quick-start/module-configuration-file.md#abilities)的supportWindowMode字段取值或者[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-startoptions-c.md#startoptions)的supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
+| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | 是 | 设置主窗的窗口支持模式。<br>- FULL_SCREEN：支持全屏模式。<br>- FLOATING：支持自由悬浮窗口模式。<br>- SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。<br> 注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的[module.json5配置文件][module.json5 file](../../../../quick-start/module-configuration-file.md)中[abilities标签](../../../../quick-start/module-configuration-file.md#abilities)的supportWindowMode字段取值或者[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-startoptions-c.md)的supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
 
 **返回值：**
 
@@ -863,7 +863,7 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | 是 | 设置主窗的窗口支持模式。<br>- FULL_SCREEN：支持全屏模式。<br>- FLOATING：支持自由悬浮窗口模式。<br>- SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。<br> 注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的[module.json5配置文件][module.json5 file](../../../../quick-start/module-configuration-file.md)中[abilities标签](../../../../quick-start/module-configuration-file.md#abilities)的supportWindowMode字段取值或者[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-startoptions-c.md#startoptions)的supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
+| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | 是 | 设置主窗的窗口支持模式。<br>- FULL_SCREEN：支持全屏模式。<br>- FLOATING：支持自由悬浮窗口模式。<br>- SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。<br> 注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的[module.json5配置文件][module.json5 file](../../../../quick-start/module-configuration-file.md)中[abilities标签](../../../../quick-start/module-configuration-file.md#abilities)的supportWindowMode字段取值或者[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-startoptions-c.md)的supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
 | grayOutMaximizeButton | boolean | 是 | 是否显示并将主窗口的最大化按钮置灰true表示显示并将主窗口的最大化按钮置灰，此时最大化按钮不可用；false表示不显示主窗口的最大化按钮。此参数配置仅在supportedWindowModes不支持FULL_SCREEN时生效。 |
 
 **返回值：**
@@ -917,7 +917,7 @@ Set the application modality of the windowStage.
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. Possible cause:The window is not created or destroyed.<br>**适用版本：** 20 |
+| [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. Possible cause:The window is not created or destroyed.<br>**适用版本：** 20+ |
 
 ## setWindowRectAutoSave
 

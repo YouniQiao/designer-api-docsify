@@ -9,7 +9,7 @@ Defines a **HiTraceId** object.
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from '@ohos.hiTraceChain';
+import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## chainId

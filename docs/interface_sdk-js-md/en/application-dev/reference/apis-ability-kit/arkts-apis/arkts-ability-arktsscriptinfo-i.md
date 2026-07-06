@@ -9,7 +9,7 @@ arkTS script info.
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from '@ohos.app.ability.scriptManager';
+import { scriptManager } from '@kit.AbilityKit';
 ```
 
 ## context

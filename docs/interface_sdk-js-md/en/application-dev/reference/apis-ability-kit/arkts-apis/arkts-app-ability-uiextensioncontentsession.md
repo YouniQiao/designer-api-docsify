@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UIExtensionContentSession } from '@ohos.app.ability.UIExtensionContentSession';
+import { UIExtensionContentSession } from '@kit.AbilityKit';
 ```
 
 ## Summary

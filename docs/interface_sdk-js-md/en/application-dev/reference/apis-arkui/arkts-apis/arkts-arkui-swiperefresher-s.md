@@ -9,7 +9,7 @@ Declare component SwipeRefresher
 ## Modules to Import
 
 ```TypeScript
-import { SwipeRefresher } from '@ohos.arkui.advanced.SwipeRefresher';
+import { SwipeRefresher } from '@kit.ArkUI';
 ```
 
 ## content

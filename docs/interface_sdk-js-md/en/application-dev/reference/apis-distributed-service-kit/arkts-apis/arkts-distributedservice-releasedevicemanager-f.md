@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@ohos.distributedDeviceManager';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## releaseDeviceManager

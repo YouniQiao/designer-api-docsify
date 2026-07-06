@@ -1,6 +1,6 @@
 # Transaction
 
-Provides APIs for managing databases in transaction mode. A transaction object is created by using [createTransaction](arkts-arkdata-rdbstore-i.md#createtransaction-1). Operations on different transaction objects are isolated. For details about the transaction types, see [TransactionType](arkts-arkdata-transactiontype-e.md#transactiontype). Currently, an RDB store supports only one write transaction at a time. If the current [RdbStore](arkts-data-relationalstore.md#relationalstore) has a write transaction that is not released, creating an **IMMEDIATE** or **EXCLUSIVE** transaction object will return error 14800024. If a **DEFERRED** transaction object is created, error 14800024 may be returned when it is used to invoke a write operation for the first time. After a write transaction is created using **IMMEDIATE** or **EXCLUSIVE**, or a **DEFERRED** transaction is upgraded to a write transaction, write operations in the [RdbStore](arkts-data-relationalstore.md#relationalstore) will also return error 14800024. When the number of concurrent transactions is large and the write transaction duration is long, the frequency of returning error 14800024 may increase. You can reduce the occurrence of error 14800024 by shortening the transaction duration or by handling the error 14800024 through retries. Before using the following APIs, you should obtain a **Transaction** instance by calling the [createTransaction](arkts-arkdata-rdbstore-i.md#createtransaction-1) method and then call the corresponding method through the instance. **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core **Example**: For details about the definition of **this.context** in the sample code, see the application [context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context) of the stage model.
+Provides APIs for managing databases in transaction mode. A transaction object is created by using [createTransaction](arkts-arkdata-rdbstore-i.md#createtransaction-1). Operations on different transaction objects are isolated. For details about the transaction types, see [TransactionType](arkts-arkdata-transactiontype-e.md). Currently, an RDB store supports only one write transaction at a time. If the current [RdbStore](arkts-data-relationalstore.md) has a write transaction that is not released, creating an **IMMEDIATE** or **EXCLUSIVE** transaction object will return error 14800024. If a **DEFERRED** transaction object is created, error 14800024 may be returned when it is used to invoke a write operation for the first time. After a write transaction is created using **IMMEDIATE** or **EXCLUSIVE**, or a **DEFERRED** transaction is upgraded to a write transaction, write operations in the [RdbStore](arkts-data-relationalstore.md) will also return error 14800024. When the number of concurrent transactions is large and the write transaction duration is long, the frequency of returning error 14800024 may increase. You can reduce the occurrence of error 14800024 by shortening the transaction duration or by handling the error 14800024 through retries. Before using the following APIs, you should obtain a **Transaction** instance by calling the [createTransaction](arkts-arkdata-rdbstore-i.md#createtransaction-1) method and then call the corresponding method through the instance. **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core **Example**: For details about the definition of **this.context** in the sample code, see the application [context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) of the stage model.
 
 **Since:** 14
 
@@ -9,7 +9,7 @@ Provides APIs for managing databases in transaction mode. A transaction object i
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@ohos.data.relationalStore';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## batchInsert
@@ -18,7 +18,7 @@ import { relationalStore } from '@ohos.data.relationalStore';
 batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 ```
 
-Inserts data into a table in batches. This API uses a promise to return the result. Data is written in batches of up to 32,766 parameters each with the [ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-conflictresolution-e.md#conflictresolution) policy. The total number of parameters is calculated as the number of inserted data records multiplied by the size of the union set of all fields in the inserted data. If the operation fails, an error is returned. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+Inserts data into a table in batches. This API uses a promise to return the result. Data is written in batches of up to 32,766 parameters each with the [ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-conflictresolution-e.md) policy. The total number of parameters is calculated as the number of inserted data records multiplied by the size of the union set of all fields in the inserted data. If the operation fails, an error is returned. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
 
 **Since:** 14
 
@@ -63,7 +63,7 @@ Inserts data into a table in batches. This API uses a promise to return the resu
 batchInsertSync(table: string, values: Array<ValuesBucket>): number
 ```
 
-Inserts data into a table in batches. This API returns the result synchronously. Data is written in batches of up to 32,766 parameters each with the [ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-conflictresolution-e.md#conflictresolution) policy. The total number of parameters is calculated as the number of inserted data records multiplied by the size of the union set of all fields in the inserted data. If the operation fails, an error is returned. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+Inserts data into a table in batches. This API returns the result synchronously. Data is written in batches of up to 32,766 parameters each with the [ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-conflictresolution-e.md) policy. The total number of parameters is calculated as the number of inserted data records multiplied by the size of the union set of all fields in the inserted data. If the operation fails, an error is returned. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
 
 **Since:** 14
 
@@ -112,7 +112,7 @@ batchInsertWithConflictResolution(
     ): Promise<number>
 ```
 
-Inserts data into a table with conflict resolutions in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-conflictresolution-e.md#conflictresolution). This API uses a promise to return the result. A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800000 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+Inserts data into a table with conflict resolutions in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-conflictresolution-e.md). This API uses a promise to return the result. A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800000 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since:** 18
 
@@ -162,7 +162,7 @@ batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>
       conflict: ConflictResolution): number
 ```
 
-Inserts data into a table with conflict resolutions in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-conflictresolution-e.md#conflictresolution). A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800000 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+Inserts data into a table with conflict resolutions in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-conflictresolution-e.md). A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800000 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
 
 **Since:** 18
 
@@ -212,7 +212,7 @@ batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-Inserts data into a table in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-conflictresolution-e.md#conflictresolution), and [Result](arkts-arkdata-result-i.md#result) is returned. This API uses a promise to return the result. A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800001 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+Inserts data into a table in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-conflictresolution-e.md), and [Result](arkts-arkdata-result-i.md) is returned. This API uses a promise to return the result. A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800001 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
 
 **Since:** 23
 
@@ -258,7 +258,7 @@ batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config:
       conflict?: ConflictResolution): Result
 ```
 
-Inserts data into a table in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-conflictresolution-e.md#conflictresolution), and [Result](arkts-arkdata-result-i.md#result) is returned. A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800001 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+Inserts data into a table in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-conflictresolution-e.md), and [Result](arkts-arkdata-result-i.md) is returned. A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800001 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
 
 **Since:** 23
 
@@ -423,7 +423,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise<Result>
 ```
 
-Deletes data from the RDB store based on the specified **RdbPredicates** object and returns [Result](arkts-arkdata-result-i.md#result). This API uses a promise to return the result.
+Deletes data from the RDB store based on the specified **RdbPredicates** object and returns [Result](arkts-arkdata-result-i.md). This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -466,7 +466,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object 
 deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Result
 ```
 
-Deletes data from the RDB store based on the specified **RdbPredicates** object and returns [Result](arkts-arkdata-result-i.md#result).
+Deletes data from the RDB store based on the specified **RdbPredicates** object and returns [Result](arkts-arkdata-result-i.md).
 
 **Since:** 23
 
@@ -775,7 +775,7 @@ Queries data in the RDB store using the specified SQL statement. The number of r
 querySqlSync(sql: string, args?: Array<ValueType>): ResultSet
 ```
 
-Queries data in the RDB store using the specified SQL statement. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **resultSet** obtained by **querySync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#taskpool) thread.
+Queries data in the RDB store using the specified SQL statement. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **resultSet** obtained by **querySync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) thread.
 
 **Since:** 14
 
@@ -850,7 +850,7 @@ Queries data from the RDB store based on specified conditions without calculatin
 querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResultSet
 ```
 
-Queries data from the RDB store based on specified SQL statements without calculating the row count. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by **querySqlWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#taskpool) thread.
+Queries data from the RDB store based on specified SQL statements without calculating the row count. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by **querySqlWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) thread.
 
 **Since:** 23
 
@@ -884,7 +884,7 @@ Queries data from the RDB store based on specified SQL statements without calcul
 querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 ```
 
-Queries data in a database based on specified conditions. This API returns the result synchronously. If complex logic and a large number of loops are involved in the operations on the **resultSet** obtained by **querySync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#taskpool) thread.
+Queries data in a database based on specified conditions. This API returns the result synchronously. If complex logic and a large number of loops are involved in the operations on the **resultSet** obtained by **querySync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) thread.
 
 **Since:** 14
 
@@ -958,7 +958,7 @@ Queries data from the RDB store based on specified conditions without calculatin
 queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): LiteResultSet
 ```
 
-Queries data from the RDB store based on specified conditions without calculating the row count. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by **queryWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#taskpool) thread.
+Queries data from the RDB store based on specified conditions without calculating the row count. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by **queryWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) thread.
 
 **Since:** 23
 
@@ -1116,7 +1116,7 @@ updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-Updates data in the RDB store based on the specified **RdbPredicates** instance object. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-conflictresolution-e.md#conflictresolution), and [Result](arkts-arkdata-result-i.md#result) is returned. This API uses a promise to return the result. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results.
+Updates data in the RDB store based on the specified **RdbPredicates** instance object. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-conflictresolution-e.md), and [Result](arkts-arkdata-result-i.md) is returned. This API uses a promise to return the result. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results.
 
 **Since:** 23
 
@@ -1162,7 +1162,7 @@ updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config:
       conflict?: ConflictResolution): Result
 ```
 
-Updates data in the RDB store based on the specified **RdbPredicates** instance object. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-conflictresolution-e.md#conflictresolution), and [Result](arkts-arkdata-result-i.md#result) is returned. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results.
+Updates data in the RDB store based on the specified **RdbPredicates** instance object. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-conflictresolution-e.md), and [Result](arkts-arkdata-result-i.md) is returned. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results.
 
 **Since:** 23
 

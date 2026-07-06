@@ -2,7 +2,7 @@
 
 Application component that has the UI. It provides lifecycle callbacks such as component creation, destruction, and foreground/background switching, and supports background communication.
 
-**Inheritance/Implementation:** UIAbility extends [Ability](arkts-ability-ability-c.md#ability)
+**Inheritance/Implementation:** UIAbility extends [Ability](arkts-ability-ability-c.md)
 
 **Since:** 9
 
@@ -11,7 +11,7 @@ Application component that has the UI. It provides lifecycle callbacks such as c
 ## Modules to Import
 
 ```TypeScript
-import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@ohos.app.ability.UIAbility';
+import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
 ```
 
 ## onBackPressed
@@ -86,7 +86,7 @@ export default class MyUIAbility extends UIAbility {
 onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult
 ```
 
-Callback invoked to return the collaboration result in multi-device collaboration scenarios. > **NOTE** > > - This callback does not support ability launch in > [specified mode](../../../../application-models/uiability-launch-type.md#specified). > > - When you use methods such as > [startAbility](arkts-ability-uiabilitycontext-c.md#startability-1) > to start an application, you must include **FLAG_ABILITY_ON_COLLABORATE** in > [Flags](arkts-ability-flags-e.md#flags) in the Want object. > > - During a > [cold start](../../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability), this > callback must be invoked before [onForeground](arkts-ability-uiability-c.md#onforeground-1) or after > [onBackground](arkts-ability-uiability-c.md#onbackground-1). During a > [hot start](../../../../application-models/uiability-intra-device-interaction.md#hot-starting-uiability), this > callback must be invoked before [onNewWant](arkts-ability-uiability-c.md#onnewwant-1).
+Callback invoked to return the collaboration result in multi-device collaboration scenarios. > **NOTE** > > - This callback does not support ability launch in > [specified mode](../../../../application-models/uiability-launch-type.md#specified). > > - When you use methods such as > [startAbility](arkts-ability-uiabilitycontext-c.md#startability-1) > to start an application, you must include **FLAG_ABILITY_ON_COLLABORATE** in > [Flags](arkts-ability-flags-e.md) in the Want object. > > - During a > [cold start](../../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability), this > callback must be invoked before [onForeground](arkts-ability-uiability-c.md#onforeground-1) or after > [onBackground](arkts-ability-uiability-c.md#onbackground-1). During a > [hot start](../../../../application-models/uiability-intra-device-interaction.md#hot-starting-uiability), this > callback must be invoked before [onNewWant](arkts-ability-uiability-c.md#onnewwant-1).
 
 **Since:** 18
 
@@ -147,7 +147,7 @@ Called when a UIAbility is to be migrated across devices. You can save service d
 | Type | Description |
 | --- | --- |
 | AbilityConstant.OnContinueResult | Return the result of onContinue.<br>**Applicable version:** 9 - 11 |
-| AbilityConstant.OnContinueResult \| Promise&lt;AbilityConstant.OnContinueResult&gt; | Whether the migration isaccepted. The options are as follows:<br>- **AGREE**: The migration is allowed.<br>- **REJECT**: The migration is rejected, for example, when an application is abnormal in **onContinue()**.<br>- **MISMATCH**: The application versions of the source and target devices do not match. The application on thesource device can obtain the version of the target application from **onContinue**. If the ability continuationcannot be performed due to version mismatch, this result is returned.<br> This callback comes in pairs with **onWindowStageRestore**. In ability continuation scenarios, the sourceUIAbility triggers **onContinue** to save custom data, and the target UIAbility triggers**onWindowStageRestore** to restore the custom data.<br>**Applicable version:** 12 |
+| AbilityConstant.OnContinueResult \| Promise&lt;AbilityConstant.OnContinueResult&gt; | Whether the migration isaccepted. The options are as follows:<br>- **AGREE**: The migration is allowed.<br>- **REJECT**: The migration is rejected, for example, when an application is abnormal in **onContinue()**.<br>- **MISMATCH**: The application versions of the source and target devices do not match. The application on thesource device can obtain the version of the target application from **onContinue**. If the ability continuationcannot be performed due to version mismatch, this result is returned.<br> This callback comes in pairs with **onWindowStageRestore**. In ability continuation scenarios, the sourceUIAbility triggers **onContinue** to save custom data, and the target UIAbility triggers**onWindowStageRestore** to restore the custom data.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -444,7 +444,7 @@ export default class MyUIAbility extends UIAbility {
 onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 ```
 
-Called when a started UIAbility instance is brought up again. If there are specific scenarios where you do not want this lifecycle callback to be triggered, you can use [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios-1) to set those [scenarios](arkts-ability-scenarios-e.md#scenarios). This API returns the result synchronously and does not support asynchronous callback.
+Called when a started UIAbility instance is brought up again. If there are specific scenarios where you do not want this lifecycle callback to be triggered, you can use [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios-1) to set those [scenarios](arkts-ability-scenarios-e.md). This API returns the result synchronously and does not support asynchronous callback.
 
 **Since:** 9
 
@@ -579,7 +579,7 @@ export default class EntryAbility extends UIAbility {
 onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>): AbilityConstant.OnSaveResult
 ```
 
-This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#apprecovery). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-enableapprecovery-f.md#enableapprecovery-1) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. > **NOTE** > > Starting from API version 20, this callback is not executed when > [onSaveStateAsync](arkts-ability-uiability-c.md#onsavestateasync-1) > is implemented.
+This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-enableapprecovery-f.md#enableapprecovery-1) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. > **NOTE** > > Starting from API version 20, this callback is not executed when > [onSaveStateAsync](arkts-ability-uiability-c.md#onsavestateasync-1) > is implemented.
 
 **Since:** 9
 
@@ -623,7 +623,7 @@ export default class MyUIAbility extends UIAbility {
 onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, Object>): Promise<AbilityConstant.OnSaveResult>
 ```
 
-This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#apprecovery). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-enableapprecovery-f.md#enableapprecovery-1) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. This API uses a promise to return the result.
+This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-enableapprecovery-f.md#enableapprecovery-1) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. This API uses a promise to return the result.
 
 **Since:** 20
 

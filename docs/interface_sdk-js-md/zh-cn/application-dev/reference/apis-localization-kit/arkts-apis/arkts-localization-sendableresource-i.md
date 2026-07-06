@@ -2,7 +2,7 @@
 
 本模块提供SendableResource资源相关信息，包括应用包名、应用模块名、资源类型等。
 
-**继承/实现关系：** SendableResource extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md#isendable)
+**继承/实现关系：** SendableResource extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md)
 
 **起始版本：** 12
 

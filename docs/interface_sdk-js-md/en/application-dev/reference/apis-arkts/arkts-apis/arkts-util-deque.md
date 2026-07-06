@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Deque } from '@ohos.util.Deque';
+import { Deque } from '@kit.ArkTS';
 ```
 
 ## Summary

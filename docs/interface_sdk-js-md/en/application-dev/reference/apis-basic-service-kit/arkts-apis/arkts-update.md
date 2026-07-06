@@ -11,7 +11,7 @@ The **update** module implements update of the entire system, including built-in
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@ohos.update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

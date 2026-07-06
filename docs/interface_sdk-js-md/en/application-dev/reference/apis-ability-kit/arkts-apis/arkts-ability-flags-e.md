@@ -1,6 +1,6 @@
 # Flags
 
-Enumerates the common preset keywords of the [Want.flags](arkts-ability-want-c.md#want) field. You can use these predefined keywords to set or retrieve additional flag information carried in application transitions.
+Enumerates the common preset keywords of the [Want.flags](arkts-ability-want-c.md) field. You can use these predefined keywords to set or retrieve additional flag information carried in application transitions.
 
 **Since:** 9
 

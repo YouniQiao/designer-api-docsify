@@ -22,7 +22,7 @@ function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOpt
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
 | keyAlias | string | 是 | 所需查找的密钥的别名。 |
-| huksOptions | HuksOptions | 是 | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md#huksauthstoragelevel)指定需查询密钥的安全级别，<br>可传空，当API version ≥12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| huksOptions | HuksOptions | 是 | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md)指定需查询密钥的安全级别，<br>可传空，当API version ≥12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
 
 **返回值：**
 
@@ -45,7 +45,7 @@ function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOpt
 | [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | Feature is not supported. Possible causes:1. The group key is not supported.2. The crypto extension key is not supported.<br>**适用版本：** 23 |
+| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | Feature is not supported. Possible causes:1. The group key is not supported.2. The crypto extension key is not supported.<br>**适用版本：** 23+ |
 
 **示例：**
 

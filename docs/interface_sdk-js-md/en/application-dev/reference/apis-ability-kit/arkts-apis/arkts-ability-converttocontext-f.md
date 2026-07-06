@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from '@ohos.app.ability.sendableContextManager';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## convertToContext
@@ -32,7 +32,7 @@ Converts a SendableContext object to a Context object.
 
 | Type | Description |
 | --- | --- |
-| common.Context | [Context](arkts-ability-context-depr-i.md#context) object. |
+| common.Context | [Context](arkts-ability-context-depr-i.md) object. |
 
 **Error codes:**
 

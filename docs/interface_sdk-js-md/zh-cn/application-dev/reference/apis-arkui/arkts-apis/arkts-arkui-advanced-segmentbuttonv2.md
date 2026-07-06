@@ -7,7 +7,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [SegmentButtonV2Item](arkts-arkui-segmentbuttonv2item-c.md) |  |
-| [SegmentButtonV2Items](arkts-arkui-segmentbuttonv2items-c.md) | 分段按钮选项集合。 继承自 Array\&lt;[SegmentButtonV2Item](arkts-arkui-segmentbuttonv2items-c.md#segmentbuttonv2items)&gt; |
+| [SegmentButtonV2Items](arkts-arkui-segmentbuttonv2items-c.md) | 分段按钮选项集合。 继承自 Array\&lt;[SegmentButtonV2Item](arkts-arkui-segmentbuttonv2items-c.md)&gt; |
 
 ### 结构体
 

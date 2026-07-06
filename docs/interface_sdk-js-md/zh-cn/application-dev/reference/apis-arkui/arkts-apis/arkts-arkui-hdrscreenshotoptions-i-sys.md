@@ -14,7 +14,7 @@
 displayId?: number
 ```
 
-表示截取图像的显示设备[Display](arkts-arkui-displaystate-e.md#displaystate)的ID号，该参数应为整数。默认为0。
+表示截取图像的显示设备[Display](arkts-arkui-displaystate-e.md)的ID号，该参数应为整数。默认为0。
 
 **类型：** number
 

@@ -9,7 +9,7 @@ Provides APIs for managing the **X500DistinguishedName** instance.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## getEncoded

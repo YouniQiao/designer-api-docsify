@@ -1,8 +1,8 @@
 # NightPhotoSession (System API)
 
-NightPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ColorManagement, ManualExposure Implements a night photo session, which sets the parameters of the night photo mode and saves all [CameraInput](arkts-camera-camerainput-i.md#camerainput), [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput), and [PhotoOutput](arkts-camera-photooutput-i.md#photooutput) instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md#session). For night photo capture scenarios, you must listen for the [onCaptureEnd](arkts-camera-photooutput-i.md#on-8) event to mark the end of the photo capture session.
+NightPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ColorManagement, ManualExposure Implements a night photo session, which sets the parameters of the night photo mode and saves all [CameraInput](arkts-camera-camerainput-i.md), [CameraOutput](arkts-camera-cameraoutput-i.md), and [PhotoOutput](arkts-camera-photooutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md). For night photo capture scenarios, you must listen for the [onCaptureEnd](arkts-camera-photooutput-i.md#on-8) event to mark the end of the photo capture session.
 
-**Inheritance/Implementation:** NightPhotoSession extends [Session](arkts-camera-session-i.md#session), [Flash](arkts-camera-flash-i.md#flash), [AutoExposure](arkts-camera-autoexposure-i.md#autoexposure), [Focus](arkts-camera-focus-i.md#focus), [Zoom](arkts-camera-zoom-i.md#zoom), [ColorEffect](arkts-camera-coloreffect-i-sys.md#coloreffect), [Beauty](arkts-camera-beauty-i-sys.md#beauty), [ColorManagement](arkts-camera-colormanagement-i.md#colormanagement), [ManualExposure](arkts-camera-manualexposure-i.md#manualexposure)
+**Inheritance/Implementation:** NightPhotoSession extends [Session](arkts-camera-session-i.md), [Flash](arkts-camera-flash-i.md), [AutoExposure](arkts-camera-autoexposure-i.md), [Focus](arkts-camera-focus-i.md), [Zoom](arkts-camera-zoom-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md), [Beauty](arkts-camera-beauty-i-sys.md), [ColorManagement](arkts-camera-colormanagement-i.md), [ManualExposure](arkts-camera-manualexposure-i.md)
 
 **Since:** 11
 
@@ -13,7 +13,7 @@ NightPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')
@@ -152,7 +152,7 @@ Subscribes to PortraitSession error events. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. This event is triggered and the error message is returned when an error occurs during thecalling of a session-related API such as[beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and[addInput](arkts-camera-session-i.md#addinput-1). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Example**
 

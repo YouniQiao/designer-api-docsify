@@ -9,7 +9,7 @@ Implements sampling options. > **NOTE** > > - The initial APIs of this class are
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -18,7 +18,7 @@ import { drawing } from '@ohos.graphics.drawing';
 constructor()
 ```
 
-Creates a **SamplingOptions** object, where the default value of [FilterMode](arkts-arkgraphics2d-filtermode-e.md#filtermode) is **FILTER_MODE_NEAREST**.
+Creates a **SamplingOptions** object, where the default value of [FilterMode](arkts-arkgraphics2d-filtermode-e.md) is **FILTER_MODE_NEAREST**.
 
 **Since:** 12
 

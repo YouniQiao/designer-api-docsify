@@ -11,7 +11,7 @@ The matching rules of network quota policies.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@ohos.net.policy';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## identity

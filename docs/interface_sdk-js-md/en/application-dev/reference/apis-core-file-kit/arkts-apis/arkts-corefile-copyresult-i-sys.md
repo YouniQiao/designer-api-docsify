@@ -13,7 +13,7 @@ Defines the information returned when the file copy operation fails. If the copy
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@ohos.file.fileAccess';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## destUri

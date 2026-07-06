@@ -2,7 +2,7 @@
 
 Provides methods for accessing Barcode tag.
 
-**Inheritance/Implementation:** BarcodeTag extends [TagSession](arkts-connectivity-tagsession-i.md#tagsession)
+**Inheritance/Implementation:** BarcodeTag extends [TagSession](arkts-connectivity-tagsession-i.md)
 
 **Since:** 18
 

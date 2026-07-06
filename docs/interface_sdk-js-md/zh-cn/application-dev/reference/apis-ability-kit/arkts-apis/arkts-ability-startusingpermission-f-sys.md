@@ -180,7 +180,7 @@ function startUsingPermission(
 | permissionName | Permissions | 是 | 需要使用的权限名称。传入无效值时返回错误码12100001。<br>取值约束：权限名长度不能超过256个字符。 |
 | pid | number | 否 | 调用方的进程pid，用于根据进程生命周期管理权限使用状态。当需要精确控制特定进程的权限使用状态（例如进程退出时自动停止权限使用）时传入此参数。需要与[stopUsingPermission]{@linkprivacyManager.stopUsingPermission}传入的pid相同。<br>取值限定为整数。默认值：-1，表示不根据进程生命周期响应。 |
 | usedType | PermissionUsedType | 否 | 敏感权限访问方式。<br>默认值：NORMAL_TYPE。 |
-| options | PermissionUsingOptions | 否 | 权限使用可选参数，用于指定扩展身份。当需要标识调用方的扩展身份信息时传入此参数。<br>默认值：结构内每个属性的默认值请参考 [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md#permissionusingoptions)。 |
+| options | PermissionUsingOptions | 否 | 权限使用可选参数，用于指定扩展身份。当需要标识调用方的扩展身份信息时传入此参数。<br>默认值：结构内每个属性的默认值请参考 [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md)。 |
 
 **返回值：**
 

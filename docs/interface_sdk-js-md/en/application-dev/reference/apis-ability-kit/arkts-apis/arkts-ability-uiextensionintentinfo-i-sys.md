@@ -11,7 +11,7 @@ Describes the information of the UIExtensionAbility bound to the [intent develop
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@ohos.app.ability.insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName

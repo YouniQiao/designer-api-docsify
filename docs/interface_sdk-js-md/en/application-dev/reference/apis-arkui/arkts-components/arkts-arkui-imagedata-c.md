@@ -55,7 +55,7 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 | width | number | Yes | Width of the rectangle.<br>Default unit: vp<br>Invalid values **NaN** and **Infinity** are treated as **0**. |
 | height | number | Yes | Height of the rectangle.<br>Default unit: vp<br>Invalid values **NaN** and **Infinity** are treated as **0**. |
 | data | Uint8ClampedArray | No | A one-dimensional array of color values.The values range from 0 to 255.<br>If the value specified is **undefined**, **data** is **undefined**.<br>Default value: a one-dimensional array of all 0s |
-| unit | LengthMetricsUnit | No | Unit mode of the **ImageData** object.The value cannot be dynamically changed once set. The configuration method isthe same as that of[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#canvasrenderingcontext2d).<br>Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT**. |
+| unit | LengthMetricsUnit | No | Unit mode of the **ImageData** object.The value cannot be dynamically changed once set. The configuration method isthe same as that of[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br>Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT**. |
 
 ## data
 

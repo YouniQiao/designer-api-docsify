@@ -1,8 +1,8 @@
 # Focus
 
-Focus extends [FocusQuery](arkts-camera-focusquery-i.md#focusquery) Provides APIs to obtain and set the camera focus mode and focus position.
+Focus extends [FocusQuery](arkts-camera-focusquery-i.md) Provides APIs to obtain and set the camera focus mode and focus position.
 
-**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-focusquery-i.md#focusquery)
+**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-focusquery-i.md)
 
 **Since:** 11
 
@@ -11,7 +11,7 @@ Focus extends [FocusQuery](arkts-camera-focusquery-i.md#focusquery) Provides API
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getFocusAssist

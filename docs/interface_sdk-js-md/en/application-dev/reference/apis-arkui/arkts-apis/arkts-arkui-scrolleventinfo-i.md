@@ -9,7 +9,7 @@ ScrollEvent info.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@ohos.arkui.observer';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## axis

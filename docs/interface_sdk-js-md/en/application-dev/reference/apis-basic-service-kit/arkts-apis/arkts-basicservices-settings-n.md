@@ -9,7 +9,7 @@ This module provides settings data access abilities.
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@ohos.settings';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -18,16 +18,16 @@ import { settings } from '@ohos.settings';
 
 | Name | Description |
 | --- | --- |
-| [domainName](arkts-basicservices-settings-domainname-n.md) | Provide domain name for query. |
-| [date](arkts-basicservices-settings-date-n.md) | Provides methods for setting time and date formats. |
-| [display](arkts-basicservices-settings-display-n.md) | Provides methods for setting the display effect, including the font size, screen brightness, screen rotation, animation factor, and display color. |
-| [general](arkts-basicservices-settings-general-n.md) | Provides methods for setting general information about devices, including the device name, startup wizard, airplane mode, debugging information, accessibility feature switch, and touch exploration status. |
-| [input](arkts-basicservices-settings-input-n.md) | Provides methods for setting information about input methods, including automatic capitalization, automatic punctuation, autocorrect, password presentation, input method engine, and input method subtypes. |
-| [network](arkts-basicservices-settings-network-n.md) | Provides methods for setting network information, including the data roaming status, HTTP proxy configurations, and preferred networks. |
-| [phone](arkts-basicservices-settings-phone-n.md) | Provides methods for setting the answering mode of incoming and outgoing calls. |
-| [sound](arkts-basicservices-settings-sound-n.md) | Provides methods for setting the sound effect, including the ringtone, dial tone, alarm sound, notification tone, and haptic feedback. |
-| [TTS](arkts-basicservices-settings-tts-n.md) | Provides methods for setting information about text-to-speech (TTS) conversion, including the pitch, speech rate, engine, and plug-ins. |
-| [wireless](arkts-basicservices-settings-wireless-n.md) | Provides methods for setting radio network information, including information about Bluetooth, Wi-Fi, Near Field Communication (NFC), and the airplane mode. |
+| [domainName](arkts-basicservices-domainname-n.md) | Provide domain name for query. |
+| [date](arkts-basicservices-date-n.md) | Provides methods for setting time and date formats. |
+| [display](arkts-basicservices-display-n.md) | Provides methods for setting the display effect, including the font size, screen brightness, screen rotation, animation factor, and display color. |
+| [general](arkts-basicservices-general-n.md) | Provides methods for setting general information about devices, including the device name, startup wizard, airplane mode, debugging information, accessibility feature switch, and touch exploration status. |
+| [input](arkts-basicservices-input-n.md) | Provides methods for setting information about input methods, including automatic capitalization, automatic punctuation, autocorrect, password presentation, input method engine, and input method subtypes. |
+| [network](arkts-basicservices-network-n.md) | Provides methods for setting network information, including the data roaming status, HTTP proxy configurations, and preferred networks. |
+| [phone](arkts-basicservices-phone-n.md) | Provides methods for setting the answering mode of incoming and outgoing calls. |
+| [sound](arkts-basicservices-sound-n.md) | Provides methods for setting the sound effect, including the ringtone, dial tone, alarm sound, notification tone, and haptic feedback. |
+| [TTS](arkts-basicservices-tts-n.md) | Provides methods for setting information about text-to-speech (TTS) conversion, including the pitch, speech rate, engine, and plug-ins. |
+| [wireless](arkts-basicservices-wireless-n.md) | Provides methods for setting radio network information, including information about Bluetooth, Wi-Fi, Near Field Communication (NFC), and the airplane mode. |
 
 ### Functions
 

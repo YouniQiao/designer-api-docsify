@@ -9,7 +9,7 @@ Creates an **Animator** object.
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@ohos.animator';
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
 ```
 
 ## create
@@ -75,7 +75,7 @@ animator.create(options); // You are advised to use UIContext.createAnimator().
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared with [create](Animator.create(options: AnimatorOptions)), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md#simpleanimatoroptions) type.
+Creates an **AnimatorResult** object for animations. Compared with [create](Animator.create(options: AnimatorOptions)), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 

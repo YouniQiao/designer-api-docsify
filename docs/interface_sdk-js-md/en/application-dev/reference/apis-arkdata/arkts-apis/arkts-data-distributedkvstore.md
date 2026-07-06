@@ -1,6 +1,6 @@
 # @ohos.data.distributedKVStore
 
-The **distributedKVStore** module implements collaboration between databases for different devices that form a Super Device. You can use the APIs provided by this module to save application data to a distributed key-value (KV) store and perform operations, such as adding, deleting, modifying, and querying data, and synchronizing data across devices. The **distributedKVStore** module provides the following functionalities: - [KVManager](arkts-arkdata-kvmanagerconfig-i.md#kvmanagerconfig): provides a **KVManager** instance to obtain KV store information. - [KVStoreResultSet](arkts-arkdata-kvstoreresultset-i.md#kvstoreresultset): provides APIs for accessing the results obtained from a KV store. - [Query](arkts-arkdata-query-c.md#query): provides APIs for setting predicates for data query. - [SingleKVStore](arkts-arkdata-singlekvstore-i.md#singlekvstore): provides APIs for querying data in single KV stores and synchronizing data across devices. The single KV stores manage data without distinguishing devices. - [DeviceKVStore](arkts-arkdata-devicekvstore-i.md#devicekvstore): provides APIs for querying data in device KV stores and synchronizing data across devices. This class inherits from [SingleKVStore](arkts-arkdata-singlekvstore-i.md#singlekvstore). The device KV stores manage data by device.
+The **distributedKVStore** module implements collaboration between databases for different devices that form a Super Device. You can use the APIs provided by this module to save application data to a distributed key-value (KV) store and perform operations, such as adding, deleting, modifying, and querying data, and synchronizing data across devices. The **distributedKVStore** module provides the following functionalities: - [KVManager](arkts-arkdata-kvmanagerconfig-i.md): provides a **KVManager** instance to obtain KV store information. - [KVStoreResultSet](arkts-arkdata-kvstoreresultset-i.md): provides APIs for accessing the results obtained from a KV store. - [Query](arkts-arkdata-query-c.md): provides APIs for setting predicates for data query. - [SingleKVStore](arkts-arkdata-singlekvstore-i.md): provides APIs for querying data in single KV stores and synchronizing data across devices. The single KV stores manage data without distinguishing devices. - [DeviceKVStore](arkts-arkdata-devicekvstore-i.md): provides APIs for querying data in device KV stores and synchronizing data across devices. This class inherits from [SingleKVStore](arkts-arkdata-singlekvstore-i.md). The device KV stores manage data by device.
 
 **Since:** 9
 
@@ -9,7 +9,7 @@ The **distributedKVStore** module implements collaboration between databases for
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@ohos.data.distributedKVStore';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -26,7 +26,7 @@ import { distributedKVStore } from '@ohos.data.distributedKVStore';
 | --- | --- |
 | [FieldNode](arkts-arkdata-fieldnode-c.md) | Represents a **Schema** instance, which provides the methods for defining the values stored in a KV store. |
 | [Query](arkts-arkdata-query-c.md) | Provides methods to create a **Query** object, which defines different data query criteria. A **Query** object supports a maximum of 256 predicates. |
-| [Schema](arkts-arkdata-schema-c.md) | Defines the schema of a KV store. You can create a **Schema** object and pass it in [Options](arkts-arkdata-options-i.md#options) when creating or opening a KV store. |
+| [Schema](arkts-arkdata-schema-c.md) | Defines the schema of a KV store. You can create a **Schema** object and pass it in [Options](arkts-arkdata-options-i.md) when creating or opening a KV store. |
 
 ### Interfaces
 

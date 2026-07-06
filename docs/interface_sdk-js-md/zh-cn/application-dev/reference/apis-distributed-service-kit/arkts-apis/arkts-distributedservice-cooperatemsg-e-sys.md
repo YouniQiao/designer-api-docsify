@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [CooperateState](arkts-distributedservice-cooperatestate-e-sys.md#cooperatestate)
+**替代接口：** [CooperateState](arkts-distributedservice-cooperatestate-e-sys.md)
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

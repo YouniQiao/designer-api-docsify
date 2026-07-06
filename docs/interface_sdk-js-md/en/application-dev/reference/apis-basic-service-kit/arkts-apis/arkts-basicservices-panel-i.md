@@ -11,7 +11,7 @@ Represents the word selection panel.
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from '@ohos.selectionInput.selectionManager';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## moveToGlobalDisplay

@@ -11,7 +11,7 @@ Provides encryptedVolumeManager statistics APIs
 ## Modules to Import
 
 ```TypeScript
-import { encryptedVolumeManager } from '@ohos.file.encryptedVolumeManager';
+import { encryptedVolumeManager } from '@kit.CoreFileKit';
 ```
 
 ## Summary

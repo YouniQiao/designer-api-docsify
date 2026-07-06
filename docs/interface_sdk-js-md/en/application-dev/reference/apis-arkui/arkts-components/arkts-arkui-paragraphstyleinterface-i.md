@@ -102,7 +102,7 @@ Paragraph spacing of the styled string text. Default value: **0**. The value can
 shaderStyle?: ShaderStyle
 ```
 
-Text shader effect. This API does not take effect when used together with [TextStyleInterface](arkts-arkui-textstyleinterface-i.md#textstyleinterface) **strokeWidth**. **shaderStyle** has a higher priority than [TextStyleInterface](arkts-arkui-textstyleinterface-i.md#textstyleinterface) **fontColor**. **Since**: 26.0.0.
+Text shader effect. This API does not take effect when used together with [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) **strokeWidth**. **shaderStyle** has a higher priority than [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) **fontColor**. **Since**: 26.0.0.
 
 **Type:** ShaderStyle
 

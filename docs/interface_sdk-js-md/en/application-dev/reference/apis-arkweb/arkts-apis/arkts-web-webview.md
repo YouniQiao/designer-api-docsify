@@ -9,7 +9,7 @@ This module provides the capability to manage web modules.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## Summary
@@ -63,9 +63,9 @@ import { webview } from '@ohos.web.webview';
 | [CacheOptions](arkts-arkweb-cacheoptions-i.md) | Represents a configuration object for precompiling JavaScript in the **Web** component to generate bytecode cache, which is designed to control the updating of the bytecode cache. |
 | [HistoryItem](arkts-arkweb-historyitem-i.md) | Provides information for history item in BackForwardList. |
 | [HitTestValue](arkts-arkweb-hittestvalue-i.md) | Provides the element information of the area being clicked. For the sample code, see [getLastHitTest](arkts-arkweb-webviewcontroller-c.md#getlasthittest-1). |
-| [MediaInfo](arkts-arkweb-mediainfo-i.md) | Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md#createnativemediaplayercallback) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page. |
+| [MediaInfo](arkts-arkweb-mediainfo-i.md) | Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page. |
 | [NativeMediaPlayerBridge](arkts-arkweb-nativemediaplayerbridge-i.md) | Instance of the API class between the web media player and the ArkWeb kernel. The ArkWeb kernel uses an object of this interface class to control the player created by the application to take over web page media. &gt; **NOTE** &gt; &gt; - The sample effect is subject to the actual device. |
-| [NativeMediaPlayerHandler](arkts-arkweb-nativemediaplayerhandler-i.md) | Implements a **NativeMediaPlayerHandler** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md#createnativemediaplayercallback) callback. The application uses this object to report the player status to the ArkWeb engine. &gt; **NOTE** &gt; &gt; - The sample effect is subject to the actual device. |
+| [NativeMediaPlayerHandler](arkts-arkweb-nativemediaplayerhandler-i.md) | Implements a **NativeMediaPlayerHandler** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md) callback. The application uses this object to report the player status to the ArkWeb engine. &gt; **NOTE** &gt; &gt; - The sample effect is subject to the actual device. |
 | [OfflineResourceMap](arkts-arkweb-offlineresourcemap-i.md) | Implements an **OfflineResourceMap** object, which is used to set information related to local offline resources that will be injected into memory cache through the [injectOfflineResources](arkts-arkweb-webviewcontroller-c.md#injectofflineresources-1) API. The ArkWeb engine will generate resource caches based on this information and control the validity period of the cache accordingly. |
 | [PdfConfiguration](arkts-arkweb-pdfconfiguration-i.md) | Specifies the input parameters of **createPdf()**. &gt; **NOTE** &gt; &gt; The number of pixels is calculated as follows: Number of pixels = 96 x Number of inches. |
 | [RectEvent](arkts-arkweb-rectevent-i.md) | Defines a rectangle. |
@@ -92,7 +92,7 @@ import { webview } from '@ohos.web.webview';
 | [MediaPlaybackState](arkts-arkweb-mediaplaybackstate-e.md) | Enumerates the playback states on the current web page. |
 | [MediaType](arkts-arkweb-mediatype-e.md) | Enumerates the media types. |
 | [NetworkState](arkts-arkweb-networkstate-e.md) | Enumerates the network statuses of the player. |
-| [OfflineResourceType](arkts-arkweb-offlineresourcetype-e.md) | Enumerates the offline resource types corresponding to the [OfflineResourceMap](arkts-arkweb-offlineresourcemap-i.md#offlineresourcemap) object. |
+| [OfflineResourceType](arkts-arkweb-offlineresourcetype-e.md) | Enumerates the offline resource types corresponding to the [OfflineResourceMap](arkts-arkweb-offlineresourcemap-i.md) object. |
 | [PlaybackStatus](arkts-arkweb-playbackstatus-e.md) | Enumerates the playback statuses of the player, which is an input parameter of the [handleStatusChanged](arkts-arkweb-nativemediaplayerhandler-i.md#handlestatuschanged-1) API. |
 | [Preload](arkts-arkweb-preload-e.md) | Enumerates how the player preloads media data. |
 | [PressureLevel](arkts-arkweb-pressurelevel-e.md) | Enumerates the memory pressure levels. When an application clears the cache occupied by the **Web** component, the **Web** kernel releases the cache based on the memory pressure level. \| Name\| Value\| Description\| \| ------------------------------- \| - \| ---------- \| \| MEMORY_PRESSURE_LEVEL_MODERATE \| 1 \| Moderate memory pressure level. At this level, the **Web** kernel attempts to release the cache that has low reallocation overhead and does not need to be used immediately.\| \| MEMORY_PRESSURE_LEVEL_CRITICAL \| 2 \| Critical memory pressure level. At this level, the **Web** kernel attempts to release all possible memory caches.\| |

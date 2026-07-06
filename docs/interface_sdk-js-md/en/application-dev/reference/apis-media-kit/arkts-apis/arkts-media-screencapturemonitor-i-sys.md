@@ -11,7 +11,7 @@ A class that provides APIs to query and monitor the system screen recorder statu
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## off('systemScreenRecorder')

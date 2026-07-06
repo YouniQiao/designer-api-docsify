@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from '@ohos.app.ability.errorManager';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## setDefaultFreezeObserver

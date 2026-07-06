@@ -22,7 +22,7 @@ function getLaunchWantForBundle(bundleName: string, userId: number, callback: As
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用程序的bundleName。 |
 | userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。 |
-| callback | AsyncCallback&lt;Want&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为获取到的Want；否则为错误对象。 |
+| callback | AsyncCallback&lt;Want&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Want；否则为错误对象。 |
 
 **错误码：**
 
@@ -82,7 +82,7 @@ function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用程序的bundleName。 |
-| callback | AsyncCallback&lt;Want&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为获取到的Want；否则为错误对象。 |
+| callback | AsyncCallback&lt;Want&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Want；否则为错误对象。 |
 
 **错误码：**
 

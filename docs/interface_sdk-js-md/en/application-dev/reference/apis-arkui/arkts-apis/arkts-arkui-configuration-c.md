@@ -7,7 +7,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LocaleResponse } from '@system.configuration';
+import { LocaleResponse } from '@kit.ArkUI';
 ```
 
 ## getLocale

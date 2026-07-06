@@ -9,7 +9,7 @@ The ImageCreator class provides APIs for applications to request an image data a
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## dequeueImage

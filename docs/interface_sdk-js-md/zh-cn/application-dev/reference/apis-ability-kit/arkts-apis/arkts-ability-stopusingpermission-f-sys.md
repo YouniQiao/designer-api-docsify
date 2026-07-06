@@ -145,7 +145,7 @@ function stopUsingPermission(
 | tokenID | number | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]{@link./bundleManager/ApplicationInfo:ApplicationInfo.accessTokenId}字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)。 |
 | permissionName | Permissions | 是 | 需要停止使用的权限名称。传入无效值时返回错误码12100001。 |
 | pid | number | 否 | 调用方的进程pid，需与[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1)传入的pid相同。不满足配套关系可能导致API调用失败（错误码12100004）。<br>取值限定为整数。默认值：-1，表示不根据进程生命周期响应。 |
-| options | PermissionUsingOptions | 否 | 权限使用可选参数，用于指定扩展身份。当需要标识调用方的扩展身份信息时传入此参数。<br>默认值：结构内每个属性的默认值请参考 [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md#permissionusingoptions)。 |
+| options | PermissionUsingOptions | 否 | 权限使用可选参数，用于指定扩展身份。当需要标识调用方的扩展身份信息时传入此参数。<br>默认值：结构内每个属性的默认值请参考 [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md)。 |
 
 **返回值：**
 

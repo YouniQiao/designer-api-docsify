@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InnerFullScreenLaunchComponent, LaunchController } from '@ohos.arkui.advanced.InnerFullScreenLaunchComponent';
+import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 ```
 
 ## Summary

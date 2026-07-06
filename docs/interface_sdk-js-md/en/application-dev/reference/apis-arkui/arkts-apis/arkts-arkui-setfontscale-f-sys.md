@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiAppearance } from '@ohos.uiAppearance';
+import { uiAppearance } from '@kit.ArkUI';
 ```
 
 ## setFontScale

@@ -9,7 +9,7 @@ Provides the API to check whether the focus assist is supported.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## isFocusAssistSupported
@@ -30,7 +30,7 @@ Checks whether the focus assist is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus assist. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| boolean | Check result for the support of the focus assist. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -82,7 +82,7 @@ Checks whether a focus drive type is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus drive type. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| boolean | Check result for the support of the focus drive type. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -135,7 +135,7 @@ Checks whether a focus range type is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus range type. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| boolean | Check result for the support of the focus range type. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 

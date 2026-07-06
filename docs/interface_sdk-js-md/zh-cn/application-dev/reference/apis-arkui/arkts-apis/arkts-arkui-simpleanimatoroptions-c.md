@@ -205,7 +205,7 @@ easing(curve: string): SimpleAnimatorOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| curve | string | 是 | 设置animator动画插值曲线，具体说明参考[AnimatorOptions](arkts-arkui-animatoroptions-i.md#animatoroptions)。<br/>默认值：“ease” |
+| curve | string | 是 | 设置animator动画插值曲线，具体说明参考[AnimatorOptions](arkts-arkui-animatoroptions-i.md)。<br/>默认值：“ease” |
 
 **返回值：**
 

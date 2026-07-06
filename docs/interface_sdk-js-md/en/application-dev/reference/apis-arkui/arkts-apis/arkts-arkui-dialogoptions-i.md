@@ -2,7 +2,7 @@
 
 Extends [BaseDialogOptions](#basedialogoptions11) to provide enhanced customization capabilities for the dialog box.
 
-**Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](arkts-arkui-basedialogoptions-i.md#basedialogoptions)
+**Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](arkts-arkui-basedialogoptions-i.md)
 
 **Since:** 18
 
@@ -11,7 +11,7 @@ Extends [BaseDialogOptions](#basedialogoptions11) to provide enhanced customizat
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from '@ohos.promptAction';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## backgroundBlurStyle

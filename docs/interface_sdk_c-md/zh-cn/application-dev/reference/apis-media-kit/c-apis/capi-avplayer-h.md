@@ -2033,7 +2033,7 @@ Method to set video decoded frame output callback. This API can be called onlywh
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlayer *player | Pointer to an OH_AVPlayer instance. |
-| OHNativeWindow *window | A pointer to a OHNativeWindow instance, see {@link OHNativeWindow} |
+| OHNativeWindow *window | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
 
 **返回：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { performanceMonitor } from '@ohos.arkui.performanceMonitor';
+import { performanceMonitor } from '@kit.ArkUI';
 ```
 
 ## recordInputEventTime

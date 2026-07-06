@@ -9,7 +9,7 @@ Describes the attributes used for text rendering, such as size and typeface. > *
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## countText

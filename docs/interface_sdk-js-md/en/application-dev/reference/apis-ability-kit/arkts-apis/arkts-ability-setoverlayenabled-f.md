@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { overlay } from '@ohos.bundle.overlay';
+import { overlay } from '@kit.AbilityKit';
 ```
 
 ## setOverlayEnabled
@@ -24,7 +24,7 @@ Enables or disables a module with the overlay feature in the current application
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Name of the module with the overlay feature. |
 | isEnabled | boolean | Yes | Whether to enable the module with the overlay feature. **true** to enable, **false**otherwise. |
-| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return the result. Ifthe operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. Ifthe operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

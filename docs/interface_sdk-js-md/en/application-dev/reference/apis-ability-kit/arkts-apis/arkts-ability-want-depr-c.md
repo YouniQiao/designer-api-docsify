@@ -34,7 +34,7 @@ Name of the ability. If both **bundleName** and **abilityName** are specified in
 action?: string
 ```
 
-Action to take, such as viewing and sharing application details. In implicit Want, you can define this property and use it together with **uri** or **parameters** to specify the operation to be performed on the data. For details, see [action](arkts-ability-action-depr-e.md#action). For details about the definition and matching rules of implicit Want, see [Matching Rules of Explicit Want and Implicit Want](../../../../application-models/explicit-implicit-want-mappings.md) .
+Action to take, such as viewing and sharing application details. In implicit Want, you can define this property and use it together with **uri** or **parameters** to specify the operation to be performed on the data. For details, see [action](arkts-ability-action-depr-e.md). For details about the definition and matching rules of implicit Want, see [Matching Rules of Explicit Want and Implicit Want](../../../../application-models/explicit-implicit-want-mappings.md) .
 
 **Type:** string
 
@@ -88,7 +88,7 @@ ID of the device running the ability. If this field is unspecified, the local de
 entities?: Array<string>
 ```
 
-Additional category information (such as browser and video player) of the ability. It is a supplement to the **action** field for implicit Want. and is used to filter ability types. For details, see [entity](arkts-ability-entity-depr-e.md#entity).
+Additional category information (such as browser and video player) of the ability. It is a supplement to the **action** field for implicit Want. and is used to filter ability types. For details, see [entity](arkts-ability-entity-depr-e.md).
 
 **Type:** Array<string>
 
@@ -106,7 +106,7 @@ Additional category information (such as browser and video player) of the abilit
 flags?: number
 ```
 
-How the Want object will be handled. By default, numbers are passed in. For details, see [flags](arkts-ability-flags-depr-e.md#flags).
+How the Want object will be handled. By default, numbers are passed in. For details, see [flags](arkts-ability-flags-depr-e.md).
 
 **Type:** number
 

@@ -4288,7 +4288,7 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: 
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
-| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit.<br>**适用版本：** 14 |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit.<br>**适用版本：** 14+ |
 
 **示例：**
 
@@ -4344,7 +4344,7 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<v
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
-| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit.<br>**适用版本：** 14 |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit.<br>**适用版本：** 14+ |
 
 **示例：**
 

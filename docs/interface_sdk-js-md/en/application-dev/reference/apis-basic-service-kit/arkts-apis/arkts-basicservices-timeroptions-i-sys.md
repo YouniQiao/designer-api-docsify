@@ -11,7 +11,7 @@ Defines the initialization options for the system timer.
 ## Modules to Import
 
 ```TypeScript
-import { systemTimer } from '@ohos.systemTimer';
+import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## autoRestore

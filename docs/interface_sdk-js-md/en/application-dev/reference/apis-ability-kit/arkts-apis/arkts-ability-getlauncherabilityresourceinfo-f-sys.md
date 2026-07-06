@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleResourceManager } from '@ohos.bundle.bundleResourceManager';
+import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityResourceInfo
@@ -27,7 +27,7 @@ Obtains the bundle information of the entry ability of an application based on t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| resourceFlags | number | No | Type of the resource information to obtain. The default value is**[ResourceFlag](arkts-ability-resourceflag-e-sys.md#resourceflag).GET_RESOURCE_INFO_ALL**. |
+| resourceFlags | number | No | Type of the resource information to obtain. The default value is**[ResourceFlag](arkts-ability-resourceflag-e-sys.md).GET_RESOURCE_INFO_ALL**. |
 
 **Return value:**
 
@@ -66,7 +66,7 @@ Obtains the launcher ability resource information of an application based on the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| resourceFlags | number | No | Type of the resource information to obtain. The default value is**[ResourceFlag](arkts-ability-resourceflag-e-sys.md#resourceflag).GET_RESOURCE_INFO_ALL**. |
+| resourceFlags | number | No | Type of the resource information to obtain. The default value is**[ResourceFlag](arkts-ability-resourceflag-e-sys.md).GET_RESOURCE_INFO_ALL**. |
 | appIndex | number | No | Index of the application clone. The default value is **0**. |
 
 **Return value:**

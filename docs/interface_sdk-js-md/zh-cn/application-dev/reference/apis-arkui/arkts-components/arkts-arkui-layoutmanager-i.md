@@ -33,7 +33,7 @@ getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | u
 
 | 类型 | 说明 |
 | --- | --- |
-| PositionWithAffinity | Character position. Returns **undefined** when[LayoutManager](arkts-arkui-layoutmanager-i.md#layoutmanager) is not bound to a component. |
+| PositionWithAffinity | Character position. Returns **undefined** when[LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
 ## getCharacterRangeForGlyphRange
 
@@ -61,7 +61,7 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextRange&gt; | Contains two elements: the first is the character range, and the secondis the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns**undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md#layoutmanager) is not bound to a component. |
+| Array&lt;TextRange&gt; | Contains two elements: the first is the character range, and the secondis the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns**undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
 ## getGlyphPositionAtCoordinate
 
@@ -118,7 +118,7 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextRange&gt; | Contains two elements: the first is the glyph range, and the second isthe actual character range. When the returned range is invalid, the element in the range is **-1**. Returns**undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md#layoutmanager) is not bound to a component. |
+| Array&lt;TextRange&gt; | Contains two elements: the first is the glyph range, and the second isthe actual character range. When the returned range is invalid, the element in the range is **-1**. Returns**undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
 ## getLineCount
 

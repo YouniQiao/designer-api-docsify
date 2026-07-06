@@ -11,7 +11,7 @@ Defines the network packet filtering rule to add.
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@ohos.enterprise.networkManager';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## action

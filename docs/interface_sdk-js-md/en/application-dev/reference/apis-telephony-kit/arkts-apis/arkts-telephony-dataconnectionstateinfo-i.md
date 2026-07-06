@@ -9,7 +9,7 @@ Indicates cellular data connect state and technology type.
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@ohos.telephony.observer';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## network

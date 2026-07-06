@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@ohos.notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## 汇总
@@ -32,7 +32,7 @@ import { notificationManager } from '@ohos.notificationManager';
 | [getActiveNotifications](arkts-notification-getactivenotifications-f.md#getactivenotifications-1) | 获取当前应用未删除的通知列表。使用callback异步回调。 |
 | [getActiveNotifications](arkts-notification-getactivenotifications-f.md#getactivenotifications-2) | 获取当前应用未删除的通知列表。使用Promise异步回调。 |
 | [getBadgeNumber](arkts-notification-getbadgenumber-f.md#getbadgenumber-1) | 获取当前应用角标数量。使用Promise异步回调。 |
-| [getNotificationParameters](arkts-notification-getnotificationparameters-f.md#getnotificationparameters-1) | 获取通知[NotificationRequest](arkts-notification-notificationrequest-i.md#notificationrequest)中wantAgent字段的部分信息。使用Promise异 步回调。 |
+| [getNotificationParameters](arkts-notification-getnotificationparameters-f.md#getnotificationparameters-1) | 获取通知[NotificationRequest](arkts-notification-notificationrequest-i.md)中wantAgent字段的部分信息。使用Promise异 步回调。 |
 | [getNotificationSetting](arkts-notification-getnotificationsetting-f.md#getnotificationsetting-1) | 获取应用程序的通知设置。使用Promise异步回调。 |
 | [getSlot](arkts-notification-getslot-f.md#getslot-1) | 获取指定类型的通知渠道。使用callback异步回调。 |
 | [getSlot](arkts-notification-getslot-f.md#getslot-2) | 获取指定类型的通知渠道。使用Promise异步回调。 |
@@ -42,8 +42,8 @@ import { notificationManager } from '@ohos.notificationManager';
 | [isDistributedEnabled](arkts-notification-isdistributedenabled-f.md#isdistributedenabled-2) | 查询设备是否支持跨设备协同通知。使用Promise异步回调。 |
 | [isGeofenceEnabled](arkts-notification-isgeofenceenabled-f.md#isgeofenceenabled-1) | 检查地理围栏功能是否已启用。使用Promise异步回调。 |
 | [isNotificationEnabledSync](arkts-notification-isnotificationenabledsync-f.md#isnotificationenabledsync-1) | 同步查询当前应用通知使能状态。 |
-| [isSupportTemplate](arkts-notification-issupporttemplate-f.md#issupporttemplate-1) | 在使用[通知模板](arkts-notification-notificationtemplate-i.md#notificationtemplate)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。 |
-| [isSupportTemplate](arkts-notification-issupporttemplate-f.md#issupporttemplate-2) | 在使用[通知模板](arkts-notification-notificationtemplate-i.md#notificationtemplate)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。 |
+| [isSupportTemplate](arkts-notification-issupporttemplate-f.md#issupporttemplate-1) | 在使用[通知模板](arkts-notification-notificationtemplate-i.md)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。 |
+| [isSupportTemplate](arkts-notification-issupporttemplate-f.md#issupporttemplate-2) | 在使用[通知模板](arkts-notification-notificationtemplate-i.md)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。 |
 | [openNotificationSettings](arkts-notification-opennotificationsettings-f.md#opennotificationsettings-1) | 拉起应用的通知设置界面，该页面以半模态形式呈现，可用于设置通知开关、通知提醒方式等。使用Promise异步回调。 |
 | [openNotificationSettingsWithResult](arkts-notification-opennotificationsettingswithresult-f.md#opennotificationsettingswithresult-1) | 拉起应用的通知设置界面，该页面以半模态形式呈现，可用于设置通知开关、通知提醒方式等。使用Promise异步回调, 当半模态窗口关闭时返回用户设置的状态。 |
 | [publish](arkts-notification-publish-f.md#publish-1) | 发布通知。使用callback异步回调。 如果新发布通知与已发布通知的ID和标签都相同，则新通知将取代原有通知。 |
@@ -134,8 +134,8 @@ import { notificationManager } from '@ohos.notificationManager';
 | [isSupportDoNotDisturbMode](arkts-notification-issupportdonotdisturbmode-f-sys.md#issupportdonotdisturbmode-2) | 查询是否支持免打扰功能。使用Promise异步回调。 |
 | [off](arkts-notification-off-f-sys.md#off-1) | 取消通知监听回调。 |
 | [offBadgeNumberQuery](arkts-notification-offbadgenumberquery-f-sys.md#offbadgenumberquery-1) | 取消应用角标数量查询回调。 |
-| [on](arkts-notification-on-f-sys.md#on-1) | 注册通知监听回调。通知服务将通知信息回调给校验程序，校验程序返回校验结果决定该通知是否发布，如营销类通知发布频率控制等。 系统中每个[SlotType](arkts-notification-slottype-e.md#slottype)只允许存在一个注册者。 |
-| [on](arkts-notification-on-f-sys.md#on-2) | 注册通知监听回调。通知服务将通知信息回调给校验程序，校验程序返回校验结果决定该通知是否发布，如营销类通知发布频率控制等。使用Promise异步回调。 系统中每个[SlotType](arkts-notification-slottype-e.md#slottype)只允许存在一个注册者。 |
+| [on](arkts-notification-on-f-sys.md#on-1) | 注册通知监听回调。通知服务将通知信息回调给校验程序，校验程序返回校验结果决定该通知是否发布，如营销类通知发布频率控制等。 系统中每个[SlotType](arkts-notification-slottype-e.md)只允许存在一个注册者。 |
+| [on](arkts-notification-on-f-sys.md#on-2) | 注册通知监听回调。通知服务将通知信息回调给校验程序，校验程序返回校验结果决定该通知是否发布，如营销类通知发布频率控制等。使用Promise异步回调。 系统中每个[SlotType](arkts-notification-slottype-e.md)只允许存在一个注册者。 |
 | [onBadgeNumberQuery](arkts-notification-onbadgenumberquery-f-sys.md#onbadgenumberquery-1) | 注册应用角标数量查询回调。 |
 | [publish](arkts-notification-publish-f-sys.md#publish-3) | 发布通知给指定的用户。使用callback异步回调。 |
 | [publish](arkts-notification-publish-f-sys.md#publish-4) | 发布通知给指定的用户。使用Promise异步回调。 |

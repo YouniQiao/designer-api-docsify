@@ -46,8 +46,8 @@
 | --- | --- |
 | [DeviceInfo](arkts-driverdevelopment-deviceinfo-i-sys.md) | 设备详细信息。 |
 | [DriverInfo](arkts-driverdevelopment-driverinfo-i-sys.md) | 驱动详细信息。 |
-| [USBDeviceInfo](arkts-driverdevelopment-usbdeviceinfo-i-sys.md) | USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-deviceinfo-i-sys.md#deviceinfo)。 |
-| [USBDriverInfo](arkts-driverdevelopment-usbdriverinfo-i-sys.md) | USB设备驱动详细信息，继承自[DriverInfo](arkts-driverdevelopment-driverinfo-i-sys.md#driverinfo)。 |
+| [USBDeviceInfo](arkts-driverdevelopment-usbdeviceinfo-i-sys.md) | USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-deviceinfo-i-sys.md)。 |
+| [USBDriverInfo](arkts-driverdevelopment-usbdriverinfo-i-sys.md) | USB设备驱动详细信息，继承自[DriverInfo](arkts-driverdevelopment-driverinfo-i-sys.md)。 |
 | [USBInterfaceDesc](arkts-driverdevelopment-usbinterfacedesc-i-sys.md) | USB设备接口描述符。 |
 <!--DelEnd-->
 

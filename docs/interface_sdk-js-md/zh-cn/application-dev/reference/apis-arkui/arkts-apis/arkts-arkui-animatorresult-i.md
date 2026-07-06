@@ -171,7 +171,7 @@ struct AnimatorTest {
 reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
-重置当前animator动画参数。与[reset](arkts-arkui-animatorresult-i.md#reset-1)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md#simpleanimatoroptions)类型入参的支持。
+重置当前animator动画参数。与[reset](arkts-arkui-animatorresult-i.md#reset-1)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md)类型入参的支持。
 
 **起始版本：** 18
 
@@ -375,7 +375,7 @@ onFinish: () => void
 onFrame: (progress: number) => void
 ```
 
-接收到帧时回调。 progress表示动画的当前值。取值范围为[AnimatorOptions](arkts-arkui-animatoroptions-i.md#animatoroptions)定义的[begin, end]，默认取值范围为[0, 1]。
+接收到帧时回调。 progress表示动画的当前值。取值范围为[AnimatorOptions](arkts-arkui-animatoroptions-i.md)定义的[begin, end]，默认取值范围为[0, 1]。
 
 **类型：** (progress: number) => void
 

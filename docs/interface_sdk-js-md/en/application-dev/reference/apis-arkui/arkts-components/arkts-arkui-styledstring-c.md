@@ -55,7 +55,7 @@ Checks whether this styled string the same as another styled string.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether two styled strings are equal.<br>**true** if the two styled strings are equal; **false** otherwise.<br>**NOTE**<br>The two styled strings are the same if they have the same text and style.<br>[GestureStyle](arkts-arkui-gesturestyle-c.md#gesturestyle) in styled strings is not compared. This means that, if two styled strings arethe same except for the event configured, they are treated as the same.<br>In comparing [CustomSpan](arkts-arkui-customspan-c.md#customspan) or [LeadingMarginSpan](arkts-arkui-leadingmarginspan-c.md#leadingmarginspan) objects, addressesare compared. The objects that have the same address are the same. |
+| boolean | Whether two styled strings are equal.<br>**true** if the two styled strings are equal; **false** otherwise.<br>**NOTE**<br>The two styled strings are the same if they have the same text and style.<br>[GestureStyle](arkts-arkui-gesturestyle-c.md) in styled strings is not compared. This means that, if two styled strings arethe same except for the event configured, they are treated as the same.<br>In comparing [CustomSpan](arkts-arkui-customspan-c.md) or [LeadingMarginSpan](arkts-arkui-leadingmarginspan-c.md) objects, addressesare compared. The objects that have the same address are the same. |
 
 ## fromHtml
 
@@ -112,7 +112,7 @@ Obtains the text of this styled string.
 
 | Type | Description |
 | --- | --- |
-| string | Text of the styled string.<br>**NOTE**<br>If the styled string contains an image or [CustomSpan](arkts-arkui-customspan-c.md#customspan) elements, they are represented as spacecharacters in the returned result. |
+| string | Text of the styled string.<br>**NOTE**<br>If the styled string contains an image or [CustomSpan](arkts-arkui-customspan-c.md) elements, they are represented as spacecharacters in the returned result. |
 
 ## getStyles
 
@@ -191,7 +191,7 @@ Obtains a substring of this styled string. The specified range must not exceed t
 static toHtml(styledString: StyledString): string
 ```
 
-Converts a styled string into an HTML-formatted string. The supported styled string keys for conversion, as detailed in [StyledStringKey](arkts-arkui-styledstringkey-e.md#styledstringkey), include: **StyledStringKey.FONT**, **StyledStringKey.DECORATION**, **StyledStringKey.LETTER_SPACING**, **StyledStringKey.TEXT_SHADOW**, **StyledStringKey.LINE_HEIGHT**, and **StyledStringKey.IMAGE**. For details about how to use this API, see [Example 12: Implementing Conversion Using fromHtml and toHtml](../../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml).
+Converts a styled string into an HTML-formatted string. The supported styled string keys for conversion, as detailed in [StyledStringKey](arkts-arkui-styledstringkey-e.md), include: **StyledStringKey.FONT**, **StyledStringKey.DECORATION**, **StyledStringKey.LETTER_SPACING**, **StyledStringKey.TEXT_SHADOW**, **StyledStringKey.LINE_HEIGHT**, and **StyledStringKey.IMAGE**. For details about how to use this API, see [Example 12: Implementing Conversion Using fromHtml and toHtml](../../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml).
 
 **Since:** 14
 

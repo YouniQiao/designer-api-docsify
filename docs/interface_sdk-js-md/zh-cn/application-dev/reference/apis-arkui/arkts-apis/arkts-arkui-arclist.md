@@ -6,8 +6,8 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arclistattribute-c.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性： |
-| [ArcListItemAttribute](arkts-arkui-arclistitemattribute-c.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性： |
+| [ArcListAttribute](arkts-arkui-arclistattribute-c.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性： |
+| [ArcListItemAttribute](arkts-arkui-arclistitemattribute-c.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性： |
 
 ### 接口
 

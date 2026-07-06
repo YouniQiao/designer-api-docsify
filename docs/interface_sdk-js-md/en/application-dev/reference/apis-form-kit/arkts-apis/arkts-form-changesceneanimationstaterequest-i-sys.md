@@ -11,7 +11,7 @@ ChangeSceneAnimationStateRequest
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@ohos.app.form.formInfo';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## formId

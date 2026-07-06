@@ -1,8 +1,8 @@
 # ListScroller
 
-List组件的滚动控制器，通过它控制List组件的滚动，仅支持一对一绑定到List组件。 > **说明：** > > ListScroller继承自[Scroller](arkts-arkui-scroller-c.md#scroller)，具有[Scroller](arkts-arkui-scroller-c.md#scroller)的全部方法。
+List组件的滚动控制器，通过它控制List组件的滚动，仅支持一对一绑定到List组件。 > **说明：** > > ListScroller继承自[Scroller](arkts-arkui-scroller-c.md)，具有[Scroller](arkts-arkui-scroller-c.md)的全部方法。
 
-**继承/实现关系：** ListScroller extends [Scroller](arkts-arkui-scroller-c.md#scroller)
+**继承/实现关系：** ListScroller extends [Scroller](arkts-arkui-scroller-c.md)
 
 **起始版本：** 11
 
@@ -14,7 +14,7 @@ List组件的滚动控制器，通过它控制List组件的滚动，仅支持一
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-将[EXPANDED](arkts-arkui-swipeactionstate-e.md#swipeactionstate)状态的[ListItem](arkts-arkui-listitem.md)收起，并设置回调事件。
+将[EXPANDED](arkts-arkui-swipeactionstate-e.md)状态的[ListItem](arkts-arkui-listitem.md)收起，并设置回调事件。
 
 **起始版本：** 11
 
@@ -28,7 +28,7 @@ closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | CloseSwipeActionOptions | 否 | 收起[EXPANDED](arkts-arkui-swipeactionstate-e.md#swipeactionstate)状态的[ListItem](arkts-arkui-listitem.md)的回调事件集合。 |
+| options | CloseSwipeActionOptions | 否 | 收起[EXPANDED](arkts-arkui-swipeactionstate-e.md)状态的[ListItem](arkts-arkui-listitem.md)的回调事件集合。 |
 
 **错误码：**
 

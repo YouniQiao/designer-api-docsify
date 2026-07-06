@@ -2,7 +2,7 @@
 
 定义相机.
 
-**继承/实现关系：** Camera extends [Node](arkts-arkgraphics3d-node-i.md#node)
+**继承/实现关系：** Camera extends [Node](arkts-arkgraphics3d-node-i.md)
 
 **起始版本：** 12
 

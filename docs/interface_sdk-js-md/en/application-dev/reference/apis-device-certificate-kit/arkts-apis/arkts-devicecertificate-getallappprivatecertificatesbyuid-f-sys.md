@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## getAllAppPrivateCertificatesByUid
@@ -34,7 +34,7 @@ Obtains all private credentials of a specified application. This API is called o
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **credentialDetailList** inthe [CMResult](arkts-devicecertificate-cmresult-i.md#cmresult) object.<br>Note: If the number of private credentials is 0, the returned **CMResult** is **undefined**. |
+| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **credentialDetailList** inthe [CMResult](arkts-devicecertificate-cmresult-i.md) object.<br>Note: If the number of private credentials is 0, the returned **CMResult** is **undefined**. |
 
 **Error codes:**
 

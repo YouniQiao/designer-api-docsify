@@ -9,7 +9,7 @@ Parameter for query entity.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@ohos.app.ability.insightIntent';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## parameters

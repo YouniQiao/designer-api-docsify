@@ -9,7 +9,7 @@ This interface implements audio session management. Before calling any API in Au
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## activateAudioSession
@@ -102,7 +102,7 @@ Deactivates this audio session. This API uses a promise to return the result.
 enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
 ```
 
-Enables mute suggestion notifications for mixed playback. Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to provide a better user experience. If this feature is enabled, mute and unmute suggestions will be sent through the [AudioSessionStateChangedEvent](arkts-audio-audiosessionstatechangedevent-i.md#audiosessionstatechangedevent) callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed. This feature can be used only by audio sessions for which [AudioSessionScene](arkts-audio-audiosessionscene-e.md#audiosessionscene) has been set and the **CONCURRENCY_MIX_WITH_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session. For details, see [Enabling Mute Suggestion Notifications for Mixed Playback](../../../../media/audio/audio-session-management.md#enabling-mute-suggestion-notifications-for-mixed-playback) .
+Enables mute suggestion notifications for mixed playback. Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to provide a better user experience. If this feature is enabled, mute and unmute suggestions will be sent through the [AudioSessionStateChangedEvent](arkts-audio-audiosessionstatechangedevent-i.md) callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed. This feature can be used only by audio sessions for which [AudioSessionScene](arkts-audio-audiosessionscene-e.md) has been set and the **CONCURRENCY_MIX_WITH_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session. For details, see [Enabling Mute Suggestion Notifications for Mixed Playback](../../../../media/audio/audio-session-management.md#enabling-mute-suggestion-notifications-for-mixed-playback) .
 
 **Since:** 23
 
@@ -538,7 +538,7 @@ Subscribes to the current input device change event, which is triggered when the
 selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-Selects a media input device. This API uses a promise to return the result. > **NOTE** > > - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where > [SourceType](arkts-audio-sourcetype-e.md#sourcetype) is **SOURCE_TYPE_VOICE_COMMUNICATION**. > > - Before calling this API, call [getAvailableDevices](arkts-audio-audiosessionmanager-i.md#getavailabledevices-1) to > query the list of available input devices and select an input device from the list. > > - If there are recording streams of other applications with higher priorities in the system, the actual input > device used will follow the input device selected by these applications. > > - Applications can listen for the > [currentInputDeviceChanged](arkts-audio-audiosessionmanager-i.md#on-5) > event to find out the actual input device being used.
+Selects a media input device. This API uses a promise to return the result. > **NOTE** > > - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where > [SourceType](arkts-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**. > > - Before calling this API, call [getAvailableDevices](arkts-audio-audiosessionmanager-i.md#getavailabledevices-1) to > query the list of available input devices and select an input device from the list. > > - If there are recording streams of other applications with higher priorities in the system, the actual input > device used will follow the input device selected by these applications. > > - Applications can listen for the > [currentInputDeviceChanged](arkts-audio-audiosessionmanager-i.md#on-5) > event to find out the actual input device being used.
 
 **Since:** 21
 
@@ -581,7 +581,7 @@ Sets audio session behavior parameters. (Multiple flags can be combined.) > **NO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise ORcombination of multiple flags.<br>For details about the supported audio session behaviors, see[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md#audiosessionbehaviorflags). |
+| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise ORcombination of multiple flags.<br>For details about the supported audio session behaviors, see[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md). |
 
 **Error codes:**
 
@@ -685,7 +685,7 @@ Set mute hint for all capturer streams in the current audio session. It dose not
 setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 ```
 
-Sets the default audio output device. This API uses a promise to return the result. > **NOTE** > > - This API applies to the following scenario: When > [AudioSessionScene](arkts-audio-audiosessionscene-e.md#audiosessionscene) is set to **VoIP**, the setting takes > effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take > effect upon AudioSession activation. Instead, the setting applies when > [StreamUsage](arkts-audio-streamusage-e.md#streamusage) for playback is voice message, VoIP voice call, > or VoIP video call. Supported devices include the earpiece, speaker, and system default device. > > - This API can be called at any time after an AudioSessionManager instance is created. The system records the > device set by the application. However, the setting takes effect only after the AudioSession is activated. When > the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected, > the system prioritizes audio output through the external device. Otherwise, the system uses the device set by > the application.
+Sets the default audio output device. This API uses a promise to return the result. > **NOTE** > > - This API applies to the following scenario: When > [AudioSessionScene](arkts-audio-audiosessionscene-e.md) is set to **VoIP**, the setting takes > effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take > effect upon AudioSession activation. Instead, the setting applies when > [StreamUsage](arkts-audio-streamusage-e.md) for playback is voice message, VoIP voice call, > or VoIP video call. Supported devices include the earpiece, speaker, and system default device. > > - This API can be called at any time after an AudioSessionManager instance is created. The system records the > device set by the application. However, the setting takes effect only after the AudioSession is activated. When > the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected, > the system prioritizes audio output through the external device. Otherwise, the system uses the device set by > the application.
 
 **Since:** 20
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@ohos.enterprise.applicationManager';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## isAppKioskAllowed
@@ -24,7 +24,7 @@ Checks whether an application is allowed to run in kiosk mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appIdentifier | string | Yes | [Unique identifiers](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md#signatureinfo) of anapplication. You can call the[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfo-f.md#getbundleinfo-3)API to obtain the **bundleInfo.signatureInfo.appIdentifier**. |
+| appIdentifier | string | Yes | [Unique identifiers](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md) of anapplication. You can call the[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfo-f.md#getbundleinfo-3)API to obtain the **bundleInfo.signatureInfo.appIdentifier**. |
 
 **Return value:**
 

@@ -317,7 +317,7 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-当意图执行依赖[UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability)启动时，会在UIExtensionAbility组 件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。 - 意图执行时UIExtensionAbility生命周期触发顺序： [onCreate](arkts-ability-uiextensionability-c.md#oncreate-1)、 [onSessionCreate](arkts-ability-uiextensionability-c.md#onsessioncreate-1)、 onExecuteInUIExtensionAbility、 [onForeground](arkts-ability-uiextensionability-c.md#onforeground-1)。
+当意图执行依赖[UIExtensionAbility](arkts-ability-uiextensionability-c.md)启动时，会在UIExtensionAbility组 件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。 - 意图执行时UIExtensionAbility生命周期触发顺序： [onCreate](arkts-ability-uiextensionability-c.md#oncreate-1)、 [onSessionCreate](arkts-ability-uiextensionability-c.md#onsessioncreate-1)、 onExecuteInUIExtensionAbility、 [onForeground](arkts-ability-uiextensionability-c.md#onforeground-1)。
 
 **起始版本：** 11
 

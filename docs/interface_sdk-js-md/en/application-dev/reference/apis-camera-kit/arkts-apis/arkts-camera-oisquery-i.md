@@ -9,7 +9,7 @@ OIS (Optical Image Stabilization) query interface.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getCurrentCustomOISBias

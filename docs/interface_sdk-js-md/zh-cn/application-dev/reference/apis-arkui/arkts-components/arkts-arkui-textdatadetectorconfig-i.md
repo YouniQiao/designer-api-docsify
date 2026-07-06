@@ -1,6 +1,6 @@
 # TextDataDetectorConfig
 
-该配置只支持[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md#text)组件和[RichEditor](arkts-arkui-richeditor.md)组件。
+该配置只支持[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)组件和[RichEditor](arkts-arkui-richeditor.md)组件。
 
 **起始版本：** 11
 

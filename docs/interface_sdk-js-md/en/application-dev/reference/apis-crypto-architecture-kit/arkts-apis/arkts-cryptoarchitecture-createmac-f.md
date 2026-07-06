@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## createMac
@@ -32,7 +32,7 @@ Creates a **Mac** instance for MAC operations. For details about the supported s
 
 | Type | Description |
 | --- | --- |
-| Mac | Returns the [Mac](arkts-cryptoarchitecture-mac-i.md#mac) instance created. |
+| Mac | Returns the [Mac](arkts-cryptoarchitecture-mac-i.md) instance created. |
 
 **Error codes:**
 
@@ -82,7 +82,7 @@ Creates a **Mac** instance for message authentication code (MAC) operations. For
 
 | Type | Description |
 | --- | --- |
-| Mac | [Mac](arkts-cryptoarchitecture-mac-i.md#mac) instance created. |
+| Mac | [Mac](arkts-cryptoarchitecture-mac-i.md) instance created. |
 
 **Error codes:**
 

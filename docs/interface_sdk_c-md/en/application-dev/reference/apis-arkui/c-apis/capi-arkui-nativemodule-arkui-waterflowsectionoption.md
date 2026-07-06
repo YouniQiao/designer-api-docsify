@@ -12,5 +12,5 @@ Defines the water flow section configuration.
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**Header file**: [node_water_flow.h](capi-node-water-flow-h.md)
+**Header file**: [water_flow.h](capi-water-flow-h.md)
 

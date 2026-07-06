@@ -26,8 +26,8 @@ function getPortList(): Array<USBPort>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required tocall the API.<br>**适用版本：** 18 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required tocall the API.<br>**适用版本：** 18+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Normal application do not have permission to use system api. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 | [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) |  |
 

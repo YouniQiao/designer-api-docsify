@@ -1,8 +1,8 @@
 # ScrollableTargetInfo
 
-手势识别器对应的滚动类容器组件的信息，继承于[EventTargetInfo](arkts-arkui-eventtargetinfo-c.md#eventtargetinfo)。
+手势识别器对应的滚动类容器组件的信息，继承于[EventTargetInfo](arkts-arkui-eventtargetinfo-c.md)。
 
-**继承/实现关系：** ScrollableTargetInfo extends [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md#eventtargetinfo)
+**继承/实现关系：** ScrollableTargetInfo extends [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md)
 
 **起始版本：** 12
 

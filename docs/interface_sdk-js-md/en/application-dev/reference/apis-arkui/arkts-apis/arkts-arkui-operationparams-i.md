@@ -9,7 +9,7 @@ Function settings in the selection area (right).
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@ohos.atomicservice.AtomicServiceSearch';
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
 ```
 
 ## auxiliaryItem

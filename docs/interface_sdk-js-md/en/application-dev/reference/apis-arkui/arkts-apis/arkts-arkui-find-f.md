@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## find
@@ -26,7 +26,7 @@ Finds a window based on the ID. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in[Configuration](arkts-arkui-configuration-i.md#configuration). |
+| id | string | Yes | Window name, that is, the value of name in[Configuration](arkts-arkui-configuration-i.md). |
 | callback | AsyncCallback&lt;Window&gt; | Yes | Callback used to return the window found. |
 
 **Example**
@@ -68,7 +68,7 @@ Finds a window based on the ID. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in[Configuration](arkts-arkui-configuration-i.md#configuration). |
+| id | string | Yes | Window name, that is, the value of name in[Configuration](arkts-arkui-configuration-i.md). |
 
 **Return value:**
 

@@ -9,7 +9,7 @@ This module provides system focus modes and Do Not Disturb data access abilities
 ## Modules to Import
 
 ```TypeScript
-import { intelligentScene } from '@ohos.intelligentScene';
+import { intelligentScene } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

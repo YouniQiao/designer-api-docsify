@@ -557,7 +557,7 @@ enableScrollDirectionalLock(value: boolean, type: ScrollDirectionalLockType)
 enableSelectedDataDetector(enable: boolean)
 ```
 
-设置是否启用文本选择的AI菜单功能，启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。 AI菜单功能启用时，在网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](../../apis-arkui/arkts-components/arkts-arkui-textmenuitemid-c.md#textmenuitemid)中的url（打开链接）、email（新建邮件）、 phoneNumber（呼叫）、address（导航前往）、dateTime（新建日程）。 AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](../../apis-arkui/arkts-components/arkts-arkui-textmenuitemid-c.md#textmenuitemid)中的askAI菜单项不同时出现。 示例使用场景详见[使用Web组件的智能分词能力](../../../../web/web-data-detector.md)。 > **说明：** > > 当enableSelectedDataDetector未配置或设置为true时，将遵循 > [dataDetectorConfig](../../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#datadetectorconfig20) > 中types的配置；若 > [dataDetectorConfig](../../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#datadetectorconfig20) > 也未配置，则默认识别所有类型。 > > 当enableSelectedDataDetector设置为false时，不激活实体文本选择AI菜单项。
+设置是否启用文本选择的AI菜单功能，启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。 AI菜单功能启用时，在网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](../../apis-arkui/arkts-components/arkts-arkui-textmenuitemid-c.md)中的url（打开链接）、email（新建邮件）、 phoneNumber（呼叫）、address（导航前往）、dateTime（新建日程）。 AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](../../apis-arkui/arkts-components/arkts-arkui-textmenuitemid-c.md)中的askAI菜单项不同时出现。 示例使用场景详见[使用Web组件的智能分词能力](../../../../web/web-data-detector.md)。 > **说明：** > > 当enableSelectedDataDetector未配置或设置为true时，将遵循 > [dataDetectorConfig](../../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#datadetectorconfig20) > 中types的配置；若 > [dataDetectorConfig](../../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#datadetectorconfig20) > 也未配置，则默认识别所有类型。 > > 当enableSelectedDataDetector设置为false时，不激活实体文本选择AI菜单项。
 
 **起始版本：** 22
 
@@ -909,7 +909,7 @@ layoutMode(mode: WebLayoutMode)
 mediaOptions(options: WebMediaOptions)
 ```
 
-设置Web媒体播放的策略，其中包括：Web中的音频在重新获焦后能够自动续播的有效期、应用内多个Web实例的音频是否独占。当该属性未显式设置时，默认Web中的音频重新获焦后无法自动续播、应用内多个Web实例的音频是独占的。 > **说明：** > > - 同一Web实例中的多个音频均视为同一音频。 > > - 该媒体播放策略将同时管控有声视频。 > > - 建议为所有Web组件设置相同的[audioExclusive](arkts-arkweb-webmediaoptions-i.md#webmediaoptions)值。 > > - 音视频互相打断在应用内和应用间生效，续播只在应用间生效。
+设置Web媒体播放的策略，其中包括：Web中的音频在重新获焦后能够自动续播的有效期、应用内多个Web实例的音频是否独占。当该属性未显式设置时，默认Web中的音频重新获焦后无法自动续播、应用内多个Web实例的音频是独占的。 > **说明：** > > - 同一Web实例中的多个音频均视为同一音频。 > > - 该媒体播放策略将同时管控有声视频。 > > - 建议为所有Web组件设置相同的[audioExclusive](arkts-arkweb-webmediaoptions-i.md)值。 > > - 音视频互相打断在应用内和应用间生效，续播只在应用间生效。
 
 **起始版本：** 10
 
@@ -1891,7 +1891,7 @@ onNativeEmbedObjectParamChange(callback: OnNativeEmbedObjectParamChangeCallback)
 onNativeEmbedVisibilityChange(callback: OnNativeEmbedVisibilityChangeCallback)
 ```
 
-当网页中同层标签（例如<embed\>标签或<object\>标签）在视口内的可见性发生变化时，将触发该回调。同层标签默认不可见，若在页面首次加载时已可见，则会上报；若不可见，则不会上报。同层标签全部不可见才视为不可见，部分可见或 全部可见则视为可见。若要获取因同层标签CSS属性（包括visibility、display以及尺寸变化）导致的可见状态变化，需配置 [nativeEmbedOptions](web:WebAttribute.nativeEmbedOptions)，并将[EmbedOptions](arkts-arkweb-embedoptions-i.md#embedoptions)中的 supportCssDisplayChange参数设为true。
+当网页中同层标签（例如<embed\>标签或<object\>标签）在视口内的可见性发生变化时，将触发该回调。同层标签默认不可见，若在页面首次加载时已可见，则会上报；若不可见，则不会上报。同层标签全部不可见才视为不可见，部分可见或 全部可见则视为可见。若要获取因同层标签CSS属性（包括visibility、display以及尺寸变化）导致的可见状态变化，需配置 [nativeEmbedOptions](web:WebAttribute.nativeEmbedOptions)，并将[EmbedOptions](arkts-arkweb-embedoptions-i.md)中的 supportCssDisplayChange参数设为true。
 
 **起始版本：** 12
 

@@ -9,7 +9,7 @@ Provides usage information of the Web SQL Database.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## origin

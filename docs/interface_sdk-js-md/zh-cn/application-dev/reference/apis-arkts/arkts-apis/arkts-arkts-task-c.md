@@ -31,8 +31,8 @@ addDependency(...tasks: Task[]): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200026](../errorcode-utils.md#10200026-当前任务存在循环依赖) | There is a circular dependency. |
-| [10200052](../errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12 |
-| [10200056](../errorcode-utils.md#10200056-异步队列任务不能具有依赖项) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18 |
+| [10200052](../errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
+| [10200056](../errorcode-utils.md#10200056-异步队列任务不能具有依赖项) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
 
 **示例：**
 
@@ -554,8 +554,8 @@ removeDependency(...tasks: Task[]): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200027](../errorcode-utils.md#10200027-依赖关系不存在) | The dependency does not exist. |
-| [10200052](../errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12 |
-| [10200056](../errorcode-utils.md#10200056-异步队列任务不能具有依赖项) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18 |
+| [10200052](../errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
+| [10200056](../errorcode-utils.md#10200056-异步队列任务不能具有依赖项) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
 
 **示例：**
 
@@ -864,7 +864,7 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200029](../errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**适用版本：** 11 |
+| [10200029](../errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**适用版本：** 11+ |
 
 **示例：**
 

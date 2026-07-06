@@ -9,7 +9,7 @@ Security feature option configuration.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## disableJITCompilation

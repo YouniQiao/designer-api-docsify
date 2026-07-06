@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## createMd
@@ -36,7 +36,7 @@ Creates an **Md** instance for message digest operations. For details about the 
 
 | Type | Description |
 | --- | --- |
-| Md | Returns the [Md](arkts-cryptoarchitecture-md-i.md#md) instance created. |
+| Md | Returns the [Md](arkts-cryptoarchitecture-md-i.md) instance created. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ConnectionInfo } from '@ohos.web.WebNativeMessagingExtensionAbility';
+import { ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## Summary

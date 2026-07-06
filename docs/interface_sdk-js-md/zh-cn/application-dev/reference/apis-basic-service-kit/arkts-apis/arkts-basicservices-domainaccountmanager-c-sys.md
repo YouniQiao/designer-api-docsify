@@ -166,7 +166,7 @@ static authWithPopup(callback: IUserAuthCallback): void
 **起始版本：** 10
 
 **需要权限：** 
-- API版本10 - 10：ohos.permission.ACCESS_USER_AUTH_INTERNAL
+- API版本10：ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -182,7 +182,7 @@ static authWithPopup(callback: IUserAuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
@@ -195,7 +195,7 @@ static authWithPopup(callback: IUserAuthCallback): void
 | [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
 | [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
 | [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
-| 12300211 | Server unreachable.<br>**适用版本：** 11 |
+| 12300211 | Server unreachable.<br>**适用版本：** 11+ |
 
 **示例：**
 
@@ -227,7 +227,7 @@ static authWithPopup(localId: number, callback: IUserAuthCallback): void
 **起始版本：** 10
 
 **需要权限：** 
-- API版本10 - 10：ohos.permission.ACCESS_USER_AUTH_INTERNAL
+- API版本10：ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -244,7 +244,7 @@ static authWithPopup(localId: number, callback: IUserAuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10+ |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
@@ -258,7 +258,7 @@ static authWithPopup(localId: number, callback: IUserAuthCallback): void
 | [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
 | [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
 | [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
-| 12300211 | Server unreachable.<br>**适用版本：** 11 |
+| 12300211 | Server unreachable.<br>**适用版本：** 11+ |
 
 **示例：**
 
@@ -753,7 +753,7 @@ static registerPlugin(plugin: DomainPlugin): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 | 12300201 | The domain plugin has been registered. |
 
 **示例：**
@@ -811,7 +811,7 @@ static unregisterPlugin(): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 **示例：**
 

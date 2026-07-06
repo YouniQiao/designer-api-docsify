@@ -9,7 +9,7 @@ Defines the blankless loading parameter. Device behavior differences: Only the m
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## callback

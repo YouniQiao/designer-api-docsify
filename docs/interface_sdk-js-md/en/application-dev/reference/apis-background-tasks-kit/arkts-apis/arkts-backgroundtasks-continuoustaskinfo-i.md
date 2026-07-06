@@ -9,7 +9,7 @@ Describes the continuous task information.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@ohos.resourceschedule.backgroundTaskManager';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityId
@@ -60,7 +60,7 @@ Index of an application clone.
 backgroundModes: string[]
 ```
 
-[Type of a continuous task](arkts-backgroundtasks-backgroundmode-e.md#backgroundmode).
+[Type of a continuous task](arkts-backgroundtasks-backgroundmode-e.md).
 
 **Type:** string[]
 
@@ -74,7 +74,7 @@ backgroundModes: string[]
 backgroundSubModes: string[]
 ```
 
-[Subtype of a continuous task](arkts-backgroundtasks-backgroundsubmode-e.md#backgroundsubmode).
+[Subtype of a continuous task](arkts-backgroundtasks-backgroundsubmode-e.md).
 
 **Type:** string[]
 

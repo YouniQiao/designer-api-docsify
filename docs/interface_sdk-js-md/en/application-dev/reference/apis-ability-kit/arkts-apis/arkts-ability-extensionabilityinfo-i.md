@@ -1,6 +1,6 @@
 # ExtensionAbilityInfo
 
-The module defines the ExtensionAbility information. An application can obtain its own ExtensionAbility information through [bundleManager.getBundleInfoForSelf](arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1) , with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** passed in to [bundleFlags](arkts-ability-bundleflag-e.md#bundleflag).
+The module defines the ExtensionAbility information. An application can obtain its own ExtensionAbility information through [bundleManager.getBundleInfoForSelf](arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1) , with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** passed in to [bundleFlags](arkts-ability-bundleflag-e.md).
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ Index of an application clone. It takes effect only for cloned applications.
 readonly applicationInfo: ApplicationInfo
 ```
 
-Application configuration information <!--Del-->. The information can be obtained by passing in **GET_EXTENSION_ABILITY_INFO_WITH_APPLICATION** to the **extensionAbilityFlags** parameter of [queryExtensionAbilityInfo](arkts-ability-queryextensionabilityinfo-f-sys.md#queryextensionabilityinfo-2) <!--DelEnd-->. This field is not returned when the [getBundleInfoForSelf](arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1) or [getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-2) is used to obtain ExtensionAbilityInfo information. You can obtain the related information by obtaining the [bundleInfo](arkts-ability-bundleinfo-i.md#bundleinfo).appInfo object.
+Application configuration information <!--Del-->. The information can be obtained by passing in **GET_EXTENSION_ABILITY_INFO_WITH_APPLICATION** to the **extensionAbilityFlags** parameter of [queryExtensionAbilityInfo](arkts-ability-queryextensionabilityinfo-f-sys.md#queryextensionabilityinfo-2) <!--DelEnd-->. This field is not returned when the [getBundleInfoForSelf](arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1) or [getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-2) is used to obtain ExtensionAbilityInfo information. You can obtain the related information by obtaining the [bundleInfo](arkts-ability-bundleinfo-i.md).appInfo object.
 
 **Type:** ApplicationInfo
 

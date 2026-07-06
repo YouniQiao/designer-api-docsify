@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## getPublicCertificate
@@ -30,7 +30,7 @@ Obtains detailed information about a public credential. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the detailed information about the user's public credentialobtained, that is, **credential** in the [CMResult](arkts-devicecertificate-cmresult-i.md#cmresult) object. |
+| Promise&lt;CMResult&gt; | Promise used to return the detailed information about the user's public credentialobtained, that is, **credential** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

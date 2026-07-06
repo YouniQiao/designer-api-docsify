@@ -1,6 +1,6 @@
 # Slider属性/事件
 
-支持除触摸热区以外的[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下事件：
+支持除触摸热区以外的[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下事件：
 
 **继承/实现关系：** SliderAttribute extends [CommonMethod<SliderAttribute>](CommonMethod<SliderAttribute>)
 
@@ -118,7 +118,7 @@ blockSize(value: SizeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | SizeOptions | 是 | 滑块大小。<br/>默认值：当参数style的值设置为[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).OutSet时为{width: 18,height: 18}，当参数style的值设置为[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).InSet时为{width: 12, height: 12}，当参数style的值设置为[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).NONE时，此字段不生效。<br/>当设置的blockSize的宽高值不相等时，取较小值的尺寸，当设置的宽高值中有一个或两个都小于等于0的时候，取默认值。 |
+| value | SizeOptions | 是 | 滑块大小。<br/>默认值：当参数style的值设置为[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet时为{width: 18,height: 18}，当参数style的值设置为[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet时为{width: 12, height: 12}，当参数style的值设置为[SliderStyle](arkts-arkui-sliderstyle-e.md).NONE时，此字段不生效。<br/>当设置的blockSize的宽高值不相等时，取较小值的尺寸，当设置的宽高值中有一个或两个都小于等于0的时候，取默认值。 |
 
 ## blockStyle
 
@@ -214,7 +214,7 @@ enableHapticFeedback(enabled: boolean)
 maxLabel(value: string)
 ```
 
-设置最大值。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用max替代。max是[SliderOptions](arkts-arkui-slideroptions-i.md#slideroptions)中的属性。
+设置最大值。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用max替代。max是[SliderOptions](arkts-arkui-slideroptions-i.md)中的属性。
 
 **起始版本：** 7
 
@@ -236,7 +236,7 @@ maxLabel(value: string)
 minLabel(value: string)
 ```
 
-设置最小值。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用min替代。min是[SliderOptions](arkts-arkui-slideroptions-i.md#slideroptions)中的属性。
+设置最小值。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用min替代。min是[SliderOptions](arkts-arkui-slideroptions-i.md)中的属性。
 
 **起始版本：** 7
 
@@ -272,7 +272,7 @@ minResponsiveDistance(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 设置滑动响应的最小距离，滑动超过此距离后滑块才开始滑动。<br/>默认值：0<br/>**说明：** <br/>单位与[SliderOptions](arkts-arkui-slideroptions-i.md#slideroptions)中的属性min以及属性max一致。<br/>当value小于0、大于max-min或非法值时，取默认值。 |
+| value | number | 是 | 设置滑动响应的最小距离，滑动超过此距离后滑块才开始滑动。<br/>默认值：0<br/>**说明：** <br/>单位与[SliderOptions](arkts-arkui-slideroptions-i.md)中的属性min以及属性max一致。<br/>当value小于0、大于max-min或非法值时，取默认值。 |
 
 ## onChange
 
@@ -640,7 +640,7 @@ trackColorMetrics(color: ColorMetricsLinearGradient)
 trackThickness(value: Length)
 ```
 
-设置滑轨的粗细。设置小于等于0的值时，取默认值。 为保证滑块和滑轨的[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle)样式，[blockSize](SliderAttribute#blockSize)跟随trackThickness同比例增减。 当style为[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).OutSet时，trackThickness ：[blockSize](SliderAttribute#blockSize) = 1 ： 4，当style为[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).InSet时，trackThickness ：[blockSize](SliderAttribute#blockSize) = 5 ： 3。 trackThickness或[blockSize](SliderAttribute#blockSize)的大小超过Slider组件的宽度或高度时，取默认值。 当[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle)设置为OutSet时，尽管trackThickness的大小没超过Slider组件的宽度或高度，但是 [blockSize](SliderAttribute#blockSize)超过了，取默认值。
+设置滑轨的粗细。设置小于等于0的值时，取默认值。 为保证滑块和滑轨的[SliderStyle](arkts-arkui-sliderstyle-e.md)样式，[blockSize](SliderAttribute#blockSize)跟随trackThickness同比例增减。 当style为[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet时，trackThickness ：[blockSize](SliderAttribute#blockSize) = 1 ： 4，当style为[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet时，trackThickness ：[blockSize](SliderAttribute#blockSize) = 5 ： 3。 trackThickness或[blockSize](SliderAttribute#blockSize)的大小超过Slider组件的宽度或高度时，取默认值。 当[SliderStyle](arkts-arkui-sliderstyle-e.md)设置为OutSet时，尽管trackThickness的大小没超过Slider组件的宽度或高度，但是 [blockSize](SliderAttribute#blockSize)超过了，取默认值。
 
 **起始版本：** 8
 
@@ -654,5 +654,5 @@ trackThickness(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Length | 是 | 滑轨的粗细。<br/>默认值：当参数style的值设置[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).OutSet 时为 4.0vp，[SliderStyle](arkts-arkui-sliderstyle-e.md#sliderstyle).InSet时为20.0vp。 |
+| value | Length | 是 | 滑轨的粗细。<br/>默认值：当参数style的值设置[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet 时为 4.0vp，[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet时为20.0vp。 |
 

@@ -9,7 +9,7 @@ Defines the descriptor of an audio and video file, which is used in DataSource p
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## callback

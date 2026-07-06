@@ -6,7 +6,7 @@ A system common event is an event that is published by a system service or syste
 
 **Deprecated since:** 9
 
-**Substitutes:** [Support](arkts-basicservices-support-e.md#support)
+**Substitutes:** [Support](arkts-basicservices-support-e.md)
 
 **System capability:** SystemCapability.Notification.CommonEvent
 

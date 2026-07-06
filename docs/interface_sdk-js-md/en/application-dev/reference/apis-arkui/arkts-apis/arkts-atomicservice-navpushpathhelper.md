@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { NavPushPathHelper } from '@ohos.atomicservice.NavPushPathHelper';
+import { NavPushPathHelper } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -11,7 +11,7 @@ Execute result of a tool execution.
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from '@ohos.app.cli.cliManager';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## errorText

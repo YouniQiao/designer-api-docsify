@@ -9,7 +9,7 @@ Provides prefetching capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@ohos.arkui.Prefetcher';
+import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI';
 ```
 
 ## setDataSource

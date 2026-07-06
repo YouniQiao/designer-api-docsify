@@ -2,7 +2,7 @@
 
 Shader material resource.
 
-**Inheritance/Implementation:** ShaderMaterial extends [Material](arkts-arkgraphics3d-material-i.md#material)
+**Inheritance/Implementation:** ShaderMaterial extends [Material](arkts-arkgraphics3d-material-i.md)
 
 **Since:** 12
 

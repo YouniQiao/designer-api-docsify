@@ -9,7 +9,7 @@ The **print** module provides APIs for basic print operations.
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@ohos.print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -107,7 +107,7 @@ import { print } from '@ohos.print';
 | [updateExtensionInfo](arkts-basicservices-updateextensioninfo-f-sys.md#updateextensioninfo-2) | Updates the printer extension information. This API uses a promise to return the result. |
 | [updatePrintJobState](arkts-basicservices-updateprintjobstate-f-sys.md#updateprintjobstate-1) | Updates the print job state. This API uses an asynchronous callback to return the result. |
 | [updatePrintJobState](arkts-basicservices-updateprintjobstate-f-sys.md#updateprintjobstate-2) | Updates the print job state. This API uses a promise to return the result. |
-| [updatePrinterInformation](arkts-basicservices-updateprinterinformation-f-sys.md#updateprinterinformation-1) | Updates the information of a printer in the system. This API uses a promise to return the result. Currently, only the **alias** and **options** fields of [PrinterInformation](arkts-basicservices-printerinformation-i.md#printerinformation) can be updated. |
+| [updatePrinterInformation](arkts-basicservices-updateprinterinformation-f-sys.md#updateprinterinformation-1) | Updates the information of a printer in the system. This API uses a promise to return the result. Currently, only the **alias** and **options** fields of [PrinterInformation](arkts-basicservices-printerinformation-i.md) can be updated. |
 | [updatePrinterState](arkts-basicservices-updateprinterstate-f-sys.md#updateprinterstate-1) | Updates the printer state. This API uses an asynchronous callback to return the result. |
 | [updatePrinterState](arkts-basicservices-updateprinterstate-f-sys.md#updateprinterstate-2) | Updates the printer state. This API uses a promise to return the result. |
 | [updatePrinters](arkts-basicservices-updateprinters-f-sys.md#updateprinters-1) | Updates information about the specified printers. This API uses an asynchronous callback to return the result. |

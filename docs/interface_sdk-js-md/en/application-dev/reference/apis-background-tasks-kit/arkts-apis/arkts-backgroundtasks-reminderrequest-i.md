@@ -9,7 +9,7 @@ Defines the request for publishing a reminder.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@ohos.reminderAgentManager';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## actionButton
@@ -218,7 +218,7 @@ Audio channel of the custom prompt tone. The default channel is the alarm channe
 ringDuration?: number
 ```
 
-Ringing duration. The value ranges from 0 to1800, in seconds. The default value is **1**. If the value is **0**, the system notification tone is used. If the value is greater than 0 and [ReminderRequest.customRingUri](arkts-backgroundtasks-reminderrequest-i.md#reminderrequest) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](arkts-backgroundtasks-reminderrequest-i.md#reminderrequest). Otherwise, the custom notification tone of the agent-powered reminder is used.
+Ringing duration. The value ranges from 0 to1800, in seconds. The default value is **1**. If the value is **0**, the system notification tone is used. If the value is greater than 0 and [ReminderRequest.customRingUri](arkts-backgroundtasks-reminderrequest-i.md) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](arkts-backgroundtasks-reminderrequest-i.md). Otherwise, the custom notification tone of the agent-powered reminder is used.
 
 **Type:** number
 

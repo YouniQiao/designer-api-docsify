@@ -9,7 +9,7 @@ This module provides basic image processing capabilities, including brightness a
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from '@ohos.effectKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary

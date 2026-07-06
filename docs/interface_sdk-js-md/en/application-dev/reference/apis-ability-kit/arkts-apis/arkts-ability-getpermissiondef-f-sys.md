@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getPermissionDef
@@ -27,7 +27,7 @@ Obtains the PermissionDef struct based on the given permission name. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permissionName | string | Yes | Name of the permission. |
-| callback | AsyncCallback&lt;PermissionDef&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return theresult. If the operation is successful, **err** is **null** and **data** is the PermissionDef object obtained.Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;PermissionDef&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null** and **data** is the PermissionDef object obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 

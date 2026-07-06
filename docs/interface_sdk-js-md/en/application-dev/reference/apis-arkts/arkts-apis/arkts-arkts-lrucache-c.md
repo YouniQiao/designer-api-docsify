@@ -9,7 +9,7 @@ Provides APIs to discard the least recently used data to make rooms for new elem
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

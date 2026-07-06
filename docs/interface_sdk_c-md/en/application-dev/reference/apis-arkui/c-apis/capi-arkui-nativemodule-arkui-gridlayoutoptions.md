@@ -12,5 +12,5 @@ Defines the **Grid** layout options.
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**Header file**: [node_grid.h](capi-node-grid-h.md)
+**Header file**: [grid.h](capi-grid-h.md)
 

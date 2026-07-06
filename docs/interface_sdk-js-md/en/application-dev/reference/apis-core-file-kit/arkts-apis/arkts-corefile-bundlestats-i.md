@@ -9,7 +9,7 @@ Get the bundle statistics.
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@ohos.file.storageStatistics';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## appSize

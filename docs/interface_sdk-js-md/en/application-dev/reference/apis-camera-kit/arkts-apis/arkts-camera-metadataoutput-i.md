@@ -1,8 +1,8 @@
 # MetadataOutput
 
-Implements metadata streams. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput).
+Implements metadata streams. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
 
-**Inheritance/Implementation:** MetadataOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput)
+**Inheritance/Implementation:** MetadataOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Implements metadata streams. It inherits from [CameraOutput](arkts-camera-camera
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## isLockMetadataObjectTrackingSupported
@@ -147,7 +147,7 @@ Subscribes to metadata error events. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when ametadataOutput instance is created. This event is triggered and the corresponding error message is returnedwhen an error occurs during the use of a metadata-related API such as[start](arkts-camera-metadataoutput-i.md#start-2) or[CameraOutput.release](arkts-camera-cameraoutput-i.md#release-2). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 ## start
 
@@ -167,7 +167,7 @@ Starts to output metadata. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the metadata output startssuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the metadata output startssuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

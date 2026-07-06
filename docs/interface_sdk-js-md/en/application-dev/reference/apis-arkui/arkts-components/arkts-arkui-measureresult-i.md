@@ -1,8 +1,8 @@
 # MeasureResult
 
-Provides the measurement result of the component. This API inherits from [SizeResult](arkts-arkui-sizeresult-i.md#sizeresult).
+Provides the measurement result of the component. This API inherits from [SizeResult](arkts-arkui-sizeresult-i.md).
 
-**Inheritance/Implementation:** MeasureResult extends [SizeResult](arkts-arkui-sizeresult-i.md#sizeresult)
+**Inheritance/Implementation:** MeasureResult extends [SizeResult](arkts-arkui-sizeresult-i.md)
 
 **Since:** 10
 

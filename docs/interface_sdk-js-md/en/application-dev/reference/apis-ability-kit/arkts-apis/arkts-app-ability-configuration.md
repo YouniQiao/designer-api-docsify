@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Configuration } from '@ohos.app.ability.Configuration';
+import { Configuration } from '@kit.AbilityKit';
 ```
 
 ## Summary

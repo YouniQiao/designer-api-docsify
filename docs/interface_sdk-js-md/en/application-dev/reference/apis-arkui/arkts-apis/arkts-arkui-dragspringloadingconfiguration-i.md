@@ -9,7 +9,7 @@ Defines the configuration parameters for drag hover detection. The default setti
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@ohos.arkui.dragController';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## stillTimeLimit

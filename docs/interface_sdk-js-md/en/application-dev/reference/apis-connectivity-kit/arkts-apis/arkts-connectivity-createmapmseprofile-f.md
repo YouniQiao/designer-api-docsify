@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { map } from '@ohos.bluetooth.map';
+import { map } from '@kit.ConnectivityKit';
 ```
 
 ## createMapMseProfile

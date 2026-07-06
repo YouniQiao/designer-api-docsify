@@ -6,7 +6,7 @@ fileAccess模块是基于[extension](../../../../application-models/extensionabi
 
 **废弃版本：** 23
 
-**替代接口：** [fs:fileIo](arkts-corefile-fileio-n.md#fileio)
+**替代接口：** [fs:fileIo](arkts-corefile-fileio-n.md)
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

@@ -9,7 +9,7 @@ The class of insight intent entry executor.
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentEntryExecutor } from '@ohos.app.ability.InsightIntentEntryExecutor';
+import { InsightIntentEntryExecutor } from '@kit.AbilityKit';
 ```
 
 ## onExecute

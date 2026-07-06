@@ -20,7 +20,7 @@ function getAbilityDelegator(): AbilityDelegator
 
 | 类型 | 说明 |
 | --- | --- |
-| AbilityDelegator | [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#abilitydelegator)对象。可以用来调度测试框架相关功能。 |
+| AbilityDelegator | [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md)对象。可以用来调度测试框架相关功能。 |
 
 **示例：**
 

@@ -2,7 +2,7 @@
 
 Corresponds to an incremental application, including its last incremental time and incremental list.
 
-**Inheritance/Implementation:** IncrementalBackupData extends [IncrementalBackupTime](arkts-corefile-incrementalbackuptime-i-sys.md#incrementalbackuptime), [FileManifestData](arkts-corefile-filemanifestdata-i-sys.md#filemanifestdata), [BackupParams](arkts-corefile-backupparams-i-sys.md#backupparams), [BackupPriority](arkts-corefile-backuppriority-i-sys.md#backuppriority)
+**Inheritance/Implementation:** IncrementalBackupData extends [IncrementalBackupTime](arkts-corefile-incrementalbackuptime-i-sys.md), [FileManifestData](arkts-corefile-filemanifestdata-i-sys.md), [BackupParams](arkts-corefile-backupparams-i-sys.md), [BackupPriority](arkts-corefile-backuppriority-i-sys.md)
 
 **Since:** 12
 
@@ -13,6 +13,6 @@ Corresponds to an incremental application, including its last incremental time a
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@ohos.file.backup';
+import { backup } from '@kit.CoreFileKit';
 ```
 

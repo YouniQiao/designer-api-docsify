@@ -1,8 +1,8 @@
 # VideoOutput
 
-**VideoOutput** implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput).
+**VideoOutput** implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
 
-**Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput)
+**Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## attachMetaSurface

@@ -9,7 +9,7 @@ Describes the parameters for creating a floating ball controller.
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@ohos.window.floatingBall';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## context

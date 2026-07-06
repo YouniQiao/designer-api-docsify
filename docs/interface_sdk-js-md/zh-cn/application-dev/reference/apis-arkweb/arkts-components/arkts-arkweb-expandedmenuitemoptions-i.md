@@ -6,7 +6,7 @@
 
 **废弃版本：** 20
 
-**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-editmenuoptions-i.md#editmenuoptions)
+**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-editmenuoptions-i.md)
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -24,7 +24,7 @@ action: (selectedText: {plainText: string}) => void
 
 **废弃版本：** 20
 
-**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-editmenuoptions-i.md#editmenuoptions)
+**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-editmenuoptions-i.md)
 
 **元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
 
@@ -44,7 +44,7 @@ content: ResourceStr
 
 **废弃版本：** 20
 
-**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-editmenuoptions-i.md#editmenuoptions)
+**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-editmenuoptions-i.md)
 
 **元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
 
@@ -64,7 +64,7 @@ startIcon?: ResourceStr
 
 **废弃版本：** 20
 
-**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-editmenuoptions-i.md#editmenuoptions)
+**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-editmenuoptions-i.md)
 
 **元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
 

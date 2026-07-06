@@ -1,8 +1,8 @@
 # ColorEffect (System API)
 
-ColorEffect extends [ColorEffectQuery](arkts-camera-coloreffectquery-i-sys.md#coloreffectquery) Provides the APIs to obtain and set the lens color effect.
+ColorEffect extends [ColorEffectQuery](arkts-camera-coloreffectquery-i-sys.md) Provides the APIs to obtain and set the lens color effect.
 
-**Inheritance/Implementation:** ColorEffect extends [ColorEffectQuery](arkts-camera-coloreffectquery-i-sys.md#coloreffectquery)
+**Inheritance/Implementation:** ColorEffect extends [ColorEffectQuery](arkts-camera-coloreffectquery-i-sys.md)
 
 **Since:** 11
 
@@ -13,7 +13,7 @@ ColorEffect extends [ColorEffectQuery](arkts-camera-coloreffectquery-i-sys.md#co
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getColorEffect

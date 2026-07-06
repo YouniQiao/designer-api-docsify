@@ -1,8 +1,8 @@
 # AxisEvent
 
-Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#baseevent).
+Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
-**Inheritance/Implementation:** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**Inheritance/Implementation:** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 17
 

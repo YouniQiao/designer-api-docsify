@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AVCastPickerColorMode, AVCastPickerState, AVCastPickerStyle } from '@ohos.multimedia.avCastPickerParam';
+import { AVCastPickerColorMode, AVCastPickerState, AVCastPickerStyle } from '@kit.AVSessionKit';
 ```
 
 ## Summary

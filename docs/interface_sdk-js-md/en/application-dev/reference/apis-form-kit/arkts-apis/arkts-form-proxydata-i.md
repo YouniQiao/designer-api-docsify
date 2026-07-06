@@ -9,7 +9,7 @@ Defines the form proxy data.
 ## Modules to Import
 
 ```TypeScript
-import { formBindingData } from '@ohos.app.form.formBindingData';
+import { formBindingData } from '@kit.FormKit';
 ```
 
 ## key

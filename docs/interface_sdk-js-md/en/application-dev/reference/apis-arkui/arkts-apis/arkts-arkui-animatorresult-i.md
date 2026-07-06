@@ -9,7 +9,7 @@ Defines the animator result.
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@ohos.animator';
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -177,7 +177,7 @@ struct AnimatorTest {
 reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
-Resets the animation parameters of this animator. Compared with [reset](arkts-arkui-animatorresult-i.md#reset-1), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md#simpleanimatoroptions) type.
+Resets the animation parameters of this animator. Compared with [reset](arkts-arkui-animatorresult-i.md#reset-1), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
@@ -381,7 +381,7 @@ Called when this animation is finished.
 onFrame: (progress: number) => void
 ```
 
-Called when a frame is received. **progress**: current value of the animation. Value range: [begin, end] defined in [AnimatorOptions](arkts-arkui-animatoroptions-i.md#animatoroptions). Default value range: [0, 1]
+Called when a frame is received. **progress**: current value of the animation. Value range: [begin, end] defined in [AnimatorOptions](arkts-arkui-animatoroptions-i.md). Default value range: [0, 1]
 
 **Type:** (progress: number) => void
 

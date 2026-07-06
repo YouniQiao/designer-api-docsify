@@ -2,7 +2,7 @@
 
 The AppServiceExtensionAbility module provides extended capabilities for background services, including lifecycle callbacks for creating, destroying, connecting, and disconnecting background services.
 
-**Inheritance/Implementation:** AppServiceExtensionAbility extends [ExtensionAbility](arkts-ability-extensionability-c.md#extensionability)
+**Inheritance/Implementation:** AppServiceExtensionAbility extends [ExtensionAbility](arkts-ability-extensionability-c.md)
 
 **Since:** 20
 
@@ -11,7 +11,7 @@ The AppServiceExtensionAbility module provides extended capabilities for backgro
 ## Modules to Import
 
 ```TypeScript
-import { AppServiceExtensionAbility } from '@ohos.app.ability.AppServiceExtensionAbility';
+import { AppServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConnect
@@ -212,7 +212,7 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 context: AppServiceExtensionContext
 ```
 
-Context environment for an AppServiceExtensionAbility. This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext).
+Context environment for an AppServiceExtensionAbility. This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
 
 **Type:** AppServiceExtensionContext
 

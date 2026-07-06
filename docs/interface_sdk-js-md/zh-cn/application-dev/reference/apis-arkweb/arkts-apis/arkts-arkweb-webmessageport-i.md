@@ -53,7 +53,7 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 onMessageEventExt(callback: (result: WebMessageExt) => void): void
 ```
 
-在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessageType](arkts-arkweb-webmessagetype-e.md#webmessagetype)类型消息。
+在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessageType](arkts-arkweb-webmessagetype-e.md)类型消息。
 
 **起始版本：** 10
 

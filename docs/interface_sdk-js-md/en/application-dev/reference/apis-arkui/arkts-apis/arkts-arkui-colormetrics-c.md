@@ -74,7 +74,7 @@ Blends a specified color (**overlayColor**) with the current color and returns t
 static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-Creates a **ColorMetrics** instance using specified [ColorSpace](../arkts-components/arkts-arkui-colorspace-e.md#colorspace) and RGBA values. Only certain attributes support color configuration in the display-p3 color space.
+Creates a **ColorMetrics** instance using specified [ColorSpace](../arkts-components/arkts-arkui-colorspace-e.md) and RGBA values. Only certain attributes support color configuration in the display-p3 color space.
 
 **Since:** 20
 

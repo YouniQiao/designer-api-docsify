@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DistributedExtensionContext } from '@ohos.application.DistributedExtensionContext';
+import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

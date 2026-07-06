@@ -2,7 +2,7 @@
 
 无光照阴影透明度材质资源
 
-**继承/实现关系：** UnlitShadowAlphaMaterial extends [Material](arkts-arkgraphics3d-material-i.md#material)
+**继承/实现关系：** UnlitShadowAlphaMaterial extends [Material](arkts-arkgraphics3d-material-i.md)
 
 **起始版本：** 23
 

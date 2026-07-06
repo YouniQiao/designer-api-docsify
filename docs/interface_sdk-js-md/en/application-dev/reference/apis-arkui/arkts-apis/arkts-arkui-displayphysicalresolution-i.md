@@ -9,7 +9,7 @@ Describes the display mode of a device and the corresponding physical screen res
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@ohos.display';
+import { display } from '@kit.ArkUI';
 ```
 
 ## foldDisplayMode

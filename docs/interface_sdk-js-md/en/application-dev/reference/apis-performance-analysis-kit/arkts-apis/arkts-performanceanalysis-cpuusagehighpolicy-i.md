@@ -9,7 +9,7 @@ Defines the configuration policy for the high CPU usage event. > **NOTE** > > Af
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiviewdfx.hiAppEvent';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## backgroundLoadThreshold

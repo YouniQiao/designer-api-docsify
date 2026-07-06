@@ -12,7 +12,7 @@ Provides the custom drawing information.
 baseline: number
 ```
 
-Distance from the baseline of the current line to the component's upper edge. Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) The value must be greater than or equal to 0.
+Distance from the baseline of the current line to the component's upper edge. Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -30,7 +30,7 @@ Distance from the baseline of the current line to the component's upper edge. Un
 bottom: number
 ```
 
-Distance from the bottom of the current line to the component's upper edge. Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) The value must be greater than or equal to 0.
+Distance from the bottom of the current line to the component's upper edge. Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -120,7 +120,7 @@ Start index of the current line. The value must be greater than or equal to 0.
 top: number
 ```
 
-Distance from the top of the current line to the component's upper edge. Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) The value must be greater than or equal to 0.
+Distance from the top of the current line to the component's upper edge. Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -138,7 +138,7 @@ Distance from the top of the current line to the component's upper edge. Unit: [
 x: number
 ```
 
-Horizontal offset of the current line relative to the component. For right-to-left (RTL) scripts (direction set to **RTL**), this value represents the distance between the right side of the current line and the component's right edge. Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) The value must be greater than or equal to 0.
+Horizontal offset of the current line relative to the component. For right-to-left (RTL) scripts (direction set to **RTL**), this value represents the distance between the right side of the current line and the component's right edge. Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) The value must be greater than or equal to 0.
 
 **Type:** number
 

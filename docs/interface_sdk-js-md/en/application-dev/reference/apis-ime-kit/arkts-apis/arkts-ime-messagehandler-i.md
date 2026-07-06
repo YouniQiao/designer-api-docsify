@@ -9,7 +9,7 @@ Represents a custom communication object. > **NOTE** > > You can register this o
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@ohos.inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## onMessage
@@ -18,7 +18,7 @@ import { inputMethodEngine } from '@ohos.inputMethodEngine';
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-Receives the custom data callback sent by the edit box application attached to the input method application. > **NOTE** > > This callback is triggered when the registered [MessageHandler](arkts-ime-messagehandler-i.md#messagehandler) > receives custom communication data sent by the edit box application attached to the input method application. > > The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId** > data is received, confirm it with the data sender.
+Receives the custom data callback sent by the edit box application attached to the input method application. > **NOTE** > > This callback is triggered when the registered [MessageHandler](arkts-ime-messagehandler-i.md) > receives custom communication data sent by the edit box application attached to the input method application. > > The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId** > data is received, confirm it with the data sender.
 
 **Since:** 15
 
@@ -58,7 +58,7 @@ inputMethodEngine.getInputMethodAbility()
 onTerminated(): void
 ```
 
-Listens for MessageHandler termination. > **NOTE** > > When an application registers a new [MessageHandler](arkts-ime-messagehandler-i.md#messagehandler) object, the > [onTerminated](arkts-ime-messagehandler-i.md#onterminated-1) callback of the penultimate registered > [MessageHandler](arkts-ime-messagehandler-i.md#messagehandler) object is triggered. > > When an application unregisters a new [MessageHandler](arkts-ime-messagehandler-i.md#messagehandler) object, the > [onTerminated](arkts-ime-messagehandler-i.md#onterminated-1) callback of the registered > [MessageHandler](arkts-ime-messagehandler-i.md#messagehandler) object is triggered.
+Listens for MessageHandler termination. > **NOTE** > > When an application registers a new [MessageHandler](arkts-ime-messagehandler-i.md) object, the > [onTerminated](arkts-ime-messagehandler-i.md#onterminated-1) callback of the penultimate registered > [MessageHandler](arkts-ime-messagehandler-i.md) object is triggered. > > When an application unregisters a new [MessageHandler](arkts-ime-messagehandler-i.md) object, the > [onTerminated](arkts-ime-messagehandler-i.md#onterminated-1) callback of the registered > [MessageHandler](arkts-ime-messagehandler-i.md) object is triggered.
 
 **Since:** 15
 

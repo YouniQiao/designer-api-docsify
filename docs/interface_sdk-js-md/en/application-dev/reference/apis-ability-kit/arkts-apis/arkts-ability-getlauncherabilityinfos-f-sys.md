@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { BundleStatusCallback } from '@ohos.bundle.innerBundleManager';
+import { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityInfos

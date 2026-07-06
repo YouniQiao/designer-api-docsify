@@ -9,7 +9,7 @@ The convertxml module provides APIs for converting XML text into JavaScript obje
 ## Modules to Import
 
 ```TypeScript
-import { convertxml } from '@ohos.convertxml';
+import { convertxml } from '@kit.ArkTS';
 ```
 
 ## Summary

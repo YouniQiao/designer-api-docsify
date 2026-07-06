@@ -2,7 +2,7 @@
 
 The **SendableResource** module provides sendable resource information, such as the application bundle name, application module name, and resource ID.
 
-**Inheritance/Implementation:** SendableResource extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md#isendable)
+**Inheritance/Implementation:** SendableResource extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md)
 
 **Since:** 12
 

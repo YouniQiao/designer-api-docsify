@@ -9,7 +9,7 @@ Specifies the input parameters of **createPdf()**. > **NOTE** > > The number of 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## height

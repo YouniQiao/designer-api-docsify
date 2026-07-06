@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { SplitLayout } from '@ohos.arkui.advanced.SplitLayout';
+import { SplitLayout } from '@kit.ArkUI';
 ```
 
 ## Summary

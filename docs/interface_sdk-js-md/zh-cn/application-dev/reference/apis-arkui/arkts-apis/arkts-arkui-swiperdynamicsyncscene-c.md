@@ -2,7 +2,7 @@
 
 提供Swiper组件相关帧率的配置。 > **说明** > SwiperDynamicSyncScene继承自[DynamicSyncScene](arkts-arkui-uicontext.md)，对应Swiper的动态帧率场景。
 
-**继承/实现关系：** SwiperDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-dynamicsyncscene-c.md#dynamicsyncscene)
+**继承/实现关系：** SwiperDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-dynamicsyncscene-c.md)
 
 **起始版本：** 12
 

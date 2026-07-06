@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from '@ohos.app.ability.childProcessManager';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## startArkChildProcess
@@ -42,7 +42,7 @@ Starts an [ArkTS child process](../../../../application-models/ability-terminolo
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
-| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit.<br>**Applicable version:** 13 |
+| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit.<br>**Applicable version:** 13 and later |
 
 **Example**
 

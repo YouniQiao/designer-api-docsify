@@ -9,7 +9,7 @@ Represents the configuration for creating .p12 files.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## certEncParams

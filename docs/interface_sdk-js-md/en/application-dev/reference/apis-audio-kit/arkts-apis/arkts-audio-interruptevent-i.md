@@ -9,7 +9,7 @@ Describes the interruption event received by the application when the audio is i
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## eventType

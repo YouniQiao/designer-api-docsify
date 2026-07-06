@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DataType } from '@ohos.data.DataShareResultSet';
+import { DataType } from '@kit.ArkData';
 ```
 
 ## Summary

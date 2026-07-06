@@ -9,7 +9,7 @@ The **securityManager** module provides device security management capabilities,
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@ohos.enterprise.securityManager';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## Summary
@@ -27,7 +27,7 @@ import { securityManager } from '@ohos.enterprise.securityManager';
 | [getDisallowedPermissions](arkts-mdm-getdisallowedpermissions-f.md#getdisallowedpermissions-1) | Gets the permissions that are disallowed to be granted for an account. |
 | [getExternalSourceExtensionsPolicy](arkts-mdm-getexternalsourceextensionspolicy-f.md#getexternalsourceextensionspolicy-1) | Obtains the management policy for extensions from external sources. |
 | [getPasswordPolicy](arkts-mdm-getpasswordpolicy-f.md#getpasswordpolicy-1) | Obtains the device screen lock password policy. |
-| [getPermissionManagedState](arkts-mdm-getpermissionmanagedstate-f.md#getpermissionmanagedstate-1) | Obtains the management policy for the [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md#permissions) of a specified application. |
+| [getPermissionManagedState](arkts-mdm-getpermissionmanagedstate-f.md#getpermissionmanagedstate-1) | Obtains the management policy for the [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md) of a specified application. |
 | [getSecurityStatus](arkts-mdm-getsecuritystatus-f.md#getsecuritystatus-1) | Obtains the security status of the current device. |
 | [getUserCertificates](arkts-mdm-getusercertificates-f.md#getusercertificates-1) | Obtains the user certificate of a specified system account. |
 | [getWatermarkImageApps](arkts-mdm-getwatermarkimageapps-f.md#getwatermarkimageapps-1) | Gets the bundle names of the applications that have been set watermark. |
@@ -41,7 +41,7 @@ import { securityManager } from '@ohos.enterprise.securityManager';
 | [setDisallowedPermission](arkts-mdm-setdisallowedpermission-f.md#setdisallowedpermission-1) | Sets the permissions that are disallowed to be granted for an account. |
 | [setExternalSourceExtensionsPolicy](arkts-mdm-setexternalsourceextensionspolicy-f.md#setexternalsourceextensionspolicy-1) | Sets the management policy for extensions from external sources. - DEFAULT: Default policy with no restrictions applied. Users can enable or disable **Run extensions from external sources** in **Settings** &gt; **Privacy & security** &gt; **Advanced option**. - DISALLOW: Policy that disallows extensions from external sources to run. With this policy, currently running extensions can continue, but cannot be started after being closed. Users cannot enable **Run extensions from external sources**. - FORCE_OPEN: Policy that forcibly enables extensions from external sources to run. Users cannot disable **Run extensions from external sources**. |
 | [setPasswordPolicy](arkts-mdm-setpasswordpolicy-f.md#setpasswordpolicy-1) | Sets the device screen lock password policy. During screen lock password setting, if the current screen lock password does not meet the requirements, a security message will be displayed, prompting the user to reset the screen lock password. |
-| [setPermissionManagedState](arkts-mdm-setpermissionmanagedstate-f.md#setpermissionmanagedstate-1) | Sets the management policy for the [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md#permissions) of a specified application. |
+| [setPermissionManagedState](arkts-mdm-setpermissionmanagedstate-f.md#setpermissionmanagedstate-1) | Sets the management policy for the [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md) of a specified application. |
 | [setScreenLockDisabledForAccount](arkts-mdm-setscreenlockdisabledforaccount-f.md#setscreenlockdisabledforaccount-1) | Sets the screen lock disabled for current account. |
 | [setScreenWatermarkImage](arkts-mdm-setscreenwatermarkimage-f.md#setscreenwatermarkimage-1) | Sets the watermark image to be displayed on the screen. |
 | [setWatermarkImage](arkts-mdm-setwatermarkimage-f.md#setwatermarkimage-1) | Sets a watermark policy for a specified application of a specified user. Currently, a maximum of 100 policies can be saved. &gt; **NOTE** &gt; &gt; This API is applicable to setting watermarks for third-party applications in enterprise scenarios to reduce the &gt; risk of enterprise information leakage. You are not advised to set watermarks for system applications (such as &gt; the home screen application), as unknown exceptions may occur. |

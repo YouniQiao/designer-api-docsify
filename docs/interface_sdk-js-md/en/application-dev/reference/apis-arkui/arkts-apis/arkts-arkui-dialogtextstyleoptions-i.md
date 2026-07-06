@@ -9,7 +9,7 @@ Defines DialogTextStyleOptions in the dialog.
 ## Modules to Import
 
 ```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@ohos.arkui.dialog';
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
 ```
 
 ## wordBreak

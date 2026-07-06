@@ -64,7 +64,7 @@ $selectedIndexes?: Callback<Array<number>>
 chipGroupPadding?: ChipGroupV2Padding
 ```
 
-设置ChipGroupV2的上下内边距，以控制整体高度。类型为[ChipGroupV2Padding](arkts-arkui-chipgroupv2padding-c.md#chipgroupv2padding)。 默认值：{ top: 14, bottom: 14 } 单位：vp 值为undefined时，按默认值处理。
+设置ChipGroupV2的上下内边距，以控制整体高度。类型为[ChipGroupV2Padding](arkts-arkui-chipgroupv2padding-c.md)。 默认值：{ top: 14, bottom: 14 } 单位：vp 值为undefined时，按默认值处理。
 
 **类型：** ChipGroupV2Padding
 
@@ -82,7 +82,7 @@ chipGroupPadding?: ChipGroupV2Padding
 chipGroupSpace?: ChipGroupV2Space
 ```
 
-左右内边距及ChipV2之间间距。参考[ChipGroupV2Space](arkts-arkui-chipgroupv2space-c.md#chipgroupv2space)类型。 默认值：{ itemSpace: 8, startSpace: 16, endSpace: 16 } 单位：vp 值为undefined时，按默认值处理。
+左右内边距及ChipV2之间间距。参考[ChipGroupV2Space](arkts-arkui-chipgroupv2space-c.md)类型。 默认值：{ itemSpace: 8, startSpace: 16, endSpace: 16 } 单位：vp 值为undefined时，按默认值处理。
 
 **类型：** ChipGroupV2Space
 
@@ -100,7 +100,7 @@ chipGroupSpace?: ChipGroupV2Space
 itemStyle?: ChipGroupV2ItemStyle
 ```
 
-ChipV2的style属性，如颜色，大小等，参考[ChipGroupV2ItemStyle](arkts-arkui-chipgroupv2itemstyle-c.md#chipgroupv2itemstyle)类型。 默认值： { size: ChipV2Size.NORMAL, backgroundColor: $r('sys.color.ohos_id_color_button_normal'), fontColor: $r(' sys.color.ohos_id_color_text_primary'), selectedFontColor: $r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: $r('sys.color.ohos_id_color_emphasize') } 值为undefined时，按默认值处理。 图标填充色（[fillColor](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ChipV2.md#chipv2imageiconconfig)和 [activatedFillColor](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ChipV2.md#chipv2imageiconconfig) ）的设置与字体颜色（[fontColor](arkts-arkui-chipgroupv2itemstyleconfig-i.md#chipgroupv2itemstyleconfig)）保持一致。如果需要设置不同的颜色，可以在传入items时使用 [prefixSymbolIcon](arkts-arkui-chipgroupv2itemconfig-i.md#chipgroupv2itemconfig)和[suffixSymbolIcon](arkts-arkui-chipgroupv2itemconfig-i.md#chipgroupv2itemconfig)。
+ChipV2的style属性，如颜色，大小等，参考[ChipGroupV2ItemStyle](arkts-arkui-chipgroupv2itemstyle-c.md)类型。 默认值： { size: ChipV2Size.NORMAL, backgroundColor: $r('sys.color.ohos_id_color_button_normal'), fontColor: $r(' sys.color.ohos_id_color_text_primary'), selectedFontColor: $r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: $r('sys.color.ohos_id_color_emphasize') } 值为undefined时，按默认值处理。 图标填充色（[fillColor](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ChipV2.md#chipv2imageiconconfig)和 [activatedFillColor](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ChipV2.md#chipv2imageiconconfig) ）的设置与字体颜色（[fontColor](arkts-arkui-chipgroupv2itemstyleconfig-i.md)）保持一致。如果需要设置不同的颜色，可以在传入items时使用 [prefixSymbolIcon](arkts-arkui-chipgroupv2itemconfig-i.md)和[suffixSymbolIcon](arkts-arkui-chipgroupv2itemconfig-i.md)。
 
 **类型：** ChipGroupV2ItemStyle
 
@@ -118,7 +118,7 @@ ChipV2的style属性，如颜色，大小等，参考[ChipGroupV2ItemStyle](arkt
 items: ChipGroupV2Items
 ```
 
-每个ChipV2的特定属性，参考[ChipGroupV2ItemConfig](arkts-arkui-chipgroupv2itemconfig-i.md#chipgroupv2itemconfig)类型。 值为undefined或空数组时，ChipGroupV2不渲染内部的 [ChipV2](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ChipV2.md)。
+每个ChipV2的特定属性，参考[ChipGroupV2ItemConfig](arkts-arkui-chipgroupv2itemconfig-i.md)类型。 值为undefined或空数组时，ChipGroupV2不渲染内部的 [ChipV2](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ChipV2.md)。
 
 **类型：** ChipGroupV2Items
 
@@ -190,13 +190,13 @@ selectedIndexes?: Array<number>
 suffix?: Callback<void>
 ```
 
-支持开发者自定义builder，如需在组件最右侧显示自定义内容可配置suffix属性，使用属性suffix需引用 [ChipGroupV2IconGroupSuffix](arkts-arkui-chipgroupv2icongroupsuffix-s.md#chipgroupv2icongroupsuffix)接口。 默认值：undefined，不在最右侧显示自定义内容。
+支持开发者自定义builder，如需在组件最右侧显示自定义内容可配置suffix属性，使用属性suffix需引用 [ChipGroupV2IconGroupSuffix](arkts-arkui-chipgroupv2icongroupsuffix-s.md)接口。 默认值：undefined，不在最右侧显示自定义内容。
 
 **类型：** Callback<void>
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @Builder
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

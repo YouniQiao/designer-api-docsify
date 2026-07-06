@@ -9,7 +9,7 @@ Describes the heap memory threshold at which the registered callback is triggere
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## localHeapThreshold

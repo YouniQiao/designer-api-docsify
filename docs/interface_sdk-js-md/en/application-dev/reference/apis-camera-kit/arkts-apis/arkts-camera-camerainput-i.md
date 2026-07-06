@@ -1,6 +1,6 @@
 # CameraInput
 
-Defines the camera input object. It provides camera device information used in [Session](arkts-camera-session-i.md#session).
+Defines the camera input object. It provides camera device information used in [Session](arkts-camera-session-i.md).
 
 **Since:** 10
 
@@ -9,7 +9,7 @@ Defines the camera input object. It provides camera device information used in [
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## close
@@ -30,7 +30,7 @@ Closes this camera device. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the camera device is closedsuccessfully, **err** is **undefined**. Otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the camera device is closedsuccessfully, **err** is **undefined**. Otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -146,7 +146,7 @@ Subscribes to CameraInput error events. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when aCameraInput instance is created. This event is triggered and the result is returned when an error occurs onthe camera device. For example, if the camera device is unavailable or a conflict occurs, the errorinformation is returned. |
 | camera | CameraDevice | Yes | Camera device. |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 ## open
 
@@ -166,7 +166,7 @@ Opens this camera device. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the camera device is openedsuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the camera device is openedsuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -223,7 +223,7 @@ Opens this camera device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSecureEnabled | boolean | Yes | Whether to open the camera device in secure mode. **true** to open in securemode, **false** otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| isSecureEnabled | boolean | Yes | Whether to open the camera device in secure mode. **true** to open in securemode, **false** otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Return value:**
 

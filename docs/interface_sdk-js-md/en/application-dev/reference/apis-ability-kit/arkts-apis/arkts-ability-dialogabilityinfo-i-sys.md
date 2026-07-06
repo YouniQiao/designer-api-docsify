@@ -11,7 +11,7 @@ Provides DialogAbility information, including the bundle name, module name, and 
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from '@ohos.app.ability.dialogSession';
+import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## abilityIconId

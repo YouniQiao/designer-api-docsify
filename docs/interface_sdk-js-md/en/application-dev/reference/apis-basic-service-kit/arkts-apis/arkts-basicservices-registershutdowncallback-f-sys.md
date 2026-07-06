@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@ohos.power';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## registerShutdownCallback

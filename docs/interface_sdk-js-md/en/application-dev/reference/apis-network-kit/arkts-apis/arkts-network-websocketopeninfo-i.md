@@ -9,7 +9,7 @@ The result for open info of a WebSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@ohos.net.webSocket';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## message

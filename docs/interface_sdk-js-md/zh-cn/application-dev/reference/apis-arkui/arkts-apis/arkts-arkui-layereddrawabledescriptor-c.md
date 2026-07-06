@@ -1,8 +1,8 @@
 # LayeredDrawableDescriptor
 
-当传入资源id或name为包含前景和背景资源的json文件时，生成LayeredDrawableDescriptor对象。继承自 [DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult)。 drawable.json位于项目工程entry/src/main/resources/base/media目录下。定义请参考：
+当传入资源id或name为包含前景和背景资源的json文件时，生成LayeredDrawableDescriptor对象。继承自 [DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md)。 drawable.json位于项目工程entry/src/main/resources/base/media目录下。定义请参考：
 
-**继承/实现关系：** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md#drawabledescriptor)
+**继承/实现关系：** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md)
 
 **起始版本：** 10
 
@@ -62,7 +62,7 @@ getBackground(): DrawableDescriptor
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced bythe drawableDescriptor has been released.<br>**适用版本：** 26.0.0 |
+| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced bythe drawableDescriptor has been released.<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -130,7 +130,7 @@ getForeground(): DrawableDescriptor
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced bythe drawableDescriptor has been released.<br>**适用版本：** 26.0.0 |
+| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced bythe drawableDescriptor has been released.<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -203,7 +203,7 @@ getMask(): DrawableDescriptor
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced bythe drawableDescriptor has been released.<br>**适用版本：** 26.0.0 |
+| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) | The native memory referenced bythe drawableDescriptor has been released.<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 

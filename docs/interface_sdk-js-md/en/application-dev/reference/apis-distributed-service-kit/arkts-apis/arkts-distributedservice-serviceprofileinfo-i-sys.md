@@ -11,7 +11,7 @@ Defines the service profile information. It is populated based on the data retur
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@ohos.distributedDeviceManager';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## data

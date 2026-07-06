@@ -9,7 +9,7 @@ Provides interfaces to manage network policy rules.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@ohos.net.policy';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## Summary

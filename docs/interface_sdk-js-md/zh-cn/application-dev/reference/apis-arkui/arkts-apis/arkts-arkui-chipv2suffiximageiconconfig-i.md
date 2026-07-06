@@ -2,7 +2,7 @@
 
 定义后缀图标选项。
 
-**继承/实现关系：** ChipV2SuffixImageIconConfig extends [ChipV2ImageIconConfig](arkts-arkui-chipv2imageiconconfig-i.md#chipv2imageiconconfig), [ChipV2AccessibilityConfig](arkts-arkui-chipv2accessibilityconfig-i.md#chipv2accessibilityconfig)
+**继承/实现关系：** ChipV2SuffixImageIconConfig extends [ChipV2ImageIconConfig](arkts-arkui-chipv2imageiconconfig-i.md), [ChipV2AccessibilityConfig](arkts-arkui-chipv2accessibilityconfig-i.md)
 
 **起始版本：** 26.0.0
 

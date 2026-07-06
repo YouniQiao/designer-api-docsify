@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from '@ohos.security.huksExternalCrypto';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## authUkeyPin
@@ -25,7 +25,7 @@ Authenticates a UKey PIN. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resourceId | string | Yes | Resource ID of a container in the UKey, which can be obtained using[certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-openauthorizedialog-f.md#openauthorizedialog-2). The result contains **resourceId**. |
-| params | Array&lt;HuksExternalCryptoParam&gt; | Yes | Parameters to be passed during the operation. The mandatory tagis[HUKS_EXT_CRYPTO_TAG_UKEY_PIN](arkts-universalkeystore-huksexternalcryptotagtype-e.md#huksexternalcryptotagtype). |
+| params | Array&lt;HuksExternalCryptoParam&gt; | Yes | Parameters to be passed during the operation. The mandatory tagis[HUKS_EXT_CRYPTO_TAG_UKEY_PIN](arkts-universalkeystore-huksexternalcryptotagtype-e.md). |
 
 **Return value:**
 

@@ -9,7 +9,7 @@ Represents the connection result, which is returned after the client calls **con
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from '@ohos.distributedsched.linkEnhance';
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## deviceId

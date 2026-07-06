@@ -9,7 +9,7 @@ Provides APIs for operating on certificate extensions.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## checkCA

@@ -11,7 +11,7 @@ Provides the container definition for network access policy key-value pairs.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@ohos.net.policy';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## uid

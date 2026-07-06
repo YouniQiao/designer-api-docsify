@@ -2,7 +2,7 @@
 
 StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上下文环境，继承自ExtensionContext。 StaticSubscriberExtensionContext模块提供StaticSubscriberExtensionAbility具有的接口和能力。
 
-**继承/实现关系：** StaticSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext)
+**继承/实现关系：** StaticSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 10
 

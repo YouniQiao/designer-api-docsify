@@ -1418,7 +1418,7 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 | --- | --- | --- | --- |
 | p | Point | 是 | 目标坐标。 |
 | text | string | 是 | 输入文本。目前支持英文、中文和特殊字符。 |
-| mode | InputTextMode | 是 | 文本输入模式。详见[InputTextMode](arkts-test-inputtextmode-i.md#inputtextmode)。**说明**如果**InputTextMode.addition**设置为**true**，则光标移动到文本末尾并输入指定文本。如果值为**false**，则在坐标点输入指定文本。 |
+| mode | InputTextMode | 是 | 文本输入模式。详见[InputTextMode](arkts-test-inputtextmode-i.md)。**说明**如果**InputTextMode.addition**设置为**true**，则光标移动到文本末尾并输入指定文本。如果值为**false**，则在坐标点输入指定文本。 |
 
 **返回值：**
 
@@ -1802,8 +1802,8 @@ mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<
 | --- | --- | --- | --- |
 | p | Point | 是 | 鼠标单击的坐标。 |
 | btnId | MouseButton | 是 | 按下的鼠标按键。 |
-| key1 | number | 否 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
-| key2 | number | 否 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
+| key1 | number | 否 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
+| key2 | number | 否 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
 
 **返回值：**
 
@@ -1851,8 +1851,8 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Pr
 | --- | --- | --- | --- |
 | p | Point | 是 | 双击的坐标。 |
 | btnId | MouseButton | 是 | 按下的鼠标按键。 |
-| key1 | number | 否 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
-| key2 | number | 否 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
+| key1 | number | 否 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
+| key2 | number | 否 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
 
 **返回值：**
 
@@ -2033,8 +2033,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 | --- | --- | --- | --- |
 | p | Point | 是 | 鼠标设备长按的坐标。 |
 | btnId | MouseButton | 是 | 按下的鼠标按键。 |
-| key1 | number | 否 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
-| key2 | number | 否 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
+| key1 | number | 否 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
+| key2 | number | 否 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
 
 **返回值：**
 
@@ -2083,8 +2083,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, durat
 | --- | --- | --- | --- |
 | p | Point | 是 | 鼠标设备长按的坐标。 |
 | btnId | MouseButton | 是 | 按下的鼠标按键。 |
-| key1 | number | 否 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
-| key2 | number | 否 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
+| key1 | number | 否 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
+| key2 | number | 否 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
 | duration | number | 否 | 长按持续时间。<br>取值范围：值应 &gt;= 1500<br>单位：ms<br>默认值：1500 |
 
 **返回值：**
@@ -2229,8 +2229,8 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 | p | Point | 是 | 鼠标单击的坐标。 |
 | down | boolean | 是 | 鼠标滚轮是否向下滚动。值**true**表示鼠标滚轮向下滚动，**false**表示向上滚动。 |
 | d | number | 是 | 鼠标滚轮滚动的刻度数。一个刻度表示滚动120 px。该值为大于或等于0的整数。<br>取值范围：值应 &gt;= 0<br>单位：px |
-| key1 | number | 否 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
-| key2 | number | 否 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
+| key1 | number | 否 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
+| key2 | number | 否 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
 
 **返回值：**
 
@@ -2279,8 +2279,8 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, sp
 | p | Point | 是 | 鼠标单击的坐标。 |
 | down | boolean | 是 | 鼠标滚轮是否向下滚动。值**true**表示鼠标滚轮向下滚动，**false**表示向上滚动。 |
 | d | number | 是 | 鼠标滚轮滚动的刻度数。一个刻度表示滚动120 px。该值为大于或等于0的整数。<br>单位：cell |
-| key1 | number | 否 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
-| key2 | number | 否 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
+| key1 | number | 否 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
+| key2 | number | 否 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
 | speed | number | 否 | 鼠标滚轮滚动速度。<br>取值范围：[1, 500]<br>单位：ticks/s<br>如果为负数则抛出错误码401。<br>默认值：20 |
 
 **返回值：**
@@ -3156,9 +3156,9 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key0 | number | 是 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。 |
-| key1 | number | 是 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。 |
-| key2 | number | 否 | 第三个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
+| key0 | number | 是 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。 |
+| key1 | number | 是 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。 |
+| key2 | number | 否 | 第三个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
 
 **返回值：**
 
@@ -3205,9 +3205,9 @@ triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key0 | number | 是 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。 |
-| key1 | number | 是 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。 |
-| key2 | number | 否 | 第三个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。<br>默认值：0 |
+| key0 | number | 是 | 第一个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。 |
+| key1 | number | 是 | 第二个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。 |
+| key2 | number | 否 | 第三个键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。<br>默认值：0 |
 | displayId | number | 否 | 显示ID。该值为大于或等于0的整数。默认值为设备的默认显示ID。 |
 
 **返回值：**
@@ -3254,7 +3254,7 @@ triggerKey(keyCode: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | number | 是 | 键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。 |
+| keyCode | number | 是 | 键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。 |
 
 **返回值：**
 
@@ -3301,7 +3301,7 @@ triggerKey(keyCode: number, displayId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | number | 是 | 键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode)。 |
+| keyCode | number | 是 | 键值。该值为大于或等于0的整数。详见[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)。 |
 | displayId | number | 是 | 显示ID。该值为大于或等于0的整数。<br>**注意**：如果输入的**displayId**不存在，将上报异常**401**。 |
 
 **返回值：**

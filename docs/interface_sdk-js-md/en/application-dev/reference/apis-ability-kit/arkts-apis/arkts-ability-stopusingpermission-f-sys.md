@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@ohos.privacyManager';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## stopUsingPermission
@@ -151,7 +151,7 @@ A system application calls this API to mark that the specified permission is no 
 | tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfoof BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1). |
 | permissionName | Permissions | Yes | Name of the permission to stop using. Passing an invalid value returnserror code 12100001. |
 | pid | number | No | Process ID of the caller, which must be the same as the pid passed in[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1). Failure to meet the matching relationshipmay cause the API call to fail (error code 12100004).<br>The value should be an integer. Default value: -1, indicating no response based on the process lifecycle. |
-| options | PermissionUsingOptions | No | Optional parameter for permission usage, used to specify theextension identity. This parameter is passed in when the caller's extension identity information needs to beidentified.<br>Default value: Please refer to [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md#permissionusingoptions) forthe default values of each property in the structure. |
+| options | PermissionUsingOptions | No | Optional parameter for permission usage, used to specify theextension identity. This parameter is passed in when the caller's extension identity information needs to beidentified.<br>Default value: Please refer to [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md) forthe default values of each property in the structure. |
 
 **Return value:**
 

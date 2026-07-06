@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { freeInstall } from '@ohos.bundle.freeInstall';
+import { freeInstall } from '@kit.AbilityKit';
 ```
 
 ## isHapModuleRemovable
@@ -28,7 +28,7 @@ Checks whether a module can be removed. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | moduleName | string | Yes | Module name. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return the result.If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** if the module canbe removed, **false** otherwise). If the operation fails, **err** is an error object. |
+| callback | AsyncCallback&lt;boolean&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result.If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** if the module canbe removed, **false** otherwise). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@ Defines the network configuration for the Ethernet connection.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@ohos.net.ethernet';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## dnsServers

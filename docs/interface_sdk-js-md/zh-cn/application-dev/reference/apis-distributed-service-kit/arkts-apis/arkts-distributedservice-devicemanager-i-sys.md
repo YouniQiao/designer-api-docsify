@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [DeviceManager](arkts-distributedservice-devicemanager-i.md#devicemanager)
+**替代接口：** [DeviceManager](arkts-distributedservice-devicemanager-i.md)
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

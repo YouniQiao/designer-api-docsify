@@ -2,7 +2,7 @@
 
 Represents the return value of the [getEvent('Grid')](FrameNode:typeNode.getEvent(node: FrameNode, nodeType: 'Grid')) method in **frameNode**, which can be used to set scroll events for a **Grid** node.
 
-**Inheritance/Implementation:** UIGridEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md#uiscrollablecommonevent)
+**Inheritance/Implementation:** UIGridEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
 
 **Since:** 19
 

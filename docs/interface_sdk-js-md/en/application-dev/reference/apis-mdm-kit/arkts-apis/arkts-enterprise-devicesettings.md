@@ -9,7 +9,7 @@ The **deviceSettings** module provides APIs for setting enterprise devices, incl
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@ohos.enterprise.deviceSettings';
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Defines the parameters for creating a child window or system window.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## defaultDensityEnabled
@@ -34,7 +34,7 @@ Whether the window should use the default density of the system. If the default 
 zIndex?: number
 ```
 
-Z-level of the system window. This parameter is valid only when [WindowType](arkts-arkui-windowtype-e.md#windowtype) is set to **TYPE_DYNAMIC**.
+Z-level of the system window. This parameter is valid only when [WindowType](arkts-arkui-windowtype-e.md) is set to **TYPE_DYNAMIC**.
 
 **Type:** number
 

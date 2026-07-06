@@ -11,7 +11,7 @@ Defines an MMS message delivery indication.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@ohos.telephony.sms';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## date

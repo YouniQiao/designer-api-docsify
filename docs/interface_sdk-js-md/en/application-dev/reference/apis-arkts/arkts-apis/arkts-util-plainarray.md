@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PlainArray } from '@ohos.util.PlainArray';
+import { PlainArray } from '@kit.ArkTS';
 ```
 
 ## Summary

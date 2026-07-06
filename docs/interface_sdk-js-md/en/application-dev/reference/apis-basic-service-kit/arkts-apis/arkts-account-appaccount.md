@@ -9,7 +9,7 @@ The **appAccount** module provides APIs for adding, deleting, modifying, and que
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@ohos.account.appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -35,11 +35,11 @@ import { appAccount } from '@ohos.account.appAccount';
 | [AuthCallback](arkts-basicservices-authcallback-i.md) | Implements authenticator callbacks. |
 | [AuthResult](arkts-basicservices-authresult-i.md) | Defines the authentication result. |
 | [AuthTokenInfo](arkts-basicservices-authtokeninfo-i.md) | Defines authorization token information. |
-| [AuthenticatorCallback](arkts-basicservices-authenticatorcallback-i.md) | Provides OAuth authenticator callbacks. &gt; **NOTE** &gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [AuthCallback](arkts-basicservices-authcallback-i.md#authcallback) instead. |
+| [AuthenticatorCallback](arkts-basicservices-authenticatorcallback-i.md) | Provides OAuth authenticator callbacks. &gt; **NOTE** &gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [AuthCallback](arkts-basicservices-authcallback-i.md) instead. |
 | [AuthenticatorInfo](arkts-basicservices-authenticatorinfo-i.md) | Defines OAuth authenticator information. |
 | [CreateAccountImplicitlyOptions](arkts-basicservices-createaccountimplicitlyoptions-i.md) | Defines the options for implicitly creating an application account. |
 | [CreateAccountOptions](arkts-basicservices-createaccountoptions-i.md) | Defines the options for creating an application account. |
-| [OAuthTokenInfo](arkts-basicservices-oauthtokeninfo-i.md) | Defines authorization token information. &gt; **NOTE** &gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [AuthTokenInfo](arkts-basicservices-authtokeninfo-i.md#authtokeninfo) instead. |
+| [OAuthTokenInfo](arkts-basicservices-oauthtokeninfo-i.md) | Defines authorization token information. &gt; **NOTE** &gt; &gt; This API is supported since API version 8 and deprecated since API version 9. You are advised to use &gt; [AuthTokenInfo](arkts-basicservices-authtokeninfo-i.md) instead. |
 | [SelectAccountsOptions](arkts-basicservices-selectaccountsoptions-i.md) | Defines the options for selecting accounts. |
 | [SetPropertiesOptions](arkts-basicservices-setpropertiesoptions-i.md) | Represents the options for setting authenticator properties. |
 | [VerifyCredentialOptions](arkts-basicservices-verifycredentialoptions-i.md) | Represents the options for verifying the user credential. |

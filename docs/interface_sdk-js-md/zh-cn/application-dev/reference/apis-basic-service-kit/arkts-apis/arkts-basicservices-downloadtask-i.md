@@ -346,7 +346,7 @@ off(type: 'progress', callback?: (receivedSize: number, totalSize: number) => vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -404,7 +404,7 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -488,7 +488,7 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -572,7 +572,7 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -656,7 +656,7 @@ off(type: 'fail', callback?: (err: number) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -714,7 +714,7 @@ on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -764,7 +764,7 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -824,7 +824,7 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -884,7 +884,7 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -944,7 +944,7 @@ on(type: 'fail', callback: (err: number) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters.<br> 2. Incorrect parameter type.<br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 

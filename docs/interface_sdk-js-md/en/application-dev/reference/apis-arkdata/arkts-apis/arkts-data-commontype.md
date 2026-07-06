@@ -9,7 +9,7 @@ The commonType module defines common data types in data management.
 ## Modules to Import
 
 ```TypeScript
-import { commonType } from '@ohos.data.commonType';
+import { commonType } from '@kit.ArkData';
 ```
 
 ## Summary

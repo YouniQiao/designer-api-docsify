@@ -9,7 +9,7 @@ Describes the audio-haptic file descriptor. > **NOTE** > > Ensure that **fd** is
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from '@ohos.multimedia.audioHaptic';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## fd

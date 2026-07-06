@@ -9,7 +9,7 @@ Provides the file information of a table item.
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@ohos.request';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## contentType

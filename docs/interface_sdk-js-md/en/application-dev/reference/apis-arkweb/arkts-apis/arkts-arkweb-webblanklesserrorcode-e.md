@@ -84,7 +84,7 @@ The similarity is low, and the system determines that the scene change is too la
 ERR_DURATION_OUT_OF_RANGE = -6
 ```
 
-The frame interpolation duration set in [BlanklessLoadingParam](arkts-arkweb-blanklessloadingparam-i.md#blanklessloadingparam) is out of range.
+The frame interpolation duration set in [BlanklessLoadingParam](arkts-arkweb-blanklessloadingparam-i.md) is out of range.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ The frame interpolation duration set in [BlanklessLoadingParam](arkts-arkweb-bla
 ERR_EXPIRATION_TIME_OUT_OF_RANGE = -7
 ```
 
-The historical frame expiration time set in [BlanklessLoadingParam](arkts-arkweb-blanklessloadingparam-i.md#blanklessloadingparam) is out of range.
+The historical frame expiration time set in [BlanklessLoadingParam](arkts-arkweb-blanklessloadingparam-i.md) is out of range.
 
 **Since:** 23
 

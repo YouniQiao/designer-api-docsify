@@ -4,7 +4,7 @@
 type HdrMetadataValue = HdrMetadataType | HdrStaticMetadata | ArrayBuffer | HdrGainmapMetadata
 ```
 
-PixelMap使用的HDR元数据值类型，与[HdrMetadataKey](arkts-image-hdrmetadatakey-e.md#hdrmetadatakey)关键字对应。
+PixelMap使用的HDR元数据值类型，与[HdrMetadataKey](arkts-image-hdrmetadatakey-e.md)关键字对应。
 
 **起始版本：** 12
 

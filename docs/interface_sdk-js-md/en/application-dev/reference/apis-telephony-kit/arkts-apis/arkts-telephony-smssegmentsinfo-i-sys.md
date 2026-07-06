@@ -11,7 +11,7 @@ Defines the SMS message segment information.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@ohos.telephony.sms';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## encodeCount

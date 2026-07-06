@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@ohos.print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## startDiscoverPrinter
@@ -28,7 +28,7 @@ Discovers printers by specifying the extension list. The discovered printers con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | Yes | List of[PrintExtensionAbilities](arkts-basicservices-printextensionability-c.md#printextensionability) to be loaded.The list members are the bundle names of the applications with print extension abilities. An empty listindicates that all extension abilities are loaded. |
+| extensionList | Array&lt;string&gt; | Yes | List of[PrintExtensionAbilities](arkts-basicservices-printextensionability-c.md) to be loaded.The list members are the bundle names of the applications with print extension abilities. An empty listindicates that all extension abilities are loaded. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback to be invoked when a printer is discovered. |
 
 **Error codes:**
@@ -81,7 +81,7 @@ Discovers printers by specifying the extension list. The discovered printers con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | Yes | List of[PrintExtensionAbilities](arkts-basicservices-printextensionability-c.md#printextensionability) to be loaded.The list members are the bundle names of the applications with print extension abilities. An empty listindicates that all extension abilities are loaded. |
+| extensionList | Array&lt;string&gt; | Yes | List of[PrintExtensionAbilities](arkts-basicservices-printextensionability-c.md) to be loaded.The list members are the bundle names of the applications with print extension abilities. An empty listindicates that all extension abilities are loaded. |
 
 **Return value:**
 

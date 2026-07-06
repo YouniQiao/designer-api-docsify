@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from '@ohos.multimedia.audioHaptic';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## getAudioHapticManager

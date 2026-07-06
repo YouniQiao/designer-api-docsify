@@ -9,7 +9,7 @@ Queries the time zone transition rule.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@ohos.i18n';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## nextTransition

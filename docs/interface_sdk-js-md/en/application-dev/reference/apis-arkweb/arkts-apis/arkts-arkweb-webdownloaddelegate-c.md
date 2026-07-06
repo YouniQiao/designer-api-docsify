@@ -9,7 +9,7 @@ The download state is notified through this delegate.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## onBeforeDownload

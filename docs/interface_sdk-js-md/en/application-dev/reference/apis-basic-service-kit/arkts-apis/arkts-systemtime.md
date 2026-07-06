@@ -6,14 +6,14 @@ The **systemTime** module provides system time and time zone features. You can u
 
 **Deprecated since:** 9
 
-**Substitutes:** [systemDateTime:systemDateTime](arkts-systemdatetime.md#systemdatetime)
+**Substitutes:** [systemDateTime:systemDateTime](arkts-systemdatetime.md)
 
 **System capability:** SystemCapability.MiscServices.Time
 
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from '@ohos.systemTime';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

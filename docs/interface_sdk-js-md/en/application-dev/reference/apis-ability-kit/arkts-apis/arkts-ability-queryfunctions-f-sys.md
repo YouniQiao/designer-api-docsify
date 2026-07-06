@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from '@ohos.app.function.functionManager';
+import { functionManager } from '@kit.AbilityKit';
 ```
 
 ## queryFunctions

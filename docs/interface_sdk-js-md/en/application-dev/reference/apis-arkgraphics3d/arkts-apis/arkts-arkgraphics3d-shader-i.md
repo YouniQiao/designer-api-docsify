@@ -2,7 +2,7 @@
 
 Shader resource.
 
-**Inheritance/Implementation:** Shader extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md#sceneresource)
+**Inheritance/Implementation:** Shader extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md)
 
 **Since:** 12
 

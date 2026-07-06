@@ -11,7 +11,7 @@ Information for LiveView in AI image generation.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@ohos.arkui.intelligence.imageGeneration';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## getLongTermTaskId

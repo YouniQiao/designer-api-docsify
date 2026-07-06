@@ -1,6 +1,6 @@
 # Text属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)，还支持以下属性： **布局与对齐** 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下事件：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)，还支持以下属性： **布局与对齐** 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下事件：
 
 **继承/实现关系：** TextAttribute extends [CommonMethod<TextAttribute>](CommonMethod<TextAttribute>)
 
@@ -28,7 +28,7 @@ baselineOffset(value: number | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| ResourceStr | 是 | 文本基线的偏移量。<br/>默认值：0 <br>从API version 20开始，支持[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md#resource)类型。<br>**起始版本：** 20 |
+| value | number \| ResourceStr | 是 | 文本基线的偏移量。<br/>默认值：0 <br>从API version 20开始，支持[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md)类型。<br>**起始版本：** 20 |
 
 ## bindSelectionMenu
 
@@ -84,7 +84,7 @@ caretColor(color: ResourceColor)
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-设置是否开启行首标点符号压缩。 > **说明：** > > - 行首标点符号默认不压缩。 > > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md#paragraphstyle)的行首压缩的标点范围。
+设置是否开启行首标点符号压缩。 > **说明：** > > - 行首标点符号默认不压缩。 > > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md)的行首压缩的标点范围。
 
 **起始版本：** 23
 
@@ -106,7 +106,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 contentTransition(transition: Optional<ContentTransition>)
 ```
 
-可以设置为数字翻牌动效[NumericTextTransition](arkts-arkui-numerictexttransition-c.md#numerictexttransition)。
+可以设置为数字翻牌动效[NumericTextTransition](arkts-arkui-numerictexttransition-c.md)。
 
 **起始版本：** 20
 
@@ -194,7 +194,7 @@ decoration(value: DecorationStyleInterface)
 draggable(value: boolean)
 ```
 
-设置选中文本拖拽效果。 不能和[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1)事件同时使用。 当draggable设置为true时，需配合[CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md#copyoptions)使用，设置copyOptions为CopyOptions.InApp或者CopyOptions.LocalDevice，支 持对选中文本的拖拽及复制到输入框。
+设置选中文本拖拽效果。 不能和[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1)事件同时使用。 当draggable设置为true时，需配合[CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md)使用，设置copyOptions为CopyOptions.InApp或者CopyOptions.LocalDevice，支 持对选中文本的拖拽及复制到输入框。
 
 **起始版本：** 9
 
@@ -324,7 +324,7 @@ enableHapticFeedback(isEnabled: boolean)
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-设置是否对选中文本进行实体识别。该接口依赖设备底层应具有文本识别能力，否则设置不会生效。 当enableSelectedDataDetector设置为true时，默认识别所有类型的实体。 需要[CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md#copyoptions)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。
+设置是否对选中文本进行实体识别。该接口依赖设备底层应具有文本识别能力，否则设置不会生效。 当enableSelectedDataDetector设置为true时，默认识别所有类型的实体。 需要[CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。
 
 **起始版本：** 22
 
@@ -459,7 +459,7 @@ fontFamily(value: string | Resource)
 fontFeature(value: string)
 ```
 
-设置文字特性效果，比如数字等宽的特性。 格式为：normal \| \<feature-tag-value\> \<feature-tag-value\>的格式为：\<string\> \[ \<integer\> \| on \| off ] \<feature-tag-value\>的个数可以有多个，中间用','隔开。 例如，使用等宽数字的输入格式为："ss01" on。 > **说明：** > > 不支持Text内同时存在文本内容和Span或ImageSpan子组件。如果同时存在，只显示Span或ImageSpan内的内容。 > > 字体排版引擎会对开发者传入的宽度[width](arkts-arkui-commonmethod-c.md#width-1)进行向下取整，保证是整型像素后进行排版。如果向上取整，可能会出现文字右侧被截断。 > > 当多个Text组件在[Row](arkts-arkui-row.md)容器内布局且没有设置具体的布局分配信息时，Text会以Row的最大尺寸进行布局。如果需要子组件主轴累加的尺寸不超过Row容器主轴的尺寸，可以设置 > [layoutWeight](arkts-arkui-commonmethod-c.md#layoutweight-1)或者是以[Flex](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)布局来约束子组件的主轴尺寸。 > > 系统默认字体支持的liga连字：Th fb ff fb ffb ffh ffi ffk ffl fh fi fk fl rf rt rv rx ry。常导致Span、属性字符串的效果不符合预期，关闭liga连字特性可以规避。 > > 文字特性效果与使用的字体文件密切相关。例如，8标点挤压功能在当前系统默认字体中仅对左侧标点符号生效，而右侧标点符号及感叹号、顿号、问号均不生效。
+设置文字特性效果，比如数字等宽的特性。 格式为：normal \| \<feature-tag-value\> \<feature-tag-value\>的格式为：\<string\> \[ \<integer\> \| on \| off ] \<feature-tag-value\>的个数可以有多个，中间用','隔开。 例如，使用等宽数字的输入格式为："ss01" on。 > **说明：** > > 不支持Text内同时存在文本内容和Span或ImageSpan子组件。如果同时存在，只显示Span或ImageSpan内的内容。 > > 字体排版引擎会对开发者传入的宽度[width](arkts-arkui-commonmethod-c.md#width-1)进行向下取整，保证是整型像素后进行排版。如果向上取整，可能会出现文字右侧被截断。 > > 当多个Text组件在[Row](arkts-arkui-row.md)容器内布局且没有设置具体的布局分配信息时，Text会以Row的最大尺寸进行布局。如果需要子组件主轴累加的尺寸不超过Row容器主轴的尺寸，可以设置 > [layoutWeight](arkts-arkui-commonmethod-c.md#layoutweight-1)或者是以[Flex](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)布局来约束子组件的主轴尺寸。 > > 系统默认字体支持的liga连字：Th fb ff fb ffb ffh ffi ffk ffl fh fi fk fl rf rt rv rx ry。常导致Span、属性字符串的效果不符合预期，关闭liga连字特性可以规避。 > > 文字特性效果与使用的字体文件密切相关。例如，8标点挤压功能在当前系统默认字体中仅对左侧标点符号生效，而右侧标点符号及感叹号、顿号、问号均不生效。
 
 **起始版本：** 12
 
@@ -563,7 +563,7 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| ResourceStr | 是 | 文本的字体粗细，number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。<br/>默认值：FontWeight.Normal<br/>Wearable设备上默认值为：FontWeight.Regular <br>从API version 20开始，支持[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md#resource)类型。<br>**起始版本：** 20 |
+| value | number \| FontWeight \| ResourceStr | 是 | 文本的字体粗细，number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。<br/>默认值：FontWeight.Normal<br/>Wearable设备上默认值为：FontWeight.Regular <br>从API version 20开始，支持[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md)类型。<br>**起始版本：** 20 |
 
 ## fontWeight
 
@@ -587,7 +587,7 @@ fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| weight | number \| FontWeight \| ResourceStr | 是 | 设置文本字重。number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。 <br>从APIversion 20开始，支持[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md#resource)类型。<br>**起始版本：** 20 |
+| weight | number \| FontWeight \| ResourceStr | 是 | 设置文本字重。number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。 <br>从APIversion 20开始，支持[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md)类型。<br>**起始版本：** 20 |
 | options | FontSettingOptions | 否 | 设置字体配置项。<br/>当options的参数enableVariableFontWeight取值false时，禁用可变字重调节，weight取值为[100, 900]范围内的整百数值时，字重取值为weight。weight是非整百数值时，字重取默认值400。<br/>当options的参数enableVariableFontWeight取值true时，启用可变字重调节，weight取值为[100, 900]范围内任意整数时，字重取值为weight。 |
 
 ## halfLeading
@@ -698,7 +698,7 @@ letterSpacing(value: number | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| ResourceStr | 是 | 文本字符间距。<br/>默认值：0<br/>单位：[fp](../../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) <br>从API version 20开始，支持[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md#resource)类型。<br>**起始版本：** 20 |
+| value | number \| ResourceStr | 是 | 文本字符间距。<br/>默认值：0<br/>单位：[fp](../../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) <br>从API version 20开始，支持[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md)类型。<br>**起始版本：** 20 |
 
 ## lineBreakStrategy
 
@@ -1131,7 +1131,7 @@ optimizeTrailingSpace(optimize: Optional<boolean>)
 orphanCharOptimization(enabled: Optional<boolean>)
 ```
 
-设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。 孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](TextAttribute#wordBreak)为非 BREAK_ALL并且待排版文本首个[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md#textstyle)的 [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md#textstyle)为“zh-Hans”或“zh-Hant”时生效。
+设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。 孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](TextAttribute#wordBreak)为非 BREAK_ALL并且待排版文本首个[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md)的 [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md)为“zh-Hans”或“zh-Hant”时生效。
 
 **起始版本：** 26.0.0
 
@@ -1264,7 +1264,7 @@ selection(selectionStart: number, selectionEnd: number)
 shaderStyle(shader: ShaderStyle)
 ```
 
-可以显示为径向渐变[RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md#radialgradientstyle)或线性渐变[LinearGradientStyle](arkts-arkui-lineargradientstyle-c.md#lineargradientstyle)或纯色 [ColorShaderStyle](arkts-arkui-colorshaderstyle-c.md#colorshaderstyle)的效果，shaderStyle的优先级高于[fontColor](SymbolSpanAttribute#fontColor)和AI识 别，纯色建议使用[fontColor](SymbolSpanAttribute#fontColor)。
+可以显示为径向渐变[RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md)或线性渐变[LinearGradientStyle](arkts-arkui-lineargradientstyle-c.md)或纯色 [ColorShaderStyle](arkts-arkui-colorshaderstyle-c.md)的效果，shaderStyle的优先级高于[fontColor](SymbolSpanAttribute#fontColor)和AI识 别，纯色建议使用[fontColor](SymbolSpanAttribute#fontColor)。
 
 **起始版本：** 20
 
@@ -1278,7 +1278,7 @@ shaderStyle(shader: ShaderStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shader | ShaderStyle | 是 | 径向渐变或线性渐变或纯色。<br/>根据传入的参数区分处理径向渐变[RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md#radialgradientstyle)或线性渐变[LinearGradientStyle](arkts-arkui-lineargradientstyle-c.md#lineargradientstyle)或纯色[ColorShaderStyle](arkts-arkui-colorshaderstyle-c.md#colorshaderstyle)，最终设置到Text文本上显示为渐变色效果。<br/>**说明：** <br/>当设置为径向渐变[RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md#radialgradientstyle)时，若[RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md#radialgradientoptions)的center参数设置到组件范围外时，可将repeating参数设置为true，此时渐变效果会更明显。 |
+| shader | ShaderStyle | 是 | 径向渐变或线性渐变或纯色。<br/>根据传入的参数区分处理径向渐变[RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md)或线性渐变[LinearGradientStyle](arkts-arkui-lineargradientstyle-c.md)或纯色[ColorShaderStyle](arkts-arkui-colorshaderstyle-c.md)，最终设置到Text文本上显示为渐变色效果。<br/>**说明：** <br/>当设置为径向渐变[RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md)时，若[RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md)的center参数设置到组件范围外时，可将repeating参数设置为true，此时渐变效果会更明显。 |
 
 ## tailIndents
 
@@ -1418,7 +1418,7 @@ textIndent(value: Length)
 textOverflow(options: TextOverflowOptions)
 ```
 
-设置文本超长时的显示方式。 当 [TextOverflowOptions](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#textoverflowoptions18对象说明) 设置为TextOverflow.None、TextOverflow.Clip或TextOverflow.Ellipsis时： - 设置为TextOverflow.None、TextOverflow.Clip，文本超长时按最大行截断显示。 - 设置为TextOverflow.Ellipsis，文本超长时显示不下的文本用省略号代替。 - 需配合[maxLines](TextAttribute#maxLines)使用，单独设置不生效。 - 断行规则参考[wordBreak](TextAttribute#wordBreak)。默认情况下参考WordBreak.BREAK_WORD的截断方式，文本截断按字进行。例如，英文以单词为最小单位进行截断。若需要以 字母为单位进行截断，可设置wordBreak属性为WordBreak.BREAK_ALL。 - 折行规则参考[lineBreakStrategy](TextAttribute#lineBreakStrategy)。该属性在[wordBreak](TextAttribute#wordBreak)不等 于WordBreak.BREAK_ALL的时候生效，不支持连词符。 - 从API version 11开始，建议优先组合[textOverflow](TextAttribute#textOverflow)和 [wordBreak](TextAttribute#wordBreak)属性来设置截断方式，具体详见 [示例4（设置文本断行及折行）](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例4设置文本断行及折行)<!--RP1--><!--RP1 End-->。 当TextOverflowOptions设置为TextOverflow.MARQUEE时： - 文本在一行内滚动显示。 - 设置[maxLines](TextAttribute#maxLines)及[copyOption](TextAttribute#copyOption)属性均不生效。 - Text组件[clip](arkts-arkui-commonmethod-c.md#clip-1)属性默认为true。 - 属性字符串的[CustomSpan](arkts-arkui-customspan-c.md#customspan)不支持跑马灯模式。 - [textAlign](TextAttribute#textAlign)属性的生效规则：当文本不可滚动时，textAlign属性生效；当文本可滚动时，textAlign属性不生效。 - 从API version 12开始，当TextOverflowOptions设置为TextOverflow.MARQUEE时，支持ImageSpan组件，文本和图片可在一行内滚动显示。
+设置文本超长时的显示方式。 当 [TextOverflowOptions](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#textoverflowoptions18对象说明) 设置为TextOverflow.None、TextOverflow.Clip或TextOverflow.Ellipsis时： - 设置为TextOverflow.None、TextOverflow.Clip，文本超长时按最大行截断显示。 - 设置为TextOverflow.Ellipsis，文本超长时显示不下的文本用省略号代替。 - 需配合[maxLines](TextAttribute#maxLines)使用，单独设置不生效。 - 断行规则参考[wordBreak](TextAttribute#wordBreak)。默认情况下参考WordBreak.BREAK_WORD的截断方式，文本截断按字进行。例如，英文以单词为最小单位进行截断。若需要以 字母为单位进行截断，可设置wordBreak属性为WordBreak.BREAK_ALL。 - 折行规则参考[lineBreakStrategy](TextAttribute#lineBreakStrategy)。该属性在[wordBreak](TextAttribute#wordBreak)不等 于WordBreak.BREAK_ALL的时候生效，不支持连词符。 - 从API version 11开始，建议优先组合[textOverflow](TextAttribute#textOverflow)和 [wordBreak](TextAttribute#wordBreak)属性来设置截断方式，具体详见 [示例4（设置文本断行及折行）](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例4设置文本断行及折行)<!--RP1--><!--RP1 End-->。 当TextOverflowOptions设置为TextOverflow.MARQUEE时： - 文本在一行内滚动显示。 - 设置[maxLines](TextAttribute#maxLines)及[copyOption](TextAttribute#copyOption)属性均不生效。 - Text组件[clip](arkts-arkui-commonmethod-c.md#clip-1)属性默认为true。 - 属性字符串的[CustomSpan](arkts-arkui-customspan-c.md)不支持跑马灯模式。 - [textAlign](TextAttribute#textAlign)属性的生效规则：当文本不可滚动时，textAlign属性生效；当文本可滚动时，textAlign属性不生效。 - 从API version 12开始，当TextOverflowOptions设置为TextOverflow.MARQUEE时，支持ImageSpan组件，文本和图片可在一行内滚动显示。
 
 **起始版本：** 7
 
@@ -1486,7 +1486,7 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 textVerticalAlign(textVerticalAlign: Optional<TextVerticalAlign>)
 ```
 
-设置文本段落在垂直方向的对齐方式。 > **说明：** > > - 与[halfLeading](TextAttribute#halfLeading)同时配置时，halfLeading不生效。 > > - 一个段落下使用同一字号必须同时设置行高[lineHeight](TextAttribute#lineHeight)或者同一个段落不同字号文本混排时才有效果差异，否则设置了该属性任意枚举值和未设置该属性都是一样的 > 排版效果。属性字符串[TextStyle](arkts-arkui-textstyle-i.md#textstyle)中的SuperscriptStyle上下角标样式仅在[TextVerticalAlign](arkts-arkui-textverticalalign-e.md#textverticalalign)属性值为 > TextVerticalAlign.BASELINE时生效，其余垂直对齐方式下上下角标文本和普通文本表现一致，无上下角标效果。
+设置文本段落在垂直方向的对齐方式。 > **说明：** > > - 与[halfLeading](TextAttribute#halfLeading)同时配置时，halfLeading不生效。 > > - 一个段落下使用同一字号必须同时设置行高[lineHeight](TextAttribute#lineHeight)或者同一个段落不同字号文本混排时才有效果差异，否则设置了该属性任意枚举值和未设置该属性都是一样的 > 排版效果。属性字符串[TextStyle](arkts-arkui-textstyle-i.md)中的SuperscriptStyle上下角标样式仅在[TextVerticalAlign](arkts-arkui-textverticalalign-e.md)属性值为 > TextVerticalAlign.BASELINE时生效，其余垂直对齐方式下上下角标文本和普通文本表现一致，无上下角标效果。
 
 **起始版本：** 20
 

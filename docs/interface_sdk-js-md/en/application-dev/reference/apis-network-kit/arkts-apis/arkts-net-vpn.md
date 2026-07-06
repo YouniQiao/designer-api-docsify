@@ -9,7 +9,7 @@ Provides VPN related interfaces.
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@ohos.net.vpn';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## Summary

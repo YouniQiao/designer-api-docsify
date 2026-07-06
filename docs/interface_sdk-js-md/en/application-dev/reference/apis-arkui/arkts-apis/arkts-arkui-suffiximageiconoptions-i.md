@@ -1,8 +1,8 @@
 # SuffixImageIconOptions
 
-Defines the configuration options for suffix icons. Inherits from [IconOptions](arkts-arkui-iconoptions-i.md#iconoptions).
+Defines the configuration options for suffix icons. Inherits from [IconOptions](arkts-arkui-iconoptions-i.md).
 
-**Inheritance/Implementation:** SuffixImageIconOptions extends [IconOptions](arkts-arkui-iconoptions-i.md#iconoptions)
+**Inheritance/Implementation:** SuffixImageIconOptions extends [IconOptions](arkts-arkui-iconoptions-i.md)
 
 **Since:** 14
 
@@ -11,7 +11,7 @@ Defines the configuration options for suffix icons. Inherits from [IconOptions](
 ## Modules to Import
 
 ```TypeScript
-import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@ohos.arkui.advanced.ChipGroup';
+import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription

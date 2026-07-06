@@ -6,14 +6,14 @@ Provides APIs for managing the **UserAuth** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AuthInstance](arkts-userauthentication-authinstance-i.md#authinstance)
+**Substitutes:** [AuthInstance](arkts-userauthentication-authinstance-i.md)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@ohos.userIAM.userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## auth
@@ -106,7 +106,7 @@ Cancels the authentication based on the context ID.
 
 | Type | Description |
 | --- | --- |
-| number | Returns **SUCCESS** if the cancellation is successful. Returns a[ResultCode](arkts-userauthentication-resultcode-e.md#resultcode) otherwise. |
+| number | Returns **SUCCESS** if the cancellation is successful. Returns a[ResultCode](arkts-userauthentication-resultcode-e.md) otherwise. |
 
 **Example**
 
@@ -179,7 +179,7 @@ Checks whether the specified authentication capability is supported.
 
 | Type | Description |
 | --- | --- |
-| number | Query result. If the authentication capability is supported, **SUCCESS** is returned.Otherwise, a [ResultCode](arkts-userauthentication-resultcode-e.md#resultcode) is returned. |
+| number | Query result. If the authentication capability is supported, **SUCCESS** is returned.Otherwise, a [ResultCode](arkts-userauthentication-resultcode-e.md) is returned. |
 
 **Example**
 

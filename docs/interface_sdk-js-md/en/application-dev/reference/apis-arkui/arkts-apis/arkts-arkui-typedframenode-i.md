@@ -1,8 +1,8 @@
 # TypedFrameNode
 
-Extends [FrameNode](arkts-arkui-framenode-c.md#framenode) to define a FrameNode with specific type constraints.
+Extends [FrameNode](arkts-arkui-framenode-c.md) to define a FrameNode with specific type constraints.
 
-**Inheritance/Implementation:** TypedFrameNode extends [FrameNode](arkts-arkui-framenode-c.md#framenode)
+**Inheritance/Implementation:** TypedFrameNode extends [FrameNode](arkts-arkui-framenode-c.md)
 
 **Since:** 12
 

@@ -9,7 +9,7 @@ The serverCert field of the server certificate, which includes two attributes: F
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@ohos.net.webSocket';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## certPath

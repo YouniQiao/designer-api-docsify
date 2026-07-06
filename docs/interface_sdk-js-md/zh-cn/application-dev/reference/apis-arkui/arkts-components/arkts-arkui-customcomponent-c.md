@@ -2,7 +2,7 @@
 
 自定义组件
 
-**继承/实现关系：** CustomComponent extends [BaseCustomComponent](arkts-arkui-basecustomcomponent-c.md#basecustomcomponent)
+**继承/实现关系：** CustomComponent extends [BaseCustomComponent](arkts-arkui-basecustomcomponent-c.md)
 
 **起始版本：** 18
 

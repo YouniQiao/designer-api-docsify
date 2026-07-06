@@ -9,7 +9,7 @@ Provides information about the **Navigation** component.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@ohos.arkui.observer';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## navigationId

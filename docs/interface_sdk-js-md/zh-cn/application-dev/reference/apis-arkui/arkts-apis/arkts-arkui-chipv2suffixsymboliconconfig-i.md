@@ -2,7 +2,7 @@
 
 定义后缀符号的无障碍配置。
 
-**继承/实现关系：** ChipV2SuffixSymbolIconConfig extends [ChipV2SymbolIconConfig](arkts-arkui-chipv2symboliconconfig-i.md#chipv2symboliconconfig)
+**继承/实现关系：** ChipV2SuffixSymbolIconConfig extends [ChipV2SymbolIconConfig](arkts-arkui-chipv2symboliconconfig-i.md)
 
 **起始版本：** 26.0.0
 

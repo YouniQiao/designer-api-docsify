@@ -9,7 +9,7 @@ Declare Filter.The Filter is used in scenarios where multi-dimensional filtering
 ## Modules to Import
 
 ```TypeScript
-import { FilterType, Filter, FilterParams, FilterResult } from '@ohos.arkui.advanced.Filter';
+import { FilterType, Filter, FilterParams, FilterResult } from '@kit.ArkUI';
 ```
 
 ## additionFilters
@@ -44,7 +44,7 @@ Container in the user-defined filtering result display area.
 
 **Since:** 22
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

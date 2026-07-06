@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## installUserTrustedCertificate
@@ -32,7 +32,7 @@ Install the user CA certificate. Use Promise asynchronous callback.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **uri** in the[CMResult](arkts-devicecertificate-cmresult-i.md#cmresult) object. |
+| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **uri** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

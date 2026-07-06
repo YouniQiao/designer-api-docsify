@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from '@ohos.security.huksExternalCrypto';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## unregisterProvider
@@ -25,7 +25,7 @@ Unregisters a specified external Provider. This API uses a promise to return the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | providerName | string | Yes | Provider name, which contains a maximum of 128 characters. It is recommended thatthe value contain the vendor information, be globally unique, and not contain sensitive data such as personalcontact information. If a provider has registered multiple extension capabilities, all the extensioncapabilities of the provider will be unregistered. |
-| params | Array&lt;HuksExternalCryptoParam&gt; | No | Parameters to be passed during the operation.<br>You canspecify [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcryptotagtype-e.md#huksexternalcryptotagtype) in the**params** parameter to unregister the corresponding **cryptoExtensionAbility** based on the bundle name,**providerName**, and **abilityName**.<br>If[HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcryptotagtype-e.md#huksexternalcryptotagtype) is not specified in the**params** parameter or the **params** parameter is not passed, all providers under the corresponding**providerName** are unregistered. |
+| params | Array&lt;HuksExternalCryptoParam&gt; | No | Parameters to be passed during the operation.<br>You canspecify [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcryptotagtype-e.md) in the**params** parameter to unregister the corresponding **cryptoExtensionAbility** based on the bundle name,**providerName**, and **abilityName**.<br>If[HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcryptotagtype-e.md) is not specified in the**params** parameter or the **params** parameter is not passed, all providers under the corresponding**providerName** are unregistered. |
 
 **Return value:**
 

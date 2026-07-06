@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from '@ohos.bundle';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## getBundleInfos
@@ -30,7 +30,7 @@ Obtains all BundleInfo for a specified user in the system. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundleinformation object. Value range: see the bundle information related flagsin [BundleFlag](arkts-ability-bundleflag-e.md#bundleflag). |
+| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundleinformation object. Value range: see the bundle information related flagsin [BundleFlag](arkts-ability-bundleflag-e.md). |
 | userId | number | Yes | User ID. Value range: greater than or equal to 0. |
 | callback | AsyncCallback&lt;Array&lt;BundleInfo&gt;&gt; | Yes | Callback used to return the result. If getBundleInfosis successful, **err** is **undefined**, and the BundleInfo of allbundles under the specified user as the input parameter at program startup.Otherwise, **err** is an error object. |
 
@@ -77,7 +77,7 @@ Obtains all BundleInfo for the current user. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundleinformation object. Value range: see the bundle information related flagsin [BundleFlag](arkts-ability-bundleflag-e.md#bundleflag). |
+| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundleinformation object. Value range: see the bundle information related flagsin [BundleFlag](arkts-ability-bundleflag-e.md). |
 | callback | AsyncCallback&lt;Array&lt;BundleInfo&gt;&gt; | Yes | Callback used to return the result. If getBundleInfosis successful, **err** is **undefined**, and all available BundleInfo as the input parameter atprogram startup. Otherwise, **err** is an error object. |
 
 **Example**
@@ -122,7 +122,7 @@ Obtains all BundleInfo for a specified user. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in thereturned bundle information object. Value range: see the bundle information related flagsin [BundleFlag](arkts-ability-bundleflag-e.md#bundleflag). |
+| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in thereturned bundle information object. Value range: see the bundle information related flagsin [BundleFlag](arkts-ability-bundleflag-e.md). |
 | userId | number | No | User ID.Default value: the user to which the caller belongs.Value range: greater than or equal to 0. |
 
 **Return value:**

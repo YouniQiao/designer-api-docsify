@@ -9,7 +9,7 @@ Provide a simple date time formatting interface.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@ohos.i18n';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## format

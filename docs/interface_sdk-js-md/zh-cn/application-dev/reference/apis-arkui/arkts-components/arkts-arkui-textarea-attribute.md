@@ -1,6 +1,6 @@
 # TextArea属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下事件：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下事件：
 
 **继承/实现关系：** TextAreaAttribute extends [CommonMethod<TextAreaAttribute>](CommonMethod<TextAreaAttribute>)
 
@@ -100,7 +100,7 @@ caretStyle(value: CaretStyle)
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-设置是否开启行首标点符号压缩。 > **说明：** > > - 行首标点符号默认不压缩。 > > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md#paragraphstyle)的行首压缩的标点范围。
+设置是否开启行首标点符号压缩。 > **说明：** > > - 行首标点符号默认不压缩。 > > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md)的行首压缩的标点范围。
 
 **起始版本：** 23
 
@@ -164,7 +164,7 @@ copyOption(value: CopyOptions)
 customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions)
 ```
 
-设置自定义键盘。 当设置自定义键盘时，输入框激活后不会打开系统输入法，而是加载指定的自定义组件。 自定义键盘的高度可以通过自定义组件根节点的height属性设置，宽度则使用系统默认值。 自定义键盘采用覆盖原始界面的方式呈现，当没有开启避让模式或者输入框不需要避让的场景，不会对应用原始界面产生压缩或者上提。 自定义键盘无法获取焦点，但是会拦截手势事件。 默认在输入控件失去焦点时，关闭自定义键盘，开发者也可以通过[TextAreaController](arkts-arkui-textareacontroller-c.md#textareacontroller). [stopEditing](arkts-arkui-textareacontroller-c.md#stopediting-1)方法控制键盘关闭。 当设置自定义键盘时，可以通过绑定[onKeyPreIme](arkts-arkui-commonmethod-c.md#onkeypreime-1)事件规避物理键盘的输入。 从API version 23开始，自定义键盘可以通过 [setCustomKeyboardContinueFeature](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature23) 开启接续，在切换至其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。 > **说明：** > > 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+设置自定义键盘。 当设置自定义键盘时，输入框激活后不会打开系统输入法，而是加载指定的自定义组件。 自定义键盘的高度可以通过自定义组件根节点的height属性设置，宽度则使用系统默认值。 自定义键盘采用覆盖原始界面的方式呈现，当没有开启避让模式或者输入框不需要避让的场景，不会对应用原始界面产生压缩或者上提。 自定义键盘无法获取焦点，但是会拦截手势事件。 默认在输入控件失去焦点时，关闭自定义键盘，开发者也可以通过[TextAreaController](arkts-arkui-textareacontroller-c.md). [stopEditing](arkts-arkui-textareacontroller-c.md#stopediting-1)方法控制键盘关闭。 当设置自定义键盘时，可以通过绑定[onKeyPreIme](arkts-arkui-commonmethod-c.md#onkeypreime-1)事件规避物理键盘的输入。 从API version 23开始，自定义键盘可以通过 [setCustomKeyboardContinueFeature](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature23) 开启接续，在切换至其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。 > **说明：** > > 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 10
 
@@ -363,7 +363,7 @@ enablePreviewText(enable: boolean)
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-设置是否对选中文本进行实体识别。该接口依赖设备底层应具有文本识别能力，否则设置不会生效。 当enableSelectedDataDetector设置为true时，默认识别所有类型的实体。 需要[CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md#copyoptions)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。
+设置是否对选中文本进行实体识别。该接口依赖设备底层应具有文本识别能力，否则设置不会生效。 当enableSelectedDataDetector设置为true时，默认识别所有类型的实体。 需要[CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。
 
 **起始版本：** 22
 
@@ -740,7 +740,7 @@ lineHeight(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本的文本行高。需要显式指定[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)，如'10px'，也可设置百分比字符串，如'100%'。<br>**说明**：不指定像素单位时，默认单位fp，如'10'，等同于10。 |
+| value | number \| string \| Resource | 是 | 文本的文本行高。需要显式指定[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)，如'10px'，也可设置百分比字符串，如'100%'。<br>**说明**：不指定像素单位时，默认单位fp，如'10'，等同于10。 |
 
 ## lineSpacing
 
@@ -970,7 +970,7 @@ minLines(lines: Optional<number>)
 onChange(callback: EditableTextOnChangeCallback)
 ```
 
-输入内容发生变化时，触发该回调。 在本回调中，若执行了光标操作，需要开发者在预上屏场景下依据[EditableTextOnChangeCallback](arkts-arkui-editabletextonchangecallback-t.md#editabletextonchangecallback)的previewText参数调整光标逻 辑，以适应预上屏场景。
+输入内容发生变化时，触发该回调。 在本回调中，若执行了光标操作，需要开发者在预上屏场景下依据[EditableTextOnChangeCallback](arkts-arkui-editabletextonchangecallback-t.md)的previewText参数调整光标逻 辑，以适应预上屏场景。
 
 **起始版本：** 7
 
@@ -1336,7 +1336,7 @@ onWillInsert(callback: Callback<InsertValue, boolean>)
 orphanCharOptimization(enabled: Optional<boolean>)
 ```
 
-设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。 孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](TextAreaAttribute#wordBreak)为非 BREAK_ALL并且待排版文本首个[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md#textstyle)的 [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md#textstyle)为“zh-Hans”或“zh-Hant”时生效。
+设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。 孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](TextAreaAttribute#wordBreak)为非 BREAK_ALL并且待排版文本首个[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md)的 [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md)为“zh-Hans”或“zh-Hant”时生效。
 
 **起始版本：** 26.0.0
 
@@ -1609,7 +1609,7 @@ strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strokeJoinStyle | StrokeJoinStyle \| undefined | 是 | 文本描边拐角样式。<br/>值为undefined时，按照StrokeJoinStyle.MITER_JOIN处理，请参考[StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md#strokejoinstyle)，文本拐角处表现为锐角。 |
+| strokeJoinStyle | StrokeJoinStyle \| undefined | 是 | 文本描边拐角样式。<br/>值为undefined时，按照StrokeJoinStyle.MITER_JOIN处理，请参考[StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)，文本拐角处表现为锐角。 |
 
 ## strokeWidth
 
@@ -1725,7 +1725,7 @@ textIndent(value: Dimension)
 textOverflow(value: TextOverflow)
 ```
 
-设置文本超长时的显示方式。 内联模式，主动配置textOverflow才会生效按[maxLines](TextAreaAttribute#maxLines(value: number))截断效果，不配置时，默认不截断。 文本截断是按字截断。例如，英文以单词为最小单位进行截断，若需要以字母为单位进行截断，[wordBreak](arkts-arkui-wordbreak-e.md#wordbreak)属性可设置为WordBreak.BREAK_ALL。 当textOverflow设置为TextOverflow.None、TextOverflow.Clip、TextOverflow.Ellipsis时，需配合 [maxLines](TextAreaAttribute#maxLines(value: number))使用，单独设置不生效。设置TextOverflow.None与TextOverflow.Clip效果一样。 > **说明：** > > TextArea组件不支持设置TextOverflow.MARQUEE模式，当设置为TextOverflow.MARQUEE模式时，显示为TextOverflow.Clip。
+设置文本超长时的显示方式。 内联模式，主动配置textOverflow才会生效按[maxLines](TextAreaAttribute#maxLines(value: number))截断效果，不配置时，默认不截断。 文本截断是按字截断。例如，英文以单词为最小单位进行截断，若需要以字母为单位进行截断，[wordBreak](arkts-arkui-wordbreak-e.md)属性可设置为WordBreak.BREAK_ALL。 当textOverflow设置为TextOverflow.None、TextOverflow.Clip、TextOverflow.Ellipsis时，需配合 [maxLines](TextAreaAttribute#maxLines(value: number))使用，单独设置不生效。设置TextOverflow.None与TextOverflow.Clip效果一样。 > **说明：** > > TextArea组件不支持设置TextOverflow.MARQUEE模式，当设置为TextOverflow.MARQUEE模式时，显示为TextOverflow.Clip。
 
 **起始版本：** 12
 

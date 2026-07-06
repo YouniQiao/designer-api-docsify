@@ -1,6 +1,6 @@
 # TypeErrorConstructor
 
-**Inheritance/Implementation:** TypeErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md#errorconstructor)
+**Inheritance/Implementation:** TypeErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md)
 
 ## constructor
 

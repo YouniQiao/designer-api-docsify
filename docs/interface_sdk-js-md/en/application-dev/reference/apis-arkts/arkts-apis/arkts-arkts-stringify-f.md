@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { JSON } from '@ohos.util.json';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## stringify

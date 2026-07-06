@@ -9,7 +9,7 @@ Defines the configuration options of the **SelectionMenu** component.
 ## Modules to Import
 
 ```TypeScript
-import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu, ExpandedMenuOptions } from '@ohos.arkui.advanced.SelectionMenu';
+import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu, ExpandedMenuOptions } from '@kit.ArkUI';
 ```
 
 ## backgroundSystemMaterial

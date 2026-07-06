@@ -11,7 +11,7 @@ Provides APIs for random number operations. Before using any API of the **Random
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## enableHardwareEntropy

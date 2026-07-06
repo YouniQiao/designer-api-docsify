@@ -1,6 +1,6 @@
 # HuksHandle
 
-huks Handle结构体。 > **说明：** > > 从API version 9开始废弃，建议使用[HuksSessionHandle<sup>9+</sup>](arkts-universalkeystore-hukssessionhandle-i.md#hukssessionhandle)替代。
+huks Handle结构体。 > **说明：** > > 从API version 9开始废弃，建议使用[HuksSessionHandle<sup>9+</sup>](arkts-universalkeystore-hukssessionhandle-i.md)替代。
 
 **起始版本：** 8
 

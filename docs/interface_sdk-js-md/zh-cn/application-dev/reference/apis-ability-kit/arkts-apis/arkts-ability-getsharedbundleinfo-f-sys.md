@@ -22,7 +22,7 @@ function getSharedBundleInfo(bundleName: string,  moduleName: string, callback: 
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用程序的bundleName。 |
 | moduleName | string | 是 | 表示被查询的module的name。 |
-| callback | AsyncCallback&lt;Array&lt;SharedBundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为获取的指定共享包信息。 |
+| callback | AsyncCallback&lt;Array&lt;SharedBundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取的指定共享包信息。 |
 
 **错误码：**
 

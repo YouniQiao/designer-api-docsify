@@ -6,14 +6,14 @@ Represents the authentication result object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AuthResultInfo](arkts-userauthentication-authresultinfo-i.md#authresultinfo)
+**Substitutes:** [AuthResultInfo](arkts-userauthentication-authresultinfo-i.md)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@ohos.userIAM.userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## freezingTime

@@ -18,7 +18,7 @@ function queryDevices(busType?: number): Array<Readonly<Device>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| busType | number | 否 | 由[BusType](arkts-driverdevelopment-bustype-e.md#bustype)约定的设备总线类型，不填则查找所有类型设备。 |
+| busType | number | 否 | 由[BusType](arkts-driverdevelopment-bustype-e.md)约定的设备总线类型，不填则查找所有类型设备。 |
 
 **返回值：**
 

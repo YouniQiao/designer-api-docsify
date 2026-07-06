@@ -1,19 +1,19 @@
 # PhotoViewPicker
 
-Provides APIs for selecting and saving images or videos. You are advised to use [PhotoViewPicker of PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#photoaccesshelper) to select a file. Before using the APIs of **PhotoViewPicker**, you need to create a **PhotoViewPicker** instance.
+Provides APIs for selecting and saving images or videos. You are advised to use [PhotoViewPicker of PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md) to select a file. Before using the APIs of **PhotoViewPicker**, you need to create a **PhotoViewPicker** instance.
 
 **Since:** 9
 
 **Deprecated since:** 12
 
-**Substitutes:** [PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoviewpicker-c.md#photoviewpicker)
+**Substitutes:** [PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoviewpicker-c.md)
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@ohos.file.picker';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -28,7 +28,7 @@ A constructor used to create a PhotoViewPicker instance. This constructor is not
 
 **Deprecated since:** 18
 
-**Substitutes:** [PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoviewpicker-c.md#photoviewpicker)
+**Substitutes:** [PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoviewpicker-c.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,7 +53,7 @@ A constructor used to create a PhotoViewPicker instance. This constructor is rec
 
 **Deprecated since:** 18
 
-**Substitutes:** [PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoviewpicker-c.md#photoviewpicker)
+**Substitutes:** [PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoviewpicker-c.md)
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -61,7 +61,7 @@ A constructor used to create a PhotoViewPicker instance. This constructor is rec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context (only **UIAbilityContext** is supported). For details about theapplication context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context). |
+| context | Context | Yes | Application context (only **UIAbilityContext** is supported). For details about theapplication context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
 
 **Example**
 

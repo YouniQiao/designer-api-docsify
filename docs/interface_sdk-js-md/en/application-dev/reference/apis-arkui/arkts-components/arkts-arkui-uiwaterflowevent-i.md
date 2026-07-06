@@ -2,7 +2,7 @@
 
 Represents the return value of the [getEvent('WaterFlow')](FrameNode:typeNode.getEvent(node: FrameNode, nodeType: 'WaterFlow')) method in **frameNode**, which can be used to set scroll events for a **WaterFlow** node.
 
-**Inheritance/Implementation:** UIWaterFlowEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md#uiscrollablecommonevent)
+**Inheritance/Implementation:** UIWaterFlowEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
 
 **Since:** 19
 

@@ -11,7 +11,7 @@ Result of the given downloadable Profile.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@ohos.telephony.esim';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## cardId

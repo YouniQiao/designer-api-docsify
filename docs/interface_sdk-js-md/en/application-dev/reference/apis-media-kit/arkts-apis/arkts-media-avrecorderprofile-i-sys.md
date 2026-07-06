@@ -9,7 +9,7 @@ Describes the audio and video recording profile.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableStableQualityMode

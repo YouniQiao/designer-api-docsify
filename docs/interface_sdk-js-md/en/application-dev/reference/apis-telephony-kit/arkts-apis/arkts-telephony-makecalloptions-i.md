@@ -9,7 +9,7 @@ Indicates the options of make call.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@ohos.telephony.call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## isCustomAccessibility

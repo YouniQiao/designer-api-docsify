@@ -9,7 +9,7 @@ Defines the configuration policy for the main thread jank event.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@ohos.hiviewdfx.hiAppEvent';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## autoStopSampling

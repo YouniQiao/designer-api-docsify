@@ -1,6 +1,6 @@
 # FrameNode
 
-Provides APIs for creating a specific type of FrameNode, which can be mounted through the basic API of the FrameNode and be displayed using a placeholder container. When **typeNode** is used to create [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md#text), [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image), [Select](../arkts-components/arkts-arkui-select.md), or [Toggle](../arkts-components/arkts-arkui-toggle.md) nodes, if the UI instance corresponding to the input [UIContext](arkts-arkui-uicontext.md) is destroyed, this API returns an invalid FrameNode that cannot be properly mounted or displayed.
+Provides APIs for creating a specific type of FrameNode, which can be mounted through the basic API of the FrameNode and be displayed using a placeholder container. When **typeNode** is used to create [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md), [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md), [Select](../arkts-components/arkts-arkui-select.md), or [Toggle](../arkts-components/arkts-arkui-toggle.md) nodes, if the UI instance corresponding to the input [UIContext](arkts-arkui-uicontext.md) is destroyed, this API returns an invalid FrameNode that cannot be properly mounted or displayed.
 
 ## Summary
 
@@ -8,7 +8,7 @@ Provides APIs for creating a specific type of FrameNode, which can be mounted th
 
 | Name | Description |
 | --- | --- |
-| [typeNode](arkts-arkui-typenode-n.md) | Provides APIs for creating a specific type of FrameNode, which can be mounted through the basic API of the FrameNode and be displayed using a placeholder container. When **typeNode** is used to create [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md#text), [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image), [Select](../arkts-components/arkts-arkui-select.md), or [Toggle](../arkts-components/arkts-arkui-toggle.md) nodes, if the UI instance corresponding to the input [UIContext](arkts-arkui-uicontext.md) is destroyed, this API returns an invalid FrameNode that cannot be properly mounted or displayed. |
+| [typeNode](arkts-arkui-typenode-n.md) | Provides APIs for creating a specific type of FrameNode, which can be mounted through the basic API of the FrameNode and be displayed using a placeholder container. When **typeNode** is used to create [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md), [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md), [Select](../arkts-components/arkts-arkui-select.md), or [Toggle](../arkts-components/arkts-arkui-toggle.md) nodes, if the UI instance corresponding to the input [UIContext](arkts-arkui-uicontext.md) is destroyed, this API returns an invalid FrameNode that cannot be properly mounted or displayed. |
 
 ### Classes
 
@@ -24,7 +24,7 @@ Provides APIs for creating a specific type of FrameNode, which can be mounted th
 | [CrossLanguageOptions](arkts-arkui-crosslanguageoptions-i.md) | Provides options for configuring or querying the cross-language access permissions for a FrameNode. For example, for nodes created using ArkTS, this API can control whether non-ArkTS languages are allowed to access or modify the attributes of these nodes. |
 | [InteractionEventBindingInfo](arkts-arkui-interactioneventbindinginfo-i.md) | Describes the binding state of interaction events on components. When querying reveals an interaction event bound to the current node, this object provides detailed event binding information. |
 | [LayoutConstraint](arkts-arkui-layoutconstraint-i.md) | Describes the layout constraints of the component. |
-| [TypedFrameNode](arkts-arkui-typedframenode-i.md) | Extends [FrameNode](arkts-arkui-framenode-c.md#framenode) to define a FrameNode with specific type constraints. |
+| [TypedFrameNode](arkts-arkui-typedframenode-i.md) | Extends [FrameNode](arkts-arkui-framenode-c.md) to define a FrameNode with specific type constraints. |
 
 ### Enums
 
@@ -38,5 +38,5 @@ Provides APIs for creating a specific type of FrameNode, which can be mounted th
 
 | Name | Description |
 | --- | --- |
-| [UIStatesChangeHandler](arkts-arkui-uistateschangehandler-t.md) | Defines the callback triggered when the UI state changes. Defines the callback triggered on UI state changes. It receives the current [UIState](arkts-arkui-uistate-e.md#uistate) value when triggered. The parameter represents **UIState** enumerated values or their bitwise combinations. |
+| [UIStatesChangeHandler](arkts-arkui-uistateschangehandler-t.md) | Defines the callback triggered when the UI state changes. Defines the callback triggered on UI state changes. It receives the current [UIState](arkts-arkui-uistate-e.md) value when triggered. The parameter represents **UIState** enumerated values or their bitwise combinations. |
 

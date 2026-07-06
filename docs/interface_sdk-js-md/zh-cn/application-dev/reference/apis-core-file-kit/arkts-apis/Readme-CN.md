@@ -89,15 +89,15 @@
   - [OPENFLAGS(系统接口)](arkts-corefile-openflags-e-sys.md)<!--DelEnd--><!--Del-->
   - [常量(系统接口)](arkts-corefile-fileaccess-con-sys.md)<!--DelEnd-->
 - [@ohos.file.fileExtensionInfo](arkts-file-fileextensioninfo.md)
-  - [fileExtensionInfo](arkts-corefile-fileextensioninfo-sta-n.md)
-    - [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-sta-n.md)<!--Del-->
+  - [fileExtensionInfo](arkts-corefile-fileextensioninfo-n.md)
+    - [DeviceFlag](arkts-corefile-deviceflag-n.md)<!--Del-->
       - [常量(系统接口)](arkts-corefile-deviceflag-con-sys.md)<!--DelEnd-->
-    - [DocumentFlag](arkts-corefile-fileextensioninfo-documentflag-sta-n.md)<!--Del-->
+    - [DocumentFlag](arkts-corefile-documentflag-n.md)<!--Del-->
       - [常量(系统接口)](arkts-corefile-documentflag-con-sys.md)<!--DelEnd--><!--Del-->
     - [DeviceType(系统接口)](arkts-corefile-devicetype-e-sys.md)<!--DelEnd-->
 - [@ohos.file.fs](arkts-file-fs.md)
   - [fileIo](arkts-corefile-fileio-n.md)
-    - [OpenMode](arkts-corefile-fileio-openmode-n.md)
+    - [OpenMode](arkts-corefile-openmode-n.md)
       - [常量](arkts-corefile-openmode-con.md)
   - [access](arkts-corefile-file-fs-access-f.md)
   - [accessSync](arkts-corefile-file-fs-accesssync-f.md)

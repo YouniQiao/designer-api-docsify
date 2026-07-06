@@ -11,7 +11,7 @@ The rotion angles, relative to the current position.
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@ohos.distributedHardware.mechanicManager';
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## pitch

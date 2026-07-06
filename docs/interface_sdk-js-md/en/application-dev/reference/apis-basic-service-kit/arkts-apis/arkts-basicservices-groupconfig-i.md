@@ -9,7 +9,7 @@ Describes group configuration options for download tasks.
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@ohos.request';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## gauge

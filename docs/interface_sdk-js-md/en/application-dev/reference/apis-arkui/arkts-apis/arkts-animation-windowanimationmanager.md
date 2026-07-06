@@ -11,7 +11,7 @@ Window animation manager.
 ## Modules to Import
 
 ```TypeScript
-import { windowAnimationManager } from '@ohos.animation.windowAnimationManager';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## Summary

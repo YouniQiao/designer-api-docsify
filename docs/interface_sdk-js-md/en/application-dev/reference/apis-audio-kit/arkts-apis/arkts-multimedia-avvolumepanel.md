@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AVVolumePanelParameter, AVVolumePanel } from '@ohos.multimedia.avVolumePanel';
+import { AVVolumePanelParameter, AVVolumePanel } from '@kit.AudioKit';
 ```
 
 ## Summary

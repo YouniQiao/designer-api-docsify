@@ -9,7 +9,7 @@ The inputDevice module implements input device management functions such as list
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from '@ohos.multimodalInput.inputDevice';
+import { inputDevice } from '@kit.InputKit';
 ```
 
 ## Summary

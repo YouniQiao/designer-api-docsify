@@ -9,7 +9,7 @@ Describes the VM memory information.
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@ohos.hidebug';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## allArraySize

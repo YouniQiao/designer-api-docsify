@@ -11,7 +11,7 @@ Defines the key derivation function class. Before using APIs of this class, you 
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## generateSecret
@@ -44,7 +44,7 @@ Generates a key based on the specified key derivation parameters. This API uses 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. Possible causes:<br>1. Invalid key length in the params;<br>2. Invalid info length in the params;<br>3. Invalid keySize in the params.<br>**Applicable version:** 22 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. Possible causes:<br>1. Invalid key length in the params;<br>2. Invalid info length in the params;<br>3. Invalid keySize in the params.<br>**Applicable version:** 22 and later |
 
 **Example**
 
@@ -129,7 +129,7 @@ Generates a key based on the specified key derivation parameters. This API uses 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. Possible causes:<br>1. Invalid key length in the params;<br>2. Invalid info length in the params;<br>3. Invalid keySize in the params.<br>**Applicable version:** 22 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. Possible causes:<br>1. Invalid key length in the params;<br>2. Invalid info length in the params;<br>3. Invalid keySize in the params.<br>**Applicable version:** 22 and later |
 
 **Example**
 
@@ -213,7 +213,7 @@ Generates a key based on the specified key derivation parameters. This API retur
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-parameter-conversion-between-arkts-and-c-failed) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. Possible causes:<br>1. Invalid key length in the params;<br>2. Invalid info length in the params;<br>3. Invalid keySize in the params.<br>**Applicable version:** 22 |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-verification-failed) | Parameter check failed. Possible causes:<br>1. Invalid key length in the params;<br>2. Invalid info length in the params;<br>3. Invalid keySize in the params.<br>**Applicable version:** 22 and later |
 
 **Example**
 

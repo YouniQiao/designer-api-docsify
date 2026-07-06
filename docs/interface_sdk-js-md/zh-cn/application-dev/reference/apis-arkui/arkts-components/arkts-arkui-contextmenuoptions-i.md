@@ -262,7 +262,7 @@ enableHoverMode?: boolean
 gridStyle?: MenuGridStyleOptions
 ```
 
-设置菜单的栅格样式。仅固定样式菜单生效，例如在 [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu-1)、 [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1) 、[bindContextMenuByResponseType](arkts-arkui-commonmethod-c.md#bindcontextmenubyresponsetype-1)、 [bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow-1)、 [bindContextMenuWithResponse](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse-1) 中使用[MenuElement](arkts-arkui-menuelement-i.md#menuelement)或在[MenuItem](arkts-arkui-menuitem.md)中使用MenuItemOptions。
+设置菜单的栅格样式。仅固定样式菜单生效，例如在 [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu-1)、 [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1) 、[bindContextMenuByResponseType](arkts-arkui-commonmethod-c.md#bindcontextmenubyresponsetype-1)、 [bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow-1)、 [bindContextMenuWithResponse](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse-1) 中使用[MenuElement](arkts-arkui-menuelement-i.md)或在[MenuItem](arkts-arkui-menuitem.md)中使用MenuItemOptions。
 
 **类型：** MenuGridStyleOptions
 
@@ -724,7 +724,7 @@ targetSpace?: LengthMetrics
 transition?: TransitionEffect
 ```
 
-设置菜单显示和退出的过渡效果。 **说明：** 菜单退出动效过程中，进行横竖屏切换，菜单会避让。二级菜单不继承自定义动效。弹出过程可以点击二级菜单，退出动效执行过程不允许点击二级菜单。 详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect)对象说明。 动效曲线使用弹簧曲线，在动效退出时，由于弹簧曲线的回弹震荡，菜单消失后有较长的拖尾，使得其他事件无法响应。 当设置transition自定义动效时，菜单的默认显示和退出动效不生效。
+设置菜单显示和退出的过渡效果。 **说明：** 菜单退出动效过程中，进行横竖屏切换，菜单会避让。二级菜单不继承自定义动效。弹出过程可以点击二级菜单，退出动效执行过程不允许点击二级菜单。 详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md)对象说明。 动效曲线使用弹簧曲线，在动效退出时，由于弹簧曲线的回弹震荡，菜单消失后有较长的拖尾，使得其他事件无法响应。 当设置transition自定义动效时，菜单的默认显示和退出动效不生效。
 
 **类型：** TransitionEffect
 

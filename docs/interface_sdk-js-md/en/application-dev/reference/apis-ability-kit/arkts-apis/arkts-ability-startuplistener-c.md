@@ -9,7 +9,7 @@ The module defines the task listener used in [App Startup](../../../../applicati
 ## Modules to Import
 
 ```TypeScript
-import { StartupListener } from '@ohos.app.appstartup.StartupListener';
+import { StartupListener } from '@kit.AbilityKit';
 ```
 
 ## onCompleted

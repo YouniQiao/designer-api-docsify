@@ -11,7 +11,7 @@ Describes audio capturer configuration that can capture microphone input (mic-in
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@ohos.multimedia.audio';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## capturerInfo

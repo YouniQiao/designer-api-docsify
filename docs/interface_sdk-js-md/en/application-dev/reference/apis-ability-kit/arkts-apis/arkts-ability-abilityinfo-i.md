@@ -26,7 +26,7 @@ Index of an application clone. It takes effect only for [application clones](../
 readonly applicationInfo: ApplicationInfo
 ```
 
-Application configuration information <!--Del-->. The information can be obtained by passing in **GET_ABILITY_INFO_WITH_APPLICATION** to the **abilityFlags** parameter of [queryAbilityInfo](arkts-ability-queryabilityinfo-f-sys.md#queryabilityinfo-2) <!--DelEnd-->. This field is not returned when the [getBundleInfoForSelf](arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1) or [getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-2) is used to obtain ability information. You can obtain the related information by obtaining the [bundleInfo](arkts-ability-bundleinfo-i.md#bundleinfo).appInfo object.
+Application configuration information <!--Del-->. The information can be obtained by passing in **GET_ABILITY_INFO_WITH_APPLICATION** to the **abilityFlags** parameter of [queryAbilityInfo](arkts-ability-queryabilityinfo-f-sys.md#queryabilityinfo-2) <!--DelEnd-->. This field is not returned when the [getBundleInfoForSelf](arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1) or [getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-2) is used to obtain ability information. You can obtain the related information by obtaining the [bundleInfo](arkts-ability-bundleinfo-i.md).appInfo object.
 
 **Type:** ApplicationInfo
 
@@ -218,7 +218,7 @@ Resource ID of the ability label. It is automatically generated during compilati
 readonly launchType: bundleManager.LaunchType
 ```
 
-Ability launch mode, that is, whether it can be started in multiton mode. For details, see [LaunchType](arkts-ability-launchtype-e.md#launchtype).
+Ability launch mode, that is, whether it can be started in multiton mode. For details, see [LaunchType](arkts-ability-launchtype-e.md).
 
 **Type:** bundleManager.LaunchType
 
@@ -282,7 +282,7 @@ Ability name.
 readonly orientation: bundleManager.DisplayOrientation
 ```
 
-Ability display orientation. It is derived from the **orientation** field under **abilities** in the [module.json5](../../../../quick-start/module-configuration-file.md) file. If **orientation** in the file is set to an enumerated value, this property is a non-zero value. For details about the available values, see [displayOrientation](arkts-ability-displayorientation-e.md#displayorientation). If **orientation** in the file is set to a resource index, the value of this property is **0**.
+Ability display orientation. It is derived from the **orientation** field under **abilities** in the [module.json5](../../../../quick-start/module-configuration-file.md) file. If **orientation** in the file is set to an enumerated value, this property is a non-zero value. For details about the available values, see [displayOrientation](arkts-ability-displayorientation-e.md). If **orientation** in the file is set to a resource index, the value of this property is **0**.
 
 **Type:** bundleManager.DisplayOrientation
 

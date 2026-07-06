@@ -9,7 +9,7 @@ Describes the initialization options for ImageReceiver.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## capacity

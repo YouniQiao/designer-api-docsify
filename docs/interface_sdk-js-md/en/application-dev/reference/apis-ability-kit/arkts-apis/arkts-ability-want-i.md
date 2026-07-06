@@ -6,7 +6,7 @@ Want is a carrier for information transfer between objects (application componen
 
 **Deprecated since:** 9
 
-**Substitutes:** [Want:Want](arkts-ability-want-c.md#want)
+**Substitutes:** [Want:Want](arkts-ability-want-c.md)
 
 **System capability:** SystemCapability.Ability.AbilityBase
 

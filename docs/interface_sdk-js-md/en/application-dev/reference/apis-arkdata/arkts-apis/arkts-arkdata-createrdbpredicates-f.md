@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataAbility } from '@ohos.data.dataAbility';
+import { dataAbility } from '@kit.ArkData';
 ```
 
 ## createRdbPredicates

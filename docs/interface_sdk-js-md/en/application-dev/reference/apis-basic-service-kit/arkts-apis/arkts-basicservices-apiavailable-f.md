@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceInfo } from '@ohos.deviceInfo';
+import { deviceInfo } from '@kit.BasicServicesKit';
 ```
 
 ## apiAvailable

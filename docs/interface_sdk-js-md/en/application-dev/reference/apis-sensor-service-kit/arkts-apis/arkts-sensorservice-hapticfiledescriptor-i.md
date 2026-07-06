@@ -9,7 +9,7 @@ Describes the FD of a custom vibration configuration file. Ensure that the file 
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@ohos.vibrator';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## fd

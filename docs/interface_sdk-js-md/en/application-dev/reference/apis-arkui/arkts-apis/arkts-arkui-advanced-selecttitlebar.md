@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { SelectTitleBarMenuItem, SelectTitleBar } from '@ohos.arkui.advanced.SelectTitleBar';
+import { SelectTitleBarMenuItem, SelectTitleBar } from '@kit.ArkUI';
 ```
 
 ## Summary

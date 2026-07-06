@@ -9,7 +9,7 @@ Defines the CSR attribute representation. CSR attribute field. Currently, only c
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@ohos.security.cert';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## type

@@ -1,6 +1,6 @@
 # SecurityComponentMethod
 
-The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors. This module is mainly used in the following scenarios: - Set layout, size, text, icon, color, border, and interaction-related attributes for security components such as [PasteButton](./paste_button) and [SaveButton](./save_button). - Adjust the display effect and interaction experience of security components while ensuring compliance with the security component specifications. For specific constraints, see [Constraints](../../../../security/AccessToken/security-component-overview.md#constraints). - Reuse the universal attribute capabilities of security components through chained calls. ###### Key Enums - [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md#securitycomponentlayoutdirection): Enumeration of icon and text layout directions for the security component. Specifies horizontal or vertical layout. - [ButtonType](@global:ButtonType): Enumeration of button styles for the security component. Specifies capsule, circle, rounded rectangle, or normal button style. ###### Key APIs - [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md#securitycomponentmethod): A collection of universal attribute methods for security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components. ###### Child Components - Not supported Defines the method of a security component.
+The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors. This module is mainly used in the following scenarios: - Set layout, size, text, icon, color, border, and interaction-related attributes for security components such as [PasteButton](./paste_button) and [SaveButton](./save_button). - Adjust the display effect and interaction experience of security components while ensuring compliance with the security component specifications. For specific constraints, see [Constraints](../../../../security/AccessToken/security-component-overview.md#constraints). - Reuse the universal attribute capabilities of security components through chained calls. ###### Key Enums - [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md): Enumeration of icon and text layout directions for the security component. Specifies horizontal or vertical layout. - [ButtonType](@global:ButtonType): Enumeration of button styles for the security component. Specifies capsule, circle, rounded rectangle, or normal button style. ###### Key APIs - [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md): A collection of universal attribute methods for security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components. ###### Child Components - Not supported Defines the method of a security component.
 
 **Since:** 10
 
@@ -391,7 +391,7 @@ Sets the parameters of the chain in which the component is the head. This API ta
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | direction | Axis | Yes | Direction of the chain layout. Specifies the arrangement direction of the chain headedby this component in the [RelativeContainer](./relative_container). |
-| style | ChainStyle | Yes | Style of the chain layout. Controls how child components are distributed within thechain, such as evenly distributed, aligned at both ends, or compactly arranged. For specific values andeffects, see [ChainStyle](arkts-arkui-chainstyle-e.md#chainstyle). |
+| style | ChainStyle | Yes | Style of the chain layout. Controls how child components are distributed within thechain, such as evenly distributed, aligned at both ends, or compactly arranged. For specific values andeffects, see [ChainStyle](arkts-arkui-chainstyle-e.md). |
 
 **Return value:**
 
@@ -461,7 +461,7 @@ Sets whether the security component is interactive.
 fallbackLineSpacing(enabled: boolean): T
 ```
 
-Enables adaptive line height based on the actual text height for multi-line text. The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight** attribute of [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md#richeditortextstyle). When the **lineHeight** value is less than the actual rendering height of the text at the current font size, the **fallbackLineSpacing** value determines whether the line height should adapt based on the actual text height.
+Enables adaptive line height based on the actual text height for multi-line text. The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight** attribute of [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md). When the **lineHeight** value is less than the actual rendering height of the text at the current font size, the **fallbackLineSpacing** value determines whether the line height should adapt based on the actual text height.
 
 **Since:** 26.0.0
 

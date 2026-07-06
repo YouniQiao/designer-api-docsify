@@ -9,7 +9,7 @@ Provides APIs for throwing exceptions during the addition of a process. Construc
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@ohos.process';
+import { process } from '@kit.ArkTS';
 ```
 
 ## exit

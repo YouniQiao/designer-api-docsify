@@ -9,7 +9,7 @@ Defines the size of the printed page.
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@ohos.print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## height

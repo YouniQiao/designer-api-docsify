@@ -30,7 +30,7 @@ extraRegionPosition?: ExtraRegionPosition
 horizontalSplitRatio?: number
 ```
 
-主要区域与扩展区域之间的宽度比例。此字段在extra有效时生效。 默认值：[PresetSplitRatio](arkts-na-presetsplitratio-e.md#presetsplitratio).LAYOUT_3V2
+主要区域与扩展区域之间的宽度比例。此字段在extra有效时生效。 默认值：[PresetSplitRatio](arkts-na-presetsplitratio-e.md).LAYOUT_3V2
 
 **类型：** number
 

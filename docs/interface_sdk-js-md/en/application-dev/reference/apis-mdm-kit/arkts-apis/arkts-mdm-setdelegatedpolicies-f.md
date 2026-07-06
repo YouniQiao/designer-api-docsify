@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@ohos.enterprise.adminManager';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## setDelegatedPolicies
@@ -27,7 +27,7 @@ Delegates other applications to set device management policies. The applications
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| bundleName | string | Yes | Bundle name of the delegated application. The distribution type of the delegatedapplication must be **enterprise_normal** or **enterprise_mdm**. You can call the[getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)API to query the [BundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-i.md#bundleinfo) of the application, where**BundleInfo.appInfo.appDistributionType** indicates the distribution type. |
+| bundleName | string | Yes | Bundle name of the delegated application. The distribution type of the delegatedapplication must be **enterprise_normal** or **enterprise_mdm**. You can call the[getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)API to query the [BundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-i.md) of the application, where**BundleInfo.appInfo.appDistributionType** indicates the distribution type. |
 | policies | Array&lt;string&gt; | Yes | [Delegation Policy List](../../../../reference/apis-mdm-kit/js-apis-enterprise-adminManager.md#delegation-policy-list) |
 
 **Error codes:**

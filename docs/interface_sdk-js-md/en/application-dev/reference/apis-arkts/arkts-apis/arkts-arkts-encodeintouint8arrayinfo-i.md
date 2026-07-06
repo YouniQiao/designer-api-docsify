@@ -9,7 +9,7 @@ Encrypted information, including the number of read characters and the number of
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## read

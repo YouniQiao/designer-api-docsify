@@ -9,7 +9,7 @@ Represents information about a remote device driver.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@ohos.driver.deviceManager';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## deviceId

@@ -9,7 +9,7 @@ provides a push method for the target page in the routing table.
 ## Modules to Import
 
 ```TypeScript
-import { NavPushPathHelper } from '@ohos.atomicservice.NavPushPathHelper';
+import { NavPushPathHelper } from '@kit.ArkUI';
 ```
 
 ## constructor

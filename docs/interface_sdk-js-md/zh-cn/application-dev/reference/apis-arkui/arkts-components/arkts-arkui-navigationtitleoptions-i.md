@@ -104,7 +104,7 @@ barStyle?: BarStyle
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态。 使用规则： 1. 需满足Navigation为全屏大小； 2. 标题栏显示模式为[Free](arkts-arkui-navigationtitlemode-e.md#navigationtitlemode)时或者标题栏布局方式为[STANDARD](arkts-arkui-barstyle-e.md#barstyle)时，此接口设置无效。 true：响应悬停态；false：不响应悬停态。 默认值：false
+是否响应悬停态。 使用规则： 1. 需满足Navigation为全屏大小； 2. 标题栏显示模式为[Free](arkts-arkui-navigationtitlemode-e.md)时或者标题栏布局方式为[STANDARD](arkts-arkui-barstyle-e.md)时，此接口设置无效。 true：响应悬停态；false：不响应悬停态。 默认值：false
 
 **类型：** boolean
 
@@ -124,7 +124,7 @@ enableHoverMode?: boolean
 mainTitleModifier?: TextModifier
 ```
 
-主标题属性修改器。 1. 通过Modifier设置的属性会覆盖系统默认的属性（如果Modifier设置了fontSize，maxFontSize，minFontSize任一属性，则系统设置的大小相关属性不生效，以开发者的设置为准）； 2. 不设该属性或者设置了异常值，则恢复系统默认设置； 3. [Free](arkts-arkui-navigationtitlemode-e.md#navigationtitlemode)模式下设置字体大小时，原有滑动改变标题大小的效果失效。
+主标题属性修改器。 1. 通过Modifier设置的属性会覆盖系统默认的属性（如果Modifier设置了fontSize，maxFontSize，minFontSize任一属性，则系统设置的大小相关属性不生效，以开发者的设置为准）； 2. 不设该属性或者设置了异常值，则恢复系统默认设置； 3. [Free](arkts-arkui-navigationtitlemode-e.md)模式下设置字体大小时，原有滑动改变标题大小的效果失效。
 
 **类型：** TextModifier
 

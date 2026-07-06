@@ -2,7 +2,7 @@
 
 The RestrictedWorker class contains all Worker functions.
 
-**Inheritance/Implementation:** RestrictedWorker extends [ThreadWorker](arkts-arkts-threadworker-c.md#threadworker)
+**Inheritance/Implementation:** RestrictedWorker extends [ThreadWorker](arkts-arkts-threadworker-c.md)
 
 **Since:** 11
 
@@ -13,7 +13,7 @@ The RestrictedWorker class contains all Worker functions.
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@ohos.worker';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## constructor

@@ -9,7 +9,7 @@ This indicates that the eSIM card performs the profile management operation sync
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@ohos.telephony.esim';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## Summary

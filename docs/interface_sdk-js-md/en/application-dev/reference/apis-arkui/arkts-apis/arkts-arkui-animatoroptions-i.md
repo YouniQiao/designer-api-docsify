@@ -9,7 +9,7 @@ Animator options.
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@ohos.animator';
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
 ```
 
 ## begin
@@ -114,7 +114,7 @@ End point of animation interpolation. Note: This setting affects the input param
 fill: "none" | "forwards" | "backwards" | "both"
 ```
 
-State of the animated target after the animation is executed. **'none'**: No style is applied to the target before or after the animation is executed. **'forwards'**: The target keeps the state at the end of the animation (defined in the last key frame) after the animation is executed. **'backwards'**: During the delay period specified in [AnimatorOptions](arkts-arkui-animatoroptions-i.md#animatoroptions), the animation uses the value defined in the first keyframe. When **direction** in [AnimatorOptions](arkts-arkui-animatoroptions-i.md#animatoroptions) is **'normal'** or **'alternate'**, the animation uses the **from** keyframe value. When **direction** in [AnimatorOptions](arkts-arkui-animatoroptions-i.md#animatoroptions) is **'reverse'** or **'alternate-reverse'**, the animation uses the **to** keyframe value. **'both'**: The animation follows the **'forwards'** and **'backwards'** rules.
+State of the animated target after the animation is executed. **'none'**: No style is applied to the target before or after the animation is executed. **'forwards'**: The target keeps the state at the end of the animation (defined in the last key frame) after the animation is executed. **'backwards'**: During the delay period specified in [AnimatorOptions](arkts-arkui-animatoroptions-i.md), the animation uses the value defined in the first keyframe. When **direction** in [AnimatorOptions](arkts-arkui-animatoroptions-i.md) is **'normal'** or **'alternate'**, the animation uses the **from** keyframe value. When **direction** in [AnimatorOptions](arkts-arkui-animatoroptions-i.md) is **'reverse'** or **'alternate-reverse'**, the animation uses the **to** keyframe value. **'both'**: The animation follows the **'forwards'** and **'backwards'** rules.
 
 **Type:** "none" | "forwards" | "backwards" | "both"
 

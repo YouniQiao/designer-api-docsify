@@ -38,7 +38,7 @@ navDestination: NavDestinationBuildFunction
 
 **起始版本：** 14
 
-**装饰器类型：** @Builder
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

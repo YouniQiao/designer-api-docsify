@@ -26,7 +26,7 @@ function createMac(algName: string): Mac
 
 | 类型 | 说明 |
 | --- | --- |
-| Mac | 返回由输入算法指定生成的[Mac](arkts-cryptoarchitecture-mac-i.md#mac)对象。 |
+| Mac | 返回由输入算法指定生成的[Mac](arkts-cryptoarchitecture-mac-i.md)对象。 |
 
 **错误码：**
 
@@ -76,7 +76,7 @@ function createMac(macSpec: MacSpec): Mac
 
 | 类型 | 说明 |
 | --- | --- |
-| Mac | 返回由指定入参参数生成的[Mac](arkts-cryptoarchitecture-mac-i.md#mac)对象。 |
+| Mac | 返回由指定入参参数生成的[Mac](arkts-cryptoarchitecture-mac-i.md)对象。 |
 
 **错误码：**
 

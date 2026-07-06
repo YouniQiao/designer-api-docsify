@@ -9,7 +9,7 @@ Defines a struct for the details about the device-cloud sync process.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@ohos.data.relationalStore';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## deleted

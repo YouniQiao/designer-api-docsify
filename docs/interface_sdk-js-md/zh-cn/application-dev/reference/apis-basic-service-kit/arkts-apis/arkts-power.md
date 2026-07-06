@@ -30,7 +30,7 @@
 | [refreshActivity](arkts-basicservices-refreshactivity-f-sys.md#refreshactivity-1) | 刷新设备活动状态（如：重设屏幕超时息屏时间等）。 只有设备在活动状态下生效，设备活动状态见[power.isActive](arkts-basicservices-isactive-f.md#isactive-1)接口。 |
 | [registerShutdownCallback](arkts-basicservices-registershutdowncallback-f-sys.md#registershutdowncallback-1) | 订阅电源关机或重启的回调提醒。使用callback异步回调。 |
 | [setPowerConfig](arkts-basicservices-setpowerconfig-f-sys.md#setpowerconfig-1) | 根据场景名称设置电源配置值。 |
-| [setPowerKeyFilteringStrategy](arkts-basicservices-setpowerkeyfilteringstrategy-f-sys.md#setpowerkeyfilteringstrategy-1) | 设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。 电源键过滤策略见[power.PowerKeyFilteringStrategy](arkts-basicservices-powerkeyfilteringstrategy-e.md#powerkeyfilteringstrategy)接口。 |
+| [setPowerKeyFilteringStrategy](arkts-basicservices-setpowerkeyfilteringstrategy-f-sys.md#setpowerkeyfilteringstrategy-1) | 设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。 电源键过滤策略见[power.PowerKeyFilteringStrategy](arkts-basicservices-powerkeyfilteringstrategy-e.md)接口。 |
 | [setPowerMode](arkts-basicservices-setpowermode-f-sys.md#setpowermode-1) | 设置当前设备的电源模式。使用callback异步回调。 |
 | [setPowerMode](arkts-basicservices-setpowermode-f-sys.md#setpowermode-2) | 设置当前设备的电源模式。使用Promise异步回调。 |
 | [setScreenOffTime](arkts-basicservices-setscreenofftime-f-sys.md#setscreenofftime-1) | 设置熄屏超时时间。 |

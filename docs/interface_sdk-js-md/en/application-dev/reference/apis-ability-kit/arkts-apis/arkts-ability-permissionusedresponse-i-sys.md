@@ -11,7 +11,7 @@ Represents the access records of all applications or devices.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@ohos.privacyManager';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## beginTime

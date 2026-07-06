@@ -1,8 +1,8 @@
 # PhotoOutput
 
-Implements output information used in a photo session. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput).
+Implements output information used in a photo session. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
 
-**Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput)
+**Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Implements output information used in a photo session. It inherits from [CameraO
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## burstCapture
@@ -324,9 +324,9 @@ Enables or disables the quick thumbnail feature. This API takes effect after [ad
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | session is not running. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 and later |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -660,7 +660,7 @@ Checks whether the quick thumbnail feature is supported. This API takes effect a
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | session is not running. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 and later |
 
 **Example**
 

@@ -11,7 +11,7 @@ Defines the resolution for printing.
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@ohos.print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## horizontalDpi

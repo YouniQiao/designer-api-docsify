@@ -1,6 +1,6 @@
 # AVRecorder
 
-AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-createavrecorder-f.md#createavrecorder-1) to create an AVRecorder instance. For details about the audio and video recording demo, see [Audio Recording](../../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../../media/media/video-recording.md). > **NOTE** > > > To use the camera to record videos, the camera module is required. For details about how to use the APIs > provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md#camera).
+AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-createavrecorder-f.md#createavrecorder-1) to create an AVRecorder instance. For details about the audio and video recording demo, see [Audio Recording](../../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../../media/media/video-recording.md). > **NOTE** > > > To use the camera to record videos, the camera module is required. For details about how to use the APIs > provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md).
 
 **Since:** 9
 
@@ -9,7 +9,7 @@ AVRecorder is a class for audio and video recording management. It provides APIs
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addWatermark
@@ -415,7 +415,7 @@ Subscribes to audio capturer configuration changes. Any configuration change tri
 on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Subscribes to media asset callback events. When [FileGenerationMode](arkts-media-filegenerationmode-e.md#filegenerationmode) is used during media file creation, the [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#photoaccesshelper) object is called back to the application after the [stop](arkts-media-avrecorder-i.md#stop-1) operation is complete. This API uses an asynchronous callback to return the result. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to media asset callback events. When [FileGenerationMode](arkts-media-filegenerationmode-e.md) is used during media file creation, the [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md) object is called back to the application after the [stop](arkts-media-avrecorder-i.md#stop-1) operation is complete. This API uses an asynchronous callback to return the result. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 12
 
@@ -469,7 +469,7 @@ Subscribes to AVRecorder state changes. An application can subscribe to only one
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to AVRecorder errors. This event is used only for error prompt and does not require the user to stop recording control. If the [AVRecorderState](arkts-media-avrecorderstate-t.md#avrecorderstate) is also switched to error, call [reset()](arkts-media-avrecorder-i.md#reset-1) or [release()] [release()](arkts-media-avrecorder-i.md#release-1) to exit the recording. This API uses an asynchronous callback to return the result. An application can subscribe to only one AVRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to AVRecorder errors. This event is used only for error prompt and does not require the user to stop recording control. If the [AVRecorderState](arkts-media-avrecorderstate-t.md) is also switched to error, call [reset()](arkts-media-avrecorder-i.md#reset-1) or [release()] [release()](arkts-media-avrecorder-i.md#release-1) to exit the recording. This API uses an asynchronous callback to return the result. An application can subscribe to only one AVRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 9
 
@@ -497,7 +497,7 @@ Subscribes to AVRecorder errors. This event is used only for error prompt and do
 | [5400104](../errorcode-media.md#5400104-operation-timeout) | Time out. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. |
-| [5400107](../errorcode-media.md#5400107-audio-focus-conflict) | Audio interrupted.<br>**Applicable version:** 11 |
+| [5400107](../errorcode-media.md#5400107-audio-focus-conflict) | Audio interrupted.<br>**Applicable version:** 11 and later |
 
 ## pause
 

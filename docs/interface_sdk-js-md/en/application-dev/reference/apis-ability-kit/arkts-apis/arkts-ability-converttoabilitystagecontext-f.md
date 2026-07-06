@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from '@ohos.app.ability.sendableContextManager';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## convertToAbilityStageContext
@@ -32,7 +32,7 @@ Converts a SendableContext object to an AbilityStageContext object.
 
 | Type | Description |
 | --- | --- |
-| common.AbilityStageContext | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md#abilitystagecontext)object. |
+| common.AbilityStageContext | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md)object. |
 
 **Error codes:**
 

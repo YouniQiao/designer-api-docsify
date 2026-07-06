@@ -9,7 +9,7 @@ Represents the network connection handle.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@ohos.net.connection';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## on('netAvailable')

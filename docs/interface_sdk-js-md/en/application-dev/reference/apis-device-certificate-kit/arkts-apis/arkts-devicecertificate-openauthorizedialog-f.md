@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from '@ohos.security.certManagerDialog';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## openAuthorizeDialog
@@ -40,7 +40,7 @@ Opens the authorization page of the certificate management dialog box to grant a
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. A mandatory parameter is leftunspecified.2. Incorrect parameter type. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The certificate management application Hap is not preinstalled in the system,and the capability is not supported.<br>**Applicable version:** 26.0.0 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The certificate management application Hap is not preinstalled in the system,and the capability is not supported.<br>**Applicable version:** 26.0.0 and later |
 | [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the authorization. |
 

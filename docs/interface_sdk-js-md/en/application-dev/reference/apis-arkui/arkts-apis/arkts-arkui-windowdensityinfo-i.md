@@ -9,7 +9,7 @@ Describes the information about the display density of the screen where the wind
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## customDensity

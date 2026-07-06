@@ -9,7 +9,7 @@ Defines the touch point information.
 ## Modules to Import
 
 ```TypeScript
-import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from '@ohos.multimodalInput.touchEvent';
+import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from '@kit.InputKit';
 ```
 
 ## globalX
@@ -18,7 +18,7 @@ import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from '@
 globalX?: number
 ```
 
-X coordinate of the touch event in the global coordinate system with the upper-left corner of the primary screen as the origin, in px. <!--Del--> When being used as an input parameter, this parameter is mandatory if the value of [TouchEventData.useGlobalCoordinate](arkts-input-toucheventdata-i-sys.md#toucheventdata) is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case, the X coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. <!--DelEnd-->When being used as an output parameter, its value is reported by the system.
+X coordinate of the touch event in the global coordinate system with the upper-left corner of the primary screen as the origin, in px. <!--Del--> When being used as an input parameter, this parameter is mandatory if the value of [TouchEventData.useGlobalCoordinate](arkts-input-toucheventdata-i-sys.md) is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case, the X coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. <!--DelEnd-->When being used as an output parameter, its value is reported by the system.
 
 **Type:** number
 
@@ -32,7 +32,7 @@ X coordinate of the touch event in the global coordinate system with the upper-l
 globalY?: number
 ```
 
-Y coordinate of the touch event in the global coordinate system with the upper-left corner of the primary screen as the origin, in px. <!--Del--> When being used as an input parameter, this parameter is mandatory if the value of [TouchEventData.useGlobalCoordinate](arkts-input-toucheventdata-i-sys.md#toucheventdata) is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case, the Y coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. <!--DelEnd-->When being used as an output parameter, its value is reported by the system.
+Y coordinate of the touch event in the global coordinate system with the upper-left corner of the primary screen as the origin, in px. <!--Del--> When being used as an input parameter, this parameter is mandatory if the value of [TouchEventData.useGlobalCoordinate](arkts-input-toucheventdata-i-sys.md) is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case, the Y coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. <!--DelEnd-->When being used as an output parameter, its value is reported by the system.
 
 **Type:** number
 

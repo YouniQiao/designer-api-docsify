@@ -9,7 +9,7 @@ Namespace for managing and organizing script information.
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from '@ohos.app.ability.scriptManager';
+import { scriptManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

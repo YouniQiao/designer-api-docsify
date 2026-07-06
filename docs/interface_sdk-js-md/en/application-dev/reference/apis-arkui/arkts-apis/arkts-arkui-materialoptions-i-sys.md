@@ -11,7 +11,7 @@ System material options.
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from '@ohos.arkui.uiMaterial';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## type

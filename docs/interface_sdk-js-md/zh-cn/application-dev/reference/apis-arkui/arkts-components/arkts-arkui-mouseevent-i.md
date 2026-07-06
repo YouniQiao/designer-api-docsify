@@ -1,8 +1,8 @@
 # MouseEvent
 
-继承于[BaseEvent](arkts-arkui-baseevent-i.md#baseevent)。
+继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**继承/实现关系：** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**继承/实现关系：** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 8
 
@@ -36,7 +36,7 @@ getCurrentLocalPosition?(): Coordinate2D
 getHistoricalPoints?(): Array<MouseHistoricalPoint>
 ```
 
-获取当前帧的所有历史点信息。历史点可用于实现更平滑的绘制效果。 该接口仅能在[MouseEvent](arkts-arkui-mouseevent-i.md#mouseevent)中调用，用于获取触发[onMouse](arkts-arkui-commonmethod-c.md#onmouse-1)时当前帧历史点的相关信息，不同设备每帧的鼠标事件上报频率不同，一 帧通常只会上报一个鼠标事件，如果当前帧收到的[MouseEvent](arkts-arkui-mouseevent-i.md#mouseevent)数目大于1，会将该帧最后一个点通过[onMouse](arkts-arkui-commonmethod-c.md#onmouse-1)返回，其余点作为历 史点。
+获取当前帧的所有历史点信息。历史点可用于实现更平滑的绘制效果。 该接口仅能在[MouseEvent](arkts-arkui-mouseevent-i.md)中调用，用于获取触发[onMouse](arkts-arkui-commonmethod-c.md#onmouse-1)时当前帧历史点的相关信息，不同设备每帧的鼠标事件上报频率不同，一 帧通常只会上报一个鼠标事件，如果当前帧收到的[MouseEvent](arkts-arkui-mouseevent-i.md)数目大于1，会将该帧最后一个点通过[onMouse](arkts-arkui-commonmethod-c.md#onmouse-1)返回，其余点作为历 史点。
 
 **起始版本：** 26.0.0
 

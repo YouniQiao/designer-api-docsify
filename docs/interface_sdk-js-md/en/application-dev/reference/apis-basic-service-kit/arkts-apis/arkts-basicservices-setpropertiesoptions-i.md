@@ -9,7 +9,7 @@ Represents the options for setting authenticator properties.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@ohos.account.appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## parameters

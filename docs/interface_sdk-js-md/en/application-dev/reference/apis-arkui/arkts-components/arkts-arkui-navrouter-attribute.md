@@ -1,6 +1,6 @@
 # NavRouter properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), the following attributes are supported.
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported.
 
 **Inheritance/Implementation:** NavRouterAttribute extends [CommonMethod<NavRouterAttribute>](CommonMethod<NavRouterAttribute>)
 

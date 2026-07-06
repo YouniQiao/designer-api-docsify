@@ -9,7 +9,7 @@ Provides text line breaking capabilities, such as obtaining, moving, and identif
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@ohos.i18n';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## current

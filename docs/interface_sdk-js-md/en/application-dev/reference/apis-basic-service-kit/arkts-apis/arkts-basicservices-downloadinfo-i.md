@@ -9,7 +9,7 @@ Describes the pre-downloaded download information.
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@ohos.request.cacheDownload';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## network

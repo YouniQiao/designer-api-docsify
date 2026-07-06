@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLockFileManager } from '@ohos.ability.screenLockFileManager';
+import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
 ## acquireAccess

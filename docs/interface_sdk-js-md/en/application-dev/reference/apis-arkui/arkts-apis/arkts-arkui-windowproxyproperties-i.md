@@ -9,7 +9,7 @@ Provides information about a component.
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from '@ohos.arkui.uiExtension';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## uiExtensionHostWindowProxyRect

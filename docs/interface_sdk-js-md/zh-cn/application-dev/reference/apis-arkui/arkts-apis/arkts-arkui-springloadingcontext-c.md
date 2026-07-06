@@ -50,7 +50,7 @@ updateConfiguration(config: DragSpringLoadingConfiguration): void
 currentConfig?: DragSpringLoadingConfiguration
 ```
 
-当前回调中的配置信息，当悬停检测状态为CANCEL时缺失，为undefined时取 [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-i.md#dragspringloadingconfiguration)默认值。
+当前回调中的配置信息，当悬停检测状态为CANCEL时缺失，为undefined时取 [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-i.md)默认值。
 
 **类型：** DragSpringLoadingConfiguration
 
@@ -86,7 +86,7 @@ currentNotifySequence: number
 dragInfos?: SpringLoadingDragInfos
 ```
 
-拖拽信息，当悬停检测状态为CANCEL时缺失，为undefined时取[SpringLoadingDragInfos](arkts-arkui-springloadingdraginfos-i.md#springloadingdraginfos)默认值。
+拖拽信息，当悬停检测状态为CANCEL时缺失，为undefined时取[SpringLoadingDragInfos](arkts-arkui-springloadingdraginfos-i.md)默认值。
 
 **类型：** SpringLoadingDragInfos
 

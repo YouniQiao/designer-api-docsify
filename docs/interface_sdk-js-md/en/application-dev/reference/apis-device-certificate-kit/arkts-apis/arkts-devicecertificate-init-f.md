@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## init
@@ -36,7 +36,7 @@ Indicates the initialization of signature and signature verification using crede
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
-| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user.Please call [openAuthorizeDialog](arkts-devicecertificate-openauthorizedialog-f.md#openauthorizedialog-1)method to request user authorization for the certificate or credential.<br>**Applicable version:** 12 |
+| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user.Please call [openAuthorizeDialog](arkts-devicecertificate-openauthorizedialog-f.md#openauthorizedialog-1)method to request user authorization for the certificate or credential.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -99,7 +99,7 @@ Initializes the signing or signature verification operation using the specified 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
-| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user.<br>**Applicable version:** 12 |
+| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user.<br>**Applicable version:** 12 and later |
 
 **Example**
 

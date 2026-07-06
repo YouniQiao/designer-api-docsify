@@ -9,7 +9,7 @@ Represents the holder of a remote proxy object. It is used to obtain a proxy obj
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@ohos.rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## asObject
@@ -28,7 +28,7 @@ Obtains a proxy or remote object. This API must be implemented by its derived cl
 
 | Type | Description |
 | --- | --- |
-| IRemoteObject | Returns the **RemoteObject** if it is the caller; returns the[IRemoteObject](arkts-ipc-iremoteobject-c.md#iremoteobject), the holder of this **RemoteProxy** object, if the caller is a[RemoteProxy](arkts-ipc-remoteproxy-c.md#remoteproxy) object. |
+| IRemoteObject | Returns the **RemoteObject** if it is the caller; returns the[IRemoteObject](arkts-ipc-iremoteobject-c.md), the holder of this **RemoteProxy** object, if the caller is a[RemoteProxy](arkts-ipc-remoteproxy-c.md) object. |
 
 **Example**
 

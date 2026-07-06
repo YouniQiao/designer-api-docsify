@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dragInteraction } from '@ohos.deviceStatus.dragInteraction';
+import { dragInteraction } from '@kit.ArkUI';
 ```
 
 ## getDataSummary

@@ -51,7 +51,7 @@ Defines the common types for the native ArkWeb.
 | [typedef void (\*ArkWeb_OnComponentCallback)(const char* webTag, void* userData)](#arkweb_oncomponentcallback) | ArkWeb_OnComponentCallback | Defines the component callback of the native ArkWeb. |
 | [typedef void (\*ArkWeb_OnScrollCallback)(const char* webTag, void* userData, double x, double y)](#arkweb_onscrollcallback) | ArkWeb_OnScrollCallback | Called when the **Web** component is scrolled. |
 | [typedef void (\*ArkWeb_OnMessageEventHandler)(const char* webTag, const ArkWeb_WebMessagePortPtr port, const ArkWeb_WebMessagePtr message, void* userData)](#arkweb_onmessageeventhandler) | ArkWeb_OnMessageEventHandler | Defines the callback to receive message from HTML. |
-| [ARKWEB_MEMBER_EXISTS(s, f) \((intptr_t) & ((s)->f) - (intptr_t)(s) + sizeof((s)->f) <= *reinterpret_cast<size_t*>(s))](#arkweb_member_exists) | - | Check whether the member variables of the current struct exist. |
+| [ARKWEB_MEMBER_EXISTS(s, f) \((intptr_t) & ((s)->f) - (intptr_t)(s) + sizeof((s)->f) <= *(size_t *)(s))](#arkweb_member_exists) | - | Check whether the member variables of the current struct exist. |
 | [ARKWEB_MEMBER_MISSING(s, f)(!ARKWEB_MEMBER_EXISTS(s, f) \|\| !((s)->f))](#arkweb_member_missing) | - | Return false if the struct member does not exist, otherwise true. |
 
 ## Enum type description
@@ -197,7 +197,7 @@ Defines the callback to receive message from HTML.
 ### ARKWEB_MEMBER_EXISTS()
 
 ```c
-ARKWEB_MEMBER_EXISTS(s, f) \((intptr_t) & ((s)->f) - (intptr_t)(s) + sizeof((s)->f) <= *reinterpret_cast<size_t*>(s))
+ARKWEB_MEMBER_EXISTS(s, f) \((intptr_t) & ((s)->f) - (intptr_t)(s) + sizeof((s)->f) <= *(size_t *)(s))
 ```
 
 **Description**

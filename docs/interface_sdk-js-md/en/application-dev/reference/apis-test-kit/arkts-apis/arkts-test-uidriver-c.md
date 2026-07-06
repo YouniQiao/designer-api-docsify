@@ -6,14 +6,14 @@ The **UiDriver** class is the main entry to the UiTest framework. It provides AP
 
 **Deprecated since:** 9
 
-**Substitutes:** [Driver](arkts-test-driver-c.md#driver)
+**Substitutes:** [Driver](arkts-test-driver-c.md)
 
 **System capability:** SystemCapability.Test.UiTest
 
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@ohos.UiTest';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## assertComponentExist
@@ -488,7 +488,7 @@ Triggers the key of this **UiDriver** object that matches the given key code. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | number | Yes | Key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md#keycode). |
+| keyCode | number | Yes | Key value. The value is an integer greater than or equal to 0.For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md). |
 
 **Return value:**
 

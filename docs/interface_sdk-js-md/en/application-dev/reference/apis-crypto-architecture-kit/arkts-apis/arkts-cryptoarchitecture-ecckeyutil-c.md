@@ -11,7 +11,7 @@ Provides utilities for ECC key parameter generation and point conversion based o
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@ohos.security.cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## convertPoint

@@ -9,7 +9,7 @@ Defines the scanner parameters.
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@ohos.scan';
+import { scan } from '@kit.BasicServicesKit';
 ```
 
 ## optionConstraintInt

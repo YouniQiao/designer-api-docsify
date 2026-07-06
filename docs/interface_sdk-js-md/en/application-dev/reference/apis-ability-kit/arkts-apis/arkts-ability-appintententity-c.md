@@ -2,7 +2,7 @@
 
 Define AppIntentEntity.
 
-**Inheritance/Implementation:** AppIntentEntity implements [IntentEntity](arkts-ability-intententity-i.md#intententity)
+**Inheritance/Implementation:** AppIntentEntity implements [IntentEntity](arkts-ability-intententity-i.md)
 
 **Since:** 26.0.0
 
@@ -11,7 +11,7 @@ Define AppIntentEntity.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@ohos.app.ability.insightIntent';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## onQueryEntity

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PanelInfo, PanelType } from '@ohos.selectionInput.SelectionPanel';
+import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

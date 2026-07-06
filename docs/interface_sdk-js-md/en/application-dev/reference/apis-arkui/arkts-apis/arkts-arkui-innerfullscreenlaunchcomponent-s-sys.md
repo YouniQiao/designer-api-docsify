@@ -11,7 +11,7 @@ Declare component InnerFullScreenLaunchComponent
 ## Modules to Import
 
 ```TypeScript
-import { InnerFullScreenLaunchComponent, LaunchController } from '@ohos.arkui.advanced.InnerFullScreenLaunchComponent';
+import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 ```
 
 ## content
@@ -26,7 +26,7 @@ Sets the component content.
 
 **Since:** 12
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

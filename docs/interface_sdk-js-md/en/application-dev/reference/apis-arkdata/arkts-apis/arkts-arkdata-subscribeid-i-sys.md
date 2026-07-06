@@ -11,7 +11,7 @@ Represents the subscription ID information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@ohos.data.cloudExtension';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## databaseAlias

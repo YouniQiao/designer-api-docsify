@@ -2,7 +2,7 @@
 
 The HDR enabled Blender of backgroundColorEffect.
 
-**Inheritance/Implementation:** HdrBrightnessBlender extends [BrightnessBlender](arkts-arkgraphics2d-brightnessblender-i-sys.md#brightnessblender)
+**Inheritance/Implementation:** HdrBrightnessBlender extends [BrightnessBlender](arkts-arkgraphics2d-brightnessblender-i-sys.md)
 
 **Since:** 20
 
@@ -13,6 +13,6 @@ The HDR enabled Blender of backgroundColorEffect.
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@ohos.graphics.uiEffect';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 

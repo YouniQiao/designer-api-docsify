@@ -12,7 +12,7 @@ ArcButton内进度条的参数配置。
 color?: ResourceColor
 ```
 
-进度条前景色。如果组件设置了背景色（[backgroundColor](arkts-arkui-arcbuttonoptions-c.md#arcbuttonoptions)），进度条前景色默认值取组件背景色。进度条前景色不受按钮样式（ [ArcButtonStyleMode](arkts-arkui-arcbuttonstylemode-e.md#arcbuttonstylemode)）设置影响。进度条背景色仅依赖进度条前景色设置，取进度条前景色的25%透明度。 默认值："#1F71FF"，显示为蓝色。
+进度条前景色。如果组件设置了背景色（[backgroundColor](arkts-arkui-arcbuttonoptions-c.md)），进度条前景色默认值取组件背景色。进度条前景色不受按钮样式（ [ArcButtonStyleMode](arkts-arkui-arcbuttonstylemode-e.md)）设置影响。进度条背景色仅依赖进度条前景色设置，取进度条前景色的25%透明度。 默认值："#1F71FF"，显示为蓝色。
 
 **类型：** ResourceColor
 

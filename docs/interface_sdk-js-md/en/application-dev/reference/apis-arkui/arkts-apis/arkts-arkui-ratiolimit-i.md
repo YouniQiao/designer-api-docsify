@@ -9,7 +9,7 @@ Provides the aspect ratio range of the float view. The aspect ratio is obtained 
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from '@ohos.window.floatView';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## maxRatio

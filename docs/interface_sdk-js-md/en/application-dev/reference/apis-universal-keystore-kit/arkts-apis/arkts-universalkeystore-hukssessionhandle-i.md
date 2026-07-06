@@ -9,7 +9,7 @@ Defines the struct for a HUKS handle.
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@ohos.security.huks';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## challenge

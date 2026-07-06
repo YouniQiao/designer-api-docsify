@@ -11,7 +11,7 @@ Indicates the ims call mode info of a video call.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@ohos.telephony.call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## callId

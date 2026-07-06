@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UserAuthExtensionAbility } from '@ohos.app.ability.UserAuthExtensionAbility';
+import { UserAuthExtensionAbility } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary

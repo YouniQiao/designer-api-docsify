@@ -6,7 +6,7 @@
 function getLauncherAbilityInfoSync(bundleName: string, userId: number): Array<LauncherAbilityInfo>
 ```
 
-查询指定bundleName及用户的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md#launcherabilityinfo)。
+查询指定bundleName及用户的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)。
 
 **起始版本：** 18
 
@@ -25,7 +25,7 @@ function getLauncherAbilityInfoSync(bundleName: string, userId: number): Array<L
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;LauncherAbilityInfo&gt; | Array形式返回bundle包含的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md#launcherabilityinfo)信息。 |
+| Array&lt;LauncherAbilityInfo&gt; | Array形式返回bundle包含的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)信息。 |
 
 **错误码：**
 

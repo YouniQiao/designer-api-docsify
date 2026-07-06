@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the content embed document APIs.
+Provides the data structures and corresponding operation APIs related to the embedded documents (OE documents)implemented using the OE technology.
 
 **Library**: libcontent_embed_ndk.so
 
@@ -18,58 +18,58 @@ Defines the content embed document APIs.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) | ContentEmbed_Document | Define the ContentEmbed_Document structure type.Provides methods for Content Embed Kit. |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) | ContentEmbed_Storage | Define the ContentEmbed_Storage structure type.Provides methods for Content Embed Kit. |
-| [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) | ContentEmbed_StorageElement | Define the ContentEmbed_StorageElement structure type.Provides methods for Content Embed Kit. |
-| [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) | ContentEmbed_StorageElements | Define the ContentEmbed_StorageElements structure type.Provides methods for Content Embed Kit. |
-| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) | ContentEmbed_Stream | Define the ContentEmbed_Stream structure type.Provides methods for Content Embed Kit. |
+| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) | ContentEmbed_Document | Declares the structure type of an OE document. Encapsulates the metadata, content, and storage structure ofthe embedded document. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) | ContentEmbed_Storage | Declares the storage structure type of an OE document. Similar to a directory in a file system, theparent object of a storage object must be another storage object or the root storage object. |
+| [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) | ContentEmbed_StorageElement | Defines the structure type of a storage element in an OE document.Use {@link OH_ContentEmbed_StorageElement_GetName} to get the name,{@link OH_ContentEmbed_StorageElement_GetCTime} to get the creation time,and {@link OH_ContentEmbed_StorageElement_GetMTime} to get the modification time.Use {@link OH_ContentEmbed_StorageElement_IsStorage} to determine if the current object is an encapsulationof {@link ContentEmbed_Storage}, and {@link OH_ContentEmbed_StorageElement_IsStream} to determine if it is anencapsulation of {@link ContentEmbed_Stream}. |
+| [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) | ContentEmbed_StorageElements | Declares the ContentEmbed_StorageElements structure.Use {@link OH_ContentEmbed_Storage_GetElements} to retrieve the collection of all {@link ContentEmbed_Storage} and{@link ContentEmbed_Stream} objects under a specific {@link ContentEmbed_Storage} object, with each objectencapsulated as a {@link ContentEmbed_StorageElement} struct.Use {@link OH_ContentEmbed_StorageElements_GetCount} to get the number of elements in the current query,and {@link OH_ContentEmbed_StorageElements_GetElement} to obtain the {@link ContentEmbed_StorageElement} instanceobject at a specified index position. |
+| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) | ContentEmbed_Stream | Declares the stream structure type of an OE document. Similar to a file in the file system, a streamcan be read or written. A stream object can exist only in the storage object. |
 
 ### Macro
 
 | Name | Description |
 | -- | -- |
-| MAX_PATH_LENGTH (4 * 1024) | The maximum length of a file path.<br>**Since**: 24 |
+| MAX_PATH_LENGTH (4 * 1024) | Indicates the maximum length of a file path.<br>**Since**: 24 |
 
 ### Function
 
 | Name | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByOEid(const char *oeid, ContentEmbed_Document **document)](#oh_contentembed_createdocumentbyoeid) | Create a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using the provided oeid.The caller is responsible for destroying the instance by calling[OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByFile(const char *srcFilePath, size_t length, bool isLinking, ContentEmbed_Document **document)](#oh_contentembed_createdocumentbyfile) | Create a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance from the source file.The caller is responsible for destroying the instance by calling[OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_LoadDocumentFromFile(const char *srcFilePath, size_t length, ContentEmbed_Document **document)](#oh_contentembed_loaddocumentfromfile) | Load an instance of [ContentEmbed_Document](capi-contentembed-contentembed-document.md) from the source file.The caller is responsible for destroying the instance by calling[OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_Read(uint8_t *buffer, size_t length, ContentEmbed_Document *document, size_t offset, size_t *readSize)](#oh_contentembed_document_read) | Reads a compound document from [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetOEid(const ContentEmbed_Document *document, char *oeid)](#oh_contentembed_document_getoeid) | Get oeid from [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_IsLinking(const ContentEmbed_Document *document, bool *isLinking)](#oh_contentembed_document_islinking) | whether the source file is linked to the [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetNativeFilePath(const ContentEmbed_Document *document, char *nativeFilePath)](#oh_contentembed_document_getnativefilepath) | Get native file path from [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetRootStorage(ContentEmbed_Document *document, ContentEmbed_Storage **storage)](#oh_contentembed_document_getrootstorage) | Get the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) from a [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance.The caller is responsible for destroying the storage by calling[OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_Flush(const ContentEmbed_Document *document)](#oh_contentembed_document_flush) | Flushes the content of the [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStorage(const ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Storage **childStorage)](#oh_contentembed_storage_createstorage) | Create a new [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance.The caller is responsible for destroying the storage by calling[OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStorage(const ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Storage **childStorage)](#oh_contentembed_storage_getstorage) | Obtain the child storage instance from its parent instance.The caller is responsible for destroying the child storage by calling[OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStream(ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Stream **childStream)](#oh_contentembed_storage_createstream) | Create a new [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance.The caller is responsible for destroying the stream by calling[OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStream(ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Stream **childStream)](#oh_contentembed_storage_getstream) | Obtain the child stream instance from the parent storage instance.The caller is responsible for destroying the child stream by calling[OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteEntry(ContentEmbed_Storage *parentStorage, const char *name)](#oh_contentembed_storage_deleteentry) | Delete a specific storage or stream directory entry in directory tree. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteAllEntry(ContentEmbed_Storage *storage)](#oh_contentembed_storage_deleteallentry) | Delete all entries of the storage from the directory tree to clear the storage. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStorage(ContentEmbed_Storage *storage)](#oh_contentembed_destroystorage) | Destroy an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance and reclaims the memory occupied by the instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Read(ContentEmbed_Stream *stream, unsigned char **buffer, size_t length, size_t *num)](#oh_contentembed_stream_read) | Read the buffer data from an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance.The caller is responsible for destroying the buffer to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Write(ContentEmbed_Stream *stream, const unsigned char *data, size_t length, size_t *num)](#oh_contentembed_stream_write) | Write the buffer data to an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Seek(ContentEmbed_Stream *stream, size_t position)](#oh_contentembed_stream_seek) | Sets the current read position of the stream to the specified offset. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetPosition(ContentEmbed_Stream *stream, size_t *position)](#oh_contentembed_stream_getposition) | Retrieves the current position in the stream. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetSize(ContentEmbed_Stream *stream, size_t *size)](#oh_contentembed_stream_getsize) | Retrieves the size of the data in the stream.This function attempts to determine the total size of the data available in the provided stream.If successful, the size is written to the memory location pointed to by the `size` parameter. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStream(ContentEmbed_Stream *stream)](#oh_contentembed_destroystream) | Destroy an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance and reclaims the memory occupied by the instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyDocument(ContentEmbed_Document *document)](#oh_contentembed_destroydocument) | Destroy an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance and reclaims the memory occupied by the instance. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetOEid(ContentEmbed_Storage *storage, char *oeid, size_t oeidSize)](#oh_contentembed_storage_getoeid) | Gets the oeid of the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md). |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_SetOEid(ContentEmbed_Storage *storage, char *oeid, size_t oeidSize)](#oh_contentembed_storage_setoeid) | Sets the oeid of the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md). |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Create(ContentEmbed_StorageElements **storageElements)](#oh_contentembed_storageelements_create) | Creates an [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance and initializes it. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Destroy(ContentEmbed_StorageElements *storageElements)](#oh_contentembed_storageelements_destroy) | Destroys an [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance and reclaims the memory occupied by it. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetElements(const ContentEmbed_Storage *storage, ContentEmbed_StorageElements *storageElements)](#oh_contentembed_storage_getelements) | Gets the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) of the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md). |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetCount(const ContentEmbed_StorageElements *storageElements, size_t *count)](#oh_contentembed_storageelements_getcount) | Gets the count of elements in the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md). |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetElement(const ContentEmbed_StorageElements *storageElements, size_t index, ContentEmbed_StorageElement **storageElement)](#oh_contentembed_storageelements_getelement) | Gets the element at the specified index in the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md). |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetName(const ContentEmbed_StorageElement *storageElement, char *name, size_t nameSize)](#oh_contentembed_storageelement_getname) | Gets the name of the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md). |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetCTime(const ContentEmbed_StorageElement *element, uint64_t *ctime)](#oh_contentembed_storageelement_getctime) | Get element create time. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetMTime(const ContentEmbed_StorageElement *element, uint64_t *mtime)](#oh_contentembed_storageelement_getmtime) | Get element modify time. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStorage(const ContentEmbed_StorageElement *storageElement, bool *isStorage)](#oh_contentembed_storageelement_isstorage) | Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) is a storage. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStream(const ContentEmbed_StorageElement *element, bool *isStream)](#oh_contentembed_storageelement_isstream) | Determine if an element is a stream type. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CopyTo(ContentEmbed_Storage *srcStorage, ContentEmbed_Storage *destStorage)](#oh_contentembed_storage_copyto) | Copies the content of the source [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) to the destination [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md). |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByOEid(const char *oeid, ContentEmbed_Document **document)](#oh_contentembed_createdocumentbyoeid) | Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using the provided identifier OEID.<br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByFile(const char *srcFilePath, size_t length, bool isLinking, ContentEmbed_Document **document)](#oh_contentembed_createdocumentbyfile) | Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance from a source file.<br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leakage. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_LoadDocumentFromFile(const char *srcFilePath, size_t length, ContentEmbed_Document **document)](#oh_contentembed_loaddocumentfromfile) | Loads an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using an existing file in the OE format.<br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_Read(uint8_t *buffer, size_t length, ContentEmbed_Document *document, size_t offset, size_t *readSize)](#oh_contentembed_document_read) | Reads the original binary data from the specified offset position of the OE document object to the buffer. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetOEid(const ContentEmbed_Document *document, char *oeid)](#oh_contentembed_document_getoeid) | Obtains the identifier OEID from the OE document object. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_IsLinking(const ContentEmbed_Document *document, bool *isLinking)](#oh_contentembed_document_islinking) | Checks whether an OE document is created in link mode. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetNativeFilePath(const ContentEmbed_Document *document, char *nativeFilePath)](#oh_contentembed_document_getnativefilepath) | Obtains the embedded source file path stored in the client sandbox directory from the OE document. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetRootStorage(ContentEmbed_Document *document, ContentEmbed_Storage **storage)](#oh_contentembed_document_getrootstorage) | Obtains the root [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from an OE document object.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_Flush(const ContentEmbed_Document *document)](#oh_contentembed_document_flush) | Flushes data in an OE document to an OE format file. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStorage(const ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Storage **childStorage)](#oh_contentembed_storage_createstorage) | Creates a child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object based on the parent storage object and name of the OEdocument.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStorage(const ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Storage **childStorage)](#oh_contentembed_storage_getstorage) | Obtains the child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from the parent Storage object and name of the OEdocument.<br>You can destroy the instance by calling [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStream(ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Stream **childStream)](#oh_contentembed_storage_createstream) | Creates a [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object for the parent storage object and name of an OE document.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStream(ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Stream **childStream)](#oh_contentembed_storage_getstream) | Obtains the child [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object from the parent storage object and name of the OEdocument.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteEntry(ContentEmbed_Storage *parentStorage, const char *name)](#oh_contentembed_storage_deleteentry) | Deletes a child storage object or stream object with a specified name from the parent storage object of theOE document. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteAllEntry(ContentEmbed_Storage *storage)](#oh_contentembed_storage_deleteallentry) | Deletes all entries from the storage object of an OE document, including the sub-storage objects andsub-stream objects. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStorage(ContentEmbed_Storage *storage)](#oh_contentembed_destroystorage) | Destroys the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object instance of an OE document and reclaims the memory. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Read(ContentEmbed_Stream *stream, unsigned char **buffer, size_t length, size_t *num)](#oh_contentembed_stream_read) | Reads data of a specified length from the current position of the stream object of an OE document tothe buffer. After the data is successfully read, the offset of the stream object increases by the number of actuallyread bytes. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Write(ContentEmbed_Stream *stream, const unsigned char *data, size_t length, size_t *num)](#oh_contentembed_stream_write) | Writes data of a specified length from the buffer to the current position of the stream object in the OEdocument. After the data is successfully written, the offset of the stream object increases by the number ofactually written bytes. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Seek(ContentEmbed_Stream *stream, size_t position)](#oh_contentembed_stream_seek) | Sets the current read location of the stream object in an OE document to the specified offset. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetPosition(ContentEmbed_Stream *stream, size_t *position)](#oh_contentembed_stream_getposition) | Obtains the current position offset of the stream object in an OE document. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetSize(ContentEmbed_Stream *stream, size_t *size)](#oh_contentembed_stream_getsize) | Obtains the total size of the stream object of the OE document, in bytes. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStream(ContentEmbed_Stream *stream)](#oh_contentembed_destroystream) | Destroys the [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object instance of an OE document and reclaims the memory. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyDocument(ContentEmbed_Document *document)](#oh_contentembed_destroydocument) | Destroys the [ContentEmbed_Document](capi-contentembed-contentembed-document.md) object instance and reclaims the memory. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetOEid(ContentEmbed_Storage *storage, char *oeid, size_t oeidSize)](#oh_contentembed_storage_getoeid) | Obtains the identifier (OEID) of the storage object of an OE document. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_SetOEid(ContentEmbed_Storage *storage, char *oeid, size_t oeidSize)](#oh_contentembed_storage_setoeid) | Sets the identifier of the storage object in an OE document. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Create(ContentEmbed_StorageElements **storageElements)](#oh_contentembed_storageelements_create) | Creates and initializes a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance.<br>You can destroy the instance using [OH_ContentEmbed_StorageElements_Destroy](capi-content-embed-document-h.md#oh_contentembed_storageelements_destroy) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Destroy(ContentEmbed_StorageElements *storageElements)](#oh_contentembed_storageelements_destroy) | Destroys a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance and reclaims the memory occupied by it. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetElements(const ContentEmbed_Storage *storage, ContentEmbed_StorageElements *storageElements)](#oh_contentembed_storage_getelements) | Obtains the element list in the storage object of an OE document. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetCount(const ContentEmbed_StorageElements *storageElements, size_t *count)](#oh_contentembed_storageelements_getcount) | Obtains the number of elements in a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetElement(const ContentEmbed_StorageElements *storageElements, size_t index, ContentEmbed_StorageElement **storageElement)](#oh_contentembed_storageelements_getelement) | Obtains the element at the specified index position of the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetName(const ContentEmbed_StorageElement *storageElement, char *name, size_t nameSize)](#oh_contentembed_storageelement_getname) | Obtains the name of a [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetCTime(const ContentEmbed_StorageElement *element, uint64_t *ctime)](#oh_contentembed_storageelement_getctime) | Obtains the creation timestamp of a [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance, in milliseconds. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetMTime(const ContentEmbed_StorageElement *element, uint64_t *mtime)](#oh_contentembed_storageelement_getmtime) | Obtains the last modification timestamp of an [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance, in milliseconds. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStorage(const ContentEmbed_StorageElement *storageElement, bool *isStorage)](#oh_contentembed_storageelement_isstorage) | Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance is the storage object of an OE document. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStream(const ContentEmbed_StorageElement *element, bool *isStream)](#oh_contentembed_storageelement_isstream) | Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance is an OE document stream object. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CopyTo(ContentEmbed_Storage *srcStorage, ContentEmbed_Storage *destStorage)](#oh_contentembed_storage_copyto) | Copies all sub-storage objects and stream objects from the source OE document storage object to the target OEdocument storage object. |
 
 ## Function description
 
@@ -81,7 +81,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByOEid(const char *oeid, Co
 
 **Description**
 
-Create a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using the provided oeid.The caller is responsible for destroying the instance by calling[OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks.
+Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using the provided identifier OEID.<br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks.
 
 **Since**: 24
 
@@ -89,14 +89,14 @@ Create a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md)
 
 | Parameter | Description |
 | -- | -- |
-| const char *oeid | Represents oeid value. |
-| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) **document | Represents a pointer to an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance which will be created. |
+| const char *oeid | Identifier of the OE document, which is used to uniquely identify the OE document. It is recommendedthat the array length be {@link MAX_OEID_LENGTH}. |
+| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) **document | Output parameter. This pointer points to the newly created OE document object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_CreateDocumentByFile()
 
@@ -106,7 +106,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByFile(const char *srcFileP
 
 **Description**
 
-Create a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance from the source file.The caller is responsible for destroying the instance by calling[OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks.
+Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance from a source file.<br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leakage.
 
 **Since**: 24
 
@@ -114,16 +114,16 @@ Create a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md)
 
 | Parameter | Description |
 | -- | -- |
-| const char *srcFilePath | Represents source file path. |
-| size_t length | Represents source file path length. |
-| bool isLinking | Represents whether the source file is linked to the document. |
-| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) **document | Represents a pointer to an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance which will be created. |
+| const char *srcFilePath | Source file path. |
+| size_t length | Length of the source file path string, excluding the terminator. |
+| bool isLinking | Whether to create an OE document in link mode. true: The OE document is created in link mode. Whenthe server edits the OE document, the source file is also modified.<br>false: The OE document is created in embedded mode. When the server edits the OE document in response to aclient request, a temporary file is copied to the sandbox directory of the client app. |
+| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) **document | Output parameter. This pointer points to the newly created OE document object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br>     [CE_ERR_INVALID_LINKING_PATH](capi-content-embed-common-h.md#contentembed_errorcode) - linking file is in application sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the parameter check fails.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that a null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>     <li>[CE_ERR_INVALID_LINKING_PATH](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the link file is in the app sandbox and the link<br>      cannot be created. </li><br>         </ul> |
 
 ### OH_ContentEmbed_LoadDocumentFromFile()
 
@@ -133,7 +133,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_LoadDocumentFromFile(const char *srcFileP
 
 **Description**
 
-Load an instance of [ContentEmbed_Document](capi-contentembed-contentembed-document.md) from the source file.The caller is responsible for destroying the instance by calling[OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks.
+Loads an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using an existing file in the OE format.<br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks.
 
 **Since**: 24
 
@@ -141,15 +141,15 @@ Load an instance of [ContentEmbed_Document](capi-contentembed-contentembed-docum
 
 | Parameter | Description |
 | -- | -- |
-| const char *srcFilePath | Represents source file path. |
-| size_t length | Represents source file path length. |
-| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) **document | Represents a pointer to an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance which will be loaded. |
+| const char *srcFilePath | Source file path, which points to the file to be loaded in the OE format. |
+| size_t length | Length of the source file path string, excluding the terminator. |
+| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) **document | Output parameter. This pointer points to the newly created OE document object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Parameter check failed.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Document_Read()
 
@@ -159,7 +159,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_Read(uint8_t *buffer, size_t len
 
 **Description**
 
-Reads a compound document from [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance.
+Reads the original binary data from the specified offset position of the OE document object to the buffer.
 
 **Since**: 24
 
@@ -167,17 +167,17 @@ Reads a compound document from [ContentEmbed_Document](capi-contentembed-content
 
 | Parameter | Description |
 | -- | -- |
-| uint8_t *buffer | Represents the buffer data read from an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
-| size_t length | Represents the length of the buffer data. |
-| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Represents a pointer to an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
-| size_t offset | Represents pointer position of reading. |
-| size_t *readSize | Represents the length of the data actually read. |
+| uint8_t *buffer | Output parameter. Buffer for storing the data read from the OE document. |
+| size_t length | Size of the buffer, in bytes. |
+| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the OE document object. |
+| size_t offset | Offset position from which the data is read in the OE document, starting from 0. |
+| size_t *readSize | Output parameter. Length of the actually read data, in bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the storage operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Parameter check failed.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations related to the OE file directory failed.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Document_GetOEid()
 
@@ -187,7 +187,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetOEid(const ContentEmbed_Docum
 
 **Description**
 
-Get oeid from [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance.
+Obtains the identifier OEID from the OE document object.
 
 **Since**: 24
 
@@ -195,14 +195,14 @@ Get oeid from [ContentEmbed_Document](capi-contentembed-contentembed-document.md
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Represents a pointer to an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
-| char *oeid | Output parameter represents the oeid value. |
+| [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the OE document object. |
+| char *oeid | Output parameter. Character array for storing the OEID value. The recommended array length is{@link MAX_OEID_LENGTH}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - The parameter check fails.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Document_IsLinking()
 
@@ -212,7 +212,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_IsLinking(const ContentEmbed_Doc
 
 **Description**
 
-whether the source file is linked to the [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance.
+Checks whether an OE document is created in link mode.
 
 **Since**: 24
 
@@ -220,14 +220,14 @@ whether the source file is linked to the [ContentEmbed_Document](capi-contentemb
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Represents a pointer to an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
-| bool *isLinking | Output parameter represents whether the source file is linked to the document. |
+| [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the OE document object. |
+| bool *isLinking | Output parameter. true indicates that the OE document is created in link mode. false indicates thatthe OE document is created in embedded mode. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Parameter check failed.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Document_GetNativeFilePath()
 
@@ -237,7 +237,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetNativeFilePath(const ContentE
 
 **Description**
 
-Get native file path from [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance.
+Obtains the embedded source file path stored in the client sandbox directory from the OE document.
 
 **Since**: 24
 
@@ -245,14 +245,14 @@ Get native file path from [ContentEmbed_Document](capi-contentembed-contentembed
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Represents a pointer to an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
-| char *nativeFilePath | Output parameter represents the path of the source file withinthe [ContentEmbed_Document](capi-contentembed-contentembed-document.md) on disk. |
+| [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the OE document object. |
+| char *nativeFilePath | Output parameter. Character array for storing the source file path. It is recommended that thearray length be {@link MAX_PATH_LENGTH}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Parameter check failed.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Document_GetRootStorage()
 
@@ -262,7 +262,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetRootStorage(ContentEmbed_Docu
 
 **Description**
 
-Get the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) from a [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance.The caller is responsible for destroying the storage by calling[OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
+Obtains the root [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from an OE document object.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
 
 **Since**: 24
 
@@ -270,14 +270,14 @@ Get the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) from a
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Represents a pointer to an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) **storage | Output parameter represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance. |
+| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the [ContentEmbed_Document](capi-contentembed-contentembed-document.md)t object. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) **storage | Output parameter. After the API is successfully called, this pointer points to the root storageobject of the OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameters.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Document_Flush()
 
@@ -287,7 +287,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_Flush(const ContentEmbed_Documen
 
 **Description**
 
-Flushes the content of the [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance.
+Flushes data in an OE document to an OE format file.
 
 **Since**: 24
 
@@ -295,13 +295,13 @@ Flushes the content of the [ContentEmbed_Document](capi-contentembed-contentembe
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Represents a pointer to an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance. |
+| [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the OE document object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_FILE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the file operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_FILE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to perform the file operation.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Storage_CreateStorage()
 
@@ -311,7 +311,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStorage(const ContentEmbed_
 
 **Description**
 
-Create a new [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance.The caller is responsible for destroying the storage by calling[OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
+Creates a child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object based on the parent storage object and name of the OEdocument.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
 
 **Since**: 24
 
@@ -319,15 +319,15 @@ Create a new [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) i
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance.when an entry is to be deleted from the parent storage, invoke either[OH_ContentEmbed_Storage_DeleteEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteentry) for a specific entry or[OH_ContentEmbed_Storage_DeleteAllEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteallentry) to remove all entries,depending on the required operation. |
-| const char *name | Represents the name of an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance which will be created. |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) **childStorage | Output parameter represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance. |
+| [const ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Pointer to the parent storage object of the OE document.<br>To delete a specified child storage object from the parent storage object, call[OH_ContentEmbed_Storage_DeleteEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteentry).<br>To delete all child storage objects from the parent storage object, call[OH_ContentEmbed_Storage_DeleteAllEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteallentry). |
+| const char *name | Name of the child storage object to be created. The value cannot be an empty string. It can contain amaximum of 31 characters and cannot contain invalid characters, such as '/', '\', ':', and '!'. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) **childStorage | Output parameter. After the function is successfully called, the pointer points to the newlycreated child storage object of the OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the storage operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - The parameter check fails. The possible cause is that the parentStorage<br>      or name is invalid.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - The returned pointer is null. The possible cause is that the childStorage fails<br>      to be created.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - The storage operation fails. The possible cause is that the disk<br>     space is insufficient.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Storage_GetStorage()
 
@@ -337,7 +337,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStorage(const ContentEmbed_Sto
 
 **Description**
 
-Obtain the child storage instance from its parent instance.The caller is responsible for destroying the child storage by calling[OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
+Obtains the child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from the parent Storage object and name of the OEdocument.<br>You can destroy the instance by calling [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
 
 **Since**: 24
 
@@ -345,15 +345,15 @@ Obtain the child storage instance from its parent instance.The caller is respons
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance. |
-| const char *name | Represents the name of an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance which will be obtained. |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) **childStorage | Output parameter represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance. |
+| [const ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Pointer to the parent Storage object of the OE document. |
+| const char *name | Name of the child Storage object to be obtained. The value cannot be an empty string. It can contain amaximum of 31 characters and cannot contain invalid characters such as '/', '\', ':', and '!'. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) **childStorage | Output parameter. After the API is successfully called, the pointer points to the found childStorage object of the OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the storage operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the parameter check fails.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that a null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the device is not supported.</li><br>     <li>[CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the operation related to the directory of the<br>     OE document fails.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Storage_CreateStream()
 
@@ -363,7 +363,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStream(ContentEmbed_Storage
 
 **Description**
 
-Create a new [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance.The caller is responsible for destroying the stream by calling[OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks.
+Creates a [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object for the parent storage object and name of an OE document.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks.
 
 **Since**: 24
 
@@ -371,15 +371,15 @@ Create a new [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) ins
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance.when an entry is to be deleted from the parent storage, invoke either[OH_ContentEmbed_Storage_DeleteEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteentry) for a specific entry or[OH_ContentEmbed_Storage_DeleteAllEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteallentry) to remove all entries,depending on the required operation. |
-| const char *name | Represents the name of an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance which will be created. |
-| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) **childStream | Output parameter represents a pointer to an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Pointer to the parent storage object of an OE document.<br>You can call [OH_ContentEmbed_Storage_DeleteEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteentry) to delete a specified child stream object from theparent storage object.<br>You can call [OH_ContentEmbed_Storage_DeleteAllEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteallentry) to delete all child stream objects from theparent storage object. |
+| const char *name | Name of the stream to be created, which is used to identify and search for the stream. The value cannotbe an empty string. It can contain a maximum of 31 characters and cannot contain invalid characters, such as '/','\', ':', and '!'. |
+| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) **childStream | Output parameter. After the call is successful, the pointer points to the newly created streamobject of the OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the storage operation failed.<br>     [CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the stream operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations related to the directory of the OE document failed.</li><br>     <li>[CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations related to the stream of the OE document failed.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Storage_GetStream()
 
@@ -389,7 +389,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStream(ContentEmbed_Storage *p
 
 **Description**
 
-Obtain the child stream instance from the parent storage instance.The caller is responsible for destroying the child stream by calling[OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks.
+Obtains the child [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object from the parent storage object and name of the OEdocument.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks.
 
 **Since**: 24
 
@@ -397,15 +397,15 @@ Obtain the child stream instance from the parent storage instance.The caller is 
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance. |
-| const char *name | Represents the name of an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance which will be obtained. |
-| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) **childStream | Output parameter represents a pointer to an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Pointer to the parent storage object of the OE document. |
+| const char *name | Name of the stream object of the OE document to be obtained. The parameter cannot be an empty string.The name can contain a maximum of 31 characters and cannot contain invalid characters, such as '/', '\', ':',and '!'. |
+| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) **childStream | Output parameter. After the call succeeds, the pointer points to the found stream object of theOE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the storage operation failed.<br>     [CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the stream operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - The parameter check fails.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations related to the directory of the OE document fail.</li><br>     <li>[CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations related to the stream of the OE document fail.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Storage_DeleteEntry()
 
@@ -415,7 +415,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteEntry(ContentEmbed_Storage 
 
 **Description**
 
-Delete a specific storage or stream directory entry in directory tree.
+Deletes a child storage object or stream object with a specified name from the parent storage object of theOE document.
 
 **Since**: 24
 
@@ -423,14 +423,14 @@ Delete a specific storage or stream directory entry in directory tree.
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance. |
-| const char *name | Represents the name of a storage or stream which will be delete. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Pointer to the parent storage object of the OE document. |
+| const char *name | Name of the child storage object or stream object to be deleted. The parameter cannot be an empty string.The name can contain a maximum of 31 characters and cannot contain invalid characters, such as '/', '\', ':',and '!'. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the storage operation failed.<br>     [CE_ERR_FILE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the file operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations related to the directory of the OE file failed.</li><br>     <li>[CE_ERR_FILE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations on the OE file failed.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Storage_DeleteAllEntry()
 
@@ -440,7 +440,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteAllEntry(ContentEmbed_Stora
 
 **Description**
 
-Delete all entries of the storage from the directory tree to clear the storage.
+Deletes all entries from the storage object of an OE document, including the sub-storage objects andsub-stream objects.
 
 **Since**: 24
 
@@ -448,13 +448,13 @@ Delete all entries of the storage from the directory tree to clear the storage.
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Pointer to the storage object of an OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the storage operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations related to the directory of the OE file failed.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_DestroyStorage()
 
@@ -464,7 +464,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStorage(ContentEmbed_Storage *stor
 
 **Description**
 
-Destroy an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance and reclaims the memory occupied by the instance.
+Destroys the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object instance of an OE document and reclaims the memory.
 
 **Since**: 24
 
@@ -472,13 +472,13 @@ Destroy an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) ins
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance.After this call, the pointer becomes invalid and must not be used. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Pointer to the storage object of an OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Stream_Read()
 
@@ -488,7 +488,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Read(ContentEmbed_Stream *stream, 
 
 **Description**
 
-Read the buffer data from an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance.The caller is responsible for destroying the buffer to avoid memory leaks.
+Reads data of a specified length from the current position of the stream object of an OE document tothe buffer. After the data is successfully read, the offset of the stream object increases by the number of actuallyread bytes.
 
 **Since**: 24
 
@@ -496,16 +496,16 @@ Read the buffer data from an [ContentEmbed_Stream](capi-contentembed-contentembe
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Represents a pointer to an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance. |
-| unsigned char **buffer | Output parameter represents the buffer data read from an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance. |
-| size_t length | Represents the length of the buffer data. |
-| size_t *num | Output parameter represents the num of the buffer data that has been read. |
+| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Pointer to the stream object of an OE document. |
+| unsigned char **buffer | Output parameter. Pointer to the buffer for storing the read data. The memory is allocated internallyin the function. The caller needs to release the memory. |
+| size_t length | Maximum number of bytes of data to be read. |
+| size_t *num | Output parameter. Number of actually read data items, in bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the stream operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to perform the stream operation.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Stream_Write()
 
@@ -515,7 +515,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Write(ContentEmbed_Stream *stream,
 
 **Description**
 
-Write the buffer data to an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance.
+Writes data of a specified length from the buffer to the current position of the stream object in the OEdocument. After the data is successfully written, the offset of the stream object increases by the number ofactually written bytes.
 
 **Since**: 24
 
@@ -523,16 +523,16 @@ Write the buffer data to an [ContentEmbed_Stream](capi-contentembed-contentembed
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Represents a pointer to an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance. |
-| const unsigned char *data | Represents the data write to an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance. |
-| size_t length | Represents the length of the data. |
-| size_t *num | Output parameter represents the num of the data that has been written. |
+| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Pointer to the stream object in the OE document. |
+| const unsigned char *data | Input parameter. Pointer to the buffer where data is to be written. |
+| size_t length | Number of bytes of data to be written. |
+| size_t *num | Output parameter. Number of actually written data items, in bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the stream operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - The stream operation fails.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Stream_Seek()
 
@@ -542,7 +542,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Seek(ContentEmbed_Stream *stream, 
 
 **Description**
 
-Sets the current read position of the stream to the specified offset.
+Sets the current read location of the stream object in an OE document to the specified offset.
 
 **Since**: 24
 
@@ -550,14 +550,14 @@ Sets the current read position of the stream to the specified offset.
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Represents a pointer to an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance that will be modified. |
-| size_t position | The offset in bytes from the beginning of the stream to which the position should be set. |
+| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Pointer to the stream object in an OE document. |
+| size_t position | Offset of the stream object relative to the start position, in bytes. The value starts from 0. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the stream operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to perform operations on the stream object in an OE document.<br>     </li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Stream_GetPosition()
 
@@ -567,7 +567,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetPosition(ContentEmbed_Stream *s
 
 **Description**
 
-Retrieves the current position in the stream.
+Obtains the current position offset of the stream object in an OE document.
 
 **Since**: 24
 
@@ -575,14 +575,14 @@ Retrieves the current position in the stream.
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Represents a pointer to the [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance. |
-| size_t *position | Represents a pointer to a size_t variable where the current position will be stored. |
+| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Pointer to the stream object of the OE document. |
+| size_t *position | Output parameter. Offset of the stream object relative to the start position, in bytes. The valuestarts from 0. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the stream operation failed.<br>     [CE_ERR_FILE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the file operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations related to the stream object of the OE document failed.<br>     </li><br>     <li>[CE_ERR_FILE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - The file operation failed.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Stream_GetSize()
 
@@ -592,7 +592,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetSize(ContentEmbed_Stream *strea
 
 **Description**
 
-Retrieves the size of the data in the stream.This function attempts to determine the total size of the data available in the provided stream.If successful, the size is written to the memory location pointed to by the `size` parameter.
+Obtains the total size of the stream object of the OE document, in bytes.
 
 **Since**: 24
 
@@ -600,14 +600,14 @@ Retrieves the size of the data in the stream.This function attempts to determine
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Represents a pointer to the [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance from whichthe size is to be retrieved. |
-| size_t *size | Represents a pointer to a size_t variable where the size of the stream will be stored. |
+| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Pointer to the stream object of the OE document. |
+| size_t *size | Output parameter. Total size of the stream object of the OE document, in bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the stream operation failed.<br>     [CE_ERR_FILE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the file operation failed.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_STREAM_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations related to the stream of the OE file failed.</li><br>     <li>[CE_ERR_FILE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - The file operation failed.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_DestroyStream()
 
@@ -617,7 +617,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStream(ContentEmbed_Stream *stream
 
 **Description**
 
-Destroy an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance and reclaims the memory occupied by the instance.
+Destroys the [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object instance of an OE document and reclaims the memory.
 
 **Since**: 24
 
@@ -625,13 +625,13 @@ Destroy an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) insta
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Represents a pointer to an [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) instance.After this call, the pointer becomes invalid and must not be used. |
+| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Pointer to the stream object of an OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - The parameter check failed.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_DestroyDocument()
 
@@ -641,7 +641,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_DestroyDocument(ContentEmbed_Document *do
 
 **Description**
 
-Destroy an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance and reclaims the memory occupied by the instance.
+Destroys the [ContentEmbed_Document](capi-contentembed-contentembed-document.md) object instance and reclaims the memory.
 
 **Since**: 24
 
@@ -649,13 +649,13 @@ Destroy an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) i
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Represents a pointer to an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance.After this call, the pointer becomes invalid and must not be used. |
+| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the OE document object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - The parameter check fails.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Storage_GetOEid()
 
@@ -665,7 +665,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetOEid(ContentEmbed_Storage *sto
 
 **Description**
 
-Gets the oeid of the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md).
+Obtains the identifier (OEID) of the storage object of an OE document.
 
 **Since**: 24
 
@@ -673,15 +673,15 @@ Gets the oeid of the [ContentEmbed_Storage](capi-contentembed-contentembed-stora
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance. |
-| char *oeid | Output parameter represents a pointer to a char array where the oeid will be stored. |
-| size_t oeidSize | Represents the size of the oeid buffer. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Pointer to the storage object of an OE document. |
+| char *oeid | Output parameter. Character array for storing the identifier OEID. It is recommended that the arraylength be {@link MAX_OEID_LENGTH}. |
+| size_t oeidSize | Length of the OEID array, in bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the storage operation failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - The parameter check fails.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations related to the directory of the OE document fail.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Storage_SetOEid()
 
@@ -691,7 +691,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_SetOEid(ContentEmbed_Storage *sto
 
 **Description**
 
-Sets the oeid of the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md).
+Sets the identifier of the storage object in an OE document.
 
 **Since**: 24
 
@@ -699,15 +699,15 @@ Sets the oeid of the [ContentEmbed_Storage](capi-contentembed-contentembed-stora
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance. |
-| char *oeid | Input parameter represents a pointer to a char array containing the oeid to be set. |
-| size_t oeidSize | Represents the size of the oeid buffer. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Pointer to the storage object in an OE document. |
+| char *oeid | Character array of the identifier OEID to be set. It is recommended that the array length be{@link MAX_OEID_LENGTH}. |
+| size_t oeidSize | Length of the OEID array, in bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the storage operation failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations on the Storage object of the OE document failed.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_StorageElements_Create()
 
@@ -717,7 +717,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Create(ContentEmbed_Stora
 
 **Description**
 
-Creates an [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance and initializes it.
+Creates and initializes a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance.<br>You can destroy the instance using [OH_ContentEmbed_StorageElements_Destroy](capi-content-embed-document-h.md#oh_contentembed_storageelements_destroy) to avoid memory leaks.
 
 **Since**: 24
 
@@ -725,13 +725,13 @@ Creates an [ContentEmbed_StorageElements](capi-contentembed-contentembed-storage
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) **storageElements | Output parameter represents a pointer to a pointerto an [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance.After this call, the pointer to the instance is stored in the 'storageElements' parameter. |
+| [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) **storageElements | Output parameter. After the call is successful, the pointer points to the[ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_StorageElements_Destroy()
 
@@ -741,7 +741,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Destroy(ContentEmbed_Stor
 
 **Description**
 
-Destroys an [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance and reclaims the memory occupied by it.
+Destroys a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance and reclaims the memory occupied by it.
 
 **Since**: 24
 
@@ -749,13 +749,13 @@ Destroys an [ContentEmbed_StorageElements](capi-contentembed-contentembed-storag
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) *storageElements | Represents a pointer to a pointer to an [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance.After this call, the pointer to the instance becomes invalid and must not be used. |
+| [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) *storageElements | Pointer to the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Storage_GetElements()
 
@@ -765,7 +765,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetElements(const ContentEmbed_St
 
 **Description**
 
-Gets the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) of the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md).
+Obtains the element list in the storage object of an OE document.
 
 **Since**: 24
 
@@ -773,14 +773,14 @@ Gets the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageel
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Represents a pointer to an [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance. |
-| [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) *storageElements | Output parameter represents a pointer to an [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance.After this call, the pointer to the instance is stored in the 'storageElements' parameter. |
+| [const ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Pointer to the storage object of an OE document. |
+| [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) *storageElements | Element list in the storage object of an OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the storage operation failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the parameter check fails.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that a null pointer is returned.</li><br>     <li>[CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - Operations on the Storage object of the OE document failed.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul><br>     sandbox. |
 
 ### OH_ContentEmbed_StorageElements_GetCount()
 
@@ -790,7 +790,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetCount(const ContentEmb
 
 **Description**
 
-Gets the count of elements in the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md).
+Obtains the number of elements in a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance.
 
 **Since**: 24
 
@@ -798,14 +798,14 @@ Gets the count of elements in the [ContentEmbed_StorageElements](capi-contentemb
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) *storageElements | Represents a pointer to an [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. |
-| size_t *count | Output parameter represents a pointer to a size_t variable where the count will be stored.After this call, the count of elements in the 'storageElements' instance is stored in the 'count' parameter. |
+| [const ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) *storageElements | Pointer to the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. |
+| size_t *count | Output parameter. Number of elements in the element set. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - indicates that the parameter check fails.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_StorageElements_GetElement()
 
@@ -815,7 +815,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetElement(const ContentE
 
 **Description**
 
-Gets the element at the specified index in the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md).
+Obtains the element at the specified index position of the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance.
 
 **Since**: 24
 
@@ -823,15 +823,15 @@ Gets the element at the specified index in the [ContentEmbed_StorageElements](ca
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) *storageElements | Represents a pointer to an [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. |
-| size_t index | Represents the index of the element to be retrieved. |
-| [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) **storageElement | Output parameter represents a pointer to an [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance.After this call, the pointer to the instance is stored in the 'storageElement' parameter. |
+| [const ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) *storageElements | Pointer to the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. |
+| size_t index | Index position of the element to be obtained, starting from 0. |
+| [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) **storageElement | Output parameter. Upon successful retrieval, returns a pointer to the[ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance at the specified index in storageElements. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul>. |
 
 ### OH_ContentEmbed_StorageElement_GetName()
 
@@ -841,7 +841,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetName(const ContentEmbed
 
 **Description**
 
-Gets the name of the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md).
+Obtains the name of a [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance.
 
 **Since**: 24
 
@@ -849,15 +849,15 @@ Gets the name of the [ContentEmbed_StorageElement](capi-contentembed-contentembe
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) *storageElement | Represents a pointer to an [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
-| char *name | Output parameter represents a pointer to a character array where the name will be stored.After this call, the name of the 'storageElement' instance is stored in the 'name' parameter. |
-| size_t nameSize | Represents the size of the 'name' buffer. |
+| [const ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) *storageElement | Pointer to the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
+| char *name | Output parameter. Used to store the element name string. |
+| size_t nameSize | Size of the name buffer, in bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_StorageElement_GetCTime()
 
@@ -867,7 +867,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetCTime(const ContentEmbe
 
 **Description**
 
-Get element create time.
+Obtains the creation timestamp of a [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance, in milliseconds.
 
 **Since**: 24
 
@@ -875,14 +875,14 @@ Get element create time.
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) *element | Represents a pointer to an [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
-| uint64_t *ctime | Out param, represents the create time of element. |
+| [const ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) *element | Pointer to the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
+| uint64_t *ctime | Output parameter. Pointer to the creation timestamp of the element, in milliseconds. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - The returned pointer is null.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_StorageElement_GetMTime()
 
@@ -892,7 +892,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetMTime(const ContentEmbe
 
 **Description**
 
-Get element modify time.
+Obtains the last modification timestamp of an [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance, in milliseconds.
 
 **Since**: 24
 
@@ -900,14 +900,14 @@ Get element modify time.
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) *element | Represents a pointer to an [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
-| uint64_t *mtime | Out param, represents the modify time of element. |
+| [const ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) *element | Pointer to the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
+| uint64_t *mtime | Output parameter. Pointer to the last modification timestamp of the element, in milliseconds. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - The operation is successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_StorageElement_IsStorage()
 
@@ -917,7 +917,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStorage(const ContentEmb
 
 **Description**
 
-Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) is a storage.
+Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance is the storage object of an OE document.
 
 **Since**: 24
 
@@ -925,14 +925,14 @@ Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) *storageElement | Represents a pointer to an [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
-| bool *isStorage | Output parameter represents a pointer to a boolean variable where the result will be stored.After this call, the result of the check is stored in the 'isStorage' parameter. |
+| [const ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) *storageElement | Pointer to the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
+| bool *isStorage | Output parameter. The value true indicates that the instance is an OE document storage object, andthe value false indicates that it is not. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - Operations are successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Failed to check the parameter.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_StorageElement_IsStream()
 
@@ -942,7 +942,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStream(const ContentEmbe
 
 **Description**
 
-Determine if an element is a stream type.
+Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance is an OE document stream object.
 
 **Since**: 24
 
@@ -950,14 +950,14 @@ Determine if an element is a stream type.
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) *element | Represents a pointer to an [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
-| bool *isStream | Out param, represents it is true if the element is a stream type. |
+| [const ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) *element | Pointer to the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
+| bool *isStream | Output parameter. The value true indicates that the object is an OE document stream object, and thevalue false indicates that the object is not an OE document stream object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - Operations are successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - Parameter check failed.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 ### OH_ContentEmbed_Storage_CopyTo()
 
@@ -967,7 +967,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CopyTo(ContentEmbed_Storage *srcS
 
 **Description**
 
-Copies the content of the source [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) to the destination [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md).
+Copies all sub-storage objects and stream objects from the source OE document storage object to the target OEdocument storage object.
 
 **Since**: 24
 
@@ -975,13 +975,13 @@ Copies the content of the source [ContentEmbed_Storage](capi-contentembed-conten
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *srcStorage | Represents a pointer to the source [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance. |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *destStorage | Represents a pointer to the destination [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) instance. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *srcStorage | Pointer to the source OE document storage object. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *destStorage | Pointer to the target OE document storage object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | Returns a specific error code.<br>     [CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - success.<br>     [CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - parameter check failed.<br>     [CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - unexpected null pointer.<br>     [CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - the storage operation failed.<br>     [CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - the device is not supported.<br>     [CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - application is in dlp sandbox.<br> Specific error codes can be referenced [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode). |
+| [ContentEmbed_ErrorCode](capi-content-embed-common-h.md#contentembed_errorcode) | <ul><br>     <li>[CE_ERR_OK](capi-content-embed-common-h.md#contentembed_errorcode) - Operations are successful.</li><br>     <li>[CE_ERR_PARAM_INVALID](capi-content-embed-common-h.md#contentembed_errorcode) - The parameter check fails.</li><br>     <li>[CE_ERR_NULL_POINTER](capi-content-embed-common-h.md#contentembed_errorcode) - A null pointer is returned.</li><br>     <li>[CE_ERR_STORAGE_OPERATION_FAILED](capi-content-embed-common-h.md#contentembed_errorcode) - The storage operation fails.</li><br>     <li>[CE_ERR_DEVICE_NOT_SUPPORTED](capi-content-embed-common-h.md#contentembed_errorcode) - The device is not supported.</li><br>     <li>[CE_ERR_IN_DLP_SANDBOX](capi-content-embed-common-h.md#contentembed_errorcode) - This operation is not supported because the application is in<br>     the DLP sandbox.</li><br>         </ul> |
 
 

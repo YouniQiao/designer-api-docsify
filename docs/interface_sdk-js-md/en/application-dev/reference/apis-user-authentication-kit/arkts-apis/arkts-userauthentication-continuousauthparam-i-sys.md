@@ -11,7 +11,7 @@ Defines continuous authentication parameters. They are used to configure paramet
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@ohos.userIAM.companionDeviceAuth';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## templateId

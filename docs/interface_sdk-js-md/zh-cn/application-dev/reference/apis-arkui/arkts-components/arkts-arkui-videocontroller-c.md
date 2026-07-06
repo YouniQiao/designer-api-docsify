@@ -102,7 +102,7 @@ setCurrentTime(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 视频播放进度位置。<br>取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md#preparedinfo)]<br>当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。<br>单位：秒<br/>从API version 8开始，支持设置视频的跳转模式，详见[setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-videocontroller-c.md#setcurrenttime-2)。 |
+| value | number | 是 | 视频播放进度位置。<br>取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md)]<br>当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。<br>单位：秒<br/>从API version 8开始，支持设置视频的跳转模式，详见[setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-videocontroller-c.md#setcurrenttime-2)。 |
 
 ## setCurrentTime
 
@@ -122,7 +122,7 @@ setCurrentTime(value: number, seekMode: SeekMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 视频播放进度位置。<br>取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md#preparedinfo)]<br>当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。<br>单位：秒 |
+| value | number | 是 | 视频播放进度位置。<br>取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md)]<br>当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。<br>单位：秒 |
 | seekMode | SeekMode | 是 | 跳转模式。 |
 
 ## start

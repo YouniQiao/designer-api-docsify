@@ -2,7 +2,7 @@
 
 The definition of Ranking.
 
-**Inheritance/Implementation:** Ranking extends [MediaEntity](arkts-avsession-mediaentity-i.md#mediaentity)
+**Inheritance/Implementation:** Ranking extends [MediaEntity](arkts-avsession-mediaentity-i.md)
 
 **Since:** 23
 
@@ -11,7 +11,7 @@ The definition of Ranking.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@ohos.multimedia.avMusicTemplate';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## topElements

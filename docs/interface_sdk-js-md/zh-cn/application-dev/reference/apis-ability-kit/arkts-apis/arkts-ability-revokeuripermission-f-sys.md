@@ -34,7 +34,7 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
 
 **示例：**
 
@@ -94,7 +94,7 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<num
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
 
 **示例：**
 
@@ -152,7 +152,7 @@ function revokeUriPermission(uri: string, targetBundleName: string, appCloneInde
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
 | [16000081](../errorcode-ability.md#16000081-获取目标应用信息失败) | Failed to obtain the target application information. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
 
 **示例：**
 

@@ -141,7 +141,7 @@ Defines the <b>handleFlags</b> of a <b>TEE_ObjectHandle</b>.The <b>handleFlags</
 | TEE_DATA_FLAG_OVERWRITE = 0x00000400 | Protect the existing file with the same name. Throw an error if the file with the same name exists;create a data file otherwise. |
 | TEE_DATA_FLAG_GID = 0x02000000 | If the bit25 is set to 1, it means deriving TA root key by using gid |
 | TEE_DATA_FLAG_HUK2 = 0x04000000 | If the bit26 is set to 1, it means deriving TA root key by using huk2 |
-| TEE_DATA_FLAG_DERIVE_32BYTES_KEY_ONCE =  0x08000000 | If the bit27 os set to 1, it means deriving the 32-bytes TA root key at one time,if it is 0, it means deriving TA root keys and combined them together. |
+| TEE_DATA_FLAG_DERIVE_32BYTES_KEY_ONCE =  0x08000000 | If the bit27 is set to 1, it means deriving the 32-bytes TA root key at one time,if it is 0, it means deriving TA root keys and combined them together. |
 | TEE_DATA_FLAG_AES256 =  0x10000000 | Use AES256 if bit 28 is 1; use AES128 if bit 28 is 0. |
 | TEE_DATA_FLAG_OPEN_AESC = 0x20000000 | If bit 29 is set to 1, open the earlier version preferentially. |
 | TEE_DATA_FLAG_GM =  0x40000000 | If bit30 is set to 1, it means use GM algorithm to protect data |

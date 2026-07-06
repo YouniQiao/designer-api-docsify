@@ -9,7 +9,7 @@ The **storageStatistics** module provides APIs for obtaining storage space infor
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@ohos.file.storageStatistics';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## Summary

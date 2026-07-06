@@ -658,7 +658,7 @@ align(value: Alignment): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Alignment | 是 | 设置当前组件绘制区域内的子组件的对齐方式。<br/>只在[Stack](../../apis-arkts/arkts-apis/arkts-arkts-stack-c.md#stack),[FolderStack](FolderStack),[Shape](Shape),[Button](../../apis-input-kit/arkts-apis/arkts-input-button-e.md#button),[Marquee](Marquee),[StepperItem](StepperItem),[Text](Text),[TextArea](TextArea),[TextInput](TextInput),[RichEditor](RichEditor),[Hyperlink](Hyperlink),[SymbolGlyph](SymbolGlyph),[ListItem](ListItem),[GridItem](GridItem),[Scroll](Scroll),[FlowItem](FlowItem),[ImageAnimator](ImageAnimator),[LoadingProgress](LoadingProgress),[PatternLock](PatternLock),[Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-progress-i.md#progress),[QRCode](QRCode),[TextClock](TextClock),[TextTimer](TextTimer),[MenuItem](StMenuItemack),[Toggle](Toggle),[Checkbox](Checkbox), and[NodeContainer]{@linkNodeContainer}中生效，其中和文本相关的组件Marquee、Text、TextArea、TextInput、RichEditor、Hyperlink的align结果参考[textAlign](ts-basic-components-text.md#textalign)。<br/>不支持textAlign属性的组件则无法设置水平方向的文字对齐。<br/>默认值：Alignment.Center<br/>**说明：**<br/>该属性在[Stack](ts-container-stack.md)组件上支持镜像能力，在其他组件上不支持镜像能力。<br/>在Stack中该属性与alignContent效果一致，只能设置子组件在当前组件内的对齐方式。 |
+| value | Alignment | 是 | 设置当前组件绘制区域内的子组件的对齐方式。<br/>只在[Stack](../../apis-arkts/arkts-apis/arkts-arkts-stack-c.md),[FolderStack](FolderStack),[Shape](Shape),[Button](../../apis-input-kit/arkts-apis/arkts-input-button-e.md),[Marquee](Marquee),[StepperItem](StepperItem),[Text](Text),[TextArea](TextArea),[TextInput](TextInput),[RichEditor](RichEditor),[Hyperlink](Hyperlink),[SymbolGlyph](SymbolGlyph),[ListItem](ListItem),[GridItem](GridItem),[Scroll](Scroll),[FlowItem](FlowItem),[ImageAnimator](ImageAnimator),[LoadingProgress](LoadingProgress),[PatternLock](PatternLock),[Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-progress-i.md),[QRCode](QRCode),[TextClock](TextClock),[TextTimer](TextTimer),[MenuItem](StMenuItemack),[Toggle](Toggle),[Checkbox](Checkbox), and[NodeContainer]{@linkNodeContainer}中生效，其中和文本相关的组件Marquee、Text、TextArea、TextInput、RichEditor、Hyperlink的align结果参考[textAlign](ts-basic-components-text.md#textalign)。<br/>不支持textAlign属性的组件则无法设置水平方向的文字对齐。<br/>默认值：Alignment.Center<br/>**说明：**<br/>该属性在[Stack](ts-container-stack.md)组件上支持镜像能力，在其他组件上不支持镜像能力。<br/>在Stack中该属性与alignContent效果一致，只能设置子组件在当前组件内的对齐方式。 |
 
 **返回值：**
 
@@ -688,7 +688,7 @@ align(alignment: Alignment | LocalizedAlignment): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alignment | Alignment \| LocalizedAlignment | 是 | 设置当前组件绘制区域内的子组件的对齐方式，增加支持镜像的能力。<br/>[LocalizedAlignment](arkts-arkui-localizedalignment-e.md#localizedalignment)只在[Shape](Shape),[Button](../../apis-input-kit/arkts-apis/arkts-input-button-e.md#button),[GridItem](GridItem),[FlowItem](FlowItem),[ImageAnimator](ImageAnimator),[LoadingProgress](LoadingProgress),[PatternLock](PatternLock),[Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-progress-i.md#progress),[QRCode](QRCode),[TextClock](TextClock),[TextTimer](TextTimer),[StepperItem](StepperItem),[MenuItem](MenuItem),[Toggle](MenuItem),[Checkbox](Checkbox), and[ListItem]{@linkListItem}中有效果。<br/>其中，除ListItem与Alignment的效果保持一致以外，其他组件镜像切换均生效；其他设置LocalizedAlignment无效果的组件按其默认效果显示。<br/>默认值：Alignment.Center、LocalizedAlignment.CENTER<br/>设置异常值按默认值处理，效果为居中显示。<br/>**说明：**<br/>Alignment类型不支持镜像能力；LocalizedAlignment类型支持镜像能力，选择LocalizedAlignment中的枚举值，根据direction或系统语言方向的改变实现镜像切换。其中direction的优先级高于系统语言方向，当设置direction且不为auto时，LocalizedAlignment的镜像按照direction进行布局；当设置direction为auto或未设置时，LocalizedAlignment的镜像按照系统语言方向进行布局。 |
+| alignment | Alignment \| LocalizedAlignment | 是 | 设置当前组件绘制区域内的子组件的对齐方式，增加支持镜像的能力。<br/>[LocalizedAlignment](arkts-arkui-localizedalignment-e.md)只在[Shape](Shape),[Button](../../apis-input-kit/arkts-apis/arkts-input-button-e.md),[GridItem](GridItem),[FlowItem](FlowItem),[ImageAnimator](ImageAnimator),[LoadingProgress](LoadingProgress),[PatternLock](PatternLock),[Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-progress-i.md),[QRCode](QRCode),[TextClock](TextClock),[TextTimer](TextTimer),[StepperItem](StepperItem),[MenuItem](MenuItem),[Toggle](MenuItem),[Checkbox](Checkbox), and[ListItem]{@linkListItem}中有效果。<br/>其中，除ListItem与Alignment的效果保持一致以外，其他组件镜像切换均生效；其他设置LocalizedAlignment无效果的组件按其默认效果显示。<br/>默认值：Alignment.Center、LocalizedAlignment.CENTER<br/>设置异常值按默认值处理，效果为居中显示。<br/>**说明：**<br/>Alignment类型不支持镜像能力；LocalizedAlignment类型支持镜像能力，选择LocalizedAlignment中的枚举值，根据direction或系统语言方向的改变实现镜像切换。其中direction的优先级高于系统语言方向，当设置direction且不为auto时，LocalizedAlignment的镜像按照direction进行布局；当设置direction为auto或未设置时，LocalizedAlignment的镜像按照系统语言方向进行布局。 |
 
 **返回值：**
 
@@ -1062,7 +1062,7 @@ backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions): T
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | BlurStyle | 是 | 背景模糊样式。模糊样式中封装了模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度五个参数。 |
-| options | BackgroundBlurStyleOptions | 否 | 背景模糊选项。用于配置模糊激活策略和不生效时的背景色。不传入时使用默认激活策略[BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md#blurstyleactivepolicy).ALWAYS_ACTIVE。<br/>该参数在ArkTS卡片中，暂不支持使用。 |
+| options | BackgroundBlurStyleOptions | 否 | 背景模糊选项。用于配置模糊激活策略和不生效时的背景色。不传入时使用默认激活策略[BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md).ALWAYS_ACTIVE。<br/>该参数在ArkTS卡片中，暂不支持使用。 |
 
 **返回值：**
 
@@ -1093,7 +1093,7 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | style | Optional&lt;BlurStyle&gt; | 是 | 背景模糊样式。模糊样式中封装了模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度五个参数。<br/>当style的值为undefined时，恢复为默认关闭模糊的背景。 |
-| options | BackgroundBlurStyleOptions | 否 | 背景模糊选项。用于配置模糊激活策略和不生效时的背景色。不传入时使用默认激活策略[BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md#blurstyleactivepolicy).ALWAYS_ACTIVE。<br/>该参数在ArkTS卡片中，暂不支持使用。 |
+| options | BackgroundBlurStyleOptions | 否 | 背景模糊选项。用于配置模糊激活策略和不生效时的背景色。不传入时使用默认激活策略[BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md).ALWAYS_ACTIVE。<br/>该参数在ArkTS卡片中，暂不支持使用。 |
 
 **返回值：**
 
@@ -2900,7 +2900,7 @@ dragPreview(value: CustomBuilder | DragItemInfo | string): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | CustomBuilder \| DragItemInfo \| string | 是 | 设置组件浮起和拖拽过程中的预览图，仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1)拖拽方式中有效。<br/>当组件支持拖拽并同时设置[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)的预览图时，则长按浮起的预览图以[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)设置的预览图为准。开发者在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1)中返回的背板图优先级低于[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))设置的预览图，当设置了[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))预览图时，拖拽过程中的背板图使用[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))预览图。由于[CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)需要离线渲染之后才能使用，因此存在一定的性能开销和时延，推荐优先使用 [DragItemInfo](arkts-arkui-dragiteminfo-i.md#dragiteminfo)中的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md#pixelmap)方式。<br/> 当传入类型为string的id时，则将id对应组件的截图作为预览图。如果id对应的组件无法查找到，或者id对应的组件[Visibility](arkts-arkui-visibility-e.md#visibility)属性设置成None/Hidden，则对组件自身进行截图作为拖拽预览图。目前截图不含有亮度、阴影、模糊和旋转等视觉效果。<br>**起始版本：** 12 |
+| value | CustomBuilder \| DragItemInfo \| string | 是 | 设置组件浮起和拖拽过程中的预览图，仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1)拖拽方式中有效。<br/>当组件支持拖拽并同时设置[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)的预览图时，则长按浮起的预览图以[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)设置的预览图为准。开发者在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1)中返回的背板图优先级低于[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))设置的预览图，当设置了[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))预览图时，拖拽过程中的背板图使用[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))预览图。由于[CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)需要离线渲染之后才能使用，因此存在一定的性能开销和时延，推荐优先使用 [DragItemInfo](arkts-arkui-dragiteminfo-i.md)中的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)方式。<br/> 当传入类型为string的id时，则将id对应组件的截图作为预览图。如果id对应的组件无法查找到，或者id对应的组件[Visibility](arkts-arkui-visibility-e.md)属性设置成None/Hidden，则对组件自身进行截图作为拖拽预览图。目前截图不含有亮度、阴影、模糊和旋转等视觉效果。<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -2928,7 +2928,7 @@ dragPreview(preview: CustomBuilder | DragItemInfo | string, config?: PreviewConf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| preview | CustomBuilder \| DragItemInfo \| string | 是 | 设置组件浮起和拖拽过程中的预览图，仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1)拖拽方式中有效。<br/>当组件支持拖拽并同时设置[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)的预览图时，则长按浮起的预览图以[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)设置的预览图为准。开发者在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1)中返回的背板图优先级低于[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))设置的预览图，当设置了[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))预览图时，拖拽过程中的背板图使用[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))预览图。由于[CustomBuilder](arkts-arkui-custombuilder-t.md#custombuilder)需要离线渲染之后才能使用，因此存在一定的性能开销和时延，推荐优先使用 [DragItemInfo](arkts-arkui-dragiteminfo-i.md#dragiteminfo)中的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md#pixelmap)方式。<br/> 当传入类型为string的id时，则将id对应组件的截图作为预览图。如果id对应的组件无法查找到，或者id对应的组件[Visibility](arkts-arkui-visibility-e.md#visibility)属性设置成None/Hidden，则对组件自身进行截图作为拖拽预览图。目前截图不含有亮度、阴影、模糊和旋转等视觉效果。 |
+| preview | CustomBuilder \| DragItemInfo \| string | 是 | 设置组件浮起和拖拽过程中的预览图，仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1)拖拽方式中有效。<br/>当组件支持拖拽并同时设置[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)的预览图时，则长按浮起的预览图以[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)设置的预览图为准。开发者在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1)中返回的背板图优先级低于[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))设置的预览图，当设置了[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))预览图时，拖拽过程中的背板图使用[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))预览图。由于[CustomBuilder](arkts-arkui-custombuilder-t.md)需要离线渲染之后才能使用，因此存在一定的性能开销和时延，推荐优先使用 [DragItemInfo](arkts-arkui-dragiteminfo-i.md)中的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)方式。<br/> 当传入类型为string的id时，则将id对应组件的截图作为预览图。如果id对应的组件无法查找到，或者id对应的组件[Visibility](arkts-arkui-visibility-e.md)属性设置成None/Hidden，则对组件自身进行截图作为拖拽预览图。目前截图不含有亮度、阴影、模糊和旋转等视觉效果。 |
 | config | PreviewConfiguration | 否 | 对自定义拖拽过程中的预览图进行配置。<br/>只对[dragPreview](CommonMethod#dragPreview(value: CustomBuilder \| DragItemInfo \| string))中的预览生效。 |
 
 **返回值：**
@@ -3345,7 +3345,7 @@ focusable(value: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 设置当前组件是否可以获焦，true表示组件可以获焦，false表示组件不可获焦。<br/>**说明：**<br/>存在默认交互逻辑的组件例如[Button](arkts-arkui-button.md)、[TextInput](arkts-arkui-textinput.md)等，默认即为可获焦，[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md#text)、[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image)等组件则默认状态为不可获焦。不可获焦状态下，无法触发[焦点事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)。 |
+| value | boolean | 是 | 设置当前组件是否可以获焦，true表示组件可以获焦，false表示组件不可获焦。<br/>**说明：**<br/>存在默认交互逻辑的组件例如[Button](arkts-arkui-button.md)、[TextInput](arkts-arkui-textinput.md)等，默认即为可获焦，[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)、[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)等组件则默认状态为不可获焦。不可获焦状态下，无法触发[焦点事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
 
 **返回值：**
 
@@ -3453,7 +3453,7 @@ Provides the general foreground color capability of UI components, and assigns c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor \| ColoringStrategy | 是 | Foreground color. The value can be a specific color or acoloring strategy. The [attribute animation](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) is not supported. |
+| value | ResourceColor \| ColoringStrategy | 是 | Foreground color. The value can be a specific color or acoloring strategy. The [attribute animation](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) is not supported. |
 
 **返回值：**
 
@@ -4196,8 +4196,8 @@ keyboardShortcut(value: string | FunctionKey, keys: Array<ModifierKey>, action?:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| FunctionKey | 是 | 热键的单个字符（可以通过键盘输入的字符）或[FunctionKey](arkts-arkui-functionkey-e.md#functionkey)。<br />空字符串意为取消快捷键绑定。<br/> |
-| keys | Array&lt;ModifierKey&gt; | 是 | 热键组合。<br />仅当value为[FunctionKey](arkts-arkui-functionkey-e.md#functionkey)的情况下keys的值可以为空。<br/> |
+| value | string \| FunctionKey | 是 | 热键的单个字符（可以通过键盘输入的字符）或[FunctionKey](arkts-arkui-functionkey-e.md)。<br />空字符串意为取消快捷键绑定。<br/> |
+| keys | Array&lt;ModifierKey&gt; | 是 | 热键组合。<br />仅当value为[FunctionKey](arkts-arkui-functionkey-e.md)的情况下keys的值可以为空。<br/> |
 | action | () =&gt; void | 否 | 组合快捷键触发成功后的自定义事件回调。 |
 
 **返回值：**
@@ -4862,7 +4862,7 @@ offset(value: Position | Edges | LocalizedEdges): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| LocalizedEdges | 是 | Offset of the component relative to its original layoutposition. The **offset** attribute does not affect the layout of the parent container. It adjusts the componentposition only during drawing.If of the [Position](../arkts-apis/arkts-arkui-position-t.md#position) type, this parameter sets the offset relative to the upperleft corner of the component. If of the [Edges](../arkts-apis/arkts-arkui-edges-i.md#edges) type, this parameter sets the offsetrelative to the four edges of the component. **{x: x, y: y}** has the same effect as **{left: x, top: y}** and**{right: -x, bottom: -y}**. The [LocalizedEdges](arkts-arkui-localizededges-i.md#localizededges) type supports the mirror mode:**start** is equivalent to **x** with left-to-right scripts and **-x** with right-to-left scripts.<br>API version 9 and earlier: The default value is **{x: 0, y: 0}**.<br>Default unit: vp<br>API version 10: no default value.<br>This attribute does not take effect when it is set to an abnormal value.<br>**起始版本：** 12 |
+| value | Position \| Edges \| LocalizedEdges | 是 | Offset of the component relative to its original layoutposition. The **offset** attribute does not affect the layout of the parent container. It adjusts the componentposition only during drawing.If of the [Position](../arkts-apis/arkts-arkui-position-t.md) type, this parameter sets the offset relative to the upperleft corner of the component. If of the [Edges](../arkts-apis/arkts-arkui-edges-i.md) type, this parameter sets the offsetrelative to the four edges of the component. **{x: x, y: y}** has the same effect as **{left: x, top: y}** and**{right: -x, bottom: -y}**. The [LocalizedEdges](arkts-arkui-localizededges-i.md) type supports the mirror mode:**start** is equivalent to **x** with left-to-right scripts and **-x** with right-to-left scripts.<br>API version 9 and earlier: The default value is **{x: 0, y: 0}**.<br>Default unit: vp<br>API version 10: no default value.<br>This attribute does not take effect when it is set to an abnormal value.<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -5020,7 +5020,7 @@ onAppear(event: () => void): T
 onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 ```
 
-组件区域变化时触发该回调。仅会响应由布局变化所导致的组件大小、位置发生变化时的回调。 由绘制变化所导致的渲染属性变化不会响应回调，如[translate](arkts-arkui-commonmethod-c.md#translate-1)、 [offset](arkts-arkui-commonmethod-c.md#offset-1)、[markAnchor](arkts-arkui-commonmethod-c.md#markanchor-1)、 [scale](arkts-arkui-commonmethod-c.md#scale-1)、[transform](arkts-arkui-commonmethod-c.md#transform-1)。若组件 自身位置由绘制变化决定也不会响应回调，如[bindSheet](arkts-arkui-commonmethod-c.md#bindsheet-1)。 > **说明：** > > 当组件同时绑定onAreaChange事件和[position](arkts-arkui-commonmethod-c.md#position-1)属性时，onAreaChange事件响应设置 > [Position](../arkts-apis/arkts-arkui-position-t.md#position)类型的position属性变化，不响应设置[Edges](../arkts-apis/arkts-arkui-edges-i.md#edges)和[LocalizedEdges](arkts-arkui-localizededges-i.md#localizededges) > 类型的position属性变化。
+组件区域变化时触发该回调。仅会响应由布局变化所导致的组件大小、位置发生变化时的回调。 由绘制变化所导致的渲染属性变化不会响应回调，如[translate](arkts-arkui-commonmethod-c.md#translate-1)、 [offset](arkts-arkui-commonmethod-c.md#offset-1)、[markAnchor](arkts-arkui-commonmethod-c.md#markanchor-1)、 [scale](arkts-arkui-commonmethod-c.md#scale-1)、[transform](arkts-arkui-commonmethod-c.md#transform-1)。若组件 自身位置由绘制变化决定也不会响应回调，如[bindSheet](arkts-arkui-commonmethod-c.md#bindsheet-1)。 > **说明：** > > 当组件同时绑定onAreaChange事件和[position](arkts-arkui-commonmethod-c.md#position-1)属性时，onAreaChange事件响应设置 > [Position](../arkts-apis/arkts-arkui-position-t.md)类型的position属性变化，不响应设置[Edges](../arkts-apis/arkts-arkui-edges-i.md)和[LocalizedEdges](arkts-arkui-localizededges-i.md) > 类型的position属性变化。
 
 **起始版本：** 8
 
@@ -5046,7 +5046,7 @@ onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 onAreaChange(event: AreaChangeCallback, options?: AreaChangeOptions): T
 ```
 
-组件区域变化时触发该回调，可通过[AreaChangeOptions](arkts-arkui-areachangeoptions-i.md#areachangeoptions)中的expectedUpdateInterval设置触发回调的间隔。仅会响应由布局变化所导致的组件大小、位置发 生变化时的回调。
+组件区域变化时触发该回调，可通过[AreaChangeOptions](arkts-arkui-areachangeoptions-i.md)中的expectedUpdateInterval设置触发回调的间隔。仅会响应由布局变化所导致的组件大小、位置发 生变化时的回调。
 
 **起始版本：** 26.0.0
 
@@ -5117,7 +5117,7 @@ onAxisEvent(event: Callback<AxisEvent>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;AxisEvent&gt; | 是 | 获得[AxisEvent](arkts-arkui-axisevent-i.md#axisevent)对象。 |
+| event | Callback&lt;AxisEvent&gt; | 是 | 获得[AxisEvent](arkts-arkui-axisevent-i.md)对象。 |
 
 **返回值：**
 
@@ -5185,7 +5185,7 @@ onChildTouchTest(event: (value: Array<TouchTestInfo>) => TouchResult): T
 onClick(event: (event: ClickEvent) => void): T
 ```
 
-点击动作触发该回调。 触发点击事件的设备类型为键盘或手柄时，事件的SourceTool值为Unknown，事件的[SourceType](arkts-arkui-sourcetype-e.md#sourcetype)值为KEY，JOYSTICK。 > **说明：** > > 从API version 9开始，使用卡片能力时存在以下限制： > > 1. 如果手指按下的持续时间超过800ms，不能触发点击事件。 > > 2. 如果手指按下后移动位移超过20px，不能触发点击事件。
+点击动作触发该回调。 触发点击事件的设备类型为键盘或手柄时，事件的SourceTool值为Unknown，事件的[SourceType](arkts-arkui-sourcetype-e.md)值为KEY，JOYSTICK。 > **说明：** > > 从API version 9开始，使用卡片能力时存在以下限制： > > 1. 如果手指按下的持续时间超过800ms，不能触发点击事件。 > > 2. 如果手指按下后移动位移超过20px，不能触发点击事件。
 
 **起始版本：** 7
 
@@ -5213,7 +5213,7 @@ onClick(event: (event: ClickEvent) => void): T
 onClick(event: Callback<ClickEvent>, distanceThreshold: number): T
 ```
 
-点击动作触发该回调。 当触发点击事件的设备类型为键盘或手柄时，事件的[SourceTool](arkts-arkui-sourcetool-e.md#sourcetool)值为Unknown，事件的[SourceType](arkts-arkui-sourcetype-e.md#sourcetype)值为KEY或JOYSTICK。 新增distanceThreshold参数，设置点击手势移动阈值。手指移动超出阈值时，点击手势识别失败。 对于无手指移动距离限制的点击场景，建议使用原有接口。若需限制点击时手指移动范围，建议使用该接口。 > **说明：** > > - 从API version 12开始，在使用卡片能力时，存在以下限制： > > 1. 如果手指按下的持续时间超过800ms，不能触发点击事件。 > > 2. 如果手指按下后移动位移超过20px，不能触发点击事件。 > > - 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+点击动作触发该回调。 当触发点击事件的设备类型为键盘或手柄时，事件的[SourceTool](arkts-arkui-sourcetool-e.md)值为Unknown，事件的[SourceType](arkts-arkui-sourcetype-e.md)值为KEY或JOYSTICK。 新增distanceThreshold参数，设置点击手势移动阈值。手指移动超出阈值时，点击手势识别失败。 对于无手指移动距离限制的点击场景，建议使用原有接口。若需限制点击时手指移动范围，建议使用该接口。 > **说明：** > > - 从API version 12开始，在使用卡片能力时，存在以下限制： > > 1. 如果手指按下的持续时间超过800ms，不能触发点击事件。 > > 2. 如果手指按下后移动位移超过20px，不能触发点击事件。 > > - 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 12
 
@@ -5449,7 +5449,7 @@ onDragSpringLoading(callback: Callback<SpringLoadingContext> | null, configurati
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | Callback&lt;SpringLoadingContext&gt; \| null | 是 | 悬停检测回调函数，当值为null时禁用悬停检测。 |
-| configuration | DragSpringLoadingConfiguration | 否 | 悬停检测配置信息，为undefined时取[DragSpringLoadingConfiguration](../arkts-apis/arkts-arkui-dragspringloadingconfiguration-i.md#dragspringloadingconfiguration)默认值。 |
+| configuration | DragSpringLoadingConfiguration | 否 | 悬停检测配置信息，为undefined时取[DragSpringLoadingConfiguration](../arkts-apis/arkts-arkui-dragspringloadingconfiguration-i.md)默认值。 |
 
 **返回值：**
 
@@ -5463,7 +5463,7 @@ onDragSpringLoading(callback: Callback<SpringLoadingContext> | null, configurati
 onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | DragItemInfo): T
 ```
 
-在手势拖拽场景中，在可拖拽的组件上长按时间超过500ms，然后手指移动距离大于10vp时触发此回调；在鼠标拖拽场景中，鼠标左键在可拖拽的组件上按下并移动超过1vp时，即可触发此回调。 针对默认支持拖拽能力的组件，如果开发者设置了onDragStart，优先执行onDragStart，并根据执行情况决定是否使用系统默认的拖拽能力，具体规则为： - 如果开发者返回了自定义预览图，则不再使用系统默认的拖拽预览图； - 如果开发者设置了拖拽数据，则不再使用系统默认填充的拖拽数据。 文本类组件[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md#text)、[Search](arkts-arkui-search.md)、[TextInput](arkts-arkui-textinput.md)、[TextArea](arkts-arkui-textarea.md)、 [RichEditor](arkts-arkui-richeditor.md)对选中的文本内容进行拖拽时，不支持自定义预览图。当onDragStart与菜单预览一起使用或使用了默认支持拖拽能力的组件时，预览及菜单项上的自定义内容不支持拖拽。 > **说明：** > > 从API version 13开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+在手势拖拽场景中，在可拖拽的组件上长按时间超过500ms，然后手指移动距离大于10vp时触发此回调；在鼠标拖拽场景中，鼠标左键在可拖拽的组件上按下并移动超过1vp时，即可触发此回调。 针对默认支持拖拽能力的组件，如果开发者设置了onDragStart，优先执行onDragStart，并根据执行情况决定是否使用系统默认的拖拽能力，具体规则为： - 如果开发者返回了自定义预览图，则不再使用系统默认的拖拽预览图； - 如果开发者设置了拖拽数据，则不再使用系统默认填充的拖拽数据。 文本类组件[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)、[Search](arkts-arkui-search.md)、[TextInput](arkts-arkui-textinput.md)、[TextArea](arkts-arkui-textarea.md)、 [RichEditor](arkts-arkui-richeditor.md)对选中的文本内容进行拖拽时，不支持自定义预览图。当onDragStart与菜单预览一起使用或使用了默认支持拖拽能力的组件时，预览及菜单项上的自定义内容不支持拖拽。 > **说明：** > > 从API version 13开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 8
 
@@ -5929,7 +5929,7 @@ onNeedSoftkeyboard(onNeedSoftkeyboardCallback: OnNeedSoftkeyboardCallback | unde
 onPreDrag(callback: Callback<PreDragStatus>): T
 ```
 
-绑定此事件的组件，当处于手势拖拽发起前的不同阶段时，触发回调。拖拽发起前的各阶段可参考[PreDragStatus](arkts-arkui-predragstatus-e.md#predragstatus)。此接口不支持在鼠标拖拽中触发。 > **说明：** > > 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+绑定此事件的组件，当处于手势拖拽发起前的不同阶段时，触发回调。拖拽发起前的各阶段可参考[PreDragStatus](arkts-arkui-predragstatus-e.md)。此接口不支持在鼠标拖拽中触发。 > **说明：** > > 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 12
 
@@ -5987,7 +5987,7 @@ onSizeChange(event: SizeChangeCallback): T
 onTouch(event: (event: TouchEvent) => void): T
 ```
 
-手指触摸动作触发该回调。触摸事件默认[冒泡](../../../../ui/arkts-interaction-basic-principles.md#事件冒泡)，会被多个组件消费，如果需阻止冒泡，可参考 [TouchEvent](arkts-arkui-touchevent-i.md#touchevent)的stopPropagation方法。鼠标左键按下时，对应的事件也会转换成触摸事件并触发该回调。
+手指触摸动作触发该回调。触摸事件默认[冒泡](../../../../ui/arkts-interaction-basic-principles.md#事件冒泡)，会被多个组件消费，如果需阻止冒泡，可参考 [TouchEvent](arkts-arkui-touchevent-i.md)的stopPropagation方法。鼠标左键按下时，对应的事件也会转换成触摸事件并触发该回调。
 
 **起始版本：** 7
 
@@ -6493,7 +6493,7 @@ outlineWidth(width: Optional<Dimension | EdgeOutlineWidths>): T
 overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptions): T
 ```
 
-在当前组件上，增加遮罩文本或者叠加自定义组件以及[ComponentContent](arkts-arkui-componentcontent-t.md#componentcontent)作为该组件的浮层。浮层的定位同样基于当前组件进行计算。浮层不通过组件树进行渲染，部分接口（例如 [getRectangleById](api\@ohos.arkui.ComponentUtils#getRectangleById)）不支持获取浮层中 的组件。 > **说明：** > > - overlay会将浮层组件覆盖在所绑定的组件上方，阻塞用户对浮层下方组件的所有交互操作。 > - 多次调用overlay接口时，如果同时传入string类型和 > [CustomBuilder](arkts-arkui-custombuilder-t.md#custombuilder)类型，或者同时传入string类型和 > [ComponentContent](arkts-arkui-componentcontent-t.md#componentcontent)类型，浮层内容会叠加显示。
+在当前组件上，增加遮罩文本或者叠加自定义组件以及[ComponentContent](arkts-arkui-componentcontent-t.md)作为该组件的浮层。浮层的定位同样基于当前组件进行计算。浮层不通过组件树进行渲染，部分接口（例如 [getRectangleById](api\@ohos.arkui.ComponentUtils#getRectangleById)）不支持获取浮层中 的组件。 > **说明：** > > - overlay会将浮层组件覆盖在所绑定的组件上方，阻塞用户对浮层下方组件的所有交互操作。 > - 多次调用overlay接口时，如果同时传入string类型和 > [CustomBuilder](arkts-arkui-custombuilder-t.md)类型，或者同时传入string类型和 > [ComponentContent](arkts-arkui-componentcontent-t.md)类型，浮层内容会叠加显示。
 
 **起始版本：** 7
 
@@ -6508,7 +6508,7 @@ overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptio
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | string \| CustomBuilder \| ComponentContent | 是 | 遮罩文本内容或自定义组件构造函数。<br/>**说明：**<br/>自定义组件作为浮层时，不支持键盘走焦到自定义组件中。通过CustomBuilder设置浮层时，浮层中的内容会在页面刷新时销毁并重新创建，存在一定的性能损耗，页面频繁刷新的场景推荐使用ComponentContent方式设置浮层。<br>**起始版本：** 12 |
-| options | OverlayOptions | 否 | 浮层的定位。<br/>**说明：**<br/>API version 12之前，options: <br/>{<br/>align?: [Alignment](arkts-arkui-alignment-e.md#alignment), <br/>offset?: {x?: number, y?: number}<br/>}<br>**起始版本：** 12 |
+| options | OverlayOptions | 否 | 浮层的定位。<br/>**说明：**<br/>API version 12之前，options: <br/>{<br/>align?: [Alignment](arkts-arkui-alignment-e.md), <br/>offset?: {x?: number, y?: number}<br/>}<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -7373,7 +7373,7 @@ sharedTransition(id: string, options?: sharedTransitionOptions): T
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | 两个页面中id值相同且不为空字符串的组件即为共享元素，在页面转场时可显示共享元素转场动效。 |
-| options | sharedTransitionOptions | 否 | 共享元素转场动画参数。不设置时使用默认转场动画参数。各参数具体默认值参考[sharedTransitionOptions](arkts-arkui-sharedtransitionoptions-i.md#sharedtransitionoptions)。 |
+| options | sharedTransitionOptions | 否 | 共享元素转场动画参数。不设置时使用默认转场动画参数。各参数具体默认值参考[sharedTransitionOptions](arkts-arkui-sharedtransitionoptions-i.md)。 |
 
 **返回值：**
 
@@ -7485,7 +7485,7 @@ smartGestureShortcut(options?: SmartGestureShortcutOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | SmartGestureShortcutOptions | 否 | 组件智慧手势响应配置。SmartGestureShortcutOptions中enabled用于配置组件是否响应智慧手势。selectable用于设置组件被智慧手势操作选中后是否展示并保留选中态。action用于设置智慧手势响应优先级，当前仅支持GestureShortcut.PRIMARY，会使组件在智慧手势的滑动，点击等操作中作为首选响应目标。建议显式传入，避免因缺省配置导致预期不一致，缺省配置处理参考[SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md#smartgestureshortcutoptions)。 |
+| options | SmartGestureShortcutOptions | 否 | 组件智慧手势响应配置。SmartGestureShortcutOptions中enabled用于配置组件是否响应智慧手势。selectable用于设置组件被智慧手势操作选中后是否展示并保留选中态。action用于设置智慧手势响应优先级，当前仅支持GestureShortcut.PRIMARY，会使组件在智慧手势的滑动，点击等操作中作为首选响应目标。建议显式传入，避免因缺省配置导致预期不一致，缺省配置处理参考[SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md)。 |
 
 **返回值：**
 
@@ -7695,7 +7695,7 @@ tabIndex(index: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 自定义组件tab键走焦能力。若有配置了tabIndex大于0的组件，则tab键走焦只会在tabIndex大于0的组件内按照tabIndex的值从小到大并循环依次走焦。若没有配置tabIndex大于0的组件，则tabIndex等于0的组件按照组件预设的走焦规则走焦。<br />[UiExtension](../arkts-apis/arkts-arkui-uiextension.md#uiextension)组件未适配tabIndex，在含有[UiExtension](../arkts-apis/arkts-arkui-uiextension.md#uiextension)组件的[层级页面](../../../../ui/arkts-common-events-focus-event.md#基础概念)使用tabIndex会导致走焦错乱。<br />- tabIndex &gt;= 0：表示元素是可聚焦的，并且可以通过tab键走焦来访问到该元素。<br />- tabIndex &lt; 0（通常是tabIndex = -1）：表示元素是可聚焦的，但是不能通过tab键走焦来访问到该元素。<br/> **说明：**<br/>tabIndex与focusScopeId不能混用。 |
+| index | number | 是 | 自定义组件tab键走焦能力。若有配置了tabIndex大于0的组件，则tab键走焦只会在tabIndex大于0的组件内按照tabIndex的值从小到大并循环依次走焦。若没有配置tabIndex大于0的组件，则tabIndex等于0的组件按照组件预设的走焦规则走焦。<br />[UiExtension](../arkts-apis/arkts-arkui-uiextension.md)组件未适配tabIndex，在含有[UiExtension](../arkts-apis/arkts-arkui-uiextension.md)组件的[层级页面](../../../../ui/arkts-common-events-focus-event.md#基础概念)使用tabIndex会导致走焦错乱。<br />- tabIndex &gt;= 0：表示元素是可聚焦的，并且可以通过tab键走焦来访问到该元素。<br />- tabIndex &lt; 0（通常是tabIndex = -1）：表示元素是可聚焦的，但是不能通过tab键走焦来访问到该元素。<br/> **说明：**<br/>tabIndex与focusScopeId不能混用。 |
 
 **返回值：**
 
@@ -7801,7 +7801,7 @@ transform(value: object): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | object | 是 | 设置当前组件的变换矩阵。object当前仅支持[Matrix4Transit](../arkts-apis/arkts-arkui-matrix4transit-i.md#matrix4transit)矩阵对象类型。 |
+| value | object | 是 | 设置当前组件的变换矩阵。object当前仅支持[Matrix4Transit](../arkts-apis/arkts-arkui-matrix4transit-i.md)矩阵对象类型。 |
 
 **返回值：**
 
@@ -7829,7 +7829,7 @@ transform(transform: Optional<object>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transform | Optional&lt;object&gt; | 是 | 设置当前组件的变换矩阵。object当前仅支持[Matrix4Transit](../arkts-apis/arkts-arkui-matrix4transit-i.md#matrix4transit)矩阵对象类型。<br/>当transform的值为undefined时，恢复为单位矩阵的效果。 |
+| transform | Optional&lt;object&gt; | 是 | 设置当前组件的变换矩阵。object当前仅支持[Matrix4Transit](../arkts-apis/arkts-arkui-matrix4transit-i.md)矩阵对象类型。<br/>当transform的值为undefined时，恢复为单位矩阵的效果。 |
 
 **返回值：**
 
@@ -7885,7 +7885,7 @@ transition(value: TransitionOptions | TransitionEffect): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | TransitionOptions \| TransitionEffect | 是 | 设置组件插入显示和删除隐藏的过渡效果。<br/>**说明：** <br/>详细描述见[TransitionOptions](arkts-arkui-transitionoptions-i.md#transitionoptions)和[TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect)对象说明。 |
+| value | TransitionOptions \| TransitionEffect | 是 | 设置组件插入显示和删除隐藏的过渡效果。<br/>**说明：** <br/>详细描述见[TransitionOptions](arkts-arkui-transitionoptions-i.md)和[TransitionEffect](arkts-arkui-transitioneffect-c.md)对象说明。 |
 
 **返回值：**
 

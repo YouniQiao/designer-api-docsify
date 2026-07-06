@@ -9,7 +9,7 @@ Indicates carrier call state and number.
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@ohos.telephony.observer';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## state

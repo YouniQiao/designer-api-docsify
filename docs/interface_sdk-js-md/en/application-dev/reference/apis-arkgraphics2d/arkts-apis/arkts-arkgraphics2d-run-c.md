@@ -1,6 +1,6 @@
 # Run
 
-Implements a unit for text layout. Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-textline-c.md#getglyphruns-1) of the [TextLine](arkts-arkgraphics2d-textline-c.md#textline) class to create a **Run** object.
+Implements a unit for text layout. Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-textline-c.md#getglyphruns-1) of the [TextLine](arkts-arkgraphics2d-textline-c.md) class to create a **Run** object.
 
 **Since:** 12
 
@@ -9,7 +9,7 @@ Implements a unit for text layout. Before calling any of the following APIs, you
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@ohos.graphics.text';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## getAdvances
@@ -36,7 +36,7 @@ Obtains the glyph width array of each glyph within the specified range of the ru
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Returns the glyph width array of each glyph in the run unit relative to thehorizontal direction. In [common2D.Point](arkts-arkgraphics2d-point-i.md#point), the x valuerepresents the glyph width of each glyph relative to the horizontal direction, in physical pixels (px). The yvalue is a reserved field and returns **0** by default. |
+| Array&lt;common2D.Point&gt; | Returns the glyph width array of each glyph in the run unit relative to thehorizontal direction. In [common2D.Point](arkts-arkgraphics2d-point-i.md), the x valuerepresents the glyph width of each glyph relative to the horizontal direction, in physical pixels (px). The yvalue is a reserved field and returns **0** by default. |
 
 **Example**
 

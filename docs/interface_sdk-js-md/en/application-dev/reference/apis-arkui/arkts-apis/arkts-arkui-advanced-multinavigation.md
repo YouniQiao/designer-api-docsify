@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { MultiNavPathStack, MultiNavigation, SplitPolicy } from '@ohos.arkui.advanced.MultiNavigation';
+import { MultiNavPathStack, MultiNavigation, SplitPolicy } from '@kit.ArkUI';
 ```
 
 ## Summary

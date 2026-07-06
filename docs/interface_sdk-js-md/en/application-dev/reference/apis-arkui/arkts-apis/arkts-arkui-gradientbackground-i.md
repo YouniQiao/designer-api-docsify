@@ -9,7 +9,7 @@ Indicates the options of Navigation's gradientBackground.
 ## Modules to Import
 
 ```TypeScript
-import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from '@ohos.atomicservice.AtomicServiceNavigation';
+import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from '@kit.ArkUI';
 ```
 
 ## alpha

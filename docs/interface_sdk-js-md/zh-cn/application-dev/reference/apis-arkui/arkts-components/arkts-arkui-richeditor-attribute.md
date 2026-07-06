@@ -1,6 +1,6 @@
 # RichEditor属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common)外，还支持[OnDidChangeCallback](arkts-arkui-ondidchangecallback-t.md#ondidchangecallback)、 [StyledStringChangedListener](arkts-arkui-styledstringchangedlistener-i.md#styledstringchangedlistener)、 [StyledStringChangeValue](arkts-arkui-styledstringchangevalue-i.md#styledstringchangevalue)和以下事件：
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性： 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持[OnDidChangeCallback](arkts-arkui-ondidchangecallback-t.md)、 [StyledStringChangedListener](arkts-arkui-styledstringchangedlistener-i.md)、 [StyledStringChangeValue](arkts-arkui-styledstringchangevalue-i.md)和以下事件：
 
 **继承/实现关系：** RichEditorAttribute extends [CommonMethod<RichEditorAttribute>](CommonMethod<RichEditorAttribute>)
 
@@ -14,7 +14,7 @@
 aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>)
 ```
 
-输入法删除内容前，触发回调。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md#richeditorstyledstringoptions)构建的RichEditor组件不支持该回调。
+输入法删除内容前，触发回调。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
 **起始版本：** 10
 
@@ -28,7 +28,7 @@ aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RichEditorDeleteValue, boolean&gt; | 是 | [RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md#richeditordeletevalue)为准备删除的内容所在的文本或者图片Span信息。<br/>true:组件执行删除操作。<br/>false:组件不执行删除操作。<br/>输入法删除内容前的回调，英文预上屏点击候选词时会执行该回调。<br>**起始版本：** 12 |
+| callback | Callback&lt;RichEditorDeleteValue, boolean&gt; | 是 | [RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md)为准备删除的内容所在的文本或者图片Span信息。<br/>true:组件执行删除操作。<br/>false:组件不执行删除操作。<br/>输入法删除内容前的回调，英文预上屏点击候选词时会执行该回调。<br>**起始版本：** 12 |
 
 ## aboutToIMEInput
 
@@ -36,7 +36,7 @@ aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>)
 aboutToIMEInput(callback: Callback<RichEditorInsertValue, boolean>)
 ```
 
-输入法输入内容前触发回调。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md#richeditorstyledstringoptions)构建的RichEditor组件不支持该回调。
+输入法输入内容前触发回调。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
 **起始版本：** 10
 
@@ -50,7 +50,7 @@ aboutToIMEInput(callback: Callback<RichEditorInsertValue, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RichEditorInsertValue, boolean&gt; | 是 | [RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md#richeditorinsertvalue)为输入法将要输入内容信息。<br/>true:组件执行添加内容操作。<br/>false:组件不执行添加内容操作。<br/>输入法输入内容前的回调。<br>**起始版本：** 12 |
+| callback | Callback&lt;RichEditorInsertValue, boolean&gt; | 是 | [RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md)为输入法将要输入内容信息。<br/>true:组件执行添加内容操作。<br/>false:组件不执行添加内容操作。<br/>输入法输入内容前的回调。<br>**起始版本：** 12 |
 
 ## barState
 
@@ -128,7 +128,7 @@ caretColor(value: ResourceColor)
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-设置是否开启行首标点符号压缩。 > **说明：** > > 行首标点符号默认不压缩。 > > 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md#paragraphstyle)的行首压缩的标点范围。
+设置是否开启行首标点符号压缩。 > **说明：** > > 行首标点符号默认不压缩。 > > 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md)的行首压缩的标点范围。
 
 **起始版本：** 23
 
@@ -350,7 +350,7 @@ enablePreviewText(enable: boolean)
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-设置是否启用文本选择的AI菜单功能。启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。 AI菜单功能启用时，在组件中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](arkts-arkui-textmenuitemid-c.md#textmenuitemid)中的url（打开连接）、email（新建邮件）、 phoneNumber（呼叫）、address（导航前往）、dateTime（新建日程）。 AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](arkts-arkui-textmenuitemid-c.md#textmenuitemid)中的askAI菜单项不同时出现。 本功能仅在[copyOptions](RichEditorAttribute.copyOptions)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时生效。 该接口依赖设备底层具有文本识别能力，否则设置不会生效。
+设置是否启用文本选择的AI菜单功能。启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。 AI菜单功能启用时，在组件中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](arkts-arkui-textmenuitemid-c.md)中的url（打开连接）、email（新建邮件）、 phoneNumber（呼叫）、address（导航前往）、dateTime（新建日程）。 AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](arkts-arkui-textmenuitemid-c.md)中的askAI菜单项不同时出现。 本功能仅在[copyOptions](RichEditorAttribute.copyOptions)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时生效。 该接口依赖设备底层具有文本识别能力，否则设置不会生效。
 
 **起始版本：** 22
 
@@ -394,7 +394,7 @@ enterKeyType(value: EnterKeyType)
 fallbackLineSpacing(enabled: Optional<boolean>)
 ```
 
-针对多行文字叠加，支持行高基于文字实际高度自适应。不通过该接口设置，默认行高不基于文字实际高度自适应。 该接口依赖[RichEditorTextStyle](arkts-arkui-richeditortextstyleresult-i.md#richeditortextstyleresult)的lineHeight属性。当lineHeight设置值小于当前字号下文本渲染出的实际高度时， fallbackLineSpacing属性将生效。
+针对多行文字叠加，支持行高基于文字实际高度自适应。不通过该接口设置，默认行高不基于文字实际高度自适应。 该接口依赖[RichEditorTextStyle](arkts-arkui-richeditortextstyleresult-i.md)的lineHeight属性。当lineHeight设置值小于当前字号下文本渲染出的实际高度时， fallbackLineSpacing属性将生效。
 
 **起始版本：** 23
 
@@ -526,7 +526,7 @@ maxLines(maxLines: Optional<number>)
 onCopy(callback: Callback<CopyEvent>)
 ```
 
-复制时触发回调。开发者可以通过该方法，覆盖系统默认行为，实现图文的复制。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md#richeditorstyledstringoptions)构建的RichEditor组件，默认支持图文的复制。
+复制时触发回调。开发者可以通过该方法，覆盖系统默认行为，实现图文的复制。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件，默认支持图文的复制。
 
 **起始版本：** 12
 
@@ -548,7 +548,7 @@ onCopy(callback: Callback<CopyEvent>)
 onCut(callback: Callback<CutEvent>)
 ```
 
-剪切时触发回调。开发者可以通过该方法，覆盖系统默认行为，实现图文的剪切。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md#richeditorstyledstringoptions)构建的RichEditor组件，默认支持图文的剪切。
+剪切时触发回调。开发者可以通过该方法，覆盖系统默认行为，实现图文的剪切。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件，默认支持图文的剪切。
 
 **起始版本：** 12
 
@@ -570,7 +570,7 @@ onCut(callback: Callback<CutEvent>)
 onDeleteComplete(callback: Callback<void>)
 ```
 
-输入法删除内容后，触发回调。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md#richeditorstyledstringoptions)构建的RichEditor组件不支持该回调。
+输入法删除内容后，触发回调。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
 **起始版本：** 10
 
@@ -592,7 +592,7 @@ onDeleteComplete(callback: Callback<void>)
 onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 ```
 
-在组件执行增删操作后，触发回调。如果文本实际未发生增删，则不触发该回调。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md#richeditorstyledstringoptions)构建的RichEditor组件不支持该回调。 > **说明：** > > 从API version 18开始，该接口支持在 > [attributeModifier](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) > 中调用。
+在组件执行增删操作后，触发回调。如果文本实际未发生增删，则不触发该回调。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。 > **说明：** > > 从API version 18开始，该接口支持在 > [attributeModifier](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) > 中调用。
 
 **起始版本：** 12
 
@@ -614,7 +614,7 @@ onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 onDidIMEInput(callback: Callback<TextRange>)
 ```
 
-输入法输入完成后，触发回调。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md#richeditorstyledstringoptions)构建的RichEditor组件不支持该回调。 > **说明：** > > 从API version 20开始，该接口支持在 > [attributeModifier](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) > 中调用。
+输入法输入完成后，触发回调。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。 > **说明：** > > 从API version 20开始，该接口支持在 > [attributeModifier](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) > 中调用。
 
 **起始版本：** 12
 
@@ -658,7 +658,7 @@ onEditingChange(callback: Callback<boolean>)
 onIMEInputComplete(callback: Callback<RichEditorTextSpanResult>)
 ```
 
-输入法输入完成后，触发回调。 该接口仅支持返回一个文本span的信息，当编辑操作涉及返回多个文本span信息时，建议使用[onDidIMEInput](RichEditorAttribute.onDidIMEInput)接口。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md#richeditorstyledstringoptions)构建的RichEditor组件不支持该回调。
+输入法输入完成后，触发回调。 该接口仅支持返回一个文本span的信息，当编辑操作涉及返回多个文本span信息时，建议使用[onDidIMEInput](RichEditorAttribute.onDidIMEInput)接口。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
 **起始版本：** 10
 
@@ -672,7 +672,7 @@ onIMEInputComplete(callback: Callback<RichEditorTextSpanResult>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RichEditorTextSpanResult&gt; | 是 | [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md#richeditortextspanresult)为输入法完成输入后的文本Span信息。<br/>输入法完成输入后的回调。<br>**起始版本：** 12 |
+| callback | Callback&lt;RichEditorTextSpanResult&gt; | 是 | [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)为输入法完成输入后的文本Span信息。<br/>输入法完成输入后的回调。<br>**起始版本：** 12 |
 
 ## onPaste
 
@@ -724,7 +724,7 @@ onReady(callback: Callback<void>)
 onSelect(callback: Callback<RichEditorSelection>)
 ```
 
-鼠标左键双击选中内容触发回调；松开鼠标左键再次触发回调。 手指长按选中内容触发回调；松开手指再次触发回调。 通过手指或鼠标连续修改选中区、三击选段场景，不回调onSelect。 需要实时感知选中区变化的场景和使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md#richeditorstyledstringoptions)构建的RichEditor组件，请使用 onSelectionChange接口。
+鼠标左键双击选中内容触发回调；松开鼠标左键再次触发回调。 手指长按选中内容触发回调；松开手指再次触发回调。 通过手指或鼠标连续修改选中区、三击选段场景，不回调onSelect。 需要实时感知选中区变化的场景和使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件，请使用 onSelectionChange接口。
 
 **起始版本：** 10
 
@@ -738,7 +738,7 @@ onSelect(callback: Callback<RichEditorSelection>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RichEditorSelection&gt; | 是 | [RichEditorSelection](arkts-arkui-richeditorselection-i.md#richeditorselection)为选中的所有span信息。&lt;br/&gt;选择时触发的回调。<br>**起始版本：** 12 |
+| callback | Callback&lt;RichEditorSelection&gt; | 是 | [RichEditorSelection](arkts-arkui-richeditorselection-i.md)为选中的所有span信息。&lt;br/&gt;选择时触发的回调。<br>**起始版本：** 12 |
 
 ## onSelectionChange
 
@@ -760,7 +760,7 @@ onSelectionChange(callback: Callback<RichEditorRange>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RichEditorRange&gt; | 是 | [RichEditorRange](arkts-arkui-richeditorrange-i.md#richeditorrange)为所有内容的选择区域起始和终止位置。<br/>订阅文本选择区域发生变化或编辑状态下光标位置发生变化时触发的回调。 |
+| callback | Callback&lt;RichEditorRange&gt; | 是 | [RichEditorRange](arkts-arkui-richeditorrange-i.md)为所有内容的选择区域起始和终止位置。<br/>订阅文本选择区域发生变化或编辑状态下光标位置发生变化时触发的回调。 |
 
 ## onSubmit
 
@@ -790,7 +790,7 @@ onSubmit(callback: SubmitCallback)
 onWillAttachIME(callback: Callback<IMEClient> | undefined)
 ```
 
-在组件绑定输入法前，触发回调。 调用[IMEClient](arkts-arkui-imeclient-i.md#imeclient)的[setExtraConfig](arkts-arkui-imeclient-i.md#setextraconfig-1)方法设置输入法扩展信息。 在绑定输入法成功后，输入法会收到扩展信息，输入法可以依据此信息实现自定义功能。
+在组件绑定输入法前，触发回调。 调用[IMEClient](arkts-arkui-imeclient-i.md)的[setExtraConfig](arkts-arkui-imeclient-i.md#setextraconfig-1)方法设置输入法扩展信息。 在绑定输入法成功后，输入法会收到扩展信息，输入法可以依据此信息实现自定义功能。
 
 **起始版本：** 22
 
@@ -812,7 +812,7 @@ onWillAttachIME(callback: Callback<IMEClient> | undefined)
 onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAttribute
 ```
 
-在组件执行增删操作前，触发回调。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md#richeditorstyledstringoptions)构建的RichEditor组件不支持该回调。 > **说明：** > > 从API version 18开始，该接口支持在 > [attributeModifier](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) > 中调用。
+在组件执行增删操作前，触发回调。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。 > **说明：** > > 从API version 18开始，该接口支持在 > [attributeModifier](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier) > 中调用。
 
 **起始版本：** 12
 
@@ -834,7 +834,7 @@ onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAtt
 orphanCharOptimization(enabled: Optional<boolean>)
 ```
 
-设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。 孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在 [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md#richeditorparagraphstyle)的wordBreak属性为非BREAK_ALL并且待排版文本首个 [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md#textstyle)的 [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md#textstyle)为“zh-Hans”或“zh-Hant”时生效。
+设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。 孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在 [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)的wordBreak属性为非BREAK_ALL并且待排版文本首个 [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md)的 [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md)为“zh-Hans”或“zh-Hant”时生效。
 
 **起始版本：** 26.0.0
 
@@ -1009,7 +1009,7 @@ stopBackPress(isStopped: Optional<boolean>)
 undoStyle(style: Optional<UndoStyle>)
 ```
 
-设置撤销还原时是否保留原内容的样式。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md#richeditorstyledstringoptions)构建RichEditor组件时，撤销还原时默认保留原内容样式，不受该接口设置的属性影响。
+设置撤销还原时是否保留原内容的样式。 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建RichEditor组件时，撤销还原时默认保留原内容样式，不受该接口设置的属性影响。
 
 **起始版本：** 20
 

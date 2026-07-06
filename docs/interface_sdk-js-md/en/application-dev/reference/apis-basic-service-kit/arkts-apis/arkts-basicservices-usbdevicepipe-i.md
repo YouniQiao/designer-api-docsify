@@ -9,7 +9,7 @@ Represents a USB device pipe, which is used to determine a USB device.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@ohos.usbManager';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## busNum

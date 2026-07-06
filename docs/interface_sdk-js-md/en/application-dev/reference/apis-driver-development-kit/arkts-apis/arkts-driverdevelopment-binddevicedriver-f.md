@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@ohos.driver.deviceManager';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## bindDeviceDriver
@@ -31,7 +31,7 @@ Binds a peripheral device based on the device information returned by **queryDev
 | --- | --- | --- | --- |
 | deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
 | onDisconnect | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. When the bound device isdisconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device.Otherwise, **err** is an error object. |
-| callback | AsyncCallback&lt;RemoteDeviceDriver&gt; | Yes | Callback used to return the result. When the device driveris successfully bound, **err** is **undefined** and **data** is a[RemoteDeviceDriver](arkts-driverdevelopment-remotedevicedriver-i.md#remotedevicedriver) object that contains the device ID and remoteobject. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;RemoteDeviceDriver&gt; | Yes | Callback used to return the result. When the device driveris successfully bound, **err** is **undefined** and **data** is a[RemoteDeviceDriver](arkts-driverdevelopment-remotedevicedriver-i.md) object that contains the device ID and remoteobject. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -4,7 +4,7 @@
 export type ExtensionContext = _ExtensionContext.default
 ```
 
-[ExtensionAbility](arkts-ability-extensionability-c.md#extensionability)组件上下文，继承自Context。
+[ExtensionAbility](arkts-ability-extensionability-c.md)组件上下文，继承自Context。
 
 **起始版本：** 9
 

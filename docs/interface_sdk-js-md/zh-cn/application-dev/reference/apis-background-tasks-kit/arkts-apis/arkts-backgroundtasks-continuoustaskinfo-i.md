@@ -54,7 +54,7 @@ appIndex?: number
 backgroundModes: string[]
 ```
 
-[长时任务类型](arkts-backgroundtasks-backgroundmode-e.md#backgroundmode)。
+[长时任务类型](arkts-backgroundtasks-backgroundmode-e.md)。
 
 **类型：** string[]
 
@@ -68,7 +68,7 @@ backgroundModes: string[]
 backgroundSubModes: string[]
 ```
 
-[长时任务子类型](arkts-backgroundtasks-backgroundsubmode-e.md#backgroundsubmode)。
+[长时任务子类型](arkts-backgroundtasks-backgroundsubmode-e.md)。
 
 **类型：** string[]
 

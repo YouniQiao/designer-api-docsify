@@ -12,7 +12,7 @@ ImageSource类，用于获取图片相关信息。 在调用ImageSource的方法
 createWideGamutSdrPixelMap(): Promise<PixelMap>
 ```
 
-创建SDR的PixelMap对象。当图片为带有3通道GainMap的HDR图片时，会将其基础图扩展为BT.2020色域的SDR图。使用Promise异步回调。 > **说明：** > > - 对SDR图片源，按图片自带的色彩空间解码，输出SDR图。 > > - 对带有单通道GainMap的HDR图片源，解码其基础图（SDR图），忽略GainMap。 > > - 对带有3通道GainMap的HDR图片源，解码其基础图（SDR图），并将输出SDR图的色域扩展为 > [ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspace-e.md#colorspace).DISPLAY_BT2020_SRGB。
+创建SDR的PixelMap对象。当图片为带有3通道GainMap的HDR图片时，会将其基础图扩展为BT.2020色域的SDR图。使用Promise异步回调。 > **说明：** > > - 对SDR图片源，按图片自带的色彩空间解码，输出SDR图。 > > - 对带有单通道GainMap的HDR图片源，解码其基础图（SDR图），忽略GainMap。 > > - 对带有3通道GainMap的HDR图片源，解码其基础图（SDR图），并将输出SDR图的色域扩展为 > [ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspace-e.md).DISPLAY_BT2020_SRGB。
 
 **起始版本：** 20
 

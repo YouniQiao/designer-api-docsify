@@ -9,7 +9,7 @@ The **cloudSyncManager** module provides APIs for managing device-cloud sync for
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@ohos.file.cloudSyncManager';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## Summary

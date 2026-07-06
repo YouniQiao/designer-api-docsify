@@ -11,7 +11,7 @@ Input method system panel manager.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodSystemPanelManager } from '@ohos.inputMethodSystemPanelManager';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## Summary

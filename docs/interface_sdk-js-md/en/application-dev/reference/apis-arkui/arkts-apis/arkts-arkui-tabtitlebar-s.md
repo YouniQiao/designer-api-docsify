@@ -9,7 +9,7 @@ Declaration of the tabbed title bar.
 ## Modules to Import
 
 ```TypeScript
-import { TabTitleBar, TabTitleBarTabItem, TabTitleBarMenuItem } from '@ohos.arkui.advanced.TabTitleBar';
+import { TabTitleBar, TabTitleBarTabItem, TabTitleBarMenuItem } from '@kit.ArkUI';
 ```
 
 ## menuItems
@@ -42,7 +42,7 @@ Content builder. Each component corresponds to a tab item. The builder needs to 
 
 **Since:** 22
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

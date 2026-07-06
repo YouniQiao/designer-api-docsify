@@ -9,7 +9,7 @@ Defines the parameters for application installation.
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.enterprise.bundleManager';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## installFlag

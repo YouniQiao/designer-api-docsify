@@ -9,7 +9,7 @@ Provides APIs to check different types of built-in objects, such as ArrayBuffer,
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor

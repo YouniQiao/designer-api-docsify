@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from '@ohos.distributedsched.linkEnhance';
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## createServer
@@ -39,7 +39,7 @@ Creates a **Server** object. After **start()** is called, the device can be conn
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supportedbecause the linkEnhance function has been trimmed.<br>**Applicable version:** 26.0.0 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supportedbecause the linkEnhance function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
 | [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [32390203](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390203-duplicate-service-name) | Duplicate server name. |
 

@@ -6,7 +6,7 @@ The ResourceManager callback.
 
 **废弃版本：** 9
 
-**替代接口：** [base:AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)
+**替代接口：** [base:AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -22,7 +22,7 @@ The ResourceManager callback.
 
 **废弃版本：** 9
 
-**替代接口：** [base:AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)
+**替代接口：** [base:AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)
 
 **系统能力：** SystemCapability.Global.ResourceManager
 

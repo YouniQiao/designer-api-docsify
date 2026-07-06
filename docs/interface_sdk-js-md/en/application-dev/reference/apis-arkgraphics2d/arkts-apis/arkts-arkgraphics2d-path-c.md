@@ -9,7 +9,7 @@ A compound geometric path consisting of line segments, arcs, quadratic Bezier cu
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## addArc
@@ -364,7 +364,7 @@ Constructs a copy of an existing path.
 contains(x: number, y: number): boolean
 ```
 
-Checks whether a coordinate point is included in this path. For details, see [PathFillType](arkts-arkgraphics2d-pathfilltype-e.md#pathfilltype).
+Checks whether a coordinate point is included in this path. For details, see [PathFillType](arkts-arkgraphics2d-pathfilltype-e.md).
 
 **Since:** 12
 

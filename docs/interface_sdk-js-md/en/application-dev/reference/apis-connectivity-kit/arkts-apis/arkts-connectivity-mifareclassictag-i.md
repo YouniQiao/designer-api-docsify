@@ -2,7 +2,7 @@
 
 Provides methods for accessing MifareClassic tag.
 
-**Inheritance/Implementation:** MifareClassicTag extends [TagSession](arkts-connectivity-tagsession-i.md#tagsession)
+**Inheritance/Implementation:** MifareClassicTag extends [TagSession](arkts-connectivity-tagsession-i.md)
 
 **Since:** 12
 

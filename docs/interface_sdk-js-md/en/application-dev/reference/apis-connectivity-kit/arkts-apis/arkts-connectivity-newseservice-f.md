@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from '@ohos.secureElement';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## newSEService

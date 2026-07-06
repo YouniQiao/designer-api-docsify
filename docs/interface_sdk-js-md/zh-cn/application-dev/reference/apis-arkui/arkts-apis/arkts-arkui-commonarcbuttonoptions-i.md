@@ -204,7 +204,7 @@ pressedFontColor?: ColorMetrics
 progressConfig?: ArcButtonProgressConfig
 ```
 
-ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮样式（ [示例1](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#示例1-设置弧形按钮)），设置后表现为进度条样式（ [示例2](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#示例2-设置设备进度条按钮)），进度条样式不受 [ArcButtonStyleMode](arkts-arkui-arcbuttonstylemode-e.md#arcbuttonstylemode)属性设置影响。 默认值：[ArcButtonProgressConfig](arkts-arkui-arcbuttonprogressconfig-c.md#arcbuttonprogressconfig) 的各项子属性均取其默认值。
+ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮样式（ [示例1](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#示例1-设置弧形按钮)），设置后表现为进度条样式（ [示例2](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#示例2-设置设备进度条按钮)），进度条样式不受 [ArcButtonStyleMode](arkts-arkui-arcbuttonstylemode-e.md)属性设置影响。 默认值：[ArcButtonProgressConfig](arkts-arkui-arcbuttonprogressconfig-c.md) 的各项子属性均取其默认值。
 
 **类型：** ArcButtonProgressConfig
 
@@ -270,7 +270,7 @@ status?: ArcButtonStatus
 styleMode?: ArcButtonStyleMode
 ```
 
-弧形按钮样式模式。该样式不支持与[ArcButtonProgressConfig](arkts-arkui-arcbuttonprogressconfig-c.md#arcbuttonprogressconfig)样式同时使用。 默认值：ArcButtonStyleMode.EMPHASIZED_LIGHT。
+弧形按钮样式模式。该样式不支持与[ArcButtonProgressConfig](arkts-arkui-arcbuttonprogressconfig-c.md)样式同时使用。 默认值：ArcButtonStyleMode.EMPHASIZED_LIGHT。
 
 **类型：** ArcButtonStyleMode
 

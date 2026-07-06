@@ -28,15 +28,15 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [CapsuleSegmentButtonConstructionOptions](arkts-arkui-capsulesegmentbuttonconstructionoptions-i.md) | 用于构建胶囊类的SegmentButtonOptions对象。 继承[CommonSegmentButtonOptions](arkts-arkui-commonsegmentbuttonoptions-i.md#commonsegmentbuttonoptions)。 |
-| [CapsuleSegmentButtonOptions](arkts-arkui-capsulesegmentbuttonoptions-i.md) | 胶囊类分段按钮选项。继承自[CapsuleSegmentButtonConstructionOptions](arkts-arkui-capsulesegmentbuttonconstructionoptions-i.md#capsulesegmentbuttonconstructionoptions)。 |
+| [CapsuleSegmentButtonConstructionOptions](arkts-arkui-capsulesegmentbuttonconstructionoptions-i.md) | 用于构建胶囊类的SegmentButtonOptions对象。 继承[CommonSegmentButtonOptions](arkts-arkui-commonsegmentbuttonoptions-i.md)。 |
+| [CapsuleSegmentButtonOptions](arkts-arkui-capsulesegmentbuttonoptions-i.md) | 胶囊类分段按钮选项。继承自[CapsuleSegmentButtonConstructionOptions](arkts-arkui-capsulesegmentbuttonconstructionoptions-i.md)。 |
 | [CommonSegmentButtonOptions](arkts-arkui-commonsegmentbuttonoptions-i.md) | 定义分段按钮组件的可自定义的属性。 |
 | [SegmentButtonIconItem](arkts-arkui-segmentbuttoniconitem-i.md) | 图标按钮信息。 |
 | [SegmentButtonIconTextItem](arkts-arkui-segmentbuttonicontextitem-i.md) | 图标与文本按钮信息。 |
 | [SegmentButtonItemOptionsConstructorOptions](arkts-arkui-segmentbuttonitemoptionsconstructoroptions-i.md) | 构造参数用于SegmentButtonItemOptions。 |
 | [SegmentButtonTextItem](arkts-arkui-segmentbuttontextitem-i.md) | 文本按钮信息。 |
-| [TabSegmentButtonConstructionOptions](arkts-arkui-tabsegmentbuttonconstructionoptions-i.md) | 构建页签类的SegmentButtonOptions对象。 继承[CommonSegmentButtonOptions](arkts-arkui-commonsegmentbuttonoptions-i.md#commonsegmentbuttonoptions)。 |
-| [TabSegmentButtonOptions](arkts-arkui-tabsegmentbuttonoptions-i.md) | 页签类分段按钮选项。继承自[TabSegmentButtonConstructionOptions](arkts-arkui-tabsegmentbuttonconstructionoptions-i.md#tabsegmentbuttonconstructionoptions)。 |
+| [TabSegmentButtonConstructionOptions](arkts-arkui-tabsegmentbuttonconstructionoptions-i.md) | 构建页签类的SegmentButtonOptions对象。 继承[CommonSegmentButtonOptions](arkts-arkui-commonsegmentbuttonoptions-i.md)。 |
+| [TabSegmentButtonOptions](arkts-arkui-tabsegmentbuttonoptions-i.md) | 页签类分段按钮选项。继承自[TabSegmentButtonConstructionOptions](arkts-arkui-tabsegmentbuttonconstructionoptions-i.md)。 |
 
 <!--Del-->
 ### 接口（系统接口）

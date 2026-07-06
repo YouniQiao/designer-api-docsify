@@ -2,7 +2,7 @@
 
 Implements a navigation stack of the **MultiNavigation** component. Currently, this stack can be created only by the user and cannot be obtained through callbacks. Do not use events or APIs such as **onReady** of **NavDestination** to obtain the navigation stack and perform stack operations, as this may lead to unpredictable issues.
 
-**Inheritance/Implementation:** MultiNavPathStack extends [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md#navpathstack)
+**Inheritance/Implementation:** MultiNavPathStack extends [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 
 **Since:** 14
 
@@ -11,7 +11,7 @@ Implements a navigation stack of the **MultiNavigation** component. Currently, t
 ## Modules to Import
 
 ```TypeScript
-import { MultiNavPathStack, MultiNavigation, SplitPolicy } from '@ohos.arkui.advanced.MultiNavigation';
+import { MultiNavPathStack, MultiNavigation, SplitPolicy } from '@kit.ArkUI';
 ```
 
 ## clear

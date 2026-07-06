@@ -6,7 +6,7 @@ The **CommonEvent** module provides capabilities to publish, subscribe to, and u
 
 **Deprecated since:** 9
 
-**Substitutes:** [commonEventManager:commonEventManager](arkts-commoneventmanager.md#commoneventmanager)
+**Substitutes:** [commonEventManager:commonEventManager](arkts-commoneventmanager.md)
 
 **System capability:** SystemCapability.Notification.CommonEvent
 

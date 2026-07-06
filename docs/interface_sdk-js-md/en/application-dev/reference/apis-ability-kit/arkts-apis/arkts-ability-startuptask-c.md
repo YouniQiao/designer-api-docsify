@@ -11,7 +11,7 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 ## Modules to Import
 
 ```TypeScript
-import { StartupTask } from '@ohos.app.appstartup.StartupTask';
+import { StartupTask } from '@kit.AbilityKit';
 ```
 
 ## init
@@ -32,7 +32,7 @@ Called when all the dependent startup tasks are complete. You can initialize the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | AbilityStageContext | Yes | Context environment of the[AbilityStage](arkts-ability-abilitystage-c.md#abilitystage). |
+| context | AbilityStageContext | Yes | Context environment of the[AbilityStage](arkts-ability-abilitystage-c.md). |
 
 **Return value:**
 

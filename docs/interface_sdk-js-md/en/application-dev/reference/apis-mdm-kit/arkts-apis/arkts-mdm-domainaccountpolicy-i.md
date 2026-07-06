@@ -9,7 +9,7 @@ Domain account policy.
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@ohos.enterprise.accountManager';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## authenticationValidityPeriod

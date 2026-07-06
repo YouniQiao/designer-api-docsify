@@ -9,7 +9,7 @@ Provides APIs for querying and updating the login state of a distributed account
 ## Modules to Import
 
 ```TypeScript
-import { distributedAccount } from '@ohos.account.distributedAccount';
+import { distributedAccount } from '@kit.BasicServicesKit';
 ```
 
 ## getOsAccountDistributedInfoByLocalId

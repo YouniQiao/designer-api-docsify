@@ -34,7 +34,7 @@ function openAuthorizeDialog(context: common.Context): Promise<string>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have thepermission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. A mandatory parameter is leftunspecified.2. Incorrect parameter type. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | The certificate management application Hap is not preinstalled in the system,and the capability is not supported.<br>**适用版本：** 26.0.0 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | The certificate management application Hap is not preinstalled in the system,and the capability is not supported.<br>**适用版本：** 26.0.0+ |
 | [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-操作取消) | The user cancels the authorization. |
 

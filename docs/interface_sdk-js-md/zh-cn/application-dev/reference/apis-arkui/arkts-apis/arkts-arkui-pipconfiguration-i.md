@@ -176,7 +176,7 @@ localStorage?: LocalStorage
 navigationId?: string
 ```
 
-navigation控件ID，不传值则默认不需要缓存页面。 1、UIAbility使用[Navigation](Navigation)管理页面时，需要设置Navigation控件的id属性，并将该id设置给画中画控制器，确 保还原场景下能够从画中画窗口恢复到原页面。 2、UIAbility使用[Router](arkts-router.md#router)管理页面时，无需设置navigationId。 3、UIAbility只有单页面时，无需设置navigationId，还原场景下也能够从画中画窗口恢复到原页面。
+navigation控件ID，不传值则默认不需要缓存页面。 1、UIAbility使用[Navigation](Navigation)管理页面时，需要设置Navigation控件的id属性，并将该id设置给画中画控制器，确 保还原场景下能够从画中画窗口恢复到原页面。 2、UIAbility使用[Router](arkts-router.md)管理页面时，无需设置navigationId。 3、UIAbility只有单页面时，无需设置navigationId，还原场景下也能够从画中画窗口恢复到原页面。
 
 **类型：** string
 

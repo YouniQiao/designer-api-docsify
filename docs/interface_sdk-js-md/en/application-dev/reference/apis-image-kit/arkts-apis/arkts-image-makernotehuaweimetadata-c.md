@@ -2,7 +2,7 @@
 
 MakerNoteHuaweiMetadata implements Metadata Photo metadata from Huawei cameras.
 
-**Inheritance/Implementation:** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-metadata-i.md#metadata)
+**Inheritance/Implementation:** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-metadata-i.md)
 
 **Since:** 23
 
@@ -11,7 +11,7 @@ MakerNoteHuaweiMetadata implements Metadata Photo metadata from Huawei cameras.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone
@@ -20,7 +20,7 @@ import { image } from '@ohos.multimedia.image';
 clone(): Promise<MakerNoteHuaweiMetadata>
 ```
 
-Clones [MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md#makernotehuaweimetadata) metadata. This API returns the result asynchronously through a promise.
+Clones [MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md) metadata. This API returns the result asynchronously through a promise.
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ Clones [MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md#makern
 static createInstance(): MakerNoteHuaweiMetadata
 ```
 
-Returns an empty [MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md#makernotehuaweimetadata) instance.
+Returns an empty [MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md) instance.
 
 **Since:** 23
 
@@ -164,7 +164,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [PropertyKey](arkts-image-propertykey-e.md#propertykey).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [PropertyKey](arkts-image-propertykey-e.md).
 
 **Since:** 23
 

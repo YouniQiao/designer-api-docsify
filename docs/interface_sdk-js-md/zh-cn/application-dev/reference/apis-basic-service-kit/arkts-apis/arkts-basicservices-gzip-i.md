@@ -652,7 +652,7 @@ gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flush | CompressFlushMode | 是 | 控制刷新操作的行为，参考[CompressFlushMode枚举](arkts-basicservices-compressflushmode-e.md#compressflushmode)的定义。 |
+| flush | CompressFlushMode | 是 | 控制刷新操作的行为，参考[CompressFlushMode枚举](arkts-basicservices-compressflushmode-e.md)的定义。 |
 
 **返回值：**
 
@@ -1546,7 +1546,7 @@ gzseek(offset: number, whence: OffsetReferencePoint): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | offset | number | 是 | 目标偏移位置。 |
-| whence | OffsetReferencePoint | 是 | 定义偏移的参考点，参考[OffsetReferencePoint枚举定义](arkts-basicservices-offsetreferencepoint-e.md#offsetreferencepoint)。 |
+| whence | OffsetReferencePoint | 是 | 定义偏移的参考点，参考[OffsetReferencePoint枚举定义](arkts-basicservices-offsetreferencepoint-e.md)。 |
 
 **返回值：**
 
@@ -1619,8 +1619,8 @@ gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnSta
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | CompressLevel | 是 | 压缩级别，参考[CompressLevel枚举定义](arkts-basicservices-compresslevel-e.md#compresslevel)。 |
-| strategy | CompressStrategy | 是 | 压缩策略，参考[CompressStrategy枚举定义](arkts-basicservices-compressstrategy-e.md#compressstrategy)。 |
+| level | CompressLevel | 是 | 压缩级别，参考[CompressLevel枚举定义](arkts-basicservices-compresslevel-e.md)。 |
+| strategy | CompressStrategy | 是 | 压缩策略，参考[CompressStrategy枚举定义](arkts-basicservices-compressstrategy-e.md)。 |
 
 **返回值：**
 

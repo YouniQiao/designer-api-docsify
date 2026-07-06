@@ -9,7 +9,7 @@ Provides APIs to encode strings into byte arrays. Multiple encoding formats are 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -234,7 +234,7 @@ Encodes the input content and stores the result into a Uint8Array object.
 | Type | Description |
 | --- | --- |
 | object | Return the object, where read representsthe number of characters that have been encoded, and writtenrepresents the number of bytes occupied by the encoded characters.<br>**Applicable version:** 9 - 10 |
-| EncodeIntoUint8ArrayInfo | Object obtained. **read** indicates the number of encoded characters, and**written** indicates the number of bytes in the encoded characters.<br>**Applicable version:** 11 |
+| EncodeIntoUint8ArrayInfo | Object obtained. **read** indicates the number of encoded characters, and**written** indicates the number of bytes in the encoded characters.<br>**Applicable version:** 11 and later |
 
 **Example**
 

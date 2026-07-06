@@ -11,7 +11,7 @@ appMemoryOptimizer provides application memory optimization capabilities, includ
 ## Modules to Import
 
 ```TypeScript
-import { appMemoryOptimizer } from '@ohos.app.ability.appMemoryOptimizer';
+import { appMemoryOptimizer } from '@kit.AbilityKit';
 ```
 
 ## Summary

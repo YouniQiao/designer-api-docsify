@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [systemDateTime:systemDateTime](arkts-systemdatetime.md#systemdatetime)
+**替代接口：** [systemDateTime:systemDateTime](arkts-systemdatetime.md)
 
 **系统能力：** SystemCapability.MiscServices.Time
 

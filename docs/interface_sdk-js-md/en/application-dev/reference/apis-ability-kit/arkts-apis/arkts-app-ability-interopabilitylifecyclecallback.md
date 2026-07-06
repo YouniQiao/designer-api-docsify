@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InteropAbilityLifecycleCallback } from '@ohos.app.ability.InteropAbilityLifecycleCallback';
+import { InteropAbilityLifecycleCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Describes the setting status of the notification mode switch.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@ohos.notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## badgeNumberEnabled

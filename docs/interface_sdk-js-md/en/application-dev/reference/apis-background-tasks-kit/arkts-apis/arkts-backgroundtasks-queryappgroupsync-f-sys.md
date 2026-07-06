@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@ohos.resourceschedule.usageStatistics';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryAppGroupSync

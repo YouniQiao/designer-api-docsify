@@ -9,7 +9,7 @@ Describes the information of an SEI message.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## payload

@@ -9,7 +9,7 @@ Defines the configuration for the trailing builder, with constraints applied to 
 ## Modules to Import
 
 ```TypeScript
-import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@ohos.arkui.advanced.ChipGroup';
+import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription
@@ -92,7 +92,7 @@ Callback of custom builder items. If the value is **undefined**, the event is un
 icon: IconOptions
 ```
 
-Custom builder icon. When the chip size is **ChipSize.SMALL**, the suffix is at {width: 16, height: 16} by default. When the chip size is **ChipSize.NORMAL**, the suffix is at {width: 24, height: 24} by default. To dynamically change the size, you must use the [SymbolGlyphModifier](./arkui/SymbolGlyphModifier:SymbolGlyphModifier) type when importing the [IconGroupSuffix](arkts-arkui-icongroupsuffix-s.md#icongroupsuffix) API. If the value is **undefined**, the default value is used.
+Custom builder icon. When the chip size is **ChipSize.SMALL**, the suffix is at {width: 16, height: 16} by default. When the chip size is **ChipSize.NORMAL**, the suffix is at {width: 24, height: 24} by default. To dynamically change the size, you must use the [SymbolGlyphModifier](./arkui/SymbolGlyphModifier:SymbolGlyphModifier) type when importing the [IconGroupSuffix](arkts-arkui-icongroupsuffix-s.md) API. If the value is **undefined**, the default value is used.
 
 **Type:** IconOptions
 

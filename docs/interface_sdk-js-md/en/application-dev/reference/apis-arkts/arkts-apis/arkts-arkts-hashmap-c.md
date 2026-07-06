@@ -9,7 +9,7 @@ HashMap is a map implemented based on the array, linked list, and red-black tree
 ## Modules to Import
 
 ```TypeScript
-import { HashMap } from '@ohos.util.HashMap';
+import { HashMap } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

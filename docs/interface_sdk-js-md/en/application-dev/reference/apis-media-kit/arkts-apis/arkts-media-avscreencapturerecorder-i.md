@@ -9,7 +9,7 @@ AVScreenCaptureRecorder is a class for screen capture management. It provides AP
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addWatermark
@@ -129,7 +129,7 @@ Unsubscribes from screen capture state changes. You can specify a callback to ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type, which is **'stateChange'** in this case. |
-| callback | Callback&lt;AVScreenCaptureStateCode&gt; | No | Callback used for unsubscription.[AVScreenCaptureStateCode](arkts-media-avscreencapturestatecode-e.md#avscreencapturestatecode) indicates the newstate. If this parameter is not specified, the last subscription is canceled. |
+| callback | Callback&lt;AVScreenCaptureStateCode&gt; | No | Callback used for unsubscription.[AVScreenCaptureStateCode](arkts-media-avscreencapturestatecode-e.md) indicates the newstate. If this parameter is not specified, the last subscription is canceled. |
 
 ## off('error')
 
@@ -167,7 +167,7 @@ Subscribes to screen capture state changes. An application can subscribe to only
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type, which is **'stateChange'** in this case. |
-| callback | Callback&lt;AVScreenCaptureStateCode&gt; | Yes | Callback invoked when the event is triggered.[AVScreenCaptureStateCode](arkts-media-avscreencapturestatecode-e.md#avscreencapturestatecode) indicates the newstate. |
+| callback | Callback&lt;AVScreenCaptureStateCode&gt; | Yes | Callback invoked when the event is triggered.[AVScreenCaptureStateCode](arkts-media-avscreencapturestatecode-e.md) indicates the newstate. |
 
 ## on('error')
 

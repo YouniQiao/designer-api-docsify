@@ -6,7 +6,7 @@
 
 **废弃版本：** 12
 
-**替代接口：** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md#savebuttonoptions)
+**替代接口：** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md)
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -24,7 +24,7 @@ newFileNames?: Array<string>
 
 **废弃版本：** 18
 
-**替代接口：** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md#savebuttonoptions)
+**替代接口：** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md)
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

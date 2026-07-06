@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { configPolicy } from '@ohos.configPolicy';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## getOneCfgFile

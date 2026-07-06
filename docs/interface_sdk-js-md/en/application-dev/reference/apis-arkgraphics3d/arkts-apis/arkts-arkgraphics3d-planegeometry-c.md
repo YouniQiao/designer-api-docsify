@@ -2,7 +2,7 @@
 
 Define a plane.
 
-**Inheritance/Implementation:** PlaneGeometry extends [GeometryDefinition](arkts-arkgraphics3d-geometrydefinition-c.md#geometrydefinition)
+**Inheritance/Implementation:** PlaneGeometry extends [GeometryDefinition](arkts-arkgraphics3d-geometrydefinition-c.md)
 
 **Since:** 18
 

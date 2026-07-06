@@ -116,15 +116,7 @@ Enumerates the metadata types.
 | -- | -- |
 | EXIF_METADATA = 1 |  |
 | FRAGMENT_METADATA = 2 |  |
-| XTSTYLE_METADATA = 3 |  |
-| RFDATAB_METADATA = 4 |  |
 | GIF_METADATA = 5 |  |
-| XDRAW_4K_METADATA = 8 |  |
-| PRIVATE_METADATA = 9 |  |
-| RFDATAN_METADATA = 10 |  |
-| RFDATAS_METADATA = 11 |  |
-| HDRSNAP_METADATA = 12 |  |
-| DFXDATA_METADATA = 13 |  |
 
 ### IMAGE_ALLOCATOR_MODE
 

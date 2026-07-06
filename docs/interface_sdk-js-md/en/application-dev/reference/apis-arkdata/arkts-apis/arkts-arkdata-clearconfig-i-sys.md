@@ -11,7 +11,7 @@ Defines the clearance configuration of a device-cloud synergy database.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@ohos.data.cloudData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## dbInfo

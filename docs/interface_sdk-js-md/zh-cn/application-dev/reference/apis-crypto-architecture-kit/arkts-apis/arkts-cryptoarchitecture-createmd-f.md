@@ -30,7 +30,7 @@ function createMd(algName: string): Md
 
 | 类型 | 说明 |
 | --- | --- |
-| Md | 返回由输入算法指定生成的[Md](arkts-cryptoarchitecture-md-i.md#md)对象。 |
+| Md | 返回由输入算法指定生成的[Md](arkts-cryptoarchitecture-md-i.md)对象。 |
 
 **错误码：**
 

@@ -9,7 +9,7 @@ Describes the curved area on a waterfall display.
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@ohos.display';
+import { display } from '@kit.ArkUI';
 ```
 
 ## bottom

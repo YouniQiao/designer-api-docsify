@@ -9,7 +9,7 @@ Defines a simple animation parameter object. Unlike **AnimatorOptions**, this ob
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@ohos.animator';
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -211,7 +211,7 @@ Sets the interpolation curve for this animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | string | Yes | Interpolation curve. For details, see [AnimatorOptions](arkts-arkui-animatoroptions-i.md#animatoroptions).<br>Default value: **"ease"** |
+| curve | string | Yes | Interpolation curve. For details, see [AnimatorOptions](arkts-arkui-animatoroptions-i.md).<br>Default value: **"ease"** |
 
 **Return value:**
 

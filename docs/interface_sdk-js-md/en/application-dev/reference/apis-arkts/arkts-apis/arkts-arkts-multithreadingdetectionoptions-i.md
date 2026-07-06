@@ -9,7 +9,7 @@ Multi-thread detection functional parameter configuration
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@ohos.util';
+import { util } from '@kit.ArkTS';
 ```
 
 ## abort

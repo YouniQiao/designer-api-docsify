@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@ohos.notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isNotificationEnabled
@@ -153,8 +153,8 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 | [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist.<br>**适用版本：** 11 |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found.<br>**适用版本：** 11 |
+| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist.<br>**适用版本：** 11+ |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found.<br>**适用版本：** 11+ |
 
 **示例：**
 
@@ -206,8 +206,8 @@ function isNotificationEnabled(): Promise<boolean>
 | [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist.<br>**适用版本：** 11 |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found.<br>**适用版本：** 11 |
+| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist.<br>**适用版本：** 11+ |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found.<br>**适用版本：** 11+ |
 
 **示例：**
 

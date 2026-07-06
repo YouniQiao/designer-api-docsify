@@ -586,7 +586,7 @@ hdrBrightnessRatio(ratio: number): Filter
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。<br>**适用版本：** 20 - 23 |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败，应用无权限使用该API，需要申请权限。<br>**适用版本：** 24 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败，应用无权限使用该API，需要申请权限。<br>**适用版本：** 24+ |
 
 **示例：**
 

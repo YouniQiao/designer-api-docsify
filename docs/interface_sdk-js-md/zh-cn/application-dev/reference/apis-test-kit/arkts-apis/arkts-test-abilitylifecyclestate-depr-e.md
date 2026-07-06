@@ -6,7 +6,7 @@ Ability生命周期状态。
 
 **废弃版本：** 9
 
-**替代接口：** [AbilityLifecycleState](arkts-test-abilitylifecyclestate-e.md#abilitylifecyclestate)
+**替代接口：** [AbilityLifecycleState](arkts-test-abilitylifecyclestate-e.md)
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

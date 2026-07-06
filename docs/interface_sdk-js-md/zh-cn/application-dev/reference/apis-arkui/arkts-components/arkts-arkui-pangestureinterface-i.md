@@ -14,7 +14,7 @@
 (value?: { fingers?: number; direction?: PanDirection; distance?: number } | PanGestureOptions): PanGestureInterface
 ```
 
-创建滑动手势对象。继承自[GestureInterface<T>](arkts-arkui-gestureinterface-i.md#gestureinterface)。
+创建滑动手势对象。继承自[GestureInterface<T>](arkts-arkui-gestureinterface-i.md)。
 
 **起始版本：** 7
 

@@ -9,7 +9,7 @@ Describes the properties of the status bar<!--Del--> and three-button navigation
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## enableNavigationBarAnimation

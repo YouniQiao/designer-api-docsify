@@ -2,7 +2,7 @@
 
 The class of agent UI extension ability. This class cannot be used in Harmony Archive(HAR).
 
-**Inheritance/Implementation:** AgentUIExtensionAbility extends [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability)
+**Inheritance/Implementation:** AgentUIExtensionAbility extends [UIExtensionAbility](arkts-ability-uiextensionability-c.md)
 
 **Since:** 24
 
@@ -15,6 +15,6 @@ The class of agent UI extension ability. This class cannot be used in Harmony Ar
 ## Modules to Import
 
 ```TypeScript
-import { AgentUIExtensionAbility } from '@ohos.app.agent.AgentUIExtensionAbility';
+import { AgentUIExtensionAbility } from '@kit.AbilityKit';
 ```
 

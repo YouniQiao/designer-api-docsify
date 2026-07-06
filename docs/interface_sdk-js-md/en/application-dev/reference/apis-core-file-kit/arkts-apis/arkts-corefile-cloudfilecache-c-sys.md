@@ -9,7 +9,7 @@ Provides APIs for the file manager application to download files from the Drive 
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@ohos.file.cloudSync';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## cleanCache

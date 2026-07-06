@@ -11,7 +11,7 @@ Represents the authorization information.
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@ohos.dlpPermission';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## actionUponExpiry

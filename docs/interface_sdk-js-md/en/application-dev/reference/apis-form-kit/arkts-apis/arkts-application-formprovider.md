@@ -6,7 +6,7 @@ The **FormProvider** module provides APIs related to the widget provider. You ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [formProvider:formProvider](arkts-app-form-formprovider.md#formprovider)
+**Substitutes:** [formProvider:formProvider](arkts-app-form-formprovider.md)
 
 **System capability:** SystemCapability.Ability.Form
 

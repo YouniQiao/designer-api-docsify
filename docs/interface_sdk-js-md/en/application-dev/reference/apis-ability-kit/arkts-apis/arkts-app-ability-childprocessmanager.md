@@ -9,7 +9,7 @@ The childProcessManager module provides the child process management capability.
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from '@ohos.app.ability.childProcessManager';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

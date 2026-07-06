@@ -80,7 +80,7 @@ enableHapticFeedback(enable: Optional<boolean>)
 itemHeight(height: Optional<LengthMetrics>)
 ```
 
-设置UIPickerComponent容器每个选项的高度。未通过该接口设置时，每个选项的高度为40vp。 单位：与[LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-c.md#lengthmetrics)一致。 取值范围：[40vp, 64vp] 默认值：40vp 设置小于40vp或大于64vp时，使用默认值40vp。当height的值为undefined时，使用默认值40vp。不支持“百分比”类型。
+设置UIPickerComponent容器每个选项的高度。未通过该接口设置时，每个选项的高度为40vp。 单位：与[LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-c.md)一致。 取值范围：[40vp, 64vp] 默认值：40vp 设置小于40vp或大于64vp时，使用默认值40vp。当height的值为undefined时，使用默认值40vp。不支持“百分比”类型。
 
 **起始版本：** 26.0.0
 

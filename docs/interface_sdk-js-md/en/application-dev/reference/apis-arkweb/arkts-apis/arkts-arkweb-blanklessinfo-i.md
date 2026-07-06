@@ -9,7 +9,7 @@ Describes the prediction information about blankless loading, including the firs
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## errCode
@@ -18,7 +18,7 @@ import { webview } from '@ohos.web.webview';
 errCode: WebBlanklessErrorCode
 ```
 
-Error code of blankless loading. For details, see [WebBlanklessErrorCode](arkts-arkweb-webblanklesserrorcode-e.md#webblanklesserrorcode).
+Error code of blankless loading. For details, see [WebBlanklessErrorCode](arkts-arkweb-webblanklesserrorcode-e.md).
 
 **Type:** WebBlanklessErrorCode
 

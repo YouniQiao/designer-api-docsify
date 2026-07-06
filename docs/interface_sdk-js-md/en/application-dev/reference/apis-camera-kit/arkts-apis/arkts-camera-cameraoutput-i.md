@@ -1,6 +1,6 @@
 # CameraOutput
 
-CameraOutput implements output information used in [Session](arkts-camera-session-i.md#session). It is the base class of **output**.
+CameraOutput implements output information used in [Session](arkts-camera-session-i.md). It is the base class of **output**.
 
 **Since:** 10
 
@@ -9,7 +9,7 @@ CameraOutput implements output information used in [Session](arkts-camera-sessio
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## release
@@ -30,7 +30,7 @@ Releases output resources. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the output resources arereleased successfully, **err** is **undefined**; otherwise, **err** is an error object with an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the output resources arereleased successfully, **err** is **undefined**; otherwise, **err** is an error object with an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

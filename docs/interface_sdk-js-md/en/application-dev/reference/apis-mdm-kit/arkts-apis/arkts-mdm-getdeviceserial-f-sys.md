@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceInfo } from '@ohos.enterprise.deviceInfo';
+import { deviceInfo } from '@kit.MDMKit';
 ```
 
 ## getDeviceSerial

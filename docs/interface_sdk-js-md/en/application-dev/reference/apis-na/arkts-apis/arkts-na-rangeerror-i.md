@@ -1,4 +1,4 @@
 # RangeError
 
-**Inheritance/Implementation:** RangeError extends [Error](arkts-na-error-i.md#error)
+**Inheritance/Implementation:** RangeError extends [Error](arkts-na-error-i.md)
 

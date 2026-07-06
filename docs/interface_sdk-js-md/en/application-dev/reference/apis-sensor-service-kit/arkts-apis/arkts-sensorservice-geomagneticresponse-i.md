@@ -9,7 +9,7 @@ Describes a geomagnetic response object.
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@ohos.sensor';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## deflectionAngle

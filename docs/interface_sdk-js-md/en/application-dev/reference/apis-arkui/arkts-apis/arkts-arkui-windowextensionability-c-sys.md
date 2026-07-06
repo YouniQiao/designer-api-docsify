@@ -13,7 +13,7 @@ class of window extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { WindowExtensionContext } from '@ohos.application.WindowExtensionAbility';
+import { WindowExtensionContext } from '@kit.ArkUI';
 ```
 
 ## onConnect

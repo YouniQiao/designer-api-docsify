@@ -1,8 +1,8 @@
 # ApplicationContext
 
-ApplicationContext inherits from [Context](arkts-ability-context-depr-i.md#context) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting. > **NOTE** > > The APIs of this module can be used only in the stage model.
+ApplicationContext inherits from [Context](arkts-ability-context-depr-i.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting. > **NOTE** > > The APIs of this module can be used only in the stage model.
 
-**Inheritance/Implementation:** ApplicationContext extends [Context](arkts-ability-context-t.md#context)
+**Inheritance/Implementation:** ApplicationContext extends [Context](arkts-ability-context-t.md)
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 preloadUIExtensionAbility(want: Want): Promise<void>
 ```
 
-Preloads a UIExtensionAbility instance. This API uses a promise to return the result. The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application. A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility. | Name| Type| Mandatory| Description| | -------- | -------- | -------- | -------- | | want | [Want](arkts-ability-want-c.md#want) | Yes| Want information of the UIExtensionAbility.|
+Preloads a UIExtensionAbility instance. This API uses a promise to return the result. The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application. A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility. | Name| Type| Mandatory| Description| | -------- | -------- | -------- | -------- | | want | [Want](arkts-ability-want-c.md) | Yes| Want information of the UIExtensionAbility.|
 
 **Since:** 12
 

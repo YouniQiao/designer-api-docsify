@@ -23,7 +23,7 @@ function getBundlePackInfo(bundleName: string,
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | bundlePackFlag | BundlePackFlag | 是 | 指示要查询的应用包标志。 |
-| callback | AsyncCallback&lt;BundlePackInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)。当函数调用成功，err为undefined，data为获取到的BundlePackInfo信息。否则为错误对象。 |
+| callback | AsyncCallback&lt;BundlePackInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)。当函数调用成功，err为undefined，data为获取到的BundlePackInfo信息。否则为错误对象。 |
 
 **错误码：**
 

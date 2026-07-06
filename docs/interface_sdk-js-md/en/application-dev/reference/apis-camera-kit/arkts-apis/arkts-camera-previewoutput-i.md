@@ -1,8 +1,8 @@
 # PreviewOutput
 
-Implements preview output. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput).
+Implements preview output. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
 
-**Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput)
+**Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Implements preview output. It inherits from [CameraOutput](arkts-camera-cameraou
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## enableBandwidthCompression
@@ -309,7 +309,7 @@ Subscribes to PreviewOutput error events. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when apreviewOutput instance is created. This event is triggered and the corresponding error message is returnedwhen an error occurs during the use of a preview-related API such as[Session.start](arkts-camera-session-i.md#start-2) or[CameraOutput.release](arkts-camera-cameraoutput-i.md#release-2). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 ## setFrameRate
 
@@ -317,7 +317,7 @@ Subscribes to PreviewOutput error events. This API uses an asynchronous callback
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](arkts-camera-previewoutput-i.md#getsupportedframerates-1). > **NOTE** > > This API is valid only in [PhotoSession](arkts-camera-photosession-i.md#photosession) or > [VideoSession](arkts-camera-videosession-i.md#videosession) mode.
+Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](arkts-camera-previewoutput-i.md#getsupportedframerates-1). > **NOTE** > > This API is valid only in [PhotoSession](arkts-camera-photosession-i.md) or > [VideoSession](arkts-camera-videosession-i.md) mode.
 
 **Since:** 12
 
@@ -388,7 +388,7 @@ Sets the preview rotation angle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | previewRotation | ImageRotation | Yes | Preview rotation angle. |
-| isDisplayLocked | boolean | No | Whether the orientation of the surface is locked when the screen rotates. Ifthis parameter is not set, the default value **false** is used, indicating that the orientation is notlocked. **true** if locked, **false** otherwise. For details, see[SurfaceRotationOptions](../../apis-arkui/arkts-components/arkts-arkui-surfacerotationoptions-i.md#surfacerotationoptions). |
+| isDisplayLocked | boolean | No | Whether the orientation of the surface is locked when the screen rotates. Ifthis parameter is not set, the default value **false** is used, indicating that the orientation is notlocked. **true** if locked, **false** otherwise. For details, see[SurfaceRotationOptions](../../apis-arkui/arkts-components/arkts-arkui-surfacerotationoptions-i.md). |
 
 **Error codes:**
 
@@ -417,7 +417,7 @@ Starts to output preview streams. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the preview stream output startssuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the preview stream output startssuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

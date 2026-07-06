@@ -624,7 +624,7 @@ inputText(text: string, mode: InputTextMode): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 输入文本。目前支持英文、中文和特殊字符。 |
-| mode | InputTextMode | 是 | 文本输入模式。详见[InputTextMode](arkts-test-inputtextmode-i.md#inputtextmode)。<br>**注意**：如果**InputTextMode.addition**设置为**true**，则指定文本将追加到组件现有文本末尾。否则，指定文本将覆盖组件现有文本。 |
+| mode | InputTextMode | 是 | 文本输入模式。详见[InputTextMode](arkts-test-inputtextmode-i.md)。<br>**注意**：如果**InputTextMode.addition**设置为**true**，则指定文本将追加到组件现有文本末尾。否则，指定文本将覆盖组件现有文本。 |
 
 **返回值：**
 

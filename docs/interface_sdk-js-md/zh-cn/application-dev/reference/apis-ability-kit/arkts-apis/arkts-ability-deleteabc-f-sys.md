@@ -35,7 +35,7 @@ function deleteAbc(abcPath: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [17700202](../errorcode-bundle.md#17700202-abc文件删除失败) | Failed to delete the abc file. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
 
 **示例：**
 

@@ -53,7 +53,7 @@ Constructs an **OffscreenCanvas** object for creating an offscreen canvas object
 | --- | --- | --- | --- |
 | width | number | Yes | Width of the offscreen canvas.<br>**NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
 | height | number | Yes | Height of the offscreen canvas.<br>**NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
-| unit | LengthMetricsUnit | Yes | Unit mode of the OffscreenCanvas object.The value cannot be dynamically changed once set. The configuration method is the sameas that of[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#canvasrenderingcontext2d).<br>Invalid values **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT**. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the OffscreenCanvas object.The value cannot be dynamically changed once set. The configuration method is the sameas that of[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br>Invalid values **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT**. |
 
 ## getContext
 

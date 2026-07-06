@@ -1,6 +1,6 @@
 # HdrGainmapMetadata
 
-Describes the metadata keys used by a gain map, that is, the values available for **HDR_GAINMAP_METADATA** in [HdrMetadataKey](arkts-image-hdrmetadatakey-e.md#hdrmetadatakey). For details, see ISO 21496-1.
+Describes the metadata keys used by a gain map, that is, the values available for **HDR_GAINMAP_METADATA** in [HdrMetadataKey](arkts-image-hdrmetadatakey-e.md). For details, see ISO 21496-1.
 
 **Since:** 12
 
@@ -9,7 +9,7 @@ Describes the metadata keys used by a gain map, that is, the values available fo
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## alternateHeadroom

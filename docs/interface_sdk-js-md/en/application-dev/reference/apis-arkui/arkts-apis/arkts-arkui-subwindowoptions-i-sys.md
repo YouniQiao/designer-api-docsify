@@ -9,7 +9,7 @@ Describes the parameters used for creating a child window.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## isTopmost

@@ -12,7 +12,7 @@
 constructor()
 ```
 
-[DlpConnManager](arkts-dataprotection-dlpconnmanager-c.md#dlpconnmanager) 实例化时的构造函数。
+[DlpConnManager](arkts-dataprotection-dlpconnmanager-c.md) 实例化时的构造函数。
 
 **起始版本：** 21
 

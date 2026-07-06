@@ -9,7 +9,7 @@ Describes the parameters for displaying a child window or system window.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@ohos.window';
+import { window } from '@kit.ArkUI';
 ```
 
 ## focusOnShow

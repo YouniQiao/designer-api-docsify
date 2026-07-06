@@ -9,7 +9,7 @@ Permissive USB device Type.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@ohos.enterprise.usbManager';
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## baseClass

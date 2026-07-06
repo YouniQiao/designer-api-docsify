@@ -9,7 +9,7 @@ Defines a color filter. > **NOTE** > > - This module uses the physical pixel uni
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@ohos.graphics.drawing';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createBlendModeColorFilter

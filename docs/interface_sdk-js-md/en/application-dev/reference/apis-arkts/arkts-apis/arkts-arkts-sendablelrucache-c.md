@@ -11,7 +11,7 @@ Object used for store least recently used sendable Object.
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from '@arkts.utils';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## clear

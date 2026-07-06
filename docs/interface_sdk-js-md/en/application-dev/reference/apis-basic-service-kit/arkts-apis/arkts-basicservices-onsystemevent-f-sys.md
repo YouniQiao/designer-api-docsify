@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@ohos.screenLock';
+import { screenLock } from '@kit.BasicServicesKit';
 ```
 
 ## onSystemEvent

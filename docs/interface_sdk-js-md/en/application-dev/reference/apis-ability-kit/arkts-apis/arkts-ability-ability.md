@@ -9,7 +9,7 @@ The module provides all level-2 module APIs for developers to export.
 ## Modules to Import
 
 ```TypeScript
-import { ability } from '@ohos.ability.ability';
+import { ability } from '@kit.AbilityKit';
 ```
 
 ## Summary

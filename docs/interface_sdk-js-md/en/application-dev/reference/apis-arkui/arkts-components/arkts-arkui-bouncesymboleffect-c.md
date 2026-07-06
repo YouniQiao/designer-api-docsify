@@ -2,7 +2,7 @@
 
 Defines BounceSymbolEffect class, which inherits from **SymbolEffect**.
 
-**Inheritance/Implementation:** BounceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#symboleffect)
+**Inheritance/Implementation:** BounceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
 **Since:** 12
 

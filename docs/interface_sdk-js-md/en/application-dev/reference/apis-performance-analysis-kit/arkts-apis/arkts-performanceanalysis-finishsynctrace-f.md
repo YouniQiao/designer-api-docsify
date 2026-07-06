@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from '@ohos.hiTraceMeter';
+import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## finishSyncTrace

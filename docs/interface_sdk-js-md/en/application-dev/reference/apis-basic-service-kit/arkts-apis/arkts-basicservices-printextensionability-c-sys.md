@@ -9,7 +9,7 @@ class of print extensionAbility.
 ## Modules to Import
 
 ```TypeScript
-import { PrintExtensionAbility } from '@ohos.app.ability.PrintExtensionAbility';
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## onRequestPreview

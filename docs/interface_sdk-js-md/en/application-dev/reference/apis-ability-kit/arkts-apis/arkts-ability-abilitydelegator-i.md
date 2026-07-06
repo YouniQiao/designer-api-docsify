@@ -1,6 +1,6 @@
 # AbilityDelegator
 
-The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-app-ability-uiability.md) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism. You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-getabilitydelegator-f.md#getabilitydelegator-1). > **NOTE** > > The APIs of this module can be used only in [JsUnit](../../../../application-test/unittest-guidelines.md).
+The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-app-ability-uiability.md) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism. You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-getabilitydelegator-f.md#getabilitydelegator-1). > **NOTE** > > The APIs of this module can be used only in [JsUnit](../../../../application-test/unittest-guidelines.md).
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ Adds an **AbilityMonitor** instance. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
+| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance isadded, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -52,7 +52,7 @@ Adds an **AbilityMonitor** instance. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
+| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 
 **Return value:**
 
@@ -85,7 +85,7 @@ Adds an **AbilityMonitor** instance. This API returns the result synchronously. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
+| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 
 **Error codes:**
 
@@ -112,7 +112,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
+| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance isadded, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -140,7 +140,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
+| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 
 **Return value:**
 
@@ -173,7 +173,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
+| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 
 **Error codes:**
 
@@ -400,7 +400,7 @@ Executes a shell command with the timeout period specified. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ShellCmdResult&gt; | Promise used to return a[ShellCmdResult](arkts-ability-shellcmdresult-i.md#shellcmdresult) object. |
+| Promise&lt;ShellCmdResult&gt; | Promise used to return a[ShellCmdResult](arkts-ability-shellcmdresult-i.md) object. |
 
 ## finishTest
 
@@ -489,7 +489,7 @@ Obtains the lifecycle state of an ability.
 
 | Type | Description |
 | --- | --- |
-| number | Lifecycle state of the ability, For details about the state values, see[AbilityLifecycleState](../../apis-test-kit/arkts-apis/arkts-test-abilitylifecyclestate-e.md#abilitylifecyclestate). |
+| number | Lifecycle state of the ability, For details about the state values, see[AbilityLifecycleState](../../apis-test-kit/arkts-apis/arkts-test-abilitylifecyclestate-e.md). |
 
 **Error codes:**
 
@@ -515,7 +515,7 @@ Obtains the application context.
 
 | Type | Description |
 | --- | --- |
-| Context | [Context](arkts-ability-context-depr-i.md#context). |
+| Context | [Context](arkts-ability-context-depr-i.md). |
 
 ## getCurrentTopAbility
 
@@ -661,7 +661,7 @@ Removes an **AbilityMonitor** instance. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
+| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance isremoved, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -689,7 +689,7 @@ Removes an **AbilityMonitor** instance. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
+| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 
 **Return value:**
 
@@ -722,7 +722,7 @@ Removes an **AbilityMonitor** instance. This API returns the result synchronousl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
+| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 
 **Error codes:**
 
@@ -749,7 +749,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
+| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance isremoved, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -777,7 +777,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
+| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 
 **Return value:**
 
@@ -810,7 +810,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
+| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 
 **Error codes:**
 
@@ -913,8 +913,8 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
 
 ## startAbility
 
@@ -960,8 +960,8 @@ Starts an ability. This API uses a promise to return the result.
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
 
 ## waitAbilityMonitor
 
@@ -981,7 +981,7 @@ Waits for the **Ability** instance that matches the **AbilityMonitor** instance 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
+| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 | callback | AsyncCallback&lt;UIAbility&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1009,7 +1009,7 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
+| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 | timeout | number | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
 | callback | AsyncCallback&lt;UIAbility&gt; | Yes | Callback used to return the result. |
 
@@ -1038,7 +1038,7 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#abilitymonitor) instance. |
+| monitor | AbilityMonitor | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 | timeout | number | No | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
 
 **Return value:**
@@ -1072,8 +1072,8 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
-| callback | AsyncCallback&lt;AbilityStage&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is undefined and data is the [AbilityStage](arkts-ability-abilitystage-c.md#abilitystage)instance obtained. Otherwise, **err** is an error object. |
+| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
+| callback | AsyncCallback&lt;AbilityStage&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is undefined and data is the [AbilityStage](arkts-ability-abilitystage-c.md)instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1100,9 +1100,9 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
+| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 | timeout | number | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
-| callback | AsyncCallback&lt;AbilityStage&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is undefined and data is the [AbilityStage](arkts-ability-abilitystage-c.md#abilitystage)instance obtained. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;AbilityStage&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is undefined and data is the [AbilityStage](arkts-ability-abilitystage-c.md)instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1129,14 +1129,14 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#abilitystagemonitor) instance. |
+| monitor | AbilityStageMonitor | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 | timeout | number | No | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AbilityStage&gt; | Promise used to return the[AbilityStage](arkts-ability-abilitystage-c.md#abilitystage) instance. |
+| Promise&lt;AbilityStage&gt; | Promise used to return the[AbilityStage](arkts-ability-abilitystage-c.md) instance. |
 
 **Error codes:**
 

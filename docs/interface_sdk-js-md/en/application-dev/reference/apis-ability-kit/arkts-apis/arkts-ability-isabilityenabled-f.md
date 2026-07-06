@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from '@ohos.bundle';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## isAbilityEnabled

@@ -9,7 +9,7 @@ Represents information about the system version to update.
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@ohos.enterprise.systemManager';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## firstReceivedTime

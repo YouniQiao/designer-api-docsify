@@ -9,7 +9,7 @@ Provides parameter configuration required for creating a float view controller.
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from '@ohos.window.floatView';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## context

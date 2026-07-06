@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationExtensionSubscription } from '@ohos.notificationExtensionSubscription';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## getSubscribeInfo
@@ -24,7 +24,7 @@ function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NotificationExtensionSubscriptionInfo[]&gt; | Promise对象，返回一个[NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md#notificationextensionsubscriptioninfo)对象数组，表示应用的订阅信息。 |
+| Promise&lt;NotificationExtensionSubscriptionInfo[]&gt; | Promise对象，返回一个[NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md)对象数组，表示应用的订阅信息。 |
 
 **错误码：**
 

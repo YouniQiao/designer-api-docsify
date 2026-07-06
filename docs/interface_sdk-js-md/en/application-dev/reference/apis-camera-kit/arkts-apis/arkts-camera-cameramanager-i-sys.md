@@ -9,7 +9,7 @@ Implements camera management. Before calling any API in CameraManager, you must 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## createCameraInputWithTokenId
@@ -115,7 +115,7 @@ Creates a deferred PreviewOutput instance.
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 23 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 24 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 24 and later |
 
 ## createDepthDataOutput
 
@@ -141,7 +141,7 @@ Creates a DepthDataOutput instance. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| DepthDataOutput | DepthDataOutput instance. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| DepthDataOutput | DepthDataOutput instance. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -194,7 +194,7 @@ Checks whether the camera device can be muted.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 and later |
 
 **Example**
 
@@ -263,7 +263,7 @@ Checks whether a camera device supports prelaunch.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -369,7 +369,7 @@ Mutes the camera device permanently.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mute | boolean | Yes | Mutes or unmutes the camera device. **true** to mute, **false** otherwise. |
-| type | PolicyType | Yes | Policy type. For details about the available options, see[PolicyType](arkts-camera-policytype-e-sys.md#policytype). |
+| type | PolicyType | Yes | Policy type. For details about the available options, see[PolicyType](arkts-camera-policytype-e-sys.md). |
 
 **Error codes:**
 
@@ -414,7 +414,7 @@ Unsubscribes from camera mute status events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 and later |
 
 **Example**
 
@@ -483,7 +483,7 @@ Subscribes to camera mute status events. This API uses an asynchronous callback 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 and later |
 
 **Example**
 
@@ -558,7 +558,7 @@ Pre-switches a camera device to speed up its startup.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -596,7 +596,7 @@ Prelaunches the camera device. This API is called when a user clicks the system 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 13 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 13 and later |
 
 **Example**
 
@@ -645,8 +645,8 @@ Sets prelaunch configuration. Before the setting, call [isPrelaunchSupported](ar
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 **Example**
 

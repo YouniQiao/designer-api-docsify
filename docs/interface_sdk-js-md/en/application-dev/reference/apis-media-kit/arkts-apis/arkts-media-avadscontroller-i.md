@@ -9,7 +9,7 @@ Definition of the Ad Content Control Interface
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addAdsMediaSource

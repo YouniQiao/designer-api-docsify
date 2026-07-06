@@ -40,8 +40,8 @@ activateOsAccount(localId: number, callback: AsyncCallback<void>): void
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted Account. |
 | [12300009](../../apis-basic-services-kit/errorcode-account.md#12300009-账号已激活) | Account has been activated.<br>**适用版本：** 7 - 11 |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is beingoperated.<br>**适用版本：** 12 |
-| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit.<br>**适用版本：** 12 |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is beingoperated.<br>**适用版本：** 12+ |
+| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -106,8 +106,8 @@ activateOsAccount(localId: number): Promise<void>
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted Account. |
 | [12300009](../../apis-basic-services-kit/errorcode-account.md#12300009-账号已激活) | Account has been activated.<br>**适用版本：** 7 - 11 |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is beingoperated.<br>**适用版本：** 12 |
-| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit.<br>**适用版本：** 12 |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target account is beingoperated.<br>**适用版本：** 12+ |
+| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-账号登录数已达上限) | The number of logged in accounts reaches the upper limit.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -294,14 +294,14 @@ createOsAccount(localName: string, type: OsAccountType, callback: AsyncCallback<
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**适用版本：** 24 |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localName or type. |
-| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12 |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12+ |
 | [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
 | [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
 | [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
-| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upperlimit.<br>**适用版本：** 24 |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upperlimit.<br>**适用版本：** 24+ |
 
 **示例：**
 
@@ -361,15 +361,15 @@ createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccoun
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**适用版本：** 24 |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localName, type or options. |
-| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12 |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Local name already exists.<br>**适用版本：** 12+ |
 | [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
 | [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
 | [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
-| [12300015](../../apis-basic-services-kit/errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12 |
-| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upperlimit.<br>**适用版本：** 24 |
+| [12300015](../../apis-basic-services-kit/errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12+ |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upperlimit.<br>**适用版本：** 24+ |
 
 **示例：**
 
@@ -430,15 +430,15 @@ createOsAccountForDomain(
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**适用版本：** 24 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12 |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12+ |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid type or domainInfo. |
 | [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Account already exists. |
 | [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
 | [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
 | [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
-| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upperlimit.<br>**适用版本：** 24 |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upperlimit.<br>**适用版本：** 24+ |
 
 **示例：**
 
@@ -500,16 +500,16 @@ createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, opt
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**适用版本：** 24 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12 |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12+ |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid type, domainInfo or options. |
 | [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Account already exists. |
 | [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-不支持多用户) | Multi-user not supported. |
 | [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-不支持的账号类型) | Unsupported account type. |
 | [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts has reached the upper limit. |
-| [12300015](../../apis-basic-services-kit/errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12 |
-| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upperlimit.<br>**适用版本：** 24 |
+| [12300015](../../apis-basic-services-kit/errorcode-account.md#12300015-短名称已存在) | The short name already exists.<br>**适用版本：** 12+ |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-指定类型的账号数量已达到上限) | The number of accounts of the specified type has reached the upperlimit.<br>**适用版本：** 24+ |
 
 **示例：**
 
@@ -2470,7 +2470,7 @@ removeOsAccount(localId: number, callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**适用版本：** 24 |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -2536,7 +2536,7 @@ removeOsAccount(localId: number): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**适用版本：** 24 |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |

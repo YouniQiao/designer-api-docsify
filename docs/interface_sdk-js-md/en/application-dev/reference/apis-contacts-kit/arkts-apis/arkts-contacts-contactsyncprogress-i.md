@@ -9,7 +9,7 @@ Information about the contact synchronization progress. Contains the sync ID, cu
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@ohos.contact';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## currentBatch

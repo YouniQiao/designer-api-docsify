@@ -9,7 +9,7 @@ The module provides APIs for image processing based on the [Sendable](../../../.
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@ohos.multimedia.sendableImage';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## Summary

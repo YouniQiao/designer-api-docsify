@@ -11,7 +11,7 @@ The **charger** module enumerates charging types. > **NOTE** > > The APIs provid
 ## Modules to Import
 
 ```TypeScript
-import { charger } from '@ohos.charger';
+import { charger } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

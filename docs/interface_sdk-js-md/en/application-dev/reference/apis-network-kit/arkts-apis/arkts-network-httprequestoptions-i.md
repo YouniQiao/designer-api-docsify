@@ -9,7 +9,7 @@ Specifies the type and value range of the optional parameters in the HTTP reques
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@ohos.net.http';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## addressFamily

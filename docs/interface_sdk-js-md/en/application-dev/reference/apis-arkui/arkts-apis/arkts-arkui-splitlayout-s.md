@@ -9,7 +9,7 @@ Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts.
 ## Modules to Import
 
 ```TypeScript
-import { SplitLayout } from '@ohos.arkui.advanced.SplitLayout';
+import { SplitLayout } from '@kit.ArkUI';
 ```
 
 ## container
@@ -24,7 +24,7 @@ Container in the user-defined splitlayout display area.
 
 **Since:** 22
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

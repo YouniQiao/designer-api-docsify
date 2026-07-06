@@ -2,7 +2,7 @@
 
 Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations. docroot://
 
-**Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md#basecontext)
+**Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ Creates an application context with a specific data encryption level. You can ca
 createDisplayContext(displayId: number): Context
 ```
 
-Creates an application context based on the specified display ID with screen information (including [ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-screendensity-e.md#screendensity) and [Direction](../../apis-localization-kit/arkts-apis/arkts-localization-direction-e.md#direction)).
+Creates an application context based on the specified display ID with screen information (including [ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-screendensity-e.md) and [Direction](../../apis-localization-kit/arkts-apis/arkts-localization-direction-e.md)).
 
 **Since:** 15
 
@@ -271,7 +271,7 @@ Information about file partitions, which are divided according to the encryption
 bundleCodeDir: string
 ```
 
-Bundle code directory. Do not access resource files using concatenated paths. Use [resource manager APIs](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourcemanager) instead. For details, see [Application Sandbox](../../../../file-management/app-sandbox-directory.md).
+Bundle code directory. Do not access resource files using concatenated paths. Use [resource manager APIs](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md) instead. For details, see [Application Sandbox](../../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 

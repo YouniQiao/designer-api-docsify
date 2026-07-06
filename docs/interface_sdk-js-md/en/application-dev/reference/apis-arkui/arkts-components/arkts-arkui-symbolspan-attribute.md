@@ -1,6 +1,6 @@
 # SymbolSpan properties/events
 
-The [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) are not supported. Only the following attributes are supported. The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) are not supported.
+The [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are not supported. Only the following attributes are supported. The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are not supported.
 
 **Inheritance/Implementation:** SymbolSpanAttribute extends [CommonMethod<SymbolSpanAttribute>](CommonMethod<SymbolSpanAttribute>)
 
@@ -100,7 +100,7 @@ Sets the size of the symbol span. When using the string type, numeric string val
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Size of the symbol span.<br>Default value: **16fp**<br>Unit:[fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) |
+| value | number \| string \| Resource | Yes | Size of the symbol span.<br>Default value: **16fp**<br>Unit:[fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
 ## fontWeight
 

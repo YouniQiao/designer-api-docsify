@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@ohos.enterprise.securityManager';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## getAppClipboardPolicy
@@ -27,7 +27,7 @@ Obtains the device clipboard policy.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDMapplications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policiesthat actually take effect on the device are returned.<br>**Since:** 26.0.0 |
-| tokenId | number | No | Application token ID, which can be obtained using[bundleManager.getApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md#applicationinfo). |
+| tokenId | number | No | Application token ID, which can be obtained using[bundleManager.getApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md). |
 
 **Return value:**
 

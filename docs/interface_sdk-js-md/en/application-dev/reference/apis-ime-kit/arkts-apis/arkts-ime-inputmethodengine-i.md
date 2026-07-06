@@ -6,14 +6,14 @@ In the following API examples, you must first use [getInputMethodEngine](arkts-i
 
 **Deprecated since:** 23
 
-**Substitutes:** [InputMethodAbility](arkts-ime-inputmethodability-i.md#inputmethodability)
+**Substitutes:** [InputMethodAbility](arkts-ime-inputmethodability-i.md)
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@ohos.inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## off('inputStart')

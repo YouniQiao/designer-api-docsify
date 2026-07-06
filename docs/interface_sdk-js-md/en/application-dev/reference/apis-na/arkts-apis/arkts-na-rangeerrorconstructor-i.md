@@ -1,6 +1,6 @@
 # RangeErrorConstructor
 
-**Inheritance/Implementation:** RangeErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md#errorconstructor)
+**Inheritance/Implementation:** RangeErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md)
 
 ## constructor
 

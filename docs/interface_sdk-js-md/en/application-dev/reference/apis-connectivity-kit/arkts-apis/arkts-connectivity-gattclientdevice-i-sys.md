@@ -9,7 +9,7 @@ Manages GATT client. Before calling an Gatt client method, you must use {@link c
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@ohos.bluetooth.ble';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## writeCharacteristicValueWithContext

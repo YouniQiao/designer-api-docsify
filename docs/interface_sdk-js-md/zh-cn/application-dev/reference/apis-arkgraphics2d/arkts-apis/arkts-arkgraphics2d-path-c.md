@@ -358,7 +358,7 @@ constructor(path: Path)
 contains(x: number, y: number): boolean
 ```
 
-判断指定坐标点是否被路径包含，判定是否被路径包含的规则参考[PathFillType](arkts-arkgraphics2d-pathfilltype-e.md#pathfilltype)。
+判断指定坐标点是否被路径包含，判定是否被路径包含的规则参考[PathFillType](arkts-arkgraphics2d-pathfilltype-e.md)。
 
 **起始版本：** 12
 

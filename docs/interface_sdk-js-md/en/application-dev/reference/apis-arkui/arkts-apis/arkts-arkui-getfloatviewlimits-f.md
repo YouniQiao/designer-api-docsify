@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from '@ohos.window.floatView';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## getFloatViewLimits

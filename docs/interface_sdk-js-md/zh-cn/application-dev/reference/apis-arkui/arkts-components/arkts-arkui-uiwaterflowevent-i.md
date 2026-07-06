@@ -1,8 +1,8 @@
 # UIWaterFlowEvent
 
-frameNode中 [getEvent('WaterFlow')](./../../../arkui/FrameNode:typeNode.getEvent(node: FrameNode, nodeType: 'WaterFlow'))方法 的返回值，可用于给WaterFlow节点设置滚动事件。 UIWaterFlowEvent继承于[UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md#uiscrollablecommonevent)。
+frameNode中 [getEvent('WaterFlow')](./../../../arkui/FrameNode:typeNode.getEvent(node: FrameNode, nodeType: 'WaterFlow'))方法 的返回值，可用于给WaterFlow节点设置滚动事件。 UIWaterFlowEvent继承于[UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)。
 
-**继承/实现关系：** UIWaterFlowEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md#uiscrollablecommonevent)
+**继承/实现关系：** UIWaterFlowEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
 
 **起始版本：** 19
 

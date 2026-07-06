@@ -9,7 +9,7 @@ Defines the Web's HTTPCookie. <p><strong>API Note</strong>:<br> The maximum leng
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## domain

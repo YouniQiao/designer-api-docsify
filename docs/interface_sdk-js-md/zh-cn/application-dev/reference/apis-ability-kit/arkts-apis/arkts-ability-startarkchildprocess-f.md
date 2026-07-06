@@ -36,7 +36,7 @@ function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
-| [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) | The number of child processes exceeds the upper limit.<br>**适用版本：** 13 |
+| [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) | The number of child processes exceeds the upper limit.<br>**适用版本：** 13+ |
 
 **示例：**
 

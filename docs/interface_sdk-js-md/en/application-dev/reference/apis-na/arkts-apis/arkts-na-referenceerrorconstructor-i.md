@@ -1,6 +1,6 @@
 # ReferenceErrorConstructor
 
-**Inheritance/Implementation:** ReferenceErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md#errorconstructor)
+**Inheritance/Implementation:** ReferenceErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md)
 
 ## constructor
 

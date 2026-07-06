@@ -45,7 +45,7 @@
 | [ErrorInfo](arkts-mdm-errorinfo-i.md) | 系统更新错误信息。 |
 | [KeyEvent](arkts-mdm-keyevent-i.md) | 按键事件。 [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterpriseadminextensionability-c.md#onkeyevent-1) 按键事件回调触发时，传递当前按键事件信息。 |
 | [KeyEventPolicy](arkts-mdm-keyeventpolicy-i.md) | 按键事件处理策略。按键事件发生时，仅拦截响应已下发按键事件处理策略的按键。对于未下发按键事件处理策略的按键事件，系统执行原先的响应逻辑。 |
-| [KeyItem](arkts-mdm-keyitem-i.md) | 其他按键信息。当前[KeyCode](arkts-mdm-keycode-e.md#keycode)事件发生时，其他已被按下的按键信息。 |
+| [KeyItem](arkts-mdm-keyitem-i.md) | 其他按键信息。当前[KeyCode](arkts-mdm-keycode-e.md)事件发生时，其他已被按下的按键信息。 |
 | [NotifyDescription](arkts-mdm-notifydescription-i.md) | 企业自定义更新通知说明。 |
 | [OtaUpdatePolicy](arkts-mdm-otaupdatepolicy-i.md) | 升级策略。 |
 | [Package](arkts-mdm-package-i.md) | 系统更新包详情。 |

@@ -2,7 +2,7 @@
 
 Manager hid host profile.
 
-**Inheritance/Implementation:** HidHostProfile extends [BaseProfile](arkts-connectivity-baseprofile-i.md#baseprofile)
+**Inheritance/Implementation:** HidHostProfile extends [BaseProfile](arkts-connectivity-baseprofile-i.md)
 
 **Since:** 9
 
@@ -15,7 +15,7 @@ Manager hid host profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@ohos.bluetoothManager';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## off('connectionStateChange')

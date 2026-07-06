@@ -9,7 +9,7 @@ Provides manages model function. Including get inputs, predict ,resize.
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@ohos.ai.mindSporeLite';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## exportModel

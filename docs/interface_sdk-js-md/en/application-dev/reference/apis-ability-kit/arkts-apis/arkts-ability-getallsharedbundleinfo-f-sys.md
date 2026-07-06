@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllSharedBundleInfo
@@ -26,7 +26,7 @@ Obtains all the shared bundle information. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;SharedBundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used toreturn the result. If the operation is successful, **err** is **null** and **data** is all the shared bundleinformation obtained. |
+| callback | AsyncCallback&lt;Array&lt;SharedBundleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used toreturn the result. If the operation is successful, **err** is **null** and **data** is all the shared bundleinformation obtained. |
 
 **Error codes:**
 

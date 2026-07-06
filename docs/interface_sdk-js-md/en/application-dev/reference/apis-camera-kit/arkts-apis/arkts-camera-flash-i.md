@@ -1,8 +1,8 @@
 # Flash
 
-Flash extends [FlashQuery](arkts-camera-flashquery-i.md#flashquery) Provides APIs related to the flash.
+Flash extends [FlashQuery](arkts-camera-flashquery-i.md) Provides APIs related to the flash.
 
-**Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-flashquery-i.md#flashquery)
+**Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-flashquery-i.md)
 
 **Since:** 11
 
@@ -11,7 +11,7 @@ Flash extends [FlashQuery](arkts-camera-flashquery-i.md#flashquery) Provides API
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getFlashMode
@@ -32,7 +32,7 @@ Obtains the flash mode in use.
 
 | Type | Description |
 | --- | --- |
-| FlashMode | Flash mode obtained. If the operation fails, undefined is returned and an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is thrown. |
+| FlashMode | Flash mode obtained. If the operation fails, undefined is returned and an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 

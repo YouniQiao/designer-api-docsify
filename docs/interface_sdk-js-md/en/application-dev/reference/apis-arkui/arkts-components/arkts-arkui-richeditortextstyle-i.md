@@ -228,7 +228,7 @@ The stroke join style of the text.
 strokeWidth?: LengthMetrics | number
 ```
 
-Text stroke width. If the unit value of LengthMetrics is [PERCENT](../arkts-apis/arkts-arkui-lengthunit-e.md#lengthunit), the current setting does not take effect and is processed as 0. If the value is less than 0, the value is an entity word. If the value is greater than 0, the value is an outline word. If the value is equal to 0, there is no stroke effect. The default value is 0vp. Unit: LengthMetrics is followed by LengthMetrics when the type is LengthMetrics, and vp when the type is number. Value range: (-∞, +∞)
+Text stroke width. If the unit value of LengthMetrics is [PERCENT](../arkts-apis/arkts-arkui-lengthunit-e.md), the current setting does not take effect and is processed as 0. If the value is less than 0, the value is an entity word. If the value is greater than 0, the value is an outline word. If the value is equal to 0, there is no stroke effect. The default value is 0vp. Unit: LengthMetrics is followed by LengthMetrics when the type is LengthMetrics, and vp when the type is number. Value range: (-∞, +∞)
 
 **Type:** LengthMetrics | number
 

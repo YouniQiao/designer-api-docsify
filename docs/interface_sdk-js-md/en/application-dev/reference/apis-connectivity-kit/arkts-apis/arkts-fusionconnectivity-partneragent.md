@@ -9,7 +9,7 @@ Provides APIs for managing partner agents.
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from '@ohos.FusionConnectivity.partnerAgent';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

@@ -11,7 +11,7 @@ Callback provided when the [enableAbilityWithCallback](arkts-accessibility-enabl
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@ohos.accessibility.config';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## onDisconnect

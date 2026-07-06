@@ -9,7 +9,7 @@ Defines the predicates for an RDB store. This class determines whether the condi
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@ohos.data.relationalStore';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## and

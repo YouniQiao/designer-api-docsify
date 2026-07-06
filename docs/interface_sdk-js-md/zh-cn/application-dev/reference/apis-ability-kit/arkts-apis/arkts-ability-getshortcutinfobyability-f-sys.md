@@ -32,7 +32,7 @@ function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilit
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array形式返回指定用户下指定UIAbility的[ShortcutInfo](arkts-ability-shortcutinfo-i.md#shortcutinfo)。 |
+| Array&lt;ShortcutInfo&gt; | Array形式返回指定用户下指定UIAbility的[ShortcutInfo](arkts-ability-shortcutinfo-i.md)。 |
 
 **错误码：**
 

@@ -9,7 +9,7 @@ Provides USB Key certificate credential attribute information.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## certPurpose

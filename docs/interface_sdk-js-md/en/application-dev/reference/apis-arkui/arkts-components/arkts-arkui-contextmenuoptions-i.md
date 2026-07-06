@@ -724,7 +724,7 @@ Sets the space between the menu and target. When both targetSpace and offset are
 transition?: TransitionEffect
 ```
 
-Transition effect for the entrance and exit of the menu. **NOTE** During the exit animation of the menu, if there is a switch between landscape and portrait modes, the menu will make way. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the pop-up process, but not during the execution of the exit animation. For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect). The menu animation uses a spring curve. Due to the rebound and oscillation of the spring curve during the exit of the animation, there is a prolonged tail effect, which prevents the menu from responding to other events after it disappears.
+Transition effect for the entrance and exit of the menu. **NOTE** During the exit animation of the menu, if there is a switch between landscape and portrait modes, the menu will make way. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the pop-up process, but not during the execution of the exit animation. For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md). The menu animation uses a spring curve. Due to the rebound and oscillation of the spring curve during the exit of the animation, there is a prolonged tail effect, which prevents the menu from responding to other events after it disappears.
 
 **Type:** TransitionEffect
 

@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { OpenLinkOptions } from '@ohos.app.ability.OpenLinkOptions';
+import { OpenLinkOptions } from '@kit.AbilityKit';
 ```
 
 ## appLinkingOnly
@@ -74,7 +74,7 @@ Whether to display a "No app available" dialog box when a suitable application i
 parameters?: Record<string, Object>
 ```
 
-List of parameters in Want. Note: For details about the usage rules, see **parameters** in [want](arkts-ability-want-c.md#want).
+List of parameters in Want. Note: For details about the usage rules, see **parameters** in [want](arkts-ability-want-c.md).
 
 **Type:** Record<string, Object>
 

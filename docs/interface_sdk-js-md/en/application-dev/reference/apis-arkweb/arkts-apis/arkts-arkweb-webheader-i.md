@@ -9,7 +9,7 @@ Defines the Web's request/response header.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## headerKey

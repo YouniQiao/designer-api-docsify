@@ -36,7 +36,7 @@ constructor(options?: GestureGroupGestureHandlerOptions)
 onCancel(event: Callback<void>): GestureGroupHandler
 ```
 
-设置手势组处理器取消回调。顺序组合手势（[GestureMode](arkts-arkui-gesturemode-e.md#gesturemode).Sequence）取消后触发回调。
+设置手势组处理器取消回调。顺序组合手势（[GestureMode](arkts-arkui-gesturemode-e.md).Sequence）取消后触发回调。
 
 **起始版本：** 12
 

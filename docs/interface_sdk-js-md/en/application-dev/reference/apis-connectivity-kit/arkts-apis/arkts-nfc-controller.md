@@ -9,7 +9,7 @@ Provides methods to operate or manage NFC.
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from '@ohos.nfc.controller';
+import { nfcController } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

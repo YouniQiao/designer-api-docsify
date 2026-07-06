@@ -9,7 +9,7 @@ Defines the moving photo view interface.
 ## Modules to Import
 
 ```TypeScript
-import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from '@ohos.multimedia.movingphotoview';
+import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor

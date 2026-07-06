@@ -1,6 +1,6 @@
 # ConnectOptionsCollections
 
-Defines the parameter type for the [globalConnect](PersistenceV2.globalConnect<T extends CollectionType<S>, S extends object>( type: ConnectOptionsCollections<T, S> | ConnectOptions<T> )) API. **ConnectOptionsCollections** is inherited from [ConnectOptions\<T\>](arkts-arkui-connectoptions-c.md#connectoptions). You can use the **ConnectOptionsCollections** input parameter to persist container data (such as **Array\<S>**). The following shows the examples of **StorageDefaultCreator\<T>** and **StorageDefaultCreator\<S>**:
+Defines the parameter type for the [globalConnect](PersistenceV2.globalConnect<T extends CollectionType<S>, S extends object>( type: ConnectOptionsCollections<T, S> | ConnectOptions<T> )) API. **ConnectOptionsCollections** is inherited from [ConnectOptions\<T\>](arkts-arkui-connectoptions-c.md). You can use the **ConnectOptionsCollections** input parameter to persist container data (such as **Array\<S>**). The following shows the examples of **StorageDefaultCreator\<T>** and **StorageDefaultCreator\<S>**:
 
 **Inheritance/Implementation:** ConnectOptionsCollections extends [ConnectOptions<T>](ConnectOptions<T>)
 
@@ -11,7 +11,7 @@ Defines the parameter type for the [globalConnect](PersistenceV2.globalConnect<T
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@ohos.arkui.StateManagement';
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## defaultCreator

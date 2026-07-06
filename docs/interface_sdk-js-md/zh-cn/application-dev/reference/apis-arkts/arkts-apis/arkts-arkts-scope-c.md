@@ -6,7 +6,7 @@ Scope 接口用于描述字段的有效范围。
 
 **废弃版本：** 9
 
-**替代接口：** [ScopeHelper](arkts-arkts-scopehelper-c.md#scopehelper)
+**替代接口：** [ScopeHelper](arkts-arkts-scopehelper-c.md)
 
 **系统能力：** SystemCapability.Utils.Lang
 

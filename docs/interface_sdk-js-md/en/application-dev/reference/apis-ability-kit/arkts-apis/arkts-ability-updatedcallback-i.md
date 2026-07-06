@@ -9,7 +9,7 @@ System configuration updated callback.
 ## Modules to Import
 
 ```TypeScript
-import { systemConfiguration } from '@ohos.app.ability.systemConfiguration';
+import { systemConfiguration } from '@kit.AbilityKit';
 ```
 
 ## onColorModeUpdated

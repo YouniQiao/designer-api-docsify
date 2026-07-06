@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@system.request';
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -18,12 +18,12 @@ import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, 
 
 | Name | Description |
 | --- | --- |
-| [DownloadRequestOptions](arkts-basicservices-downloadrequestoptions-i.md) | &gt; **NOTE** &gt; &gt; This API has been supported since API version 3 and deprecated since API version 9. You are advised to use &gt; [UploadConfig](arkts-basicservices-config-i.md#config) instead. |
+| [DownloadRequestOptions](arkts-basicservices-downloadrequestoptions-i.md) | &gt; **NOTE** &gt; &gt; This API has been supported since API version 3 and deprecated since API version 9. You are advised to use &gt; [UploadConfig](arkts-basicservices-config-i.md) instead. |
 | [DownloadResponse](arkts-basicservices-downloadresponse-i.md) |  |
 | [OnDownloadCompleteOptions](arkts-basicservices-ondownloadcompleteoptions-i.md) |  |
 | [OnDownloadCompleteResponse](arkts-basicservices-ondownloadcompleteresponse-i.md) |  |
 | [RequestData](arkts-basicservices-requestdata-i.md) |  |
 | [RequestFile](arkts-basicservices-requestfile-i.md) |  |
-| [UploadRequestOptions](arkts-basicservices-uploadrequestoptions-i.md) | &gt; **NOTE** &gt; &gt; This API has been supported since API version 3 and deprecated since API version 9. You are advised to use &gt; [UploadConfig](arkts-basicservices-config-i.md#config) instead. |
+| [UploadRequestOptions](arkts-basicservices-uploadrequestoptions-i.md) | &gt; **NOTE** &gt; &gt; This API has been supported since API version 3 and deprecated since API version 9. You are advised to use &gt; [UploadConfig](arkts-basicservices-config-i.md) instead. |
 | [UploadResponse](arkts-basicservices-uploadresponse-i.md) |  |
 

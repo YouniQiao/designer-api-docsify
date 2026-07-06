@@ -9,7 +9,7 @@ This parameter specifies the selection result of a filtering dimension. The inde
 ## Modules to Import
 
 ```TypeScript
-import { FilterType, Filter, FilterParams, FilterResult } from '@ohos.arkui.advanced.Filter';
+import { FilterType, Filter, FilterParams, FilterResult } from '@kit.ArkUI';
 ```
 
 ## index

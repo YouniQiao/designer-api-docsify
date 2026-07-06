@@ -12,7 +12,7 @@
 constructor()
 ```
 
-构造一个新的采样选项对象，[FilterMode](arkts-arkgraphics2d-filtermode-e.md#filtermode)的默认值为FILTER_MODE_NEAREST。
+构造一个新的采样选项对象，[FilterMode](arkts-arkgraphics2d-filtermode-e.md)的默认值为FILTER_MODE_NEAREST。
 
 **起始版本：** 12
 

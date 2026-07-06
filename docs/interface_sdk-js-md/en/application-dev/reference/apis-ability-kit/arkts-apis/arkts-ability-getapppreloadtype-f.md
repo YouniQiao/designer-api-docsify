@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from '@ohos.app.ability.application';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## getAppPreloadType

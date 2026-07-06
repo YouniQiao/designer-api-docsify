@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { List } from '@ohos.util.List';
+import { List } from '@kit.ArkTS';
 ```
 
 ## Summary

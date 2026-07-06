@@ -9,7 +9,7 @@ Provides the configuration information of an upload or download task.
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@ohos.request';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## action
@@ -50,7 +50,7 @@ File start point of the task, in bytes. It is usually used for resumable transfe
 data?: string | Array<FormItem>
 ```
 
-- For the download task, the value is a string, typically in JSON format (an object will be converted to a JSON string); the default value is null. - For the upload task, the value is Array< [FormItem](arkts-basicservices-formitem-i.md#formitem)>. Since API version 15, a maximum of 100 files can be uploaded in a single task. This parameter is left empty by default.
+- For the download task, the value is a string, typically in JSON format (an object will be converted to a JSON string); the default value is null. - For the upload task, the value is Array< [FormItem](arkts-basicservices-formitem-i.md)>. Since API version 15, a maximum of 100 files can be uploaded in a single task. This parameter is left empty by default.
 
 **Type:** string | Array<FormItem>
 
@@ -398,7 +398,7 @@ Path for storing downloaded files. The options are as follows: - Relative path, 
 timeout?: Timeout
 ```
 
-Custom timeout interval. The default connection timeout interval is 60 seconds, and the default total timeout interval is 604800 seconds (one week). If retry is set to **true**, the [timeout](arkts-basicservices-timeout-i.md#timeout) event triggers immediate retry, which will obscure the timeout event itself. As a result, the internal [timeout](arkts-basicservices-timeout-i.md#timeout) condition has been triggered but the [timeout](arkts-basicservices-timeout-i.md#timeout) event is not observable. Set **retry** to **false** to explicitly observe the [timeout](arkts-basicservices-timeout-i.md#timeout) event.
+Custom timeout interval. The default connection timeout interval is 60 seconds, and the default total timeout interval is 604800 seconds (one week). If retry is set to **true**, the [timeout](arkts-basicservices-timeout-i.md) event triggers immediate retry, which will obscure the timeout event itself. As a result, the internal [timeout](arkts-basicservices-timeout-i.md) condition has been triggered but the [timeout](arkts-basicservices-timeout-i.md) event is not observable. Set **retry** to **false** to explicitly observe the [timeout](arkts-basicservices-timeout-i.md) event.
 
 **Type:** Timeout
 

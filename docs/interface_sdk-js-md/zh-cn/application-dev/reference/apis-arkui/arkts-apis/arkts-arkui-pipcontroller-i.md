@@ -118,7 +118,7 @@ isPiPActive(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。画中画生命周期不为[STARTED](arkts-arkui-pipstate-e.md#pipstate)时调用本接口总是返回false。 |
+| Promise&lt;boolean&gt; | Promise对象，返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。画中画生命周期不为[STARTED](arkts-arkui-pipstate-e.md)时调用本接口总是返回false。 |
 
 **错误码：**
 
@@ -336,7 +336,7 @@ on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 事件类型，固定为'stateChange'，即画中画生命周期状态变化事件。 |
-| callback | (state: PiPState, reason: string) =&gt; void | 是 | 回调生命周期状态变化事件以及原因。<br/>state：[PiPState](arkts-arkui-pipstate-e.md#pipstate)，表示当前画中画生命周期状态。<br/>reason：string，表示当前生命周期的切换原因。<br/>在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，reason始终为“0”，无需关注。<br/>从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，reason为当前生命周期的切换原因：<br/>"requestStart"：应用调用startPip接口；<br/>"autoStart"：应用退后台触发画中画自动启动；<br/>"requestDelete"：应用调用stopPip接口；<br/>"panelActionDelete"：用户点击画中画窗口的关闭按钮；<br/>"dragDelete"：用户将画中画窗口拖入垃圾桶；<br/>"panelActionRestore"：用户点击画中画窗口的还原按钮（无还原按钮时可点击画中画窗口）触发还原；<br/>"other"：其他原因，如新的画中画窗口拉起导致当前窗口被关闭、应用主窗口被关闭等场景。 |
+| callback | (state: PiPState, reason: string) =&gt; void | 是 | 回调生命周期状态变化事件以及原因。<br/>state：[PiPState](arkts-arkui-pipstate-e.md)，表示当前画中画生命周期状态。<br/>reason：string，表示当前生命周期的切换原因。<br/>在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，reason始终为“0”，无需关注。<br/>从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，reason为当前生命周期的切换原因：<br/>"requestStart"：应用调用startPip接口；<br/>"autoStart"：应用退后台触发画中画自动启动；<br/>"requestDelete"：应用调用stopPip接口；<br/>"panelActionDelete"：用户点击画中画窗口的关闭按钮；<br/>"dragDelete"：用户将画中画窗口拖入垃圾桶；<br/>"panelActionRestore"：用户点击画中画窗口的还原按钮（无还原按钮时可点击画中画窗口）触发还原；<br/>"other"：其他原因，如新的画中画窗口拉起导致当前窗口被关闭、应用主窗口被关闭等场景。 |
 
 **示例：**
 
@@ -639,7 +639,7 @@ startPiP(): Promise<void>
 | [1300013](../errorcode-window.md#1300013-创建画中画窗口失败) | Failed to create the PiP window. |
 | [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
 | [1300015](../errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
-| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause:App has already started float view.<br>**适用版本：** 26.0.0 |
+| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause:App has already started float view.<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 

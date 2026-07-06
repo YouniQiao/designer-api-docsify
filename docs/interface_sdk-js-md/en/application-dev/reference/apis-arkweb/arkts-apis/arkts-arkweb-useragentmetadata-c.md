@@ -9,7 +9,7 @@ Holds User-Agent metadata information and uses to generate User-Agent client hin
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArchitecture

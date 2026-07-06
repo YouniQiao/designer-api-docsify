@@ -1,8 +1,8 @@
 # SlowMotionVideoSession (System API)
 
-SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect Implements a slow-motion video session, which sets the parameters of the slow-motion video mode and saves all [CameraInput](arkts-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md#session). > **NOTE** > > In slow-motion video mode, only preview streams and video streams can be added.
+SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect Implements a slow-motion video session, which sets the parameters of the slow-motion video mode and saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md). > **NOTE** > > In slow-motion video mode, only preview streams and video streams can be added.
 
-**Inheritance/Implementation:** SlowMotionVideoSession extends [Session](arkts-camera-session-i.md#session), [Flash](arkts-camera-flash-i.md#flash), [AutoExposure](arkts-camera-autoexposure-i.md#autoexposure), [Focus](arkts-camera-focus-i.md#focus), [Zoom](arkts-camera-zoom-i.md#zoom), [ColorEffect](arkts-camera-coloreffect-i-sys.md#coloreffect)
+**Inheritance/Implementation:** SlowMotionVideoSession extends [Session](arkts-camera-session-i.md), [Flash](arkts-camera-flash-i.md), [AutoExposure](arkts-camera-autoexposure-i.md), [Focus](arkts-camera-focus-i.md), [Zoom](arkts-camera-zoom-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md)
 
 **Since:** 12
 
@@ -13,7 +13,7 @@ SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorE
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## isSlowMotionDetectionSupported
@@ -34,7 +34,7 @@ Checks whether the device supports slow-motion detection. > **NOTE** > > This AP
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of slow-motion detection. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| boolean | Check result for the support of slow-motion detection. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -189,7 +189,7 @@ Unsubscribes from slow-motion status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'slowMotionStatus' | Yes | Event type. The value is fixed at **'slowMotionStatus'**. The event can belistened for when a session is created. |
-| callback | AsyncCallback&lt;SlowMotionStatus&gt; | No | Callback used to return the result. This parameter isoptional. If this parameter is specified, the subscription to the specified event **on('slowMotionStatus')**with the specified callback is canceled. (The callback object cannot be an anonymous function.) If theoperation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| callback | AsyncCallback&lt;SlowMotionStatus&gt; | No | Callback used to return the result. This parameter isoptional. If this parameter is specified, the subscription to the specified event **on('slowMotionStatus')**with the specified callback is canceled. (The callback object cannot be an anonymous function.) If theoperation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -225,7 +225,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. This event is triggered and the error message is returned when an error occurs during thecalling of a session-related API such as[beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and[addInput](arkts-camera-session-i.md#addinput-1). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

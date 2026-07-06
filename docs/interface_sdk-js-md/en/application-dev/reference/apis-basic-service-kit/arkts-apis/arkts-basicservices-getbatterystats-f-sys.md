@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { batteryStats } from '@ohos.batteryStatistics';
+import { batteryStats } from '@kit.BasicServicesKit';
 ```
 
 ## getBatteryStats
@@ -65,7 +65,7 @@ Obtains the power consumption information list. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;BatteryStatsInfo&gt;&gt; | Yes | Callback used to return the result. If the operationis successful, **err** is undefined and **data** is the obtained Array&lt;[BatteryStatsInfo](arkts-basicservices-batterystatsinfo-i-sys.md#batterystatsinfo)&gt;. Otherwise, **err** is an error object.**AsyncCallback** has encapsulated an API of the **BatteryStatsInfo** class. |
+| callback | AsyncCallback&lt;Array&lt;BatteryStatsInfo&gt;&gt; | Yes | Callback used to return the result. If the operationis successful, **err** is undefined and **data** is the obtained Array&lt;[BatteryStatsInfo](arkts-basicservices-batterystatsinfo-i-sys.md)&gt;. Otherwise, **err** is an error object.**AsyncCallback** has encapsulated an API of the **BatteryStatsInfo** class. |
 
 **Error codes:**
 

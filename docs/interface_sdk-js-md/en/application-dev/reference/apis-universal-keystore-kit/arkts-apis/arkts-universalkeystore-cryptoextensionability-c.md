@@ -9,7 +9,7 @@ Class to be override for external crypto extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from '@ohos.security.CryptoExtensionAbility';
+import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
 ```
 
 ## onAuthUkeyPin

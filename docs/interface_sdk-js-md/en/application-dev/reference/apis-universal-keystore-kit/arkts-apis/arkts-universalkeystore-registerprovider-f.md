@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from '@ohos.security.huksExternalCrypto';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## registerProvider
@@ -25,7 +25,7 @@ Registers a specified external Provider. This API uses a promise to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | providerName | string | Yes | Provider name, which contains a maximum of 128 characters. It is recommended thatthe value contain the vendor information, be globally unique, and not contain sensitive data such as personalcontact information.<br>A maximum of 10 providers can be registered. |
-| params | Array&lt;HuksExternalCryptoParam&gt; | Yes | Parameters to be passed during the operation. The mandatory tagis [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcryptotagtype-e.md#huksexternalcryptotagtype), indicating theability name. Set this parameter based on the actual service requirements. |
+| params | Array&lt;HuksExternalCryptoParam&gt; | Yes | Parameters to be passed during the operation. The mandatory tagis [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcryptotagtype-e.md), indicating theability name. Set this parameter based on the actual service requirements. |
 
 **Return value:**
 

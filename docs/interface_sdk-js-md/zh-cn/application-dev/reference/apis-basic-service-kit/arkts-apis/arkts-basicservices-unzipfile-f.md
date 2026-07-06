@@ -20,7 +20,7 @@ function unzipFile(inFile: string, outFile: string, options: Options): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inFile | string | 是 | 指定的待解压缩文件的文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context)，[Stage模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md#context)。如果待解压的.zip文件中包含中文的文件名或目录名，需使用UTF8进行编码，避免解压时文件名或目录名出现中文乱码。 |
+| inFile | string | 是 | 指定的待解压缩文件的文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)，[Stage模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。如果待解压的.zip文件中包含中文的文件名或目录名，需使用UTF8进行编码，避免解压时文件名或目录名出现中文乱码。 |
 | outFile | string | 是 | 指定的解压文件路径。 |
 | options | Options | 是 | 解压的可选参数。 |
 

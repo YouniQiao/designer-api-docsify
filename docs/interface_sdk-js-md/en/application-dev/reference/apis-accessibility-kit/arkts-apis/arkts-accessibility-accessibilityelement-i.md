@@ -351,7 +351,7 @@ Performs an action based on the specified action name. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Action name. For details, see[Action](arkts-accessibility-action-t.md#action). |
+| actionName | string | Yes | Action name. For details, see[Action](arkts-accessibility-action-t.md). |
 | parameters | object | Yes | Parameters required for performing the target action. Empty by default. |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -380,7 +380,7 @@ Performs an action based on the specified action name. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Action name. For details, see[Action](arkts-accessibility-action-t.md#action). |
+| actionName | string | Yes | Action name. For details, see[Action](arkts-accessibility-action-t.md). |
 | parameters | object | No | Parameters required for performing the target action. Empty by default. |
 
 **Return value:**
@@ -414,7 +414,7 @@ Performs an action based on the specified action name. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Action name. For details, see[Action](arkts-accessibility-action-t.md#action). |
+| actionName | string | Yes | Action name. For details, see[Action](arkts-accessibility-action-t.md). |
 | callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**

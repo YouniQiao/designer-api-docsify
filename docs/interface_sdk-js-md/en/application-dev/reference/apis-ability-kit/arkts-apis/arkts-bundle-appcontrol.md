@@ -11,7 +11,7 @@ The module provides APIs for setting, obtaining, and deleting the disposed statu
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@ohos.bundle.appControl';
+import { appControl } from '@kit.AbilityKit';
 ```
 
 ## Summary

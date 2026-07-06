@@ -9,7 +9,7 @@ Program access control management class, providing capabilities such as permissi
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from '@ohos.abilityAccessCtrl';
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 ```
 
 ## checkAccessToken
@@ -293,7 +293,7 @@ try {
 openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>
 ```
 
-Used by [UIAbility](arkts-ability-uiability-c.md#uiability)/ [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability) to bring up the permission settings page. After the call is successful, the permission settings page will be opened. After the user operates on the page, the user's selection result on the settings page will be returned. This API uses a promise to return the result. Applicable to scenarios where [manual_settings](../../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings-manual-authorization) type permissions cannot be applied for through the normal authorization dialog box and the user must be guided to enter system settings to complete authorization. manual_settings type permissions are permissions that can only be manually enabled by the user in system settings and cannot be directly applied for through the normal authorization dialog box.
+Used by [UIAbility](arkts-ability-uiability-c.md)/ [UIExtensionAbility](arkts-ability-uiextensionability-c.md) to bring up the permission settings page. After the call is successful, the permission settings page will be opened. After the user operates on the page, the user's selection result on the settings page will be returned. This API uses a promise to return the result. Applicable to scenarios where [manual_settings](../../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings-manual-authorization) type permissions cannot be applied for through the normal authorization dialog box and the user must be guided to enter system settings to complete authorization. manual_settings type permissions are permissions that can only be manually enabled by the user in system settings and cannot be directly applied for through the normal authorization dialog box.
 
 **Since:** 22
 
@@ -387,7 +387,7 @@ Used by UIAbility/UIExtensionAbility to bring up the global switch settings dial
 requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>
 ```
 
-Used by [UIAbility](arkts-ability-uiability-c.md#uiability)/ [UIExtensionAbility](arkts-ability-uiextensionability-c.md#uiextensionability) to bring up the permission settings dialog box for a second time, and returns an array of authorization statuses. This API uses a promise to return the result. Applicable to scenarios where the user has already denied the permission grant in the first dialog box and needs to continue applying for the permission through the settings page. Before calling this API, the app needs to call [requestPermissionsFromUser](arkts-ability-atmanager-i.md#requestpermissionsfromuser-1) first. If the user has already authorized in the first dialog box, calling this API will not bring up the authorization dialog box. <!--RP4--> ![requestPermissionOnSetting](../../../../reference/apis-ability-kit/figures/requestPermissionOnSetting.png) <!--RP4End-->
+Used by [UIAbility](arkts-ability-uiability-c.md)/ [UIExtensionAbility](arkts-ability-uiextensionability-c.md) to bring up the permission settings dialog box for a second time, and returns an array of authorization statuses. This API uses a promise to return the result. Applicable to scenarios where the user has already denied the permission grant in the first dialog box and needs to continue applying for the permission through the settings page. Before calling this API, the app needs to call [requestPermissionsFromUser](arkts-ability-atmanager-i.md#requestpermissionsfromuser-1) first. If the user has already authorized in the first dialog box, calling this API will not bring up the authorization dialog box. <!--RP4--> ![requestPermissionOnSetting](../../../../reference/apis-ability-kit/figures/requestPermissionOnSetting.png) <!--RP4End-->
 
 **Since:** 12
 
@@ -419,7 +419,7 @@ Used by [UIAbility](arkts-ability-uiability-c.md#uiability)/ [UIExtensionAbility
 | [12100010](../errorcode-access-token.md#12100010-pending-request) | The request already exists.<br>**Applicable version:** 12 - 20 |
 | [12100011](../errorcode-access-token.md#12100011-all-requested-permissions-granted) | All permissions in the permission list have been granted. |
 | [12100012](../errorcode-access-token.md#12100012-not-all-permissions-are-rejected-by-the-user) | The permission list contains the permission that has not beenrevoked by the user. |
-| [12100014](../errorcode-access-token.md#12100014-unexpected-permission) | Unexpected permission. You cannot request this type of permissionfrom users via a pop-up window.<br>**Applicable version:** 21 |
+| [12100014](../errorcode-access-token.md#12100014-unexpected-permission) | Unexpected permission. You cannot request this type of permissionfrom users via a pop-up window.<br>**Applicable version:** 21 and later |
 
 ## requestPermissionsFromUser
 
@@ -427,7 +427,7 @@ Used by [UIAbility](arkts-ability-uiability-c.md#uiability)/ [UIExtensionAbility
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void
 ```
 
-Used by <!--RP1-->[UIAbility](arkts-ability-uiability-c.md#uiability)<!--RP1End--> to bring up a dialog box to request [user authorization](../../../../security/AccessToken/request-user-authorization.md), and returns the authorization result of the permissions requested this time. This API uses an asynchronous callback to return the result. Applicable to scenarios where an app proactively applies for [user_grant](../../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant-user-authorization) permissions from the user before accessing protected resources for the first time. If the user denies authorization, the authorization dialog box cannot be brought up again through this API. The developer can guide the user to go to the system settings interface for manual authorization, or call [requestPermissionOnSetting](arkts-ability-atmanager-i.md#requestpermissiononsetting-1) to bring up the permission settings dialog box to guide the user to complete authorization. <!--RP3--> ![requestPermissionsFromUser](../../../../reference/apis-ability-kit/figures/requestPermissionsFromUser.png) <!--RP3End-->
+Used by <!--RP1-->[UIAbility](arkts-ability-uiability-c.md)<!--RP1End--> to bring up a dialog box to request [user authorization](../../../../security/AccessToken/request-user-authorization.md), and returns the authorization result of the permissions requested this time. This API uses an asynchronous callback to return the result. Applicable to scenarios where an app proactively applies for [user_grant](../../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant-user-authorization) permissions from the user before accessing protected resources for the first time. If the user denies authorization, the authorization dialog box cannot be brought up again through this API. The developer can guide the user to go to the system settings interface for manual authorization, or call [requestPermissionOnSetting](arkts-ability-atmanager-i.md#requestpermissiononsetting-1) to bring up the permission settings dialog box to guide the user to complete authorization. <!--RP3--> ![requestPermissionsFromUser](../../../../reference/apis-ability-kit/figures/requestPermissionsFromUser.png) <!--RP3End-->
 
 **Since:** 9
 
@@ -486,7 +486,7 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: 
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>
 ```
 
-Used by <!--RP1-->[UIAbility](arkts-ability-uiability-c.md#uiability)<!--RP1End--> to bring up a dialog box to request [user authorization](../../../../security/AccessToken/request-user-authorization.md), and returns the authorization result of the permissions requested this time. This API uses a promise to return the result. Applicable to scenarios where an app proactively applies for user_grant permissions from the user before accessing protected resources for the first time. If the user denies authorization, the authorization dialog box cannot be brought up again through this API. The developer can guide the user to go to the system settings interface for manual authorization, or call [requestPermissionOnSetting](arkts-ability-atmanager-i.md#requestpermissiononsetting-1) to bring up the permission settings dialog box to guide the user to complete authorization.
+Used by <!--RP1-->[UIAbility](arkts-ability-uiability-c.md)<!--RP1End--> to bring up a dialog box to request [user authorization](../../../../security/AccessToken/request-user-authorization.md), and returns the authorization result of the permissions requested this time. This API uses a promise to return the result. Applicable to scenarios where an app proactively applies for user_grant permissions from the user before accessing protected resources for the first time. If the user denies authorization, the authorization dialog box cannot be brought up again through this API. The developer can guide the user to go to the system settings interface for manual authorization, or call [requestPermissionOnSetting](arkts-ability-atmanager-i.md#requestpermissiononsetting-1) to bring up the permission settings dialog box to guide the user to complete authorization.
 
 **Since:** 9
 
@@ -515,7 +515,7 @@ Used by <!--RP1-->[UIAbility](arkts-ability-uiability-c.md#uiability)<!--RP1End-
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are leftunspecified; 2. Incorrect parameter types. |
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | (Deprecated in 12) Invalid parameter. The context is invalid when itdoes not belong to the application itself. |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. An error occurs when creating the pop-up window orobtaining the user operation result.<br>**Applicable version:** 11 |
+| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. An error occurs when creating the pop-up window orobtaining the user operation result.<br>**Applicable version:** 11 and later |
 
 **Example**
 

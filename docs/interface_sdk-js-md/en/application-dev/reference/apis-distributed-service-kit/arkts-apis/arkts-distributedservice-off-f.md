@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { proxyChannelManager } from '@ohos.distributedsched.proxyChannelManager';
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## off('receiveData')

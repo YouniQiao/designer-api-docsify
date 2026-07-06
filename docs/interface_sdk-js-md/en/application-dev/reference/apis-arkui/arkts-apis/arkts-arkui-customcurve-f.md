@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@ohos.curves';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## customCurve

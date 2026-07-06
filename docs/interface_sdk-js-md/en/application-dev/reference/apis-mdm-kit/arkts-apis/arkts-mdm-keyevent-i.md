@@ -9,7 +9,7 @@ Enumerates key events. When the [EnterpriseAdminExtensionAbility.onKeyEvent](ark
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@ohos.enterprise.systemManager';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## actionTime

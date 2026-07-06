@@ -20,7 +20,7 @@ function getRecoverableApplicationInfo(callback: AsyncCallback<Array<Recoverable
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | 是 | * [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为获取到的所有可恢复的预置应用信息。 |
+| callback | AsyncCallback&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | 是 | * [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的所有可恢复的预置应用信息。 |
 
 **错误码：**
 

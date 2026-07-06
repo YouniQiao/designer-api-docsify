@@ -2,7 +2,7 @@
 
 Provides methods for accessing NDEF tag.
 
-**Inheritance/Implementation:** NdefTag extends [TagSession](arkts-connectivity-tagsession-i.md#tagsession)
+**Inheritance/Implementation:** NdefTag extends [TagSession](arkts-connectivity-tagsession-i.md)
 
 **Since:** 12
 

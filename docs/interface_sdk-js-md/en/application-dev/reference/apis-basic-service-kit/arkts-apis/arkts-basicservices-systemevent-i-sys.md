@@ -11,7 +11,7 @@ Indicates the system event type and parameter related to the screenlock manageme
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@ohos.screenLock';
+import { screenLock } from '@kit.BasicServicesKit';
 ```
 
 ## eventType

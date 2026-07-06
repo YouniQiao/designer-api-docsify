@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from '@ohos.arkui.advanced.DatePickerComponent';
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from '@kit.ArkUI';
 ```
 
 ## Summary

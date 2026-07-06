@@ -11,7 +11,7 @@ Indicates the mark information of the phone number.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@ohos.telephony.call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## isCloud

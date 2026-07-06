@@ -9,7 +9,7 @@ The **inputMethod** module is oriented to common foreground applications (system
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@ohos.inputMethod';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## Summary

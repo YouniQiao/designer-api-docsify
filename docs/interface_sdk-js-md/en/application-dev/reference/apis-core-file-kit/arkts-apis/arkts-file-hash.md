@@ -9,7 +9,7 @@ The **FileHash** module implements hash processing on files.
 ## Modules to Import
 
 ```TypeScript
-import { hash } from '@ohos.file.hash';
+import { hash } from '@kit.CoreFileKit';
 ```
 
 ## Summary

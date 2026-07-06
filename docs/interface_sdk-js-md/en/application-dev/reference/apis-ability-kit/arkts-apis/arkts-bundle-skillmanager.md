@@ -9,7 +9,7 @@ This module provides skill query capabilities for applications.
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from '@ohos.bundle.skillManager';
+import { skillManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -9,7 +9,7 @@ Implements camera management. Before calling any API in CameraManager, you must 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## createCameraInput
@@ -38,15 +38,15 @@ Creates a **CameraInput** instance with the specified **CameraDevice** instance.
 
 | Type | Description |
 | --- | --- |
-| CameraInput | **CameraInput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| CameraInput | **CameraInput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createCameraInput
 
@@ -75,15 +75,15 @@ Creates a **CameraInput** instance with the specified camera position and type. 
 
 | Type | Description |
 | --- | --- |
-| CameraInput | **CameraInput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| CameraInput | **CameraInput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createCaptureSession
 
@@ -105,7 +105,7 @@ Creates a **CaptureSession** instance. This API returns the result synchronously
 
 | Type | Description |
 | --- | --- |
-| CaptureSession | **CaptureSession** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| CaptureSession | **CaptureSession** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -137,14 +137,14 @@ Creates a **MetadataOutput** instance. This API returns the result synchronously
 
 | Type | Description |
 | --- | --- |
-| MetadataOutput | **MetadataOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| MetadataOutput | **MetadataOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createPhotoOutput
 
@@ -167,13 +167,13 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously. >
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | profile | Profile | Yes | Supported photo profile, which is obtained through[getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
-| surfaceId | string | Yes | Surface ID, which is obtained from[ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-imagereceiver-i.md#imagereceiver). |
+| surfaceId | string | Yes | Surface ID, which is obtained from[ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-imagereceiver-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PhotoOutput | **PhotoOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| PhotoOutput | **PhotoOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -205,14 +205,14 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| PhotoOutput | **PhotoOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| PhotoOutput | **PhotoOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createPreviewOutput
 
@@ -233,20 +233,20 @@ Creates a **PreviewOutput** instance. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | profile | Profile | Yes | Supported preview profile, which is obtained through[getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
-| surfaceId | string | Yes | Surface ID, which is obtained from[XComponent](XComponent) or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-imagereceiver-i.md#imagereceiver). |
+| surfaceId | string | Yes | Surface ID, which is obtained from[XComponent](XComponent) or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-imagereceiver-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PreviewOutput | **PreviewOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| PreviewOutput | **PreviewOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createPreviewOutput
 
@@ -266,13 +266,13 @@ Creates a **PreviewOutput** instance without configuration. This API returns the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | Surface ID, which is obtained from[XComponent](XComponent) or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-imagereceiver-i.md#imagereceiver). |
+| surfaceId | string | Yes | Surface ID, which is obtained from[XComponent](XComponent) or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-imagereceiver-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PreviewOutput | **PreviewOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| PreviewOutput | **PreviewOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -305,14 +305,14 @@ Creates a **Session** instance with a given scene mode. This API returns the res
 
 | Type | Description |
 | --- | --- |
-| T | **Session** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| T | **Session** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed.<br>**Applicable version:** 19 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed.<br>**Applicable version:** 19 and later |
 
 ## createVideoOutput
 
@@ -333,20 +333,20 @@ Creates a **VideoOutput** instance. This API returns the result synchronously. I
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | profile | VideoProfile | Yes | Supported video profile, which is obtained through[getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
-| surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md#media). |
+| surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VideoOutput | **VideoOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| VideoOutput | **VideoOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createVideoOutput
 
@@ -366,13 +366,13 @@ Creates a **VideoOutput** instance without configuration. This API returns the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md#media). |
+| surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VideoOutput | **VideoOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| VideoOutput | **VideoOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -419,7 +419,7 @@ Obtains the concurrency information of the specified cameras. If the return valu
 getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 ```
 
-Obtains the specified camera based on the camera position and type. Obtains the camera lens of the specified [CameraPosition](arkts-camera-cameraposition-e.md#cameraposition) and [CameraType](arkts-camera-cameratype-e.md#cameratype). If the returned result is undefined, the camera lens is not found on the current device.
+Obtains the specified camera based on the camera position and type. Obtains the camera lens of the specified [CameraPosition](arkts-camera-cameraposition-e.md) and [CameraType](arkts-camera-cameratype-e.md). If the returned result is undefined, the camera lens is not found on the current device.
 
 **Since:** 18
 
@@ -847,6 +847,6 @@ Sets the flashlight mode.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 11 - 17 |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 

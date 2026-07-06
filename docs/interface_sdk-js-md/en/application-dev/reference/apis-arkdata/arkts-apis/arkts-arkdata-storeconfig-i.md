@@ -9,7 +9,7 @@ Defines the RDB store configuration.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@ohos.data.relationalStore';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## allowRebuild
@@ -46,7 +46,7 @@ Whether to automatically clear the dirty data (data that has been deleted from t
 cryptoParam?: CryptoParam
 ```
 
-Custom encryption parameters. If this parameter is left empty, the default encryption parameters are used. For details, see default values of [CryptoParam](arkts-arkdata-cryptoparam-i.md#cryptoparam). This parameter is valid only when **encrypt** is set to **true** or the key is not empty. This parameter is supported since API version 14. SystemCapability.DistributedDataManager.RelationalStore.Core
+Custom encryption parameters. If this parameter is left empty, the default encryption parameters are used. For details, see default values of [CryptoParam](arkts-arkdata-cryptoparam-i.md). This parameter is valid only when **encrypt** is set to **true** or the key is not empty. This parameter is supported since API version 14. SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Type:** CryptoParam
 

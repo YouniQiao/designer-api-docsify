@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FailureCode } from '@ohos.app.ability.CompletionHandlerForAtomicService';
+import { FailureCode } from '@kit.AbilityKit';
 ```
 
 ## Summary

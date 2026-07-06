@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pbap } from '@ohos.bluetooth.pbap';
+import { pbap } from '@kit.ConnectivityKit';
 ```
 
 ## createPbapServerProfile

@@ -58,7 +58,7 @@ extra?: Callback<void>
 
 **起始版本：** 12
 
-**装饰器类型：** @Builder
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,7 +136,7 @@ primary: Callback<void>
 
 **起始版本：** 12
 
-**装饰器类型：** @Builder
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,7 +156,7 @@ secondary: Callback<void>
 
 **起始版本：** 12
 
-**装饰器类型：** @Builder
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

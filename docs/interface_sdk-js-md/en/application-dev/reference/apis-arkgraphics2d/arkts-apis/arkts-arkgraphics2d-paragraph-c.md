@@ -1,6 +1,6 @@
 # Paragraph
 
-Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing. Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-paragraphbuilder-c.md#build-1) of the [ParagraphBuilder](arkts-arkgraphics2d-paragraphbuilder-c.md#paragraphbuilder) class to create a **Paragraph** object.
+Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing. Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-paragraphbuilder-c.md#build-1) of the [ParagraphBuilder](arkts-arkgraphics2d-paragraphbuilder-c.md) class to create a **Paragraph** object.
 
 **Since:** 12
 
@@ -9,7 +9,7 @@ Implements a carrier that stores the text content and style. You can perform ope
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@ohos.graphics.text';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## didExceedMaxLines
@@ -983,7 +983,7 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-paragraphstyle-i.md#paragraphstyle)) or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-ellipsismode-e.md#ellipsismode)).
+Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-paragraphstyle-i.md)) or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-ellipsismode-e.md)).
 
 **Since:** 26.0.0
 

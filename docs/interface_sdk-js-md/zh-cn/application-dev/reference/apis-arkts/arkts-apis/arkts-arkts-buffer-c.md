@@ -137,7 +137,7 @@ entries(): IterableIterator<[number, number]>
 | 类型 | 说明 |
 | --- | --- |
 | IterableIterator&lt;[number, number]&gt; | 包含key和value的迭代器，同时两者皆为number类型。<br>**适用版本：** 9 - 10 |
-| IterableIterator&lt;[number, number]&gt; | <br>**适用版本：** 11 |
+| IterableIterator&lt;[number, number]&gt; | <br>**适用版本：** 11+ |
 
 **示例：**
 

@@ -9,7 +9,7 @@ Uncompress2 return value information.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@ohos.zlib';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## destLength
@@ -50,7 +50,7 @@ Length of the source buffer.
 status: ReturnStatus
 ```
 
-For details, see [ReturnStatus](arkts-basicservices-returnstatus-e.md#returnstatus).
+For details, see [ReturnStatus](arkts-basicservices-returnstatus-e.md).
 
 **Type:** ReturnStatus
 

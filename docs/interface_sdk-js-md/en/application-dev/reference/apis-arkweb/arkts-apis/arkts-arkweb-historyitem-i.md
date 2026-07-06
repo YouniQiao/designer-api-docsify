@@ -9,7 +9,7 @@ Provides information for history item in BackForwardList.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@ohos.web.webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## historyRawUrl

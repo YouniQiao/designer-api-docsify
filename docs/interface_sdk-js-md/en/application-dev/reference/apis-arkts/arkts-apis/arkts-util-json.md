@@ -9,7 +9,7 @@ The JSON module provides a series of APIs for converting JSON text into JSON obj
 ## Modules to Import
 
 ```TypeScript
-import { JSON } from '@ohos.util.json';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## Summary

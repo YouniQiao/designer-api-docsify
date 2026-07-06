@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@ohos.notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isNotificationEnabled
@@ -153,8 +153,8 @@ Checks whether notification is enabled for the specified application. This API u
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist.<br>**Applicable version:** 11 |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found.<br>**Applicable version:** 11 |
+| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist.<br>**Applicable version:** 11 and later |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found.<br>**Applicable version:** 11 and later |
 
 **Example**
 
@@ -206,8 +206,8 @@ Checks whether notification is enabled for the specified application. This API u
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist.<br>**Applicable version:** 11 |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found.<br>**Applicable version:** 11 |
+| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist.<br>**Applicable version:** 11 and later |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found.<br>**Applicable version:** 11 and later |
 
 **Example**
 

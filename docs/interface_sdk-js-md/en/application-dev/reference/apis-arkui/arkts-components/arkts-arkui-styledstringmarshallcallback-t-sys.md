@@ -4,7 +4,7 @@
 declare type StyledStringMarshallCallback = (marshallableVal: StyledStringMarshallingValue) => ArrayBuffer
 ```
 
-Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#styledstringmarshallingvalue).
+Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).
 
 **Since:** 19
 
@@ -24,5 +24,5 @@ Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-st
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Marshaled data of [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#styledstringmarshallingvalue). |
+| ArrayBuffer | Marshaled data of [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
 

@@ -9,7 +9,7 @@ The **deviceInfo** module provides APIs for enterprise device information manage
 ## Modules to Import
 
 ```TypeScript
-import { deviceInfo } from '@ohos.enterprise.deviceInfo';
+import { deviceInfo } from '@kit.MDMKit';
 ```
 
 ## Summary

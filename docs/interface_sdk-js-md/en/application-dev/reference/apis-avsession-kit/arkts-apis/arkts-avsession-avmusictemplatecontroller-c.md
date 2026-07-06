@@ -9,7 +9,7 @@ The definition of the AVMusicTemplateController.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@ohos.multimedia.avMusicTemplate';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## clearSearchHistory

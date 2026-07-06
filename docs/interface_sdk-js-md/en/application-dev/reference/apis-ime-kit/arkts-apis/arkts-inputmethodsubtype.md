@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodSubtype } from '@ohos.InputMethodSubtype';
+import { InputMethodSubtype } from '@kit.IMEKit';
 ```
 
 ## Summary

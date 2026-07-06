@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { SuppressWarnings, Available, SuppressWarningsType } from '@ohos.annotation';
+import { SuppressWarnings, Available, SuppressWarningsType } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

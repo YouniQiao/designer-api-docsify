@@ -2,7 +2,7 @@
 
 Provides accessibility configuration of the slider prefix.
 
-**Inheritance/Implementation:** SliderPrefixOptions extends [SliderCustomContentOptions](arkts-arkui-slidercustomcontentoptions-i.md#slidercustomcontentoptions)
+**Inheritance/Implementation:** SliderPrefixOptions extends [SliderCustomContentOptions](arkts-arkui-slidercustomcontentoptions-i.md)
 
 **Since:** 20
 

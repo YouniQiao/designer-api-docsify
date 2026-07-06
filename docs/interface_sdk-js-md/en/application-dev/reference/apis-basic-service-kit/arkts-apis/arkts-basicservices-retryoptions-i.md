@@ -9,7 +9,7 @@ Task retry configuration.
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@ohos.request.cacheDownload';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## maxRetryCount

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAppProvisionInfo
@@ -27,7 +27,7 @@ Obtains the provision profile based on the given bundle name. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | AsyncCallback&lt;AppProvisionInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return theresult. If the operation is successful, **err** is **null** and **data** is the provision profile. |
+| callback | AsyncCallback&lt;AppProvisionInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null** and **data** is the provision profile. |
 
 **Error codes:**
 
@@ -85,7 +85,7 @@ Obtains the provision profile based on the given bundle name and user ID. This A
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
-| callback | AsyncCallback&lt;AppProvisionInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return theresult. If the operation is successful, **err** is **null** and **data** is the provision profile. |
+| callback | AsyncCallback&lt;AppProvisionInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null** and **data** is the provision profile. |
 
 **Error codes:**
 

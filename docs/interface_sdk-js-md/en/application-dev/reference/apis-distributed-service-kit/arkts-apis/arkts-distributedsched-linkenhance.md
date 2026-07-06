@@ -9,7 +9,7 @@ The **linkEnhance** module delivers highly efficient Bluetooth connectivity and 
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from '@ohos.distributedsched.linkEnhance';
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

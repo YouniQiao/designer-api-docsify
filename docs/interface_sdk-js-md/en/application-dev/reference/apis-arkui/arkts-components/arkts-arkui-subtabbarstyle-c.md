@@ -138,7 +138,7 @@ Sets the indicator style of the selected subtab. It takes effect only in the hor
 indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 ```
 
-Sets the indicator style of the selected subtab. Compared with [indicator](arkts-arkui-subtabbarstyle-c.md#indicator-1), the image format is added. For details about the display effect of the image, see [ImageFit.Cover](arkts-arkui-imagefit-e.md#imagefit). It takes effect only in the horizontal layout.
+Sets the indicator style of the selected subtab. Compared with [indicator](arkts-arkui-subtabbarstyle-c.md#indicator-1), the image format is added. For details about the display effect of the image, see [ImageFit.Cover](arkts-arkui-imagefit-e.md). It takes effect only in the horizontal layout.
 
 **Since:** 22
 

@@ -6,7 +6,7 @@
 function getShortcutInfo(bundleName :string, callback: AsyncCallback<Array<ShortcutInfo>>) : void
 ```
 
-查询当前用户下指定应用的快捷方式信息[ShortcutInfo](arkts-ability-shortcutinfo-i.md#shortcutinfo)，只支持查询主应用的ShortcutInfo，查询分身应用请使用 [getShortcutInfoByAppIndex](arkts-ability-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1)。使用callback异步回调。 获取调用方自身的信息时不需要权限。
+查询当前用户下指定应用的快捷方式信息[ShortcutInfo](arkts-ability-shortcutinfo-i.md)，只支持查询主应用的ShortcutInfo，查询分身应用请使用 [getShortcutInfoByAppIndex](arkts-ability-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1)。使用callback异步回调。 获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
 
@@ -21,7 +21,7 @@ function getShortcutInfo(bundleName :string, callback: AsyncCallback<Array<Short
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
-| callback | AsyncCallback&lt;Array&lt;ShortcutInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)。当函数调用成功，err为undefined，data为当前用户下指定应用的[ShortcutInfo](arkts-ability-shortcutinfo-i.md#shortcutinfo)信息。否则为错误对象。 |
+| callback | AsyncCallback&lt;Array&lt;ShortcutInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)。当函数调用成功，err为undefined，data为当前用户下指定应用的[ShortcutInfo](arkts-ability-shortcutinfo-i.md)信息。否则为错误对象。 |
 
 **错误码：**
 
@@ -64,7 +64,7 @@ try {
 function getShortcutInfo(bundleName : string) : Promise<Array<ShortcutInfo>>
 ```
 
-查询当前用户下指定应用的快捷方式信息[ShortcutInfo](arkts-ability-shortcutinfo-i.md#shortcutinfo)，只支持查询主应用的ShortcutInfo，查询分身应用请使用 [getShortcutInfoByAppIndex](arkts-ability-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1)。使用Promise异步回调。 获取调用方自身的信息时不需要权限。
+查询当前用户下指定应用的快捷方式信息[ShortcutInfo](arkts-ability-shortcutinfo-i.md)，只支持查询主应用的ShortcutInfo，查询分身应用请使用 [getShortcutInfoByAppIndex](arkts-ability-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1)。使用Promise异步回调。 获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
 
@@ -84,7 +84,7 @@ function getShortcutInfo(bundleName : string) : Promise<Array<ShortcutInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise对象。返回当前用户下指定应用的[ShortcutInfo](arkts-ability-shortcutinfo-i.md#shortcutinfo)。 |
+| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise对象。返回当前用户下指定应用的[ShortcutInfo](arkts-ability-shortcutinfo-i.md)。 |
 
 **错误码：**
 

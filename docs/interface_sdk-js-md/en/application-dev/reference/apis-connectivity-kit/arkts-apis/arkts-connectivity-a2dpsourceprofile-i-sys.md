@@ -2,7 +2,7 @@
 
 Manager a2dp source profile.
 
-**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-baseprofile-t.md)
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Manager a2dp source profile.
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from '@ohos.bluetooth.a2dp';
+import { a2dp } from '@kit.ConnectivityKit';
 ```
 
 ## connect

@@ -9,7 +9,7 @@ Represents the certificate information.
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@ohos.enterprise.securityManager';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## alias

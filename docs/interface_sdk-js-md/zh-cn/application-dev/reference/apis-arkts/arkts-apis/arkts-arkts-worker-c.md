@@ -2,7 +2,7 @@
 
 Worker类包含所有Worker功能。
 
-**继承/实现关系：** Worker implements [EventTarget](arkts-arkts-eventtarget-i.md#eventtarget)
+**继承/实现关系：** Worker implements [EventTarget](arkts-arkts-eventtarget-i.md)
 
 **起始版本：** 7
 

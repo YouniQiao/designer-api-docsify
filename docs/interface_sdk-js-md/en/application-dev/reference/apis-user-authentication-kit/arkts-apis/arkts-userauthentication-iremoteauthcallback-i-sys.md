@@ -11,7 +11,7 @@ Provides APIs for getting WidgetParam in remote authentication scenarios.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@ohos.userIAM.userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## onGetRemoteAuthWidgetParam

@@ -9,7 +9,7 @@ Alignment enumeration description.
 ## TopStart
 
 ```TypeScript
-TopStart = 0
+TopStart
 ```
 
 Top Start.
@@ -25,7 +25,7 @@ Top Start.
 ## Top
 
 ```TypeScript
-Top = 1
+Top
 ```
 
 The top is centered horizontally.
@@ -41,7 +41,7 @@ The top is centered horizontally.
 ## TopEnd
 
 ```TypeScript
-TopEnd = 2
+TopEnd
 ```
 
 Top tail end.
@@ -57,7 +57,7 @@ Top tail end.
 ## Start
 
 ```TypeScript
-Start = 3
+Start
 ```
 
 The starting end is centered longitudinally.
@@ -73,7 +73,7 @@ The starting end is centered longitudinally.
 ## Center
 
 ```TypeScript
-Center = 4
+Center
 ```
 
 Center horizontal and vertical.
@@ -89,7 +89,7 @@ Center horizontal and vertical.
 ## End
 
 ```TypeScript
-End = 5
+End
 ```
 
 The tail end is centered longitudinally.
@@ -105,7 +105,7 @@ The tail end is centered longitudinally.
 ## BottomStart
 
 ```TypeScript
-BottomStart = 6
+BottomStart
 ```
 
 Bottom starting end.
@@ -121,7 +121,7 @@ Bottom starting end.
 ## Bottom
 
 ```TypeScript
-Bottom = 7
+Bottom
 ```
 
 The bottom is centered horizontally.
@@ -137,7 +137,7 @@ The bottom is centered horizontally.
 ## BottomEnd
 
 ```TypeScript
-BottomEnd = 8
+BottomEnd
 ```
 
 Bottom end.

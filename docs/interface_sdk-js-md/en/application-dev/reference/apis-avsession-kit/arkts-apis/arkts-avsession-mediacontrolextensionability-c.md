@@ -2,7 +2,7 @@
 
 The class of media control extension ability.
 
-**Inheritance/Implementation:** MediaControlExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md#uiextensionability)
+**Inheritance/Implementation:** MediaControlExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md)
 
 **Since:** 10
 
@@ -15,6 +15,6 @@ The class of media control extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { MediaControlExtensionAbility } from '@ohos.app.ability.MediaControlExtensionAbility';
+import { MediaControlExtensionAbility } from '@kit.AVSessionKit';
 ```
 

@@ -9,7 +9,7 @@ Defines the preset effect.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@ohos.vibrator';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## isEffectSupported

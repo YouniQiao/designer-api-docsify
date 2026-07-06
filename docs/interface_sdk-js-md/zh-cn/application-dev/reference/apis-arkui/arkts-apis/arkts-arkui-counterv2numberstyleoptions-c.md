@@ -1,8 +1,8 @@
 # CounterV2NumberStyleOptions
 
-CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和事件。 继承于[CounterV2InlineStyleOptions](arkts-arkui-counterv2inlinestyleoptions-c.md#counterv2inlinestyleoptions)。
+CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和事件。 继承于[CounterV2InlineStyleOptions](arkts-arkui-counterv2inlinestyleoptions-c.md)。
 
-**继承/实现关系：** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-counterv2inlinestyleoptions-c.md#counterv2inlinestyleoptions)
+**继承/实现关系：** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-counterv2inlinestyleoptions-c.md)
 
 **起始版本：** 26.0.0
 

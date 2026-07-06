@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { overlay } from '@ohos.bundle.overlay';
+import { overlay } from '@kit.AbilityKit';
 ```
 
 ## getOverlayModuleInfoByBundleName
@@ -28,7 +28,7 @@ Obtains the information about all modules with the overlay feature in another ap
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| callback | AsyncCallback&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used toreturn the result, which is an array of[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#overlaymoduleinfo) objects. If the operation issuccessful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used toreturn the result, which is an array of[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. If the operation issuccessful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Obtains the information about a module with the overlay feature in another appli
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
 | moduleName | string | Yes | Name of the module with the overlay feature. If this parameter is not specified, theAPI obtains the information of all modules with the overlay feature in that application. |
-| callback | AsyncCallback&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used toreturn the result, which is an array of[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#overlaymoduleinfo) objects. If the operation issuccessful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used toreturn the result, which is an array of[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. If the operation issuccessful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -156,7 +156,7 @@ Obtains the information about a module with the overlay feature in another appli
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise used to return the result, which is an array of[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#overlaymoduleinfo) objects. |
+| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise used to return the result, which is an array of[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. |
 
 **Error codes:**
 

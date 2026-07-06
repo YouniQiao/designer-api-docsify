@@ -6,14 +6,14 @@ Defines the options for selecting images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoselectoptions-c.md#photoselectoptions)
+**Substitutes:** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoselectoptions-c.md)
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@ohos.file.picker';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## MIMEType

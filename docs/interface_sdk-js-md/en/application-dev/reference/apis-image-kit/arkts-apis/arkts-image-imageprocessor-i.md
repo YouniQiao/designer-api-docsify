@@ -9,7 +9,7 @@ Provides the ImageProcessor type, including the processing function.
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from '@ohos.multimedia.videoProcessingEngine';
+import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
 ## enhanceDetail

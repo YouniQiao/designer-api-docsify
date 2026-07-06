@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { kioskManager } from '@ohos.app.ability.kioskManager';
+import { kioskManager } from '@kit.AbilityKit';
 ```
 
 ## getKioskStatus

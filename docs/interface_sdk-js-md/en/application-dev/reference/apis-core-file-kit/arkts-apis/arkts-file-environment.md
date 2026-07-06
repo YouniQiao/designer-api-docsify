@@ -9,7 +9,7 @@ The **Environment** module provides ArkTS APIs for obtaining the root directorie
 ## Modules to Import
 
 ```TypeScript
-import { Environment } from '@ohos.file.environment';
+import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## Summary

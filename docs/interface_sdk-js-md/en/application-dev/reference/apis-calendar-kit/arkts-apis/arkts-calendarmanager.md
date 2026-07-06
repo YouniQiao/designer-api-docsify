@@ -9,7 +9,7 @@ The calendarManager module provides APIs for calendar and event management, incl
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from '@ohos.calendarManager';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## Summary

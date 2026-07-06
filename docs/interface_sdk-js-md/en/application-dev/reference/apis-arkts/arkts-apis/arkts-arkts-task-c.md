@@ -9,7 +9,7 @@ Enumerates tasks, which can be executed for multiple times, placed in a task gro
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@ohos.taskpool';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## addDependency
@@ -37,8 +37,8 @@ Adds dependent tasks for this task. Before using this API, you must create a **T
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200026](../errorcode-utils.md#10200026-task-with-a-cyclic-dependency) | There is a circular dependency. |
-| [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.<br>**Applicable version:** 12 |
-| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 |
+| [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.<br>**Applicable version:** 12 and later |
+| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
 
 **Example**
 
@@ -556,8 +556,8 @@ Removes dependent tasks for this task. Before using this method, you need to con
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200027](../errorcode-utils.md#10200027-dependency-does-not-exist) | The dependency does not exist. |
-| [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.<br>**Applicable version:** 12 |
-| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 |
+| [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.<br>**Applicable version:** 12 and later |
+| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
 
 **Example**
 
@@ -866,7 +866,7 @@ Sets the task transfer list. Before using this API, you must create a **Task** i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200029](../errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**Applicable version:** 11 |
+| [10200029](../errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**Applicable version:** 11 and later |
 
 **Example**
 

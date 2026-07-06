@@ -9,7 +9,7 @@ Image receiver class. You can use it to obtain the surface ID of a component, re
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@ohos.multimedia.sendableImage';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## getReceivingSurfaceId
@@ -96,7 +96,7 @@ async function Demo() {
 readLatestImage(): Promise<Image>
 ```
 
-Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result. > **NOTE** > > This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is > triggered. When the [Image](arkts-image-imagesource-i.md#imagesource) object returned by this API is no longer needed, > call [release](arkts-image-pixelmap-i.md#release-1) to release the object. New data can be received only after > the release.
+Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result. > **NOTE** > > This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is > triggered. When the [Image](arkts-image-imagesource-i.md) object returned by this API is no longer needed, > call [release](arkts-image-pixelmap-i.md#release-1) to release the object. New data can be received only after > the release.
 
 **Since:** 12
 
@@ -136,7 +136,7 @@ async function Demo() {
 readNextImage(): Promise<Image>
 ```
 
-Reads the next image from the ImageReceiver instance. This API uses a promise to return the result. > **NOTE** > > This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is > triggered. When the [Image](arkts-image-imagesource-i.md#imagesource) object returned by this API is no longer needed, > call [release](arkts-image-pixelmap-i.md#release-1) to release the object. New data can be received only after > the release.
+Reads the next image from the ImageReceiver instance. This API uses a promise to return the result. > **NOTE** > > This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is > triggered. When the [Image](arkts-image-imagesource-i.md) object returned by this API is no longer needed, > call [release](arkts-image-pixelmap-i.md#release-1) to release the object. New data can be received only after > the release.
 
 **Since:** 12
 

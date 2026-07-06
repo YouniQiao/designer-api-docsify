@@ -46,7 +46,7 @@ Callback invoked when the API call fails. **data** indicates the error informati
 success?: (data: FileListResponse) => void
 ```
 
-Callback invoked when the API call is successful. **data** is [FileListResponse](arkts-corefile-filelistresponse-depr-i.md#filelistresponse).
+Callback invoked when the API call is successful. **data** is [FileListResponse](arkts-corefile-filelistresponse-depr-i.md).
 
 **Type:** (data: FileListResponse) => void
 

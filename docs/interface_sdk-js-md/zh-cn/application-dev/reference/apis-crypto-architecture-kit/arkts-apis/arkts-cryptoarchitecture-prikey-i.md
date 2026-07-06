@@ -1,8 +1,8 @@
 # PriKey
 
-私钥，是[Key](arkts-cryptoarchitecture-key-i.md#key)的子类，在非对称解密、签名、密钥协商时需要将其作为输入使用。 私钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-asykeygenerator-i.md#asykeygenerator)、 [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#asykeygeneratorbyspec)来生成。
+私钥，是[Key](arkts-cryptoarchitecture-key-i.md)的子类，在非对称解密、签名、密钥协商时需要将其作为输入使用。 私钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-asykeygenerator-i.md)、 [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md)来生成。
 
-**继承/实现关系：** PriKey extends [Key](arkts-cryptoarchitecture-key-i.md#key)
+**继承/实现关系：** PriKey extends [Key](arkts-cryptoarchitecture-key-i.md)
 
 **起始版本：** 9
 
@@ -81,7 +81,7 @@ getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | number
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | 该操作不支持。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -154,7 +154,7 @@ getEncodedDer(format: string): DataBlob
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因：<br>1. 必填参数未指定；<br>2. 参数类型不正确；<br>3. 参数验证失败。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 
@@ -207,7 +207,7 @@ getEncodedPem(format: string): string
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因：<br>1. 必填参数未指定；<br>2. 参数类型不正确；<br>3. 参数验证失败。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 **示例：**
 

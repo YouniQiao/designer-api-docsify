@@ -9,7 +9,7 @@ Describes the color components of an image.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## byteBuffer

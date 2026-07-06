@@ -6,7 +6,7 @@
 function updatePrinterInformation(printerInformation: PrinterInformation): Promise<void>
 ```
 
-更新系统中打印机的部分信息，使用Promise异步回调。当前仅允许更新[PrinterInformation](arkts-basicservices-printerinformation-i.md#printerinformation)的alias和options字段。
+更新系统中打印机的部分信息，使用Promise异步回调。当前仅允许更新[PrinterInformation](arkts-basicservices-printerinformation-i.md)的alias和options字段。
 
 **起始版本：** 24
 

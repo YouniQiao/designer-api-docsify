@@ -9,7 +9,7 @@ The **contact** module provides contact management functions, such as adding, de
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@ohos.contact';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## Summary
@@ -134,7 +134,7 @@ import { contact } from '@ohos.contact';
 | [Note](arkts-contacts-note-c.md) | Defines a contact's note. |
 | [Organization](arkts-contacts-organization-c.md) | Defines a contact's organization. |
 | [PhoneNumber](arkts-contacts-phonenumber-c.md) | Defines a contact's phone number. |
-| [Portrait](arkts-contacts-portrait-c.md) | Defines a contact's portrait. &gt; **NOTE** &gt; &gt; Since API version 22, contact portraits can be set in URI or [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md#pixelmap) &gt; format. (Currently, contact avatars cannot be set through the [addContactViaUI](arkts-contacts-addcontactviaui-f.md#addcontactviaui-1) or &gt; [saveToExistingContactViaUI](arkts-contacts-savetoexistingcontactviaui-f.md#savetoexistingcontactviaui-1) API.) &gt; &gt; URI indicates the address of the contact portrait file that can be accessed, and &gt; [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md#pixelmap) indicates the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md#pixelmap) &gt; object generated based on the contact portrait resource. &gt; &gt; Since API version 22, the profile picture resource can be read through URI. The resource can be opened only in &gt; [fs.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md#open-1) mode and cannot be directly displayed in the **Image** component using a URI. You need to read &gt; the resource and display it in [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md#pixelmap) format. |
+| [Portrait](arkts-contacts-portrait-c.md) | Defines a contact's portrait. &gt; **NOTE** &gt; &gt; Since API version 22, contact portraits can be set in URI or [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) &gt; format. (Currently, contact avatars cannot be set through the [addContactViaUI](arkts-contacts-addcontactviaui-f.md#addcontactviaui-1) or &gt; [saveToExistingContactViaUI](arkts-contacts-savetoexistingcontactviaui-f.md#savetoexistingcontactviaui-1) API.) &gt; &gt; URI indicates the address of the contact portrait file that can be accessed, and &gt; [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) indicates the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) &gt; object generated based on the contact portrait resource. &gt; &gt; Since API version 22, the profile picture resource can be read through URI. The resource can be opened only in &gt; [fs.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md#open-1) mode and cannot be directly displayed in the **Image** component using a URI. You need to read &gt; the resource and display it in [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) format. |
 | [PostalAddress](arkts-contacts-postaladdress-c.md) | Defines a contact's postal address. |
 | [Relation](arkts-contacts-relation-c.md) | Defines a contact's relationship. |
 | [SipAddress](arkts-contacts-sipaddress-c.md) | Defines a contact's SIP address. |

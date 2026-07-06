@@ -6,7 +6,7 @@ Enumerates the test result types of the click event.
 
 **Deprecated since:** 21
 
-**Substitutes:** [WebHitTestType](../arkts-apis/arkts-arkweb-webhittesttype-e.md#webhittesttype)
+**Substitutes:** [WebHitTestType](../arkts-apis/arkts-arkweb-webhittesttype-e.md)
 
 **System capability:** SystemCapability.Web.Webview.Core
 

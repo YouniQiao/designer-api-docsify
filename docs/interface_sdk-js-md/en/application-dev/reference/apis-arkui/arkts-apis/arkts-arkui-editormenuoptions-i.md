@@ -9,7 +9,7 @@ Describes the edit menu options.
 ## Modules to Import
 
 ```TypeScript
-import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu, ExpandedMenuOptions } from '@ohos.arkui.advanced.SelectionMenu';
+import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu, ExpandedMenuOptions } from '@kit.ArkUI';
 ```
 
 ## action

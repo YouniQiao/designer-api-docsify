@@ -6,14 +6,14 @@ Describes the image properties.
 
 **Deprecated since:** 11
 
-**Substitutes:** [ImagePropertyOptions](arkts-image-imagepropertyoptions-i.md#imagepropertyoptions)
+**Substitutes:** [ImagePropertyOptions](arkts-image-imagepropertyoptions-i.md)
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@ohos.multimedia.image';
+import { image } from '@kit.ImageKit';
 ```
 
 ## defaultValue

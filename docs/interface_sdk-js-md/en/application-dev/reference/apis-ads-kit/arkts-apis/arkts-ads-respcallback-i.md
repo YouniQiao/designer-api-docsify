@@ -9,7 +9,7 @@ Ad request callback.
 ## Modules to Import
 
 ```TypeScript
-import { RespCallback } from '@ohos.advertising.AdsServiceExtensionAbility';
+import { RespCallback } from '@kit.AdsKit';
 ```
 
 ## constructor

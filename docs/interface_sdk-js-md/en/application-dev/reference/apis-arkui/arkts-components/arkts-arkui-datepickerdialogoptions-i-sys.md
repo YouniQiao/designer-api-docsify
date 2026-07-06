@@ -1,8 +1,8 @@
 # DatePickerDialogOptions
 
-Defines the configuration options of the date picker dialog box. Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#datepickeroptions).
+Defines the configuration options of the date picker dialog box. Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md).
 
-**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#datepickeroptions)
+**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md)
 
 **Since:** 8
 

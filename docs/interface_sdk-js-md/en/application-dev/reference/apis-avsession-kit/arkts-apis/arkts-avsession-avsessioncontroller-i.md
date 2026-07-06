@@ -9,7 +9,7 @@ Session controller,used to control media playback and get media information
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@ohos.multimedia.avsession';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## destroy

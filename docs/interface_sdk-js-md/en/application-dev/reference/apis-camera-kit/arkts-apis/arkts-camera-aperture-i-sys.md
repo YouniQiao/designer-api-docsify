@@ -1,8 +1,8 @@
 # Aperture (System API)
 
-Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-camera-aperturequery-i-sys.md#aperturequery).
+Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-camera-aperturequery-i-sys.md).
 
-**Inheritance/Implementation:** Aperture extends [ApertureQuery](arkts-camera-aperturequery-i-sys.md#aperturequery)
+**Inheritance/Implementation:** Aperture extends [ApertureQuery](arkts-camera-aperturequery-i-sys.md)
 
 **Since:** 24
 
@@ -13,7 +13,7 @@ Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@ohos.multimedia.camera';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getPhysicalAperture
@@ -44,7 +44,7 @@ Gets current physical aperture value.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 - 23 |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
 
 ## getVirtualAperture
 
@@ -111,7 +111,7 @@ Sets physical aperture value.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 - 23 |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
 
 ## setVirtualAperture
 

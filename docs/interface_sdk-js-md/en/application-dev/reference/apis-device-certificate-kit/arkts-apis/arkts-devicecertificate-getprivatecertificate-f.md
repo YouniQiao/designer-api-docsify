@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## getPrivateCertificate
@@ -25,7 +25,7 @@ Obtains detailed information about a private credential. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyUri | string | Yes | Unique identifier of the credential to be obtained. The value contains up to 256 bytes. |
-| callback | AsyncCallback&lt;CMResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is **credential** in the [CMResult](arkts-devicecertificate-cmresult-i.md#cmresult) object.Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;CMResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is **credential** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -86,7 +86,7 @@ Obtains detailed information about a private credential. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the private credential details obtained, that is,**credential** in the [CMResult](arkts-devicecertificate-cmresult-i.md#cmresult) object. |
+| Promise&lt;CMResult&gt; | Promise used to return the private credential details obtained, that is,**credential** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

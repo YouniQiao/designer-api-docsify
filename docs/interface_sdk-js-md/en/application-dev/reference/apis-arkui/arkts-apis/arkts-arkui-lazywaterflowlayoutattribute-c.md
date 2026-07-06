@@ -11,7 +11,7 @@ Defines the lazy waterflow layout attribute.
 ## Modules to Import
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from '@ohos.arkui.components.ArkLazyWaterFlowLayout';
+import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## columnsGap

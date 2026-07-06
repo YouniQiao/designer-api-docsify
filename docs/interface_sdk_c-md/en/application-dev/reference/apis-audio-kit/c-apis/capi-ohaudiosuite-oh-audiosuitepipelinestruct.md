@@ -6,7 +6,7 @@ typedef struct OH_AudioSuitePipelineStruct OH_AudioSuitePipeline
 
 ## Overview
 
-Declare the audio pipe line.The handle of audio suite pipe line is used for audio pipe line related functions.
+Declare the audio pipeline.The handle of audio suite pipeline is used for audio pipeline related functions.
 
 **Since**: 22
 

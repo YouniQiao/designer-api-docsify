@@ -11,7 +11,7 @@ Describes the properties of the word selection panel.
 ## Modules to Import
 
 ```TypeScript
-import { PanelInfo, PanelType } from '@ohos.selectionInput.SelectionPanel';
+import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
 ```
 
 ## height

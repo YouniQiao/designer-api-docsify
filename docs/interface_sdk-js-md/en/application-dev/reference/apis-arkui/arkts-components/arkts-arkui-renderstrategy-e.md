@@ -30,7 +30,7 @@ Online rendering mode. The content to be rendered is clipped with rounded corner
 OFFSCREEN = 1
 ```
 
-Offscreen rendering mode. The content to be rendered is first rendered to the offscreen canvas without rounded corners, and then clipped with rounded corners and rendered to the main canvas. **NOTE** 1. Compared with online rendering, offscreen rendering requires additional performance overhead. 2. In offscreen rendering, the content is first rendered on an additional canvas, and then rendered on the main canvas. 3. Use offscreen rendering primarily for multi-layer components requiring rounded corners. For single components, it has effect only when the [clip](arkts-arkui-commonmethod-c.md#clip-1) attribute, [background](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common), or [foreground color](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md#common) is configured.
+Offscreen rendering mode. The content to be rendered is first rendered to the offscreen canvas without rounded corners, and then clipped with rounded corners and rendered to the main canvas. **NOTE** 1. Compared with online rendering, offscreen rendering requires additional performance overhead. 2. In offscreen rendering, the content is first rendered on an additional canvas, and then rendered on the main canvas. 3. Use offscreen rendering primarily for multi-layer components requiring rounded corners. For single components, it has effect only when the [clip](arkts-arkui-commonmethod-c.md#clip-1) attribute, [background](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), or [foreground color](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) is configured.
 
 **Since:** 22
 

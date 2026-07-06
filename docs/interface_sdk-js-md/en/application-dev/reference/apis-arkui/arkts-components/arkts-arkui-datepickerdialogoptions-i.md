@@ -1,8 +1,8 @@
 # DatePickerDialogOptions
 
-Defines the configuration options of the date picker dialog box. Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#datepickeroptions).
+Defines the configuration options of the date picker dialog box. Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md).
 
-**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#datepickeroptions)
+**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md)
 
 **Since:** 8
 
@@ -14,7 +14,7 @@ Defines the configuration options of the date picker dialog box. Inherited from 
 acceptButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of the accept button. **NOTE** 1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。 If both are set to **true**, the **primary** field will remain at the default value of **false**. 2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md#buttontype), the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype-e.md#buttontype)).
+Style of the accept button. **NOTE** 1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。 If both are set to **true**, the **primary** field will remain at the default value of **false**. 2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md), the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype-e.md)).
 
 **Type:** PickerDialogButtonStyle
 
@@ -148,7 +148,7 @@ Whether to enable cyclic scrolling. Default value: **true** **NOTE** **true**: C
 cancelButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of the cancel button. **NOTE** 1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**. 2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md#buttontype), the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype-e.md#buttontype)).
+Style of the cancel button. **NOTE** 1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**. 2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md), the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype-e.md)).
 
 **Type:** PickerDialogButtonStyle
 

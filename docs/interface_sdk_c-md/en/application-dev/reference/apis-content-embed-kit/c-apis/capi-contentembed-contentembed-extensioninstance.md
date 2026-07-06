@@ -6,7 +6,7 @@ typedef struct ContentEmbed_ExtensionInstance ContentEmbed_ExtensionInstance
 
 ## Overview
 
-Define the ContentEmbed_ExtensionInstance structure type.Provides methods for Content Embed Kit.
+Declares the structure type of an OE Extension instance. Manages the core functions of the extension, such aslifecycle management, callback registration, and association with the client's OE object.
 
 **Since**: 24
 

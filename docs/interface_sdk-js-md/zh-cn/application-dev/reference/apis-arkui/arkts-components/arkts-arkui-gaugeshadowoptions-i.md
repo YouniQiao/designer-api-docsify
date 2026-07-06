@@ -1,8 +1,8 @@
 # GaugeShadowOptions
 
-GaugeShadowOptions继承自[MultiShadowOptions](arkts-arkui-multishadowoptions-i.md#multishadowoptions)，具有MultiShadowOptions的全部属性。
+GaugeShadowOptions继承自[MultiShadowOptions](arkts-arkui-multishadowoptions-i.md)，具有MultiShadowOptions的全部属性。
 
-**继承/实现关系：** GaugeShadowOptions extends [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md#multishadowoptions)
+**继承/实现关系：** GaugeShadowOptions extends [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md)
 
 **起始版本：** 11
 

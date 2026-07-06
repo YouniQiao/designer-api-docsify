@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hardwareManager } from '@ohos.distributedHardware.hardwareManager';
+import { hardwareManager } from '@kit.DistributedServiceKit';
 ```
 
 ## stopDistributedHardware

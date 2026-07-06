@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { MultiNavPathStack, MultiNavigation, SplitPolicy } from '@ohos.arkui.advanced.MultiNavigation';
+import { MultiNavPathStack, MultiNavigation, SplitPolicy } from '@kit.ArkUI';
 ```
 
 ## multiStack
@@ -44,7 +44,7 @@ Routing rules for loading the target page.
 
 **Since:** 14
 
-**Decorator:** @Builder
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

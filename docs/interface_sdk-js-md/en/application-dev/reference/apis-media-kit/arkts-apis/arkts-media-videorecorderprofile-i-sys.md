@@ -11,7 +11,7 @@ Provides the video recorder profile definitions.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@ohos.multimedia.media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## audioBitrate

@@ -9,7 +9,7 @@ Subscribes to death notifications of a remote object. When the remote object is 
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@ohos.rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## onRemoteDied

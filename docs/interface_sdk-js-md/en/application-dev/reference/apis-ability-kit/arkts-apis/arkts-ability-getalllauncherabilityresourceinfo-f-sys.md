@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleResourceManager } from '@ohos.bundle.bundleResourceManager';
+import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## getAllLauncherAbilityResourceInfo
@@ -27,7 +27,7 @@ Obtains the resource information of the entry abilities of the current applicati
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resourceFlags | number | Yes | Type of the resource information to obtain. |
-| callback | AsyncCallback&lt;Array&lt;LauncherAbilityResourceInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback)used to return the result. If the information is successfully obtained, **err** is **null** and **data** is aLauncherAbilityResourceInfo array. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;Array&lt;LauncherAbilityResourceInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)used to return the result. If the information is successfully obtained, **err** is **null** and **data** is aLauncherAbilityResourceInfo array. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

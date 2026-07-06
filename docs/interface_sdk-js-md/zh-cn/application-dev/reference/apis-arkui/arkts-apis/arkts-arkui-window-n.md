@@ -12,8 +12,8 @@ Window manager.
 
 | 名称 | 说明 |
 | --- | --- |
-| [createWindow](arkts-arkui-createwindow-f.md#createwindow-1) | 创建子窗口或者系统窗口，使用callback异步回调。 非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是 [沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。 自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-configuration-i.md#configuration)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口 创建后为非沉浸式布局。 |
-| [createWindow](arkts-arkui-createwindow-f.md#createwindow-2) | 创建子窗口或者系统窗口，使用Promise异步回调。 非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是 [沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。 自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-configuration-i.md#configuration)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口 创建后为非沉浸式布局。 |
+| [createWindow](arkts-arkui-createwindow-f.md#createwindow-1) | 创建子窗口或者系统窗口，使用callback异步回调。 非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是 [沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。 自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-configuration-i.md)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口 创建后为非沉浸式布局。 |
+| [createWindow](arkts-arkui-createwindow-f.md#createwindow-2) | 创建子窗口或者系统窗口，使用Promise异步回调。 非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是 [沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。 自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-configuration-i.md)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口 创建后为非沉浸式布局。 |
 | [create](arkts-arkui-create-f.md#create-1) | 创建子窗口，使用callback异步回调。 子窗口创建后默认是[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。 @link window.createWindow(config: Configuration, callback: AsyncCallback&lt;Window&gt;)}替代。 |
 | [create](arkts-arkui-create-f.md#create-2) | 创建子窗口，使用Promise异步回调。 子窗口创建后默认是[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。 @link window.createWindow(config: Configuration)}替代。 |
 | [create](arkts-arkui-create-f.md#create-3) | 创建系统窗口，使用Promise异步回调。 @link window.createWindow(config: Configuration)}替代。 |
@@ -82,7 +82,7 @@ Window manager.
 | [Rect](arkts-arkui-rect-i.md) | 窗口矩形区域。 |
 | [RectInVP](arkts-arkui-rectinvp-i.md) | 窗口矩形区域，单位为vp。 |
 | [Position](arkts-arkui-position-i.md) | 窗口或组件的位置。 |
-| [AvoidArea](arkts-arkui-avoidarea-i.md) | 窗口内容的避让区域。 窗口内容做[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照 [AvoidAreaType](arkts-arkui-avoidareatype-e.md#avoidareatype)对应的AvoidArea做窗口内容避让。 在避让区域内，应用窗口内容被遮挡且无法响应用户点击事件。 |
+| [AvoidArea](arkts-arkui-avoidarea-i.md) | 窗口内容的避让区域。 窗口内容做[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照 [AvoidAreaType](arkts-arkui-avoidareatype-e.md)对应的AvoidArea做窗口内容避让。 在避让区域内，应用窗口内容被遮挡且无法响应用户点击事件。 |
 | [UIEnvAvoidAreaVP](arkts-arkui-uienvavoidareavp-i.md) | 以vp为单位表示的窗口避让区域信息，在进行[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)适配时需关注。 |
 | [Size](arkts-arkui-size-i.md) | 窗口大小，单位为px。 |
 | [SizeInVP](arkts-arkui-sizeinvp-i.md) | 窗口大小，单位为vp。 |
@@ -91,7 +91,7 @@ Window manager.
 | [WindowProperties](arkts-arkui-windowproperties-i.md) | 窗口属性。 |
 | [DecorButtonStyle](arkts-arkui-decorbuttonstyle-i.md) | 系统装饰栏按钮样式。 |
 | [Configuration](arkts-arkui-configuration-i.md) | 创建子窗口或系统窗口时的参数。 |
-| [WindowLimits](arkts-arkui-windowlimits-i.md) | 窗口尺寸限制参数，应用可以通过[getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1)获得当前窗口的尺寸限制（单位为px）；从API version 2 2开始，还可以通过[getWindowLimitsVP](arkts-arkui-window-i.md#getwindowlimitsvp-1)获取窗口尺寸限制（单位为vp）。 窗口尺寸限制的最终生效结果由默认系统限制、应用配置和运行时设置的数据取交集得到，优先级从高到低依次为： 1. 应用通过[setWindowLimits](arkts-arkui-window-i.md#setwindowlimits-1)设置窗口尺寸限制。 2. 应用在[startAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#startability-3)拉起窗口时通过[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-startoptions-c.md#startoptions)指定窗口尺寸限制（API version 17开始支持）。 3. 应用在[module.json5配置文件中的abilities标签](../../../../quick-start/module-configuration-file.md#abilities标签)中配置windowLimits。 4. 默认系统限制（基于不同产品和窗口类型，其windowLimits系统默认限制存在差异）。 |
+| [WindowLimits](arkts-arkui-windowlimits-i.md) | 窗口尺寸限制参数，应用可以通过[getWindowLimits](arkts-arkui-window-i.md#getwindowlimits-1)获得当前窗口的尺寸限制（单位为px）；从API version 2 2开始，还可以通过[getWindowLimitsVP](arkts-arkui-window-i.md#getwindowlimitsvp-1)获取窗口尺寸限制（单位为vp）。 窗口尺寸限制的最终生效结果由默认系统限制、应用配置和运行时设置的数据取交集得到，优先级从高到低依次为： 1. 应用通过[setWindowLimits](arkts-arkui-window-i.md#setwindowlimits-1)设置窗口尺寸限制。 2. 应用在[startAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#startability-3)拉起窗口时通过[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-startoptions-c.md)指定窗口尺寸限制（API version 17开始支持）。 3. 应用在[module.json5配置文件中的abilities标签](../../../../quick-start/module-configuration-file.md#abilities标签)中配置windowLimits。 4. 默认系统限制（基于不同产品和窗口类型，其windowLimits系统默认限制存在差异）。 |
 | [TitleButtonRect](arkts-arkui-titlebuttonrect-i.md) | 标题栏上的最小化、最大化、关闭按钮矩形区域，该区域位置坐标相对窗口右上角。 |
 | [RectChangeOptions](arkts-arkui-rectchangeoptions-i.md) | 窗口矩形（窗口位置及窗口大小）变化返回的值及变化原因。 |
 | [AvoidAreaOptions](arkts-arkui-avoidareaoptions-i.md) | 系统避让区变化后返回当前避让区域以及避让区域类型。 |
@@ -150,7 +150,7 @@ Window manager.
 | 名称 | 说明 |
 | --- | --- |
 | [WindowType](arkts-arkui-windowtype-e.md) | 窗口类型枚举。 |
-| [AvoidAreaType](arkts-arkui-avoidareatype-e.md) | 窗口内容的避让区域的类型枚举。 窗口内容做[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照AvoidAreaType对应的 [AvoidArea](arkts-arkui-avoidarea-i.md#avoidarea)做窗口内容避让。 &lt;!--RP13--&gt; &lt;!--RP13End--&gt; |
+| [AvoidAreaType](arkts-arkui-avoidareatype-e.md) | 窗口内容的避让区域的类型枚举。 窗口内容做[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照AvoidAreaType对应的 [AvoidArea](arkts-arkui-avoidarea-i.md)做窗口内容避让。 &lt;!--RP13--&gt; &lt;!--RP13End--&gt; |
 | [SplitRatioPreference](arkts-arkui-splitratiopreference-e.md) | 描述分屏窗口分屏比例 |
 | [WindowStatusType](arkts-arkui-windowstatustype-e.md) | 窗口模式枚举。 |
 | [PixelUnit](arkts-arkui-pixelunit-e.md) | 像素单位枚举。 物理像素单位和虚拟像素单位换算可使用[px2vp](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#px2vp12)和 [vp2px](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#vp2px12)。 |
@@ -192,6 +192,6 @@ Window manager.
 
 | 名称 | 说明 |
 | --- | --- |
-| [RotationChangeCallback](arkts-arkui-rotationchangecallback-t.md) | 旋转事件通知通用回调函数。 开发者在使用时，回调函数参数类型为[RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md#rotationchangeinfo)，返回值类型为 [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md#rotationchangeresult) \\| void。 |
+| [RotationChangeCallback](arkts-arkui-rotationchangecallback-t.md) | 旋转事件通知通用回调函数。 开发者在使用时，回调函数参数类型为[RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md)，返回值类型为 [RotationChangeResult](arkts-arkui-rotationchangeresult-i.md) \\| void。 |
 | [SpecificSystemBar](arkts-arkui-specificsystembar-t.md) | 当前支持显示或隐藏的系统栏类型。 |
 

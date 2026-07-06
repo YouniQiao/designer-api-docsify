@@ -11,7 +11,7 @@ Defines the attributes of SelectionContainer.
 ## Modules to Import
 
 ```TypeScript
-import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerMenuOptions } from '@ohos.arkui.components.SelectionContainer';
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerMenuOptions } from '@kit.ArkUI';
 ```
 
 ## bindSelectionMenu

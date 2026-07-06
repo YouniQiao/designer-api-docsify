@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationExtensionSubscription } from '@ohos.notificationExtensionSubscription';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## 汇总
@@ -31,7 +31,7 @@ import { notificationExtensionSubscription } from '@ohos.notificationExtensionSu
 
 | 名称 | 说明 |
 | --- | --- |
-| [getAllSubscriptionBundles](arkts-notification-getallsubscriptionbundles-f-sys.md#getallsubscriptionbundles-1) | 获取所有具有ohos.permission.SUBSCRIBE_NOTIFICATION权限并且实现了 [NotificationSubscriberExtensionAbility](arkts-notification-notificationsubscriberextensionability-c.md#notificationsubscriberextensionability)的应用列表。 使用Promise异步回调。 |
+| [getAllSubscriptionBundles](arkts-notification-getallsubscriptionbundles-f-sys.md#getallsubscriptionbundles-1) | 获取所有具有ohos.permission.SUBSCRIBE_NOTIFICATION权限并且实现了 [NotificationSubscriberExtensionAbility](arkts-notification-notificationsubscriberextensionability-c.md)的应用列表。 使用Promise异步回调。 |
 | [getUserGrantedEnabledBundles](arkts-notification-getusergrantedenabledbundles-f-sys.md#getusergrantedenabledbundles-1) | 获取指定应用中“已获取的本机通知”通知开关开启的应用列表。使用Promise异步回调。 |
 | [getUserGrantedState](arkts-notification-getusergrantedstate-f-sys.md#getusergrantedstate-1) | 查询指定应用的“允许获取本机通知”的开关状态。使用Promise异步回调。 |
 | [setUserGrantedBundleState](arkts-notification-setusergrantedbundlestate-f-sys.md#setusergrantedbundlestate-1) | 设置指定应用中“已获取的本机通知”的应用通知开关状态。使用Promise异步回调。 |

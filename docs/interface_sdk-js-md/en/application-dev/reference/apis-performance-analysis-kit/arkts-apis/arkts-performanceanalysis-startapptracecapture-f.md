@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@ohos.hidebug';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## startAppTraceCapture
@@ -22,8 +22,8 @@ Starts automatic trace collection in a specified scope. This API is a supplement
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tags | number[] | Yes | Scope for trace collection. For details, see [tags](arkts-performanceanalysis-hidebug-tags-n.md#tags). |
-| flag | TraceFlag | Yes | For details, see [TraceFlag](arkts-performanceanalysis-traceflag-e.md#traceflag). |
+| tags | number[] | Yes | Scope for trace collection. For details, see [tags](arkts-performanceanalysis-tags-n.md#tags). |
+| flag | TraceFlag | Yes | For details, see [TraceFlag](arkts-performanceanalysis-traceflag-e.md). |
 | limitSize | number | Yes | Limit on the trace file size, in bytes. The maximum size of a single file is 500 MB. |
 
 **Return value:**

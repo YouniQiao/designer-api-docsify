@@ -11,7 +11,7 @@ function getUserDesktopDir(): string
 **起始版本：** 11
 
 **需要权限：** 
-- API版本11 - 11：ohos.permission.READ_WRITE_DESKTOP_DIRECTORY
+- API版本11：ohos.permission.READ_WRITE_DESKTOP_DIRECTORY
 
 **系统能力：** SystemCapability.FileManagement.File.Environment.FolderObtain
 
@@ -25,7 +25,7 @@ function getUserDesktopDir(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken.<br>**适用版本：** 11 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken.<br>**适用版本：** 11+ |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 13900042 | Unknown error. |
 

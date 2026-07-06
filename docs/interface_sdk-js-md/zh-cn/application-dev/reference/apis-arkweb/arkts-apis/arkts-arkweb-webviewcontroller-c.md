@@ -116,7 +116,7 @@ static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): v
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## avoidVisibleViewportBottom
 
@@ -298,7 +298,7 @@ static clearIntelligentTrackingPreventionBypassingList(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## clearMatches
 
@@ -546,7 +546,7 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error.The WebviewController must be associated with a Web component. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed.<br>**适用版本：** 10 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed.<br>**适用版本：** 10+ |
 
 ## createWebPrintDocumentAdapter
 
@@ -604,7 +604,7 @@ static customizeSchemes(schemes: Array<WebCustomScheme>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [17100020](../errorcode-webview.md#17100020-注册自定义协议失败) | Failed to register custom schemes.<br>**适用版本：** 12 |
+| [17100020](../errorcode-webview.md#17100020-注册自定义协议失败) | Failed to register custom schemes.<br>**适用版本：** 12+ |
 
 ## customizeSchemes
 
@@ -688,7 +688,7 @@ enableAdsBlock(enable: boolean): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Parameter string is too long. 3.Parameter verification failed. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error.The WebviewController must be associated with a Web component. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## enableAdvancedSecurityMode
 
@@ -754,7 +754,7 @@ enableIntelligentTrackingPrevention(enable: boolean): void
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error.The WebviewController must be associated with a Web component. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## enablePrivateNetworkAccess
 
@@ -850,7 +850,7 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkWebEngineVersion | 返回由[ArkWebEngineVersion](arkts-arkweb-arkwebengineversion-e.md#arkwebengineversion)所定义的当前使用的ArkWeb内核版本。 |
+| ArkWebEngineVersion | 返回由[ArkWebEngineVersion](arkts-arkweb-arkwebengineversion-e.md)所定义的当前使用的ArkWeb内核版本。 |
 
 ## getAttachState
 
@@ -902,7 +902,7 @@ getBackForwardEntries(): BackForwardList
 getBlanklessInfoWithKey(key: string) : BlanklessInfo
 ```
 
-获取页面首屏加载预测信息（详细说明见[BlanklessInfo](arkts-arkweb-blanklessinfo-i.md#blanklessinfo)），并开始本次加载过渡帧生成，应用根据此信息确定是否需要启用无白屏 加载。必须与[setBlanklessLoadingWithKey](arkts-arkweb-webviewcontroller-c.md#setblanklessloadingwithkey-1)接口配套使用，并且必须在触发加载页面的 接口之前或在`onLoadIntercept`中调用。需在`WebViewController`与Web组件绑定后才能使用。 > **说明：** > > - 持久缓存容量：默认大小为30MB（约30页），可以通过接口 > [setBlanklessLoadingCacheCapacity](arkts-arkweb-webviewcontroller-c.md#setblanklessloadingcachecapacity-1)设置缓存容量，具体见该 > 接口说明。超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。 > > - 如果发现快照相似度（即[BlanklessInfo](arkts-arkweb-blanklessinfo-i.md#blanklessinfo)中的similarity）极低，请确认key值是否传递正确。 > > - 调用本接口后，将启用页面加载快照检测及生成过渡帧计算，会产生一定的资源开销。 > > - 启用无白屏加载的页面会带来一定的资源开销，开销的大小与Web组件的分辨率相关。假设分辨率的宽度和高度分别为：w, h。页面在打开阶段会增加峰值内存，增加约12 * w * h B，页面打开后内存回收，不影响稳态内存。增 > 加固态应用缓存的大小，每个页面增加的缓存约w * h / 10 B，缓存位于应用缓存的位置。 > > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考 > [在配置文件中声明权限](../../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+获取页面首屏加载预测信息（详细说明见[BlanklessInfo](arkts-arkweb-blanklessinfo-i.md)），并开始本次加载过渡帧生成，应用根据此信息确定是否需要启用无白屏 加载。必须与[setBlanklessLoadingWithKey](arkts-arkweb-webviewcontroller-c.md#setblanklessloadingwithkey-1)接口配套使用，并且必须在触发加载页面的 接口之前或在`onLoadIntercept`中调用。需在`WebViewController`与Web组件绑定后才能使用。 > **说明：** > > - 持久缓存容量：默认大小为30MB（约30页），可以通过接口 > [setBlanklessLoadingCacheCapacity](arkts-arkweb-webviewcontroller-c.md#setblanklessloadingcachecapacity-1)设置缓存容量，具体见该 > 接口说明。超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。 > > - 如果发现快照相似度（即[BlanklessInfo](arkts-arkweb-blanklessinfo-i.md)中的similarity）极低，请确认key值是否传递正确。 > > - 调用本接口后，将启用页面加载快照检测及生成过渡帧计算，会产生一定的资源开销。 > > - 启用无白屏加载的页面会带来一定的资源开销，开销的大小与Web组件的分辨率相关。假设分辨率的宽度和高度分别为：w, h。页面在打开阶段会增加峰值内存，增加约12 * w * h B，页面打开后内存回收，不影响稳态内存。增 > 加固态应用缓存的大小，每个页面增加的缓存约w * h / 10 B，缓存位于应用缓存的位置。 > > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考 > [在配置文件中声明权限](../../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 20
 
@@ -1774,7 +1774,7 @@ isAdsBlockEnabled(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## isAdsBlockEnabledForCurPage
 
@@ -1800,7 +1800,7 @@ isAdsBlockEnabledForCurPage(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## isAutoPreconnectEnabled
 
@@ -1871,7 +1871,7 @@ isIntelligentTrackingPreventionEnabled(): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error.The WebviewController must be associated with a Web component. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## isPrivateNetworkAccessEnabled
 
@@ -2328,8 +2328,8 @@ Prefetch the resources required by the page, but will not execute js or render t
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URLlength exceeds 2048.<br>**适用版本：** 21 |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URLlength exceeds 2048.<br>**适用版本：** 21 |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URLlength exceeds 2048.<br>**适用版本：** 21+ |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URLlength exceeds 2048.<br>**适用版本：** 21+ |
 
 ## prefetchResource
 
@@ -2545,7 +2545,7 @@ static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>)
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## requestFocus
 
@@ -3104,7 +3104,7 @@ setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCo
 
 | 类型 | 说明 |
 | --- | --- |
-| WebBlanklessErrorCode | 返回接口调用是否成功，具体见[WebBlanklessErrorCode](arkts-arkweb-webblanklesserrorcode-e.md#webblanklesserrorcode)定义。 |
+| WebBlanklessErrorCode | 返回接口调用是否成功，具体见[WebBlanklessErrorCode](arkts-arkweb-webblanklesserrorcode-e.md)定义。 |
 
 **错误码：**
 
@@ -3443,7 +3443,7 @@ setScrollable(enable: boolean, type?: ScrollType): void
 static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 ```
 
-在Web页面场景，设置全局滚动条模式。不显式调用时，默认为 [ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-scrollbarmode-e.md#scrollbarmode)（非常驻滚动条）。 > **说明：** > > - 根据滚动条模式，改变当前应用所有web滚动条模式为常驻滚动条或非常驻滚动条。 > > - 若[forceDisplayScrollBar](@ohos.web.WebAttribute#forcedisplayscrollbar) > 接口与当前接口同时设置，forceDisplayScrollBar接口设置不生效。 > > - 该接口需要在WebViewController绑定Web组件之前调用。
+在Web页面场景，设置全局滚动条模式。不显式调用时，默认为 [ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-scrollbarmode-e.md)（非常驻滚动条）。 > **说明：** > > - 根据滚动条模式，改变当前应用所有web滚动条模式为常驻滚动条或非常驻滚动条。 > > - 若[forceDisplayScrollBar](@ohos.web.WebAttribute#forcedisplayscrollbar) > 接口与当前接口同时设置，forceDisplayScrollBar接口设置不生效。 > > - 该接口需要在WebViewController绑定Web组件之前调用。
 
 **起始版本：** 23
 

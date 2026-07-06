@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cardEmulation } from '@ohos.nfc.cardEmulation';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## hasHceCapability

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from '@ohos.fastbuffer';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## isEncoding

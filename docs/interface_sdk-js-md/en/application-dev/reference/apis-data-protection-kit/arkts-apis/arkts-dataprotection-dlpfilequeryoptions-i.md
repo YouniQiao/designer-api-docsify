@@ -9,7 +9,7 @@ Represents the query options about an enterprise DLP file.
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@ohos.dlpPermission';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## classificationLabel

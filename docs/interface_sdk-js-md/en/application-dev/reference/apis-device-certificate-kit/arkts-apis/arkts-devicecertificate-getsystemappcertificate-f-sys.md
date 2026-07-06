@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@ohos.security.certManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## getSystemAppCertificate
@@ -34,7 +34,7 @@ Obtains the credential details of the system application. This API is called onl
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **credential** in the[CMResult](arkts-devicecertificate-cmresult-i.md#cmresult) object. |
+| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **credential** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

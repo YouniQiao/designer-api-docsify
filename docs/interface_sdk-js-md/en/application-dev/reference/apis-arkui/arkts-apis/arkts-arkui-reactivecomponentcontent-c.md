@@ -1,8 +1,8 @@
 # ReactiveComponentContent
 
-ReactiveComponentContent is inherited from [Content](../../../../reference/apis-arkui/js-apis-arkui-Content.md#content-1) and is a container component used to dynamically bear and reuse UI content. It uses the @Builder function to build the UI and uses [ReactiveBuilderNode](arkts-arkui-reactivebuildernode-c.md#reactivebuildernode) to generate and manage the component tree. The core value of this component is to provide complete lifecycle management for dynamic content so that it can be integrated into the ArkUI component reuse system. This component is especially suitable for scenarios that require high- performance rendering, such as long lists.
+ReactiveComponentContent is inherited from [Content](../../../../reference/apis-arkui/js-apis-arkui-Content.md#content-1) and is a container component used to dynamically bear and reuse UI content. It uses the @Builder function to build the UI and uses [ReactiveBuilderNode](arkts-arkui-reactivebuildernode-c.md) to generate and manage the component tree. The core value of this component is to provide complete lifecycle management for dynamic content so that it can be integrated into the ArkUI component reuse system. This component is especially suitable for scenarios that require high- performance rendering, such as long lists.
 
-**Inheritance/Implementation:** ReactiveComponentContent extends [Content](arkts-arkui-content-c.md#content)
+**Inheritance/Implementation:** ReactiveComponentContent extends [Content](arkts-arkui-content-c.md)
 
 **Since:** 22
 
@@ -71,7 +71,7 @@ Updates **ReactiveComponentContent**. If the bound parameters used in the **buil
 inheritFreezeOptions(enabled: boolean): void
 ```
 
-Checks whether this **ReactiveComponentContent** object inherits the [freeze policy](../arkts-components/arkts-arkui-componentoptions-i.md#componentoptions) from its parent component's custom components. When inheritance is disabled (set to **false**), the **ReactiveComponentContent** object's freeze policy is set to **false**, which means its associated node remains unfrozen even in an inactive state. > **NOTE** > > When **inheritFreezeOptions** is set to **true** for a **ReactiveComponentContent** object, and its parent > component is a custom component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or > **ReactiveComponentContent**, it will inherit the parent component's freeze policy. If the child component is a > custom component, its freeze policy is not transferred to the child component.
+Checks whether this **ReactiveComponentContent** object inherits the [freeze policy](../arkts-components/arkts-arkui-componentoptions-i.md) from its parent component's custom components. When inheritance is disabled (set to **false**), the **ReactiveComponentContent** object's freeze policy is set to **false**, which means its associated node remains unfrozen even in an inactive state. > **NOTE** > > When **inheritFreezeOptions** is set to **true** for a **ReactiveComponentContent** object, and its parent > component is a custom component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or > **ReactiveComponentContent**, it will inherit the parent component's freeze policy. If the child component is a > custom component, its freeze policy is not transferred to the child component.
 
 **Since:** 22
 
@@ -167,7 +167,7 @@ Triggers component reuse for custom components under this **ReactiveComponentCon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | Object | No | Parameter used to reuse[ReactiveComponentContent](arkts-arkui-reactivebuildernode-c.md#reactivebuildernode). This parameter is directly used for reusingall top-level custom components in **ReactiveComponentContent**. It should contain the content required by theconstructor parameters of each custom component. Otherwise, undefined behavior may occur. Calling this methodsynchronously triggers the[aboutToReuse](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10)lifecycle callback of internal custom components, with this parameter as the callback input. The default valueis undefined. In this case, the custom component in ReactiveComponentContent directly uses the data sourceduring construction. |
+| param | Object | No | Parameter used to reuse[ReactiveComponentContent](arkts-arkui-reactivebuildernode-c.md). This parameter is directly used for reusingall top-level custom components in **ReactiveComponentContent**. It should contain the content required by theconstructor parameters of each custom component. Otherwise, undefined behavior may occur. Calling this methodsynchronously triggers the[aboutToReuse](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10)lifecycle callback of internal custom components, with this parameter as the callback input. The default valueis undefined. In this case, the custom component in ReactiveComponentContent directly uses the data sourceduring construction. |
 
 ## updateConfiguration
 
@@ -175,7 +175,7 @@ Triggers component reuse for custom components under this **ReactiveComponentCon
 updateConfiguration(): void
 ```
 
-Updates the configuration of the entire node by passing in a [system environment change](../../apis-ability-kit/arkts-apis/arkts-ability-configuration-i.md#configuration) event. This event can be used to notify the object of the update. Whether the system environment used by the object is updated depends on the current system environment change of the application.
+Updates the configuration of the entire node by passing in a [system environment change](../../apis-ability-kit/arkts-apis/arkts-ability-configuration-i.md) event. This event can be used to notify the object of the update. Whether the system environment used by the object is updated depends on the current system environment change of the application.
 
 **Since:** 22
 

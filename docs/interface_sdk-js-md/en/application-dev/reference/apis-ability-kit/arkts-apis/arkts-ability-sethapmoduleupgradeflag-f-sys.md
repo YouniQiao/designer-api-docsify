@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { freeInstall } from '@ohos.bundle.freeInstall';
+import { freeInstall } from '@kit.AbilityKit';
 ```
 
 ## setHapModuleUpgradeFlag
@@ -30,7 +30,7 @@ Sets an upgrade flag for a module. This API uses an asynchronous callback to ret
 | bundleName | string | Yes | Bundle name. |
 | moduleName | string | Yes | Module name. |
 | upgradeFlag | UpgradeFlag | Yes | Upgrade flag, which is for internal use only. |
-| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md#asynccallback) used to return the result. Ifthe operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. Ifthe operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

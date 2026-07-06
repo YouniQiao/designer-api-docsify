@@ -210,7 +210,7 @@ disappearTextStyle(style: Optional<PickerTextStyle>)
 disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与 [disappearTextStyle](TextPickerAttribute#disappearTextStyle(style: Optional<PickerTextStyle>))<sup>18+</sup> 相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md#textpickertextstyle)类型的支持。
+设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与 [disappearTextStyle](TextPickerAttribute#disappearTextStyle(style: Optional<PickerTextStyle>))<sup>18+</sup> 相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)类型的支持。
 
 **起始版本：** 20
 
@@ -232,7 +232,7 @@ disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 divider(value: DividerOptions | null)
 ```
 
-设置分割线样式，不设置该属性则按“默认值”展示分割线。 [DividerOptions](arkts-arkui-divideroptions-i.md#divideroptions)中startMargin + endMargin 超过组件宽度后，startMargin和endMargin会被置0。
+设置分割线样式，不设置该属性则按“默认值”展示分割线。 [DividerOptions](arkts-arkui-divideroptions-i.md)中startMargin + endMargin 超过组件宽度后，startMargin和endMargin会被置0。
 
 **起始版本：** 12
 
@@ -254,7 +254,7 @@ divider(value: DividerOptions | null)
 divider(textDivider: Optional<DividerOptions | null>)
 ```
 
-设置分割线样式，不设置该属性则按“默认值”展示分割线。与 [divider<sup>12+</sup>](TextPickerAttribute#divider(value: DividerOptions | null))相比，textDivider参数新增了对 undefined类型的支持。 [DividerOptions](arkts-arkui-divideroptions-i.md#divideroptions)中startMargin + endMargin 超过组件宽度后，startMargin和endMargin会被置0。
+设置分割线样式，不设置该属性则按“默认值”展示分割线。与 [divider<sup>12+</sup>](TextPickerAttribute#divider(value: DividerOptions | null))相比，textDivider参数新增了对 undefined类型的支持。 [DividerOptions](arkts-arkui-divideroptions-i.md)中startMargin + endMargin 超过组件宽度后，startMargin和endMargin会被置0。
 
 **起始版本：** 18
 
@@ -268,7 +268,7 @@ divider(textDivider: Optional<DividerOptions | null>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textDivider | Optional&lt;DividerOptions \| null&gt; | 是 | 默认值：<br/>{<br/>strokeWidth: '2px', <br/>startMargin: 0,<br/>endMargin: 0, <br/>color: '#33000000'<br/>}<br/>1. 当textDivider的值为undefined时，使用默认值。<br/>2. 当textDivider设置为有效的[DividerOptions](arkts-arkui-divideroptions-i.md#divideroptions)时，按设置的样式显示分割线。<br/>3. 当textDivider设置为null时，不显示分割线。 |
+| textDivider | Optional&lt;DividerOptions \| null&gt; | 是 | 默认值：<br/>{<br/>strokeWidth: '2px', <br/>startMargin: 0,<br/>endMargin: 0, <br/>color: '#33000000'<br/>}<br/>1. 当textDivider的值为undefined时，使用默认值。<br/>2. 当textDivider设置为有效的[DividerOptions](arkts-arkui-divideroptions-i.md)时，按设置的样式显示分割线。<br/>3. 当textDivider设置为null时，不显示分割线。 |
 
 ## enableHapticFeedback
 
@@ -512,7 +512,7 @@ selectedBackgroundStyle(style: Optional<PickerBackgroundStyle>)
 selectedIndex(value: number | number[])
 ```
 
-设置选中项在数据选择列表中的索引值，优先级高于[TextPickerOptions](arkts-arkui-textpickeroptions-i.md#textpickeroptions)中的"value"属性。 单列数据选择器使用number类型。多列数据选择器使用number[]类型。
+设置选中项在数据选择列表中的索引值，优先级高于[TextPickerOptions](arkts-arkui-textpickeroptions-i.md)中的"value"属性。 单列数据选择器使用number类型。多列数据选择器使用number[]类型。
 
 **起始版本：** 10
 
@@ -534,7 +534,7 @@ selectedIndex(value: number | number[])
 selectedIndex(index: Optional<number | number[]>)
 ```
 
-设置选中项在数据选择列表中的索引值，优先级高于[TextPickerOptions](arkts-arkui-textpickeroptions-i.md#textpickeroptions)中的"value"属性。 单列数据选择器使用number类型，多列数据选择器使用number[]类型。与[selectedIndex<sup>10+</sup>] {@link TextPickerAttribute#selectedIndex(value: number | number[])}相比，index参数新增了对undefined类型的支持。
+设置选中项在数据选择列表中的索引值，优先级高于[TextPickerOptions](arkts-arkui-textpickeroptions-i.md)中的"value"属性。 单列数据选择器使用number类型，多列数据选择器使用number[]类型。与[selectedIndex<sup>10+</sup>] {@link TextPickerAttribute#selectedIndex(value: number | number[])}相比，index参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -548,7 +548,7 @@ selectedIndex(index: Optional<number | number[]>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | Optional&lt;number \| number[]&gt; | 是 | 选中项在数据选择列表中的索引值，索引从0开始。<br/>默认值：0<br/>当index的值为undefined时，使用[TextPickerOptions](arkts-arkui-textpickeroptions-i.md#textpickeroptions)中的selected值。<br/>当index的值为负数或者超过数据选择列表的最大索引值时，使用默认值。<br/> |
+| index | Optional&lt;number \| number[]&gt; | 是 | 选中项在数据选择列表中的索引值，索引从0开始。<br/>默认值：0<br/>当index的值为undefined时，使用[TextPickerOptions](arkts-arkui-textpickeroptions-i.md)中的selected值。<br/>当index的值为负数或者超过数据选择列表的最大索引值时，使用默认值。<br/> |
 
 ## selectedTextStyle
 
@@ -600,7 +600,7 @@ selectedTextStyle(style: Optional<PickerTextStyle>)
 selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-设置选中项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与 [selectedTextStyle](TextPickerAttribute#selectedTextStyle(style: Optional<PickerTextStyle>))<sup>18+</sup> 相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md#textpickertextstyle)类型的支持。
+设置选中项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与 [selectedTextStyle](TextPickerAttribute#selectedTextStyle(style: Optional<PickerTextStyle>))<sup>18+</sup> 相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)类型的支持。
 
 **起始版本：** 20
 
@@ -666,7 +666,7 @@ textStyle(style: Optional<PickerTextStyle>)
 textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与 [textStyle](TextPickerAttribute#textStyle(style: Optional<PickerTextStyle>))<sup>18+</sup>相比， style参数新增了对[TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md#textpickertextstyle)类型的支持。
+设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与 [textStyle](TextPickerAttribute#textStyle(style: Optional<PickerTextStyle>))<sup>18+</sup>相比， style参数新增了对[TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)类型的支持。
 
 **起始版本：** 20
 

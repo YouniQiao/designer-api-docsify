@@ -11,7 +11,7 @@ Definition of an OS account sub-profile.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@ohos.account.osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## distributedInfo

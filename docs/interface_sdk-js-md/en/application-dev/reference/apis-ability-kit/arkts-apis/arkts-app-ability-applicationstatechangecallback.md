@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ApplicationStateChangeCallback } from '@ohos.app.ability.ApplicationStateChangeCallback';
+import { ApplicationStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

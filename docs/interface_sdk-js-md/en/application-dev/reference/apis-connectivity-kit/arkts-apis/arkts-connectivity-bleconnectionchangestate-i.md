@@ -9,7 +9,7 @@ Describes the Gatt profile connection state.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@ohos.bluetooth.ble';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## deviceId

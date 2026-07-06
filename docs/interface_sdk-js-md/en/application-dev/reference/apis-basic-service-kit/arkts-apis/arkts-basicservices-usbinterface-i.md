@@ -1,6 +1,6 @@
 # USBInterface
 
-Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbconfiguration-i.md#usbconfiguration) object can contain multiple * *USBInterface** instances, each providing a specific function.
+Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbconfiguration-i.md) object can contain multiple * *USBInterface** instances, each providing a specific function.
 
 **Since:** 9
 
@@ -9,7 +9,7 @@ Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbconfig
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@ohos.usbManager';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## alternateSetting

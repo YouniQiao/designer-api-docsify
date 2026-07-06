@@ -11,7 +11,7 @@ Provides callbacks for IDM.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@ohos.account.osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onAcquireInfo

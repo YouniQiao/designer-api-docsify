@@ -9,7 +9,7 @@ Provides extended methods to operate or manage Wi-Fi. <p>The APIs involved in th
 ## Modules to Import
 
 ```TypeScript
-import { wifiManagerExt } from '@ohos.wifiManagerExt';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

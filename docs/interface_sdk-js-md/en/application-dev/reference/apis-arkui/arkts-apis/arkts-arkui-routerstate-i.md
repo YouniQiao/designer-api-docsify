@@ -13,7 +13,7 @@ Defines the state of router.
 ## Modules to Import
 
 ```TypeScript
-import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from '@system.router';
+import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from '@kit.ArkUI';
 ```
 
 ## index

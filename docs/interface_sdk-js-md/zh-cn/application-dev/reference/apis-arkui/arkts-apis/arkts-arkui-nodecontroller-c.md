@@ -66,7 +66,7 @@ aboutToResize?(size: Size): void
 abstract makeNode(uiContext: UIContext): FrameNode | null
 ```
 
-当实例绑定的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)创建的时候进行回调。回调方法将返回一个节点，将该节点挂载至[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)。 或者可以通过NodeController的rebuild()方法进行回调的触发。 > **说明：** > > [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)不支持跨实例复用。如果出现跨实例复用[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)，传入 > [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)的[NodeController](arkts-arkui-nodecontroller-c.md#nodecontroller)触发 > [makeNode](arkts-arkui-nodecontroller-c.md#makenode-1)回调方法时，入参中的[UIContext](arkts-arkui-uicontext.md)对象可能为undefined，此时需要开发者 > 判断入参中的[UIContext](arkts-arkui-uicontext.md)对象是否为undefined，防止后续使用此入参时出现 > [UIContext无效的JS异常](../../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
+当实例绑定的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)创建的时候进行回调。回调方法将返回一个节点，将该节点挂载至[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)。 或者可以通过NodeController的rebuild()方法进行回调的触发。 > **说明：** > > [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)不支持跨实例复用。如果出现跨实例复用[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)，传入 > [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)的[NodeController](arkts-arkui-nodecontroller-c.md)触发 > [makeNode](arkts-arkui-nodecontroller-c.md#makenode-1)回调方法时，入参中的[UIContext](arkts-arkui-uicontext.md)对象可能为undefined，此时需要开发者 > 判断入参中的[UIContext](arkts-arkui-uicontext.md)对象是否为undefined，防止后续使用此入参时出现 > [UIContext无效的JS异常](../../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
 
 **起始版本：** 11
 

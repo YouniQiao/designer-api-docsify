@@ -9,7 +9,7 @@ The distributedDataObject module provides basic data object management, includin
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@ohos.data.distributedDataObject';
+import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## Summary

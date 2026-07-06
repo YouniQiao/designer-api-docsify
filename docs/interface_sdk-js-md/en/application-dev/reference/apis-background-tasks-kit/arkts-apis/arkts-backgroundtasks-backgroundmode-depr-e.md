@@ -6,7 +6,7 @@ Defines the type of a continuous task.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BackgroundMode](arkts-backgroundtasks-backgroundmode-e.md#backgroundmode)
+**Substitutes:** [BackgroundMode](arkts-backgroundtasks-backgroundmode-e.md)
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

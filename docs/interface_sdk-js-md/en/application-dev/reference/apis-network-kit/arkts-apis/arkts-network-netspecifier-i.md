@@ -9,7 +9,7 @@ Provides an instance that bear data network capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@ohos.net.connection';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## bearerPrivateIdentifier

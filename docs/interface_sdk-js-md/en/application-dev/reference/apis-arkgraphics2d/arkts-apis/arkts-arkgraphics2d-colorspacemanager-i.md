@@ -2,7 +2,7 @@
 
 Implements management of color space objects. Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-create-f.md#create-1) to create a color space manager.
 
-**Inheritance/Implementation:** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-isendable-t.md#isendable)
+**Inheritance/Implementation:** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-isendable-t.md)
 
 **Since:** 12
 
@@ -11,7 +11,7 @@ Implements management of color space objects. Before calling any of the followin
 ## Modules to Import
 
 ```TypeScript
-import { sendableColorSpaceManager } from '@ohos.graphics.sendableColorSpaceManager';
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## getColorSpaceName

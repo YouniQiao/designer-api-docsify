@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FullScreenLaunchComponent } from '@ohos.arkui.advanced.FullScreenLaunchComponent';
+import { FullScreenLaunchComponent } from '@kit.ArkUI';
 ```
 
 ## Summary

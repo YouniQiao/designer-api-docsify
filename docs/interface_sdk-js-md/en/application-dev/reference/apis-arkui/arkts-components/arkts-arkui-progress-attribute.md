@@ -14,7 +14,7 @@ In addition to the [universal attributes](../../../../reference/apis-arkui/arkui
 color(value: ResourceColor | LinearGradient)
 ```
 
-Sets the foreground color of the progress indicator. Since API version 10, [LinearGradient](arkts-arkui-lineargradient-i.md#lineargradient) can be used to set a gradient color for the ring style. Setting opacity is not recommended for the ring type. If opacity is required, use [DataPanel](arkts-arkui-datapanel.md). Since API version 23, [LinearGradient](arkts-arkui-lineargradient-i.md#lineargradient) can be used to set gradient colors for the linear and capsule styles. In API version 22 and earlier versions, setting gradient colors via **LinearGradient** for the **Linear** and **Capsule** styles will not render the custom colors; the system's default theme colors will be used instead.
+Sets the foreground color of the progress indicator. Since API version 10, [LinearGradient](arkts-arkui-lineargradient-i.md) can be used to set a gradient color for the ring style. Setting opacity is not recommended for the ring type. If opacity is required, use [DataPanel](arkts-arkui-datapanel.md). Since API version 23, [LinearGradient](arkts-arkui-lineargradient-i.md) can be used to set gradient colors for the linear and capsule styles. In API version 22 and earlier versions, setting gradient colors via **LinearGradient** for the **Linear** and **Capsule** styles will not render the custom colors; the system's default theme colors will be used instead.
 
 **Since:** 7
 

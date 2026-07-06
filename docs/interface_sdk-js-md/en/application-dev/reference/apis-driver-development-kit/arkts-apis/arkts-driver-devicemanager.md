@@ -9,7 +9,7 @@ The **deviceManager** module provides APIs for managing peripheral devices, incl
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@ohos.driver.deviceManager';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## Summary
@@ -52,8 +52,8 @@ import { deviceManager } from '@ohos.driver.deviceManager';
 | --- | --- |
 | [DeviceInfo](arkts-driverdevelopment-deviceinfo-i-sys.md) | Defines the detailed information about a device. |
 | [DriverInfo](arkts-driverdevelopment-driverinfo-i-sys.md) | Defines detailed information about a driver. |
-| [USBDeviceInfo](arkts-driverdevelopment-usbdeviceinfo-i-sys.md) | Defines detailed information about the USB device. It is inherited from [DeviceInfo](arkts-driverdevelopment-deviceinfo-i-sys.md#deviceinfo). |
-| [USBDriverInfo](arkts-driverdevelopment-usbdriverinfo-i-sys.md) | Defines detailed information about the USB device driver. It is inherited from [DriverInfo](arkts-driverdevelopment-driverinfo-i-sys.md#driverinfo). |
+| [USBDeviceInfo](arkts-driverdevelopment-usbdeviceinfo-i-sys.md) | Defines detailed information about the USB device. It is inherited from [DeviceInfo](arkts-driverdevelopment-deviceinfo-i-sys.md). |
+| [USBDriverInfo](arkts-driverdevelopment-usbdriverinfo-i-sys.md) | Defines detailed information about the USB device driver. It is inherited from [DriverInfo](arkts-driverdevelopment-driverinfo-i-sys.md). |
 | [USBInterfaceDesc](arkts-driverdevelopment-usbinterfacedesc-i-sys.md) | Defines the interface descriptor of a USB device. |
 <!--DelEnd-->
 

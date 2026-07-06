@@ -9,7 +9,7 @@ Provides the number formatting capability, supporting automatic unit conversion 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@ohos.i18n';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor

@@ -13,7 +13,7 @@ Defines the options of ShowToast.
 ## Modules to Import
 
 ```TypeScript
-import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from '@system.prompt';
+import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from '@kit.ArkUI';
 ```
 
 ## bottom

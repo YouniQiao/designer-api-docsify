@@ -126,7 +126,7 @@ The ability exits due to system performance problems, for example, insufficient 
 RESOURCE_CONTROL = 7
 ```
 
-The ability exits due to improper use of system resources. The specific error cause can be obtained through [LaunchParam.lastExitMessage](arkts-ability-launchparam-i.md#launchparam). The possible causes are as follows: - **CPU Highload**: The CPU load is high. - **CPU_EXT Highload**: A fast CPU load detection is carried out. - **IO Manage Control**: An I/O management and control operation is carried out. - **App Memory Deterioration**: The application memory usage exceeds the threshold. - **Temperature Control**: The temperature is too high or too low. - **Memory Pressure**: The system is low on memory, triggering process termination in ascending order of priority.
+The ability exits due to improper use of system resources. The specific error cause can be obtained through [LaunchParam.lastExitMessage](arkts-ability-launchparam-i.md). The possible causes are as follows: - **CPU Highload**: The CPU load is high. - **CPU_EXT Highload**: A fast CPU load detection is carried out. - **IO Manage Control**: An I/O management and control operation is carried out. - **App Memory Deterioration**: The application memory usage exceeds the threshold. - **Temperature Control**: The temperature is too high or too low. - **Memory Pressure**: The system is low on memory, triggering process termination in ascending order of priority.
 
 **Since:** 10
 

@@ -9,7 +9,7 @@ Defines the lazy vertical waterflow layout component.
 ## Modules to Import
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from '@ohos.arkui.components.ArkLazyWaterFlowLayout';
+import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## constructor

@@ -39,17 +39,17 @@ addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid credentialInfo, i.e. authType or authSubType. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12 |
-| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted account.<br>**适用版本：** 12 |
-| 12300020 | Device hardware abnormal.<br>**适用版本：** 23 |
-| 12300090 | Cross-device capability not supported.<br>**适用版本：** 23 |
-| 12300091 | Cross-device communication failed.<br>**适用版本：** 23 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted account.<br>**适用版本：** 12+ |
+| 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
+| 12300090 | Cross-device capability not supported.<br>**适用版本：** 23+ |
+| 12300091 | Cross-device communication failed.<br>**适用版本：** 23+ |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The token is invalid. |
 | [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
 | [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
 | [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation timeout. |
 | [12300115](../../apis-basic-services-kit/errorcode-account.md#12300115-用户认证密码个数达到上限) | The number of credentials reaches the upper limit. |
-| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-凭证复杂度验证失败) | Credential complexity verification failed.<br>**适用版本：** 12 |
+| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-凭证复杂度验证失败) | Credential complexity verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -162,10 +162,10 @@ closeSession(accountId?: number): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types.<br>**适用版本：** 12 |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally.<br>**适用版本：** 12 |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12 |
-| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted account.<br>**适用版本：** 12 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types.<br>**适用版本：** 12+ |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally.<br>**适用版本：** 12+ |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted account.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -344,7 +344,7 @@ getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| 12300020 | Device hardware abnormal.<br>**适用版本：** 23 |
+| 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
 **示例：**
 
@@ -398,7 +398,7 @@ getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid authType. |
-| 12300020 | Device hardware abnormal.<br>**适用版本：** 23 |
+| 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
 **示例：**
 
@@ -458,7 +458,7 @@ getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid authType. |
-| 12300020 | Device hardware abnormal.<br>**适用版本：** 23 |
+| 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
 **示例：**
 
@@ -516,7 +516,7 @@ getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid options. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| 12300020 | Device hardware abnormal.<br>**适用版本：** 23 |
+| 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
 **示例：**
 
@@ -579,7 +579,7 @@ getEnrolledId(authType: AuthType, accountId?: number): Promise<Uint8Array>
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid authType. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| 12300020 | Device hardware abnormal.<br>**适用版本：** 23 |
+| 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
 | [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
 
@@ -816,8 +816,8 @@ openSession(accountId?: number): Promise<Uint8Array>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12 |
-| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted account.<br>**适用版本：** 12 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted account.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -870,13 +870,13 @@ updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid credentialInfo, i.e. authType or authSubType. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
 | [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The token is invalid. |
 | [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
 | [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
 | [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
 | [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
-| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-凭证复杂度验证失败) | Credential complexity verification failed.<br>**适用版本：** 12 |
+| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-凭证复杂度验证失败) | Credential complexity verification failed.<br>**适用版本：** 12+ |
 
 **示例：**
 

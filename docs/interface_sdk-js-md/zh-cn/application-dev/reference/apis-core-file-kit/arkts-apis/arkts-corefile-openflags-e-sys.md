@@ -6,7 +6,7 @@
 
 **废弃版本：** 23
 
-**替代接口：** [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
+**替代接口：** [OpenMode](arkts-corefile-openmode-n.md#openmode)
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -24,7 +24,7 @@ READ = 0o0
 
 **废弃版本：** 23
 
-**替代接口：** [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
+**替代接口：** [OpenMode](arkts-corefile-openmode-n.md#openmode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,7 +44,7 @@ WRITE = 0o1
 
 **废弃版本：** 23
 
-**替代接口：** [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
+**替代接口：** [OpenMode](arkts-corefile-openmode-n.md#openmode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,7 +64,7 @@ WRITE_READ = 0o2
 
 **废弃版本：** 23
 
-**替代接口：** [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
+**替代接口：** [OpenMode](arkts-corefile-openmode-n.md#openmode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

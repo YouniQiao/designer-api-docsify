@@ -9,7 +9,7 @@ Defines the attributes required for initiating a drag action and information car
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@ohos.arkui.dragController';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## autoHideComponentUniqueIds

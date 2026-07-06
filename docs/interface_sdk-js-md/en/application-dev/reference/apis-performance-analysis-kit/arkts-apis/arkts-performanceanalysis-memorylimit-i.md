@@ -9,7 +9,7 @@ Defines the memory limit of the application process.
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@ohos.hidebug';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## rssLimit

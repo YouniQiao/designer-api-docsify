@@ -1,8 +1,8 @@
 # DataPanelShadowOptions
 
-Inherits from [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md#multishadowoptions) and has all properties of **MultiShadowOptions**.
+Inherits from [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) and has all properties of **MultiShadowOptions**.
 
-**Inheritance/Implementation:** DataPanelShadowOptions extends [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md#multishadowoptions)
+**Inheritance/Implementation:** DataPanelShadowOptions extends [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md)
 
 **Since:** 10
 

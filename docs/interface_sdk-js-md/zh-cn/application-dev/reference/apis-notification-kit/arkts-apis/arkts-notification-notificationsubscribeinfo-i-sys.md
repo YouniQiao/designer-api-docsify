@@ -30,7 +30,7 @@ bundleNames?: Array<string>
 deviceType?: string
 ```
 
-设备类型。不传递该参数时，默认订阅当前设备的通知。根据[设备信息](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#deviceinfo)获取。
+设备类型。不传递该参数时，默认订阅当前设备的通知。根据[设备信息](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md)获取。
 
 **类型：** string
 
@@ -64,7 +64,7 @@ enableClassification?: boolean
 filterLimit?: number
 ```
 
-通知过滤范围。默认值为0。取值范围包括： - 0：不进行任何过滤，订阅全部通知。 - 1：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-slottype-e.md#slottype)且 [userInput](arkts-notification-notificationactionbutton-i.md#notificationactionbutton)为空的通知过滤掉。 - 2：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-slottype-e.md#slottype)且 [userInput](arkts-notification-notificationactionbutton-i.md#notificationactionbutton)不为空的通知过滤掉。
+通知过滤范围。默认值为0。取值范围包括： - 0：不进行任何过滤，订阅全部通知。 - 1：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-slottype-e.md)且 [userInput](arkts-notification-notificationactionbutton-i.md)为空的通知过滤掉。 - 2：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-slottype-e.md)且 [userInput](arkts-notification-notificationactionbutton-i.md)不为空的通知过滤掉。
 
 **类型：** number
 

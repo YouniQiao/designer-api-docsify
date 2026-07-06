@@ -11,7 +11,7 @@ Defines the options for obtaining a domain access token.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@ohos.account.osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## businessParams

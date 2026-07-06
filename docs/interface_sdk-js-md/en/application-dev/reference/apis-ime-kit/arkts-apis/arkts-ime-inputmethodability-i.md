@@ -9,7 +9,7 @@ In the following API examples, you must first use [getInputMethodAbility](arkts-
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@ohos.inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## createPanel
@@ -18,7 +18,7 @@ import { inputMethodEngine } from '@ohos.inputMethodEngine';
 createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void
 ```
 
-Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#inputmethodextensionability) class. This API uses an asynchronous callback to return the result. > **NOTE** > > Only one [SOFT_KEYBOARD](arkts-ime-paneltype-e.md#paneltype) panel and one > [STATUS_BAR](arkts-ime-paneltype-e.md#paneltype) panel can be created for a single input method. > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such > as > [window.createWindow](../../apis-arkui/arkts-apis/arkts-arkui-createwindow-f.md#createwindow-1) > , [bindContextMenu](CommonMethod<T>.bindContextMenu), > and [CustomDialog](./@internal/component/ets/custom_dialog_controller). You are advised to adopt > alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-advanced-dialog.md) or > [bindMenu](CommonMethod<T>.bindMenu), or set > **showInSubwindow** to **false**.
+Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses an asynchronous callback to return the result. > **NOTE** > > Only one [SOFT_KEYBOARD](arkts-ime-paneltype-e.md) panel and one > [STATUS_BAR](arkts-ime-paneltype-e.md) panel can be created for a single input method. > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such > as > [window.createWindow](../../apis-arkui/arkts-apis/arkts-arkui-createwindow-f.md#createwindow-1) > , [bindContextMenu](CommonMethod<T>.bindContextMenu), > and [CustomDialog](./@internal/component/ets/custom_dialog_controller). You are advised to adopt > alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-advanced-dialog.md) or > [bindMenu](CommonMethod<T>.bindMenu), or set > **showInSubwindow** to **false**.
 
 **Since:** 10
 
@@ -75,7 +75,7 @@ class InputMethodExt extends InputMethodExtensionAbility {
 createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
-Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#inputmethodextensionability) class. This API uses a promise to return the result. > **NOTE** > > Only one [SOFT_KEYBOARD](arkts-ime-paneltype-e.md#paneltype) panel and one > [STATUS_BAR](arkts-ime-paneltype-e.md#paneltype) panel can be created for a single input method. > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such > as > [window.createWindow](../../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application) > , [bindContextMenu](CommonMethod<T>.bindContextMenu), > and [CustomDialog](./@internal/component/ets/custom_dialog_controller). You are advised to adopt > alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-advanced-dialog.md) or > [bindMenu](CommonMethod<T>.bindMenu), or set > **showInSubwindow** to **false**.
+Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses a promise to return the result. > **NOTE** > > Only one [SOFT_KEYBOARD](arkts-ime-paneltype-e.md) panel and one > [STATUS_BAR](arkts-ime-paneltype-e.md) panel can be created for a single input method. > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such > as > [window.createWindow](../../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application) > , [bindContextMenu](CommonMethod<T>.bindContextMenu), > and [CustomDialog](./@internal/component/ets/custom_dialog_controller). You are advised to adopt > alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-advanced-dialog.md) or > [bindMenu](CommonMethod<T>.bindMenu), or set > **showInSubwindow** to **false**.
 
 **Since:** 10
 

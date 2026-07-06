@@ -2,7 +2,7 @@
 
 - [@ohos.data.cloudData](arkts-data-clouddata.md)
   - [cloudData](arkts-arkdata-clouddata-n.md)
-    - [sharing](arkts-arkdata-clouddata-sharing-sta-n.md)<!--Del-->
+    - [sharing](arkts-arkdata-sharing-n.md)<!--Del-->
       - [allocResourceAndShare(系统接口)](arkts-arkdata-allocresourceandshare-f-sys.md)<!--DelEnd--><!--Del-->
       - [changeConfirmation(系统接口)](arkts-arkdata-changeconfirmation-f-sys.md)<!--DelEnd--><!--Del-->
       - [changePrivilege(系统接口)](arkts-arkdata-changeprivilege-f-sys.md)<!--DelEnd--><!--Del-->

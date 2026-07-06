@@ -9,7 +9,7 @@ The **backgroundProcessManager** module provides APIs for background child proce
 ## Modules to Import
 
 ```TypeScript
-import { backgroundProcessManager } from '@ohos.resourceschedule.backgroundProcessManager';
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

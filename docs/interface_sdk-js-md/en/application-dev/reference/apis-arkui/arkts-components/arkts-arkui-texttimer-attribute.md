@@ -72,7 +72,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceStr | Yes | Font family. The default font is **'HarmonyOS Sans'**.<br>The 'HarmonyOS Sans' fontand [registered custom fonts](../arkts-apis/arkts-font.md#font) are supported for applications.<br>Only the 'HarmonyOSSans' font is supported for widgets. |
+| value | ResourceStr | Yes | Font family. The default font is **'HarmonyOS Sans'**.<br>The 'HarmonyOS Sans' fontand [registered custom fonts](../arkts-apis/arkts-font.md) are supported for applications.<br>Only the 'HarmonyOSSans' font is supported for widgets. |
 
 ## fontSize
 
@@ -138,7 +138,7 @@ Sets the font weight of the text. If the value is too large, the text in differe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| ResourceStr | Yes | Font weight of the text. The value range of the number type is[100, 900]. The value interval is 100. A larger value indicates a wider font. If the value of the number typeis not within the value range, the default value is **400**. The [ResourceStr](arkts-arkui-resourcestr-t.md#resourcestr) type supportsonly strings of the number type, such as **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and**"medium"**, corresponding to the enums in **FontWeight**.<br>Default value: **FontWeight.Normal**<br>TheResource type is supported since API version 20.<br>**Since:** 20 |
+| value | number \| FontWeight \| ResourceStr | Yes | Font weight of the text. The value range of the number type is[100, 900]. The value interval is 100. A larger value indicates a wider font. If the value of the number typeis not within the value range, the default value is **400**. The [ResourceStr](arkts-arkui-resourcestr-t.md) type supportsonly strings of the number type, such as **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and**"medium"**, corresponding to the enums in **FontWeight**.<br>Default value: **FontWeight.Normal**<br>TheResource type is supported since API version 20.<br>**Since:** 20 |
 
 ## format
 

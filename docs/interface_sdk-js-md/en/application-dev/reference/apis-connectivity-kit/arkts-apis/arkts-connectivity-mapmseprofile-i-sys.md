@@ -2,7 +2,7 @@
 
 Manager MAP MSE profile.
 
-**Inheritance/Implementation:** MapMseProfile extends [BaseProfile](arkts-connectivity-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** MapMseProfile extends [BaseProfile](arkts-connectivity-baseprofile-t.md)
 
 **Since:** 11
 
@@ -11,7 +11,7 @@ Manager MAP MSE profile.
 ## Modules to Import
 
 ```TypeScript
-import { map } from '@ohos.bluetooth.map';
+import { map } from '@kit.ConnectivityKit';
 ```
 
 ## disconnect

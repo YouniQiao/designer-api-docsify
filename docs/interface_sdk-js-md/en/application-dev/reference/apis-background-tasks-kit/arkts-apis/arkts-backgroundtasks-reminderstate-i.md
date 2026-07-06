@@ -9,7 +9,7 @@ Defines the agent-powered reminder state information, for which notifications ar
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@ohos.reminderAgentManager';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## buttonType

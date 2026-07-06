@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@ohos.bundle.bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## setAbilityFileTypesForSelf
@@ -28,7 +28,7 @@ Sets the file types that can be opened by the current application.
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name. |
 | abilityName | string | Yes | Name of the UIAbility component. |
-| fileTypes | Array&lt;string&gt; | Yes | Array of file types. The array must contain no more than 1024 elements, andeach element must not exceed 512 characters. Valid values must be from[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformdatatype-e.md#uniformdatatype). Empty values,wildcard characters, and **general.object** are not allowed. |
+| fileTypes | Array&lt;string&gt; | Yes | Array of file types. The array must contain no more than 1024 elements, andeach element must not exceed 512 characters. Valid values must be from[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformdatatype-e.md). Empty values,wildcard characters, and **general.object** are not allowed. |
 
 **Error codes:**
 

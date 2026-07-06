@@ -2,7 +2,7 @@
 
 The mesh instance owned by the mesh node
 
-**Inheritance/Implementation:** Mesh extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md#sceneresource)
+**Inheritance/Implementation:** Mesh extends [SceneResource](arkts-arkgraphics3d-sceneresource-i.md)
 
 **Since:** 12
 
