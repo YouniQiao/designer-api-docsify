@@ -1,0 +1,42 @@
+name: Sync from GitCode
+
+on:
+  schedule:
+    # Beijing time: 10:00, 14:00, 16:00, 20:00, 24:00 (UTC+8)
+    - cron: '0 2,6,8,12,16 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clone gitcode (shallow)
+        run: |
+          git clone --depth 1 --branch master \
+            https://gitcode.com/openharmony_devops/designer-docs.git \
+            /tmp/gitcode-designer
+
+      - name: Sync content to docs
+        run: |
+          rsync -av --delete /tmp/gitcode-designer/interface_sdk-js-md/ docs/interface_sdk-js-md/
+          rsync -av --delete /tmp/gitcode-designer/interface_sdk_c-md/ docs/interface_sdk_c-md/
+
+      - name: Regenerate sidebars
+        run: python3 gen-sidebar.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes from gitcode"
+          else
+            git commit -m "auto: sync from gitcode $(date +%Y-%m-%d)"
+            git push
+            echo "Pushed — Netlify will auto-deploy"
+          fi
