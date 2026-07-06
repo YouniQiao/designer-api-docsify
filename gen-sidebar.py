@@ -208,6 +208,6 @@ def generate_sidebars(sidebar_locale):
     print(f"  {sidebar_locale}: {len(all_kits)} kits, {total_files} apis")
 
 
-for locale in ["en", "zh-CN"]:
+for locale in ["en", "zh-cn"]:
     generate_sidebars(locale)
 print("Done.")

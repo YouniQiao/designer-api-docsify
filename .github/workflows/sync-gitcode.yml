@@ -24,11 +24,6 @@ jobs:
         run: |
           rsync -av --delete /tmp/gitcode-designer/interface_sdk-js-md/ docs/interface_sdk-js-md/
           rsync -av --delete /tmp/gitcode-designer/interface_sdk_c-md/ docs/interface_sdk_c-md/
-          # Normalize locale case: gitcode uses 'zh-cn', Docsify uses 'zh-CN'
-          rm -rf docs/interface_sdk-js-md/zh-CN
-          rm -rf docs/interface_sdk_c-md/zh-CN
-          mv docs/interface_sdk-js-md/zh-cn docs/interface_sdk-js-md/zh-CN
-          mv docs/interface_sdk_c-md/zh-cn docs/interface_sdk_c-md/zh-CN
 
       - name: Regenerate sidebars
         run: python3 gen-sidebar.py
