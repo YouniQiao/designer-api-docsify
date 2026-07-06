@@ -131,7 +131,7 @@
             div.className = 'kit-loaded'; div.textContent = '加载中...';
             targetLi.appendChild(div);
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', '_sidebars/' + kit + '.html');
+            xhr.open('GET', 'zh-CN/_sidebars/' + kit + '.html');
             xhr.onload = function() {
               if (xhr.status === 200) {
                 div.innerHTML = xhr.responseText;
