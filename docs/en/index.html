@@ -131,7 +131,7 @@
             div.className = 'kit-loaded'; div.textContent = 'Loading...';
             targetLi.appendChild(div);
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'en/_sidebars/' + kit + '.html');
+            xhr.open('GET', '_sidebars/' + kit + '.html');
             xhr.onload = function() {
               if (xhr.status === 200) {
                 div.innerHTML = xhr.responseText;
