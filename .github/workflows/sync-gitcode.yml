@@ -2,8 +2,8 @@ name: Sync from GitCode
 
 on:
   schedule:
-    # Beijing time: 10:00, 14:00, 16:00, 20:00, 24:00 (UTC+8)
-    - cron: '0 2,6,8,12,16 * * *'
+    # Beijing time: 24:00 (midnight, UTC+8 → 16:00 UTC)
+    - cron: '0 16 * * *'
   workflow_dispatch:
 
 jobs:
