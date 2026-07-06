@@ -97,6 +97,10 @@
     }
     .top-actions a:hover { background: #3a7bd5; color: #fff; }
     .top-actions a:hover svg { fill: #fff; }
+    /* Gitcode source link */
+    .gitcode-source-link { margin-top: 32px; padding-top: 14px; border-top: 1px solid #e8e8e8; }
+    .gitcode-source-link a { color: #999; font-size: 13px; text-decoration: none; }
+    .gitcode-source-link a:hover { color: #3a7bd5; }
   </style>
 </head>
 <body>
@@ -228,6 +232,29 @@
 
           hook.ready(function() { fixLinks(); detectKit(); });
           hook.doneEach(function() { fixLinks(); detectKit(); });
+        },
+        // Gitcode source link
+        function(hook) {
+          hook.doneEach(function() {
+            // Remove previous link
+            var prev = document.querySelector('.gitcode-source-link');
+            if (prev) prev.remove();
+            // Only for API pages (path contains 'reference')
+            var hash = window.location.hash;
+            if (!hash || !hash.startsWith('#/')) return;
+            var path = hash.substring(2).split('?')[0];
+            if (path.indexOf('/reference/') === -1) return;
+            // Build Gitcode URL
+            var gitcodeBase = 'https://gitcode.com/openharmony_devops/designer-docs/blob/master/';
+            var url = gitcodeBase + path;
+            // Insert after markdown content
+            var section = document.querySelector('.markdown-section');
+            if (!section) return;
+            var link = document.createElement('div');
+            link.className = 'gitcode-source-link';
+            link.innerHTML = '<a href="' + url + '" target="_blank">📄 在 Gitcode 查看源文件</a>';
+            section.appendChild(link);
+          });
         },
         // Right-side page TOC
         function(hook) {
