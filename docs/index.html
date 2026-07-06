@@ -1,38 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>OH API Reference</title>
+  <title>OH API 参考</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #1a1a2e; color: #e0e0e0;
-      display: flex; align-items: center; justify-content: center;
-      min-height: 100vh; text-align: center;
+    .sidebar-nav { font-size: 12px; }
+    .kit-loaded { margin: 4px 0 0 12px; }
+    .tree-section { margin-bottom: 8px; }
+    .tree-section details { margin: 0; }
+    .tree-section-label {
+      display: block; margin: 4px 0 2px 0;
+      font-size: 12px; font-weight: 600; color: #3a7bd5;
+      cursor: pointer; list-style: none;
     }
-    .container { max-width: 500px; padding: 40px 20px; }
-    h1 { font-size: 32px; margin-bottom: 10px; color: #6c8cff; }
-    p { font-size: 16px; color: #999; margin-bottom: 40px; }
-    .links { display: flex; gap: 20px; justify-content: center; }
-    .btn {
-      display: block; padding: 16px 40px;
-      background: #16213e; border: 1px solid #6c8cff;
-      color: #6c8cff; text-decoration: none; border-radius: 8px;
-      font-size: 18px; transition: all 0.2s;
+    .tree-section-label::-webkit-details-marker { display: none; }
+    .tree-section-label::marker { display: none; content: ''; }
+    .tree-count { font-weight: 400; color: #999; font-size: 11px; }
+    .tree-l1 { list-style: none; padding: 0; margin: 0; }
+    .tree-l1 > li { padding: 2px 0; }
+    .tree-l1 > li > a { color: #444; font-size: 12px; text-decoration: none; }
+    .tree-l1 > li > a:hover { color: #3a7bd5; }
+    .tree-l1 details { margin: 0; }
+    .tree-l1 summary { cursor: pointer; list-style: none; color: #444; font-size: 12px; display: flex; align-items: center; gap: 4px; }
+    .tree-l1 summary:hover { color: #3a7bd5; }
+    .tree-l1 summary::-webkit-details-marker { display: none; }
+    .tree-l1 summary::marker { display: none; content: ''; }
+    .tree-nav { color: #aaa; text-decoration: none; font-size: 10px; margin-left: 2px; }
+    .tree-nav:hover { color: #3a7bd5; }
+    .tree-l2 { list-style: none; padding: 0 0 0 14px; margin: 0 0 0 5px; border-left: 1px solid #ddd; }
+    .tree-l2 > li { padding: 1px 0; }
+    .tree-l2 > li > a { color: #555; font-size: 11px; text-decoration: none; }
+    .tree-l2 > li > a:hover { color: #3a7bd5; }
+    .tree-l2 details { margin: 0; }
+    .tree-l2 summary { cursor: pointer; list-style: none; color: #555; font-size: 11px; }
+    .tree-l2 summary:hover { color: #3a7bd5; }
+    .tree-l2 summary::-webkit-details-marker { display: none; }
+    .tree-l2 summary::marker { display: none; content: ''; }
+    .tree-l3 { list-style: none; padding: 0 0 0 14px; margin: 0 0 0 5px; border-left: 1px solid #e0e0e0; }
+    .tree-l3 > li { padding: 1px 0; }
+    .tree-l3 > li > a { color: #666; font-size: 10px; text-decoration: none; }
+    .tree-l3 > li > a:hover { color: #3a7bd5; }
+    .tree-l3 details { margin: 0; }
+    .tree-l3 summary { cursor: pointer; list-style: none; color: #666; font-size: 10px; }
+    .tree-l3 summary:hover { color: #3a7bd5; }
+    .tree-l3 summary::-webkit-details-marker { display: none; }
+    .tree-l3 summary::marker { display: none; content: ''; }
+    .tree-l4 { list-style: none; padding: 0 0 0 14px; margin: 0 0 0 5px; border-left: 1px solid #eee; }
+    .tree-l4 > li { padding: 0; }
+    .tree-l4 > li > a { color: #777; font-size: 10px; text-decoration: none; }
+    .tree-l4 > li > a:hover { color: #3a7bd5; }
+    .tree-current { font-weight: 700; color: #3a7bd5 !important; background: rgba(58,123,213,0.10); border-radius: 3px; padding: 1px 4px; margin-left: -4px; }
+    .tree-current.tree-nav { font-weight: 700; color: #3a7bd5 !important; }
+    /* Right-side TOC */
+    .app-sub-sidebar { border-left: 1px solid #e0e0e0; padding-left: 12px; }
+    .app-sub-sidebar li { font-size: 12px; line-height: 1.8; }
+    .app-sub-sidebar li a { color: #666; text-decoration: none; }
+    .app-sub-sidebar li a:hover { color: #3a7bd5; }
+    .app-sub-sidebar li.active > a { color: #3a7bd5; font-weight: 600; }
+    .app-sub-sidebar .app-sub-sidebar { border-left: none; padding-left: 8px; }
+    .app-sub-sidebar .app-sub-sidebar li { font-size: 11px; }
+    .sidebar-nav .app-sub-sidebar { display: none; }
+    /* Right-side page TOC */
+    #page-toc {
+      position: fixed; right: 24px; top: 80px; width: 220px; z-index: 100;
+      max-height: calc(100vh - 120px); overflow-y: auto;
+      background: rgba(255,255,255,0.92); border: 1px solid #ddd;
+      border-radius: 6px; padding: 12px 14px;
     }
-    .btn:hover { background: #6c8cff; color: #fff; }
+    #page-toc .toc-title { font-size: 13px; font-weight: 600; color: #555; margin-bottom: 0; padding-bottom: 6px; border-bottom: 1px solid #e0e0e0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+    #page-toc .toc-title:hover { color: #333; }
+    #page-toc .toc-toggle { font-size: 10px; color: #aaa; transition: transform 0.2s; }
+    #page-toc.collapsed .toc-toggle { transform: rotate(-90deg); }
+    #page-toc.collapsed .toc-title { border-bottom: none; padding-bottom: 0; }
+    #page-toc .toc-body { transition: max-height 0.3s ease; overflow: hidden; }
+    #page-toc.collapsed .toc-body { max-height: 0 !important; }
+    #page-toc ul { list-style: none; padding: 0; margin: 0; }
+    #page-toc li { font-size: 12px; line-height: 2; }
+    #page-toc li a { color: #666; text-decoration: none; display: block; border-radius: 3px; padding: 0 6px; }
+    #page-toc li a:hover { color: #3a7bd5; background: rgba(58,123,213,0.08); }
+    #page-toc li.toc-active > a { color: #3a7bd5; font-weight: 600; background: rgba(58,123,213,0.12); }
+    #page-toc ul ul { padding-left: 12px; }
+    #page-toc ul ul li { font-size: 11px; }
+    /* Top-right actions: GitHub + language switch */
+    .top-actions {
+      position: fixed; top: 16px; right: 24px; z-index: 200;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .top-actions a {
+      font-size: 12px; font-weight: 600; color: #3a7bd5;
+      text-decoration: none; padding: 3px 10px;
+      border: 1px solid #3a7bd5; border-radius: 4px;
+      background: rgba(255,255,255,0.92);
+      display: flex; align-items: center; gap: 4px;
+    }
+    .top-actions a:hover { background: #3a7bd5; color: #fff; }
+    .top-actions a:hover svg { fill: #fff; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>OH API Reference</h1>
-    <p>HarmonyOS API Reference Documentation</p>
-    <div class="links">
-      <a class="btn" href="/en/">English</a>
-      <a class="btn" href="/zh-CN/">中文</a>
-    </div>
-  </div>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'OH API 参考', nameLink: '#/',
+      loadSidebar: 'zh-CN/_sidebar.md', basePath: '/',
+      subMaxLevel: 0, auto2top: true,
+      search: { maxAge: 86400000, paths: 'auto', placeholder: '搜索...', noData: '无结果', depth: 6 },
+      themeColor: '#6c8cff',
+      plugins: [
+        function(hook) {
+          var activeKit = null, loadingKit = null;
+
+          function injectKitSidebar(kit) {
+            if (loadingKit === kit) return;
+            loadingKit = kit;
+            var existing = document.querySelector('.kit-loaded');
+            if (kit === activeKit && existing) { expandPathToCurrent(); return; }
+            if (existing && kit !== activeKit) existing.remove();
+            if (!kit) { activeKit = null; loadingKit = null; return; }
+            var items = document.querySelectorAll('.sidebar-nav > ul > li');
+            var targetLi = null;
+            items.forEach(function(li) {
+              var a = li.querySelector('a');
+              if (a && a.href && a.href.indexOf('/apis-' + kit + '/') !== -1) targetLi = li;
+            });
+            if (!targetLi) { loadingKit = null; return; }
+            var div = document.createElement('div');
+            div.className = 'kit-loaded'; div.textContent = '加载中...';
+            targetLi.appendChild(div);
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '_sidebars/' + kit + '.html');
+            xhr.onload = function() {
+              if (xhr.status === 200) {
+                div.innerHTML = xhr.responseText;
+                activeKit = kit;
+                expandPathToCurrent();
+              } else { div.textContent = ''; }
+              loadingKit = null;
+            };
+            xhr.onerror = function() { div.textContent = ''; loadingKit = null; };
+            xhr.send();
+          }
+
+          function detectKit() {
+            var hash = window.location.hash;
+            if (!hash || !hash.startsWith('#/')) { injectKitSidebar(null); return; }
+            var parts = hash.substring(2).split('/');
+            var refIdx = parts.indexOf('reference');
+            if (refIdx === -1) { injectKitSidebar(null); return; }
+            var apiDir = parts[refIdx + 1];
+            if (!apiDir || !apiDir.startsWith('apis-')) { injectKitSidebar(null); return; }
+            injectKitSidebar(apiDir.replace('apis-', ''));
+          }
+
+          function expandPathToCurrent() {
+            var hash = window.location.hash;
+            if (!hash || !hash.startsWith('#/')) return;
+            var p = hash.substring(2).split('?')[0];
+            // Clear previous highlight
+            var prev = document.querySelector('.tree-current');
+            if (prev) prev.classList.remove('tree-current');
+            // Find the link (prefer text links over nav arrows)
+            var link = document.querySelector('.kit-loaded a:not(.tree-nav)[href="#/' + p + '"]')
+                    || document.querySelector('.kit-loaded a:not(.tree-nav)[href="#/' + p + '.md"]')
+                    || document.querySelector('.kit-loaded a[href="#/' + p + '"]')
+                    || document.querySelector('.kit-loaded a[href="#/' + p + '.md"]');
+            if (!link) return;
+            // Highlight the row: if link is a tree-nav, highlight its parent <summary>;
+            // otherwise highlight the link itself
+            var target = link.classList.contains('tree-nav') ? link.closest('summary') : link;
+            target.classList.add('tree-current');
+            // Expand parent details
+            var el = link.closest('details');
+            while (el) {
+              el.open = true;
+              el = el.parentElement.closest('details');
+            }
+            // Scroll into view
+            setTimeout(function() { target.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }, 100);
+          }
+
+          function fixLinks() {
+            var hash = window.location.hash;
+            if (!hash || !hash.startsWith('#/')) return;
+            var p = hash.substring(2).split('?')[0];
+            var dir = p.substring(0, p.lastIndexOf('/'));
+            if (!dir) return;
+            document.querySelectorAll('.markdown-section a').forEach(function(a) {
+              var h = a.getAttribute('href');
+              if (!h || !h.startsWith('#/') || h.startsWith('#/http')) return;
+              var cp = h.substring(2).split('?')[0];
+              if (cp.indexOf('/') === -1) a.setAttribute('href', '#/' + dir + '/' + h.substring(2));
+            });
+          }
+
+          hook.ready(function() { fixLinks(); detectKit(); });
+          hook.doneEach(function() { fixLinks(); detectKit(); });
+        },
+        // Right-side page TOC
+        function(hook) {
+          var toc = null, hasObserved = false;
+          function buildToc() {
+            var headings = document.querySelectorAll('.markdown-section h2, .markdown-section h3, .markdown-section h4');
+            if (!toc) {
+              toc = document.createElement('div'); toc.id = 'page-toc';
+              toc.innerHTML = '<div class="toc-title">本页目录 <span class="toc-toggle">&#9660;</span></div><div class="toc-body"></div>';
+              toc.querySelector('.toc-title').addEventListener('click', function() {
+                toc.classList.toggle('collapsed');
+              });
+              document.body.appendChild(toc);
+            }
+            var body = toc.querySelector('.toc-body');
+            if (!headings.length) { body.innerHTML = ''; return; }
+            var html = ['<ul>'];
+            var levelStack = [1];  // current ul nesting: 1=h2, 2=h3, 3=h4
+            headings.forEach(function(h) {
+              var tocLevel = parseInt(h.tagName[1]) - 1;  // h2→1, h3→2, h4→3
+              var text = h.textContent || h.innerText;
+              var id = h.id || '';
+              var top = levelStack[levelStack.length-1];
+              if (tocLevel > top) {
+                html.push('<ul>'); levelStack.push(tocLevel);
+              } else {
+                while (levelStack[levelStack.length-1] > tocLevel) {
+                  html.push('</li></ul>'); levelStack.pop();
+                }
+                if (levelStack[levelStack.length-1] === tocLevel) html.push('</li>');
+              }
+              html.push('<li><a href="#?" data-anchor="' + id + '">' + text + '</a>');
+            });
+            while (levelStack.length > 1) { html.push('</li></ul>'); levelStack.pop(); }
+            html.push('</li></ul>');
+            body.innerHTML = html.join('');
+            toc.querySelectorAll('a').forEach(function(a) {
+              a.addEventListener('click', function(e) {
+                e.preventDefault();
+                var el = document.getElementById(a.dataset.anchor);
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              });
+            });
+            if (!hasObserved && window.IntersectionObserver) {
+              hasObserved = true;
+              var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(e) {
+                  var a = toc.querySelector('a[data-anchor="' + e.target.id + '"]');
+                  if (a) a.parentElement.classList.toggle('toc-active', e.isIntersecting);
+                });
+              }, { rootMargin: '-60px 0px -80% 0px' });
+              headings.forEach(function(h) { if (h.id) observer.observe(h); });
+            }
+          }
+          hook.doneEach(function() { setTimeout(buildToc, 200); });
+        },
+        // Top-right actions: GitHub + language switch (Chinese → English)
+        function(hook) {
+          hook.ready(function() {
+            var svg = '<svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>';
+            var div = document.createElement('div');
+            div.className = 'top-actions';
+            div.innerHTML = '<a href="/en/">EN</a><a href="https://github.com/YouniQiao/designer-api-docsify" target="_blank">' + svg + '</a>';
+            document.body.appendChild(div);
+          });
+        }
+      ],
+    };
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>
