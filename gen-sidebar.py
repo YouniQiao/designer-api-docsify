@@ -6,9 +6,9 @@ No Unicode tree characters — pure HTML <ul>/<li> with border-left for visual h
 Root _sidebar.md: Kit-level only.
 Per-kit _sidebars/{kit}.html: Nested HTML lists.
 """
-import os, re
+import os, re, sys
 
-DOCS = "/Users/hhxi/designer-docsify/docs"
+DOCS = os.environ.get("DOCS_DIR", os.path.join(os.path.dirname(os.path.abspath(__file__)), "docs"))
 
 JS_SDK = "interface_sdk-js-md"
 C_SDK = "interface_sdk_c-md"
@@ -144,12 +144,12 @@ def collect_kits(sdk_dir, locale):
     return kits
 
 
-def generate_sidebars(locale):
-    js_kits = collect_kits(JS_SDK, locale)
-    c_kits = collect_kits(C_SDK, locale)
+def generate_sidebars(sidebar_locale):
+    js_kits = collect_kits(JS_SDK, sidebar_locale)
+    c_kits = collect_kits(C_SDK, sidebar_locale)
     all_kits = sorted(set(list(js_kits.keys()) + list(c_kits.keys())))
 
-    sidebar_dir = os.path.join(DOCS, locale, "_sidebars")
+    sidebar_dir = os.path.join(DOCS, sidebar_locale, "_sidebars")
     os.makedirs(sidebar_dir, exist_ok=True)
 
     root_lines = []
@@ -166,7 +166,7 @@ def generate_sidebars(locale):
             kit_dir = js_kits[kit]
             readme = find_readme(kit_dir, "arkts-apis")
             if readme:
-                base_path = f"{JS_SDK}/{locale}/{REF_PATH}/apis-{kit}/arkts-apis"
+                base_path = f"{JS_SDK}/{sidebar_locale}/{REF_PATH}/apis-{kit}/arkts-apis"
                 entries = parse_readme_hierarchy(readme)
                 tree_html, fl, cnt = build_html_nested(entries, base_path)
                 if tree_html:
@@ -180,7 +180,7 @@ def generate_sidebars(locale):
             kit_dir = c_kits[kit]
             readme = find_readme(kit_dir, "c-apis")
             if readme:
-                base_path = f"{C_SDK}/{locale}/{REF_PATH}/apis-{kit}/c-apis"
+                base_path = f"{C_SDK}/{sidebar_locale}/{REF_PATH}/apis-{kit}/c-apis"
                 entries = parse_readme_hierarchy(readme)
                 tree_html, fl, cnt = build_html_nested(entries, base_path)
                 if tree_html:
@@ -202,10 +202,10 @@ def generate_sidebars(locale):
         total_files += kit_file_count
 
     # Write root _sidebar.md
-    with open(os.path.join(DOCS, locale, "_sidebar.md"), 'w') as f:
+    with open(os.path.join(DOCS, sidebar_locale, "_sidebar.md"), 'w') as f:
         f.write('\n'.join(root_lines))
 
-    print(f"  {locale}: {len(all_kits)} kits, {total_files} apis")
+    print(f"  {sidebar_locale}: {len(all_kits)} kits, {total_files} apis")
 
 
 for locale in ["en", "zh-CN"]:
