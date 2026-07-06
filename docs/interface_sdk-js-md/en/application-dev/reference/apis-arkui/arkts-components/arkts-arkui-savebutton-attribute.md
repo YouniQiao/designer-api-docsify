@@ -1,0 +1,244 @@
+# SaveButton properties/events
+
+Universal attributes are not supported. This component supports the attributes listed below, as well as [universal attributes of security components](./security_component). Only the following events are supported.
+
+**Inheritance/Implementation:** SaveButtonAttribute extends [SecurityComponentMethod<SaveButtonAttribute>](SecurityComponentMethod<SaveButtonAttribute>)
+
+**Since:** 10
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## iconBorderRadius
+
+```TypeScript
+iconBorderRadius(radius: Dimension | BorderRadiuses)
+```
+
+Sets the corner radius of the **SaveButton** component.
+
+**Since:** 20
+
+**Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| radius | Dimension \| BorderRadiuses | Yes | Corner radius of the **SaveButton** component. You can set theradius for each of the four corners individually.<br>The default value is 0 vp for all four corners. Units such as vp and px are supported, and valid values aregreater than or equal to 0. Negative values are automatically clamped to **0**.<br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the corner radiussetting of the icon does not take effect. |
+
+## iconSize
+
+```TypeScript
+iconSize(size: Dimension | SizeOptions)
+```
+
+Sets the icon size of the **SaveButton** component.
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | Dimension \| SizeOptions | Yes | Icon size. Pixel units such as vp and px are supported.<br>The default width and height are 16 vp.<br>Percentage strings are not supported. If a percentage string ispassed as a Dimension parameter, the iconwill be displayed with the default size. If either the **width** or **height** property of a SizeOptions typeparameter is set to a percentage string, the icon will be displayed with a size of 0 vp.<br>For the system icons provided by the **SaveButton** component:<br>- Dimension type: Width and height are both set to the specified value.<br>- SizeOptions type: If width and height are different, the smaller value is used for both. If only onevalue is specified, it applies to both dimensions. This rule ensures square display and consistent visualappearance of system icons.<br>For custom icons:<br>- Dimension type: Width and height are both set to the specified value.<br>- SizeOptions type: It is recommended that you set both width and height explicitly; if only one value isset, it applies to both dimensions. Custom icons support flexible sizing to adapt to different image aspectratios.<br>- If the specified size's aspect ratio does not match the custom icon's original ratio, the icon displaysin [ImageFit.Cover](arkts-arkui-imagefit-e.md#imagefit) mode. |
+
+## onClick
+
+```TypeScript
+onClick(event: SaveButtonCallback)
+```
+
+Triggered when the **SaveButton** component is clicked. When a user clicks the save button for the first time, an authorization dialog box is displayed. If the user allows authorization, the app obtains temporary access to media library APIs. For details about the authorization duration, see the description of the [SaveButton](../../../../reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md#savebutton-1) constructor. Authorization fails if the user declines authorization or closes the dialog box.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | SaveButtonCallback | Yes | Callback object for the click event, which carries click details,authorization result and error information.<br>Starting from API version 18, **SaveButtonCallback** is adopteduniformly, which additionally provides error information.<br>**Since:** 18 |
+
+## setIcon
+
+```TypeScript
+setIcon(icon: Resource)
+```
+
+Sets the icon of the **SaveButton** component.
+
+**Since:** 20
+
+**Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| icon | Resource | Yes | Custom icon resource information. Only data sources of the Resource type are supported.<br>Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For detailsabout the supported image formats, see [Image](./image). If the resource is not an image resource or theformat is not supported, the icon is displayed as blank.<br>Since API version 26.0.0, data sources of the Resource type in Symbol format are supported.<br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the custom icon does nottake effect and the save button uses the default style. |
+
+## setText
+
+```TypeScript
+setText(text: string | Resource)
+```
+
+Sets the text of the **SaveButton** component.
+
+**Since:** 20
+
+**Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string \| Resource | Yes | Custom text, used to replace the default system text for business-specificscenarios. When a string is passed, the text content is directly used. When a Resource is passed, multi-language adaptation is implemented via resource management.<br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, this setting does nottake effect and the save button uses the default style. |
+
+## stateEffect
+
+```TypeScript
+stateEffect(enabled: boolean)
+```
+
+Sets the press effect of the **SaveButton** component.
+
+**Since:** 20
+
+**Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Whether to enable the press effect. **true** to enable, **false** otherwise.<br>Default value: **false**.<br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON**permission, the press effect setting does not take effect. |
+
+## symbolFontWeight
+
+```TypeScript
+symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
+```
+
+Sets the font weight of the symbol icon for the save button. - Before calling this method, you need to call [setIcon](SaveButtonAttribute#setIcon) to configure a symbol- style icon resource (i.e., **$r('sys.symbol.*xxx*')**). - If no symbol icon is configured, the font weight setting will not apply.
+
+**Since:** 26.0.0
+
+**Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fontWeight | number \| FontWeight \| string \| Resource | Yes | Symbol icon font weight of the save button.<br>For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolderfont weight.<br>For the string type: The value can be a numeric string of the number type (for example, **"400"**) or alowercase string of the enumerated value of [FontWeight](arkts-arkui-fontweight-e.md#fontweight) (for example, **"normal"**).<br>Default value: **FontWeight.Normal** (the corresponding value is **400**)<br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does nottake effect. |
+
+## symbolIconColor
+
+```TypeScript
+symbolIconColor(color: Array<ResourceColor>)
+```
+
+Sets the color of the symbol icon for the save button. - Before calling this method, you need to call [setIcon](SaveButtonAttribute#setIcon) to configure a symbol- style icon resource (i.e., **$r('sys.symbol.xxx')**). - If no symbol icon is set, the color set via this method does not take effect. - It is recommended that you use this API together with [symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy) to achieve different rendering effects.
+
+**Since:** 26.0.0
+
+**Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | Array&lt;ResourceColor&gt; | Yes | Symbol icon color of the save button. This parameter applies to scenarioswhere the symbol icon needs to be consistent with the service visual style.<br>Default value: varies depending on[symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy).<br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does nottake effect. |
+
+## symbolRenderingStrategy
+
+```TypeScript
+symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
+```
+
+Sets the rendering strategy for the symbol icon of the save button. - Before calling this method, you need to call [setIcon](SaveButtonAttribute#setIcon) to configure a symbol- style icon resource (i.e., **$r('sys.symbol.*xxx*')**). - The configured rendering strategy will not apply if no symbol icon is set. - When this parameter is used together with [symbolIconColor](SaveButtonAttribute#symbolIconColor), the rendering strategy determines how the color array is applied.
+
+**Since:** 26.0.0
+
+**Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strategy | SymbolRenderingStrategy | Yes | Rendering strategy for the symbol icon of the save button, whichdefines how the symbol icon is rendered.<br>Default value: SymbolRenderingStrategy.SINGLE.<br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does nottake effect. |
+
+## userCancelEvent
+
+```TypeScript
+userCancelEvent(enabled: boolean)
+```
+
+Sets the user authorization cancellation event for the **SaveButton** component. This API can be used to distinguish between user cancellation and authorization failures for differentiated service logic, such as logging user behaviors or prompting users to retry.
+
+**Since:** 21
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 21.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Whether to receive the user authorization cancellation event of the save button.<br>Default value: **false**.<br>The value **true** indicates that when a user manually cancels authorization inthe authorization dialog box, the callback returns the result **CANCELED_BY_USER**. The value **false** indicatesthat user cancellation is not distinguished from other scenarios.<br/>You are advised to enable this parameter if your service needs to distinguish between user cancellation andsystem errors/authorization failures. |
+

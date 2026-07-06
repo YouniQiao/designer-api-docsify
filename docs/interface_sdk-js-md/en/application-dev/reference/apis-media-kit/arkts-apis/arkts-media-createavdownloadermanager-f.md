@@ -1,0 +1,28 @@
+# createAVDownloaderManager
+
+## Modules to Import
+
+```TypeScript
+import { media } from '@ohos.multimedia.media';
+```
+
+## createAVDownloaderManager
+
+```TypeScript
+function createAVDownloaderManager( ): Promise<AVDownloaderManager>
+```
+
+Creating a Streaming Resource Download Task Manager
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;AVDownloaderManager&gt; | Returns an instance of the Offline Download Manager |
+
