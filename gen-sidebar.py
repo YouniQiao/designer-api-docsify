@@ -144,9 +144,11 @@ def collect_kits(sdk_dir, locale):
     return kits
 
 
-def generate_sidebars(sidebar_locale):
-    js_kits = collect_kits(JS_SDK, sidebar_locale)
-    c_kits = collect_kits(C_SDK, sidebar_locale)
+def generate_sidebars(sidebar_locale, link_locale=None):
+    if link_locale is None:
+        link_locale = sidebar_locale
+    js_kits = collect_kits(JS_SDK, link_locale)
+    c_kits = collect_kits(C_SDK, link_locale)
     all_kits = sorted(set(list(js_kits.keys()) + list(c_kits.keys())))
 
     sidebar_dir = os.path.join(DOCS, sidebar_locale, "_sidebars")
@@ -166,7 +168,7 @@ def generate_sidebars(sidebar_locale):
             kit_dir = js_kits[kit]
             readme = find_readme(kit_dir, "arkts-apis")
             if readme:
-                base_path = f"{JS_SDK}/{sidebar_locale}/{REF_PATH}/apis-{kit}/arkts-apis"
+                base_path = f"{JS_SDK}/{link_locale}/{REF_PATH}/apis-{kit}/arkts-apis"
                 entries = parse_readme_hierarchy(readme)
                 tree_html, fl, cnt = build_html_nested(entries, base_path)
                 if tree_html:
@@ -180,7 +182,7 @@ def generate_sidebars(sidebar_locale):
             kit_dir = c_kits[kit]
             readme = find_readme(kit_dir, "c-apis")
             if readme:
-                base_path = f"{C_SDK}/{sidebar_locale}/{REF_PATH}/apis-{kit}/c-apis"
+                base_path = f"{C_SDK}/{link_locale}/{REF_PATH}/apis-{kit}/c-apis"
                 entries = parse_readme_hierarchy(readme)
                 tree_html, fl, cnt = build_html_nested(entries, base_path)
                 if tree_html:
@@ -209,5 +211,8 @@ def generate_sidebars(sidebar_locale):
 
 
 for locale in ["en", "zh-cn"]:
-    generate_sidebars(locale)
+    if locale == "zh-cn":
+        generate_sidebars("zh-CN", link_locale="zh-cn")
+    else:
+        generate_sidebars(locale)
 print("Done.")
