@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>OH API 参考</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/dark.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
   <style>
     .sidebar-nav { font-size: 12px; }
     .kit-loaded { margin: 4px 0 0 12px; }
@@ -12,53 +12,53 @@
     .tree-section details { margin: 0; }
     .tree-section-label {
       display: block; margin: 4px 0 2px 0;
-      font-size: 12px; font-weight: 600; color: #6c8cff;
+      font-size: 12px; font-weight: 600; color: #3a7bd5;
       cursor: pointer; list-style: none;
     }
     .tree-section-label::-webkit-details-marker { display: none; }
     .tree-section-label::marker { display: none; content: ''; }
-    .tree-count { font-weight: 400; color: #777; font-size: 11px; }
+    .tree-count { font-weight: 400; color: #999; font-size: 11px; }
     .tree-l1 { list-style: none; padding: 0; margin: 0; }
     .tree-l1 > li { padding: 2px 0; }
-    .tree-l1 > li > a { color: #ccc; font-size: 12px; text-decoration: none; }
-    .tree-l1 > li > a:hover { color: #6c8cff; }
+    .tree-l1 > li > a { color: #444; font-size: 12px; text-decoration: none; }
+    .tree-l1 > li > a:hover { color: #3a7bd5; }
     .tree-l1 details { margin: 0; }
-    .tree-l1 summary { cursor: pointer; list-style: none; color: #ccc; font-size: 12px; display: flex; align-items: center; gap: 4px; }
-    .tree-l1 summary:hover { color: #6c8cff; }
+    .tree-l1 summary { cursor: pointer; list-style: none; color: #444; font-size: 12px; display: flex; align-items: center; gap: 4px; }
+    .tree-l1 summary:hover { color: #3a7bd5; }
     .tree-l1 summary::-webkit-details-marker { display: none; }
     .tree-l1 summary::marker { display: none; content: ''; }
-    .tree-nav { color: #555; text-decoration: none; font-size: 10px; margin-left: 2px; }
-    .tree-nav:hover { color: #6c8cff; }
-    .tree-l2 { list-style: none; padding: 0 0 0 14px; margin: 0 0 0 5px; border-left: 1px solid #3a3a3a; }
+    .tree-nav { color: #aaa; text-decoration: none; font-size: 10px; margin-left: 2px; }
+    .tree-nav:hover { color: #3a7bd5; }
+    .tree-l2 { list-style: none; padding: 0 0 0 14px; margin: 0 0 0 5px; border-left: 1px solid #ddd; }
     .tree-l2 > li { padding: 1px 0; }
-    .tree-l2 > li > a { color: #aaa; font-size: 11px; text-decoration: none; }
-    .tree-l2 > li > a:hover { color: #6c8cff; }
+    .tree-l2 > li > a { color: #555; font-size: 11px; text-decoration: none; }
+    .tree-l2 > li > a:hover { color: #3a7bd5; }
     .tree-l2 details { margin: 0; }
-    .tree-l2 summary { cursor: pointer; list-style: none; color: #aaa; font-size: 11px; }
-    .tree-l2 summary:hover { color: #6c8cff; }
+    .tree-l2 summary { cursor: pointer; list-style: none; color: #555; font-size: 11px; }
+    .tree-l2 summary:hover { color: #3a7bd5; }
     .tree-l2 summary::-webkit-details-marker { display: none; }
     .tree-l2 summary::marker { display: none; content: ''; }
-    .tree-l3 { list-style: none; padding: 0 0 0 14px; margin: 0 0 0 5px; border-left: 1px solid #333; }
+    .tree-l3 { list-style: none; padding: 0 0 0 14px; margin: 0 0 0 5px; border-left: 1px solid #e0e0e0; }
     .tree-l3 > li { padding: 1px 0; }
-    .tree-l3 > li > a { color: #999; font-size: 10px; text-decoration: none; }
-    .tree-l3 > li > a:hover { color: #6c8cff; }
+    .tree-l3 > li > a { color: #666; font-size: 10px; text-decoration: none; }
+    .tree-l3 > li > a:hover { color: #3a7bd5; }
     .tree-l3 details { margin: 0; }
-    .tree-l3 summary { cursor: pointer; list-style: none; color: #999; font-size: 10px; }
-    .tree-l3 summary:hover { color: #6c8cff; }
+    .tree-l3 summary { cursor: pointer; list-style: none; color: #666; font-size: 10px; }
+    .tree-l3 summary:hover { color: #3a7bd5; }
     .tree-l3 summary::-webkit-details-marker { display: none; }
     .tree-l3 summary::marker { display: none; content: ''; }
-    .tree-l4 { list-style: none; padding: 0 0 0 14px; margin: 0 0 0 5px; border-left: 1px solid #2a2a2a; }
+    .tree-l4 { list-style: none; padding: 0 0 0 14px; margin: 0 0 0 5px; border-left: 1px solid #eee; }
     .tree-l4 > li { padding: 0; }
-    .tree-l4 > li > a { color: #888; font-size: 10px; text-decoration: none; }
-    .tree-l4 > li > a:hover { color: #6c8cff; }
-    .tree-current { font-weight: 700; color: #6c8cff !important; background: rgba(108,140,255,0.10); border-radius: 3px; padding: 1px 4px; margin-left: -4px; }
-    .tree-current.tree-nav { font-weight: 700; color: #6c8cff !important; }
+    .tree-l4 > li > a { color: #777; font-size: 10px; text-decoration: none; }
+    .tree-l4 > li > a:hover { color: #3a7bd5; }
+    .tree-current { font-weight: 700; color: #3a7bd5 !important; background: rgba(58,123,213,0.10); border-radius: 3px; padding: 1px 4px; margin-left: -4px; }
+    .tree-current.tree-nav { font-weight: 700; color: #3a7bd5 !important; }
     /* Right-side TOC */
-    .app-sub-sidebar { border-left: 1px solid #333; padding-left: 12px; }
+    .app-sub-sidebar { border-left: 1px solid #e0e0e0; padding-left: 12px; }
     .app-sub-sidebar li { font-size: 12px; line-height: 1.8; }
-    .app-sub-sidebar li a { color: #999; text-decoration: none; }
-    .app-sub-sidebar li a:hover { color: #6c8cff; }
-    .app-sub-sidebar li.active > a { color: #6c8cff; font-weight: 600; }
+    .app-sub-sidebar li a { color: #666; text-decoration: none; }
+    .app-sub-sidebar li a:hover { color: #3a7bd5; }
+    .app-sub-sidebar li.active > a { color: #3a7bd5; font-weight: 600; }
     .app-sub-sidebar .app-sub-sidebar { border-left: none; padding-left: 8px; }
     .app-sub-sidebar .app-sub-sidebar li { font-size: 11px; }
     .sidebar-nav .app-sub-sidebar { display: none; }
@@ -66,21 +66,21 @@
     #page-toc {
       position: fixed; right: 24px; top: 80px; width: 220px; z-index: 100;
       max-height: calc(100vh - 120px); overflow-y: auto;
-      background: rgba(22, 33, 62, 0.85); border: 1px solid #2a2a4a;
+      background: rgba(255,255,255,0.92); border: 1px solid #ddd;
       border-radius: 6px; padding: 12px 14px;
     }
-    #page-toc .toc-title { font-size: 13px; font-weight: 600; color: #aaa; margin-bottom: 0; padding-bottom: 6px; border-bottom: 1px solid #333; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
-    #page-toc .toc-title:hover { color: #ccc; }
-    #page-toc .toc-toggle { font-size: 10px; color: #666; transition: transform 0.2s; }
+    #page-toc .toc-title { font-size: 13px; font-weight: 600; color: #555; margin-bottom: 0; padding-bottom: 6px; border-bottom: 1px solid #e0e0e0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+    #page-toc .toc-title:hover { color: #333; }
+    #page-toc .toc-toggle { font-size: 10px; color: #aaa; transition: transform 0.2s; }
     #page-toc.collapsed .toc-toggle { transform: rotate(-90deg); }
     #page-toc.collapsed .toc-title { border-bottom: none; padding-bottom: 0; }
     #page-toc .toc-body { transition: max-height 0.3s ease; overflow: hidden; }
     #page-toc.collapsed .toc-body { max-height: 0 !important; }
     #page-toc ul { list-style: none; padding: 0; margin: 0; }
     #page-toc li { font-size: 12px; line-height: 2; }
-    #page-toc li a { color: #999; text-decoration: none; display: block; border-radius: 3px; padding: 0 6px; }
-    #page-toc li a:hover { color: #6c8cff; background: rgba(108,140,255,0.08); }
-    #page-toc li.toc-active > a { color: #6c8cff; font-weight: 600; background: rgba(108,140,255,0.12); }
+    #page-toc li a { color: #666; text-decoration: none; display: block; border-radius: 3px; padding: 0 6px; }
+    #page-toc li a:hover { color: #3a7bd5; background: rgba(58,123,213,0.08); }
+    #page-toc li.toc-active > a { color: #3a7bd5; font-weight: 600; background: rgba(58,123,213,0.12); }
     #page-toc ul ul { padding-left: 12px; }
     #page-toc ul ul li { font-size: 11px; }
   </style>
