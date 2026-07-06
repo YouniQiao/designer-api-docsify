@@ -172,9 +172,10 @@
             // otherwise highlight the link itself
             var target = link.classList.contains('tree-nav') ? link.closest('summary') : link;
             target.classList.add('tree-current');
-            // Expand parent details
+            // Expand parent details (but not top-level .tree-section)
             var el = link.closest('details');
             while (el) {
+              if (el.parentElement && el.parentElement.classList.contains('tree-section')) break;
               el.open = true;
               el = el.parentElement.closest('details');
             }
