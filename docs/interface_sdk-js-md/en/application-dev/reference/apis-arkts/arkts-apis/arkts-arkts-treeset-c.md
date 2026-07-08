@@ -1,6 +1,7 @@
 # TreeSet
 
-TreeSet is implemented based on TreeMap. In TreeSet, only value objects are processed. TreeSet can be used to store values, each of which must be unique.
+TreeSet is implemented based on TreeMap. In TreeSet, only value objects are processed.
+TreeSet can be used to store values, each of which must be unique.
 
 **Since:** 8
 
@@ -225,7 +226,8 @@ console.info("treeSet: ", ts1.length);
 entries(): IterableIterator<[T, T]>
 ```
 
-Returns a new Iterator object that contains the [key, value] pairs for each element in the Set object in insertion order
+Returns a new Iterator object that contains the [key, value] pairs for each element in the Set object in insertion
+order
 
 **Since:** 8
 
@@ -371,7 +373,8 @@ console.info("result:", result); // result: sparrow
 getHigherValue(key: T): T
 ```
 
-Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
+Returns the least element greater than or equal to the specified key
+if the key does not exist, undefined is returned
 
 **Since:** 8
 
@@ -453,7 +456,8 @@ console.info("result:", result); // result: squirrel
 getLowerValue(key: T): T
 ```
 
-Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
+Returns the greatest element smaller than or equal to the specified key
+if the key does not exist, undefined is returned
 
 **Since:** 8
 

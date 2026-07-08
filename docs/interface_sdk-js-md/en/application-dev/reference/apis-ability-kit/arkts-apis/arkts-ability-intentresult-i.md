@@ -1,6 +1,7 @@
 # IntentResult
 
-Defines the return result of intent execution. The [generic type](../../../../quick-start/introduction-to-arkts.md#generic-class-and-interface) is supported.
+Defines the return result of intent execution. The
+[generic type](../../../../quick-start/introduction-to-arkts.md#generic-class-and-interface) is supported.
 
 **Since:** 20
 
@@ -36,7 +37,8 @@ Error code returned by the intent execution, defined by the developer.
 result?: T
 ```
 
-Result data returned by the intent execution, typically containing information to be passed back to the system entry point.
+Result data returned by the intent execution, typically containing information to be passed
+back to the system entry point.
 
 **Type:** T
 

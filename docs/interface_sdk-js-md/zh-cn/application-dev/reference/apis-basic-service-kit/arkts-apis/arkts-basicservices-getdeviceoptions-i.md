@@ -30,7 +30,9 @@ complete?: () => void
 fail?: (data: any, code: number) => void
 ```
 
-接口调用失败的回调函数。 code为失败返回的错误码。 code:200，表示返回结果中存在无法获得的信息。
+接口调用失败的回调函数。 code为失败返回的错误码。
+
+code:200，表示返回结果中存在无法获得的信息。
 
 **类型：** (data: any, code: number) => void
 

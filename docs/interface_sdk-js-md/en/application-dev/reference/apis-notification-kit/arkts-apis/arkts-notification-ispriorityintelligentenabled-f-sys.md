@@ -12,7 +12,8 @@ import { notificationManager } from '@kit.NotificationKit';
 function isPriorityIntelligentEnabled(): Promise<boolean>
 ```
 
-Obtains whether the intelligent priority notification service is enabled. This API uses a promise to return the result.
+Obtains whether the intelligent priority notification service is enabled. This API uses a promise to return the
+result.
 
 **Since:** 23
 

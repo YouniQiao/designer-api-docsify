@@ -11,7 +11,15 @@ function bulkTransfer(
   ): Promise<number>
 ```
 
-批量传输。使用Promise异步回调。 > **说明：** > > 单次批量传输的传输数据总量（包括pipe、endpoint、buffer、timeout）请控制在200KB以下，数据总量过大会导致传输失败返回-1。 > > 在调用接口前需要通过 > [usbManager.claimInterface](arkts-basicservices-claiminterface-f.md#claiminterface-1) > claim通信接口。
+批量传输。使用Promise异步回调。
+
+> **说明：**
+>
+> 单次批量传输的传输数据总量（包括pipe、endpoint、buffer、timeout）请控制在200KB以下，数据总量过大会导致传输失败返回-1。
+>
+> 在调用接口前需要通过
+> [usbManager.claimInterface](arkts-basicservices-claiminterface-f.md#claiminterface-1)
+> claim通信接口。
 
 **起始版本：** 9
 

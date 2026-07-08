@@ -24,7 +24,8 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 ```
 
-Unsubscribe the event reported when the profile connection state changes. On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
+Unsubscribe the event reported when the profile connection state changes.
+On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -57,7 +58,8 @@ Unsubscribe the event reported when the profile connection state changes. On API
 on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 ```
 
-Subscribe the event reported when the profile connection state changes. On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
+Subscribe the event reported when the profile connection state changes.
+On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
 

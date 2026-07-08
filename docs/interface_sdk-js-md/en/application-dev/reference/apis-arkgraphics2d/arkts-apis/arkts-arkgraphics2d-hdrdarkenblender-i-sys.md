@@ -20,7 +20,8 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 grayscaleFactor?: [number, number, number]
 ```
 
-Defines the grayscale factor for converting dst's RGB channels to grayscale. Formula: grayscale = dot(grayscaleFactor, dst).
+Defines the grayscale factor for converting dst's RGB channels to grayscale.
+Formula: grayscale = dot(grayscaleFactor, dst).
 
 **Type:** [number, number, number]
 

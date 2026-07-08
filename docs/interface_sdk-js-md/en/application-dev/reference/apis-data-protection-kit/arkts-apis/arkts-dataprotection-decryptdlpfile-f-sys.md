@@ -12,7 +12,16 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 ```
 
-Decrypts a DLP file to generate a plaintext file. This API can be called only by enterprise accounts. This API uses a promise to return the result. This API decrypts DLP files into plaintext files, which is applicable to exporting or migrating files by users with owner permissions. > **NOTE** > > This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account > servers. The enterprise server determines whether an account is authorized to decrypt DLP files.
+Decrypts a DLP file to generate a plaintext file. This API can be called only by enterprise accounts. This API
+uses a promise to return the result.
+
+This API decrypts DLP files into plaintext files, which is applicable to exporting or migrating files by users
+with owner permissions.
+
+> **NOTE**
+>
+> This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account
+> servers. The enterprise server determines whether an account is authorized to decrypt DLP files.
 
 **Since:** 21
 

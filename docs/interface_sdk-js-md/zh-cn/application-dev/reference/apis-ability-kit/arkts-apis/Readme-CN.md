@@ -38,6 +38,17 @@
   - [startBackgroundRunning](arkts-ability-startbackgroundrunning-f.md)
   - [terminateSelf](arkts-ability-terminateself-f.md)
   - [ErrorCode](arkts-ability-errorcode-e.md)
+- [@ohos.ability.screenLockFileManager](arkts-ability-screenlockfilemanager.md)
+  - [acquireAccess](arkts-ability-acquireaccess-f.md)<!--Del-->
+  - [acquireAccess(系统接口)](arkts-ability-acquireaccess-f-sys.md)<!--DelEnd-->
+  - [queryAppKeyState](arkts-ability-queryappkeystate-f.md)<!--Del-->
+  - [queryAppKeyState(系统接口)](arkts-ability-queryappkeystate-f-sys.md)<!--DelEnd-->
+  - [releaseAccess](arkts-ability-releaseaccess-f.md)<!--Del-->
+  - [releaseAccess(系统接口)](arkts-ability-releaseaccess-f-sys.md)<!--DelEnd-->
+  - [AccessStatus](arkts-ability-accessstatus-e.md)
+  - [DataType](arkts-ability-datatype-e.md)
+  - [KeyStatus](arkts-ability-keystatus-e.md)
+  - [ReleaseStatus](arkts-ability-releasestatus-e.md)
 - [@ohos.ability.wantConstant](arkts-ability-wantconstant.md)
   - [Action](arkts-ability-action-depr-e.md)
   - [Entity](arkts-ability-entity-depr-e.md)

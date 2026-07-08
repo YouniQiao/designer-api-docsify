@@ -215,7 +215,8 @@ CoverUri for the album
 readonly dateModified: number
 ```
 
-Time when the album was modified. Unit: ms, The value must be an integer greater than or equal to 0.
+Time when the album was modified.
+Unit: ms, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 

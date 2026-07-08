@@ -2,11 +2,11 @@
 
 ## Overview
 
-Declares the APIs for obtaining image data from the native layer.Need link <b>libimagendk.z.so</b> and <b>libimage_receiverndk.z.so</b>
+Declares the APIs for obtaining image data from the native layer.
 
 **Library**: libimage_receiver_ndk.z.so
 
-**System capability**: SystemCapability.Multimedia.Image.Core
+**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 10
 
@@ -250,7 +250,7 @@ Obtains the size of the image receiver through an [ImageReceiverNative](capi-ima
 | Parameter | Description |
 | -- | -- |
 | [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer. |
-| struct OhosImageSize* size | Indicates the pointer to the [OhosImageSize](capi-image-ohosimagesize.md) object obtained. |
+| [struct OhosImageSize](capi-image-ohosimagesize.md)* size | Indicates the pointer to the [OhosImageSize](capi-image-ohosimagesize.md) object obtained. |
 
 **Returns**:
 

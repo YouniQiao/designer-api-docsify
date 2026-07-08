@@ -1,6 +1,8 @@
 # PrefixIconOptions
 
-PrefixIconOptions定义前缀图标的属性。 继承于[IconCommonOptions](arkts-arkui-iconcommonoptions-i.md)。
+PrefixIconOptions定义前缀图标的属性。
+
+继承于[IconCommonOptions](arkts-arkui-iconcommonoptions-i.md)。
 
 **继承/实现关系：** PrefixIconOptions extends [IconCommonOptions](arkts-arkui-iconcommonoptions-i.md)
 

@@ -1,6 +1,8 @@
 # KeyboardDelegate
 
-In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use
+[getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, and
+then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -147,7 +149,8 @@ off(
     ): void
 ```
 
-Disables listening for the text selection change event. This API uses an asynchronous callback to return the result.
+Disables listening for the text selection change event. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 8
 
@@ -204,7 +207,8 @@ inputMethodEngine.getKeyboardDelegate().off('textChange', (text: string) => {
 off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void
 ```
 
-Disables listening for the edit box attribute change event. This API uses an asynchronous callback to return the result.
+Disables listening for the edit box attribute change event. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 10
 
@@ -367,7 +371,8 @@ on(
     ): void
 ```
 
-Enables listening for the text selection change event. This API uses an asynchronous callback to return the result.
+Enables listening for the text selection change event. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 8
 
@@ -427,7 +432,8 @@ inputMethodEngine.getKeyboardDelegate().on('textChange', (text: string) => {
 on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void
 ```
 
-Enables listening for the edit box attribute change event. This API uses an asynchronous callback to return the result.
+Enables listening for the edit box attribute change event. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 10
 

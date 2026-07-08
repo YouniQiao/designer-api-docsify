@@ -68,7 +68,8 @@ Media duration. The corresponding key value type is number, measured in ms.
 MD_KEY_BITRATE = 'bitrate'
 ```
 
-Bit rate. The corresponding key value type is number, measured in bit/s. If the value is **undefined** or **0**, the bit rate is abnormal.
+Bit rate. The corresponding key value type is number, measured in bit/s. If the value is **undefined** or **0**,
+the bit rate is abnormal.
 
 **Since:** 8
 
@@ -236,7 +237,8 @@ Original video height. The corresponding key value type is number, measured in p
 MD_KEY_MIME_TYPE = 'mime_type'
 ```
 
-MIME type of the track. The corresponding key value type is string. For audio and video tracks, the value is the same as that of **MD_KEY_CODEC_MIME**.
+MIME type of the track. The corresponding key value type is string. For audio and video tracks, the value is the
+same as that of **MD_KEY_CODEC_MIME**.
 
 **Since:** 23
 
@@ -250,7 +252,8 @@ MIME type of the track. The corresponding key value type is string. For audio an
 MD_KEY_REFERENCE_TRACK_IDS = 'ref_track_ids'
 ```
 
-Reference relationships between this track and other tracks. The corresponding key value type is string, with values separated by commas (,).
+Reference relationships between this track and other tracks. The corresponding key value type is string, with
+values separated by commas (,).
 
 **Since:** 23
 

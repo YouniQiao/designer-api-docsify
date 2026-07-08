@@ -9,7 +9,7 @@
 ## INDICATOR
 
 ```TypeScript
-INDICATOR = 0
+INDICATOR
 ```
 
 ʹ���»���ģʽ��
@@ -25,7 +25,7 @@ INDICATOR = 0
 ## BOARD
 
 ```TypeScript
-BOARD = 1
+BOARD
 ```
 
 ʹ�ñ���ģʽ��

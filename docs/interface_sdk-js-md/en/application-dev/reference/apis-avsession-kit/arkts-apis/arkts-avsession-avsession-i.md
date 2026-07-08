@@ -271,7 +271,8 @@ Enable desktop lyric for this session.
 getAVCastController(callback: AsyncCallback<AVCastController>): void
 ```
 
-Get the cast controller when the session is casted to remote device. If the avsession is not under casting state, the controller will return null.
+Get the cast controller when the session is casted to remote device.
+If the avsession is not under casting state, the controller will return null.
 
 **Since:** 10
 
@@ -296,7 +297,8 @@ Get the cast controller when the session is casted to remote device. If the avse
 getAVCastController(): Promise<AVCastController>
 ```
 
-Get the cast controller when the session is casted to remote device. If the avsession is not under casting state, the controller will return null.
+Get the cast controller when the session is casted to remote device.
+If the avsession is not under casting state, the controller will return null.
 
 **Since:** 10
 
@@ -539,7 +541,8 @@ Query desktop lyric visible state for this session.
 off(type: 'play', callback?: () => void): void
 ```
 
-Unregister play command callback. When canceling the callback, need to update the supported commands list.
+Unregister play command callback.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
@@ -568,7 +571,8 @@ Unregister play command callback. When canceling the callback, need to update th
 off(type: 'pause', callback?: () => void): void
 ```
 
-Unregister pause command callback. When canceling the callback, need to update the supported commands list.
+Unregister pause command callback.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
@@ -597,7 +601,8 @@ Unregister pause command callback. When canceling the callback, need to update t
 off(type: 'stop', callback?: () => void): void
 ```
 
-Unregister stop command callback. When canceling the callback, need to update the supported commands list.
+Unregister stop command callback.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
@@ -626,7 +631,8 @@ Unregister stop command callback. When canceling the callback, need to update th
 off(type: 'playNext', callback?: () => void): void
 ```
 
-Unregister playNext command callback. When canceling the callback, need to update the supported commands list.
+Unregister playNext command callback.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
@@ -655,7 +661,8 @@ Unregister playNext command callback. When canceling the callback, need to updat
 off(type: 'playPrevious', callback?: () => void): void
 ```
 
-Unregister playPrevious command callback. When canceling the callback, need to update the supported commands list.
+Unregister playPrevious command callback.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
@@ -684,7 +691,8 @@ Unregister playPrevious command callback. When canceling the callback, need to u
 off(type: 'fastForward', callback?: () => void): void
 ```
 
-Unregister fastForward command callback. When canceling the callback, need to update the supported commands list.
+Unregister fastForward command callback.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
@@ -713,7 +721,8 @@ Unregister fastForward command callback. When canceling the callback, need to up
 off(type: 'rewind', callback?: () => void): void
 ```
 
-Unregister rewind command callback. When canceling the callback, need to update the supported commands list.
+Unregister rewind command callback.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
@@ -1261,7 +1270,8 @@ Unregister desktop lyric visible state change callback.
 offFastForward(callback?: TwoParamCallback<number, CommandInfo>): void
 ```
 
-Unregister fastForward command callback. When canceling the callback, need to update the supported commands list.
+Unregister fastForward command callback.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 22
 
@@ -1286,7 +1296,8 @@ Unregister fastForward command callback. When canceling the callback, need to up
 offPlay(callback?: Callback<CommandInfo>): void
 ```
 
-Unregister play command callback. When canceling the callback, need to update the supported commands list.
+Unregister play command callback.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 22
 
@@ -1311,7 +1322,8 @@ Unregister play command callback. When canceling the callback, need to update th
 offPlayNext(callback?: Callback<CommandInfo>): void
 ```
 
-Unregister playNext command callback. When canceling the callback, need to update the supported commands list.
+Unregister playNext command callback.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 22
 
@@ -1336,7 +1348,8 @@ Unregister playNext command callback. When canceling the callback, need to updat
 offPlayPrevious(callback?: Callback<CommandInfo>): void
 ```
 
-Unregister playPrevious command callback. When canceling the callback, need to update the supported commands list.
+Unregister playPrevious command callback.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 22
 
@@ -1361,7 +1374,8 @@ Unregister playPrevious command callback. When canceling the callback, need to u
 offRewind(callback?: TwoParamCallback<number, CommandInfo>): void
 ```
 
-Unregister rewind command callback. When canceling the callback, need to update the supported commands list.
+Unregister rewind command callback.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 22
 
@@ -1386,7 +1400,12 @@ Unregister rewind command callback. When canceling the callback, need to update 
 on(type: 'play', callback: () => void): void
 ```
 
-Register play command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off {@link off} When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register play command callback.
+As long as it is registered, it means that the ability supports this command.
+If you cancel the callback, you need to call off {@link off}
+When canceling the callback, need to update the supported commands list.
+Each playback command only supports registering one callback,
+and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1415,7 +1434,12 @@ Register play command callback. As long as it is registered, it means that the a
 on(type: 'pause', callback: () => void): void
 ```
 
-Register pause command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off {@link off} When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register pause command callback.
+As long as it is registered, it means that the ability supports this command.
+If you cancel the callback, you need to call off {@link off}
+When canceling the callback, need to update the supported commands list.
+Each playback command only supports registering one callback,
+and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1444,7 +1468,12 @@ Register pause command callback. As long as it is registered, it means that the 
 on(type: 'stop', callback: () => void): void
 ```
 
-Register stop command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off {@link off} When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register stop command callback.
+As long as it is registered, it means that the ability supports this command.
+If you cancel the callback, you need to call off {@link off}
+When canceling the callback, need to update the supported commands list.
+Each playback command only supports registering one callback,
+and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1473,7 +1502,12 @@ Register stop command callback. As long as it is registered, it means that the a
 on(type: 'playNext', callback: () => void): void
 ```
 
-Register playNext command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off {@link off} When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register playNext command callback.
+As long as it is registered, it means that the ability supports this command.
+If you cancel the callback, you need to call off {@link off}
+When canceling the callback, need to update the supported commands list.
+Each playback command only supports registering one callback,
+and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1502,7 +1536,12 @@ Register playNext command callback. As long as it is registered, it means that t
 on(type: 'playPrevious', callback: () => void): void
 ```
 
-Register playPrevious command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off {@link off} When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register playPrevious command callback.
+As long as it is registered, it means that the ability supports this command.
+If you cancel the callback, you need to call off {@link off}
+When canceling the callback, need to update the supported commands list.
+Each playback command only supports registering one callback,
+and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1531,7 +1570,12 @@ Register playPrevious command callback. As long as it is registered, it means th
 on(type: 'fastForward', callback: (time ?: number) => void): void
 ```
 
-Register fastForward command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off {@link off} When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register fastForward command callback.
+As long as it is registered, it means that the ability supports this command.
+If you cancel the callback, you need to call off {@link off}
+When canceling the callback, need to update the supported commands list.
+Each playback command only supports registering one callback,
+and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1560,7 +1604,12 @@ Register fastForward command callback. As long as it is registered, it means tha
 on(type: 'rewind', callback: (time ?: number) => void): void
 ```
 
-Register rewind command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off {@link off} When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register rewind command callback.
+As long as it is registered, it means that the ability supports this command.
+If you cancel the callback, you need to call off {@link off}
+When canceling the callback, need to update the supported commands list.
+Each playback command only supports registering one callback,
+and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1589,7 +1638,12 @@ Register rewind command callback. As long as it is registered, it means that the
 on(type: 'playFromAssetId', callback: (assetId: number) => void): void
 ```
 
-Register playFromAssetId command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off {@link off} When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+Register playFromAssetId command callback.
+As long as it is registered, it means that the ability supports this command.
+If you cancel the callback, you need to call off {@link off}
+When canceling the callback, need to update the supported commands list.
+Each playback command only supports registering one callback,
+and the new callback will replace the previous one.
 
 **Since:** 11
 
@@ -1737,7 +1791,8 @@ Register setLoopMode command callback
 on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void
 ```
 
-Register setTargetLoopMode command callback Application should change playmode to the loopmode which is requested.
+Register setTargetLoopMode command callback
+Application should change playmode to the loopmode which is requested.
 
 **Since:** 18
 
@@ -1910,7 +1965,9 @@ Register the item to play from the playlist change callback
 on(type: 'answer', callback: Callback<void>): void
 ```
 
-Register answer command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off {@link off}
+Register answer command callback.
+As long as it is registered, it means that the ability supports this command.
+If you cancel the callback, you need to call off {@link off}
 
 **Since:** 11
 
@@ -1939,7 +1996,9 @@ Register answer command callback. As long as it is registered, it means that the
 on(type: 'hangUp', callback: Callback<void>): void
 ```
 
-Register hangUp command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off {@link off}
+Register hangUp command callback.
+As long as it is registered, it means that the ability supports this command.
+If you cancel the callback, you need to call off {@link off}
 
 **Since:** 11
 
@@ -1968,7 +2027,9 @@ Register hangUp command callback. As long as it is registered, it means that the
 on(type: 'toggleCallMute', callback: Callback<void>): void
 ```
 
-Register toggleCallMute command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off {@link off}
+Register toggleCallMute command callback.
+As long as it is registered, it means that the ability supports this command.
+If you cancel the callback, you need to call off {@link off}
 
 **Since:** 11
 
@@ -2108,7 +2169,8 @@ Register desktop lyric visible state change callback.
 onFastForward(callback: TwoParamCallback<number, CommandInfo>): void
 ```
 
-Register fastForward command callback. The application will receive forward time and {@link CommandInfo} from a controller.
+Register fastForward command callback.
+The application will receive forward time and {@link CommandInfo} from a controller.
 
 **Since:** 22
 
@@ -2133,7 +2195,8 @@ Register fastForward command callback. The application will receive forward time
 onPlay(callback: Callback<CommandInfo>): void
 ```
 
-Register play command callback. The application will receive {@link CommandInfo} from a controller.
+Register play command callback.
+The application will receive {@link CommandInfo} from a controller.
 
 **Since:** 22
 
@@ -2158,7 +2221,8 @@ Register play command callback. The application will receive {@link CommandInfo}
 onPlayNext(callback: Callback<CommandInfo>): void
 ```
 
-Register playNext command callback. The application will receive {@link CommandInfo} from a controller.
+Register playNext command callback.
+The application will receive {@link CommandInfo} from a controller.
 
 **Since:** 22
 
@@ -2183,7 +2247,8 @@ Register playNext command callback. The application will receive {@link CommandI
 onPlayPrevious(callback: Callback<CommandInfo>): void
 ```
 
-Register playPrevious command callback. The application will receive {@link CommandInfo} from a controller.
+Register playPrevious command callback.
+The application will receive {@link CommandInfo} from a controller.
 
 **Since:** 22
 
@@ -2210,7 +2275,8 @@ Register playPrevious command callback. The application will receive {@link Comm
 onRewind(callback: TwoParamCallback<number, CommandInfo>): void
 ```
 
-Register rewind command callback. The application will receive rewind time and {@link CommandInfo} from a controller.
+Register rewind command callback.
+The application will receive rewind time and {@link CommandInfo} from a controller.
 
 **Since:** 22
 
@@ -2327,7 +2393,8 @@ Set the call state of this session.
 setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void
 ```
 
-Set the metadata of this session. In addition to the required properties, users can fill in partially supported properties
+Set the metadata of this session.
+In addition to the required properties, users can fill in partially supported properties
 
 **Since:** 10
 
@@ -2354,7 +2421,8 @@ Set the metadata of this session. In addition to the required properties, users 
 setAVMetadata(data: AVMetadata): Promise<void>
 ```
 
-Set the metadata of this session. In addition to the required properties, users can fill in partially supported properties
+Set the metadata of this session.
+In addition to the required properties, users can fill in partially supported properties
 
 **Since:** 10
 
@@ -2571,7 +2639,10 @@ Set the name of the playlist presented by this session.
 setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>
 ```
 
-Set the background playback mode. It is recommended that you associate it with the background playback switch in the app. If not set, the default value for 'audio' session is {@link ENABLE_BACKGROUND_PLAY} and the default value for 'video' session is {@link DISENABLE_BACKGROUND_PLAY}.
+Set the background playback mode.
+It is recommended that you associate it with the background playback switch in the app.
+If not set, the default value for 'audio' session is {@link ENABLE_BACKGROUND_PLAY} and
+the default value for 'video' session is {@link DISENABLE_BACKGROUND_PLAY}.
 
 **Since:** 24
 

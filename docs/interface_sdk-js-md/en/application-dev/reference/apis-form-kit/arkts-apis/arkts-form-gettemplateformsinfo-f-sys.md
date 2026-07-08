@@ -12,7 +12,8 @@ import { formHost } from '@kit.FormKit';
 function getTemplateFormsInfo(bundleName: string, moduleName?: string): Promise<Array<formInfo.FormInfo>>
 ```
 
-Obtains the template widget information provided by a specified application on the device. This API uses a promise to return the result.
+Obtains the template widget information provided by a specified application on the device. This API uses a
+promise to return the result.
 
 **Since:** 23
 

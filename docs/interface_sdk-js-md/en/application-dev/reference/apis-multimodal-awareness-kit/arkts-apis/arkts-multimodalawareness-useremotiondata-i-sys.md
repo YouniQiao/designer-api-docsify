@@ -22,7 +22,8 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 confidence?: number
 ```
 
-User emotion confidence. The value ranges from 0 to 100. A larger value indicates a higher confidence.
+User emotion confidence.
+The value ranges from 0 to 100. A larger value indicates a higher confidence.
 
 **Type:** number
 
@@ -40,7 +41,9 @@ User emotion confidence. The value ranges from 0 to 100. A larger value indicate
 emotionNonRealTime ?: number[]
 ```
 
-User non-real-time emotion level. The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm, 3: A little unhappy, 4: Angry, 5: Crying.
+User non-real-time emotion level.
+The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,
+3: A little unhappy, 4: Angry, 5: Crying.
 
 **Type:** number[]
 
@@ -58,7 +61,9 @@ User non-real-time emotion level. The value ranges from 0 to 5. 0: Very happy, 1
 emotionRealTime ?: number
 ```
 
-User real-time emotion level. The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm, 3: A little unhappy, 4: Angry, 5: Crying.
+User real-time emotion level.
+The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,
+3: A little unhappy, 4: Angry, 5: Crying.
 
 **Type:** number
 

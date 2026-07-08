@@ -1,6 +1,10 @@
 # NotificationSubscriberExtensionContext
 
-NotificationSubscriberExtensionContext模块提供通知订阅者扩展能力。 > **说明** > > 本模块接口仅可在Stage模型下使用。
+NotificationSubscriberExtensionContext模块提供通知订阅者扩展能力。
+
+> **说明**
+>
+> 本模块接口仅可在Stage模型下使用。
 
 **继承/实现关系：** NotificationSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 

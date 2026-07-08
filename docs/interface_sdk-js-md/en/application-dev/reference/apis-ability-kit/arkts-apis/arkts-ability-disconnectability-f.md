@@ -12,7 +12,8 @@ import { particleAbility } from '@kit.AbilityKit';
 function disconnectAbility(connection: number, callback: AsyncCallback<void>): void
 ```
 
-Disconnects this ability from a specific ServiceAbility. This API uses an asynchronous callback to return the result.
+Disconnects this ability from a specific ServiceAbility. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 7
 

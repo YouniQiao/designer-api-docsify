@@ -1,6 +1,8 @@
 # ExifMetadata
 
-ExifMetadata implements Metadata Exchangeable Image File Format (Exif) metadata.
+ExifMetadata implements Metadata
+
+Exchangeable Image File Format (Exif) metadata.
 
 **Inheritance/Implementation:** ExifMetadata implements [Metadata](arkts-image-metadata-i.md)
 
@@ -60,7 +62,8 @@ Creates an empty [ExifMetadata](arkts-image-exifmetadata-c.md) instance.
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.
+Obtains all properties and their values from the image metadata. This API returns the result asynchronously
+through a promise.
 
 **Since:** 23
 
@@ -100,7 +103,9 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-Obtains the property values from image metadata. This API returns the result asynchronously through a promise. For details about the properties, see [PropertyKey](arkts-image-propertykey-e.md).
+Obtains the property values from image metadata. This API returns the result asynchronously through a promise.
+
+For details about the properties, see [PropertyKey](arkts-image-propertykey-e.md).
 
 **Since:** 23
 
@@ -164,7 +169,10 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [PropertyKey](arkts-image-propertykey-e.md).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously
+through a promise.
+
+For details about the properties, see [PropertyKey](arkts-image-propertykey-e.md).
 
 **Since:** 23
 
@@ -308,7 +316,8 @@ Color filter array (CFA) geometric pattern of the image sensor.
 colorSpace?: number
 ```
 
-Color space information, which is usually recorded as a color space descriptor. The value range is all integers.
+Color space information, which is usually recorded as a color space descriptor.
+The value range is all integers.
 
 **Type:** number
 
@@ -340,7 +349,8 @@ Information about the compressed data.
 compositeImage?: number
 ```
 
-Whether the image is a composite image. The value range is all integers.
+Whether the image is a composite image.
+The value range is all integers.
 
 **Type:** number
 
@@ -372,7 +382,8 @@ Image compression scheme. The unit is bit/pixel.
 compression?: number
 ```
 
-Algorithm standard for image compression. The value range is all integers.
+Algorithm standard for image compression.
+The value range is all integers.
 
 **Type:** number
 
@@ -388,7 +399,8 @@ Algorithm standard for image compression. The value range is all integers.
 contrast?: number
 ```
 
-Contrast optimization policy applied by the camera. For example, standard processing and contrast reduction. The value range is all integers.
+Contrast optimization policy applied by the camera. For example, standard processing and contrast reduction.
+The value range is all integers.
 
 **Type:** number
 
@@ -420,7 +432,8 @@ Copyright notice of the image.
 customRendered?: number
 ```
 
-Special processing of image data, such as HDR composition and AI scene enhancement. The value range is all integers.
+Special processing of image data, such as HDR composition and AI scene enhancement.
+The value range is all integers.
 
 **Type:** number
 
@@ -436,7 +449,9 @@ Special processing of image data, such as HDR composition and AI scene enhanceme
 dateTime?: string
 ```
 
-Date and time when the image is created. In this standard, it refers to the file date and time. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock). For example, 2025:12:15 18:44:59.
+Date and time when the image is created.
+In this standard, it refers to the file date and time. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
+For example, 2025:12:15 18:44:59.
 
 **Type:** string
 
@@ -452,7 +467,9 @@ Date and time when the image is created. In this standard, it refers to the file
 dateTimeDigitized?: string
 ```
 
-Date and time when the image is stored as digital data. For example, if a DSC captures an image and records the file at the same time, the values of **DateTimeOriginal** and **DateTimeDigitized** are the same. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
+Date and time when the image is stored as digital data.
+For example, if a DSC captures an image and records the file at the same time, the values of **DateTimeOriginal**
+and **DateTimeDigitized** are the same. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
 
 **Type:** string
 
@@ -468,7 +485,9 @@ Date and time when the image is stored as digital data. For example, if a DSC ca
 dateTimeOriginal?: string
 ```
 
-Date and time when the original image data is generated. For a digital still camera (DSC), the date and time when a photo is taken are recorded. The value format is *YYYY :MM:DD HH:MM:SS* (24-hour clock).
+Date and time when the original image data is generated.
+For a digital still camera (DSC), the date and time when a photo is taken are recorded. The value format is *YYYY
+:MM:DD HH:MM:SS* (24-hour clock).
 
 **Type:** string
 
@@ -564,7 +583,8 @@ Exposure index selected at the time the image is captured.
 exposureMode?: number
 ```
 
-Exposure mode. The value range is all integers.
+Exposure mode.
+The value range is all integers.
 
 **Type:** number
 
@@ -580,7 +600,8 @@ Exposure mode. The value range is all integers.
 exposureProgram?: number
 ```
 
-Class used for exposure setting when the camera captures a photo. The value range is all integers.
+Class used for exposure setting when the camera captures a photo.
+The value range is all integers.
 
 **Type:** number
 
@@ -644,7 +665,8 @@ Image source.
 flash?: number
 ```
 
-Flash. The value range is all integers.
+Flash.
+The value range is all integers.
 
 **Type:** number
 
@@ -676,7 +698,8 @@ Flash energy at the time the image is captured. The unit is beam candlepower sec
 flashpixVersion?: string
 ```
 
-FlashPix format version supported by the FlashPix Extension Resource (FPXR), which is used to enhance device compatibility.
+FlashPix format version supported by the FlashPix Extension Resource (FPXR), which is used to enhance device
+compatibility.
 
 **Type:** string
 
@@ -708,7 +731,8 @@ Focal length of the lens, in milliseconds.
 focalLengthIn35mmFilm?: number
 ```
 
-Focal length of the 35 mm film. The value should be an integer.
+Focal length of the 35 mm film.
+The value should be an integer.
 
 **Type:** number
 
@@ -724,7 +748,8 @@ Focal length of the 35 mm film. The value should be an integer.
 focalPlaneResolutionUnit?: number
 ```
 
-Measurement unit of **FocalPlaneXResolution** and **FocalPlaneYResolution**. The value range is all integers.
+Measurement unit of **FocalPlaneXResolution** and **FocalPlaneYResolution**.
+The value range is all integers.
 
 **Type:** number
 
@@ -772,7 +797,8 @@ Number of pixels per unit physical length in the Y-axis of the sensor's physical
 gainControl?: number
 ```
 
-Degree of overall image gain adjustment. The value range is all integers.
+Degree of overall image gain adjustment.
+The value range is all integers.
 
 **Type:** number
 
@@ -820,7 +846,8 @@ GPS altitude based on **GPSAltitudeRef**.
 gpsAltitudeRef?: number
 ```
 
-GPS altitude reference. The value range is all integers.
+GPS altitude reference.
+The value range is all integers.
 
 **Type:** number
 
@@ -996,7 +1023,9 @@ Longitude reference of the destination.
 gpsDifferential?: number
 ```
 
-Whether differential correction has been applied to the GPS data, which is crucial for precise positioning accuracy. The value range is all integers.
+Whether differential correction has been applied to the GPS data, which is crucial for precise positioning
+accuracy.
+The value range is all integers.
 
 **Type:** number
 
@@ -1076,7 +1105,11 @@ Reference of the image orientation.
 gpsLatitude?: number[]
 ```
 
-GPS latitude. The latitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format. When using degrees and minutes, the minutes are stored with up to two decimal places, in the **dd/1, mmmm/100, 0/1** format.
+GPS latitude.
+The latitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to
+degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format.
+When using degrees and minutes, the minutes are stored with up to two decimal places, in the
+**dd/1, mmmm/100, 0/1** format.
 
 **Type:** number[]
 
@@ -1108,7 +1141,11 @@ GPS latitude reference. For example, **N** indicates north latitude, and **S** i
 gpsLongitude?: number[]
 ```
 
-GPS longitude. The longitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format. When using degrees and minutes, the minutes are stored with up to two decimal places, in the **dd/1, mmmm/100, 0/1** format.
+GPS longitude.
+The longitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding
+to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format.
+When using degrees and minutes, the minutes are stored with up to two decimal places, in the
+**dd/1, mmmm/100, 0/1** format.
 
 **Type:** number[]
 
@@ -1380,7 +1417,8 @@ Image width. The unit is px.
 isoSpeedLatitudeyyy?: number
 ```
 
-Maximum dynamic range recordable by the camera sensor in a single exposure. The unit is EV. The value should be an integer.
+Maximum dynamic range recordable by the camera sensor in a single exposure. The unit is EV.
+The value should be an integer.
 
 **Type:** number
 
@@ -1396,7 +1434,8 @@ Maximum dynamic range recordable by the camera sensor in a single exposure. The 
 isoSpeedLatitudezzz?: number
 ```
 
-Highlight retention capacity of the camera sensor in overexposure. The unit is EV. The value should be an integer.
+Highlight retention capacity of the camera sensor in overexposure. The unit is EV.
+The value should be an integer.
 
 **Type:** number
 
@@ -1412,7 +1451,8 @@ Highlight retention capacity of the camera sensor in overexposure. The unit is E
 isoSpeedRatings?: number
 ```
 
-ISO speed and latitude of the camera or input device, which are specified in ISO 12232. The value range is all integers.
+ISO speed and latitude of the camera or input device, which are specified in ISO 12232.
+The value range is all integers.
 
 **Type:** number
 
@@ -1428,7 +1468,8 @@ ISO speed and latitude of the camera or input device, which are specified in ISO
 jpegInterchangeFormat?: number
 ```
 
-Start of Image (SOI) marker of the JPEG bitstream in interchange format. The value range is all integers.
+Start of Image (SOI) marker of the JPEG bitstream in interchange format.
+The value range is all integers.
 
 **Type:** number
 
@@ -1444,7 +1485,8 @@ Start of Image (SOI) marker of the JPEG bitstream in interchange format. The val
 jpegInterchangeFormatLength?: number
 ```
 
-Number of bytes in the JPEG stream. The value range is all integers.
+Number of bytes in the JPEG stream.
+The value range is all integers.
 
 **Type:** number
 
@@ -1524,7 +1566,8 @@ Specifications of the lens.
 lightSource?: number
 ```
 
-Light source. The value range is all integers.
+Light source.
+The value range is all integers.
 
 **Type:** number
 
@@ -1588,7 +1631,8 @@ Minimum aperture value of the lens.
 meteringMode?: number
 ```
 
-Metering mode. The value range is all integers.
+Metering mode.
+The value range is all integers.
 
 **Type:** number
 
@@ -1620,7 +1664,8 @@ Camera model.
 newSubfileType?: number
 ```
 
-Data type of a subfile (for example, basic types such as text or image, rather than specific storage formats). The value range is all integers.
+Data type of a subfile (for example, basic types such as text or image, rather than specific storage formats).
+The value range is all integers.
 
 **Type:** number
 
@@ -1668,7 +1713,8 @@ Geographical time zone of the device.
 offsetTimeDigitized?: string
 ```
 
-Coordinated Universal Time (UTC) offset at the time of image digitization, which helps to precisely adjust the timestamp.
+Coordinated Universal Time (UTC) offset at the time of image digitization, which helps to precisely adjust the
+timestamp.
 
 **Type:** string
 
@@ -1716,7 +1762,8 @@ Image orientation.
 photoMode?: number
 ```
 
-Image mode. The value range is all integers.
+Image mode.
+The value range is all integers.
 
 **Type:** number
 
@@ -1748,7 +1795,9 @@ Sensitivity of the camera or input device during image capture.
 photometricInterpretation?: number
 ```
 
-Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-difference Chroma, Red-difference Chroma) . The value range is all integers.
+Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-difference Chroma, Red-difference Chroma)
+.
+The value range is all integers.
 
 **Type:** number
 
@@ -1764,7 +1813,8 @@ Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-differen
 pixelXDimension?: number
 ```
 
-Image size on the X axis (horizontal axis in a two-dimensional coordinate system). The value range is all integers.
+Image size on the X axis (horizontal axis in a two-dimensional coordinate system).
+The value range is all integers.
 
 **Type:** number
 
@@ -1780,7 +1830,8 @@ Image size on the X axis (horizontal axis in a two-dimensional coordinate system
 pixelYDimension?: number
 ```
 
-Image size on the Y axis (vertical axis in a two-dimensional coordinate system). The value range is all integers.
+Image size on the Y axis (vertical axis in a two-dimensional coordinate system).
+The value range is all integers.
 
 **Type:** number
 
@@ -1796,7 +1847,8 @@ Image size on the Y axis (vertical axis in a two-dimensional coordinate system).
 planarConfiguration?: number
 ```
 
-Whether the pixel components are recorded in chunked or planar format. The value range is all integers.
+Whether the pixel components are recorded in chunked or planar format.
+The value range is all integers.
 
 **Type:** number
 
@@ -1828,7 +1880,8 @@ Chromaticity of the image primaries.
 recommendedExposureIndex?: number
 ```
 
-GPS measurement mode. The value range is all integers.
+GPS measurement mode.
+The value range is all integers.
 
 **Type:** number
 
@@ -1876,7 +1929,8 @@ Name of the audio file related to the image data.
 resolutionUnit?: number
 ```
 
-Unit of the image resolution in the width and height directions. The value range is all integers.
+Unit of the image resolution in the width and height directions.
+The value range is all integers.
 
 **Type:** number
 
@@ -1892,7 +1946,8 @@ Unit of the image resolution in the width and height directions. The value range
 rowsPerStrip?: number
 ```
 
-Number of rows per image strip. The value range is all integers.
+Number of rows per image strip.
+The value range is all integers.
 
 **Type:** number
 
@@ -1908,7 +1963,11 @@ Number of rows per image strip. The value range is all integers.
 samplesPerPixel?: number
 ```
 
-Number of color components per pixel, applicable to RGB and YCbCr color models. Since both the models are three-component models (three color channels, or one luminance component plus two chroma components), the standard value for this property is 3. For JPEG-compressed images, this property will be replaced by the corresponding JPEG marker. The value range is all integers.
+Number of color components per pixel, applicable to RGB and YCbCr color models.
+Since both the models are three-component models (three color channels, or one luminance component plus two
+chroma components), the standard value for this property is 3.
+For JPEG-compressed images, this property will be replaced by the corresponding JPEG marker.
+The value range is all integers.
 
 **Type:** number
 
@@ -1924,7 +1983,9 @@ Number of color components per pixel, applicable to RGB and YCbCr color models. 
 saturation?: number
 ```
 
-Color saturation adjustment policy applied by the camera. For example, standard processing and saturation reduction. The value range is all integers.
+Color saturation adjustment policy applied by the camera. For example, standard processing and saturation
+reduction.
+The value range is all integers.
 
 **Type:** number
 
@@ -1940,7 +2001,8 @@ Color saturation adjustment policy applied by the camera. For example, standard 
 sceneCaptureType?: number
 ```
 
-Type of the scene that is captured. The value range is all integers.
+Type of the scene that is captured.
+The value range is all integers.
 
 **Type:** number
 
@@ -1972,7 +2034,8 @@ Scene type.
 sensingMethod?: number
 ```
 
-Type of the image sensor on the camera. The value range is all integers.
+Type of the image sensor on the camera.
+The value range is all integers.
 
 **Type:** number
 
@@ -1988,7 +2051,8 @@ Type of the image sensor on the camera. The value range is all integers.
 sensitivityType?: number
 ```
 
-Sensitivity type. The value range is all integers.
+Sensitivity type.
+The value range is all integers.
 
 **Type:** number
 
@@ -2004,7 +2068,8 @@ Sensitivity type. The value range is all integers.
 sharpness?: number
 ```
 
-Edge enhancement processing method applied by the camera. For example, weak sharpening and standard sharpening. The value range is all integers.
+Edge enhancement processing method applied by the camera. For example, weak sharpening and standard sharpening.
+The value range is all integers.
 
 **Type:** number
 
@@ -2116,7 +2181,8 @@ Spectral sensitivity of each channel of the camera.
 standardOutputSensitivity?: number
 ```
 
-Standard output sensitivity. The value range is all integers.
+Standard output sensitivity.
+The value range is all integers.
 
 **Type:** number
 
@@ -2148,7 +2214,10 @@ Number of bytes in each strip after compression.
 stripOffsets?: number[]
 ```
 
-Strip storage offset of the image data, in bytes. To improve the efficiency of large image access, the original pixel data is divided into multiple contiguous blocks (called strips). This property stores the starting offset of each strip in the file sequentially.
+Strip storage offset of the image data, in bytes.
+To improve the efficiency of large image access, the original pixel data is divided into multiple contiguous
+blocks (called strips).
+This property stores the starting offset of each strip in the file sequentially.
 
 **Type:** number[]
 
@@ -2164,7 +2233,8 @@ Strip storage offset of the image data, in bytes. To improve the efficiency of l
 subfileType?: number
 ```
 
-Data type of a subfile. It has been deprecated. Use **newSubfileType** instead. The value range is all integers.
+Data type of a subfile. It has been deprecated. Use **newSubfileType** instead.
+The value range is all integers.
 
 **Type:** number
 
@@ -2212,7 +2282,8 @@ Distance from the capture device to the photographed object, in meters.
 subjectDistanceRange?: number
 ```
 
-Distance range to the object. The value range is all integers.
+Distance range to the object.
+The value range is all integers.
 
 **Type:** number
 
@@ -2324,7 +2395,8 @@ User comments.
 whiteBalance?: number
 ```
 
-White balance. The value range is all integers.
+White balance.
+The value range is all integers.
 
 **Type:** number
 
@@ -2388,7 +2460,8 @@ Transformation matrix coefficients for converting RGB image data to YCbCr image 
 yCbCrPositioning?: number
 ```
 
-Position of chroma components relative to the luminance component. The value range is all integers.
+Position of chroma components relative to the luminance component.
+The value range is all integers.
 
 **Type:** number
 

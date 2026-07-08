@@ -6,7 +6,8 @@
 function isDefaultApplication(type: string, callback: AsyncCallback<boolean>) : void
 ```
 
-根据系统已定义的应用类型或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor)类型判断当前应用是否是该类型的默认应用。使用 callback异步回调。
+根据系统已定义的应用类型或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor)类型判断当前应用是否是该类型的默认应用。使用
+callback异步回调。
 
 **起始版本：** 9
 
@@ -49,7 +50,8 @@ defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER
 function isDefaultApplication(type: string) : Promise<boolean>
 ```
 
-根据系统已定义的应用类型或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型判断当前 应用是否是该类型的默认应用。使用Promise异步回调。
+根据系统已定义的应用类型或者[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型判断当前
+应用是否是该类型的默认应用。使用Promise异步回调。
 
 **起始版本：** 9
 

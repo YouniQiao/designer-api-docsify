@@ -904,6 +904,9 @@
   - [RequestFile](arkts-basicservices-requestfile-i.md)
   - [UploadRequestOptions](arkts-basicservices-uploadrequestoptions-i.md)
   - [UploadResponse](arkts-basicservices-uploadresponse-i.md)
+- application<!--arkts-basicserviceskit-application-->
+  - [PrintExtensionContext](arkts-printextensioncontext.md)
+    - [PrintExtensionContext](arkts-basicservices-printextensioncontext-c.md)
 - commonEvent<!--arkts-basicserviceskit-commonEvent-->
   - [commonEventData](arkts-commoneventdata.md)
     - [CommonEventData](arkts-basicservices-commoneventdata-i.md)

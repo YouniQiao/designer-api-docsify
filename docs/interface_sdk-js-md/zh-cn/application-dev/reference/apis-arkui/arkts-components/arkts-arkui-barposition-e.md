@@ -9,7 +9,7 @@ Tabs页签位置枚举。
 ## Start
 
 ```TypeScript
-Start = 0
+Start
 ```
 
 vertical属性方法设置为true时，页签位于容器左侧；vertical属性方法设置为false时，页签位于容器顶部。
@@ -23,7 +23,7 @@ vertical属性方法设置为true时，页签位于容器左侧；vertical属性
 ## End
 
 ```TypeScript
-End = 1
+End
 ```
 
 vertical属性方法设置为true时，页签位于容器右侧；vertical属性方法设置为false时，页签位于容器底部。

@@ -1,6 +1,7 @@
 # Portrait (System API)
 
-Portrait: inherits from [PortraitQuery](arkts-camera-portraitquery-i-sys.md). Provides the APIs for portrait photo settings.
+Portrait: inherits from [PortraitQuery](arkts-camera-portraitquery-i-sys.md).
+Provides the APIs for portrait photo settings.
 
 **Inheritance/Implementation:** Portrait extends [PortraitQuery](arkts-camera-portraitquery-i-sys.md)
 
@@ -59,7 +60,9 @@ function getPortraitEffect(portraitPhotoSession: camera.PortraitPhotoSession): c
 setPortraitEffect(effect: PortraitEffect): void
 ```
 
-Sets a portrait effect. Before the setting, use [getSupportedPortraitEffects](arkts-camera-portraitquery-i-sys.md#getsupportedportraiteffects-1) to obtain the supported portrait effects and check whether the target portrait effect is supported.
+Sets a portrait effect. Before the setting, use
+[getSupportedPortraitEffects](arkts-camera-portraitquery-i-sys.md#getsupportedportraiteffects-1) to obtain the supported
+portrait effects and check whether the target portrait effect is supported.
 
 **Since:** 10
 

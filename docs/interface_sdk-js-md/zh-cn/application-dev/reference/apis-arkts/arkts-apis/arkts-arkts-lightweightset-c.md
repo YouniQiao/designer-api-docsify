@@ -279,7 +279,11 @@ for(let i = 0; i < 10; i++) {
 equal(obj: Object): boolean
 ```
 
-判断此容器与obj的构成元素是否相同。 > **说明** > > 此接口从API version 8开始支持，从API version 12开始废弃。无替代接口。
+判断此容器与obj的构成元素是否相同。
+
+> **说明**
+>
+> 此接口从API version 8开始支持，从API version 12开始废弃。无替代接口。
 
 **起始版本：** 8
 

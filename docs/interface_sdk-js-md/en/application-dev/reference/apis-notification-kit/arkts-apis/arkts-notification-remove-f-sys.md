@@ -17,7 +17,8 @@ function remove(
   ): void
 ```
 
-Removes a notification based on the bundle information and notification key. This API uses an asynchronous callback to return the result.
+Removes a notification based on the bundle information and notification key. This API uses an asynchronous callback
+to return the result.
 
 **Since:** 9
 
@@ -81,7 +82,8 @@ notificationSubscribe.remove(bundle, notificationKey, reason, removeCallback);
 function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: RemoveReason): Promise<void>
 ```
 
-Removes a notification based on the bundle information and notification key. This API uses a promise to return the result.
+Removes a notification based on the bundle information and notification key. This API uses a promise to return the
+result.
 
 **Since:** 9
 
@@ -147,7 +149,8 @@ notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
 function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<void>): void
 ```
 
-Removes a notification based on the specified unique notification ID. This API uses an asynchronous callback to return the result.
+Removes a notification based on the specified unique notification ID. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 9
 

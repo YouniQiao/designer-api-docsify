@@ -12,7 +12,8 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>
 ```
 
-Obtains the extended install information about all applications in the system. This API uses a promise to return the result.
+Obtains the extended install information about all applications in the system.
+This API uses a promise to return the result.
 
 **Since:** 23
 

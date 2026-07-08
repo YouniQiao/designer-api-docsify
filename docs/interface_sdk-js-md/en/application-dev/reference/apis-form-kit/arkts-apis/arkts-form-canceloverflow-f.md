@@ -12,7 +12,9 @@ import { formProvider } from '@kit.FormKit';
 function cancelOverflow(formId: string): Promise<void>
 ```
 
-Cancels an animation. This API takes effect only for [scene-based widgets](../../../../form/arkts-ui-widget-configuration.md#sceneanimationparams-field). This API uses a promise to return the result.
+Cancels an animation. This API takes effect only for
+[scene-based widgets](../../../../form/arkts-ui-widget-configuration.md#sceneanimationparams-field). This API uses a
+promise to return the result.
 
 **Since:** 20
 

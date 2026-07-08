@@ -12,7 +12,10 @@ import { bundleManager } from '@kit.AbilityKit';
 function queryAbilityInfo(want: Want, abilityFlags: number, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-Obtains the ability information based on the given want and ability flags. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
+Obtains the ability information based on the given want and ability flags. This API uses an asynchronous callback
+to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -78,7 +81,10 @@ try {
 function queryAbilityInfo(want: Want, abilityFlags: number, userId: number, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-Obtains the ability information based on the given want, ability flags, and user ID. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
+Obtains the ability information based on the given want, ability flags, and user ID. This API uses an asynchronous
+callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -147,7 +153,10 @@ try {
 function queryAbilityInfo(want: Want, abilityFlags: number, userId?: number): Promise<Array<AbilityInfo>>
 ```
 
-Obtains the ability information based on the given want, ability flags, and user ID. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
+Obtains the ability information based on the given want, ability flags, and user ID. This API uses a promise to
+return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -244,7 +253,10 @@ try {
 function queryAbilityInfo(wants: Array<Want>, abilityFlags: number, userId?: number): Promise<Array<AbilityInfo>>
 ```
 
-Obtains the ability information based on the given want list, ability flags, and user ID. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
+Obtains the ability information based on the given want list, ability flags, and user ID. This API uses a promise
+to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 12
 

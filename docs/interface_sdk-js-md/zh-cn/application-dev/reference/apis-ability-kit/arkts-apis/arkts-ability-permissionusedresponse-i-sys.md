@@ -14,7 +14,8 @@
 beginTime: number
 ```
 
-查询记录的起始时间。 单位为：毫秒。
+查询记录的起始时间。
+单位为：毫秒。
 
 **类型：** number
 
@@ -46,7 +47,8 @@ bundleRecords: Array<BundleUsedRecord>
 endTime: number
 ```
 
-查询记录的终止时间。 单位为：毫秒。
+查询记录的终止时间。
+单位为：毫秒。
 
 **类型：** number
 

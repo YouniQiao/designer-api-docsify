@@ -18,7 +18,8 @@ import { util } from '@kit.ArkTS';
 fatal?: boolean
 ```
 
-Whether to display fatal errors. The value **true** means to display fatal errors, and **false** means the opposite. The default value is **false**.
+Whether to display fatal errors. The value **true** means to display fatal errors, and **false** means the
+opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -34,7 +35,8 @@ Whether to display fatal errors. The value **true** means to display fatal error
 ignoreBOM?: boolean
 ```
 
-Whether to ignore the BOM. The value **true** means to ignore the BOM, and **false** means the opposite. The default value is **false**.
+Whether to ignore the BOM. The value **true** means to ignore the BOM, and **false** means the opposite. The
+default value is **false**.
 
 **Type:** boolean
 

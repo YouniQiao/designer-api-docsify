@@ -12,7 +12,8 @@ import { access } from '@kit.ConnectivityKit';
 function addPersistentDeviceId(deviceId: string): Promise<void>
 ```
 
-Add a persistent random device address. Once the randomized address is successfully added, the application can save it for an extended period of time.
+Add a persistent random device address. Once the randomized address is successfully added,
+the application can save it for an extended period of time.
 
 **Since:** 16
 

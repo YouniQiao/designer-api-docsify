@@ -1,6 +1,6 @@
 # PointerMatrix
 
-表示设备显示上的指针二维数组，用于构建可通过UiDriver注入的多指轨迹。
+存储多指操作中每根手指每一步动作的坐标点及其行为的二维数组。
 
 **起始版本：** 9
 
@@ -12,7 +12,7 @@
 static create(fingers: number, steps: number): PointerMatrix
 ```
 
-创建**PointerMatrix**对象并返回创建的对象。该API为静态API。
+静态方法，构造一个PointerMatrix对象，并返回该对象。
 
 **起始版本：** 9
 
@@ -24,20 +24,20 @@ static create(fingers: number, steps: number): PointerMatrix
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fingers | number | 是 | 多指操作期间注入的手指数。<br>取值范围：[1, 10] |
-| steps | number | 是 | 手指执行的步数。<br>取值范围：[1, 1000] |
+| fingers | number | 是 | 多指操作中注入的手指数，取值范围：[1,10]的整数。 |
+| steps | number | 是 | 每根手指操作的步骤数，取值范围：[1,1000]的整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PointerMatrix | - 创建的**PointerMatrix**对象。 |
+| PointerMatrix | - 返回构造的PointerMatrix对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能原因：1.必填参数未指定；2.参数类型错误；3.参数校验失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例：**
 
@@ -57,7 +57,7 @@ async function demo() {
 setPoint(finger: number, step: number, point: Point): void
 ```
 
-在**PointerMatrix**对象中为指定手指和步数对应的动作设置坐标。
+设置PointerMatrix对象中指定手指和步骤对应动作的坐标点。
 
 **起始版本：** 9
 
@@ -69,15 +69,15 @@ setPoint(finger: number, step: number, point: Point): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| finger | number | 是 | 手指数。该值为大于或等于0的整数，不能超过构建**PointerMatrix**对象时设置的手指数。 |
-| step | number | 是 | 步数。该值为大于或等于0的整数，不能超过构建**PointerMatrix**对象时设置的步数。 |
-| point | Point | 是 | 动作的坐标。建议相邻坐标之间的距离在10 px到80 px范围内。 |
+| finger | number | 是 | 手指的序号，取值大于等于0的整数，且不超过构造PointerMatrix对象时设置的手指数。 |
+| step | number | 是 | 步骤的序号，取值大于等于0的整数，且不超过构造PointerMatrix对象时设置的操作的步骤数。 |
+| point | Point | 是 | 该行为的坐标点。建议相邻的坐标点距离在10px至80px范围内。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能原因：1.必填参数未指定；2.参数类型错误；3.参数校验失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例：**
 

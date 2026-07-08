@@ -1,6 +1,15 @@
 # SaveButtonOptions
 
-Defines options for the save button, including icon, text, and button type. > **NOTE** > > - You are advised to specify at least one of **icon** or **text**. > - If neither **icon** nor **text** is specified, **SaveButton** is created with default styles as follows: > **SaveIconStyle** defaults to **FULL_FILLED**, **SaveDescription** to **DOWNLOAD**, and **ButtonType** to > **Capsule**. > > - The **icon**, **text**, and **buttonType** parameters do not support dynamic modification.
+Defines options for the save button, including icon, text, and button type.
+
+> **NOTE**
+>
+> - You are advised to specify at least one of **icon** or **text**.
+> - If neither **icon** nor **text** is specified, **SaveButton** is created with default styles as follows:
+> **SaveIconStyle** defaults to **FULL_FILLED**, **SaveDescription** to **DOWNLOAD**, and **ButtonType** to
+> **Capsule**.
+>
+> - The **icon**, **text**, and **buttonType** parameters do not support dynamic modification.
 
 **Since:** 10
 
@@ -12,7 +21,8 @@ Defines options for the save button, including icon, text, and button type. > **
 buttonType?: ButtonType
 ```
 
-Background type of the **SaveButton** component. Default value: ButtonType.Capsule.
+Background type of the **SaveButton** component.
+Default value: ButtonType.Capsule.
 
 **Type:** ButtonType
 
@@ -30,7 +40,9 @@ Background type of the **SaveButton** component. Default value: ButtonType.Capsu
 icon?: SaveIconStyle
 ```
 
-Icon style of the **SaveButton** component. <br>If this parameter is not specified, no icon is displayed. If neither **icon** nor **text** is provided, the component uses the default style.
+Icon style of the **SaveButton** component.
+<br>If this parameter is not specified, no icon is displayed. If neither **icon** nor **text** is provided, the
+component uses the default style.
 
 **Type:** SaveIconStyle
 
@@ -48,7 +60,9 @@ Icon style of the **SaveButton** component. <br>If this parameter is not specifi
 text?: SaveDescription
 ```
 
-Text on the **SaveButton** component. <br>If this parameter is not specified, no text is displayed. If neither **text** nor **icon** is provided, the component uses the default style.
+Text on the **SaveButton** component.
+<br>If this parameter is not specified, no text is displayed. If neither **text** nor **icon** is provided, the
+component uses the default style.
 
 **Type:** SaveDescription
 

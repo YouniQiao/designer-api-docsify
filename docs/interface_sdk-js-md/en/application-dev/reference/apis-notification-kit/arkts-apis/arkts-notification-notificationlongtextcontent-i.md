@@ -1,6 +1,11 @@
 # NotificationLongTextContent
 
-Describes the long text notification. This API is inherited from [NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md). > **NOTE** > > The display effect depends on the device capability and notification center UI style.
+Describes the long text notification. This API is inherited from
+[NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md).
+
+> **NOTE**
+>
+> The display effect depends on the device capability and notification center UI style.
 
 **Inheritance/Implementation:** NotificationLongTextContent extends [NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md)
 
@@ -28,7 +33,8 @@ Brief text of the notification. It cannot be empty or exceed 1,024 bytes. Excess
 expandedTitle: string
 ```
 
-Title of the notification in the expanded state. It cannot be empty or exceed 1,024 bytes. Excess content will be truncated.
+Title of the notification in the expanded state. It cannot be empty or exceed 1,024 bytes. Excess content will be
+truncated.
 
 **Type:** string
 

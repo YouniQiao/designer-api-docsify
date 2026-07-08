@@ -10,4 +10,4 @@ Provides debug code define.For example, you can use these code for check result 
 | Name | Description |
 | -- | -- |
 | [hidebug_type.h](capi-hidebug-type-h.md) | Defines the code of the HiDebug module. |
-| [hidebug.h](capi-hidebug-h.md) | Defines the debug functions of the HiDebug module. |
+| [hidebug.h](capi-hidebug-h.md) | Defines the APIs for debugging. |

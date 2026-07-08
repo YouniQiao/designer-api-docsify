@@ -6,7 +6,15 @@
 function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 ```
 
-提交异步传输请求。 > **说明：** > > 本接口为异步接口，调用后立刻返回，实际读写操作的结果以回调的方式返回。 > > 在调用该接口前需要通过 > [usbManager.claimInterface](arkts-basicservices-claiminterface-f.md#claiminterface-1) > claim通信接口。
+提交异步传输请求。
+
+> **说明：**
+>
+> 本接口为异步接口，调用后立刻返回，实际读写操作的结果以回调的方式返回。
+>
+> 在调用该接口前需要通过
+> [usbManager.claimInterface](arkts-basicservices-claiminterface-f.md#claiminterface-1)
+> claim通信接口。
 
 **起始版本：** 18
 

@@ -20,7 +20,11 @@ Defines the property string (in key-value format) of the image source.It is used
 
 | Name | Description |
 | -- | -- |
-| char* value = nullptr | Image source property key and value string head. |
-| size_t size = 0 | Image source property key and value string size. |
+| char* value = nullptr |  |
+| size_t size = 0;
+#else |  |
+| char* value |  |
+| size_t size;
+#endif |  |
 
 

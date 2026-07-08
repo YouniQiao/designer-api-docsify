@@ -12,7 +12,7 @@ import { screenLockFileManager } from '@kit.AbilityKit';
 function queryAppKeyState(dataType: DataType): KeyStatus
 ```
 
-Query the specified AppKey's status.
+Queries the status of a specified type of sensitive data key under the lock screen synchronously.
 
 **Since:** 18
 
@@ -26,13 +26,13 @@ Query the specified AppKey's status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | DataType | Yes | Indicates the specified data to allow access. |
+| dataType | DataType | Yes | Type of sensitive data that is accessible on the lock screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| KeyStatus | Returns the AppKey status. |
+| KeyStatus | Status of the key for sensitive data under lock screen. |
 
 **Error codes:**
 

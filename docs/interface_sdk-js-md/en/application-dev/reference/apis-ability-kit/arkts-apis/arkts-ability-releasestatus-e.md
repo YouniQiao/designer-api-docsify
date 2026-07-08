@@ -1,6 +1,6 @@
 # ReleaseStatus
 
-ReleaseStatus.
+Enumerates the statuses for releasing access permissions for sensitive data under the lock screen.
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ ReleaseStatus.
 RELEASE_DENIED = -1
 ```
 
-Release the access of data failed.
+Release of access permission for sensitive data under lock screen is denied.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ Release the access of data failed.
 RELEASE_GRANTED = 0
 ```
 
-Release the access of data success.
+Release of access permission for sensitive data under lock screen is granted.
 
 **Since:** 12
 

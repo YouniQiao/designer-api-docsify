@@ -9,7 +9,7 @@ Enumerates the display modes of selected subtabs.
 ## INDICATOR
 
 ```TypeScript
-INDICATOR = 0
+INDICATOR
 ```
 
 Indicator mode.
@@ -25,7 +25,7 @@ Indicator mode.
 ## BOARD
 
 ```TypeScript
-BOARD = 1
+BOARD
 ```
 
 Board mode.

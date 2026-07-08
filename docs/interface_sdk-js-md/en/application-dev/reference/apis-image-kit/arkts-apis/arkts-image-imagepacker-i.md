@@ -1,6 +1,20 @@
 # ImagePacker
 
-The **ImagePacker** class provides APIs to compress and encode images. Before calling any API in ImagePacker, you must use [image.createImagePacker](arkts-image-createimagepacker-f.md#createimagepacker-1) to create an ImagePacker instance. During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](arkts-image-imagepacker-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. Currently, the following formats are supported: jpeg, webp, png, heic<sup>12+</sup>, and gif<sup>18+</sup>. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
+The **ImagePacker** class provides APIs to compress and encode images.
+
+Before calling any API in ImagePacker, you must use
+[image.createImagePacker](arkts-image-createimagepacker-f.md#createimagepacker-1) to create an ImagePacker instance.
+During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the
+input. Otherwise, a crash or other undefined behavior may occur.
+
+Images occupy a large amount of memory. When you finish using an ImagePacker instance, call
+[release](arkts-image-imagepacker-i.md#release-1) to free the memory promptly. Before
+releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the
+instance is no longer needed.
+
+Currently, the following formats are supported: jpeg, webp, png, heic<sup>12+</sup>, and gif<sup>18+</sup>. (The
+supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of
+ImagePacker to see which ones are supported.)
 
 **Since:** 6
 
@@ -128,7 +142,13 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result. > **NOTE** > > If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is > released in advance. You need to check the code and ensure that the PixelMap object is released after this API > is called.
+Compresses or re-encodes an image. This API uses a promise to return the result.
+
+> **NOTE**
+>
+> If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is
+> released in advance. You need to check the code and ensure that the PixelMap object is released after this API
+> is called.
 
 **Since:** 13
 
@@ -201,7 +221,8 @@ Encodes multiple PixelMap objects into GIF data. This API uses a promise to retu
 packToFile(source: ImageSource, fd: number, options: PackingOption, callback: AsyncCallback<void>): void
 ```
 
-Encodes the image source into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result.
+Encodes the image source into a file based on the specified encoding parameters. This API uses an asynchronous
+callback to return the result.
 
 **Since:** 11
 
@@ -236,7 +257,8 @@ Encodes the image source into a file based on the specified encoding parameters.
 packToFile(source: ImageSource, fd: number, options: PackingOption): Promise<void>
 ```
 
-Encodes the image source into a file based on the specified encoding parameters. This API uses a promise to return the result.
+Encodes the image source into a file based on the specified encoding parameters. This API uses a promise to
+return the result.
 
 **Since:** 11
 
@@ -276,7 +298,14 @@ Encodes the image source into a file based on the specified encoding parameters.
 packToFile(source: PixelMap, fd: number, options: PackingOption, callback: AsyncCallback<void>): void
 ```
 
-Encodes the PixelMap into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result. > **NOTE** > > If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap > object is released in advance. You need to check the code and ensure that the PixelMap object is released after > this API is called.
+Encodes the PixelMap into a file based on the specified encoding parameters. This API uses an asynchronous
+callback to return the result.
+
+> **NOTE**
+>
+> If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap
+> object is released in advance. You need to check the code and ensure that the PixelMap object is released after
+> this API is called.
 
 **Since:** 11
 
@@ -311,7 +340,14 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 packToFile(source: PixelMap, fd: number, options: PackingOption): Promise<void>
 ```
 
-Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return the result. > **NOTE** > > If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap > object is released in advance. You need to check the code and ensure that the PixelMap object is released after > this API is called.
+Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return
+the result.
+
+> **NOTE**
+>
+> If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap
+> object is released in advance. You need to check the code and ensure that the PixelMap object is released after
+> this API is called.
 
 **Since:** 11
 
@@ -351,7 +387,8 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 packToFile(picture: Picture, fd: number, options: PackingOption): Promise<void>
 ```
 
-Encodes the Picture into a file based on the specified encoding parameters. This API uses a promise to return the result.
+Encodes the Picture into a file based on the specified encoding parameters. This API uses a promise to return the
+result.
 
 **Since:** 13
 
@@ -474,7 +511,13 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void
 ```
 
-Compresses or re-encodes an image. This API uses an asynchronous callback to return the result. > **NOTE** > > If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the > PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is > released after this API is called.
+Compresses or re-encodes an image. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+>
+> If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the
+> PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is
+> released after this API is called.
 
 **Since:** 8
 
@@ -500,7 +543,13 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result. > **NOTE** > > If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the > PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is > released after this API is called.
+Compresses or re-encodes an image. This API uses a promise to return the result.
+
+> **NOTE**
+>
+> If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the
+> PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is
+> released after this API is called.
 
 **Since:** 8
 
@@ -563,7 +612,13 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImagePacker instance. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImagePacker instance. This API uses an asynchronous callback to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the
+memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished
+and the instance is no longer needed.
 
 **Since:** 6
 
@@ -581,7 +636,13 @@ Releases this ImagePacker instance. This API uses an asynchronous callback to re
 release(): Promise<void>
 ```
 
-Releases this ImagePacker instance. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImagePacker instance. This API uses a promise to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the
+memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished
+and the instance is no longer needed.
 
 **Since:** 6
 
@@ -599,7 +660,8 @@ Releases this ImagePacker instance. This API uses a promise to return the result
 readonly supportedFormats: Array<string>
 ```
 
-Supported formats for image encoding, including jpeg, webp, png, heic<sup>12+</sup>, and gif<sup>18+</sup>. (The supported formats may vary depending on the hardware.)
+Supported formats for image encoding, including jpeg, webp, png, heic<sup>12+</sup>, and gif<sup>18+</sup>. (The
+supported formats may vary depending on the hardware.)
 
 **Type:** Array<string>
 

@@ -12,7 +12,8 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 ```
 
-订阅通知扩展。使用[蓝牙模块](../../../../connectivity/connectivity-kit-intro.md#蓝牙简介)相关接口获取蓝牙设备的唯一地址后 方可订阅。使用Promise异步回调。
+订阅通知扩展。使用[蓝牙模块](../../../../connectivity/connectivity-kit-intro.md#蓝牙简介)相关接口获取蓝牙设备的唯一地址后
+方可订阅。使用Promise异步回调。
 
 **起始版本：** 22
 

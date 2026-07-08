@@ -56,7 +56,8 @@ Indicates the path of the application's shared directory.
 permissionMode: number
 ```
 
-Indicates the permission for the application's shared directory, e.g., { OperationMode.READ_MODE } or { OperationMode.READ_MODE | OperationMode.WRITE_MODE }
+Indicates the permission for the application's shared directory, e.g., { OperationMode.READ_MODE }
+or { OperationMode.READ_MODE | OperationMode.WRITE_MODE }
 
 **Type:** number
 

@@ -4,7 +4,8 @@
 type ProgressListener = (progress: ProgressInfo) => void
 ```
 
-Defines a listener for progress data changes. If the default progress indicator is not used, you can set this API to obtain the paste progress.
+Defines a listener for progress data changes. If the default progress indicator is not used, you can set this API
+to obtain the paste progress.
 
 **Since:** 15
 

@@ -6,7 +6,7 @@ typedef struct HiDebug_SystemMemInfo {...} HiDebug_SystemMemInfo
 
 ## Overview
 
-Defines system memory information structure type.
+Defines a struct for the system memory information.
 
 **Since**: 12
 
@@ -20,8 +20,8 @@ Defines system memory information structure type.
 
 | Name | Description |
 | -- | -- |
-| uint32_t totalMem | Total system memory size, in kibibytes |
-| uint32_t freeMem | System free memory size, in kibibytes |
-| uint32_t availableMem | System available memory size, in kibibytes |
+| uint32_t totalMem | Total memory of the system, in KB. |
+| uint32_t freeMem | Free memory of the system, in KB. |
+| uint32_t availableMem | Available memory of the system, in KB. |
 
 

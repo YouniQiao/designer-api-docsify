@@ -99,7 +99,8 @@ createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOption
         followCreatorLifecycle: boolean): Promise<window.Window>
 ```
 
-创建该WindowProxy实例下的子窗口，可通过设置followCreatorLifecycle，决定子窗是否跟随组件（EmbeddedComponent或UIExtensionComponent）的生命周期，使用 Promise异步回调。
+创建该WindowProxy实例下的子窗口，可通过设置followCreatorLifecycle，决定子窗是否跟随组件（EmbeddedComponent或UIExtensionComponent）的生命周期，使用
+Promise异步回调。
 
 **起始版本：** 23
 
@@ -589,7 +590,12 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 properties: WindowProxyProperties
 ```
 
-组件（EmbeddedComponent或UIExtensionComponent）的信息。 **约束：** 由于架构约束，不建议在 [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md#onsessioncreate-1)阶段同步获取该值，建议在收到 [on('windowSizeChange')](arkts-arkui-windowproxy-i.md#on-2) 回调之后获取。
+组件（EmbeddedComponent或UIExtensionComponent）的信息。
+
+**约束：** 由于架构约束，不建议在
+[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md#onsessioncreate-1)阶段同步获取该值，建议在收到
+[on('windowSizeChange')](arkts-arkui-windowproxy-i.md#on-2)
+回调之后获取。
 
 **类型：** WindowProxyProperties
 

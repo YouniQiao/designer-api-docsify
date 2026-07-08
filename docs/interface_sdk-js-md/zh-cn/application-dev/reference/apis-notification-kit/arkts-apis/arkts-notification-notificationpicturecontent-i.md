@@ -1,6 +1,10 @@
 # NotificationPictureContent
 
-描述附有图片的通知。继承自[NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md)。 > **说明：** > > 实际显示效果依赖于设备能力和通知中心UI样式。
+描述附有图片的通知。继承自[NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md)。
+
+> **说明：**
+>
+> 实际显示效果依赖于设备能力和通知中心UI样式。
 
 **继承/实现关系：** NotificationPictureContent extends [NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md)
 

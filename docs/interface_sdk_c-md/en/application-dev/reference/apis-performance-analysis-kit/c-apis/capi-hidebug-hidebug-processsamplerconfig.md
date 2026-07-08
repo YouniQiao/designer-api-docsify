@@ -6,7 +6,7 @@ typedef struct HiDebug_ProcessSamplerConfig {...} HiDebug_ProcessSamplerConfig
 
 ## Overview
 
-Defines a struct for the process sampler configuration.
+Defines a struct for sampling configuration.
 
 **Since**: 22
 
@@ -20,10 +20,10 @@ Defines a struct for the process sampler configuration.
 
 | Name | Description |
 | -- | -- |
-| uint32_t* tids | The threads id |
-| uint32_t size | The threads num |
-| uint32_t frequency | The frequency of the sampling |
-| uint32_t duration | The duration of the sampling |
-| uint32_t reserved | The reserved of the sampling |
+| uint32_t* tids | Array of thread IDs to sample. A maximum of 10 threads can be sampled at the same time. If the array lengthexceeds 10, the first 10 threads are sampled. |
+| uint32_t size | Length of the array to which **tids** points. |
+| uint32_t frequency | Sampling frequency, in Hz. The value ranges from 1 to 200. If the value is out of the range, the default value 100** is used. |
+| uint32_t duration | Sampling duration, in ms. The value ranges from 1000 to 10000. If the value is less than 1000, the API call isabnormal. If the value is greater than 10000, 10000 is used. |
+| uint32_t reserved | Reserved. |
 
 

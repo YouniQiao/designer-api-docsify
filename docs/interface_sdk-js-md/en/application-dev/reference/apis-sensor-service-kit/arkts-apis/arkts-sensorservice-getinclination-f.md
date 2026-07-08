@@ -12,7 +12,8 @@ import { sensor } from '@kit.SensorServiceKit';
 function getInclination(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void
 ```
 
-Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the result.
+Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 9
 

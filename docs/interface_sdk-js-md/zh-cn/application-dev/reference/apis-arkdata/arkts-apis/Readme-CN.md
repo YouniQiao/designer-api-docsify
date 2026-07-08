@@ -1,5 +1,14 @@
 # ArkTS API<!--arkts-arkdata-->
 
+- [@ohos.application.DataShareExtensionAbility](arkts-application-datashareextensionability.md)<!--Del-->
+  - [DataShareExtensionAbility(系统接口)](arkts-arkdata-datashareextensionability-c-sys.md)<!--DelEnd--><!--Del-->
+  - [UpdateOperation(系统接口)](arkts-arkdata-updateoperation-t-sys.md)<!--DelEnd-->
+- [@ohos.data.DataShareResultSet](arkts-data-datashareresultset.md)<!--Del-->
+  - [DataShareResultSet(系统接口)](arkts-arkdata-datashareresultset-i-sys.md)<!--DelEnd--><!--Del-->
+  - [DataType(系统接口)](arkts-arkdata-datatype-e-sys.md)<!--DelEnd-->
+- [@ohos.data.ValuesBucket](arkts-data-valuesbucket.md)
+  - [ValuesBucket](arkts-arkdata-valuesbucket-t.md)
+  - [ValueType](arkts-arkdata-valuetype-t.md)
 - [@ohos.data.cloudData](arkts-data-clouddata.md)
   - [cloudData](arkts-arkdata-clouddata-n.md)
     - [sharing](arkts-arkdata-sharing-n.md)<!--Del-->
@@ -71,6 +80,64 @@
   - [ValuesBucket](arkts-arkdata-valuesbucket-t.md)
   - [ValueType](arkts-arkdata-valuetype-t.md)
   - [AssetStatus](arkts-arkdata-assetstatus-e.md)
+- [@ohos.data.dataAbility](arkts-data-dataability.md)
+  - [createRdbPredicates](arkts-arkdata-createrdbpredicates-f.md)
+  - [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md)
+  - [ValueType](arkts-arkdata-valuetype-t.md)
+- [@ohos.data.dataShare](arkts-data-datashare.md)
+  - [createDataProxyHandle](arkts-arkdata-createdataproxyhandle-f.md)<!--Del-->
+  - [createDataShareHelper(系统接口)](arkts-arkdata-createdatasharehelper-f-sys.md)<!--DelEnd--><!--Del-->
+  - [disableSilentProxy(系统接口)](arkts-arkdata-disablesilentproxy-f-sys.md)<!--DelEnd--><!--Del-->
+  - [enableSilentProxy(系统接口)](arkts-arkdata-enablesilentproxy-f-sys.md)<!--DelEnd--><!--Del-->
+  - [ChangeInfo(系统接口)](arkts-arkdata-changeinfo-i-sys.md)<!--DelEnd-->
+  - [DataProxyChangeInfo](arkts-arkdata-dataproxychangeinfo-i.md)
+  - [DataProxyConfig](arkts-arkdata-dataproxyconfig-i.md)
+  - [DataProxyGetResult](arkts-arkdata-dataproxygetresult-i.md)
+  - [DataProxyHandle](arkts-arkdata-dataproxyhandle-i.md)
+  - [DataProxyResult](arkts-arkdata-dataproxyresult-i.md)<!--Del-->
+  - [DataShareHelper(系统接口)](arkts-arkdata-datasharehelper-i-sys.md)<!--DelEnd--><!--Del-->
+  - [DataShareHelperOptions(系统接口)](arkts-arkdata-datasharehelperoptions-i-sys.md)<!--DelEnd--><!--Del-->
+  - [OperationResult(系统接口)](arkts-arkdata-operationresult-i-sys.md)<!--DelEnd-->
+  - [ProxyData](arkts-arkdata-proxydata-i.md)<!--Del-->
+  - [PublishedDataChangeNode(系统接口)](arkts-arkdata-publisheddatachangenode-i-sys.md)<!--DelEnd--><!--Del-->
+  - [PublishedItem(系统接口)](arkts-arkdata-publisheditem-i-sys.md)<!--DelEnd--><!--Del-->
+  - [RdbDataChangeNode(系统接口)](arkts-arkdata-rdbdatachangenode-i-sys.md)<!--DelEnd--><!--Del-->
+  - [Template(系统接口)](arkts-arkdata-template-i-sys.md)<!--DelEnd--><!--Del-->
+  - [TemplateId(系统接口)](arkts-arkdata-templateid-i-sys.md)<!--DelEnd--><!--Del-->
+  - [UpdateOperation(系统接口)](arkts-arkdata-updateoperation-i-sys.md)<!--DelEnd--><!--Del-->
+  - [ChangeType(系统接口)](arkts-arkdata-changetype-e-sys.md)<!--DelEnd-->
+  - [DataProxyErrorCode](arkts-arkdata-dataproxyerrorcode-e.md)
+  - [DataProxyMaxValueLength](arkts-arkdata-dataproxymaxvaluelength-e.md)
+  - [DataProxyType](arkts-arkdata-dataproxytype-e.md)<!--Del-->
+  - [SubscriptionType(系统接口)](arkts-arkdata-subscriptiontype-e-sys.md)<!--DelEnd-->
+- [@ohos.data.dataSharePredicates](arkts-data-datasharepredicates.md)
+  - [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md)<!--Del-->
+  - [DataSharePredicates(系统接口)](arkts-arkdata-datasharepredicates-c-sys.md)<!--DelEnd-->
+- [@ohos.data.distributedData](arkts-data-distributeddata.md)
+  - [distributedData](arkts-arkdata-distributeddata-n.md)
+    - [Constants](arkts-arkdata-constants-n.md)
+      - [常量](arkts-arkdata-constants-con.md)
+    - [createKVManager](arkts-arkdata-createkvmanager-f.md)
+    - [FieldNode](arkts-arkdata-fieldnode-c.md)
+    - [Query](arkts-arkdata-query-c.md)
+    - [Schema](arkts-arkdata-schema-c.md)
+    - [ChangeNotification](arkts-arkdata-changenotification-i.md)
+    - [DeviceKVStore](arkts-arkdata-devicekvstore-i.md)
+    - [Entry](arkts-arkdata-entry-i.md)
+    - [KVManager](arkts-arkdata-kvmanager-i.md)
+    - [KVManagerConfig](arkts-arkdata-kvmanagerconfig-i.md)
+    - [KVStore](arkts-arkdata-kvstore-i.md)
+    - [KvStoreResultSet](arkts-arkdata-kvstoreresultset-i.md)
+    - [Options](arkts-arkdata-options-i.md)
+    - [SingleKVStore](arkts-arkdata-singlekvstore-i.md)
+    - [UserInfo](arkts-arkdata-userinfo-i.md)
+    - [Value](arkts-arkdata-value-i.md)
+    - [KVStoreType](arkts-arkdata-kvstoretype-e.md)
+    - [SecurityLevel](arkts-arkdata-securitylevel-e.md)
+    - [SubscribeType](arkts-arkdata-subscribetype-e.md)
+    - [SyncMode](arkts-arkdata-syncmode-e.md)
+    - [UserType](arkts-arkdata-usertype-e.md)
+    - [ValueType](arkts-arkdata-valuetype-e.md)
 - [@ohos.data.distributedDataObject](arkts-data-distributeddataobject.md)
   - [create](arkts-arkdata-create-f.md)
   - [createDistributedObject](arkts-arkdata-createdistributedobject-f.md)
@@ -83,3 +150,64 @@
   - [DataObserver](arkts-arkdata-dataobserver-t.md)
   - [ProgressObserver](arkts-arkdata-progressobserver-t.md)
   - [StatusObserver](arkts-arkdata-statusobserver-t.md)
+- [@ohos.data.distributedKVStore](arkts-data-distributedkvstore.md)
+  - [createKVManager](arkts-arkdata-createkvmanager-f.md)
+  - [FieldNode](arkts-arkdata-fieldnode-c.md)
+  - [Query](arkts-arkdata-query-c.md)
+  - [Schema](arkts-arkdata-schema-c.md)
+  - [BackupConfig](arkts-arkdata-backupconfig-i.md)
+  - [ChangeNotification](arkts-arkdata-changenotification-i.md)
+  - [Constants](arkts-arkdata-constants-i.md)
+  - [DeviceKVStore](arkts-arkdata-devicekvstore-i.md)<!--Del-->
+  - [DeviceKVStore(系统接口)](arkts-arkdata-devicekvstore-i-sys.md)<!--DelEnd-->
+  - [Entry](arkts-arkdata-entry-i.md)
+  - [KVManager](arkts-arkdata-kvmanager-i.md)
+  - [KVManagerConfig](arkts-arkdata-kvmanagerconfig-i.md)
+  - [KVStoreResultSet](arkts-arkdata-kvstoreresultset-i.md)
+  - [Options](arkts-arkdata-options-i.md)
+  - [SingleKVStore](arkts-arkdata-singlekvstore-i.md)<!--Del-->
+  - [SingleKVStore(系统接口)](arkts-arkdata-singlekvstore-i-sys.md)<!--DelEnd-->
+  - [Value](arkts-arkdata-value-i.md)
+  - [KVStoreType](arkts-arkdata-kvstoretype-e.md)
+  - [SecurityLevel](arkts-arkdata-securitylevel-e.md)
+  - [SubscribeType](arkts-arkdata-subscribetype-e.md)
+  - [SyncMode](arkts-arkdata-syncmode-e.md)
+  - [ValueType](arkts-arkdata-valuetype-e.md)
+- [@ohos.data.preferences](arkts-data-preferences.md)
+  - [deletePreferences](arkts-arkdata-deletepreferences-f.md)
+  - [getPreferences](arkts-arkdata-getpreferences-f.md)
+  - [getPreferencesSync](arkts-arkdata-getpreferencessync-f.md)
+  - [isStorageTypeSupported](arkts-arkdata-isstoragetypesupported-f.md)
+  - [removePreferencesFromCache](arkts-arkdata-removepreferencesfromcache-f.md)
+  - [removePreferencesFromCacheSync](arkts-arkdata-removepreferencesfromcachesync-f.md)
+  - [Options](arkts-arkdata-options-i.md)
+  - [Preferences](arkts-arkdata-preferences-i.md)
+  - [ValueType](arkts-arkdata-valuetype-t.md)
+  - [StorageType](arkts-arkdata-storagetype-e.md)
+  - [常量](arkts-arkdata-preferences-con.md)
+- [@ohos.data.sendablePreferences](arkts-data-sendablepreferences.md)
+  - [deletePreferences](arkts-arkdata-deletepreferences-f.md)
+  - [getPreferences](arkts-arkdata-getpreferences-f.md)
+  - [getPreferencesSync](arkts-arkdata-getpreferencessync-f.md)
+  - [removePreferencesFromCache](arkts-arkdata-removepreferencesfromcache-f.md)
+  - [removePreferencesFromCacheSync](arkts-arkdata-removepreferencesfromcachesync-f.md)
+  - [Options](arkts-arkdata-options-i.md)
+  - [Preferences](arkts-arkdata-preferences-i.md)
+  - [常量](arkts-arkdata-sendablepreferences-con.md)
+- [@ohos.data.storage](arkts-data-storage.md)
+  - [deleteStorage](arkts-arkdata-deletestorage-f.md)
+  - [deleteStorageSync](arkts-arkdata-deletestoragesync-f.md)
+  - [getStorage](arkts-arkdata-getstorage-f.md)
+  - [getStorageSync](arkts-arkdata-getstoragesync-f.md)
+  - [removeStorageFromCache](arkts-arkdata-removestoragefromcache-f.md)
+  - [removeStorageFromCacheSync](arkts-arkdata-removestoragefromcachesync-f.md)
+  - [Storage](arkts-arkdata-storage-i.md)
+  - [StorageObserver](arkts-arkdata-storageobserver-i.md)
+  - [ValueType](arkts-arkdata-valuetype-t.md)
+  - [常量](arkts-arkdata-storage-con.md)
+- [@system.storage](arkts-storage.md)
+  - [Storage](arkts-arkdata-storage-c.md)
+  - [ClearStorageOptions](arkts-arkdata-clearstorageoptions-i.md)
+  - [DeleteStorageOptions](arkts-arkdata-deletestorageoptions-i.md)
+  - [GetStorageOptions](arkts-arkdata-getstorageoptions-i.md)
+  - [SetStorageOptions](arkts-arkdata-setstorageoptions-i.md)

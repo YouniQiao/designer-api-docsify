@@ -1,6 +1,7 @@
 # HttpRequest
 
-<p>Defines an HTTP request task. Before invoking APIs provided by HttpRequest, you must call createHttp() to create an HttpRequestTask object.</p>
+<p>Defines an HTTP request task. Before invoking APIs provided by HttpRequest,
+you must call createHttp() to create an HttpRequestTask object.</p>
 
 **Since:** 11
 

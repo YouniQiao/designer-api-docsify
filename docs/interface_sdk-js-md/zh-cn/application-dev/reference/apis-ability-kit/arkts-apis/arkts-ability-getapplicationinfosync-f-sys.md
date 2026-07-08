@@ -6,7 +6,9 @@
 function getApplicationInfoSync(bundleName: string, applicationFlags: number, userId: number) : ApplicationInfo
 ```
 
-以同步方法根据给定的bundleName、applicationFlags和userId获取ApplicationInfo。 获取调用方自身的信息时不需要权限。
+以同步方法根据给定的bundleName、applicationFlags和userId获取ApplicationInfo。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
 
@@ -69,7 +71,9 @@ try {
 function getApplicationInfoSync(bundleName: string, applicationFlags: number) : ApplicationInfo
 ```
 
-以同步方法根据给定的bundleName、applicationFlags获取ApplicationInfo。 获取调用方自身的信息时不需要权限。
+以同步方法根据给定的bundleName、applicationFlags获取ApplicationInfo。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
 

@@ -12,7 +12,8 @@ import { featureAbility } from '@kit.AbilityKit';
 function hasWindowFocus(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the main window of this ability has the focus. This API uses an asynchronous callback to return the result.
+Checks whether the main window of this ability has the focus. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 7
 

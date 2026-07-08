@@ -6,7 +6,7 @@ typedef struct HiDebug_MemoryLimit {...} HiDebug_MemoryLimit
 
 ## Overview
 
-Defines application process memory limit structure type.
+Defines the struct for the memory limit of the application process.
 
 **Since**: 12
 
@@ -20,7 +20,7 @@ Defines application process memory limit structure type.
 
 | Name | Description |
 | -- | -- |
-| uint64_t rssLimit | The limit of the application process's resident set, in kibibytes |
-| uint64_t vssLimit | The limit of the application process's virtual memory, in kibibytes |
+| uint64_t rssLimit | Limit on the physical memory size of the application process, in KB. Currently, the system does not limit thephysical memory size of the process. However, the available physical memory of the process cannot exceed themaximum physical memory of the device. You can call {@link OH_HiDebug_GetSystemMemInfo} to obtain the physicalmemory usage of the device. |
+| uint64_t vssLimit | Limit on the virtual set size, in KB. |
 
 

@@ -1,6 +1,9 @@
 # AVScreenCaptureRecorder
 
-AVScreenCaptureRecorder is a class for screen capture management. It provides APIs for screen capture. Before calling any API in AVScreenCaptureRecorder, you must use [createAVScreenCaptureRecorder()](arkts-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder-1) to create an AVScreenCaptureRecorder instance.
+AVScreenCaptureRecorder is a class for screen capture management. It provides APIs for screen capture. Before
+calling any API in AVScreenCaptureRecorder, you must use
+[createAVScreenCaptureRecorder()](arkts-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder-1) to create an
+AVScreenCaptureRecorder instance.
 
 **Since:** 12
 
@@ -18,7 +21,9 @@ import { media } from '@kit.MediaKit';
 addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<number>
 ```
 
-add a watermark for the AVScreenCaptureRecorder. This API uses a promise to return the result. App can add up to 5 watermarks. This API can be called only before calling startRecording().
+add a watermark for the AVScreenCaptureRecorder. This API uses a promise to return the result.
+App can add up to 5 watermarks.
+This API can be called only before calling startRecording().
 
 **Since:** 26.0.0
 
@@ -54,7 +59,8 @@ add a watermark for the AVScreenCaptureRecorder. This API uses a promise to retu
 excludePickerWindows(excludedWindows: Array<number>): Promise<void>
 ```
 
-Sets the list of windows to be hidden in the picker. The setting takes effect the next time the picker is displayed. This API uses a promise to return the result.
+Sets the list of windows to be hidden in the picker. The setting takes effect the next time the picker is
+displayed. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -137,7 +143,8 @@ Unsubscribes from screen capture state changes. You can specify a callback to ca
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to cancel the specified subscription.
+Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to cancel the specified
+subscription.
 
 **Since:** 12
 
@@ -156,7 +163,8 @@ Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to 
 on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void
 ```
 
-Subscribes to screen capture state changes. An application can subscribe to only one screen capture state change event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to screen capture state changes. An application can subscribe to only one screen capture state change
+event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 12
 
@@ -175,7 +183,9 @@ Subscribes to screen capture state changes. An application can subscribe to only
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on the application logic. An application can subscribe to only one AVScreenCaptureRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on the application logic. An
+application can subscribe to only one AVScreenCaptureRecorder error event. When the application initiates
+multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 12
 
@@ -230,7 +240,15 @@ Pause screen capture. This API uses a promise to return the result.
 presentPicker(): Promise<void>
 ```
 
-Displays the Picker once more after the screen capture starts, allowing for dynamic updates to the recording source, such as changing the window or screen being recorded. This API uses a promise to return the result. > **NOTE** > > - The ongoing capture process remains uninterrupted while updating the recording source. > > - Following the dynamic update of the recording source through the Picker, the capture proceeds with the newly > selected source.
+Displays the Picker once more after the screen capture starts, allowing for dynamic updates to the recording
+source, such as changing the window or screen being recorded. This API uses a promise to return the result.
+
+> **NOTE**
+>
+> - The ongoing capture process remains uninterrupted while updating the recording source.
+>
+> - Following the dynamic update of the recording source through the Picker, the capture proceeds with the newly
+> selected source.
 
 **Since:** 22
 
@@ -374,7 +392,8 @@ Enables or disables the microphone. This API uses a promise to return the result
 setPickerMode(pickerMode: PickerMode): Promise<void>
 ```
 
-Sets the display mode of the picker. The setting takes effect the next time the picker is displayed. This API uses a promise to return the result.
+Sets the display mode of the picker. The setting takes effect the next time the picker is displayed. This API
+uses a promise to return the result.
 
 **Since:** 22
 
@@ -406,7 +425,11 @@ Sets the display mode of the picker. The setting takes effect the next time the 
 skipPrivacyMode(windowIDs: Array<number>): Promise<void>
 ```
 
-During screen capture, the application can exempt its privacy windows from security purposes. This API uses a promise to return the result. For example, if a user enters a password in this application during screen capture, the application will not display a black screen.
+During screen capture, the application can exempt its privacy windows from security purposes. This API uses a
+promise to return the result.
+
+For example, if a user enters a password in this application during screen capture, the application will not
+display a black screen.
 
 **Since:** 12
 
@@ -437,7 +460,9 @@ During screen capture, the application can exempt its privacy windows from secur
 startRecording(): Promise<void>
 ```
 
-Starts screen recording. Before using this API, you must call [init](arkts-media-avscreencapturerecorder-i.md#init-1). This API uses a promise to return the result.
+Starts screen recording. Before using this API, you must call
+[init](arkts-media-avscreencapturerecorder-i.md#init-1). This API uses a promise to return the
+result.
 
 **Since:** 12
 

@@ -1,6 +1,7 @@
 # RandomAccessFile
 
-Provides APIs for randomly reading and writing a stream. Before invoking any API of **RandomAccessFile**, you need to use **createRandomAccessFile()** to create a **RandomAccessFile** instance synchronously or asynchronously.
+Provides APIs for randomly reading and writing a stream. Before invoking any API of **RandomAccessFile**, you need to
+use **createRandomAccessFile()** to create a **RandomAccessFile** instance synchronously or asynchronously.
 
 **Since:** 10
 

@@ -716,7 +716,7 @@ Enumerates typography attribute.
 
 | Enum item | Description |
 | -- | -- |
-| TYPOGRAPH_ATTR_B_FORCE_REUSE_RASTER_RESULT = 0 |  |
+| TYPOGRAPHY_ATTR_B_FORCE_REUSE_RASTER_RESULT = 0 |  |
 
 ### OH_Drawing_TextBadgeType
 

@@ -680,7 +680,9 @@ async function getRestoreCompatibilityInfo() {
 getFileHandle(fileMeta: FileMeta): Promise<void>
 ```
 
-Request to get a shared file from the service. This interface is part of the zero-copy feature. Developers could get the file through onFileReady callback. When the client accomplished the file, use publishFile to publish.
+Request to get a shared file from the service. This interface is part of the zero-copy feature.
+Developers could get the file through onFileReady callback.
+When the client accomplished the file, use publishFile to publish.
 
 **Since:** 10
 
@@ -780,7 +782,9 @@ async function getFileHandle() {
 getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ```
 
-Request to get a shared file from the service. This interface is part of the zero-copy feature. Developers could get the file through onFileReady callback. When the client accomplished the file, use publishFile to publish.
+Request to get a shared file from the service. This interface is part of the zero-copy feature.
+Developers could get the file through onFileReady callback.
+When the client accomplished the file, use publishFile to publish.
 
 **Since:** 10
 
@@ -872,7 +876,9 @@ sessionRestore.getFileHandle(fileMeta, (err: BusinessError) => {
 getFileHandles(fileMeta: FileMeta): Promise<void>
 ```
 
-Request to get shared files from the service. This interface is part of the zero-copy feature. Developers could get the file through onFileReadyBatch callback. When the client accomplished the file, use publishFile to publish.
+Request to get shared files from the service. This interface is part of the zero-copy feature.
+Developers could get the file through onFileReadyBatch callback.
+When the client accomplished the file, use publishFile to publish.
 
 **Since:** 26.0.0
 
@@ -1115,7 +1121,8 @@ Migrate file from source path to destination path.
 publishFile(fileMeta: FileMeta): Promise<void>
 ```
 
-Publish the file handle to the backup service to make the service aware that the file's content is ready. This interface is part of the zero-copy feature.
+Publish the file handle to the backup service to make the service aware that the file's content is ready.
+This interface is part of the zero-copy feature.
 
 **Since:** 10
 
@@ -1227,7 +1234,8 @@ g_session = createSessionRestore();
 publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ```
 
-Publish the file handle to the backup service to make the service aware that the file's content is ready. This interface is part of the zero-copy feature.
+Publish the file handle to the backup service to make the service aware that the file's content is ready.
+This interface is part of the zero-copy feature.
 
 **Since:** 10
 

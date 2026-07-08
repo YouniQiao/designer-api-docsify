@@ -52,7 +52,8 @@ Gets current ISO.
 setIso(iso: number): void
 ```
 
-Sets ISO sensitivity value, within the range of getSupportedIsoRange. This control is only effective if ExposureMode is set to EXPOSURE_MODE_LOCKED.
+Sets ISO sensitivity value, within the range of getSupportedIsoRange. This control is only effective if
+ExposureMode is set to EXPOSURE_MODE_LOCKED.
 
 **Since:** 24
 

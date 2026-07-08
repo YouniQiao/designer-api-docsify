@@ -18,7 +18,9 @@ import { continueManager } from '@kit.AbilityKit';
 resultInfo?: string
 ```
 
-Description of the operation result. This API can be used only in the stage model.
+Description of the operation result.
+
+This API can be used only in the stage model.
 
 **Type:** string
 

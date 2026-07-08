@@ -6,7 +6,7 @@ typedef struct HiDebug_StackFrame {...} HiDebug_StackFrame
 
 ## Overview
 
-Defines Stack Frame content
+Defines the stack frame content.
 
 **Since**: 20
 
@@ -20,7 +20,7 @@ Defines Stack Frame content
 
 | Name | Description |
 | -- | -- |
-| [HiDebug_StackFrameType](capi-hidebug-type-h.md#hidebug_stackframetype) type | The type of current frame |
+| [HiDebug_StackFrameType](capi-hidebug-type-h.md#hidebug_stackframetype) type | Type of the current stack. |
 | union | frame content. |
 
 

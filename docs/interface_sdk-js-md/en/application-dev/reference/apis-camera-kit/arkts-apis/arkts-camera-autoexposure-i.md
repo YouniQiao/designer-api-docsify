@@ -1,6 +1,7 @@
 # AutoExposure
 
-AutoExposure inherits from [AutoExposureQuery](arkts-camera-autoexposurequery-i.md). It provides APIs related to auto exposure.
+AutoExposure inherits from [AutoExposureQuery](arkts-camera-autoexposurequery-i.md).
+It provides APIs related to auto exposure.
 
 **Inheritance/Implementation:** AutoExposure extends [AutoExposureQuery](arkts-camera-autoexposurequery-i.md)
 
@@ -20,7 +21,12 @@ import { camera } from '@kit.CameraKit';
 getExposureMode(): ExposureMode
 ```
 
-Obtains the exposure mode in use. > **NOTE** > > This API directly returns an invalid value if you have not set the exposure mode using > [setExposureMode](arkts-camera-autoexposure-i.md#setexposuremode-1).
+Obtains the exposure mode in use.
+
+> **NOTE**
+>
+> This API directly returns an invalid value if you have not set the exposure mode using
+> [setExposureMode](arkts-camera-autoexposure-i.md#setexposuremode-1).
 
 **Since:** 11
 
@@ -142,7 +148,10 @@ Registers a callback to listen for exposure state changes.
 setExposureBias(exposureBias: number): void
 ```
 
-Sets an exposure compensation value (EV). Before the setting, you are advised to use [getExposureBiasRange](arkts-camera-autoexposurequery-i.md#getexposurebiasrange-1) to obtain the supported values.
+Sets an exposure compensation value (EV).
+Before the setting, you are advised to use
+[getExposureBiasRange](arkts-camera-autoexposurequery-i.md#getexposurebiasrange-1) to obtain the
+supported values.
 
 **Since:** 11
 
@@ -169,7 +178,9 @@ Sets an exposure compensation value (EV). Before the setting, you are advised to
 setExposureMode(aeMode: ExposureMode): void
 ```
 
-Sets an exposure mode. Before the setting, call [isExposureModeSupported](arkts-camera-autoexposurequery-i.md#isexposuremodesupported-1) to check whether the exposure mode is supported.
+Sets an exposure mode. Before the setting, call
+[isExposureModeSupported](arkts-camera-autoexposurequery-i.md#isexposuremodesupported-1) to
+check whether the exposure mode is supported.
 
 **Since:** 11
 
@@ -196,7 +207,13 @@ Sets an exposure mode. Before the setting, call [isExposureModeSupported](arkts-
 setMeteringPoint(point: Point): void
 ```
 
-Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}. The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
+Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the
+coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.
+
+The coordinate system is based on the horizontal device direction with the device's charging port on the right.
+If the layout of the preview screen of an application is based on the vertical direction with the charging port
+on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate
+point after conversion is {y/h, 1-x/w}.
 
 **Since:** 11
 

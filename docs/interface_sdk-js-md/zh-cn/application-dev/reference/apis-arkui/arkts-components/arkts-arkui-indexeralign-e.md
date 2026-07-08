@@ -9,7 +9,7 @@
 ## Left
 
 ```TypeScript
-Left = 0
+Left
 ```
 
 提示弹窗显示在索引条右侧。
@@ -23,7 +23,7 @@ Left = 0
 ## Right
 
 ```TypeScript
-Right = 1
+Right
 ```
 
 提示弹窗显示在索引条左侧。
@@ -37,7 +37,7 @@ Right = 1
 ## START
 
 ```TypeScript
-START = 2
+START
 ```
 
 在从左到右（LTR）场景下，提示弹窗显示在索引条右侧的位置。在RTL场景下，提示弹窗显示在索引条左侧的位置。
@@ -53,7 +53,7 @@ START = 2
 ## END
 
 ```TypeScript
-END = 3
+END
 ```
 
 在从左到右（LTR）场景下，提示弹窗显示在索引条左侧的位置。在RTL场景下，提示弹窗显示在索引条右侧的位置。

@@ -6,7 +6,9 @@
 function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>
 ```
 
-加密导入密钥。使用Promise异步回调。 <!--Del-->该功能暂不支持。<!--DelEnd-->
+加密导入密钥。使用Promise异步回调。
+
+<!--Del-->该功能暂不支持。<!--DelEnd-->
 
 **起始版本：** 20
 

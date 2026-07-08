@@ -12,7 +12,8 @@ Enumerates the OIS axes.
 PITCH = 0
 ```
 
-Pitch axis. It controls the up-down rotation of the camera body, that is, the camera body rotates around the axis horizontal to the lens.
+Pitch axis. It controls the up-down rotation of the camera body, that is, the camera body rotates around the axis
+horizontal to the lens.
 
 **Since:** 24
 
@@ -28,7 +29,8 @@ Pitch axis. It controls the up-down rotation of the camera body, that is, the ca
 YAW = 1
 ```
 
-Yaw axis. It controls the left-right rotation of the camera body, that is, the camera body rotates around the axis perpendicular to the lens.
+Yaw axis. It controls the left-right rotation of the camera body, that is, the camera body rotates around the
+axis perpendicular to the lens.
 
 **Since:** 24
 

@@ -188,7 +188,8 @@ isBoundary = iterator.isBoundary(5); // isBoundary = false;
 last(): number
 ```
 
-Moves the break iterator to the last line break point, which is always the next position after the end of the processed text.
+Moves the break iterator to the last line break point, which is always the next position after the end of the
+processed text.
 
 **Since:** 8
 

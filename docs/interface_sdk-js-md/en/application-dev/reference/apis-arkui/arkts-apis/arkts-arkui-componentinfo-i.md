@@ -1,6 +1,7 @@
 # ComponentInfo
 
-Implements a **ComponentInfo** object, which provides the size, position, translation, scaling, rotation, and affine matrix information of the component.
+Implements a **ComponentInfo** object, which provides the size, position, translation, scaling, rotation, and
+affine matrix information of the component.
 
 **Since:** 10
 

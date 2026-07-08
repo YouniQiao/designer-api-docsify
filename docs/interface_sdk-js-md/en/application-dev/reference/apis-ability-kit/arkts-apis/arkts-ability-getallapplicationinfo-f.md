@@ -38,7 +38,8 @@ Obtains the information about all applications. This API uses an asynchronous ca
 function getAllApplicationInfo(bundleFlags: number, callback: AsyncCallback<Array<ApplicationInfo>>): void
 ```
 
-Obtains the information about all applications of the current user. This API uses an asynchronous callback to return the result.
+Obtains the information about all applications of the current user. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 7
 

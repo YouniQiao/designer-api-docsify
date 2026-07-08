@@ -9,7 +9,7 @@ Enumerates the positions of the sidebar.
 ## Start
 
 ```TypeScript
-Start = 0
+Start
 ```
 
 The sidebar is on the left side of the container.
@@ -23,7 +23,7 @@ The sidebar is on the left side of the container.
 ## End
 
 ```TypeScript
-End = 1
+End
 ```
 
 The sidebar is on the right side of the container.

@@ -36,7 +36,9 @@ constraint: string
 isEnabled: boolean
 ```
 
-Enabling state of the changed constraint. The default value is **false**. The value **true** indicates that the target constraint is enabled, and **false** indicates the opposite.
+Enabling state of the changed constraint. The default value is **false**.
+
+The value **true** indicates that the target constraint is enabled, and **false** indicates the opposite.
 
 **Type:** boolean
 

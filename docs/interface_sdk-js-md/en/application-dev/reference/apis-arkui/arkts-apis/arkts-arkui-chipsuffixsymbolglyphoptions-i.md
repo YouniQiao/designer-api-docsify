@@ -18,7 +18,9 @@ import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, Accessib
 action?: VoidCallback
 ```
 
-Action of the suffix icon. Default value: **undefined**
+Action of the suffix icon.
+
+Default value: **undefined**
 
 **Type:** VoidCallback
 
@@ -36,7 +38,9 @@ Action of the suffix icon. Default value: **undefined**
 activatedAccessibility?: AccessibilityOptions
 ```
 
-Accessibility settings for the activated state. Default value: **undefined**
+Accessibility settings for the activated state.
+
+Default value: **undefined**
 
 **Type:** AccessibilityOptions
 
@@ -54,7 +58,9 @@ Accessibility settings for the activated state. Default value: **undefined**
 normalAccessibility?: AccessibilityOptions
 ```
 
-Accessibility settings for the normal state. Default value: **undefined**
+Accessibility settings for the normal state.
+
+Default value: **undefined**
 
 **Type:** AccessibilityOptions
 

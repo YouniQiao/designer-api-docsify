@@ -1,6 +1,10 @@
 # WindowStage
 
-Implements a window manager, which manages each basic window unit, that is, [Window](arkts-window.md) instance. Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md#onwindowstagecreate-1) to create a WindowStage instance.
+Implements a window manager, which manages each basic window unit, that is, [Window](arkts-window.md) instance.
+
+Before calling any of the following APIs, you must use
+[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md#onwindowstagecreate-1) to create a WindowStage
+instance.
 
 **Since:** 9
 
@@ -298,7 +302,12 @@ Whether the window supports the window rect auto-save.
 loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-Loads the content of a page, with its path in the current project specified, to the main window of this window stage, and transfers the state attribute to the page through a local storage. This API uses an asynchronous callback to return the result. You are advised to call this API during UIAbility startup. If called multiple times, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it.
+Loads the content of a page, with its path in the current project specified, to the main window
+of this window stage, and transfers the state attribute to the page through a local storage.
+This API uses an asynchronous callback to return the result.
+You are advised to call this API during UIAbility startup.
+If called multiple times, this API will destroy the existing page content (UIContent)
+before loading the new content. Exercise caution when using it.
 
 **Since:** 9
 
@@ -330,7 +339,11 @@ Loads the content of a page, with its path in the current project specified, to 
 loadContent(path: string, storage?: LocalStorage): Promise<void>
 ```
 
-Loads the content of a page, with its path in the current project specified, to the main window of this window stage, and transfers the state attribute to the page through a local storage. This API uses a promise to return the result. You are advised to call this API during UIAbility startup. If called multiple times, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it.
+Loads the content of a page, with its path in the current project specified, to the main window
+of this window stage, and transfers the state attribute to the page through a local storage.
+This API uses a promise to return the result. You are advised to call this API during UIAbility startup.
+If called multiple times, this API will destroy the existing page content (UIContent)
+before loading the new content. Exercise caution when using it.
 
 **Since:** 9
 
@@ -367,7 +380,10 @@ Loads the content of a page, with its path in the current project specified, to 
 loadContent(path: string, callback: AsyncCallback<void>): void
 ```
 
-Loads content from a page to this window stage. This API uses an asynchronous callback to return the result. You are advised to call this API during UIAbility startup. If called multiple times, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it.
+Loads content from a page to this window stage. This API uses an asynchronous callback to
+return the result. You are advised to call this API during UIAbility startup.
+If called multiple times, this API will destroy the existing page content (UIContent)
+before loading the new content. Exercise caution when using it.
 
 **Since:** 9
 
@@ -398,7 +414,13 @@ Loads content from a page to this window stage. This API uses an asynchronous ca
 loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-Loads the content of a [named route](../../ui/arkts-routing.md#named-route) page to this window, and transfers the state attribute to the page through a local storage. This API uses an asynchronous callback to return the result. You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it. The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback of this API.
+Loads the content of a [named route](../../ui/arkts-routing.md#named-route) page to this window, and transfers
+the state attribute to the page through a local storage. This API uses an asynchronous callback to return
+the result.
+You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy the
+existing page content (UIContent) before loading the new content. Exercise caution when using it.
+The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related
+operations within the callback of this API.
 
 **Since:** 11
 
@@ -429,7 +451,12 @@ Loads the content of a [named route](../../ui/arkts-routing.md#named-route) page
 loadContentByName(name: string, callback: AsyncCallback<void>): void
 ```
 
-Loads the content of a [named route](../../ui/arkts-routing.md#named-route) page to this window. This API uses an asynchronous callback to return the result. You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it. The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback of this API.
+Loads the content of a [named route](../../ui/arkts-routing.md#named-route) page to this window.
+This API uses an asynchronous callback to return the result.
+You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy
+the existing page content (UIContent) before loading the new content. Exercise caution when using it.
+The execution context of the current UI may be unclear. Therefore, you are advised not to perform
+UI-related operations within the callback of this API.
 
 **Since:** 11
 
@@ -677,7 +704,8 @@ Window stage close callback on.
 releaseUIContent(): Promise<void>
 ```
 
-Release the content of this window in the current project. This API uses a promise to return the result.
+Release the content of this window in the current project.
+This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -733,7 +761,13 @@ Remove the starting window, it must be used with configuration "enable.remove.st
 setCustomDensity(density: number): void
 ```
 
-Allows the main window of the application to customize its display size scale factor. Existing child windows and system windows do not immediately re-layout to match the main window's new scale factor. They will re-layout to reflect this change only when their layout information (such as position, size, and system scale size) changes. If both this API and [setDefaultDensityEnabled(true)](arkts-arkui-windowstage-i.md#setdefaultdensityenabled-1) are called, the setting from the last called API will be applied.
+Allows the main window of the application to customize its display size scale factor.
+
+Existing child windows and system windows do not immediately re-layout to match the main window's new scale
+factor. They will re-layout to reflect this change only when their layout information (such as position,
+size, and system scale size) changes.
+
+If both this API and [setDefaultDensityEnabled(true)](arkts-arkui-windowstage-i.md#setdefaultdensityenabled-1) are called, the setting from the last called API will be applied.
 
 **Since:** 15
 
@@ -764,7 +798,11 @@ Allows the main window of the application to customize its display size scale fa
 setCustomDensity(density: number, applyToSubWindow?: boolean): void
 ```
 
-Allows the main window of the application to customize its display size scale factor and control when child windows and system windows re-layout to match the main window. If both this API and [setDefaultDensityEnabled(true)](arkts-arkui-windowstage-i.md#setdefaultdensityenabled-1) are called, the setting from the last called API will be applied.
+Allows the main window of the application to customize its display size scale factor and control when child
+windows and system windows re-layout to match the main window.
+
+If both this API and [setDefaultDensityEnabled(true)](arkts-arkui-windowstage-i.md#setdefaultdensityenabled-1) are called,
+the setting from the last called API will be applied.
 
 **Since:** 20
 
@@ -793,7 +831,13 @@ Allows the main window of the application to customize its display size scale fa
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-Sets whether the main window of the application uses the system's default density. Child windows and system windows will follow the main window's setting. Before calling this API, call [WindowStage.loadContent()](arkts-arkui-windowstage-i.md#loadcontent-1) to initialize the layout to ensure the correct call sequence. If this API is not called, the default density is not used. When the default density is not used, if [setCustomDensity()](arkts-arkui-windowstage-i.md#setcustomdensity-1) has been called, the window will be re-laid out according to the custom display size changes. Otherwise, it will be re-laid out according to the system display size changes.
+Sets whether the main window of the application uses the system's default density. Child windows and system
+windows will follow the main window's setting. Before calling this API, call [WindowStage.loadContent()](arkts-arkui-windowstage-i.md#loadcontent-1)
+to initialize the layout to ensure the correct call sequence.
+
+If this API is not called, the default density is not used.
+
+When the default density is not used, if [setCustomDensity()](arkts-arkui-windowstage-i.md#setcustomdensity-1) has been called, the window will be re-laid out according to the custom display size changes. Otherwise, it will be re-laid out according to the system display size changes.
 
 **Since:** 12
 
@@ -971,7 +1015,8 @@ Set to automatically save the window rect.
 setWindowRectAutoSave(enabled: boolean, isSaveBySpecifiedFlag: boolean): Promise<void>
 ```
 
-Set to automatically save the window rect and whether to enable specifiedFlag. Through the specifiedFlag flag, the window is marked and its rect is saved.
+Set to automatically save the window rect and whether to enable specifiedFlag.
+Through the specifiedFlag flag, the window is marked and its rect is saved.
 
 **Since:** 17
 

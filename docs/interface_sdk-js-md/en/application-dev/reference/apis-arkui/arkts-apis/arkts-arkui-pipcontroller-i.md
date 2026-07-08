@@ -1,6 +1,9 @@
 # PiPController
 
-Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks. Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-create-f.md#create-1) to create a PiPController instance.
+Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
+
+Before calling any of the following APIs, you must use
+[PiPWindow.create()](arkts-arkui-create-f.md#create-1) to create a PiPController instance.
 
 **Since:** 11
 
@@ -186,7 +189,9 @@ this.pipController.off('stateChange');
 off(type: 'controlPanelActionEvent'): void
 ```
 
-Unsubscribes from PiP action events. The **[off('controlEvent')](arkts-arkui-pipcontroller-i.md#off-3)** API is preferred.
+Unsubscribes from PiP action events. The
+**[off('controlEvent')](arkts-arkui-pipcontroller-i.md#off-3)**
+API is preferred.
 
 **Since:** 11
 
@@ -330,7 +335,8 @@ this.pipController.off('activeStatusChange', callback);
 on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void
 ```
 
-Subscribes to PiP state events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
+Subscribes to PiP state events. To avoid potential memory leaks, you are advised to stop listening when it is no
+longer needed.
 
 **Since:** 11
 
@@ -384,7 +390,10 @@ this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string)
 on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void
 ```
 
-Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed. The [on('controlEvent')](arkts-arkui-pipcontroller-i.md#on-3) API is preferred.
+Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no
+longer needed. The
+[on('controlEvent')](arkts-arkui-pipcontroller-i.md#on-3)
+API is preferred.
 
 **Since:** 11
 
@@ -438,7 +447,8 @@ this.pipController.on('controlPanelActionEvent', (event: PiPWindow.PiPActionEven
 on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 ```
 
-Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
+Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no
+longer needed.
 
 **Since:** 12
 
@@ -492,7 +502,8 @@ this.pipController.on('controlEvent', (control) => {
 on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 ```
 
-Subscribes to PiP window size change events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
+Subscribes to PiP window size change events. To avoid potential memory leaks, you are advised to stop listening
+when it is no longer needed.
 
 **Since:** 15
 
@@ -535,7 +546,8 @@ try {
 on(type: 'activeStatusChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to PiP window active status change events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
+Subscribes to PiP window active status change events. To avoid potential memory leaks, you are advised to stop
+listening when it is no longer needed.
 
 **Since:** 22
 
@@ -567,7 +579,12 @@ this.pipController.on('activeStatusChange', callback);
 setAutoStartEnabled(enable: boolean): void
 ```
 
-Sets whether to automatically start the PiP window when the application's main window which can start the PiP window transitions to the background. By default, the PiP window is not automatically started. If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management , the system caches the top stack information with the specified navigation ID upon the first call of **setAutoStartEnabled(true)**.
+Sets whether to automatically start the PiP window when the application's main window which can start the
+PiP window transitions to the background. By default, the PiP window is not automatically started.
+
+If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management
+, the system caches the top stack information with the specified navigation ID upon the first call of
+**setAutoStartEnabled(true)**.
 
 **Since:** 11
 

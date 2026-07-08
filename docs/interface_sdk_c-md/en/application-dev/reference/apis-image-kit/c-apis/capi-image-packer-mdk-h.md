@@ -6,7 +6,7 @@ Declares APIs for encoding image into data or file.The packing image data module
 
 **Library**: libimage_packer_ndk.z.so
 
-**System capability**: SystemCapability.Multimedia.Image.Core
+**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 11
 
@@ -42,8 +42,6 @@ int32_t OH_ImagePacker_Create(napi_env env, napi_value *res)
 **Description**
 
 Creates an <b>ImagePacker</b> object at the JavaScript native layer.
-
-**System capability**: SystemCapability.Multimedia.Image
 
 **Since**: 11
 

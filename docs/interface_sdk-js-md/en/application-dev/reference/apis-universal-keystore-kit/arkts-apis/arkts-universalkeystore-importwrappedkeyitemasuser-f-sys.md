@@ -60,7 +60,7 @@ Imports a key securely for the specified user. This API uses a promise to return
 | [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | queried credential does not exist |
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
 | [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
-| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with same alias is already exist<br>**Applicable version:** 20 and later |
+| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists<br>**Applicable version:** 20 and later |
 
 **Example**
 

@@ -1,6 +1,7 @@
 # Curve
 
-Defines an interpolation curve. For details about the curves and animations, see <!--RP1--> [Bezier Curve](../../../../../design/ux-design/animation-attributes.md)<!--RP1End-->.
+Defines an interpolation curve. For details about the curves and animations, see <!--RP1-->
+[Bezier Curve](../../../../../design/ux-design/animation-attributes.md)<!--RP1End-->.
 
 **Since:** 7
 
@@ -26,7 +27,8 @@ Linear. Indicates that the animation has the same velocity from start to finish.
 Ease
 ```
 
-Ease. Indicates that the animation starts at a low speed, then speeds up, and slows down before the end, CubicBezier(0.25, 0.1, 0.25, 1.0).
+Ease. Indicates that the animation starts at a low speed, then speeds up, and slows down before the end,
+CubicBezier(0.25, 0.1, 0.25, 1.0).
 
 **Since:** 7
 

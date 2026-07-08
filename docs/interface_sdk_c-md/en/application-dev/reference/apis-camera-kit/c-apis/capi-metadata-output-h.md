@@ -31,7 +31,7 @@ The file declares the metadata output concepts.
 | [typedef void (\*OH_MetadataOutput_OnErrorExt)(void* context, Camera_ErrorCode errorCode)](#oh_metadataoutput_onerrorext) | OH_MetadataOutput_OnErrorExt | Defines the callback used to listen for error ext event. |
 | [Camera_ErrorCode OH_MetadataOutput_RegisterCallback(Camera_MetadataOutput* metadataOutput, MetadataOutput_Callbacks* callback)](#oh_metadataoutput_registercallback) | - | Registers a callback to listen for metadata output events. |
 | [Camera_ErrorCode OH_MetadataOutput_UnregisterCallback(Camera_MetadataOutput* metadataOutput, MetadataOutput_Callbacks* callback)](#oh_metadataoutput_unregistercallback) | - | Unregisters the callback used to listen for metadata output events. |
-| [Camera_ErrorCode OH_MetadataOutput_RegisterMetadataObjectExtAvailableCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnMetadataObjectExtAvailable callback)](#oh_metadataoutput_registermetadataobjectextavailablecallback) | - | Registers a callback to listen for [OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md) events.The callback can be unregistered by [OH_MetadataOutput_UnregisterMetadataObjectExtAvailableCallback](capi-metadata-output-h.md#oh_metadataoutput_unregistermetadataobjectextavailablecallback). |
+| [Camera_ErrorCode OH_MetadataOutput_RegisterMetadataObjectExtAvailableCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnMetadataObjectExtAvailable callback)](#oh_metadataoutput_registermetadataobjectextavailablecallback) | - | Registers a callback to listen for [OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md) events.The callback can be unregistered by [OH_MetadataOutput_UnregisterMetadataObjectExtAvailableCallback](capi-metadata-output-h.md#oh_metadataoutput_unregistermetadataobjectextavailablecallback). |
 | [Camera_ErrorCode OH_MetadataOutput_UnregisterMetadataObjectExtAvailableCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnMetadataObjectExtAvailable callback)](#oh_metadataoutput_unregistermetadataobjectextavailablecallback) | - | Unregisters the callback used to listen for metadata object ext events. |
 | [Camera_ErrorCode OH_MetadataOutput_RegisterErrorExtCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnErrorExt callback)](#oh_metadataoutput_registererrorextcallback) | - | Registers a callback to listen for error ext events.The callback can be unregistered by [OH_MetadataOutput_UnregisterErrorExtCallback](capi-metadata-output-h.md#oh_metadataoutput_unregistererrorextcallback). |
 | [Camera_ErrorCode OH_MetadataOutput_UnregisterErrorExtCallback(Camera_MetadataOutput* metadataOutput, void* context, OH_MetadataOutput_OnErrorExt callback)](#oh_metadataoutput_unregistererrorextcallback) | - | Unregisters the callback used to listen for error ext events. |
@@ -83,7 +83,7 @@ Defines the callback used to listen for metadata object ext available.
 | Parameter | Description |
 | -- | -- |
 | (void\* context | Pointer to the context provided by user. |
-| [OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)\*\* metadataObjectExt | Pointer to the metadata output data. |
+| [OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)\*\* metadataObjectExt | Pointer to the metadata output data. |
 | uint32_t size | Size of the metadata object ext. |
 
 ### OH_MetadataOutput_OnError()
@@ -192,7 +192,7 @@ Camera_ErrorCode OH_MetadataOutput_RegisterMetadataObjectExtAvailableCallback(Ca
 
 **Description**
 
-Registers a callback to listen for [OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md) events.The callback can be unregistered by [OH_MetadataOutput_UnregisterMetadataObjectExtAvailableCallback](capi-metadata-output-h.md#oh_metadataoutput_unregistermetadataobjectextavailablecallback).
+Registers a callback to listen for [OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md) events.The callback can be unregistered by [OH_MetadataOutput_UnregisterMetadataObjectExtAvailableCallback](capi-metadata-output-h.md#oh_metadataoutput_unregistermetadataobjectextavailablecallback).
 
 **Since**: 26.0.0
 

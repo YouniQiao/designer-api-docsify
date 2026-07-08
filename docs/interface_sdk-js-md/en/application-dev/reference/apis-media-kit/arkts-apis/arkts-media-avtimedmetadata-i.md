@@ -50,7 +50,9 @@ Key-value pair set corresponding to time primitive information
 duration: number
 ```
 
-Duration of the time primitive information The value should be an integer. <br>Unit:milliseconds.
+Duration of the time primitive information
+The value should be an integer.
+<br>Unit:milliseconds.
 
 **Type:** number
 
@@ -66,7 +68,8 @@ Duration of the time primitive information The value should be an integer. <br>U
 id?: string
 ```
 
-Defines the unique token of the time base metadata, The tag must be unique in other time metadata of the video source.
+Defines the unique token of the time base metadata,
+The tag must be unique in other time metadata of the video source.
 
 **Type:** string
 
@@ -82,7 +85,9 @@ Defines the unique token of the time base metadata, The tag must be unique in ot
 start: number
 ```
 
-Defines the offset value of the time primitive information relative to the start time of the entire media. The value should be an integer. <br>Unit:milliseconds.
+Defines the offset value of the time primitive information relative to the start time of the entire media.
+The value should be an integer.
+<br>Unit:milliseconds.
 
 **Type:** number
 

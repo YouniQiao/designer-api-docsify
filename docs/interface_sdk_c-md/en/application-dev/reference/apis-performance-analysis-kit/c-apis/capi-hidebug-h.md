@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the debug functions of the HiDebug module.
+Defines the APIs for debugging.
 
 **Library**: libohhidebug.so
 
@@ -18,37 +18,37 @@ Defines the debug functions of the HiDebug module.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [double OH_HiDebug_GetSystemCpuUsage()](#oh_hidebug_getsystemcpuusage) | - | Obtains the cpu usage of system. |
-| [double OH_HiDebug_GetAppCpuUsage()](#oh_hidebug_getappcpuusage) | - | Obtains the cpu usage percent of a process. |
-| [HiDebug_ThreadCpuUsagePtr OH_HiDebug_GetAppThreadCpuUsage()](#oh_hidebug_getappthreadcpuusage) | - | Obtains cpu usage of application's all thread. |
-| [void OH_HiDebug_FreeThreadCpuUsage(HiDebug_ThreadCpuUsagePtr *threadCpuUsage)](#oh_hidebug_freethreadcpuusage) | - | Free cpu usage buffer of application's all thread. |
-| [void OH_HiDebug_GetSystemMemInfo(HiDebug_SystemMemInfo *systemMemInfo)](#oh_hidebug_getsystemmeminfo) | - | Obtains the system memory size. |
-| [void OH_HiDebug_GetAppNativeMemInfo(HiDebug_NativeMemInfo *nativeMemInfo)](#oh_hidebug_getappnativememinfo) | - | Obtains the memory info of application process. |
-| [void OH_HiDebug_GetAppNativeMemInfoWithCache(HiDebug_NativeMemInfo *nativeMemInfo, bool forceRefresh)](#oh_hidebug_getappnativememinfowithcache) | - | Obtains the memory info of application process, with optional caching to improve performance. The cached valueremains valid for 5 minutes. |
-| [void OH_HiDebug_GetAppMemoryLimit(HiDebug_MemoryLimit *memoryLimit)](#oh_hidebug_getappmemorylimit) | - | Obtains the memory limit of application process. |
-| [HiDebug_ErrorCode OH_HiDebug_StartAppTraceCapture(HiDebug_TraceFlag flag, uint64_t tags, uint32_t limitSize, char* fileName, uint32_t length)](#oh_hidebug_startapptracecapture) | - | Start capture application trace. |
-| [HiDebug_ErrorCode OH_HiDebug_StopAppTraceCapture()](#oh_hidebug_stopapptracecapture) | - | Stop capture application trace. |
+| [double OH_HiDebug_GetSystemCpuUsage()](#oh_hidebug_getsystemcpuusage) | - | Obtains the CPU usage of the system. Note that this API involves cross-process communication and takes a longtime. Therefore, you are advised not to call this API in the main thread. |
+| [double OH_HiDebug_GetAppCpuUsage()](#oh_hidebug_getappcpuusage) | - | Obtains the CPU usage of an application. Note that this API involves cross-process communication and takes along time. Therefore, you are advised not to call this API in the main thread. |
+| [HiDebug_ThreadCpuUsagePtr OH_HiDebug_GetAppThreadCpuUsage()](#oh_hidebug_getappthreadcpuusage) | - | Obtains the CPU usage of all threads of an application. Note that this API involves cross-processcommunication and takes a long time. Therefore, you are advised not to call this API in the main thread. |
+| [void OH_HiDebug_FreeThreadCpuUsage(HiDebug_ThreadCpuUsagePtr *threadCpuUsage)](#oh_hidebug_freethreadcpuusage) | - | Releases the **HiDebug_ThreadCpuUsagePtr**. |
+| [void OH_HiDebug_GetSystemMemInfo(HiDebug_SystemMemInfo *systemMemInfo)](#oh_hidebug_getsystemmeminfo) | - | Obtains system memory information. |
+| [void OH_HiDebug_GetAppNativeMemInfo(HiDebug_NativeMemInfo *nativeMemInfo)](#oh_hidebug_getappnativememinfo) | - | Obtains the memory information of an application process. Note that this API needs to read the **\/proc/{pid}/smaps_rollup** node information, which takes a long time. Therefore, you are advised not to call this API in themain thread. |
+| [void OH_HiDebug_GetAppNativeMemInfoWithCache(HiDebug_NativeMemInfo *nativeMemInfo, bool forceRefresh)](#oh_hidebug_getappnativememinfowithcache) | - | Obtains the memory information of an application process. This API has a cache mechanism to improve itsperformance. The cache value is valid for 5 minutes. Note that this API needs to read the **\/proc/{pid}/smaps_rollup** node information, which takes a long time. Therefore, you are advised not to call this API in themain thread. |
+| [void OH_HiDebug_GetAppMemoryLimit(HiDebug_MemoryLimit *memoryLimit)](#oh_hidebug_getappmemorylimit) | - | Obtains the memory limit of an application process. |
+| [HiDebug_ErrorCode OH_HiDebug_StartAppTraceCapture(HiDebug_TraceFlag flag, uint64_t tags, uint32_t limitSize, char* fileName, uint32_t length)](#oh_hidebug_startapptracecapture) | - | Starts application trace collection. |
+| [HiDebug_ErrorCode OH_HiDebug_StopAppTraceCapture()](#oh_hidebug_stopapptracecapture) | - | Stops application trace collection. |
 | [HiDebug_ErrorCode OH_HiDebug_RequestTrace(OH_HiDebug_RequestTraceConfig *config, OH_HiDebug_RequestTraceCallback callback)](#oh_hidebug_requesttrace) | - | Requests application trace capture with specified configuration. |
-| [HiDebug_ErrorCode OH_HiDebug_GetGraphicsMemory(uint32_t *value)](#oh_hidebug_getgraphicsmemory) | - | Get the graphics memory of application. |
-| [HiDebug_ErrorCode OH_HiDebug_SetMallocDispatchTable(struct HiDebug_MallocDispatch *dispatchTable)](#oh_hidebug_setmallocdispatchtable) | - | Replace MallocDispatch table with developer-defined memory allocation functions. |
-| [HiDebug_MallocDispatch* OH_HiDebug_GetDefaultMallocDispatchTable(void)](#oh_hidebug_getdefaultmallocdispatchtable) | - | Obtain current MallocDispatch table. |
-| [void OH_HiDebug_RestoreMallocDispatchTable(void)](#oh_hidebug_restoremallocdispatchtable) | - | Restore original MallocDispatch table. |
-| [int OH_HiDebug_BacktraceFromFp(HiDebug_Backtrace_Object object, void* startFp, void** pcArray, int size)](#oh_hidebug_backtracefromfp) | - | Get backtrace frames start from the given frame pointer and the function is signal-safe. |
-| [typedef void (\*OH_HiDebug_SymbolicAddressCallback)(void* pc, void* arg, const HiDebug_StackFrame* frame)](#oh_hidebug_symbolicaddresscallback) | OH_HiDebug_SymbolicAddressCallback | Defines the callback of the [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress) function. |
-| [HiDebug_ErrorCode OH_HiDebug_SymbolicAddress(HiDebug_Backtrace_Object object, void* pc, void* arg, OH_HiDebug_SymbolicAddressCallback callback)](#oh_hidebug_symbolicaddress) | - | Get detailed symbol info by given pc and the function is not signal-safe. |
-| [HiDebug_Backtrace_Object OH_HiDebug_CreateBacktraceObject(void)](#oh_hidebug_createbacktraceobject) | - | Create a backtrace object for further using and the function is not signal-safe. |
-| [void OH_HiDebug_DestroyBacktraceObject(HiDebug_Backtrace_Object object)](#oh_hidebug_destroybacktraceobject) | - | Destroy a backtrace object and the function is not signal-safe. |
-| [HiDebug_ErrorCode OH_HiDebug_GetGraphicsMemorySummary(uint32_t interval, HiDebug_GraphicsMemorySummary *summary)](#oh_hidebug_getgraphicsmemorysummary) | - | Obtain the graphics memory summary of application. |
-| [typedef void (\*OH_HiDebug_ThreadLiteSamplingCallback)(const char* stacks)](#oh_hidebug_threadlitesamplingcallback) | OH_HiDebug_ThreadLiteSamplingCallback | Defines the callback of the lightweight performance stack. |
+| [HiDebug_ErrorCode OH_HiDebug_GetGraphicsMemory(uint32_t *value)](#oh_hidebug_getgraphicsmemory) | - | Obtains the size of the GPU memory. Note that this API involves multiple cross-process communications and maytake more than 1 second. Therefore, you are advised not to call this API in the main thread. |
+| [HiDebug_ErrorCode OH_HiDebug_SetMallocDispatchTable(struct HiDebug_MallocDispatch *dispatchTable)](#oh_hidebug_setmallocdispatchtable) | - | Sets the **MallocDispatch** table in the basic C library to temporarily replace the original memory operationfunctions (such as **malloc**, **free**, **calloc**, **realloc**, **mmap**, and **munmap**) with the custom memoryoperation functions. The **MallocDispatch** table is a struct that encapsulates memory operation functions such as malloc**, **calloc**, **realloc**, and **free** in the basic C library. **HiDebug_MallocDispatch** is only a part ofthe **MallocDispatch** struct. |
+| [HiDebug_MallocDispatch* OH_HiDebug_GetDefaultMallocDispatchTable(void)](#oh_hidebug_getdefaultmallocdispatchtable) | - | Obtains the default MallocDispatch table of the system C library. You can call[OH_HiDebug_RestoreMallocDispatchTable](capi-hidebug-h.md#oh_hidebug_restoremallocdispatchtable) to restore the table. |
+| [void OH_HiDebug_RestoreMallocDispatchTable(void)](#oh_hidebug_restoremallocdispatchtable) | - | Restores the MallocDispatch table of the system C library. |
+| [int OH_HiDebug_BacktraceFromFp(HiDebug_Backtrace_Object object, void* startFp, void** pcArray, int size)](#oh_hidebug_backtracefromfp) | - | Performs stack back-tracing based on the given fp address. This function is async-signal-safe. |
+| [typedef void (\*OH_HiDebug_SymbolicAddressCallback)(void* pc, void* arg, const HiDebug_StackFrame* frame)](#oh_hidebug_symbolicaddresscallback) | OH_HiDebug_SymbolicAddressCallback | If the [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress) API is successfully called, the parsed stack information isreturned to the caller through this function. Note: This API involves multiple I/O operations and takes a long time.Therefore, you are advised not to call this API in the main thread. |
+| [HiDebug_ErrorCode OH_HiDebug_SymbolicAddress(HiDebug_Backtrace_Object object, void* pc, void* arg, OH_HiDebug_SymbolicAddressCallback callback)](#oh_hidebug_symbolicaddress) | - | Obtains detailed symbol information based on the specified PC address. This function is not asyn-signal-safe. |
+| [HiDebug_Backtrace_Object OH_HiDebug_CreateBacktraceObject(void)](#oh_hidebug_createbacktraceobject) | - | Creates an object for stack backtracing and parsing. This function is not asyn-signal-safe. |
+| [void OH_HiDebug_DestroyBacktraceObject(HiDebug_Backtrace_Object object)](#oh_hidebug_destroybacktraceobject) | - | Destroys the object created by [OH_HiDebug_CreateBacktraceObject](capi-hidebug-h.md#oh_hidebug_createbacktraceobject) to release the resources applied forduring stack backtracing and parsing. This function is not asyn-signal-safe. |
+| [HiDebug_ErrorCode OH_HiDebug_GetGraphicsMemorySummary(uint32_t interval, HiDebug_GraphicsMemorySummary *summary)](#oh_hidebug_getgraphicsmemorysummary) | - | Obtains the detailed GPU memory usage of an application. |
+| [typedef void (\*OH_HiDebug_ThreadLiteSamplingCallback)(const char* stacks)](#oh_hidebug_threadlitesamplingcallback) | OH_HiDebug_ThreadLiteSamplingCallback | Triggered for the lightweight Perf sampling stack content. Note: The sampling data is valid only during theexecution of this callback. If you need to use the data outside the function, deep copy the sampling stack content. |
 | [HiDebug_ErrorCode OH_HiDebug_RequestThreadLiteSampling(HiDebug_ProcessSamplerConfig* config, OH_HiDebug_ThreadLiteSamplingCallback stacksCallback)](#oh_hidebug_requestthreadlitesampling) | - |  |
-| [uint64_t OH_HiDebug_SetCrashObj(HiDebug_CrashObjType type, void* addr)](#oh_hidebug_setcrashobj) | - | Attaches diagnostic information to the current crash context. |
-| [void OH_HiDebug_ResetCrashObj(uint64_t crashObj)](#oh_hidebug_resetcrashobj) | - | Detaches diagnostic information from the current crash context. |
+| [uint64_t OH_HiDebug_SetCrashObj(HiDebug_CrashObjType type, void* addr)](#oh_hidebug_setcrashobj) | - | Adds debugging information to the crash logs. This function is used together with[OH_HiDebug_ResetCrashObj](capi-hidebug-h.md#oh_hidebug_resetcrashobj). If a program crashes between **OH_HiDebug_SetCrashObj** and OH_HiDebug_ResetCrashObj**, the debugging information set by **OH_HiDebug_SetCrashObj** is added to the crash logs. |
+| [void OH_HiDebug_ResetCrashObj(uint64_t crashObj)](#oh_hidebug_resetcrashobj) | - | Resets the debugging information object to the state before **OH_HiDebug_SetCrashObj** is used. |
 | [HiDebug_ErrorCode OH_HiDebug_StartProfiler(OH_HiDebug_ResourceType type, OH_HiDebug_ResProfilerConfig* config, OH_HiDebug_ProfilingCallback callback)](#oh_hidebug_startprofiler) | - | Starts Resource Profiler for the current process asynchronously.The callback is invoked only after profiling stops, including auto-stop caused by the maximum duration.When profiling output is available, the callback carries the output file path. If profiling stops withoutproducing output, the callback is invoked with a NULL file path. |
 | [HiDebug_ErrorCode OH_HiDebug_StopProfiler(void)](#oh_hidebug_stopprofiler) | - | Stops resource profiler for the current process. This API can be called after the[OH_HiDebug_StartProfiler](capi-hidebug-h.md#oh_hidebug_startprofiler) API and the call duration must be within the maximum duration. |
 | [typedef bool (\*OH_HiDebug_MemDumpListener)(int32_t fd, OH_HiDebug_MemListenerType tag, bool mayReportToOEM, const char* arg)](#oh_hidebug_memdumplistener) | OH_HiDebug_MemDumpListener | Callback triggered for listening. You can use FDs to write memory data in your app so that you can export thedata using the hidumper command. |
 | [HiDebug_ErrorCode OH_HiDebug_RegisterMemDumpListener(const char* name, OH_HiDebug_MemDumpListener listener)](#oh_hidebug_registermemdumplistener) | - | Registers a listener triggered when the memory watermark of an app is high or the memory information ismanually exported by hidumper. The third-party app framework or app developer calls back the registered functionto dump the app's internal memory information to hidumper or upload the information to the OME vendor throughcommercial gray release.OH_HiDebug_UnregisterMemDumpListener is used to unregister the listener. |
 | [HiDebug_ErrorCode OH_HiDebug_UnregisterMemDumpListener(const char* name)](#oh_hidebug_unregistermemdumplistener) | - | Unregisters a memory dump listener that has been successfully registered. |
-| [uint64_t OH_HiDebug_AcquireAsyncContext()](#oh_hidebug_acquireasynccontext) | - | Profiler helper interfaces, acquire a AsyncContext for further using.The corresponding unregister function is as follows:OH_HiDebug_ReleaseAsyncContext. |
+| [uint64_t OH_HiDebug_AcquireAsyncContext()](#oh_hidebug_acquireasynccontext) | - | Profiler helper interfaces, acquire a AsyncContext for further using.The corresponding unregister function is as follows: OH_HiDebug_ReleaseAsyncContext. |
 | [void OH_HiDebug_PushAsyncContext(uint64_t ctx)](#oh_hidebug_pushasynccontext) | - | Profiler helper interfaces, push AsyncContext to the running context. |
 | [void OH_HiDebug_PopAsyncContext(uint64_t ctx)](#oh_hidebug_popasynccontext) | - | Profiler helper interfaces, pop AsyncContext from the running context. |
 | [void OH_HiDebug_ReleaseAsyncContext(uint64_t ctx)](#oh_hidebug_releaseasynccontext) | - | Profiler helper interfaces, release AsyncContext to system. |
@@ -63,7 +63,7 @@ double OH_HiDebug_GetSystemCpuUsage()
 
 **Description**
 
-Obtains the cpu usage of system.
+Obtains the CPU usage of the system. Note that this API involves cross-process communication and takes a longtime. Therefore, you are advised not to call this API in the main thread.
 
 **Since**: 12
 
@@ -71,7 +71,7 @@ Obtains the cpu usage of system.
 
 | Type | Description |
 | -- | -- |
-| double | Returns the cpu usage of system<br>         If the result is zero,The possible reason is that get failed. |
+| double | Returns the system CPU usage if the operation is successful. Returns 0 if the operation fails. |
 
 ### OH_HiDebug_GetAppCpuUsage()
 
@@ -81,7 +81,7 @@ double OH_HiDebug_GetAppCpuUsage()
 
 **Description**
 
-Obtains the cpu usage percent of a process.
+Obtains the CPU usage of an application. Note that this API involves cross-process communication and takes along time. Therefore, you are advised not to call this API in the main thread.
 
 **Since**: 12
 
@@ -89,7 +89,7 @@ Obtains the cpu usage percent of a process.
 
 | Type | Description |
 | -- | -- |
-| double | Returns the cpu usage percent of a process<br>         If the result is zero.The possbile reason is the current application usage rate is too low<br>         or acquisition has failed |
+| double | Application CPU usage obtained if the operation is successful. If 0 is returned, the CPU usage of the<br>     current application is too low. |
 
 ### OH_HiDebug_GetAppThreadCpuUsage()
 
@@ -99,7 +99,7 @@ HiDebug_ThreadCpuUsagePtr OH_HiDebug_GetAppThreadCpuUsage()
 
 **Description**
 
-Obtains cpu usage of application's all thread.
+Obtains the CPU usage of all threads of an application. Note that this API involves cross-processcommunication and takes a long time. Therefore, you are advised not to call this API in the main thread.
 
 **Since**: 12
 
@@ -107,7 +107,7 @@ Obtains cpu usage of application's all thread.
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ThreadCpuUsagePtr | Returns all thread cpu usage. See {@link HiDebug_ThreadCpuUsagePtr}.<br>         If the HiDebug_ThreadCpuUsagePtr is null.<br>         The possible reason is that no thread related data was obtained |
+| HiDebug_ThreadCpuUsagePtr | CPU usage of all threads. For details, see {@link HiDebug_ThreadCpuUsagePtr}.<br>     <br>If null is returned, the thread data may not be obtained. |
 
 ### OH_HiDebug_FreeThreadCpuUsage()
 
@@ -117,7 +117,7 @@ void OH_HiDebug_FreeThreadCpuUsage(HiDebug_ThreadCpuUsagePtr *threadCpuUsage)
 
 **Description**
 
-Free cpu usage buffer of application's all thread.
+Releases the **HiDebug_ThreadCpuUsagePtr**.
 
 **Since**: 12
 
@@ -125,7 +125,7 @@ Free cpu usage buffer of application's all thread.
 
 | Parameter | Description |
 | -- | -- |
-| HiDebug_ThreadCpuUsagePtr *threadCpuUsage | Indicates applicatoin's all thread. See {@link HiDebug_ThreadCpuUsagePtr}Use the pointer generated through the OH_HiDebug_GetAppThreadCpuUsage(). |
+| HiDebug_ThreadCpuUsagePtr *threadCpuUsage | Pointer to the available CPU buffer of all threads of the application. For details, see{@link HiDebug_ThreadCpuUsagePtr}. The input parameter is obtained by **OH_HiDebug_GetAppThreadCpuUsage()**. |
 
 ### OH_HiDebug_GetSystemMemInfo()
 
@@ -135,7 +135,7 @@ void OH_HiDebug_GetSystemMemInfo(HiDebug_SystemMemInfo *systemMemInfo)
 
 **Description**
 
-Obtains the system memory size.
+Obtains system memory information.
 
 **Since**: 12
 
@@ -143,7 +143,7 @@ Obtains the system memory size.
 
 | Parameter | Description |
 | -- | -- |
-| [HiDebug_SystemMemInfo](capi-hidebug-hidebug-systemmeminfo.md) *systemMemInfo | Indicates the pointer to [HiDebug_SystemMemInfo](capi-hidebug-hidebug-systemmeminfo.md).If there is no data in structure after the function.The Possible reason is system error. |
+| [HiDebug_SystemMemInfo](capi-hidebug-hidebug-systemmeminfo.md) *systemMemInfo | Pointer to [HiDebug_SystemMemInfo](capi-hidebug-hidebug-systemmeminfo.md). If the struct data is empty after the function iscalled, the calling fails. |
 
 ### OH_HiDebug_GetAppNativeMemInfo()
 
@@ -153,7 +153,7 @@ void OH_HiDebug_GetAppNativeMemInfo(HiDebug_NativeMemInfo *nativeMemInfo)
 
 **Description**
 
-Obtains the memory info of application process.
+Obtains the memory information of an application process. Note that this API needs to read the **\/proc/{pid}/smaps_rollup** node information, which takes a long time. Therefore, you are advised not to call this API in themain thread.
 
 **Since**: 12
 
@@ -161,7 +161,7 @@ Obtains the memory info of application process.
 
 | Parameter | Description |
 | -- | -- |
-| [HiDebug_NativeMemInfo](capi-hidebug-hidebug-nativememinfo.md) *nativeMemInfo | Indicates the pointer to [HiDebug_NativeMemInfo](capi-hidebug-hidebug-nativememinfo.md).If there is no data in structure after the function.The Possible reason is system error. |
+| [HiDebug_NativeMemInfo](capi-hidebug-hidebug-nativememinfo.md) *nativeMemInfo | Pointer to [HiDebug_NativeMemInfo](capi-hidebug-hidebug-nativememinfo.md). If the struct data is empty after the function iscalled, the calling fails. |
 
 ### OH_HiDebug_GetAppNativeMemInfoWithCache()
 
@@ -171,7 +171,7 @@ void OH_HiDebug_GetAppNativeMemInfoWithCache(HiDebug_NativeMemInfo *nativeMemInf
 
 **Description**
 
-Obtains the memory info of application process, with optional caching to improve performance. The cached valueremains valid for 5 minutes.
+Obtains the memory information of an application process. This API has a cache mechanism to improve itsperformance. The cache value is valid for 5 minutes. Note that this API needs to read the **\/proc/{pid}/smaps_rollup** node information, which takes a long time. Therefore, you are advised not to call this API in themain thread.
 
 **Since**: 20
 
@@ -179,8 +179,8 @@ Obtains the memory info of application process, with optional caching to improve
 
 | Parameter | Description |
 | -- | -- |
-| [HiDebug_NativeMemInfo](capi-hidebug-hidebug-nativememinfo.md) *nativeMemInfo | Indicates the pointer to [HiDebug_NativeMemInfo](capi-hidebug-hidebug-nativememinfo.md).If there is no data in structure after the function.The Possible reason is system error. |
-| bool forceRefresh | Whether to bypass the cache and retrieve fresh data.Set to true to force retrieve fresh data and immediate refresh the cached value;Set to false to retrieve the cached value when it is valid; otherwise, retrievefresh data and refresh the cache. |
+| [HiDebug_NativeMemInfo](capi-hidebug-hidebug-nativememinfo.md) *nativeMemInfo | Pointer to [HiDebug_NativeMemInfo](capi-hidebug-hidebug-nativememinfo.md). If the struct data is empty after the function iscalled, the calling fails. |
+| bool forceRefresh | Whether to ignore the cache validity and forcibly update the cache value.<br>The value **true** means to directly obtain the current memory data and update the cache value.<br>The value **false** means to directly return the cache value if the cache is valid and obtain the currentmemory data and update the cache value if the cache is invalid. |
 
 ### OH_HiDebug_GetAppMemoryLimit()
 
@@ -190,7 +190,7 @@ void OH_HiDebug_GetAppMemoryLimit(HiDebug_MemoryLimit *memoryLimit)
 
 **Description**
 
-Obtains the memory limit of application process.
+Obtains the memory limit of an application process.
 
 **Since**: 12
 
@@ -198,7 +198,7 @@ Obtains the memory limit of application process.
 
 | Parameter | Description |
 | -- | -- |
-| [HiDebug_MemoryLimit](capi-hidebug-hidebug-memorylimit.md) *memoryLimit | Indicates the pointer to [HiDebug_MemoryLimit](capi-hidebug-hidebug-memorylimit.md)If there is no data in structure after the function.The Possible reason is system error. |
+| [HiDebug_MemoryLimit](capi-hidebug-hidebug-memorylimit.md) *memoryLimit | Pointer to [HiDebug_MemoryLimit](capi-hidebug-hidebug-memorylimit.md). If the struct data is empty after the function is called,the calling fails. |
 
 ### OH_HiDebug_StartAppTraceCapture()
 
@@ -208,7 +208,7 @@ HiDebug_ErrorCode OH_HiDebug_StartAppTraceCapture(HiDebug_TraceFlag flag, uint64
 
 **Description**
 
-Start capture application trace.
+Starts application trace collection.
 
 **Since**: 12
 
@@ -216,17 +216,17 @@ Start capture application trace.
 
 | Parameter | Description |
 | -- | -- |
-| [HiDebug_TraceFlag](capi-hidebug-type-h.md#hidebug_traceflag) flag | Trace flag |
-| uint64_t tags | Tag of trace |
-| uint32_t limitSize | Max size of trace file, in bytes, the max is 500MB. |
-| char* fileName | Output trace file name buffer |
-| uint32_t length | Output trace file name buffer length |
+| [HiDebug_TraceFlag](capi-hidebug-type-h.md#hidebug_traceflag) flag | Type of the thread (the main thread or all threads of the application) to trace. |
+| uint64_t tags | Modules or subsystems to trace. |
+| uint32_t limitSize | Maximum size of the trace file (in bytes), which is 500 MB. |
+| char* fileName | Buffer for the output trace file. |
+| uint32_t length | Length of the buffer for the output trace file. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) | 0 - Success<br>         [HIDEBUG_INVALID_ARGUMENT](capi-hidebug-type-h.md#hidebug_errorcode) 401 - if the fileName is null or the length is too short or<br>         limitSize is too small<br>         11400102 - Have already capture trace<br>         11400103 - Have no permission to trace<br>         11400104 - The Possible reason is some error in the system. |
+| HiDebug_ErrorCode | 0 - The operation is successful.<br>     <br>{@link HIDEBUG_INVALID_ARGUMENT} 401 - The fileName parameter is a null pointer, the input length<br>     parameter is too small, or the limitSize parameter is less than or equal to 0.<br>     <br>11400102 - A trace is already started.<br>     <br>11400103 - You do not have the permission to start the trace function.<br>     <br>11400104 - An internal system error occurs. |
 
 ### OH_HiDebug_StopAppTraceCapture()
 
@@ -236,7 +236,7 @@ HiDebug_ErrorCode OH_HiDebug_StopAppTraceCapture()
 
 **Description**
 
-Stop capture application trace.
+Stops application trace collection.
 
 **Since**: 12
 
@@ -244,7 +244,7 @@ Stop capture application trace.
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) | 0 - Success<br>         11400104 - Maybe no trace is running or some error in the system.<br>         11400105 - Have no trace running. |
+| HiDebug_ErrorCode | 0 - The operation is successful.<br>     <br>11400104 - An internal system error occurs.<br>     <br>11400105 - No trace collection is running. |
 
 ### OH_HiDebug_RequestTrace()
 
@@ -269,7 +269,7 @@ Requests application trace capture with specified configuration.
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) | Result code.<br>         [HIDEBUG_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) The operation is successful.<br>         [HIDEBUG_TRACE_ABNORMAL](capi-hidebug-type-h.md#hidebug_errorcode) Remote service exception.<br>         [OH_HIDEBUG_TRACE_STORAGE_LIMIT](capi-hidebug-type-h.md#hidebug_errorcode) Trace storage limit reached.<br>         [HIDEBUG_RESOURCE_UNAVAILABLE](capi-hidebug-type-h.md#hidebug_errorcode) Resource unavailable. |
+| HiDebug_ErrorCode | Result code.<br>         {@link HIDEBUG_SUCCESS} The operation is successful.<br>         {@link HIDEBUG_TRACE_ABNORMAL} Remote service exception.<br>         {@link OH_HIDEBUG_TRACE_STORAGE_LIMIT} Trace storage limit reached.<br>         {@link HIDEBUG_RESOURCE_UNAVAILABLE} Resource unavailable. |
 
 ### OH_HiDebug_GetGraphicsMemory()
 
@@ -279,7 +279,7 @@ HiDebug_ErrorCode OH_HiDebug_GetGraphicsMemory(uint32_t *value)
 
 **Description**
 
-Get the graphics memory of application.
+Obtains the size of the GPU memory. Note that this API involves multiple cross-process communications and maytake more than 1 second. Therefore, you are advised not to call this API in the main thread.
 
 **Since**: 14
 
@@ -287,13 +287,13 @@ Get the graphics memory of application.
 
 | Parameter | Description |
 | -- | -- |
-| uint32_t *value | Indicates value of graphics memory, in kibibytes. |
+| uint32_t *value | Pointer to the variable that stores the size (in KB) of the obtained GPU memory. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) | Result code<br>         [HIDEBUG_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) Get graphics memory success.<br>         [HIDEBUG_INVALID_ARGUMENT](capi-hidebug-type-h.md#hidebug_errorcode) Invalid argument, value is null.<br>         [HIDEBUG_TRACE_ABNORMAL](capi-hidebug-type-h.md#hidebug_errorcode) Failed to get the application memory due to a remote exception. |
+| HiDebug_ErrorCode | 0 - The API is obtained successfully.<br>     <br>401 - The parameter is a null pointer, which is invalid.<br>     <br>11400104 - An internal system error occurs. |
 
 ### OH_HiDebug_SetMallocDispatchTable()
 
@@ -303,7 +303,7 @@ HiDebug_ErrorCode OH_HiDebug_SetMallocDispatchTable(struct HiDebug_MallocDispatc
 
 **Description**
 
-Replace MallocDispatch table with developer-defined memory allocation functions.
+Sets the **MallocDispatch** table in the basic C library to temporarily replace the original memory operationfunctions (such as **malloc**, **free**, **calloc**, **realloc**, **mmap**, and **munmap**) with the custom memoryoperation functions. The **MallocDispatch** table is a struct that encapsulates memory operation functions such as malloc**, **calloc**, **realloc**, and **free** in the basic C library. **HiDebug_MallocDispatch** is only a part ofthe **MallocDispatch** struct.
 
 **Since**: 20
 
@@ -311,13 +311,13 @@ Replace MallocDispatch table with developer-defined memory allocation functions.
 
 | Parameter | Description |
 | -- | -- |
-| [struct HiDebug_MallocDispatch](capi-hidebug-hidebug-mallocdispatch.md) *dispatchTable | A pointer to the MallocDispatch table. |
+| [struct HiDebug_MallocDispatch](capi-hidebug-hidebug-mallocdispatch.md) *dispatchTable | Pointer to the [HiDebug_MallocDispatch](capi-hidebug-hidebug-mallocdispatch.md) struct that contains the custom memory operationfunctions. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) | Result code<br>         [HIDEBUG_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) The MallocDispatch table is successfully overriden.<br>         [HIDEBUG_INVALID_ARGUMENT](capi-hidebug-type-h.md#hidebug_errorcode) Invalid argument, dispatchTable is a null pointer. |
+| HiDebug_ErrorCode | For details, see {@link HiDebug_ErrorCode}.<br>     <ul><li>{@link HIDEBUG_SUCCESS}: The custom memory operation function is set successfully.</li><br>     <li>{@link HIDEBUG_INVALID_ARGUMENT}: Invalid parameter.</li></ul> |
 
 ### OH_HiDebug_GetDefaultMallocDispatchTable()
 
@@ -327,7 +327,7 @@ HiDebug_MallocDispatch* OH_HiDebug_GetDefaultMallocDispatchTable(void)
 
 **Description**
 
-Obtain current MallocDispatch table.
+Obtains the default MallocDispatch table of the system C library. You can call[OH_HiDebug_RestoreMallocDispatchTable](capi-hidebug-h.md#oh_hidebug_restoremallocdispatchtable) to restore the table.
 
 **Since**: 20
 
@@ -335,7 +335,7 @@ Obtain current MallocDispatch table.
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_MallocDispatch*](capi-hidebug-hidebug-mallocdispatch.md) | Returns a pointer to MallocDispatch table on success, or NULL on failure. |
+| [HiDebug_MallocDispatch*](capi-hidebug-hidebug-mallocdispatch.md) | Pointer to the default [HiDebug_MallocDispatch](capi-hidebug-hidebug-mallocdispatch.md) struct of the current C library. |
 
 ### OH_HiDebug_RestoreMallocDispatchTable()
 
@@ -345,7 +345,7 @@ void OH_HiDebug_RestoreMallocDispatchTable(void)
 
 **Description**
 
-Restore original MallocDispatch table.
+Restores the MallocDispatch table of the system C library.
 
 **Since**: 20
 
@@ -357,7 +357,7 @@ int OH_HiDebug_BacktraceFromFp(HiDebug_Backtrace_Object object, void* startFp, v
 
 **Description**
 
-Get backtrace frames start from the given frame pointer and the function is signal-safe.
+Performs stack back-tracing based on the given fp address. This function is async-signal-safe.
 
 **Since**: 20
 
@@ -365,16 +365,16 @@ Get backtrace frames start from the given frame pointer and the function is sign
 
 | Parameter | Description |
 | -- | -- |
-| [HiDebug_Backtrace_Object](capi-hidebug-hidebug-backtrace-object--8h.md) object | The backtrace object create by [OH_HiDebug_CreateBacktraceObject](capi-hidebug-h.md#oh_hidebug_createbacktraceobject). |
-| void* startFp | The entry frame pointer. |
-| void** pcArray | The array to place program counter values. |
-| int size | The size of the array to place program counter values. |
+| [HiDebug_Backtrace_Object](capi-hidebug-hidebug-backtrace-object--8h.md) object | Object obtained by the [OH_HiDebug_CreateBacktraceObject](capi-hidebug-h.md#oh_hidebug_createbacktraceobject) API for stack backtracing. |
+| void* startFp | Start frame pointer for stack backtracing. |
+| void** pcArray | Array of PC addresses obtained from stack backtracing. |
+| int size | Length of the PC address array obtained by stack backtracing. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | The number of stack frames written to array. |
+| int | Number of stack frames that are successfully backtraced and written to pcArray. If 0 is returned, stack<br>     backtracing may fail. |
 
 ### OH_HiDebug_SymbolicAddressCallback()
 
@@ -384,7 +384,7 @@ typedef void (*OH_HiDebug_SymbolicAddressCallback)(void* pc, void* arg, const Hi
 
 **Description**
 
-Defines the callback of the [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress) function.
+If the [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress) API is successfully called, the parsed stack information isreturned to the caller through this function. Note: This API involves multiple I/O operations and takes a long time.Therefore, you are advised not to call this API in the main thread.
 
 **Since**: 20
 
@@ -392,9 +392,9 @@ Defines the callback of the [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hi
 
 | Parameter | Description |
 | -- | -- |
-| (void\* pc | The program counter pass to [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress). |
-| void\* arg | The arg pass to [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress). |
-| [const HiDebug_StackFrame](capi-hidebug-hidebug-stackframe.md)\* frame | The parsed frame content, the content is invalid after return of [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress). |
+| (void\* pc | PC address transferred to the [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress) API for parsing. |
+| void\* arg | arg value of the [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress) API. |
+| [const HiDebug_StackFrame](capi-hidebug-hidebug-stackframe.md)\* frame | Pointer to [HiDebug_StackFrame](capi-hidebug-hidebug-stackframe.md), which is obtained by parsing the PC address passed to the[OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress) API. What the pointer points to is valid only in the function scope. |
 
 ### OH_HiDebug_SymbolicAddress()
 
@@ -404,7 +404,7 @@ HiDebug_ErrorCode OH_HiDebug_SymbolicAddress(HiDebug_Backtrace_Object object, vo
 
 **Description**
 
-Get detailed symbol info by given pc and the function is not signal-safe.
+Obtains detailed symbol information based on the specified PC address. This function is not asyn-signal-safe.
 
 **Since**: 20
 
@@ -412,16 +412,16 @@ Get detailed symbol info by given pc and the function is not signal-safe.
 
 | Parameter | Description |
 | -- | -- |
-| [HiDebug_Backtrace_Object](capi-hidebug-hidebug-backtrace-object--8h.md) object | The backtrace object create by [OH_HiDebug_CreateBacktraceObject](capi-hidebug-h.md#oh_hidebug_createbacktraceobject). |
-| void* pc | The program counter return by [OH_HiDebug_BacktraceFromFp](capi-hidebug-h.md#oh_hidebug_backtracefromfp). |
-| void* arg | The arg will be pass to callback. |
-| [OH_HiDebug_SymbolicAddressCallback](capi-hidebug-h.md#oh_hidebug_symbolicaddresscallback) callback | The function to pass parsed frame to caller. |
+| [HiDebug_Backtrace_Object](capi-hidebug-hidebug-backtrace-object--8h.md) object | Object created by the [OH_HiDebug_CreateBacktraceObject](capi-hidebug-h.md#oh_hidebug_createbacktraceobject) API. |
+| void* pc | PC address obtained through the [OH_HiDebug_BacktraceFromFp](capi-hidebug-h.md#oh_hidebug_backtracefromfp) API. |
+| void* arg | Reserved custom parameter. After the symbol is successfully parsed, this parameter is passed to[OH_HiDebug_SymbolicAddressCallback](capi-hidebug-h.md#oh_hidebug_symbolicaddresscallback). |
+| [OH_HiDebug_SymbolicAddressCallback](capi-hidebug-h.md#oh_hidebug_symbolicaddresscallback) callback | Callback used to return the parsed stack information. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) | Result code<br>         [HIDEBUG_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) Get detailed frame info successfully and the callback is invoked.<br>         [HIDEBUG_INVALID_ARGUMENT](capi-hidebug-type-h.md#hidebug_errorcode) Invalid argument.<br>         [HIDEBUG_INVALID_SYMBOLIC_PC_ADDRESS](capi-hidebug-type-h.md#hidebug_errorcode) Could not find symbol info by given pc. |
+| HiDebug_ErrorCode | For details, see {@link HiDebug_ErrorCode}.<br>     <ul><li>{@link HIDEBUG_SUCCESS}: The detailed stack information is successfully obtained, and the callback<br>     input by the function is called.</li><br>     <li>{@link HIDEBUG_INVALID_ARGUMENT}: Invalid parameter.</li><br>     <li>{@link HIDEBUG_INVALID_SYMBOLIC_PC_ADDRESS}: Failed to find the corresponding symbol based on the input<br>     PC address.</li></ul> |
 
 ### OH_HiDebug_CreateBacktraceObject()
 
@@ -431,7 +431,7 @@ HiDebug_Backtrace_Object OH_HiDebug_CreateBacktraceObject(void)
 
 **Description**
 
-Create a backtrace object for further using and the function is not signal-safe.
+Creates an object for stack backtracing and parsing. This function is not asyn-signal-safe.
 
 **Since**: 20
 
@@ -439,7 +439,7 @@ Create a backtrace object for further using and the function is not signal-safe.
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_Backtrace_Object](capi-hidebug-hidebug-backtrace-object--8h.md) | BacktraceObject if Success or NULL if is not supported on current arch |
+| [HiDebug_Backtrace_Object](capi-hidebug-hidebug-backtrace-object--8h.md) | Pointer to the created object. If the object fails to be created, NULL is returned. |
 
 ### OH_HiDebug_DestroyBacktraceObject()
 
@@ -449,7 +449,7 @@ void OH_HiDebug_DestroyBacktraceObject(HiDebug_Backtrace_Object object)
 
 **Description**
 
-Destroy a backtrace object and the function is not signal-safe.
+Destroys the object created by [OH_HiDebug_CreateBacktraceObject](capi-hidebug-h.md#oh_hidebug_createbacktraceobject) to release the resources applied forduring stack backtracing and parsing. This function is not asyn-signal-safe.
 
 **Since**: 20
 
@@ -457,7 +457,7 @@ Destroy a backtrace object and the function is not signal-safe.
 
 | Parameter | Description |
 | -- | -- |
-| [HiDebug_Backtrace_Object](capi-hidebug-hidebug-backtrace-object--8h.md) object | The object to be destroyed. |
+| [HiDebug_Backtrace_Object](capi-hidebug-hidebug-backtrace-object--8h.md) object | Object to destroy. |
 
 ### OH_HiDebug_GetGraphicsMemorySummary()
 
@@ -467,7 +467,7 @@ HiDebug_ErrorCode OH_HiDebug_GetGraphicsMemorySummary(uint32_t interval, HiDebug
 
 **Description**
 
-Obtain the graphics memory summary of application.
+Obtains the detailed GPU memory usage of an application.
 
 **Since**: 21
 
@@ -475,14 +475,14 @@ Obtain the graphics memory summary of application.
 
 | Parameter | Description |
 | -- | -- |
-| uint32_t interval | If the cache of graphics memory is longer than interval (unit: second), the latestgraphics memory data will be obtained. The interval value range is 2 seconds to3600 seconds, If interval is an invalid value, the default value is 300 seconds. |
-| [HiDebug_GraphicsMemorySummary](capi-hidebug-hidebug-graphicsmemorysummary.md) *summary | Indicates value of graphics memory summary, in kibibytes. |
+| uint32_t interval | Interval that the cached GPU memory data exists, in seconds. If the duration exceeds the value ofinterval, the API obtains the latest data and updates the buffer. Otherwise, the API directly returns the cacheddata.<br>The value range of interval is [2, 3600]. If the passed-in interval is out of the range, **300** is used asthe default value. |
+| [HiDebug_GraphicsMemorySummary](capi-hidebug-hidebug-graphicsmemorysummary.md) *summary | Pointer to [HiDebug_GraphicsMemorySummary](capi-hidebug-hidebug-graphicsmemorysummary.md). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) | Result code<br>         [HIDEBUG_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) Get graphics memory success.<br>         [HIDEBUG_INVALID_ARGUMENT](capi-hidebug-type-h.md#hidebug_errorcode) Invalid argument, value is null.<br>         [HIDEBUG_TRACE_ABNORMAL](capi-hidebug-type-h.md#hidebug_errorcode) Failed to get the application memory due to a remote exception. |
+| HiDebug_ErrorCode | For details, see {@link HiDebug_ErrorCode}.<br>     <ul><li>{@link HIDEBUG_SUCCESS}: The GPU memory information of the application is obtained successfully.</li><br>     <li>{@link HIDEBUG_INVALID_ARGUMENT}: Invalid parameter.</li><br>     <li>{@link HIDEBUG_TRACE_ABNORMAL}: Internal system error.</li></ul> |
 
 ### OH_HiDebug_ThreadLiteSamplingCallback()
 
@@ -492,7 +492,7 @@ typedef void (*OH_HiDebug_ThreadLiteSamplingCallback)(const char* stacks)
 
 **Description**
 
-Defines the callback of the lightweight performance stack.
+Triggered for the lightweight Perf sampling stack content. Note: The sampling data is valid only during theexecution of this callback. If you need to use the data outside the function, deep copy the sampling stack content.
 
 **Since**: 22
 
@@ -500,7 +500,7 @@ Defines the callback of the lightweight performance stack.
 
 | Parameter | Description |
 | -- | -- |
-| (const char\* stacks | Stacks. |
+| (const char\* stacks | Content of the sampling call stack. |
 
 ### OH_HiDebug_RequestThreadLiteSampling()
 
@@ -516,14 +516,14 @@ HiDebug_ErrorCode OH_HiDebug_RequestThreadLiteSampling(HiDebug_ProcessSamplerCon
 
 | Parameter | Description |
 | -- | -- |
-| [HiDebug_ProcessSamplerConfig](capi-hidebug-hidebug-processsamplerconfig.md)* config | Sampling configuration parameters. |
-| [OH_HiDebug_ThreadLiteSamplingCallback](capi-hidebug-h.md#oh_hidebug_threadlitesamplingcallback) stacksCallback | Callback of the sampling stack. This function is called after the sampling to passthe sampling stack information. |
+| [HiDebug_ProcessSamplerConfig](capi-hidebug-hidebug-processsamplerconfig.md)* config | Pointer to the [HiDebug_ProcessSamplerConfig](capi-hidebug-hidebug-processsamplerconfig.md) struct. |
+| [OH_HiDebug_ThreadLiteSamplingCallback](capi-hidebug-h.md#oh_hidebug_threadlitesamplingcallback) stacksCallback | Callback used to return the sampling result when the sampling is complete. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) | Result code.<br>         [HIDEBUG_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) The operation is successful.<br>         [HIDEBUG_INVALID_ARGUMENT](capi-hidebug-type-h.md#hidebug_errorcode) Invalid argument.<br>         [HIDEBUG_NOT_SUPPORTED](capi-hidebug-type-h.md#hidebug_errorcode) The device does not support sampling.<br>         [HIDEBUG_UNDER_SAMPLING](capi-hidebug-type-h.md#hidebug_errorcode) The sampling is in progress.<br>         [HIDEBUG_RESOURCE_UNAVAILABLE](capi-hidebug-type-h.md#hidebug_errorcode) Resource unavailable. |
+| HiDebug_ErrorCode | Result code.<br>     <ul><li>{@link HIDEBUG_SUCCESS}: Sampling successful.</li><br>     <li>{@link HIDEBUG_INVALID_ARGUMENT}: Invalid parameter.</li><br>     <li>{@link HIDEBUG_NOT_SUPPORTED}: Perf sampling not supported.</li><br>     <li>{@link HIDEBUG_UNDER_SAMPLING}: A sampling task is in progress.</li><br>     <li>{@link HIDEBUG_RESOURCE_UNAVAILABLE}: Sampling resources are insufficient or the upper call limit is<br>     reached.</li></ul> |
 
 ### OH_HiDebug_SetCrashObj()
 
@@ -533,7 +533,7 @@ uint64_t OH_HiDebug_SetCrashObj(HiDebug_CrashObjType type, void* addr)
 
 **Description**
 
-Attaches diagnostic information to the current crash context.
+Adds debugging information to the crash logs. This function is used together with[OH_HiDebug_ResetCrashObj](capi-hidebug-h.md#oh_hidebug_resetcrashobj). If a program crashes between **OH_HiDebug_SetCrashObj** and OH_HiDebug_ResetCrashObj**, the debugging information set by **OH_HiDebug_SetCrashObj** is added to the crash logs.
 
 **Since**: 23
 
@@ -541,14 +541,14 @@ Attaches diagnostic information to the current crash context.
 
 | Parameter | Description |
 | -- | -- |
-| [HiDebug_CrashObjType](capi-hidebug-type-h.md#hidebug_crashobjtype) type | Type of diagnostic data. |
-| void* addr | Point to the data buffer(must remain valid until crash). |
+| [HiDebug_CrashObjType](capi-hidebug-type-h.md#hidebug_crashobjtype) type | Data type of the debugging information. For details, see [HiDebug_CrashObjType](capi-hidebug-type-h.md#hidebug_crashobjtype). |
+| void* addr | Address of the debugging information. The address must be valid when a crash occurs. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| uint64_t | Handle to the previously set crash object(0 if none). |
+| uint64_t | Object of the debugging information that was set last time. If no debugging information is set last time,<br>     the value is 0. |
 
 ### OH_HiDebug_ResetCrashObj()
 
@@ -558,7 +558,7 @@ void OH_HiDebug_ResetCrashObj(uint64_t crashObj)
 
 **Description**
 
-Detaches diagnostic information from the current crash context.
+Resets the debugging information object to the state before **OH_HiDebug_SetCrashObj** is used.
 
 **Since**: 23
 
@@ -566,7 +566,7 @@ Detaches diagnostic information from the current crash context.
 
 | Parameter | Description |
 | -- | -- |
-| uint64_t crashObj | Handle returned by OH_HiDebug_SetCrashObj. |
+| uint64_t crashObj | Return value of the **OH_HiDebug_SetCrashObj** function. |
 
 ### OH_HiDebug_StartProfiler()
 
@@ -592,7 +592,7 @@ Starts Resource Profiler for the current process asynchronously.The callback is 
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) | Result code<br>         [HIDEBUG_RES_PROF_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) Resource profiler started successfully.<br>         [HIDEBUG_RES_PROF_INVALID_ARG](capi-hidebug-type-h.md#hidebug_errorcode) Invalid resource profiler argument.<br>         [HIDEBUG_RES_PROF_INVALID_MAX_DURATION](capi-hidebug-type-h.md#hidebug_errorcode) Invalid maximum duration.<br>         [HIDEBUG_RES_PROF_INVALID_FILTER_SIZE](capi-hidebug-type-h.md#hidebug_errorcode) Invalid filter size.<br>         [HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH](capi-hidebug-type-h.md#hidebug_errorcode) Invalid maximum stack depth.<br>         [HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL](capi-hidebug-type-h.md#hidebug_errorcode) Invalid statistics interval.<br>         [HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL](capi-hidebug-type-h.md#hidebug_errorcode) Invalid sample interval.<br>         [HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE](capi-hidebug-type-h.md#hidebug_errorcode) Invalid resource type.<br>         [HIDEBUG_RES_PROF_PERMISSION_DENIED](capi-hidebug-type-h.md#hidebug_errorcode) Resource profiler permission denied.<br>         [HIDEBUG_RES_PROF_ALREADY_STARTED](capi-hidebug-type-h.md#hidebug_errorcode) Resource profiler already started.<br>         [HIDEBUG_RES_PROF_PROCESS_OVERLIMIT](capi-hidebug-type-h.md#hidebug_errorcode) Resource profiler process count exceeds the limit.<br>         [HIDEBUG_RES_PROF_CONFLICT](capi-hidebug-type-h.md#hidebug_errorcode) Resource profiler conflicts with CLI tools or system profiling tasks.<br>         [HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED](capi-hidebug-type-h.md#hidebug_errorcode) Daily quota exceeded during resource profiling.<br>         [HIDEBUG_RES_PROF_CPU_OVERLOADED](capi-hidebug-type-h.md#hidebug_errorcode) System is experiencing high CPU utilization.<br>         [HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL](capi-hidebug-type-h.md#hidebug_errorcode) Insufficient available memory.<br>         [HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL](capi-hidebug-type-h.md#hidebug_errorcode) Insufficient available storage space.<br>         [HIDEBUG_RES_PROF_FAILURE](capi-hidebug-type-h.md#hidebug_errorcode) Failed to start the resource profiler. |
+| HiDebug_ErrorCode | Result code<br>         {@link HIDEBUG_RES_PROF_SUCCESS} Resource profiler started successfully.<br>         {@link HIDEBUG_RES_PROF_INVALID_ARG} Invalid resource profiler argument.<br>         {@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION} Invalid maximum duration.<br>         {@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE} Invalid filter size.<br>         {@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH} Invalid maximum stack depth.<br>         {@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL} Invalid statistics interval.<br>         {@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL} Invalid sample interval.<br>         {@link HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE} Invalid resource type.<br>         {@link HIDEBUG_RES_PROF_PERMISSION_DENIED} Resource profiler permission denied.<br>         {@link HIDEBUG_RES_PROF_ALREADY_STARTED} Resource profiler already started.<br>         {@link HIDEBUG_RES_PROF_PROCESS_OVERLIMIT} Resource profiler process count exceeds the limit.<br>         {@link HIDEBUG_RES_PROF_CONFLICT} Resource profiler conflicts with CLI tools or system profiling tasks.<br>         {@link HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED} Daily quota exceeded during resource profiling.<br>         {@link HIDEBUG_RES_PROF_CPU_OVERLOADED} System is experiencing high CPU utilization.<br>         {@link HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL} Insufficient available memory.<br>         {@link HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL} Insufficient available storage space.<br>         {@link HIDEBUG_RES_PROF_FAILURE} Failed to start the resource profiler. |
 
 ### OH_HiDebug_StopProfiler()
 
@@ -610,7 +610,7 @@ Stops resource profiler for the current process. This API can be called after th
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) | Result code<br>         [HIDEBUG_RES_PROF_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) Resource profiler stopped successfully.<br>         [HIDEBUG_RES_PROF_NOT_STARTED](capi-hidebug-type-h.md#hidebug_errorcode) Resource profiler not started.<br>         [HIDEBUG_RES_PROF_FAILURE](capi-hidebug-type-h.md#hidebug_errorcode) Failed to stop the resource profiler. |
+| HiDebug_ErrorCode | Result code<br>         {@link HIDEBUG_RES_PROF_SUCCESS} Resource profiler stopped successfully.<br>         {@link HIDEBUG_RES_PROF_NOT_STARTED} Resource profiler not started.<br>         {@link HIDEBUG_RES_PROF_FAILURE} Failed to stop the resource profiler. |
 
 ### OH_HiDebug_MemDumpListener()
 
@@ -662,7 +662,7 @@ Registers a listener triggered when the memory watermark of an app is high or th
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) | Result code.<br> [HIDEBUG_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) Operation succeeded.<br> [HIDEBUG_INVALID_ARGUMENT](capi-hidebug-type-h.md#hidebug_errorcode) Invalid argument. |
+| HiDebug_ErrorCode | Result code.<br> {@link HIDEBUG_SUCCESS } Operation succeeded.<br> {@link HIDEBUG_INVALID_ARGUMENT } Invalid argument. |
 
 ### OH_HiDebug_UnregisterMemDumpListener()
 
@@ -686,7 +686,7 @@ Unregisters a memory dump listener that has been successfully registered.
 
 | Type | Description |
 | -- | -- |
-| [HiDebug_ErrorCode](capi-hidebug-type-h.md#hidebug_errorcode) | Result code.<br> [HIDEBUG_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) Operation succeeded.<br> [HIDEBUG_INVALID_ARGUMENT](capi-hidebug-type-h.md#hidebug_errorcode) Invalid argument. |
+| HiDebug_ErrorCode | Result code.<br> {@link HIDEBUG_SUCCESS } Operation succeeded.<br> {@link HIDEBUG_INVALID_ARGUMENT } Invalid argument. |
 
 ### OH_HiDebug_AcquireAsyncContext()
 
@@ -696,7 +696,7 @@ uint64_t OH_HiDebug_AcquireAsyncContext()
 
 **Description**
 
-Profiler helper interfaces, acquire a AsyncContext for further using.The corresponding unregister function is as follows:OH_HiDebug_ReleaseAsyncContext.
+Profiler helper interfaces, acquire a AsyncContext for further using.The corresponding unregister function is as follows: OH_HiDebug_ReleaseAsyncContext.
 
 **Since**: 26.0.0
 

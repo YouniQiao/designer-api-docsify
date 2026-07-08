@@ -1,6 +1,10 @@
 # CmsRecipientInfo
 
-Represents recipient information for the CMS message. > **NOTE** > > At least one recipient needs to be set.
+Represents recipient information for the CMS message.
+
+> **NOTE**
+>
+> At least one recipient needs to be set.
 
 **Since:** 22
 

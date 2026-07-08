@@ -20,7 +20,9 @@ import { camera } from '@kit.CameraKit';
 faceSlender: number
 ```
 
-Face slimming level, which is obtained through [Beauty.getSupportedBeautyRange](arkts-camera-beautyquery-i-sys.md#getsupportedbeautyrange-1). For example, the value **1** indicates level-1 slimming.
+Face slimming level, which is obtained through
+[Beauty.getSupportedBeautyRange](arkts-camera-beautyquery-i-sys.md#getsupportedbeautyrange-1). For example, the value **1**
+indicates level-1 slimming.
 
 **Type:** number
 
@@ -36,7 +38,9 @@ Face slimming level, which is obtained through [Beauty.getSupportedBeautyRange](
 skinSmoothLevel: number
 ```
 
-Skin smoothing level, which is obtained through [Beauty.getSupportedBeautyRange](arkts-camera-beautyquery-i-sys.md#getsupportedbeautyrange-1). For example, the value **1** indicates level-1 smoothing.
+Skin smoothing level, which is obtained through
+[Beauty.getSupportedBeautyRange](arkts-camera-beautyquery-i-sys.md#getsupportedbeautyrange-1). For example, the value **1**
+indicates level-1 smoothing.
 
 **Type:** number
 
@@ -52,7 +56,9 @@ Skin smoothing level, which is obtained through [Beauty.getSupportedBeautyRange]
 skinTone: number
 ```
 
-Skin tone perfection level, which is obtained through [Beauty.getSupportedBeautyRange](arkts-camera-beautyquery-i-sys.md#getsupportedbeautyrange-1). For example, the value **0xBF986C** indicates a specific color.
+Skin tone perfection level, which is obtained through
+[Beauty.getSupportedBeautyRange](arkts-camera-beautyquery-i-sys.md#getsupportedbeautyrange-1). For example, the value
+**0xBF986C** indicates a specific color.
 
 **Type:** number
 

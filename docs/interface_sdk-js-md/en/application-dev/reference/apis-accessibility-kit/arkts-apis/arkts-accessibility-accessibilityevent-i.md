@@ -33,7 +33,17 @@ eventType: accessibility.EventType | accessibility.WindowUpdateType |
         TouchGuideType | GestureType | PageUpdateType
 ```
 
-Event type. **EventType**: accessibility event type. **WindowUpdateType**: window update type. **TouchGuideType**: touch guide type. **GestureType**: gesture type. **PageUpdateType**: page update type.
+Event type.
+
+**EventType**: accessibility event type.
+
+**WindowUpdateType**: window update type.
+
+**TouchGuideType**: touch guide type.
+
+**GestureType**: gesture type.
+
+**PageUpdateType**: page update type.
 
 **Type:** accessibility.EventType | accessibility.WindowUpdateType | TouchGuideType | GestureType | PageUpdateType
 
@@ -47,7 +57,8 @@ Event type. **EventType**: accessibility event type. **WindowUpdateType**: windo
 extraInfo?: string
 ```
 
-Added or deleted text content carried by the **TextArea**, **TextInput**, **SearchField**, or **RichEdit** component. Set this parameter based on site requirements. No special restrictions.
+Added or deleted text content carried by the **TextArea**, **TextInput**, **SearchField**, or **RichEdit**
+component. Set this parameter based on site requirements. No special restrictions.
 
 **Type:** string
 

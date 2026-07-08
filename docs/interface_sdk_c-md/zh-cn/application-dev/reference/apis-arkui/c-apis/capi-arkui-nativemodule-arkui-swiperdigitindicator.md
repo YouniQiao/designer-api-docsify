@@ -6,11 +6,11 @@ typedef struct ArkUI_SwiperDigitIndicator ArkUI_SwiperDigitIndicator
 
 ## 概述
 
-Defines the digital indicator style for the swiper.
+定义Swiper组件的数字导航指示器风格。
 
 **起始版本：** 19
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**所在头文件：** [native_type.h](capi-native-type-h.md)
+**所在头文件：** [swiper.h](capi-swiper-h.md)
 

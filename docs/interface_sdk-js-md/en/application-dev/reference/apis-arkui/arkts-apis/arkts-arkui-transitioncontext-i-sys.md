@@ -20,7 +20,8 @@ import { window } from '@kit.ArkUI';
 completeTransition(isCompleted: boolean): void
 ```
 
-Completes the transition. This API can be called only after [animateTo()](../arkts-components/arkts-arkui-common-animateto-f.md#animateto-1) is executed.
+Completes the transition. This API can be called only after [animateTo()](../arkts-components/arkts-arkui-common-animateto-f.md#animateto-1)
+is executed.
 
 **Since:** 9
 

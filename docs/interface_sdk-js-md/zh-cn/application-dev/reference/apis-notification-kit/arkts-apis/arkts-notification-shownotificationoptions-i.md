@@ -18,7 +18,9 @@ import { ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
 clickAction?: ActionResult
 ```
 
-通知被点击后触发的行为。 从API version 7开始不再维护。
+通知被点击后触发的行为。
+
+从API version 7开始不再维护。
 
 **类型：** ActionResult
 

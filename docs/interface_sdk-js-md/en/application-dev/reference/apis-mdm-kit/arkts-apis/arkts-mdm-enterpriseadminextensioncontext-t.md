@@ -4,7 +4,9 @@
 export type EnterpriseAdminExtensionContext = _EnterpriseAdminExtensionContext.default
 ```
 
-EnterpriseAdminExtensionContext is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseadminextensionability-c.md) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
+EnterpriseAdminExtensionContext is the context of
+[EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseadminextensionability-c.md)
+and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
 **Since:** 23
 

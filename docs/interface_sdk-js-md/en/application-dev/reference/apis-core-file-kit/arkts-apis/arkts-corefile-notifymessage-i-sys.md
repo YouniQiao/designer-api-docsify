@@ -46,7 +46,8 @@ Notification type.
 uris: Array<string>
 ```
 
-URIs of the changed files. Currently, only one notification is supported. A collection of multiple notifications will be supported in later versions.
+URIs of the changed files. Currently, only one notification is supported. A collection of multiple notifications
+will be supported in later versions.
 
 **Type:** Array<string>
 

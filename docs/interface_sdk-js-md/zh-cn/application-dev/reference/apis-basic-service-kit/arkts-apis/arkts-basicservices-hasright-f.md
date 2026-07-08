@@ -6,7 +6,8 @@
 function hasRight(deviceName: string): boolean
 ```
 
-判断是否有权访问该设备。 如果“使用者”（如各种App或系统）有权访问设备则返回true；无权访问设备则返回false。
+判断是否有权访问该设备。
+如果“使用者”（如各种App或系统）有权访问设备则返回true；无权访问设备则返回false。
 
 **起始版本：** 9
 

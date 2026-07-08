@@ -6,7 +6,8 @@
 function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 ```
 
-The maintenance of this interface has been stopped since version api 9. Please use AVRecorder Creates an VideoRecorder instance.
+The maintenance of this interface has been stopped since version api 9. Please use AVRecorder
+Creates an VideoRecorder instance.
 
 **起始版本：** 9
 
@@ -51,7 +52,8 @@ media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => 
 function createVideoRecorder(): Promise<VideoRecorder>
 ```
 
-The maintenance of this interface has been stopped since version api 9. Please use AVRecorder Creates an VideoRecorder instance.
+The maintenance of this interface has been stopped since version api 9. Please use AVRecorder
+Creates an VideoRecorder instance.
 
 **起始版本：** 9
 

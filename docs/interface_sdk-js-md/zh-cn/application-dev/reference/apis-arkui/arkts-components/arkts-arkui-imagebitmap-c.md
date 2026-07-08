@@ -1,6 +1,8 @@
 # ImageBitmap
 
-ImageBitmap对象可以存储canvas渲染的像素数据。从API version 11开始，当应用创建 [Worker线程](../../../../arkts-utils/worker-introduction.md)，支持使用postMessage将ImageBitmap实例传到 Worker中进行绘制，并使用onmessage接收Worker线程发送的绘制结果进行显示。
+ImageBitmap对象可以存储canvas渲染的像素数据。从API version 11开始，当应用创建
+[Worker线程](../../../../arkts-utils/worker-introduction.md)，支持使用postMessage将ImageBitmap实例传到
+Worker中进行绘制，并使用onmessage接收Worker线程发送的绘制结果进行显示。
 
 **起始版本：** 8
 
@@ -141,7 +143,8 @@ constructor(data: Resource, unit?: LengthMetricsUnit)
 readonly height: number
 ```
 
-ImageBitmap的像素高度。 <br>默认单位为vp。
+ImageBitmap的像素高度。
+<br>默认单位为vp。
 
 **类型：** number
 
@@ -159,7 +162,8 @@ ImageBitmap的像素高度。 <br>默认单位为vp。
 readonly width: number
 ```
 
-ImageBitmap的像素宽度。 <br>默认单位为vp。
+ImageBitmap的像素宽度。
+<br>默认单位为vp。
 
 **类型：** number
 

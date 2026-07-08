@@ -20,7 +20,11 @@ Defines the format string list supported by the image source.It is obtained by c
 
 | Name | Description |
 | -- | -- |
-| struct [OhosImageSourceSupportedFormat**](capi-image-ohosimagesourcesupportedformat.md) supportedFormatList = nullptr | Image source supported format string list head. |
-| size_t size = 0 | Image source supported format string list size. |
+| struct [OhosImageSourceSupportedFormat**](capi-image-ohosimagesourcesupportedformat.md) supportedFormatList = nullptr |  |
+| size_t size = 0;
+#else |  |
+| struct [OhosImageSourceSupportedFormat**](capi-image-ohosimagesourcesupportedformat.md) supportedFormatList |  |
+| size_t size;
+#endif |  |
 
 

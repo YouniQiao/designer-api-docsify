@@ -6,7 +6,7 @@ typedef struct HiDebug_Backtrace_Object__* HiDebug_Backtrace_Object
 
 ## Overview
 
-To represent a backtrace object
+Defines an object used for stack backtracing and stack parsing.
 
 **Since**: 20
 

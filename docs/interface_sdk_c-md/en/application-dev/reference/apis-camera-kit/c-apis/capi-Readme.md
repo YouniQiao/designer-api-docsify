@@ -12,7 +12,6 @@
     - [preview_output.h](capi-preview-output-h.md)
 - Module
     - [OH_Camera](capi-oh-camera.md)
-    - [MetadataObjectExt](capi-metadataobjectext.md)
 - Struct
     - [Camera_Size](capi-oh-camera-camera-size.md)
     - [Camera_Profile](capi-oh-camera-camera-profile.md)
@@ -48,7 +47,7 @@
     - [OH_PhotoNative](capi-oh-camera-oh-photonative.md)
     - [MetadataOutput_Callbacks](capi-oh-camera-metadataoutput-callbacks.md)
     - [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)
-    - [OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)
+    - [OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)
     - [CameraManager_Callbacks](capi-oh-camera-cameramanager-callbacks.md)
     - [CameraInput_Callbacks](capi-oh-camera-camerainput-callbacks.md)
     - [Camera_Input](capi-oh-camera-camera-input.md)

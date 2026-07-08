@@ -1,6 +1,6 @@
 # MouseButton
 
-描述注入的模拟鼠标按键。
+模拟注入的鼠标按钮。
 
 **起始版本：** 10
 
@@ -40,7 +40,7 @@ MOUSE_BUTTON_RIGHT = 1
 MOUSE_BUTTON_MIDDLE = 2
 ```
 
-鼠标中键。
+鼠标中间键。
 
 **起始版本：** 10
 

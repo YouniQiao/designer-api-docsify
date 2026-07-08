@@ -34,7 +34,8 @@ Audio encoding bit rate, in bit/s.
 audioEncoder?: AudioEncoder
 ```
 
-Audio encoding format. The default value is DEFAULT, it will be deprecated after API8. use "audioEncoderMime" instead.
+Audio encoding format. The default value is DEFAULT, it will be deprecated after API8.
+use "audioEncoderMime" instead.
 
 **类型：** AudioEncoder
 
@@ -106,7 +107,8 @@ output file format. see @ContainerFormatType , it used to replace "format".
 format?: AudioOutputFormat
 ```
 
-Audio output format. The default value is DEFAULT, it will be deprecated after API8. it will be replaced with "fileFormat".
+Audio output format. The default value is DEFAULT, it will be deprecated after API8.
+it will be replaced with "fileFormat".
 
 **类型：** AudioOutputFormat
 
@@ -160,7 +162,10 @@ Number of audio channels.
 uri: string
 ```
 
-Audio output uri.support two kind of uri now. format like: scheme + "://" + "context". file: file://path fd: fd://fd
+Audio output uri.support two kind of uri now.
+format like: scheme + "://" + "context".
+file: file://path
+fd: fd://fd
 
 **类型：** string
 

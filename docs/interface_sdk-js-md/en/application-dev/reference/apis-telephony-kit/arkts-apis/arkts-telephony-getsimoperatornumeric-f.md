@@ -12,7 +12,10 @@ import { sim } from '@kit.TelephonyKit';
 function getSimOperatorNumeric(slotId: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains the home PLMN number of the SIM card in a specified slot. <p>The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+Obtains the home PLMN number of the SIM card in a specified slot.
+
+<p>The value is recorded in the SIM card and is irrelevant to the network
+with which the SIM card is currently registered.
 
 **Since:** 6
 
@@ -55,7 +58,10 @@ sim.getSimOperatorNumeric(0, (err: BusinessError, data: string) => {
 function getSimOperatorNumeric(slotId: number): Promise<string>
 ```
 
-Obtains the home PLMN number of the SIM card in a specified slot. <p>The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+Obtains the home PLMN number of the SIM card in a specified slot.
+
+<p>The value is recorded in the SIM card and is irrelevant to the network
+with which the SIM card is currently registered.
 
 **Since:** 6
 

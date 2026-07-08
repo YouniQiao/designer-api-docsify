@@ -1,6 +1,7 @@
 # VideoOutput
 
-**VideoOutput** implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
+**VideoOutput** implements output information used in a video session. It inherits from
+[CameraOutput](arkts-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
@@ -20,7 +21,9 @@ import { camera } from '@kit.CameraKit';
 getActiveFrameRate(): FrameRateRange
 ```
 
-Obtains the configured frame rate range. This API is valid only after [setFrameRate](arkts-camera-previewoutput-i.md#setframerate-1) is called to set a frame rate range for preview streams.
+Obtains the configured frame rate range.
+This API is valid only after [setFrameRate](arkts-camera-previewoutput-i.md#setframerate-1) is called to set a frame
+rate range for preview streams.
 
 **Since:** 12
 
@@ -86,7 +89,13 @@ Obtains the supported frame rates.
 getVideoRotation(deviceDegree?: number): ImageRotation
 ```
 
-Obtains the video rotation angle. - Device's natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward. - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
+Obtains the video rotation angle.
+
+- Device's natural orientation: the default orientation for using a device. For example, the default orientation
+of the bar-type phone is in portrait mode, with the charging port facing downward.
+- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's
+natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode.
+Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
 
 **Since:** 12
 
@@ -184,7 +193,11 @@ Unsubscribes from metadata error events.
 on(type: 'frameStart', callback: AsyncCallback<void>): void
 ```
 
-Subscribes to preview frame start events. This API uses an asynchronous callback to return the result. > **NOTE** > > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to preview frame start events. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+>
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -205,7 +218,11 @@ Subscribes to preview frame start events. This API uses an asynchronous callback
 on(type: 'frameEnd', callback: AsyncCallback<void>): void
 ```
 
-Subscribes to preview frame end events. This API uses an asynchronous callback to return the result. > **NOTE** > > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to preview frame end events. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+>
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -226,7 +243,11 @@ Subscribes to preview frame end events. This API uses an asynchronous callback t
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to metadata error events. This API uses an asynchronous callback to return the result. > **NOTE** > > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to metadata error events. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+>
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -247,7 +268,13 @@ Subscribes to metadata error events. This API uses an asynchronous callback to r
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](arkts-camera-previewoutput-i.md#getsupportedframerates-1). > **NOTE** > > This API is valid only in [PhotoSession](arkts-camera-photosession-i.md) or > [VideoSession](arkts-camera-videosession-i.md) mode.
+Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can
+be obtained by calling [getSupportedFrameRates](arkts-camera-previewoutput-i.md#getsupportedframerates-1).
+
+> **NOTE**
+>
+> This API is valid only in [PhotoSession](arkts-camera-photosession-i.md) or
+> [VideoSession](arkts-camera-videosession-i.md) mode.
 
 **Since:** 12
 

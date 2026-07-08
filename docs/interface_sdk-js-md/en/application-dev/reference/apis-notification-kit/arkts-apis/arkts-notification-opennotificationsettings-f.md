@@ -12,7 +12,8 @@ import { notificationManager } from '@kit.NotificationKit';
 function openNotificationSettings(context: UIAbilityContext): Promise<void>
 ```
 
-Opens the notification settings page of the application, which is displayed in semi-modal mode and can be used to set the notification enabling and notification mode. This API uses a promise to return the result.
+Opens the notification settings page of the application, which is displayed in semi-modal mode and can be used to
+set the notification enabling and notification mode. This API uses a promise to return the result.
 
 **Since:** 13
 

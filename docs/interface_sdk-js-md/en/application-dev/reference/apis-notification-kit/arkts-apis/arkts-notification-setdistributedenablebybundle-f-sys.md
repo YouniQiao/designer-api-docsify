@@ -12,7 +12,8 @@ import { notificationManager } from '@kit.NotificationKit';
 function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable distributed notification for a specified application. This API uses an asynchronous callback to return the result.
+Sets whether to enable distributed notification for a specified application. This API uses an asynchronous callback
+to return the result.
 
 **Since:** 9
 
@@ -75,7 +76,8 @@ notificationManager.setDistributedEnableByBundle(bundle, enable, setDistributedE
 function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean): Promise<void>
 ```
 
-Sets whether to enable distributed notification for a specified application. This API uses a promise to return the result.
+Sets whether to enable distributed notification for a specified application. This API uses a promise to return the
+result.
 
 **Since:** 9
 

@@ -1,6 +1,8 @@
 # InsightIntentContext
 
-本模块提供意图执行上下文，是[意图执行基类](arkts-ability-insightintentexecutor-c.md)和 [@InsightIntentEntry的意图执行基类](arkts-ability-insightintententryexecutor-c.md)的属性，为意图执行提 供基础能力，例如启动本应用内的[UIAbility组件](arkts-app-ability-uiability.md)。
+本模块提供意图执行上下文，是[意图执行基类](arkts-ability-insightintentexecutor-c.md)和
+[@InsightIntentEntry的意图执行基类](arkts-ability-insightintententryexecutor-c.md)的属性，为意图执行提
+供基础能力，例如启动本应用内的[UIAbility组件](arkts-app-ability-uiability.md)。
 
 **起始版本：** 11
 
@@ -321,7 +323,11 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 instanceId: number
 ```
 
-意图实例唯一ID。用于通过 [insightIntentProvider.sendExecuteResult接口] {@link @ohos.app.ability.insightIntentProvider:insightIntentProvider.sendExecuteResult} 和 [insightIntentProvider.sendIntentResult接口] {@link @ohos.app.ability.insightIntentProvider:insightIntentProvider.sendIntentResult}返回指定意图的执行结果。
+意图实例唯一ID。用于通过
+[insightIntentProvider.sendExecuteResult接口]
+{@link @ohos.app.ability.insightIntentProvider:insightIntentProvider.sendExecuteResult} 和
+[insightIntentProvider.sendIntentResult接口]
+{@link @ohos.app.ability.insightIntentProvider:insightIntentProvider.sendIntentResult}返回指定意图的执行结果。
 
 **类型：** number
 

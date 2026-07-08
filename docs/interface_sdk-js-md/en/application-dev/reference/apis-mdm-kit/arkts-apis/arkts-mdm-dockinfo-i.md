@@ -50,7 +50,8 @@ Bundle name of the application.
 index: number
 ```
 
-Location index of the application in the shortcut bar. The value range is all integers.
+Location index of the application in the shortcut bar.
+The value range is all integers.
 
 **Type:** number
 

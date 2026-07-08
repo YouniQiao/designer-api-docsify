@@ -1,6 +1,8 @@
 # InputMethodEngine
 
-In the following API examples, you must first use [getInputMethodEngine](arkts-ime-getinputmethodengine-f.md#getinputmethodengine-1) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use
+[getInputMethodEngine](arkts-ime-getinputmethodengine-f.md#getinputmethodengine-1) to obtain an **InputMethodEngine** instance,
+and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -124,7 +126,8 @@ on(
     ): void
 ```
 
-Enables listening for the input method binding event. This API uses an asynchronous callback to return the result.
+Enables listening for the input method binding event. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 8
 

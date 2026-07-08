@@ -12,7 +12,9 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function disableBluetooth(): void
 ```
 
-Disables Bluetooth on a device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
+Disables Bluetooth on a device.
+On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to
+ACCESS_BLUETOOTH.
 
 **Since:** 9
 

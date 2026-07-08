@@ -12,7 +12,8 @@ import { networkManager } from '@kit.MDMKit';
 function isNetworkInterfaceDisabled(admin: Want, networkInterface: string, callback: AsyncCallback<boolean>): void
 ```
 
-Queries whether a specified network interface is disabled. This API uses an asynchronous callback to return the result.
+Queries whether a specified network interface is disabled. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 10
 

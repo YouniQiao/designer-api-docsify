@@ -1,6 +1,8 @@
 # AVMetadata
 
-Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](#AVRecorderConfig) can be used as input parameters for recording of [AVRecorder](#AVRecorder).
+Defines the audio and video metadata. Parameters that are not declared as read-only in
+[AVRecorderConfig](#AVRecorderConfig) can be used as input parameters for recording of
+[AVRecorder](#AVRecorder).
 
 **起始版本：** 11
 
@@ -110,7 +112,8 @@ Time when the media asset is created. This parameter is not supported in AVRecor
 dateTimeFormat?: string
 ```
 
-Time when the media asset is created. The value is in the YYYY-MM-DD HH:mm:ss format. This parameter is not supported in AVRecorder settings.
+Time when the media asset is created. The value is in the YYYY-MM-DD HH:mm:ss format.
+This parameter is not supported in AVRecorder settings.
 
 **类型：** string
 
@@ -152,7 +155,8 @@ Duration of the media asset. This parameter is not supported in AVRecorder setti
 encoder?: string
 ```
 
-The identifier that represents the software or hardware and settings used for encoding. This parameter is not supported in AVRecorder settings.
+The identifier that represents the software or hardware and settings used for encoding.
+This parameter is not supported in AVRecorder settings.
 
 **类型：** string
 
@@ -238,7 +242,8 @@ Geographical location of the media asset.
 mimeType?: string
 ```
 
-MIME type of the media asset. This parameter is not supported in AVRecorder settings. Some example mime types include: "video/mp4", "audio/mp4", "audio/amr-wb".
+MIME type of the media asset. This parameter is not supported in AVRecorder settings.
+Some example mime types include: "video/mp4", "audio/mp4", "audio/amr-wb".
 
 **类型：** string
 
@@ -266,7 +271,8 @@ Audio sampling rate, in Hz. This parameter is not supported in AVRecorder settin
 title?: string
 ```
 
-Title of the media asset. This parameter is not supported in AVRecorder settings. This parameter is read-only in the current version.
+Title of the media asset. This parameter is not supported in AVRecorder settings.
+This parameter is read-only in the current version.
 
 **类型：** string
 

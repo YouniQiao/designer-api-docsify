@@ -40,7 +40,8 @@ Angular velocity of user motion status, in rad/s.
 azimuth?: number[]
 ```
 
-Azimuth of user motion status. The value ranges from 0 to 360, in degrees.
+Azimuth of user motion status.
+The value ranges from 0 to 360, in degrees.
 
 **Type:** number[]
 
@@ -58,7 +59,8 @@ Azimuth of user motion status. The value ranges from 0 to 360, in degrees.
 faceNum?: number
 ```
 
-Number of faces detected. The value must be an integer within [0,3].
+Number of faces detected.
+The value must be an integer within [0,3].
 
 **Type:** number
 
@@ -112,7 +114,8 @@ Linear acceleration of user motion status, in m/s².
 visualAngle?: number[]
 ```
 
-User visual angle. The value ranges from 0 to 90, in degrees.
+User visual angle.
+The value ranges from 0 to 90, in degrees.
 
 **Type:** number[]
 

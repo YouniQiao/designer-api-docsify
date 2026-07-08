@@ -6,7 +6,9 @@
 function resetDefaultApplication(type: string, userId: number, callback: AsyncCallback<void>) : void
 ```
 
-根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型重置默认应用。使用callback异 步回调。
+根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者
+[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型重置默认应用。使用callback异
+步回调。
 
 **起始版本：** 9
 
@@ -78,7 +80,9 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
 function resetDefaultApplication(type: string, callback: AsyncCallback<void>) : void
 ```
 
-根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型重置默认应用。使用callback异 步回调。
+根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者
+[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型重置默认应用。使用callback异
+步回调。
 
 **起始版本：** 9
 
@@ -145,7 +149,9 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
 function resetDefaultApplication(type: string, userId?: number) : Promise<void>
 ```
 
-根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型重置默认应用。使用Promise异步 回调。
+根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者
+[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型重置默认应用。使用Promise异步
+回调。
 
 **起始版本：** 9
 

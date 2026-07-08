@@ -1,6 +1,8 @@
 # KeyEventPolicy
 
-Enumerates key event handling policies. When a key event occurs, only the keys for which the key event handling policy has been delivered are intercepted. For key events where no handling policy has been delivered, the system executes its original response logic.
+Enumerates key event handling policies. When a key event occurs, only the keys for which the key event handling
+policy has been delivered are intercepted. For key events where no handling policy has been delivered, the system
+executes its original response logic.
 
 **Since:** 23
 

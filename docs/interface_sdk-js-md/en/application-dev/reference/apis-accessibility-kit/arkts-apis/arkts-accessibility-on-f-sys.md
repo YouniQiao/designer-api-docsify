@@ -12,7 +12,8 @@ import { config } from '@kit.AccessibilityKit';
 function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<void>): void
 ```
 
-Adds a listener for changes in the list of enabled accessibility extension abilities. This API uses an asynchronous callback to return the result.
+Adds a listener for changes in the list of enabled accessibility extension abilities. This API uses an asynchronous
+callback to return the result.
 
 **Since:** 9
 
@@ -44,7 +45,8 @@ Adds a listener for changes in the list of enabled accessibility extension abili
 function on(type: 'installedAccessibilityListChange', callback: Callback<void>): void
 ```
 
-Adds a listener for changes in the list of installed accessibility extension abilities. This API uses an asynchronous callback to return the result.
+Adds a listener for changes in the list of installed accessibility extension abilities. This API uses an
+asynchronous callback to return the result.
 
 **Since:** 12
 

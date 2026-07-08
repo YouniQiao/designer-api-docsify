@@ -12,7 +12,8 @@ import { power } from '@kit.BasicServicesKit';
 function unregisterShutdownCallback(callback?: Callback<void>): void
 ```
 
-Unregisters the callback to be invoked when the device is shut down or rebooted. This API uses a callback to return the result.
+Unregisters the callback to be invoked when the device is shut down or rebooted. This API uses a callback to return
+the result.
 
 **Since:** 23
 

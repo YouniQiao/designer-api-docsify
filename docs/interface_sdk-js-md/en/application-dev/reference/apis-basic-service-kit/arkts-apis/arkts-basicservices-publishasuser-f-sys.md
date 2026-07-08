@@ -75,7 +75,8 @@ function publishAsUser(
   ): void
 ```
 
-Publishes a common event to a specified user and specifies the information to be published. This API uses an asynchronous callback to return the result.
+Publishes a common event to a specified user and specifies the information to be published. This API uses an
+asynchronous callback to return the result.
 
 **Since:** 9
 

@@ -66,7 +66,8 @@ The form id.
 formLastUsedTime: number
 ```
 
-The last time when the form was accessed, in milliseconds. <br> Unit:ms
+The last time when the form was accessed, in milliseconds.
+<br> Unit:ms
 
 **Type:** number
 

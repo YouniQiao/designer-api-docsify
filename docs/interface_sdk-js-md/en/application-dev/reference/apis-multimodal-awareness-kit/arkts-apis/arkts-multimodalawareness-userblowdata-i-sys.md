@@ -22,7 +22,8 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 blowDirection?: number
 ```
 
-Blow direction. The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bottom mic, 2: Blowing from top mic.
+Blow direction.
+The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bottom mic, 2: Blowing from top mic.
 
 **Type:** number
 
@@ -40,7 +41,9 @@ Blow direction. The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bo
 emotion?: number
 ```
 
-User emotion level. The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm, 3: A little unhappy, 4: Angry, 5: Crying.
+User emotion level.
+The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,
+3: A little unhappy, 4: Angry, 5: Crying.
 
 **Type:** number
 
@@ -58,7 +61,8 @@ User emotion level. The value ranges from 0 to 5. 0: Very happy, 1: A little hap
 facePosition?: number[]
 ```
 
-Face position relative to screen. The normalized coordinate system ranges from 0 to 640.
+Face position relative to screen.
+The normalized coordinate system ranges from 0 to 640.
 
 **Type:** number[]
 
@@ -130,7 +134,8 @@ Linear acceleration of user motion status, in m/s²..
 strengthLevel?: number
 ```
 
-Blow strength level. The value must be an integer within [1,12].
+Blow strength level.
+The value must be an integer within [1,12].
 
 **Type:** number
 

@@ -56,7 +56,7 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 | [1600025](../errorcode-notification.md#1600025-地理围栏开关关闭) | Geofencing disabled.<br>**适用版本：** 23+ |
 | [1600026](../errorcode-notification.md#1600026-位置功能开关关闭) | The location switch is off.<br>**适用版本：** 23+ |
 | [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**适用版本：** 23+ |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**适用版本：** 26.0.0+ |
+| [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**适用版本：** 26.0.0+ |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) | Network unreachable.<br>**适用版本：** 11+ |
 
 **示例：**
@@ -146,7 +146,7 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 | [1600025](../errorcode-notification.md#1600025-地理围栏开关关闭) | Geofencing disabled.<br>**适用版本：** 23+ |
 | [1600026](../errorcode-notification.md#1600026-位置功能开关关闭) | The location switch is off.<br>**适用版本：** 23+ |
 | [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**适用版本：** 23+ |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**适用版本：** 26.0.0+ |
+| [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**适用版本：** 26.0.0+ |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) | Network unreachable.<br>**适用版本：** 11+ |
 
 **示例：**

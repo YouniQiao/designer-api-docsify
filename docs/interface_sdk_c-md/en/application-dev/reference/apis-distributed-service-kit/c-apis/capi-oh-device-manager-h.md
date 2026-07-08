@@ -18,14 +18,14 @@ Provides APIs to obtain information about trusted devices and local devices.
 
 | Name | Description |
 | -- | -- |
-| [int32_t OH_DeviceManager_GetLocalDeviceName(char **localDeviceName, unsigned int *len)](#oh_devicemanager_getlocaldevicename) | Obtains the display name of the local device.The device display name involves user privacy.You need to provide a privacy statement to declare the purpose of the device display name. |
+| [int32_t OH_DeviceManager_GetLocalDeviceName(char **localDeviceName, unsigned int &len)](#oh_devicemanager_getlocaldevicename) | Obtains the display name of the local device.The device display name involves user privacy.You need to provide a privacy statement to declare the purpose of the device display name. |
 
 ## Function description
 
 ### OH_DeviceManager_GetLocalDeviceName()
 
 ```c
-int32_t OH_DeviceManager_GetLocalDeviceName(char **localDeviceName, unsigned int *len)
+int32_t OH_DeviceManager_GetLocalDeviceName(char **localDeviceName, unsigned int &len)
 ```
 
 **Description**
@@ -41,7 +41,7 @@ Obtains the display name of the local device.The device display name involves us
 | Parameter | Description |
 | -- | -- |
 | char **localDeviceName | Pointer to the display name of the local device.After using this API, you need to manually release resources to free up space.If the application has the ohos.permission.READ_LOCAL_DEVICE_NAME permission,the device display name is returned.Otherwise, the default device name is returned. |
-| unsigned int *len | Length of the display name of the local device. |
+| len | Length of the display name of the local device. |
 
 **Returns**:
 

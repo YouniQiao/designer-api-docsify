@@ -236,7 +236,11 @@ Obtains the certificate extensions in DER format.
 getIssuerAltNames(): DataArray
 ```
 
-Obtains the Issuer Alternative Names (IANs) of this X.509 certificate. > **NOTE** > > The obtained IANs contain a string terminator.
+Obtains the Issuer Alternative Names (IANs) of this X.509 certificate.
+
+> **NOTE**
+>
+> The obtained IANs contain a string terminator.
 
 **Since:** 9
 
@@ -264,7 +268,11 @@ Obtains the Issuer Alternative Names (IANs) of this X.509 certificate. > **NOTE*
 getIssuerName(): DataBlob
 ```
 
-Obtains the X.509 certificate issuer. > **NOTE** > > The obtained X.509 certificate issuer name contains a string terminator.
+Obtains the X.509 certificate issuer.
+
+> **NOTE**
+>
+> The obtained X.509 certificate issuer name contains a string terminator.
 
 **Since:** 9
 
@@ -500,7 +508,12 @@ Obtains the public key of this X.509 certificate.
 getSerialNumber(): number
 ```
 
-Obtains the X.509 certificate serial number. > **NOTE** > > This API is supported since API version 9 and deprecated since API version 10. Use > [X509Cert.getCertSerialNumber()](arkts-devicecertificate-x509cert-i.md#getcertserialnumber-1) instead.
+Obtains the X.509 certificate serial number.
+
+> **NOTE**
+>
+> This API is supported since API version 9 and deprecated since API version 10. Use
+> [X509Cert.getCertSerialNumber()](arkts-devicecertificate-x509cert-i.md#getcertserialnumber-1) instead.
 
 **Since:** 9
 
@@ -578,7 +591,8 @@ Obtains the signing algorithm of this X.509 certificate.
 getSignatureAlgOid(): string
 ```
 
-Obtains the object identifier (OID) of the X.509 certificate signing algorithm. OIDs are allocated by the International Organization for Standardization (ISO).
+Obtains the object identifier (OID) of the X.509 certificate signing algorithm. OIDs are allocated by the
+International Organization for Standardization (ISO).
 
 **Since:** 9
 
@@ -635,7 +649,11 @@ Obtains the signing algorithm parameters of this X.509 certificate.
 getSubjectAltNames(): DataArray
 ```
 
-Obtains the Subject Alternative Names (SANs) of this X.509 certificate. > **NOTE** > > The obtained SANs contain a string terminator.
+Obtains the Subject Alternative Names (SANs) of this X.509 certificate.
+
+> **NOTE**
+>
+> The obtained SANs contain a string terminator.
 
 **Since:** 9
 
@@ -663,7 +681,11 @@ Obtains the Subject Alternative Names (SANs) of this X.509 certificate. > **NOTE
 getSubjectName(encodingType?: EncodingType): DataBlob
 ```
 
-Obtains the subject of this X.509 certificate. > **NOTE** > > The obtained X.509 certificate subject name contains a string terminator.
+Obtains the subject of this X.509 certificate.
+
+> **NOTE**
+>
+> The obtained X.509 certificate subject name contains a string terminator.
 
 **Since:** 9
 

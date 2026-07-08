@@ -12,7 +12,9 @@
 cross?: LengthMetrics
 ```
 
-Flex容器交叉轴上的space。 默认值：LengthMetrics.px(0)
+Flex容器交叉轴上的space。
+
+默认值：LengthMetrics.px(0)
 
 **类型：** LengthMetrics
 
@@ -30,7 +32,9 @@ Flex容器交叉轴上的space。 默认值：LengthMetrics.px(0)
 main?: LengthMetrics
 ```
 
-Flex容器主轴上的space。 默认值：LengthMetrics.px(0)
+Flex容器主轴上的space。
+
+默认值：LengthMetrics.px(0)
 
 **类型：** LengthMetrics
 

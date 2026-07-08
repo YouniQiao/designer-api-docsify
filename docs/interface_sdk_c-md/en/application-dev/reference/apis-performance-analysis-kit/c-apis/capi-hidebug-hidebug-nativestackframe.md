@@ -6,7 +6,7 @@ typedef struct HiDebug_NativeStackFrame {...} HiDebug_NativeStackFrame
 
 ## Overview
 
-Defines native frame content
+Defines the native stack frame content.
 
 **Since**: 20
 
@@ -20,11 +20,11 @@ Defines native frame content
 
 | Name | Description |
 | -- | -- |
-| uint64_t relativePc | The pc relative to the start of current file in /proc/self/maps |
-| uint64_t funcOffset | The pc relative to the start of current function |
-| const char* mapName | The name parsed by pc from /proc/self/maps |
-| const char* functionName | The functionName parsed by relativePc from symbol table in elf, maybe NULL |
-| const char* buildId | The buildId parsed from .note.gnu.build-id in elf, maybe NULL |
-| const char* reserved | Reserved, maybe NULL |
+| uint64_t relativePc | Relative PC address, which is the offset of the current PC relative to the start address of its mapping area (such as an executable file or shared library). |
+| uint64_t funcOffset | Offset of the function corresponding to the current stack frame in its mapping area (such as an executable fileor shared library). |
+| const char* mapName | Name of the mapping area to which the current stack frame belongs. |
+| const char* functionName | Name of the function corresponding to the current stack frame. |
+| const char* buildId | Build ID that uniquely identifies the current mapping area (such as an executable file or shared library).During debugging and symbol parsing, **buildId** ensures that the symbol file version matches the actual binaryfile version. |
+| const char* reserved | Reserved field for future extension. |
 
 

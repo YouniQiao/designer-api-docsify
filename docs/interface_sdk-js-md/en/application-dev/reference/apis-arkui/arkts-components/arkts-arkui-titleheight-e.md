@@ -9,7 +9,7 @@ Title height.
 ## MainOnly
 
 ```TypeScript
-MainOnly = 0
+MainOnly
 ```
 
 Title height when only main title is available.
@@ -23,7 +23,7 @@ Title height when only main title is available.
 ## MainWithSub
 
 ```TypeScript
-MainWithSub = 1
+MainWithSub
 ```
 
 Title height when main title and subtitle are both available.

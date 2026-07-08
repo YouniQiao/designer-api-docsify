@@ -12,7 +12,8 @@ import { notificationManager } from '@kit.NotificationKit';
 function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void
 ```
 
-Removes a notification slot of a specified type for this application. This API uses an asynchronous callback to return the result.
+Removes a notification slot of a specified type for this application. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 9
 

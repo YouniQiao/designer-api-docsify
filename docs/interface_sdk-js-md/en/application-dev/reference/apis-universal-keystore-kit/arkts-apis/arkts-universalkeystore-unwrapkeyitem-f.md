@@ -12,7 +12,9 @@ import { huks } from '@kit.UniversalKeystoreKit';
 function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>
 ```
 
-Unwraps a key. This API uses a promise to return the result. <!--Del-->This feature is not supported currently.<!--DelEnd-->
+Unwraps a key. This API uses a promise to return the result.
+
+<!--Del-->This feature is not supported currently.<!--DelEnd-->
 
 **Since:** 20
 

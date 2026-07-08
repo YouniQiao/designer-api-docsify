@@ -20,7 +20,8 @@ import { functionManager } from '@kit.AbilityKit';
 context?: Context
 ```
 
-Context of the caller.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported.
+Context of the caller.<br>Note: Currently, only
+[UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported.
 
 **Type:** Context
 

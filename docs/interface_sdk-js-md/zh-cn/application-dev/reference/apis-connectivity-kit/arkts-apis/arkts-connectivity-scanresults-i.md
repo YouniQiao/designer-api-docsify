@@ -12,7 +12,8 @@
 address: string
 ```
 
-远端设备的地址。 长度为17，由十六进制数字和冒号组成，例如：11:22:33:AA:BB:FF。
+远端设备的地址。
+长度为17，由十六进制数字和冒号组成，例如：11:22:33:AA:BB:FF。
 
 **类型：** string
 
@@ -60,7 +61,8 @@ deviceClass?: nearlinkConstant.DeviceClass
 deviceName: string
 ```
 
-外围设备的设备名称。 最大长度为26。
+外围设备的设备名称。
+最大长度为26。
 
 **类型：** string
 
@@ -92,7 +94,8 @@ isConnectable: boolean
 rssi: number
 ```
 
-外围设备的RSSI。 单位为： 分贝毫瓦，取值范围为全体整数，取值为127时表示无效值。
+外围设备的RSSI。
+单位为： 分贝毫瓦，取值范围为全体整数，取值为127时表示无效值。
 
 **类型：** number
 

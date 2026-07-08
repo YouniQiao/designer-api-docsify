@@ -230,7 +230,11 @@ getExtensionsObject(): CertExtension
 getIssuerAltNames(): DataArray
 ```
 
-表示获取X509证书颁发者可选名称。 > **说明：** > > 获取到的X509证书颁发者可选名称数据带字符串结束符。
+表示获取X509证书颁发者可选名称。
+
+> **说明：**
+>
+> 获取到的X509证书颁发者可选名称数据带字符串结束符。
 
 **起始版本：** 9
 
@@ -258,7 +262,11 @@ getIssuerAltNames(): DataArray
 getIssuerName(): DataBlob
 ```
 
-表示获取X509证书颁发者。 > **说明：** > > 获取到的X509证书颁发者名称包含字符串终止符。
+表示获取X509证书颁发者。
+
+> **说明：**
+>
+> 获取到的X509证书颁发者名称包含字符串终止符。
 
 **起始版本：** 9
 
@@ -494,7 +502,12 @@ getPublicKey(): cryptoFramework.PubKey
 getSerialNumber(): number
 ```
 
-表示获取X509证书序列号。 > **说明：** > > 从API version 9开始支持，从API version 10开始废弃，建议使用 > [X509Cert.getCertSerialNumber()](arkts-devicecertificate-x509cert-i.md#getcertserialnumber-1)替代。
+表示获取X509证书序列号。
+
+> **说明：**
+>
+> 从API version 9开始支持，从API version 10开始废弃，建议使用
+> [X509Cert.getCertSerialNumber()](arkts-devicecertificate-x509cert-i.md#getcertserialnumber-1)替代。
 
 **起始版本：** 9
 
@@ -629,7 +642,11 @@ getSignatureAlgParams(): DataBlob
 getSubjectAltNames(): DataArray
 ```
 
-表示获取X509证书主体可选名称。 > **说明：** > > 获取到的X509证书主体可选名称数据带字符串结束符。
+表示获取X509证书主体可选名称。
+
+> **说明：**
+>
+> 获取到的X509证书主体可选名称数据带字符串结束符。
 
 **起始版本：** 9
 
@@ -657,7 +674,11 @@ getSubjectAltNames(): DataArray
 getSubjectName(encodingType?: EncodingType): DataBlob
 ```
 
-表示获取X509证书主体。 > **说明：** > > 获取到的X509证书主体名称包含字符串终止符。
+表示获取X509证书主体。
+
+> **说明：**
+>
+> 获取到的X509证书主体名称包含字符串终止符。
 
 **起始版本：** 9
 

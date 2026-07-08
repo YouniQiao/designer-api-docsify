@@ -18,7 +18,11 @@ import { audio } from '@kit.AudioKit';
 printAppInfo(fd: number): void
 ```
 
-Prints full audio runtime snapshot for current app process. The snapshot will contain all audio renderers, capturers, audio session information. Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
+Prints full audio runtime snapshot for current app process.
+The snapshot will contain all audio renderers, capturers, audio session information.
+Note that the information details and format may vary from different version, it can only be used for
+manual debugging, user should not rely on the information for actual function realization or file
+content extraction.
 
 **Since:** 26.0.0
 
@@ -38,7 +42,11 @@ Prints full audio runtime snapshot for current app process. The snapshot will co
 printCapturerInfo(capturer: AudioCapturer, fd: number): void
 ```
 
-Prints full audio runtime snapshot for target audio capturer instance. The snapshot will contain the stream, pipe, volume and device information. Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
+Prints full audio runtime snapshot for target audio capturer instance.
+The snapshot will contain the stream, pipe, volume and device information.
+Note that the information details and format may vary from different version, it can only be used for
+manual debugging, user should not rely on the information for actual function realization or file
+content extraction.
 
 **Since:** 26.0.0
 
@@ -59,7 +67,11 @@ Prints full audio runtime snapshot for target audio capturer instance. The snaps
 printLoopbackInfo(loopback: AudioLoopback, fd: number): void
 ```
 
-Prints full audio runtime snapshot for target audio loopback instance. The snapshot will contain the loopback status, device and effect information. Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
+Prints full audio runtime snapshot for target audio loopback instance.
+The snapshot will contain the loopback status, device and effect information.
+Note that the information details and format may vary from different version, it can only be used for
+manual debugging, user should not rely on the information for actual function realization or file
+content extraction.
 
 **Since:** 26.0.0
 
@@ -80,7 +92,11 @@ Prints full audio runtime snapshot for target audio loopback instance. The snaps
 printRendererInfo(renderer: AudioRenderer, fd: number): void
 ```
 
-Prints full audio runtime snapshot for target audio renderer instance. The snapshot will contain the stream, pipe, volume and device information. Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
+Prints full audio runtime snapshot for target audio renderer instance.
+The snapshot will contain the stream, pipe, volume and device information.
+Note that the information details and format may vary from different version, it can only be used for
+manual debugging, user should not rely on the information for actual function realization or file
+content extraction.
 
 **Since:** 26.0.0
 
@@ -101,7 +117,11 @@ Prints full audio runtime snapshot for target audio renderer instance. The snaps
 printSessionInfo(session: AudioSessionManager, fd: number): void
 ```
 
-Prints full audio runtime snapshot for target audio session manager instance. The snapshot will contain the session status, scene, strategy and device information. Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
+Prints full audio runtime snapshot for target audio session manager instance.
+The snapshot will contain the session status, scene, strategy and device information.
+Note that the information details and format may vary from different version, it can only be used for
+manual debugging, user should not rely on the information for actual function realization or file
+content extraction.
 
 **Since:** 26.0.0
 

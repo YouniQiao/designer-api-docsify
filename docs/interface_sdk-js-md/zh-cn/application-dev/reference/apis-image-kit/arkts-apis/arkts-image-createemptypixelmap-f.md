@@ -6,7 +6,9 @@
 function createEmptyPixelMap(param: InitializationOptions): PixelMap
 ```
 
-Creates an empty PixelMap. The following pixel format is not supported for PixelMap creation: ASTC_4x4.
+Creates an empty PixelMap.
+
+The following pixel format is not supported for PixelMap creation: ASTC_4x4.
 
 **起始版本：** 26.0.0
 

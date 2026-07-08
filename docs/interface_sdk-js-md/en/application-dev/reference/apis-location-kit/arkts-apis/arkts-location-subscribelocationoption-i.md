@@ -22,7 +22,8 @@ import { GetLocationTypeOption, SubscribeLocationOption, GeolocationResponse, Ge
 coordType?: string
 ```
 
-Coordinate system type. Available types can be obtained using getSupportedCoordTypes. The default type is wgs84.
+Coordinate system type. Available types can be obtained using getSupportedCoordTypes.
+The default type is wgs84.
 
 **Type:** string
 

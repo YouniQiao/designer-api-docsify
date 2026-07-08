@@ -21,35 +21,35 @@ Defines the start options APIs.
 | [AbilityRuntime_StartOptions* OH_AbilityRuntime_CreateStartOptions(void)](#oh_abilityruntime_createstartoptions) | Create start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_DestroyStartOptions(AbilityRuntime_StartOptions **startOptions)](#oh_abilityruntime_destroystartoptions) | Destroy input start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowMode(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_WindowMode windowMode)](#oh_abilityruntime_setstartoptionswindowmode) | Set window mode for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowMode(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_WindowMode &windowMode)](#oh_abilityruntime_getstartoptionswindowmode) | Get window mode from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsDisplayId(AbilityRuntime_StartOptions *startOptions, int32_t displayId)](#oh_abilityruntime_setstartoptionsdisplayid) | Set display id for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsDisplayId(AbilityRuntime_StartOptions *startOptions, int32_t &displayId)](#oh_abilityruntime_getstartoptionsdisplayid) | Get display id from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWithAnimation(AbilityRuntime_StartOptions *startOptions, bool withAnimation)](#oh_abilityruntime_setstartoptionswithanimation) | Set with animation flag for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWithAnimation(AbilityRuntime_StartOptions *startOptions, bool &withAnimation)](#oh_abilityruntime_getstartoptionswithanimation) | Get with animation from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowLeft(AbilityRuntime_StartOptions *startOptions, int32_t windowLeft)](#oh_abilityruntime_setstartoptionswindowleft) | Set window left for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowLeft(AbilityRuntime_StartOptions *startOptions, int32_t &windowLeft)](#oh_abilityruntime_getstartoptionswindowleft) | Get window left from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowTop(AbilityRuntime_StartOptions *startOptions, int32_t windowTop)](#oh_abilityruntime_setstartoptionswindowtop) | Set window top for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowTop(AbilityRuntime_StartOptions *startOptions, int32_t &windowTop)](#oh_abilityruntime_getstartoptionswindowtop) | Get window top from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t windowHeight)](#oh_abilityruntime_setstartoptionswindowheight) | Set window height for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t &windowHeight)](#oh_abilityruntime_getstartoptionswindowheight) | Get window height from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t windowWidth)](#oh_abilityruntime_setstartoptionswindowwidth) | Set window width for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t &windowWidth)](#oh_abilityruntime_getstartoptionswindowwidth) | Get window width from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartVisibility(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_StartVisibility startVisibility)](#oh_abilityruntime_setstartoptionsstartvisibility) | Set start visibility for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartVisibility(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_StartVisibility &startVisibility)](#oh_abilityruntime_getstartoptionsstartvisibility) | Get start visibility from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartWindowIcon(AbilityRuntime_StartOptions *startOptions, OH_PixelmapNative *startWindowIcon)](#oh_abilityruntime_setstartoptionsstartwindowicon) | Set start window icon for start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowIcon(AbilityRuntime_StartOptions *startOptions, OH_PixelmapNative **startWindowIcon)](#oh_abilityruntime_getstartoptionsstartwindowicon) | Get start window icon from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartWindowBackgroundColor(AbilityRuntime_StartOptions *startOptions, const char *startWindowBackgroundColor)](#oh_abilityruntime_setstartoptionsstartwindowbackgroundcolor) | Set start window background color for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowBackgroundColor(AbilityRuntime_StartOptions *startOptions, char **startWindowBackgroundColor, size_t &size)](#oh_abilityruntime_getstartoptionsstartwindowbackgroundcolor) | Get start window background color from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsSupportedWindowModes(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_SupportedWindowMode *supportedWindowModes, size_t size)](#oh_abilityruntime_setstartoptionssupportedwindowmodes) | Set start window modes for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsSupportedWindowModes(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_SupportedWindowMode **supportedWindowModes, size_t &size)](#oh_abilityruntime_getstartoptionssupportedwindowmodes) | Get start window modes from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMinWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t minWindowWidth)](#oh_abilityruntime_setstartoptionsminwindowwidth) | Set min window width for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t &minWindowWidth)](#oh_abilityruntime_getstartoptionsminwindowwidth) | Get min window width from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMaxWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t maxWindowWidth)](#oh_abilityruntime_setstartoptionsmaxwindowwidth) | Set max window width for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t &maxWindowWidth)](#oh_abilityruntime_getstartoptionsmaxwindowwidth) | Get max window width from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMinWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t minWindowHeight)](#oh_abilityruntime_setstartoptionsminwindowheight) | Set min window height for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t &minWindowHeight)](#oh_abilityruntime_getstartoptionsminwindowheight) | Get min window height from start options. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsMaxWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t maxWindowHeight)](#oh_abilityruntime_setstartoptionsmaxwindowheight) | Set max window height for start options. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t &maxWindowHeight)](#oh_abilityruntime_getstartoptionsmaxwindowheight) | Get max window height from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowModeValue(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_WindowMode *windowMode)](#oh_abilityruntime_getstartoptionswindowmodevalue) | Get the window mode from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsDisplayIdValue(AbilityRuntime_StartOptions *startOptions, int32_t *displayId)](#oh_abilityruntime_getstartoptionsdisplayidvalue) | Get the display ID from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWithAnimationValue(AbilityRuntime_StartOptions *startOptions, bool *withAnimation)](#oh_abilityruntime_getstartoptionswithanimationvalue) | Get whether animation is enabled from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowLeftValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowLeft)](#oh_abilityruntime_getstartoptionswindowleftvalue) | Get the window left position from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowTopValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowTop)](#oh_abilityruntime_getstartoptionswindowtopvalue) | Get the window top position from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowHeight)](#oh_abilityruntime_getstartoptionswindowheightvalue) | Get the window height from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowWidth)](#oh_abilityruntime_getstartoptionswindowwidthvalue) | Get the window width from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartVisibilityValue(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_StartVisibility *startVisibility)](#oh_abilityruntime_getstartoptionsstartvisibilityvalue) | Get the start visibility from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowBackgroundColorValue(AbilityRuntime_StartOptions *startOptions, char **startWindowBackgroundColor, size_t *size)](#oh_abilityruntime_getstartoptionsstartwindowbackgroundcolorvalue) | Get the start window background color from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsSupportedWindowModesValue(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_SupportedWindowMode **supportedWindowModes, size_t *size)](#oh_abilityruntime_getstartoptionssupportedwindowmodesvalue) | Get the supported start window modes from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *minWindowWidth)](#oh_abilityruntime_getstartoptionsminwindowwidthvalue) | Get the minimum window width from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *maxWindowWidth)](#oh_abilityruntime_getstartoptionsmaxwindowwidthvalue) | Get the maximum window width from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *minWindowHeight)](#oh_abilityruntime_getstartoptionsminwindowheightvalue) | Get the minimum window height from start options. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *maxWindowHeight)](#oh_abilityruntime_getstartoptionsmaxwindowheightvalue) | Get the maximum window height from start options. |
 
 ## Function description
 
@@ -93,7 +93,7 @@ Destroy input start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsWindowMode()
 
@@ -112,38 +112,13 @@ Set window mode for start options.
 | Parameter | Description |
 | -- | -- |
 | AbilityRuntime_StartOptions *startOptions | The options to set window mode for. |
-| AbilityRuntime_WindowMode windowMode | The window mode. |
+| [AbilityRuntime_WindowMode](capi-context-constant-h.md#abilityruntime_windowmode) windowMode | The window mode. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions or windowMode is invalid. |
-
-### OH_AbilityRuntime_GetStartOptionsWindowMode()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowMode(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_WindowMode &windowMode)
-```
-
-**Description**
-
-Get window mode from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get window mode from. |
-| windowMode | The obtained window mode. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions or windowMode is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsDisplayId()
 
@@ -168,32 +143,7 @@ Set display id for start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
-
-### OH_AbilityRuntime_GetStartOptionsDisplayId()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsDisplayId(AbilityRuntime_StartOptions *startOptions, int32_t &displayId)
-```
-
-**Description**
-
-Get display id from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get display id from. |
-| displayId | The obtained display id. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsWithAnimation()
 
@@ -218,32 +168,7 @@ Set with animation flag for start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
-
-### OH_AbilityRuntime_GetStartOptionsWithAnimation()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWithAnimation(AbilityRuntime_StartOptions *startOptions, bool &withAnimation)
-```
-
-**Description**
-
-Get with animation from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get with animation from. |
-| withAnimation | The obtained with animation. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsWindowLeft()
 
@@ -268,32 +193,7 @@ Set window left for start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
-
-### OH_AbilityRuntime_GetStartOptionsWindowLeft()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowLeft(AbilityRuntime_StartOptions *startOptions, int32_t &windowLeft)
-```
-
-**Description**
-
-Get window left from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get window left from. |
-| windowLeft | The obtained window left. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsWindowTop()
 
@@ -318,32 +218,7 @@ Set window top for start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
-
-### OH_AbilityRuntime_GetStartOptionsWindowTop()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowTop(AbilityRuntime_StartOptions *startOptions, int32_t &windowTop)
-```
-
-**Description**
-
-Get window top from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get window top from. |
-| windowTop | The obtained window top. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsWindowHeight()
 
@@ -368,32 +243,7 @@ Set window height for start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
-
-### OH_AbilityRuntime_GetStartOptionsWindowHeight()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t &windowHeight)
-```
-
-**Description**
-
-Get window height from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get window height from. |
-| windowHeight | The obtained window height. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsWindowWidth()
 
@@ -418,32 +268,7 @@ Set window width for start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
-
-### OH_AbilityRuntime_GetStartOptionsWindowWidth()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t &windowWidth)
-```
-
-**Description**
-
-Get window width from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get window width from. |
-| windowWidth | The obtained window width. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsStartVisibility()
 
@@ -462,38 +287,13 @@ Set start visibility for start options.
 | Parameter | Description |
 | -- | -- |
 | AbilityRuntime_StartOptions *startOptions | The options to set start visibility for. |
-| AbilityRuntime_StartVisibility startVisibility | The start visibility. |
+| [AbilityRuntime_StartVisibility](capi-context-constant-h.md#abilityruntime_startvisibility) startVisibility | The start visibility. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
-
-### OH_AbilityRuntime_GetStartOptionsStartVisibility()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartVisibility(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_StartVisibility &startVisibility)
-```
-
-**Description**
-
-Get start visibility from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get start visibility from. |
-| startVisibility | The obtained start visibility. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsStartWindowIcon()
 
@@ -518,7 +318,7 @@ Set start window icon for start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid<br>              or startWindowIcon is nullptr. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid<br>              or startWindowIcon is nullptr. |
 
 ### OH_AbilityRuntime_GetStartOptionsStartWindowIcon()
 
@@ -543,7 +343,7 @@ Get start window icon from start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid<br>              or startWindowIcon is NOT nullptr. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid<br>              or startWindowIcon is NOT nullptr. |
 
 ### OH_AbilityRuntime_SetStartOptionsStartWindowBackgroundColor()
 
@@ -568,33 +368,7 @@ Set start window background color for start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid<br>              or startWindowBackgroundColor is nullptr. |
-
-### OH_AbilityRuntime_GetStartOptionsStartWindowBackgroundColor()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowBackgroundColor(AbilityRuntime_StartOptions *startOptions, char **startWindowBackgroundColor, size_t &size)
-```
-
-**Description**
-
-Get start window background color from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get start window background color from. |
-| char **startWindowBackgroundColor | The obtained start window background color. |
-| size | The size of start window background color. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid<br>              or startWindowBackgroundColor is NOT nullptr.<br>         [ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if error occurred in malloc. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid<br>              or startWindowBackgroundColor is nullptr. |
 
 ### OH_AbilityRuntime_SetStartOptionsSupportedWindowModes()
 
@@ -613,40 +387,14 @@ Set start window modes for start options.
 | Parameter | Description |
 | -- | -- |
 | AbilityRuntime_StartOptions *startOptions | The options to set start window modes for. |
-| AbilityRuntime_SupportedWindowMode *supportedWindowModes | The start window modes. |
+| [AbilityRuntime_SupportedWindowMode](capi-context-constant-h.md#abilityruntime_supportedwindowmode) *supportedWindowModes | The start window modes. |
 | size_t size | The size of start window modes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions or supportWindowMode<br>              or size is invalid. |
-
-### OH_AbilityRuntime_GetStartOptionsSupportedWindowModes()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsSupportedWindowModes(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_SupportedWindowMode **supportedWindowModes, size_t &size)
-```
-
-**Description**
-
-Get start window modes from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get start window modes from. |
-| AbilityRuntime_SupportedWindowMode **supportedWindowModes | The obtained start window modes. |
-| size | The size of the returned start window modes. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invallid<br>              or supportWindowMode is NOT nullptr<br>         [ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if error occurred in malloc. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions or supportWindowMode<br>              or size is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsMinWindowWidth()
 
@@ -671,32 +419,7 @@ Set min window width for start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
-
-### OH_AbilityRuntime_GetStartOptionsMinWindowWidth()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t &minWindowWidth)
-```
-
-**Description**
-
-Get min window width from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get min window width from. |
-| minWindowWidth | The obtained min window width. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsMaxWindowWidth()
 
@@ -721,32 +444,7 @@ Set max window width for start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
-
-### OH_AbilityRuntime_GetStartOptionsMaxWindowWidth()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowWidth(AbilityRuntime_StartOptions *startOptions, int32_t &maxWindowWidth)
-```
-
-**Description**
-
-Get max window width from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get max window width from. |
-| maxWindowWidth | The obtained max window width. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsMinWindowHeight()
 
@@ -771,32 +469,7 @@ Set min window height for start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
-
-### OH_AbilityRuntime_GetStartOptionsMinWindowHeight()
-
-```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t &minWindowHeight)
-```
-
-**Description**
-
-Get min window height from start options.
-
-**Since**: 17
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get min window height from. |
-| minWindowHeight | The obtained min window height. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
 
 ### OH_AbilityRuntime_SetStartOptionsMaxWindowHeight()
 
@@ -821,31 +494,366 @@ Set max window height for start options.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
 
-### OH_AbilityRuntime_GetStartOptionsMaxWindowHeight()
+### OH_AbilityRuntime_GetStartOptionsWindowModeValue()
 
 ```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowHeight(AbilityRuntime_StartOptions *startOptions, int32_t &maxWindowHeight)
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowModeValue(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_WindowMode *windowMode)
 ```
 
 **Description**
 
-Get max window height from start options.
+Get the window mode from start options.
 
-**Since**: 17
+**Since**: 26.0.0
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| AbilityRuntime_StartOptions *startOptions | The options to get max window height from. |
-| maxWindowHeight | The obtained max window height. |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_WindowMode](capi-context-constant-h.md#abilityruntime_windowmode) *windowMode | [out] The obtained window mode. It must not be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the startOptions is invalid. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsDisplayIdValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsDisplayIdValue(AbilityRuntime_StartOptions *startOptions, int32_t *displayId)
+```
+
+**Description**
+
+Get the display ID from start options.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| int32_t *displayId | [out] The obtained display ID. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsWithAnimationValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWithAnimationValue(AbilityRuntime_StartOptions *startOptions, bool *withAnimation)
+```
+
+**Description**
+
+Get whether animation is enabled from start options.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| bool *withAnimation | [out] The obtained animation flag. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsWindowLeftValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowLeftValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowLeft)
+```
+
+**Description**
+
+Get the window left position from start options.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| int32_t *windowLeft | [out] The obtained window left position. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsWindowTopValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowTopValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowTop)
+```
+
+**Description**
+
+Get the window top position from start options.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| int32_t *windowTop | [out] The obtained window top position. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsWindowHeightValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowHeight)
+```
+
+**Description**
+
+Get the window height from start options.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| int32_t *windowHeight | [out] The obtained window height. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsWindowWidthValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *windowWidth)
+```
+
+**Description**
+
+Get the window width from start options.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| int32_t *windowWidth | [out] The obtained window width. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsStartVisibilityValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartVisibilityValue(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_StartVisibility *startVisibility)
+```
+
+**Description**
+
+Get the start visibility from start options.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_StartVisibility](capi-context-constant-h.md#abilityruntime_startvisibility) *startVisibility | [out] The obtained start visibility. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsStartWindowBackgroundColorValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartWindowBackgroundColorValue(AbilityRuntime_StartOptions *startOptions, char **startWindowBackgroundColor, size_t *size)
+```
+
+**Description**
+
+Get the start window background color from start options.
+
+>**Note**: 
+>If the background color is not set, [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) is returned,
+ *       *startWindowBackgroundColor remains NULL, and *size is set to 0.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| char **startWindowBackgroundColor | [out] The pointer used to receive the UTF-8 background color string.It must not be NULL and must point to NULL before the call. |
+| size_t *size | [out] The length of the background color string, excluding the trailing NUL.It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if error occurred in malloc.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsSupportedWindowModesValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsSupportedWindowModesValue(AbilityRuntime_StartOptions *startOptions, AbilityRuntime_SupportedWindowMode **supportedWindowModes, size_t *size)
+```
+
+**Description**
+
+Get the supported start window modes from start options.
+
+>**Note**: 
+>If no supported window modes are set, [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) is returned,
+ *       *supportedWindowModes remains NULL, and *size is set to 0.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| [AbilityRuntime_SupportedWindowMode](capi-context-constant-h.md#abilityruntime_supportedwindowmode) **supportedWindowModes | [out] The pointer used to receive the supported start window modes.It must not be NULL and must point to NULL before the call. |
+| size_t *size | [out] The number of returned supported start window modes. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if error occurred in malloc.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsMinWindowWidthValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *minWindowWidth)
+```
+
+**Description**
+
+Get the minimum window width from start options.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| int32_t *minWindowWidth | [out] The obtained minimum window width. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsMaxWindowWidthValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowWidthValue(AbilityRuntime_StartOptions *startOptions, int32_t *maxWindowWidth)
+```
+
+**Description**
+
+Get the maximum window width from start options.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| int32_t *maxWindowWidth | [out] The obtained maximum window width. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsMinWindowHeightValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMinWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *minWindowHeight)
+```
+
+**Description**
+
+Get the minimum window height from start options.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| int32_t *minWindowHeight | [out] The obtained minimum window height. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         </ul> |
+
+### OH_AbilityRuntime_GetStartOptionsMaxWindowHeightValue()
+
+```c
+AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsMaxWindowHeightValue(AbilityRuntime_StartOptions *startOptions, int32_t *maxWindowHeight)
+```
+
+**Description**
+
+Get the maximum window height from start options.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| AbilityRuntime_StartOptions *startOptions | [in] The start options to read. |
+| int32_t *maxWindowHeight | [out] The obtained maximum window height. It must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | <ul><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.</li><br>         <li>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if any parameter is invalid.</li><br>         </ul> |
 
 

@@ -14,7 +14,9 @@ Enumerates the permission toggle states.
 CLOSED = 0
 ```
 
-Indicates that the dialog box for the specified permission is disabled. When an app calls APIs such as [requestPermissionsFromUser](arkts-ability-atmanager-i.md#requestpermissionsfromuser-1) to request this permission, no permission dialog box will be displayed.
+Indicates that the dialog box for the specified permission is disabled. When an app calls APIs such as
+[requestPermissionsFromUser](arkts-ability-atmanager-i.md#requestpermissionsfromuser-1)
+to request this permission, no permission dialog box will be displayed.
 
 **Since:** 12
 
@@ -28,7 +30,9 @@ Indicates that the dialog box for the specified permission is disabled. When an 
 OPEN = 1
 ```
 
-Indicates that the dialog box for the specified permission is enabled. When an app calls APIs such as [requestPermissionsFromUser](arkts-ability-atmanager-i.md#requestpermissionsfromuser-1) to request this permission, a permission dialog box will be displayed normally.
+Indicates that the dialog box for the specified permission is enabled. When an app calls APIs such as
+[requestPermissionsFromUser](arkts-ability-atmanager-i.md#requestpermissionsfromuser-1)
+to request this permission, a permission dialog box will be displayed normally.
 
 **Since:** 12
 

@@ -20,7 +20,8 @@ import { privacyManager } from '@kit.AbilityKit';
 bundleName: string
 ```
 
-Bundle name of the application using the permission. In local scenarios, it can be used to directly locate the target application; this field is invalid in distributed scenarios.
+Bundle name of the application using the permission. In local scenarios, it can be used to directly locate the
+target application; this field is invalid in distributed scenarios.
 
 **Type:** string
 
@@ -36,7 +37,8 @@ Bundle name of the application using the permission. In local scenarios, it can 
 deviceId: string
 ```
 
-ID of the device where the application using the permission is located. Mainly used to identify the source of a remote device in distributed scenarios; this field can usually be ignored in local scenarios.
+ID of the device where the application using the permission is located. Mainly used to identify the source of a
+remote device in distributed scenarios; this field can usually be ignored in local scenarios.
 
 **Type:** string
 
@@ -52,7 +54,9 @@ ID of the device where the application using the permission is located. Mainly u
 deviceName?: string
 ```
 
-Name of the device where the application using the permission is located, used only in distributed scenarios. It can be used to display a more understandable device identifier in the UI. Default value: Empty string.
+Name of the device where the application using the permission is located, used only in distributed scenarios.
+It can be used to display a more understandable device identifier in the UI.
+Default value: Empty string.
 
 **Type:** string
 
@@ -68,7 +72,8 @@ Name of the device where the application using the permission is located, used o
 isRemote: boolean
 ```
 
-Whether it is an access record in a distributed scenario. false indicates a local application record, and true indicates a permission usage record on a remote device.
+Whether it is an access record in a distributed scenario. false indicates a local application record, and true
+indicates a permission usage record on a remote device.
 
 **Type:** boolean
 
@@ -84,7 +89,9 @@ Whether it is an access record in a distributed scenario. false indicates a loca
 permissionRecords: Array<PermissionUsedRecord>
 ```
 
-Collection of permission usage records under the current application or device. Each element corresponds to a specific permission, allowing further viewing of access count, rejection count, last access time, and detailed records.
+Collection of permission usage records under the current application or device. Each element corresponds to a
+specific permission, allowing further viewing of access count, rejection count, last access time, and detailed
+records.
 
 **Type:** Array<PermissionUsedRecord>
 
@@ -100,7 +107,8 @@ Collection of permission usage records under the current application or device. 
 tokenId: number
 ```
 
-Application identity identifier for using the permission. This field is invalid in distributed scenarios; the source device must be identified using deviceId and deviceName.
+Application identity identifier for using the permission. This field is invalid in distributed scenarios; the
+source device must be identified using deviceId and deviceName.
 
 **Type:** number
 

@@ -301,7 +301,8 @@ if (wakeupIntelligentVoiceEngine != null) {
 on(type: 'wakeupIntelligentVoiceEvent', callback: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void
 ```
 
-Subscribes wakeup intelligent voice events. When wakeup intelligent voice events reach, the callback is invoked.
+Subscribes wakeup intelligent voice events. When wakeup intelligent voice events reach,
+the callback is invoked.
 
 **Since:** 10
 

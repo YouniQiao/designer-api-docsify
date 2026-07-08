@@ -12,7 +12,9 @@ import { serialManager } from '@kit.BasicServicesKit';
 function requestSerialRight(portId: number): Promise<boolean>
 ```
 
-Requests the permission for the application to access the serial port device. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again. This API uses a promise to return the result.
+Requests the permission for the application to access the serial port device. After the application exits, the
+access permission on the serial port device is automatically removed. After the application is restarted, you need
+to request the permission again. This API uses a promise to return the result.
 
 **Since:** 19
 

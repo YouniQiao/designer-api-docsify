@@ -12,7 +12,9 @@
 displayPrimariesX: Array<number>
 ```
 
-The X-coordinate of the primary colors. Specifies the normalized X-coordinates of the display device's three primary colors. The values are stored in an array of length 3, in the order of red, green, and blue (r, g, b). Each value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
+The X-coordinate of the primary colors. Specifies the normalized X-coordinates of the display device's three
+primary colors. The values are stored in an array of length 3, in the order of red, green, and blue (r, g, b).
+Each value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
 **类型：** Array<number>
 
@@ -26,7 +28,9 @@ The X-coordinate of the primary colors. Specifies the normalized X-coordinates o
 displayPrimariesY: Array<number>
 ```
 
-The Y-coordinate of the primary colors. Specifies the normalized Y-coordinates of the display device's three primary colors. The values are stored in an array of length 3, in the order of red, green, and blue (r, g, b). Each value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
+The Y-coordinate of the primary colors. Specifies the normalized Y-coordinates of the display device's three
+primary colors. The values are stored in an array of length 3, in the order of red, green, and blue (r, g, b).
+Each value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
 **类型：** Array<number>
 
@@ -40,7 +44,9 @@ The Y-coordinate of the primary colors. Specifies the normalized Y-coordinates o
 maxContentLightLevel: number
 ```
 
-Maximum brightness of displayed content. The value is measured in units of 1, with a maximum allowed value of 65,535.
+Maximum brightness of displayed content.
+
+The value is measured in units of 1, with a maximum allowed value of 65,535.
 
 **类型：** number
 
@@ -54,7 +60,9 @@ Maximum brightness of displayed content. The value is measured in units of 1, wi
 maxFrameAverageLightLevel: number
 ```
 
-Maximum average brightness of displayed content. The value is measured in units of 1, with a maximum allowed value of 65,535.
+Maximum average brightness of displayed content.
+
+The value is measured in units of 1, with a maximum allowed value of 65,535.
 
 **类型：** number
 
@@ -68,7 +76,10 @@ Maximum average brightness of displayed content. The value is measured in units 
 maxLuminance: number
 ```
 
-Maximum luminance of the image's primary display. The value is measured in units of 1, with a maximum allowed value of 65,535. Unit:nit.
+Maximum luminance of the image's primary display.
+The value is measured in units of 1, with a maximum allowed value of 65,535.
+
+Unit:nit.
 
 **类型：** number
 
@@ -82,7 +93,9 @@ Maximum luminance of the image's primary display. The value is measured in units
 minLuminance: number
 ```
 
-Minimum luminance of the image's primary display. The value is measured in units of 0.0001, with a maximum allowed value of 6.55535.
+Minimum luminance of the image's primary display.
+
+The value is measured in units of 0.0001, with a maximum allowed value of 6.55535.
 
 **类型：** number
 
@@ -96,7 +109,9 @@ Minimum luminance of the image's primary display. The value is measured in units
 whitePointX: number
 ```
 
-The X-coordinate of the white point value. Specifies the normalized X-coordinate of the white point. The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
+The X-coordinate of the white point value. Specifies the normalized X-coordinate of the white point.
+
+The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
 **类型：** number
 
@@ -110,7 +125,9 @@ The X-coordinate of the white point value. Specifies the normalized X-coordinate
 whitePointY: number
 ```
 
-The Y-coordinate of the white point value. Specifies the normalized Y-coordinate of the white point. The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
+The Y-coordinate of the white point value. Specifies the normalized Y-coordinate of the white point.
+
+The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
 **类型：** number
 

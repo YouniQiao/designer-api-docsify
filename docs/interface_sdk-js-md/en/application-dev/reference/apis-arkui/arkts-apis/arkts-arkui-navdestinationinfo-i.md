@@ -18,7 +18,8 @@ import { uiObserver } from '@kit.ArkUI';
 index: number
 ```
 
-Index of the **NavDestination** component in the navigation stack. The value must be greater than or equal to 0.
+Index of the **NavDestination** component in the navigation stack.
+The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -36,7 +37,8 @@ Index of the **NavDestination** component in the navigation stack. The value mus
 mode?: NavDestinationMode
 ```
 
-Mode of the **NavDestination** component. Default value: NavDestinationMode.Standard.
+Mode of the **NavDestination** component.
+Default value: NavDestinationMode.Standard.
 
 **Type:** NavDestinationMode
 

@@ -12,7 +12,8 @@
 includeDeviceName?: boolean
 ```
 
-指示是否包含设备名称。 默认值： 默认值：false。
+指示是否包含设备名称。
+默认值： 默认值：false。
 
 **类型：** boolean
 
@@ -60,7 +61,9 @@ serviceData?: ServiceData[]
 serviceUuids?: string[]
 ```
 
-指定的服务UUID。 UUID的长度必须为36，由36位十六进制数字和“-”组成。 例如：FFFFFFFF-1234-5678-ABCD-000000001234，表示128位的标识符。
+指定的服务UUID。
+UUID的长度必须为36，由36位十六进制数字和“-”组成。
+例如：FFFFFFFF-1234-5678-ABCD-000000001234，表示128位的标识符。
 
 **类型：** string[]
 

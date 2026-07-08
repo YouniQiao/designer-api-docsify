@@ -6,7 +6,8 @@
 function enterKioskMode(context: UIAbilityContext): Promise<void>
 ```
 
-进入Kiosk模式。使用Promise异步回调。 该接口仅在Phone、PC/2in1和Tablet设备中可正常调用，在其他设备中返回801错误码。
+进入Kiosk模式。使用Promise异步回调。
+该接口仅在Phone、PC/2in1和Tablet设备中可正常调用，在其他设备中返回801错误码。
 
 **起始版本：** 20
 

@@ -6,7 +6,7 @@ typedef struct HiDebug_GraphicsMemorySummary {...} HiDebug_GraphicsMemorySummary
 
 ## Overview
 
-Defines the graphics memory summary structure type.
+Defines a struct for the application graphics memory usage details.
 
 **Since**: 21
 
@@ -20,7 +20,7 @@ Defines the graphics memory summary structure type.
 
 | Name | Description |
 | -- | -- |
-| uint32_t gl | GL memory |
-| uint32_t graph | graph memory |
+| uint32_t gl | GL memory size (memory occupied by RenderService for loading required resources, such as images and textures),in KB. |
+| uint32_t graph | Graph memory size (DMA memory usage of the process), in KB, including the DMA buffers obtained directly throughthe API and those obtained through **allocator_host**. |
 
 

@@ -1,6 +1,7 @@
 # Focus
 
-Focus extends [FocusQuery](arkts-camera-focusquery-i.md) Provides APIs to obtain and set the camera focus mode and focus position.
+Focus extends [FocusQuery](arkts-camera-focusquery-i.md)
+Provides APIs to obtain and set the camera focus mode and focus position.
 
 **Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-focusquery-i.md)
 
@@ -127,7 +128,10 @@ Lock focus tracking.
 setFocusMode(afMode: FocusMode): void
 ```
 
-Sets a focus mode. Before the setting, call [isFocusModeSupported](arkts-camera-focusquery-i.md#isfocusmodesupported-1) to check whether the focus mode is supported.
+Sets a focus mode.
+Before the setting, call
+[isFocusModeSupported](arkts-camera-focusquery-i.md#isfocusmodesupported-1) to check whether the
+focus mode is supported.
 
 **Since:** 11
 
@@ -153,7 +157,13 @@ Sets a focus mode. Before the setting, call [isFocusModeSupported](arkts-camera-
 setFocusPoint(point: Point): void
 ```
 
-Sets the focal point. The focal point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}. The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
+Sets the focal point. The focal point must be in the coordinate system (0-1), where the top-left corner is {0, 0}
+and the bottom-right corner is {1, 1}.
+
+The coordinate system is based on the horizontal device direction with the device's charging port on the right.
+If the layout of the preview screen of an application is based on the vertical direction with the charging port
+on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate
+point after conversion is {y/h, 1-x/w}.
 
 **Since:** 11
 

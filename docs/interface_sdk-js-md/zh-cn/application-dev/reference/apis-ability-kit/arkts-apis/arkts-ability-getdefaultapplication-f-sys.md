@@ -6,7 +6,9 @@
 function getDefaultApplication(type: string, userId: number, callback: AsyncCallback<BundleInfo>) : void
 ```
 
-根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型获取默认应用信息。使用 callback异步回调。
+根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者
+[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型获取默认应用信息。使用
+callback异步回调。
 
 **起始版本：** 9
 
@@ -77,7 +79,9 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 function getDefaultApplication(type: string, callback: AsyncCallback<BundleInfo>) : void
 ```
 
-根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型获取默认应用信息。使用 callback异步回调。
+根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者
+[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型获取默认应用信息。使用
+callback异步回调。
 
 **起始版本：** 9
 
@@ -145,7 +149,9 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 function getDefaultApplication(type: string, userId?: number) : Promise<BundleInfo>
 ```
 
-根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型获取默认应用信息。使用Promise 异步回调。
+根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者
+[UniformDataType](@ohos.data.uniformTypeDescriptor:uniformTypeDescriptor.UniformDataType)类型获取默认应用信息。使用Promise
+异步回调。
 
 **起始版本：** 9
 

@@ -46,7 +46,8 @@ Device name.
 isHdHapticSupported: boolean
 ```
 
-Whether HD vibration is supported. The value **true** indicates that HD vibration is supported, and the value **false** indicates the opposite.
+Whether HD vibration is supported. The value **true** indicates that HD vibration is supported, and the value
+**false** indicates the opposite.
 
 **Type:** boolean
 
@@ -60,7 +61,8 @@ Whether HD vibration is supported. The value **true** indicates that HD vibratio
 isLocalVibrator: boolean
 ```
 
-Whether the device is a local device. The value **true** indicates that the device is a local device, and the value **false** indicates the opposite.
+Whether the device is a local device. The value **true** indicates that the device is a local device, and the
+value **false** indicates the opposite.
 
 **Type:** boolean
 

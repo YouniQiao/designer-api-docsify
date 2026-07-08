@@ -46,7 +46,9 @@ Time used to get the SQL statements ready and bind parameters, in μs.
 sql: Array<string>
 ```
 
-SQL statements executed. If the value of [batchInsert] {@link @ohos.data.relationalStore:relationalStore.RdbStore.batchInsert(table: string)} is too large, multiple SQL statements may be executed.
+SQL statements executed. If the value of [batchInsert]
+{@link @ohos.data.relationalStore:relationalStore.RdbStore.batchInsert(table: string)} is too large, multiple
+SQL statements may be executed.
 
 **Type:** Array<string>
 

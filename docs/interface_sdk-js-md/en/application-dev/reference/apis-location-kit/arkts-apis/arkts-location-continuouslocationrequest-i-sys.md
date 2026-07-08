@@ -18,7 +18,8 @@ import { geoLocationManager } from '@kit.LocationKit';
 sportsType?: SportsType
 ```
 
-Indicates the type of sports. This parameter is valid only when locationScenario is set to UserActivityScenario.SPORT.
+Indicates the type of sports.
+This parameter is valid only when locationScenario is set to UserActivityScenario.SPORT.
 
 **Type:** SportsType
 

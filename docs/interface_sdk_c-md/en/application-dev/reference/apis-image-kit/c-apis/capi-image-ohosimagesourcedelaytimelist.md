@@ -20,7 +20,11 @@ Defines the delay time list of the image source. It is obtained by calling[OH_Im
 
 | Name | Description |
 | -- | -- |
-| int32_t* delayTimeList | Pointer to the head of the image source delay time list. |
-| size_t size = 0 | Size of the image source delay time list. |
+| int32_t* delayTimeList |  |
+| size_t size = 0;
+#else |  |
+| int32_t* delayTimeList |  |
+| size_t size;
+#endif |  |
 
 

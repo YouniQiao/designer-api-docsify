@@ -30,7 +30,8 @@ Constructs a 2D change matrix object. The default value is the unit matrix.
 identity(): Matrix2D
 ```
 
-Transforms the current 2D matrix back to the identity matrix (i.e., without any rotational translation scaling effect)
+Transforms the current 2D matrix back to the identity matrix (i.e., without any rotational
+translation scaling effect)
 
 **Since:** 11
 
@@ -54,7 +55,8 @@ Transforms the current 2D matrix back to the identity matrix (i.e., without any 
 invert(): Matrix2D
 ```
 
-Transform the current 2D matrix into an inverse matrix (that is, the transformation effect is the opposite effect of the original)
+Transform the current 2D matrix into an inverse matrix (that is, the transformation effect
+is the opposite effect of the original)
 
 **Since:** 11
 
@@ -78,7 +80,8 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 multiply(other?: Matrix2D): Matrix2D
 ```
 
-The matrix is superimposed in right multiplication mode. When the input parameter is empty, the matrix is superimposed.
+The matrix is superimposed in right multiplication mode. When the input parameter is empty,
+the matrix is superimposed.
 
 **Since:** 11
 

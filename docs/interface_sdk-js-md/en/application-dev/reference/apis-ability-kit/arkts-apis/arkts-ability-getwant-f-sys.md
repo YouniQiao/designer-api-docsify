@@ -12,7 +12,8 @@ import { WantAgent } from '@kit.AbilityKit';
 function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 ```
 
-Obtains the Want in a WantAgent object. This API uses an asynchronous callback to return the result.
+Obtains the Want in a WantAgent object.
+This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -43,7 +44,8 @@ Obtains the Want in a WantAgent object. This API uses an asynchronous callback t
 function getWant(agent: WantAgent): Promise<Want>
 ```
 
-Obtains the Want in a WantAgent object. This API uses a promise to return the result.
+Obtains the Want in a WantAgent object.
+This API uses a promise to return the result.
 
 **Since:** 9
 

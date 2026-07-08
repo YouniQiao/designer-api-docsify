@@ -20,7 +20,9 @@ import { image } from '@kit.ImageKit';
 desiredPixelFormat?: PixelMapFormat
 ```
 
-Indicates the pixel format of the decomposed SDR Pixelmap and the gainmap. The formats of RGBA_8888\NV12\NV21 are supported. Default value: RGBA_8888.
+Indicates the pixel format of the decomposed SDR Pixelmap and the gainmap. The formats of
+RGBA_8888\NV12\NV21 are supported.
+Default value: RGBA_8888.
 
 **Type:** PixelMapFormat
 
@@ -38,7 +40,8 @@ Indicates the pixel format of the decomposed SDR Pixelmap and the gainmap. The f
 isFullSizeGainmap?: boolean
 ```
 
-Indicates generating a full-size gainmap or a 1/2 downscaled gainmap. Default value: false.
+Indicates generating a full-size gainmap or a 1/2 downscaled gainmap.
+Default value: false.
 
 **Type:** boolean
 

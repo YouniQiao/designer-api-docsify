@@ -20,7 +20,11 @@ Defines image source supported format string.[OhosImageSourceSupportedFormatList
 
 | Name | Description |
 | -- | -- |
-| char* format = nullptr | Image source supported format string head. |
-| size_t size = 0 | Image source supported format string size. |
+| char* format = nullptr |  |
+| size_t size = 0;
+#else |  |
+| char* format |  |
+| size_t size;
+#endif |  |
 
 

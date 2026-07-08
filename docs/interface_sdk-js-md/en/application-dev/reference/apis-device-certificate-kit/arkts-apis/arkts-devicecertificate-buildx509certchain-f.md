@@ -12,7 +12,8 @@ import { cert } from '@kit.DeviceCertificateKit';
 function buildX509CertChain(param: CertChainBuildParameters): Promise<CertChainBuildResult>
 ```
 
-Builds an X.509 certificate chain with a CertChainBuildParameters object. This API uses a promise to return the result.
+Builds an X.509 certificate chain with a CertChainBuildParameters object. This API uses a promise to return the
+result.
 
 **Since:** 12
 

@@ -1,6 +1,7 @@
 # DialogSessionInfo (System API)
 
-Provides session information, including the requester information, target ability information list, and other parameters.
+Provides session information, including the requester information, target ability information list, and other
+parameters.
 
 **Since:** 11
 

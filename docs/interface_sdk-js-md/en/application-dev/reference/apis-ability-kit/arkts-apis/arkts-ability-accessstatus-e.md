@@ -1,6 +1,6 @@
 # AccessStatus
 
-AccessStatus.
+Enumerates the statuses for requesting access permissions for sensitive data under the lock screen.
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ AccessStatus.
 ACCESS_DENIED = -1
 ```
 
-Acquire the access of data failed.
+The request for access permission for sensitive data under lock screen is denied.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ Acquire the access of data failed.
 ACCESS_GRANTED = 0
 ```
 
-Acquire the access of data success.
+The request for access permission for sensitive data under lock screen is granted.
 
 **Since:** 12
 

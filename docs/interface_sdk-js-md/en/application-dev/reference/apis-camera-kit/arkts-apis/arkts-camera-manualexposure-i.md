@@ -1,6 +1,7 @@
 # ManualExposure (System API)
 
-ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md) Provides APIs to obtain and set the exposure duration.
+ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md)
+Provides APIs to obtain and set the exposure duration.
 
 **Inheritance/Implementation:** ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md)
 

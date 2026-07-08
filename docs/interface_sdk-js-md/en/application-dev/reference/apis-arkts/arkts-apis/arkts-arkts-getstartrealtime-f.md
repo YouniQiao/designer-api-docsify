@@ -12,7 +12,8 @@ import { process } from '@kit.ArkTS';
 function getStartRealtime(): number
 ```
 
-Obtains the duration (excluding the system sleep time), in milliseconds, from the time the system starts to the time the process starts.
+Obtains the duration (excluding the system sleep time), in milliseconds, from the time the system starts to the
+time the process starts.
 
 **Since:** 8
 

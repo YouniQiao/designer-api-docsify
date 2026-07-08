@@ -116,7 +116,8 @@ Cover of hidden assets in the album.
 isCoverChanged: boolean
 ```
 
-Whether the album cover content is changed. It is used to distinguish between attribute changes and content changes of a photo.
+Whether the album cover content is changed. It is used to distinguish between attribute changes and
+content changes of a photo.
 
 **Type:** boolean
 
@@ -132,7 +133,8 @@ Whether the album cover content is changed. It is used to distinguish between at
 isHiddenCoverChanged: boolean
 ```
 
-Whether the cover of hidden assets in the album is changed. It is used to distinguish between attribute changes and content changes of a cover asset.
+Whether the cover of hidden assets in the album is changed. It is used to distinguish between attribute
+changes and content changes of a cover asset.
 
 **Type:** boolean
 

@@ -1036,3 +1036,19 @@ one finger double tap type
 
 **System API:** This is a system API.
 
+## TYPE_TOUCH_GUIDE_GESTURE
+
+```TypeScript
+TYPE_TOUCH_GUIDE_GESTURE = 73
+```
+
+Event indicating the touchGuide gesture.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+

@@ -13,7 +13,10 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
     extensionAbilityFlags: number, userId?: number): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given want, ExtensionAbility type, ExtensionAbility flags, and user ID. This API returns the result synchronously. No permission is required for obtaining the caller's own information.
+Obtains the ExtensionAbility information based on the given want, ExtensionAbility type, ExtensionAbility flags,
+and user ID. This API returns the result synchronously.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
@@ -109,7 +112,10 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
     extensionAbilityFlags: number, userId?: number): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given Want, ExtensionAbility type, ExtensionAbility flags, and user ID. This API returns the result synchronously. No permission is required for obtaining the caller's own information.
+Obtains the ExtensionAbility information based on the given Want, ExtensionAbility type, ExtensionAbility flags,
+and user ID. This API returns the result synchronously.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 11
 
@@ -205,7 +211,10 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
     userId?: number): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given ExtensionAbility type, ExtensionAbility flags, and user ID. No permission is required for obtaining the caller's own information.
+Obtains the ExtensionAbility information based on the given ExtensionAbility type, ExtensionAbility flags, and user
+ID.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 11
 

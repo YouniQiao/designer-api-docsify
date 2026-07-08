@@ -1,6 +1,7 @@
 # TimeZone
 
-Provides time zone management capabilities, such as time zone name translation, offset retrieval, and transition rule retrieval.
+Provides time zone management capabilities, such as time zone name translation, offset retrieval, and transition
+rule retrieval.
 
 **Since:** 7
 
@@ -18,7 +19,9 @@ import { i18n } from '@kit.LocalizationKit';
 static getAppDefaultTimeZone(): TimeZone
 ```
 
-Obtains the default time zone object used by an application. If the default time zone has been set by calling setAppDefaultTimeZoneById, the default time zone object is returned. Otherwise, the system time zone object is returned.
+Obtains the default time zone object used by an application.
+If the default time zone has been set by calling setAppDefaultTimeZoneById, the default time zone object
+is returned. Otherwise, the system time zone object is returned.
 
 **Since:** 26.0.0
 
@@ -373,7 +376,8 @@ try {
 public getZoneRules(): ZoneRules
 ```
 
-Obtains the time zone transition rules. For details about the time zone transition logic, see [DST Transition](../../../../internationalization/i18n-dst-transition.md).
+Obtains the time zone transition rules. For details about the time zone transition logic, see
+[DST Transition](../../../../internationalization/i18n-dst-transition.md).
 
 **Since:** 20
 
@@ -421,7 +425,8 @@ Check if the given date use daylight saving time. The calculation will be based 
 static setAppDefaultTimeZoneById(zoneID: string): void
 ```
 
-Sets the default time zone for the current app, the value will be used on the application's runtime lifecycle. When the date time formatting function is used, the default time zone ID of the app is used preferentially.
+Sets the default time zone for the current app, the value will be used on the application's runtime lifecycle.
+When the date time formatting function is used, the default time zone ID of the app is used preferentially.
 
 **Since:** 26.0.0
 

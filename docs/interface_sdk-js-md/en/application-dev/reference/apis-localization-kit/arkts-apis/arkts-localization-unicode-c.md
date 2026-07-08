@@ -1,6 +1,7 @@
 # Unicode
 
-Provides character attribute management capabilities, such as checking whether a character is a space, digit, or letter.
+Provides character attribute management capabilities, such as checking whether a character is a space, digit, or
+letter.
 
 **Since:** 9
 

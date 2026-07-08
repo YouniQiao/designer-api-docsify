@@ -1,6 +1,7 @@
 # CameraOutput
 
-CameraOutput implements output information used in [Session](arkts-camera-session-i.md). It is the base class of **output**.
+CameraOutput implements output information used in [Session](arkts-camera-session-i.md). It is the base
+class of **output**.
 
 **Since:** 10
 

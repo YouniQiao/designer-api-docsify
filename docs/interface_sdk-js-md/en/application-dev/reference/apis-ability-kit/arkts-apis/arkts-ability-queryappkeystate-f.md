@@ -12,7 +12,7 @@ import { screenLockFileManager } from '@kit.AbilityKit';
 function queryAppKeyState(): KeyStatus
 ```
 
-Query the AppKey's status of the caller.
+Queries the status of the caller app's sensitive data key under the lock screen in synchronous mode.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ Query the AppKey's status of the caller.
 
 | Type | Description |
 | --- | --- |
-| KeyStatus | Returns the AppKey status. |
+| KeyStatus | Status of the key for sensitive data under lock screen. |
 
 **Error codes:**
 

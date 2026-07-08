@@ -12,7 +12,13 @@ import { huks } from '@kit.UniversalKeystoreKit';
 function anonAttestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-Attests an anonymous key. This API uses an asynchronous callback to return the result. This operation requires Internet access and takes time. If error code 12000012 is returned, the network is abnormal. If the device is not connected to the network, display a message, indicating that the network is not connected. If the network is connected, the failure may be caused by network jitter. Tray again later. <!--RP1--><!--RP1End-->
+Attests an anonymous key. This API uses an asynchronous callback to return the result.
+
+This operation requires Internet access and takes time. If error code 12000012 is returned, the network is
+abnormal. If the device is not connected to the network, display a message, indicating that the network is not
+connected. If the network is connected, the failure may be caused by network jitter. Try again later.
+
+<!--RP1--><!--RP1End-->
 
 **Since:** 11
 
@@ -145,7 +151,13 @@ async function generateKeyThenAttestKey(): Promise<void> {
 function anonAttestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-Attests an anonymous key. This API uses a promise to return the result. This operation requires Internet access and takes time. If error code 12000012 is returned, the network is abnormal. If the device is not connected to the network, display a message, indicating that the network is not connected. If the network is connected, the failure may be caused by network jitter. Tray again later. <!--RP1--><!--RP1End-->
+Attests an anonymous key. This API uses a promise to return the result.
+
+This operation requires Internet access and takes time. If error code 12000012 is returned, the network is
+abnormal. If the device is not connected to the network, display a message, indicating that the network is not
+connected. If the network is connected, the failure may be caused by network jitter. Try again later.
+
+<!--RP1--><!--RP1End-->
 
 **Since:** 11
 

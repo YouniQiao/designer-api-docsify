@@ -1174,6 +1174,7 @@
     - [WindowEventType](arkts-arkui-windoweventtype-e.md)<!--Del-->
     - [WindowLayoutMode(system api)](arkts-arkui-windowlayoutmode-e-sys.md)<!--DelEnd--><!--Del-->
     - [WindowMode(system api)](arkts-arkui-windowmode-e-sys.md)<!--DelEnd-->
+    - [WindowPostureMode](arkts-arkui-windowposturemode-e.md)
     - [WindowStageEventType](arkts-arkui-windowstageeventtype-e.md)
     - [WindowStageLifecycleEventType](arkts-arkui-windowstagelifecycleeventtype-e.md)
     - [WindowStatusType](arkts-arkui-windowstatustype-e.md)

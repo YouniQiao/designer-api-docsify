@@ -38,7 +38,8 @@ The error type of upload.
 processed: number
 ```
 
-The processed data size for current file. <br>Unit:Byte.
+The processed data size for current file.
+<br>Unit:Byte.
 
 **Type:** number
 
@@ -56,7 +57,8 @@ The processed data size for current file. <br>Unit:Byte.
 size: number
 ```
 
-The size of current file. <br>Unit:Byte.
+The size of current file.
+<br>Unit:Byte.
 
 **Type:** number
 

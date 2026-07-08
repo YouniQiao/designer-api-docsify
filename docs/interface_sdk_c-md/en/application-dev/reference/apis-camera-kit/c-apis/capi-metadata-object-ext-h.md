@@ -10,7 +10,7 @@ The file declares the metadata object ext concepts.
 
 **Since**: 26.0.0
 
-**Related module**: [MetadataObjectExt](capi-metadataobjectext.md)
+**Related module**: [OH_Camera](capi-oh-camera.md)
 
 ## Summary
 
@@ -18,7 +18,7 @@ The file declares the metadata object ext concepts.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md) | OH_Camera_MetadataObjectExt | The struct describes the camera metadata object ext. |
+| [OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md) | OH_Camera_MetadataObjectExt | The struct describes the camera metadata object ext. |
 
 ### Function
 
@@ -33,7 +33,7 @@ The file declares the metadata object ext concepts.
 | [Camera_ErrorCode OH_MetadataObjectExt_GetLeftEyeBoundingBox(const OH_Camera_MetadataObjectExt* metadataObjectExt, OH_Camera_Rect_Ext* boundingBox)](#oh_metadataobjectext_getlefteyeboundingbox) | Obtains the left eye bounding box of the metadata object extension. |
 | [Camera_ErrorCode OH_MetadataObjectExt_GetRightEyeBoundingBox(const OH_Camera_MetadataObjectExt* metadataObjectExt, OH_Camera_Rect_Ext* boundingBox)](#oh_metadataobjectext_getrighteyeboundingbox) | Obtains the right eye bounding box of the metadata object extension. |
 | [Camera_ErrorCode OH_MetadataObjectExt_GetEmotion(const OH_Camera_MetadataObjectExt* metadataObjectExt, OH_Camera_MetadataObjectEmotion* emotion)](#oh_metadataobjectext_getemotion) | Obtains the emotion of the metadata object extension. |
-| [void OH_MetadataObjectExt_Destroy(OH_Camera_MetadataObjectExt** metadataObjectExt, uint32_t objectCount)](#oh_metadataobjectext_destroy) | Destroys an array of [OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md) instances. |
+| [void OH_MetadataObjectExt_Destroy(OH_Camera_MetadataObjectExt** metadataObjectExt, uint32_t objectCount)](#oh_metadataobjectext_destroy) | Destroys an array of [OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md) instances. |
 | [bool OH_MetadataObjectExt_IsLockFocusTracked(const OH_Camera_MetadataObjectExt* metadataObjectExt)](#oh_metadataobjectext_islockfocustracked) | Checks if focus is locked and tracked. |
 
 ## Function description
@@ -54,7 +54,7 @@ Obtains metadata object type.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
+| [const OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
 | [Camera_MetadataObjectType](capi-camera-h.md#camera_metadataobjecttype)* type | Pointer to the metadata object type, which is an **Camera_MetadataObjectType** instance. |
 
 **Returns**:
@@ -79,7 +79,7 @@ Obtains the timestamp of the metadata object extension.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
+| [const OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
 | int64_t* timestamp | Pointer to store the timestamp. |
 
 **Returns**:
@@ -104,7 +104,7 @@ Obtains the bounding box of the metadata object extension.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
+| [const OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
 | [OH_Camera_Rect_Ext](capi-oh-camera-oh-camera-rect-ext.md)* boundingBox | Pointer to the metadata object bounding box, which is an **OH_Camera_Rect_Ext** instance. |
 
 **Returns**:
@@ -129,7 +129,7 @@ Obtains the pitch angle of the metadata object extension.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
+| [const OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
 | float* pitchAngle | Pointer to store the pitch angle. |
 
 **Returns**:
@@ -154,7 +154,7 @@ Obtains the yaw angle of the metadata object extension.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
+| [const OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
 | float* yawAngle | Pointer to store the yaw angle. |
 
 **Returns**:
@@ -179,7 +179,7 @@ Obtains the roll angle of the metadata object extension.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
+| [const OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
 | float* rollAngle | Pointer to store the roll angle. |
 
 **Returns**:
@@ -204,7 +204,7 @@ Obtains the left eye bounding box of the metadata object extension.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
+| [const OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
 | [OH_Camera_Rect_Ext](capi-oh-camera-oh-camera-rect-ext.md)* boundingBox | Pointer to the metadata object bounding box, which is an **OH_Camera_Rect_Ext** instance. |
 
 **Returns**:
@@ -229,7 +229,7 @@ Obtains the right eye bounding box of the metadata object extension.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
+| [const OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
 | [OH_Camera_Rect_Ext](capi-oh-camera-oh-camera-rect-ext.md)* boundingBox | Pointer to the metadata object bounding box, which is an **OH_Camera_Rect_Ext** instance. |
 
 **Returns**:
@@ -254,7 +254,7 @@ Obtains the emotion of the metadata object extension.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
+| [const OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
 | [OH_Camera_MetadataObjectEmotion](capi-camera-h.md#oh_camera_metadataobjectemotion)* emotion | Pointer to store the emotion type. |
 
 **Returns**:
@@ -271,7 +271,7 @@ void OH_MetadataObjectExt_Destroy(OH_Camera_MetadataObjectExt** metadataObjectEx
 
 **Description**
 
-Destroys an array of [OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md) instances.
+Destroys an array of [OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md) instances.
 
 **Since**: 26.0.0
 
@@ -279,7 +279,7 @@ Destroys an array of [OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-cam
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)** metadataObjectExt | Pointer to the array of [OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md) instances. |
+| [OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)** metadataObjectExt | Pointer to the array of [OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md) instances. |
 | uint32_t objectCount | Indicates the number of metadata objects to be destroyed. |
 
 ### OH_MetadataObjectExt_IsLockFocusTracked()
@@ -298,7 +298,7 @@ Checks if focus is locked and tracked.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Camera_MetadataObjectExt](capi-metadataobjectext-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
+| [const OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)* metadataObjectExt | Pointer to a OH_Camera_MetadataObjectExt instance. |
 
 **Returns**:
 

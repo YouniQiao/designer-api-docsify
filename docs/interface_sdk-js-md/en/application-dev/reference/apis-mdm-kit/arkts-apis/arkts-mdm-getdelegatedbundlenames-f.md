@@ -12,7 +12,8 @@ import { adminManager } from '@kit.MDMKit';
 function getDelegatedBundleNames(admin: Want, policy: string): Array<string>
 ```
 
-Queries the delegated applications that can access a delegation policy and output the list of delegated applications.
+Queries the delegated applications that can access a delegation policy and output the list of delegated
+applications.
 
 **Since:** 14
 

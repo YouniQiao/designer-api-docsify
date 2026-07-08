@@ -9,7 +9,7 @@
 ## Start
 
 ```TypeScript
-Start = 0
+Start
 ```
 
 双栏显示时，主列在主轴方向首部。
@@ -23,7 +23,7 @@ Start = 0
 ## End
 
 ```TypeScript
-End = 1
+End
 ```
 
 双栏显示时，主列在主轴方向尾部。

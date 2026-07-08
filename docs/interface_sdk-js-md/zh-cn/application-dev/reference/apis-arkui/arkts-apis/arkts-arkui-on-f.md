@@ -129,7 +129,17 @@ display.on('add', callback);
 function on(type: 'foldStatusChange', callback: Callback<FoldStatus>): void
 ```
 
-开启折叠设备折叠状态变化的监听。 本接口监听设备物理折叠状态的变化，如果要监听屏幕显示模式的变化，需要使用 [display.on('foldDisplayModeChange')](arkts-arkui-on-f.md#on-8) 接口。 两者存在差异，时序上物理折叠状态变化在前，底层会根据物理折叠状态匹配屏幕显示模式状态。 若需监听当前显示内容是显示在折叠设备的内屏还是外屏，请使用 [display.on('foldDisplayModeChange')](arkts-arkui-on-f.md#on-8) 。
+开启折叠设备折叠状态变化的监听。
+
+本接口监听设备物理折叠状态的变化，如果要监听屏幕显示模式的变化，需要使用
+[display.on('foldDisplayModeChange')](arkts-arkui-on-f.md#on-8)
+接口。
+
+两者存在差异，时序上物理折叠状态变化在前，底层会根据物理折叠状态匹配屏幕显示模式状态。
+
+若需监听当前显示内容是显示在折叠设备的内屏还是外屏，请使用
+[display.on('foldDisplayModeChange')](arkts-arkui-on-f.md#on-8)
+。
 
 **起始版本：** 10
 
@@ -256,7 +266,12 @@ display.on('captureStatusChange', callback);
 function on(type: 'foldDisplayModeChange', callback: Callback<FoldDisplayMode>): void
 ```
 
-开启折叠设备屏幕显示模式变化的监听。 本接口监听设备屏幕显示模式的变化，如果要监听设备物理折叠状态的变化，需要使用 [display.on('foldStatusChange')](arkts-arkui-on-f.md#on-5)接口。 两者存在差异，时序上物理折叠状态变化在前，底层会根据物理折叠状态匹配屏幕显示模式状态。
+开启折叠设备屏幕显示模式变化的监听。
+
+本接口监听设备屏幕显示模式的变化，如果要监听设备物理折叠状态的变化，需要使用
+[display.on('foldStatusChange')](arkts-arkui-on-f.md#on-5)接口。
+
+两者存在差异，时序上物理折叠状态变化在前，底层会根据物理折叠状态匹配屏幕显示模式状态。
 
 **起始版本：** 10
 
@@ -301,7 +316,8 @@ display.on('foldDisplayModeChange', callback);
 function on(type: 'brightnessInfoChange', callback: BrightnessCallback<number, BrightnessInfo>): void
 ```
 
-开启所有屏幕亮度信息变化的监听。如果屏幕不支持HDR，监听到的[BrightnessInfo](arkts-arkui-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟 屏的BrightnessInfo对象中sdrNits为默认值。
+开启所有屏幕亮度信息变化的监听。如果屏幕不支持HDR，监听到的[BrightnessInfo](arkts-arkui-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟
+屏的BrightnessInfo对象中sdrNits为默认值。
 
 **起始版本：** 22
 

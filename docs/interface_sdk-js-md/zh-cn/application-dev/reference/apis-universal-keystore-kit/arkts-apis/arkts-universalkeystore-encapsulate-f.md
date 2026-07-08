@@ -7,11 +7,11 @@ function encapsulate(keyAlias: string, params: HuksParam[],
       sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>
 ```
 
-后量子加密密钥封装操作，支持HUKS密钥管理 或由应用程序本身决定。如果应用程序选择管理密钥， 对称密钥携带在HuksReturnResult的outData字段中。
+后量子加密密钥封装操作，支持HUKS密钥管理
+或由应用程序本身决定。如果应用程序选择管理密钥，
+对称密钥携带在HuksReturnResult的outData字段中。
 
 **起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
 
 **元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
 

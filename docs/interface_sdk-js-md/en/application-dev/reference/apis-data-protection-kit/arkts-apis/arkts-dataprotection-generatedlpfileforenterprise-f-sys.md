@@ -12,7 +12,17 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>
 ```
 
-Encrypts a plaintext file to generate a DLP file for an enterprise account. This API can be called only by enterprise accounts. This API uses a promise to return the result. This API encrypts a plaintext file to generate a DLP file that can be accessed only by enterprise accounts, implementing enterprise-level file permission management. > **NOTE** > > This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account > servers. This API generates a DLP file, which is an encrypted file that can be accessed only by accounts > authorized by the enterprise server.
+Encrypts a plaintext file to generate a DLP file for an enterprise account. This API can be called only by
+enterprise accounts. This API uses a promise to return the result.
+
+This API encrypts a plaintext file to generate a DLP file that can be accessed only by enterprise accounts,
+implementing enterprise-level file permission management.
+
+> **NOTE**
+>
+> This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account
+> servers. This API generates a DLP file, which is an encrypted file that can be accessed only by accounts
+> authorized by the enterprise server.
 
 **Since:** 21
 

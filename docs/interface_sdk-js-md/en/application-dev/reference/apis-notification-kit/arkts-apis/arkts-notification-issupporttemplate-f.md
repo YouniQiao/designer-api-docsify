@@ -12,7 +12,9 @@ import { notificationManager } from '@kit.NotificationKit';
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-i.md) to publish a notification. This API uses an asynchronous callback to return the result.
+Checks whether a specified template is supported before using
+[NotificationTemplate](arkts-notification-notificationtemplate-i.md) to publish a notification.
+This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -58,7 +60,9 @@ notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-i.md) to publish a notification. This API uses a promise to return the result.
+Checks whether a specified template is supported before using
+[NotificationTemplate](arkts-notification-notificationtemplate-i.md) to publish a notification.
+This API uses a promise to return the result.
 
 **Since:** 9
 

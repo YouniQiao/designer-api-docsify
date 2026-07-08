@@ -6,7 +6,9 @@
 function grantUriPermissionByKey(key: string, flag: wantConstant.Flags, targetTokenId: number): Promise<void>
 ```
 
-通过UDMF数据唯一标识key，将当前应用的文件URI访问权限授权给目标应用，权限将在目标应用退出后回收。使用Promise异步回调。 该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备中返回801错误码。 **系统接口**：此接口为系统接口。
+通过UDMF数据唯一标识key，将当前应用的文件URI访问权限授权给目标应用，权限将在目标应用退出后回收。使用Promise异步回调。
+该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备中返回801错误码。
+**系统接口**：此接口为系统接口。
 
 **起始版本：** 20
 

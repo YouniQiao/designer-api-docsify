@@ -1,6 +1,10 @@
 # TimeLapsePhotoSession (System API)
 
-TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect Implements a time-lapse photo session, which sets the parameters of the time-lapse photo mode and saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md).
+TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance,
+Zoom, ColorEffect
+Implements a time-lapse photo session, which sets the parameters of the time-lapse photo mode and saves all
+[CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md)
+instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md).
 
 **Inheritance/Implementation:** TimeLapsePhotoSession extends [Session](arkts-camera-session-i.md), [Focus](arkts-camera-focus-i.md), [ManualFocus](arkts-camera-manualfocus-i-sys.md), [AutoExposure](arkts-camera-autoexposure-i.md), [ManualExposure](arkts-camera-manualexposure-i.md), [ManualIso](arkts-camera-manualiso-i-sys.md), [WhiteBalance](arkts-camera-whitebalance-i.md), [Zoom](arkts-camera-zoom-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md)
 
@@ -468,7 +472,8 @@ function unregisterTryAEInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSe
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the result.
+Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 12
 
@@ -556,7 +561,8 @@ function registerFocusStateChange(timeLapsePhotoSession: camera.TimeLapsePhotoSe
 on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void
 ```
 
-Subscribes to automatic ISO change events to obtain real-time ISO information. This API uses an asynchronous callback to return the result.
+Subscribes to automatic ISO change events to obtain real-time ISO information. This API uses an asynchronous
+callback to return the result.
 
 **Since:** 12
 
@@ -602,7 +608,8 @@ function registerIsoInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSessio
 on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void
 ```
 
-Subscribes to exposure information change events to obtain the exposure information. This API uses an asynchronous callback to return the result.
+Subscribes to exposure information change events to obtain the exposure information. This API uses an
+asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -648,7 +655,8 @@ function registerExposureInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoS
 on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void
 ```
 
-Subscribes to illumination change events to obtain real-time illumination information. This API uses an asynchronous callback to return the result.
+Subscribes to illumination change events to obtain real-time illumination information. This API uses an
+asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -694,7 +702,8 @@ function registerLuminationInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhot
 on(type: 'tryAEInfoChange', callback: AsyncCallback<TryAEInfo>): void
 ```
 
-Subscribes to Try AE change events to obtain real-time Try AE parameters. This API uses an asynchronous callback to return the result.
+Subscribes to Try AE change events to obtain real-time Try AE parameters. This API uses an asynchronous callback
+to return the result.
 
 **Since:** 12
 

@@ -6,7 +6,7 @@ struct OhosImageSourceOps {...}
 
 ## Overview
 
-Defines image source options infomation[OH_ImageSource_Create](capi-image-source-mdk-h.md#oh_imagesource_create) and [OH_ImageSource_CreateIncremental](capi-image-source-mdk-h.md#oh_imagesource_createincremental).
+Defines image source options information[OH_ImageSource_Create](capi-image-source-mdk-h.md#oh_imagesource_create) and [OH_ImageSource_CreateIncremental](capi-image-source-mdk-h.md#oh_imagesource_createincremental).
 
 **Since**: 10
 
@@ -22,6 +22,6 @@ Defines image source options infomation[OH_ImageSource_Create](capi-image-source
 | -- | -- |
 | int32_t density | Pixel density of the image source. |
 | int32_t pixelFormat | Image source pixel format, used to describe YUV buffer usually. |
-| struct OhosImageSize size | Image source pixel size of width and height. |
+| struct [OhosImageSize](capi-image-ohosimagesize.md) size | Image source pixel size of width and height. |
 
 

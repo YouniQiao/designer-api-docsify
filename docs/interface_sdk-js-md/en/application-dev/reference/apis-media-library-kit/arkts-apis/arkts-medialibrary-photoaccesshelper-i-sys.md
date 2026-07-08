@@ -143,7 +143,8 @@ getHiddenAlbums(
     ): Promise<FetchResult<Album>>
 ```
 
-Obtains hidden albums based on the specified display mode and retrieval options. This API uses a promise to return the result.
+Obtains hidden albums based on the specified display mode and retrieval options.
+This API uses a promise to return the result.
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # PerfMeasureResult
 
-表示性能指标对应的测量结果数据。
+性能指标对应测量结果数据。
 
 **起始版本：** 20
 
@@ -12,7 +12,7 @@
 readonly average: number
 ```
 
-每轮测量数据的平均值（不包含值 **-1**）。
+各轮测量数据平均值（剔除为-1的数据后计算）。
 
 **类型：** number
 
@@ -28,7 +28,7 @@ readonly average: number
 readonly maximum: number
 ```
 
-每轮测量数据的最大值（不包含值 **-1**）。
+各轮测量数据最大值（剔除为-1的数据后计算）。
 
 **类型：** number
 
@@ -44,7 +44,7 @@ readonly maximum: number
 readonly metric: PerfMetric
 ```
 
-待测试的性能指标。
+被测性能指标。
 
 **类型：** PerfMetric
 
@@ -60,7 +60,7 @@ readonly metric: PerfMetric
 readonly minimum: number
 ```
 
-每轮测量数据的最小值（不包含值 **-1**）。
+各轮测量数据最小值（剔除为-1的数据后计算）。
 
 **类型：** number
 
@@ -76,7 +76,7 @@ readonly minimum: number
 readonly roundValues: Array<number>
 ```
 
-被测性能指标每轮的测量数据值。如果数据采集失败，则返回 **-1**。
+被测性能指标的各轮测量数据值。当数据采集失败时返回-1。
 
 **类型：** Array<number>
 

@@ -1,6 +1,8 @@
 # ReminderRequestTimer
 
-ReminderRequestTimer extends ReminderRequest Defines a reminder for a scheduled timer.
+ReminderRequestTimer extends ReminderRequest
+
+Defines a reminder for a scheduled timer.
 
 **Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderrequest-i.md)
 
@@ -36,7 +38,8 @@ The repeat count.
 repeatInterval?: number
 ```
 
-The repeat interval. Unit: s.
+The repeat interval.
+Unit: s.
 
 **Type:** number
 
@@ -52,7 +55,9 @@ The repeat interval. Unit: s.
 triggerTimeInSeconds: number
 ```
 
-Number of seconds in the countdown timer. Unit: s
+Number of seconds in the countdown timer.
+
+Unit: s
 
 **Type:** number
 

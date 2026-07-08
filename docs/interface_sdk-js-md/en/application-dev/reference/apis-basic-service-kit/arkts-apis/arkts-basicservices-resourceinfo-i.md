@@ -18,7 +18,8 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 readonly size: number
 ```
 
-Size of a pre-downloaded resource after decompression, in bytes. If the value is a positive integer, the resource is successfully downloaded; if the value is **-1**, the resource fails to be downloaded.
+Size of a pre-downloaded resource after decompression, in bytes. If the value is a positive integer, the
+resource is successfully downloaded; if the value is **-1**, the resource fails to be downloaded.
 
 **Type:** number
 

@@ -12,7 +12,9 @@ import { huks } from '@kit.UniversalKeystoreKit';
 function initSession(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksSessionHandle>): void
 ```
 
-Initializes a session for a key operation. This API uses an asynchronous callback to return the result. The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
+Initializes a session for a key operation. This API uses an asynchronous callback to return the result.
+
+The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
 
@@ -58,7 +60,9 @@ Initializes a session for a key operation. This API uses an asynchronous callbac
 function initSession(keyAlias: string, options: HuksOptions): Promise<HuksSessionHandle>
 ```
 
-Initializes a session for a key operation. This API uses a promise to return the result. The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
+Initializes a session for a key operation. This API uses a promise to return the result.
+
+The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
 

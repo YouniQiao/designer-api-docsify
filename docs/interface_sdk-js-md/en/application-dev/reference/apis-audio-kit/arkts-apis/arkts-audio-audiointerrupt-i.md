@@ -40,7 +40,8 @@ Audio content type.
 pauseWhenDucked: boolean
 ```
 
-Whether audio playback can be paused during an audio interruption. **true** if audio playback can be paused, **false** otherwise.
+Whether audio playback can be paused during an audio interruption. **true** if audio playback can be paused,
+**false** otherwise.
 
 **Type:** boolean
 

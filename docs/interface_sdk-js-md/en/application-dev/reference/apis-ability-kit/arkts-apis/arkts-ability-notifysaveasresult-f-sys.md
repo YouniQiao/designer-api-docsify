@@ -12,7 +12,8 @@ import { abilityManager } from '@kit.AbilityKit';
 function notifySaveAsResult(parameter: AbilityResult, requestCode: number, callback: AsyncCallback<void>): void
 ```
 
-Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md) management application to notify a sandbox application of the data saving result. This API uses an asynchronous callback to return the result.
+Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md) management application to notify
+a sandbox application of the data saving result. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -48,7 +49,8 @@ Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-ap
 function notifySaveAsResult(parameter: AbilityResult, requestCode: number): Promise<void>
 ```
 
-Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md) management application to notify a sandbox application of the data saving result. This API uses a promise to return the result.
+Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md) management application to notify
+a sandbox application of the data saving result. This API uses a promise to return the result.
 
 **Since:** 10
 

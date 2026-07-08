@@ -1,5 +1,7 @@
 # ArkTS API<!--arkts-basicserviceskit-->
 
+- [@ohos.WallpaperExtensionAbility](arkts-wallpaperextensionability.md)<!--Del-->
+  - [WallpaperExtensionAbility(系统接口)](arkts-basicservices-wallpaperextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.account.appAccount](arkts-account-appaccount.md)
   - [createAppAccountManager](arkts-basicservices-createappaccountmanager-f.md)
   - [Authenticator](arkts-basicservices-authenticator-c.md)

@@ -12,7 +12,14 @@ import { screenLockFileManager } from '@kit.AbilityKit';
 function releaseAccess(): ReleaseStatus
 ```
 
-Release the access of the caller data and do not allow data access under the lock screen.
+Releases the access permission for the caller app's sensitive data under the lock screen in synchronous mode. After
+the release is successful, the reference count of the sensitive data key decreases. When the count reaches zero,
+the key can be destroyed after the screen has been locked for a duration reaching the system-configured lock
+duration threshold.
+
+Before calling this API, ensure that the app has enabled the sensitive data protection function under the lock
+screen, and that the [acquireAccess](arkts-ability-acquireaccess-f.md#acquireaccess-1) API has been called to request the
+permission successfully first.
 
 **Since:** 12
 
@@ -22,7 +29,7 @@ Release the access of the caller data and do not allow data access under the loc
 
 | Type | Description |
 | --- | --- |
-| ReleaseStatus | Returns release the access result. |
+| ReleaseStatus | Release status of the access permission for sensitive data under lock screen. |
 
 **Error codes:**
 

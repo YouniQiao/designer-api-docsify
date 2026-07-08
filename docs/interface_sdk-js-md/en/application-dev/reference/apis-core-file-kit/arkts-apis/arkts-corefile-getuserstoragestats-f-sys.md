@@ -158,7 +158,8 @@ storageStatistics.getUserStorageStats(userId).then((storageStats: storageStatist
 function getUserStorageStats(userId: number, callback: AsyncCallback<StorageStats>): void
 ```
 
-Obtains the storage statistics of the specified user, in bytes. This API uses an asynchronous callback to return the result.
+Obtains the storage statistics of the specified user, in bytes. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 9
 

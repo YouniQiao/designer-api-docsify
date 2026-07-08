@@ -12,7 +12,8 @@ import { sim } from '@kit.TelephonyKit';
 function getMaxSimCount(): number
 ```
 
-Obtains the maximum number of SIM cards that can be used simultaneously on the device, that is, the maximum number of SIM card slots.
+Obtains the maximum number of SIM cards that can be used simultaneously on the device,
+that is, the maximum number of SIM card slots.
 
 **Since:** 7
 

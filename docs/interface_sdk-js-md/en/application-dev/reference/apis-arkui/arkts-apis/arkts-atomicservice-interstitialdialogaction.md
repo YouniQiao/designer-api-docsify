@@ -1,4 +1,4 @@
-# @ohos.atomicservice.InterstitialDialogAction (This section describes the interfaces used by InterstitialDialogAction)
+# @ohos.atomicservice.InterstitialDialogAction
 
 ## Modules to Import
 

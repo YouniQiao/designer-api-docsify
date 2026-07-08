@@ -6,7 +6,7 @@ typedef struct HiDebug_MallocDispatch {...} HiDebug_MallocDispatch
 
 ## Overview
 
-Defines structure type for MallocDispatch table.
+Defines the struct types of the replaceable/restorable **HiDebug_MallocDispatch** table of the applicationprocess.
 
 **Since**: 20
 

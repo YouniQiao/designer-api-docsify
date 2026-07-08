@@ -68,7 +68,8 @@ CONTENT_INFORMATION = 3
 LIVE_VIEW = 4
 ```
 
-实况窗。不支持三方应用直接创建该渠道类型通知，可以由系统代理创建后，三方应用发布同ID的通知来更新指定内容。该类型对应[SlotLevel](arkts-notification-slotlevel-e.md)为 LEVEL_DEFAULT。
+实况窗。不支持三方应用直接创建该渠道类型通知，可以由系统代理创建后，三方应用发布同ID的通知来更新指定内容。该类型对应[SlotLevel](arkts-notification-slotlevel-e.md)为
+LEVEL_DEFAULT。
 
 **起始版本：** 11
 

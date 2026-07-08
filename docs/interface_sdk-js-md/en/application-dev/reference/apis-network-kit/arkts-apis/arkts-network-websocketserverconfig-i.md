@@ -74,7 +74,8 @@ Server cert.
 serverIP?: string
 ```
 
-Network card that the server listens on. The server listens on this specific address. It's 0.0.0.0 by default.
+Network card that the server listens on.
+The server listens on this specific address. It's 0.0.0.0 by default.
 
 **Type:** string
 

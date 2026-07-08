@@ -1,6 +1,7 @@
 # ErrorEvent
 
-Provides detailed information about the exception that occurs during worker execution. The ErrorEvent class inherits from Event.
+Provides detailed information about the exception that occurs during worker execution. The ErrorEvent class inherits
+from Event.
 
 **Inheritance/Implementation:** ErrorEvent extends [Event](arkts-arkts-event-i.md)
 

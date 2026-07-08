@@ -1,6 +1,8 @@
 # Stream
 
-Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by using [fileIo.createStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream) or [fileIo.fdopenStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream).
+Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by
+using [fileIo.createStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream) or
+[fileIo.fdopenStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream).
 
 **Since:** 9
 

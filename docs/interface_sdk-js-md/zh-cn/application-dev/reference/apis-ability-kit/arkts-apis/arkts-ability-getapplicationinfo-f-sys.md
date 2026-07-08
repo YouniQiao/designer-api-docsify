@@ -6,7 +6,9 @@
 function getApplicationInfo(bundleName: string, appFlags: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-根据给定的bundleName和appFlags获取ApplicationInfo。使用callback异步回调。 获取调用方自身的信息时不需要权限。
+根据给定的bundleName和appFlags获取ApplicationInfo。使用callback异步回调。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
 
@@ -66,7 +68,9 @@ try {
 function getApplicationInfo(bundleName: string, appFlags: number, userId: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-根据给定的bundleName、appFlags和userId获取ApplicationInfo。使用callback异步回调。 获取调用方自身的信息时不需要权限。
+根据给定的bundleName、appFlags和userId获取ApplicationInfo。使用callback异步回调。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
 
@@ -129,7 +133,9 @@ try {
 function getApplicationInfo(bundleName: string, appFlags: number, userId?: number): Promise<ApplicationInfo>
 ```
 
-根据给定的bundleName、appFlags和userId获取ApplicationInfo。使用Promise异步回调。 获取调用方自身的信息时不需要权限。
+根据给定的bundleName、appFlags和userId获取ApplicationInfo。使用Promise异步回调。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
 

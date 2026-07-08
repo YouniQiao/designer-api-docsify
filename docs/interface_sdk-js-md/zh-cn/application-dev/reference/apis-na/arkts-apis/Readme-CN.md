@@ -9,6 +9,47 @@
   - [OnHoverStatusChangeHandler](arkts-na-onhoverstatuschangehandler-t.md)
   - [ExtraRegionPosition](arkts-na-extraregionposition-e.md)
   - [PresetSplitRatio](arkts-na-presetsplitratio-e.md)
+- [@ohos.inputMethodSystemPanelManager](arkts-inputmethodsystempanelmanager.md)<!--Del-->
+  - [connectSystemChannel(系统接口)](arkts-na-connectsystemchannel-f-sys.md)<!--DelEnd--><!--Del-->
+  - [offSystemPanelStatusChange(系统接口)](arkts-na-offsystempanelstatuschange-f-sys.md)<!--DelEnd--><!--Del-->
+  - [offSystemPrivateCommand(系统接口)](arkts-na-offsystemprivatecommand-f-sys.md)<!--DelEnd--><!--Del-->
+  - [onSystemPanelStatusChange(系统接口)](arkts-na-onsystempanelstatuschange-f-sys.md)<!--DelEnd--><!--Del-->
+  - [onSystemPrivateCommand(系统接口)](arkts-na-onsystemprivatecommand-f-sys.md)<!--DelEnd--><!--Del-->
+  - [sendPrivateCommand(系统接口)](arkts-na-sendprivatecommand-f-sys.md)<!--DelEnd--><!--Del-->
+  - [SystemPanelStatus(系统接口)](arkts-na-systempanelstatus-i-sys.md)<!--DelEnd--><!--Del-->
+  - [CommandDataType(系统接口)](arkts-na-commanddatatype-t-sys.md)<!--DelEnd--><!--Del-->
+  - [InputMethodInputType(系统接口)](arkts-na-inputmethodinputtype-e-sys.md)<!--DelEnd-->
+- [@ohos.wallpaper](arkts-wallpaper.md)
+  - [getColors](arkts-na-getcolors-f.md)<!--Del-->
+  - [getColorsSync(系统接口)](arkts-na-getcolorssync-f-sys.md)<!--DelEnd-->
+  - [getFile](arkts-na-getfile-f.md)
+  - [getId](arkts-na-getid-f.md)<!--Del-->
+  - [getImage(系统接口)](arkts-na-getimage-f-sys.md)<!--DelEnd-->
+  - [getMinHeight](arkts-na-getminheight-f.md)<!--Del-->
+  - [getMinHeightSync(系统接口)](arkts-na-getminheightsync-f-sys.md)<!--DelEnd-->
+  - [getMinWidth](arkts-na-getminwidth-f.md)<!--Del-->
+  - [getMinWidthSync(系统接口)](arkts-na-getminwidthsync-f-sys.md)<!--DelEnd--><!--Del-->
+  - [getPixelMap(系统接口)](arkts-na-getpixelmap-f-sys.md)<!--DelEnd--><!--Del-->
+  - [getWallpaperByState(系统接口)](arkts-na-getwallpaperbystate-f-sys.md)<!--DelEnd-->
+  - [isChangePermitted](arkts-na-ischangepermitted-f.md)
+  - [isOperationAllowed](arkts-na-isoperationallowed-f.md)
+  - [off](arkts-na-off-f.md)<!--Del-->
+  - [off(系统接口)](arkts-na-off-f-sys.md)<!--DelEnd-->
+  - [on](arkts-na-on-f.md)<!--Del-->
+  - [on(系统接口)](arkts-na-on-f-sys.md)<!--DelEnd-->
+  - [reset](arkts-na-reset-f.md)<!--Del-->
+  - [restore(系统接口)](arkts-na-restore-f-sys.md)<!--DelEnd--><!--Del-->
+  - [setAllWallpapers(系统接口)](arkts-na-setallwallpapers-f-sys.md)<!--DelEnd--><!--Del-->
+  - [setCustomWallpaper(系统接口)](arkts-na-setcustomwallpaper-f-sys.md)<!--DelEnd--><!--Del-->
+  - [setImage(系统接口)](arkts-na-setimage-f-sys.md)<!--DelEnd--><!--Del-->
+  - [setVideo(系统接口)](arkts-na-setvideo-f-sys.md)<!--DelEnd-->
+  - [setWallpaper](arkts-na-setwallpaper-f.md)
+  - [RgbaColor](arkts-na-rgbacolor-i.md)<!--Del-->
+  - [WallpaperInfo(系统接口)](arkts-na-wallpaperinfo-i-sys.md)<!--DelEnd--><!--Del-->
+  - [FoldState(系统接口)](arkts-na-foldstate-e-sys.md)<!--DelEnd--><!--Del-->
+  - [RotateState(系统接口)](arkts-na-rotatestate-e-sys.md)<!--DelEnd--><!--Del-->
+  - [WallpaperResourceType(系统接口)](arkts-na-wallpaperresourcetype-e-sys.md)<!--DelEnd-->
+  - [WallpaperType](arkts-na-wallpapertype-e.md)
 - application<!--arkts-na-application-->
   - [AppServiceExtensionContext](arkts-appserviceextensioncontext.md)
     - [AppServiceExtensionContext](arkts-na-appserviceextensioncontext-c.md)

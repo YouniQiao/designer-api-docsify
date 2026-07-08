@@ -12,7 +12,8 @@ import { notificationManager } from '@kit.NotificationKit';
 function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether notification is enabled for the specified application. This API uses an asynchronous callback to return the result.
+Checks whether notification is enabled for the specified application. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 9
 
@@ -126,7 +127,8 @@ notificationManager.isNotificationEnabled(bundle).then((data: boolean) => {
 function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether notification is enabled for the specified application. This API uses an asynchronous callback to return the result.
+Checks whether notification is enabled for the specified application. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 11
 
@@ -229,7 +231,8 @@ notificationManager.isNotificationEnabled().then((data: boolean) => {
 function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether notification is enabled for a specified user. This API uses an asynchronous callback to return the result.
+Checks whether notification is enabled for a specified user. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 9
 

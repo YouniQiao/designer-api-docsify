@@ -12,7 +12,8 @@ import { systemTime } from '@kit.BasicServicesKit';
 function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void
 ```
 
-Obtains the time elapsed since system startup, including the deep sleep time. This API uses an asynchronous callback to return the result.
+Obtains the time elapsed since system startup, including the deep sleep time. This API uses an asynchronous
+callback to return the result.
 
 **Since:** 8
 
@@ -62,7 +63,8 @@ try {
 function getRealTime(callback: AsyncCallback<number>): void
 ```
 
-Obtains the time elapsed since system startup, including the deep sleep time. This API uses an asynchronous callback to return the result.
+Obtains the time elapsed since system startup, including the deep sleep time. This API uses an asynchronous
+callback to return the result.
 
 **Since:** 8
 
@@ -111,7 +113,8 @@ try {
 function getRealTime(isNano?: boolean): Promise<number>
 ```
 
-Obtains the time elapsed since system startup, including the deep sleep time. This API uses a promise to return the result.
+Obtains the time elapsed since system startup, including the deep sleep time. This API uses a promise to return the
+result.
 
 **Since:** 8
 

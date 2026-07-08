@@ -20,7 +20,8 @@ import { window } from '@kit.ArkUI';
 x?: number
 ```
 
-Distance to translate along the x-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
+Distance to translate along the x-axis. The value is a floating-point number, the default value is 0.0, and the
+unit is px.
 
 **Type:** number
 
@@ -36,7 +37,8 @@ Distance to translate along the x-axis. The value is a floating-point number, th
 y?: number
 ```
 
-Distance to translate along the y-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
+Distance to translate along the y-axis. The value is a floating-point number, the default value is 0.0, and the
+unit is px.
 
 **Type:** number
 
@@ -52,7 +54,8 @@ Distance to translate along the y-axis. The value is a floating-point number, th
 z?: number
 ```
 
-Distance to translate along the z-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
+Distance to translate along the z-axis. The value is a floating-point number, the default value is 0.0, and the
+unit is px.
 
 **Type:** number
 

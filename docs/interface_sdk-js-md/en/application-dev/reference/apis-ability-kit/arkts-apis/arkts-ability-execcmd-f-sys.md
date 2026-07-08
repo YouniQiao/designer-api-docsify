@@ -14,7 +14,7 @@ function execCmd(cmd: string, execCmdOptions?: ExecCmdOptions): Promise<CliSessi
 
 Execute a command. This API uses a promise to return the result.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Required permissions:** ohos.permission.EXEC_CLI_TOOL
 

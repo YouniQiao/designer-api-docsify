@@ -20,7 +20,8 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 close(): void
 ```
 
-Closes this FetchFileResult instance to invalidate it. After this instance is closed, the APIs in this instance cannot be invoked.
+Closes this FetchFileResult instance to invalidate it.
+After this instance is closed, the APIs in this instance cannot be invoked.
 
 **Since:** 12
 
@@ -248,7 +249,9 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 getNextObject(): Promise<T>
 ```
 
-Obtains the next asset in the result set. This API uses a promise to return the result. Before using this API, you must use isAfterLast() to check whether the current position is the end of <br>the result set.
+Obtains the next asset in the result set. This API uses a promise to return the result.
+Before using this API, you must use isAfterLast() to check whether the current position is the end of
+<br>the result set.
 
 **Since:** 12
 

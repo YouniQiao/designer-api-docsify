@@ -12,7 +12,8 @@ import { notificationManager } from '@kit.NotificationKit';
 function setAdditionalConfig(key: string, value: string): Promise<number>
 ```
 
-Sets the additional system configuration information of the notification. This API uses a promise to return the result.
+Sets the additional system configuration information of the notification. This API uses a promise to return the
+result.
 
 **Since:** 12
 

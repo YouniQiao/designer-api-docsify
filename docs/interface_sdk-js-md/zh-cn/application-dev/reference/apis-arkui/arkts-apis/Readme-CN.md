@@ -24,6 +24,13 @@
   - [VideoLiveControlGroup](arkts-arkui-videolivecontrolgroup-e.md)
   - [VideoMeetingControlGroup](arkts-arkui-videomeetingcontrolgroup-e.md)
   - [VideoPlayControlGroup](arkts-arkui-videoplaycontrolgroup-e.md)
+- [@ohos.animation.windowAnimationManager](arkts-animation-windowanimationmanager.md)<!--Del-->
+  - [minimizeWindowWithAnimation(系统接口)](arkts-arkui-minimizewindowwithanimation-f-sys.md)<!--DelEnd--><!--Del-->
+  - [setController(系统接口)](arkts-arkui-setcontroller-f-sys.md)<!--DelEnd--><!--Del-->
+  - [RRect(系统接口)](arkts-arkui-rrect-i-sys.md)<!--DelEnd--><!--Del-->
+  - [WindowAnimationController(系统接口)](arkts-arkui-windowanimationcontroller-i-sys.md)<!--DelEnd--><!--Del-->
+  - [WindowAnimationFinishedCallback(系统接口)](arkts-arkui-windowanimationfinishedcallback-i-sys.md)<!--DelEnd--><!--Del-->
+  - [WindowAnimationTarget(系统接口)](arkts-arkui-windowanimationtarget-i-sys.md)<!--DelEnd-->
 - [@ohos.animator](arkts-animator.md)
   - [Animator](arkts-arkui-animator-c.md)
   - [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md)
@@ -163,6 +170,10 @@
   - [ResolveStrategy](arkts-arkui-resolvestrategy-e.md)
   - [SwiperDynamicSyncSceneType](arkts-arkui-swiperdynamicsyncscenetype-e.md)
   - [TextSelectionClearPolicy](arkts-arkui-textselectionclearpolicy-e.md)
+- [@ohos.arkui.WithEnv](arkts-arkui-withenv.md)
+  - [WithEnvAttribute](arkts-arkui-withenvattribute-c.md)
+  - [WithEnvInterface](arkts-arkui-withenvinterface-t.md)
+  - [常量](arkts-arkui-arkui-withenv-con.md)
 - [@ohos.arkui.advanced.ArcButton](arkts-arkui-advanced-arcbutton.md)
   - [ArcButtonOptions](arkts-arkui-arcbuttonoptions-c.md)
   - [ArcButtonProgressConfig](arkts-arkui-arcbuttonprogressconfig-c.md)
@@ -325,6 +336,8 @@
   - [EditorMenuOptions](arkts-arkui-editormenuoptions-i.md)
   - [ExpandedMenuOptions](arkts-arkui-expandedmenuoptions-i.md)
   - [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md)
+- [@ohos.arkui.advanced.SplitLayout](arkts-arkui-advanced-splitlayout.md)
+  - [SplitLayout](arkts-arkui-splitlayout-s.md)
 - [@ohos.arkui.componentSnapshot](arkts-arkui-componentsnapshot.md)
   - [createFromBuilder](arkts-arkui-createfrombuilder-f.md)
   - [get](arkts-arkui-get-f.md)
@@ -353,6 +366,25 @@
   - [DynamicLayoutAttribute](arkts-arkui-dynamiclayoutattribute-c.md)
   - [DynamicLayoutInterface](arkts-arkui-dynamiclayoutinterface-i.md)
   - [常量](arkts-arkui-arkui-components-arkdynamiclayout-con.md)
+- [@ohos.arkui.components.ArkLazyColumnLayout](arkts-arkui-components-arklazycolumnlayout.md)
+  - [LazyColumnLayoutAttribute](arkts-arkui-lazycolumnlayoutattribute-c.md)
+  - [LazyColumnLayoutInterface](arkts-arkui-lazycolumnlayoutinterface-i.md)
+  - [常量](arkts-arkui-arkui-components-arklazycolumnlayout-con.md)
+- [@ohos.arkui.components.ArkLazyDynamicLayout](arkts-arkui-components-arklazydynamiclayout.md)
+  - [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md)
+  - [LazyDynamicLayoutAttribute](arkts-arkui-lazydynamiclayoutattribute-c.md)
+  - [常量](arkts-arkui-arkui-components-arklazydynamiclayout-con.md)
+- [@ohos.arkui.components.ArkLazyWaterFlowLayout](arkts-arkui-components-arklazywaterflowlayout.md)
+  - [LazyVWaterFlowLayoutAttribute](arkts-arkui-lazyvwaterflowlayoutattribute-c.md)
+  - [LazyWaterFlowLayoutAttribute](arkts-arkui-lazywaterflowlayoutattribute-c.md)
+  - [LazyVWaterFlowLayoutInterface](arkts-arkui-lazyvwaterflowlayoutinterface-i.md)
+  - [常量](arkts-arkui-arkui-components-arklazywaterflowlayout-con.md)
+- [@ohos.arkui.components.ContainerReader](arkts-arkui-components-containerreader.md)
+  - [ContainerReaderAttribute](arkts-arkui-containerreaderattribute-c.md)
+  - [BreakpointOptions](arkts-arkui-breakpointoptions-i.md)
+  - [ContainerReaderInfo](arkts-arkui-containerreaderinfo-i.md)
+  - [ContainerReaderInterface](arkts-arkui-containerreaderinterface-i.md)
+  - [常量](arkts-arkui-arkui-components-containerreader-con.md)
 - [@ohos.arkui.dialog](arkts-arkui-dialog.md)
   - [dialog](arkts-arkui-dialog-n.md)
     - [DialogBaseOptions](arkts-arkui-dialogbaseoptions-i.md)<!--Del-->
@@ -976,6 +1008,12 @@
     - [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
     - [RowLayoutAlgorithmOptions](arkts-arkui-rowlayoutalgorithmoptions-i.md)
     - [StackLayoutAlgorithmOptions](arkts-arkui-stacklayoutalgorithmoptions-i.md)
+  - [LazyLayoutAlgorithm](arkts-lazylayoutalgorithm.md)
+    - [LazyCustomLayoutAlgorithm](arkts-arkui-lazycustomlayoutalgorithm-c.md)
+    - [LazyLayoutHelper](arkts-arkui-lazylayouthelper-c.md)
+    - [LazyCustomLayoutAlgorithmOptions](arkts-arkui-lazycustomlayoutalgorithmoptions-i.md)
+    - [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md)
+    - [LazyLayoutDirection](arkts-arkui-lazylayoutdirection-e.md)
   - [NodeContent](arkts-nodecontent.md)
     - [NodeContent](arkts-arkui-nodecontent-c.md)
   - [NodeController](arkts-nodecontroller.md)
@@ -985,3 +1023,7 @@
 - application<!--arkts-arkui-application-->
   - [WindowExtensionContext](arkts-windowextensioncontext.md)<!--Del-->
     - [WindowExtensionContext(系统接口)](arkts-arkui-windowextensioncontext-c-sys.md)<!--DelEnd-->
+- common<!--arkts-arkui-common-->
+  - [canvaspattern](arkts-canvaspattern.md)
+    - [Matrix2D](arkts-arkui-matrix2d-c.md)
+    - [CanvasPattern](arkts-arkui-canvaspattern-i.md)

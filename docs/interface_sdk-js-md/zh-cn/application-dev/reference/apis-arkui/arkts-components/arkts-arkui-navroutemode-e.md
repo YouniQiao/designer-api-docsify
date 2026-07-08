@@ -13,7 +13,7 @@
 ## PUSH_WITH_RECREATE
 
 ```TypeScript
-PUSH_WITH_RECREATE = 0
+PUSH_WITH_RECREATE
 ```
 
 跳转到新的NavDestination页面时，替换当前显示的NavDestination页面，页面销毁，但该页面信息仍保留在路由栈中。
@@ -33,7 +33,7 @@ PUSH_WITH_RECREATE = 0
 ## PUSH
 
 ```TypeScript
-PUSH = 1
+PUSH
 ```
 
 **起始版本：** 10
@@ -51,7 +51,7 @@ PUSH = 1
 ## REPLACE
 
 ```TypeScript
-REPLACE = 2
+REPLACE
 ```
 
 **起始版本：** 10

@@ -134,7 +134,8 @@ List of physical cameras that form the logical camera.
 readonly isLogicalCamera?: boolean
 ```
 
-Whether a camera is a logical camera (consisting of multiple physical cameras). **true** if the camera is a logical camera, **false** otherwise.
+Whether a camera is a logical camera (consisting of multiple physical cameras). **true** if the camera is a
+logical camera, **false** otherwise.
 
 **Type:** boolean
 

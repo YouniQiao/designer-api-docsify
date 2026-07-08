@@ -1,6 +1,9 @@
 # AudioManager
 
-This interface implements audio volume and device management. Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-getaudiomanager-f.md#getaudiomanager-1) to obtain an AudioManager instance.
+This interface implements audio volume and device management.
+
+Before calling any API in AudioManager, you must use
+[getAudioManager](arkts-audio-getaudiomanager-f.md#getaudiomanager-1) to obtain an AudioManager instance.
 
 **Since:** 7
 
@@ -164,34 +167,6 @@ audioManager.getExtraParameters('key_example', subKeys).then((value: Record<stri
 
 ```
 
-## getRecordingManager
-
-```TypeScript
-getRecordingManager(): AudioRecordingManager
-```
-
-Obtains a recording manager instance. Provides recording strategy management, including collaborative recording and recording control capabilities.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| AudioRecordingManager | Returns an instance of audio record manager. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-
 ## on('volumeChange')
 
 ```TypeScript
@@ -268,7 +243,8 @@ audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
 setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void
 ```
 
-Sets the audio scene mode to change audio strategies. This method uses an asynchronous callback to return the result.
+Sets the audio scene mode to change audio strategies. This method uses an asynchronous callback to return the
+result.
 
 **Since:** 8
 

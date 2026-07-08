@@ -6,7 +6,13 @@
 function uninstallDLPSandbox(bundleName: string, userId: number, appIndex: number): Promise<void>
 ```
 
-卸载一个应用的DLP沙箱。使用Promise异步回调。调用成功后，系统销毁指定的DLP沙箱环境并释放相关资源。 需要清理对应的沙箱环境时使用此接口。 必须在调用 [installDLPSandbox](arkts-dataprotection-installdlpsandbox-f-sys.md#installdlpsandbox-1) 安装沙箱后才能调用此方法卸载。
+卸载一个应用的DLP沙箱。使用Promise异步回调。调用成功后，系统销毁指定的DLP沙箱环境并释放相关资源。
+
+需要清理对应的沙箱环境时使用此接口。
+
+必须在调用
+[installDLPSandbox](arkts-dataprotection-installdlpsandbox-f-sys.md#installdlpsandbox-1)
+安装沙箱后才能调用此方法卸载。
 
 **起始版本：** 10
 
@@ -63,7 +69,13 @@ dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.REA
 function uninstallDLPSandbox(bundleName: string, userId: number, appIndex: number, callback: AsyncCallback<void>): void
 ```
 
-卸载一个应用的DLP沙箱。使用callback异步回调。调用成功后，系统销毁指定的DLP沙箱环境并释放相关资源。 需要清理沙箱环境时使用此接口。 必须在调用 [installDLPSandbox](arkts-dataprotection-installdlpsandbox-f-sys.md#installdlpsandbox-1) 安装沙箱后才能调用此方法卸载。
+卸载一个应用的DLP沙箱。使用callback异步回调。调用成功后，系统销毁指定的DLP沙箱环境并释放相关资源。
+
+需要清理沙箱环境时使用此接口。
+
+必须在调用
+[installDLPSandbox](arkts-dataprotection-installdlpsandbox-f-sys.md#installdlpsandbox-1)
+安装沙箱后才能调用此方法卸载。
 
 **起始版本：** 10
 

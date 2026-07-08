@@ -6,7 +6,9 @@
 function on(type: 'error', observer: ErrorObserver): number
 ```
 
-注册错误观测器。注册后可以捕获到应用产生的js crash，属于应用崩溃的一种。观测器捕获到该异常时应用不退出，建议在回调函数执行完后，增加同步退出操作。 仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注册错误观测器。注册后可以捕获到应用产生的js crash，属于应用崩溃的一种。观测器捕获到该异常时应用不退出，建议在回调函数执行完后，增加同步退出操作。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 9
 
@@ -71,7 +73,9 @@ try {
 function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 ```
 
-注册主线程消息处理耗时监听器。注册后可以捕获到应用主线程处理消息的具体执行时间。 仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注册主线程消息处理耗时监听器。注册后可以捕获到应用主线程处理消息的具体执行时间。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 12
 
@@ -122,7 +126,9 @@ try {
 function on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): void
 ```
 
-注册被拒绝promise监听器。注册后可以捕获到当前线程中未被捕获到的promise rejection。 仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注册被拒绝promise监听器。注册后可以捕获到当前线程中未被捕获到的promise rejection。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 12
 
@@ -229,7 +235,14 @@ let promise1 = new Promise<void>(() => {}).then(() => {
 function on(type: 'freeze', observer: FreezeObserver): void
 ```
 
-注册应用主线程freeze监听。多次注册情况下，取最后一次注册的结果。 仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。 > **注意**： > > 如果该回调函数执行时间超过1s，可能导致[AppRecovery](arkts-app-ability-apprecovery.md)功能不可用。通过解析hilog日志中的begin与Freeze > callback execution completed两者的时间差可以计算回调函数执行时长，如果超过1秒，可以尝试采用异步处理、减少阻塞操作、优化数据结构等方法优化回调逻辑，降低执行时长。
+注册应用主线程freeze监听。多次注册情况下，取最后一次注册的结果。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+
+> **注意**：
+>
+> 如果该回调函数执行时间超过1s，可能导致[AppRecovery](arkts-app-ability-apprecovery.md)功能不可用。通过解析hilog日志中的begin与Freeze
+> callback execution completed两者的时间差可以计算回调函数执行时长，如果超过1秒，可以尝试采用异步处理、减少阻塞操作、优化数据结构等方法优化回调逻辑，降低执行时长。
 
 **起始版本：** 18
 

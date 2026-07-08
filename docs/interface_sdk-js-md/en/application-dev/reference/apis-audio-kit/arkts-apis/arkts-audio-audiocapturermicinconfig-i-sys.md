@@ -1,6 +1,7 @@
 # AudioCapturerMicInConfig (System API)
 
-Describes audio capturer configuration that can capture microphone input (mic-in) audio data before any processing.
+Describes audio capturer configuration that can capture
+microphone input (mic-in) audio data before any processing.
 
 **Since:** 23
 
@@ -38,7 +39,8 @@ Capturer attribute information.
 ecStreamInfo?: AudioStreamInfo
 ```
 
-Stream information that describes echo reference signal. If not set this attribute, the capturer will only record Mic-In audio stream.
+Stream information that describes echo reference signal.
+If not set this attribute, the capturer will only record Mic-In audio stream.
 
 **Type:** AudioStreamInfo
 

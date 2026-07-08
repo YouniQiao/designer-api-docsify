@@ -12,7 +12,8 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function disableNetwork(netId: number): void
 ```
 
-Disable the specified DeviceConfig by networkId. The disabled DeviceConfig will not be associated with again.
+Disable the specified DeviceConfig by networkId.
+The disabled DeviceConfig will not be associated with again.
 
 **Since:** 9
 
@@ -60,7 +61,8 @@ try {
 function disableNetwork(netId: number, blockDuration: number): void
 ```
 
-Disable the specified DeviceConfig by networkId for a period of time. The disabled DeviceConfig will not be associated with again.
+Disable the specified DeviceConfig by networkId for a period of time.
+The disabled DeviceConfig will not be associated with again.
 
 **Since:** 23
 

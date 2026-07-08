@@ -12,7 +12,8 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function isChangePermitted(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether to allow the application to change the wallpaper for the current user. Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise.
+Checks whether to allow the application to change the wallpaper for the current user.
+Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise.
 
 **Since:** 7
 
@@ -48,7 +49,8 @@ wallpaper.isChangePermitted((error: BusinessError, data: Boolean) => {
 function isChangePermitted(): Promise<boolean>
 ```
 
-Checks whether to allow the application to change the wallpaper for the current user. Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise.
+Checks whether to allow the application to change the wallpaper for the current user.
+Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise.
 
 **Since:** 7
 

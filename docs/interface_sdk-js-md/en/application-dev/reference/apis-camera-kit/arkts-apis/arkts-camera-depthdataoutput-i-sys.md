@@ -103,7 +103,11 @@ function unregisterDepthDataOutputError(depthDataOutput: camera.DepthDataOutput)
 on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void
 ```
 
-Subscribes to depth data availability events. This API uses an asynchronous callback to return the result. > **NOTE** > > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to depth data availability events. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+>
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 13
 
@@ -148,7 +152,11 @@ function registerDepthDataAvailable(depthDataOutput: camera.DepthDataOutput): vo
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to DepthDataOutput error events. This API uses an asynchronous callback to return the result. > **NOTE** > > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to DepthDataOutput error events. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+>
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 13
 

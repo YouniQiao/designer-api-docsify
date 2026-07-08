@@ -20,10 +20,17 @@ Defines the update data of the image source. It is obtained by calling [OH_Image
 
 | Name | Description |
 | -- | -- |
-| uint8_t* buffer = nullptr | Image source update data buffer. |
-| size_t bufferSize = 0 | Image source update data buffer size. |
-| uint32_t offset = 0 | Image source offset of update data buffer. |
-| uint32_t updateLength = 0 | Image source update data length in update data buffer. |
-| int8_t isCompleted = 0 | Image source update data is completed in this session. |
+| uint8_t* buffer = nullptr |  |
+| size_t bufferSize = 0 |  |
+| uint32_t offset = 0 |  |
+| uint32_t updateLength = 0 |  |
+| int8_t isCompleted = 0;
+#else |  |
+| uint8_t* buffer |  |
+| size_t bufferSize |  |
+| uint32_t offset |  |
+| uint32_t updateLength |  |
+| int8_t isCompleted;
+#endif |  |
 
 

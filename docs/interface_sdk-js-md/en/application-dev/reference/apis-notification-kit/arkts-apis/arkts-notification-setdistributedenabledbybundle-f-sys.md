@@ -12,7 +12,8 @@ import { notificationManager } from '@kit.NotificationKit';
 function setDistributedEnabledByBundle(bundle: BundleOption, deviceType: string, enable: boolean): Promise<void>
 ```
 
-Sets whether a specified application enables cross-device collaboration. This API uses a promise to return the result.
+Sets whether a specified application enables cross-device collaboration. This API uses a promise to return the
+result.
 
 **Since:** 12
 

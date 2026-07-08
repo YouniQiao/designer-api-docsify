@@ -12,7 +12,8 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<CommonEventData>): Promise<void>
 ```
 
-Subscribes to a common event. This API uses a promise to return the result, indicating subscription success or failure.
+Subscribes to a common event. This API uses a promise to return the result, indicating subscription success or
+failure.
 
 **Since:** 20
 

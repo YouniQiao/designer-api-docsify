@@ -12,7 +12,8 @@ import { JSON } from '@kit.ArkTS';
 function stringify(value: Object, replacer?: (number | string)[] | null, space?: string | number): string
 ```
 
-Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported, but non-linear containers are not.
+Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported,
+but non-linear containers are not.
 
 **Since:** 12
 
@@ -41,7 +42,8 @@ Converts an ArkTS object or array into a JSON string. In the case of a container
 function stringify(value: Object, replacer?: Transformer, space?: string | number): string
 ```
 
-Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported, but non-linear containers are not.
+Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported,
+but non-linear containers are not.
 
 **Since:** 12
 

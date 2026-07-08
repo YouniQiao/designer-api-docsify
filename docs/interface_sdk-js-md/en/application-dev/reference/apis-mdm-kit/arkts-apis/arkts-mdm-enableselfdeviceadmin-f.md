@@ -9,7 +9,7 @@ import { adminManager } from '@kit.MDMKit';
 ## enableSelfDeviceAdmin
 
 ```TypeScript
-function enableSelfDeviceAdmin(admin: Want, credential: string): Promise<void>
+function enableSelfDeviceAdmin(admin: Want, credential: string): void
 ```
 
 Enables self as a device administrator.
@@ -28,12 +28,6 @@ Enables self as a device administrator.
 | --- | --- | --- | --- |
 | admin | Want | Yes | admin indicates the enterprise admin extension ability information.The admin must have the corresponding permission. |
 | credential | string | Yes | credential indicates the credential for activating self as an administrator. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | the promise returned by the enableSelfDeviceAdmin. |
 
 **Error codes:**
 

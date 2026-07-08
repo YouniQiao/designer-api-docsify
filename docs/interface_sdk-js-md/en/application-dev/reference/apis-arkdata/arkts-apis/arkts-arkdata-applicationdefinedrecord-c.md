@@ -1,6 +1,8 @@
 # ApplicationDefinedRecord
 
-Represents the custom data type for applications only. It is a child class of [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md) and a base class of custom data types of applications. Applications can extend custom data types based on this class.
+Represents the custom data type for applications only. It is a child class of
+[UnifiedRecord](arkts-arkdata-unifiedrecord-c.md) and a base class of custom data types of applications.
+Applications can extend custom data types based on this class.
 
 **Inheritance/Implementation:** ApplicationDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md)
 
@@ -20,7 +22,8 @@ import { unifiedDataChannel } from '@kit.ArkData';
 set applicationDefinedType(value: string)
 ```
 
-Indicates the type of data, should always be started with 'ApplicationDefined.', will return error otherwise
+Indicates the type of data, should always be started with 'ApplicationDefined.', will
+return error otherwise
 
 **Type:** string
 

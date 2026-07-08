@@ -34,7 +34,8 @@ Bundle name of the web native message extension application.
 connectionId: number
 ```
 
-Connection ID. The value range is all integers.
+Connection ID.
+The value range is all integers.
 
 **Type:** number
 
@@ -66,7 +67,8 @@ Source URL of the browser extension.
 extensionPid: number
 ```
 
-Process ID of the web native message extension. The value range is all integers.
+Process ID of the web native message extension.
+The value range is all integers.
 
 **Type:** number
 

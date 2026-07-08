@@ -12,7 +12,8 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Enables or disables static subscription for an application. This API uses an asynchronous callback to return the result.
+Enables or disables static subscription for an application. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 10
 
@@ -111,7 +112,8 @@ commonEventManager.setStaticSubscriberState(false).then(() => {
 function setStaticSubscriberState(enable: boolean, events?: Array<string>): Promise<void>
 ```
 
-Enables or disables the static subscription event for the current application and records the event name. This API uses a promise to return the result.
+Enables or disables the static subscription event for the current application and records the event name. This API
+uses a promise to return the result.
 
 **Since:** 12
 

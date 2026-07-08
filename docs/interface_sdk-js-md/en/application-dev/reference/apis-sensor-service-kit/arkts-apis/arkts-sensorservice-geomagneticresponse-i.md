@@ -18,7 +18,8 @@ import { sensor } from '@kit.SensorServiceKit';
 deflectionAngle: number
 ```
 
-Magnetic declination, which is the angle between true north (geographic north) and the magnetic north (the horizontal component of the field), in degrees.
+Magnetic declination, which is the angle between true north (geographic north) and the magnetic north (the
+horizontal component of the field), in degrees.
 
 **Type:** number
 
@@ -32,7 +33,8 @@ Magnetic declination, which is the angle between true north (geographic north) a
 geomagneticDip: number
 ```
 
-Magnetic dip, also called magnetic inclination, which is the angle measured from the horizontal plane to the magnetic field vector, in degrees.
+Magnetic dip, also called magnetic inclination, which is the angle measured from the horizontal plane to the
+magnetic field vector, in degrees.
 
 **Type:** number
 

@@ -12,7 +12,8 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAbilityInfo(uri: string, abilityFlags: number): Promise<Array<AbilityInfo>>
 ```
 
-Obtains the ability information based on the given resource identifier and ability flag. This API uses a promise to return the result.
+Obtains the ability information based on the given resource identifier and ability flag. This API uses a promise to
+return the result.
 
 **Since:** 20
 

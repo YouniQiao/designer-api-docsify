@@ -17,7 +17,8 @@ function setNotificationEnableSlot(
   ): void
 ```
 
-Sets the enabled status of a slot type for the specified application. This API uses an asynchronous callback to return the result.
+Sets the enabled status of a slot type for the specified application. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 9
 
@@ -84,7 +85,8 @@ function setNotificationEnableSlot(
   ): void
 ```
 
-Sets the enabled status of a slot type for the specified application. This API uses an asynchronous callback to return the result.
+Sets the enabled status of a slot type for the specified application. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 11
 

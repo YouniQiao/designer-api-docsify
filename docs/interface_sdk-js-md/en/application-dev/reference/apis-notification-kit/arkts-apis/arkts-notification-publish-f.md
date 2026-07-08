@@ -12,7 +12,10 @@ import { notificationManager } from '@kit.NotificationKit';
 function publish(request: NotificationRequest, callback: AsyncCallback<void>): void
 ```
 
-Publishes a notification. This API uses an asynchronous callback to return the result. If the ID and label of the new notification are the same as that of the previous notification, the new one replaces the previous one.
+Publishes a notification. This API uses an asynchronous callback to return the result.
+
+If the ID and label of the new notification are the same as that of the previous notification, the new one replaces
+the previous one.
 
 **Since:** 9
 
@@ -81,7 +84,10 @@ notificationManager.publish(notificationRequest, publishCallback);
 function publish(request: NotificationRequest): Promise<void>
 ```
 
-Publishes a notification. This API uses a promise to return the result. If the ID and label of the new notification are the same as that of the previous notification, the new one replaces the previous one.
+Publishes a notification. This API uses a promise to return the result.
+
+If the ID and label of the new notification are the same as that of the previous notification, the new one replaces
+the previous one.
 
 **Since:** 9
 

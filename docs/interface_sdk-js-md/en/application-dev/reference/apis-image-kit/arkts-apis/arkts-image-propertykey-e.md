@@ -1,6 +1,19 @@
 # PropertyKey
 
-Enumerates the types of Exchangeable Image File Format (Exif) data of an image. - The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for example, **image.PropertyKey.NEW_SUBFILE_TYPE**). - The format example is used only to show how to modify values and read results. For details about how to use them, see [modifyImageProperty](arkts-image-imagesource-i.md#modifyimageproperty-1) (to modify a single Exif field), [modifyImageProperties](arkts-image-imagesource-i.md#modifyimageproperties-1) (to modify multiple Exif fields), [getImageProperty](arkts-image-imagesource-i.md#getimageproperty-1) (to read a single Exif field), and [getImageProperties](arkts-image-imagesource-i.md#getimageproperties-1) ( to read multiple Exif fields).
+Enumerates the types of Exchangeable Image File Format (Exif) data of an image.
+
+- The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for
+example, **image.PropertyKey.NEW_SUBFILE_TYPE**).
+- The format example is used only to show how to modify values and read results. For details about how to use them,
+see
+[modifyImageProperty](arkts-image-imagesource-i.md#modifyimageproperty-1)
+(to modify a single Exif field),
+[modifyImageProperties](arkts-image-imagesource-i.md#modifyimageproperties-1)
+(to modify multiple Exif fields),
+[getImageProperty](arkts-image-imagesource-i.md#getimageproperty-1)
+(to read a single Exif field), and
+[getImageProperties](arkts-image-imagesource-i.md#getimageproperties-1) (
+to read multiple Exif fields).
 
 **Since:** 7
 
@@ -12,7 +25,9 @@ Enumerates the types of Exchangeable Image File Format (Exif) data of an image. 
 BITS_PER_SAMPLE = 'BitsPerSample'
 ```
 
-Number of bits per sample. For example, for RGB, which has three components, the format is 8,8,8. **Read/Write capability**: readable and writable.
+Number of bits per sample. For example, for RGB, which has three components, the format is 8,8,8.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -24,7 +39,32 @@ Number of bits per sample. For example, for RGB, which has three components, the
 ORIENTATION = 'Orientation'
 ```
 
-Image orientation. 1: **Top-left**: The image is not rotated. 2: **Top-right**: The image is flipped horizontally. 3: **Bottom-right**: The image is rotated by 180°. 4: **Bottom-left**: The image is flipped vertically. 5: **Left-top**: The image is flipped horizontally and then rotated clockwise by 270°. 6: **Right-top**: The image is rotated clockwise by 90°. 7: **Right-bottom**: The image is vertically flipped and then rotated clockwise by 90°. 8: **Left-bottom**: The image is rotated clockwise by 270°. If an undefined value x is read, **Unknown Value x** is returned. The value of the property obtained is returned as a string. When modifying the property, you can specify the property either in the form of a number or a string. For details about the image rotation angle, see [Obtaining the Rotation Angle of an Image](../../../../media/image/image-faqs/image-rotate-faq.md). **Read/Write capability**: readable and writable.
+Image orientation.
+
+1: **Top-left**: The image is not rotated.
+
+2: **Top-right**: The image is flipped horizontally.
+
+3: **Bottom-right**: The image is rotated by 180°.
+
+4: **Bottom-left**: The image is flipped vertically.
+
+5: **Left-top**: The image is flipped horizontally and then rotated clockwise by 270°.
+
+6: **Right-top**: The image is rotated clockwise by 90°.
+
+7: **Right-bottom**: The image is vertically flipped and then rotated clockwise by 90°.
+
+8: **Left-bottom**: The image is rotated clockwise by 270°.
+
+If an undefined value x is read, **Unknown Value x** is returned. The value of the property obtained is returned
+as a string. When modifying the property, you can specify the property either in the form of a number or a
+string.
+
+For details about the image rotation angle, see
+[Obtaining the Rotation Angle of an Image](../../../../media/image/image-faqs/image-rotate-faq.md).
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -36,7 +76,9 @@ Image orientation. 1: **Top-left**: The image is not rotated. 2: **Top-right**: 
 IMAGE_LENGTH = 'ImageLength'
 ```
 
-Image length. **Read/Write capability**: readable and writable.
+Image length.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -48,7 +90,9 @@ Image length. **Read/Write capability**: readable and writable.
 IMAGE_WIDTH = 'ImageWidth'
 ```
 
-Image width. **Read/Write capability**: readable and writable.
+Image width.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -60,7 +104,9 @@ Image width. **Read/Write capability**: readable and writable.
 GPS_LATITUDE = 'GPSLatitude'
 ```
 
-Image latitude. The value must be in the format of degree,minute,second, for example, 39,54,7.542. **Read/Write capability**: readable and writable.
+Image latitude. The value must be in the format of degree,minute,second, for example, 39,54,7.542.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -72,7 +118,9 @@ Image latitude. The value must be in the format of degree,minute,second, for exa
 GPS_LONGITUDE = 'GPSLongitude'
 ```
 
-Image longitude. The value must be in the format of degree,minute,second, for example, 116,19,42.16. **Read/Write capability**: readable and writable.
+Image longitude. The value must be in the format of degree,minute,second, for example, 116,19,42.16.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -84,7 +132,13 @@ Image longitude. The value must be in the format of degree,minute,second, for ex
 GPS_LATITUDE_REF = 'GPSLatitudeRef'
 ```
 
-Latitude reference (Northern or Southern Hemisphere) of the image capture location. 78: "North". 83: "South". **Read/Write capability**: readable and writable.
+Latitude reference (Northern or Southern Hemisphere) of the image capture location.
+
+78: "North".
+
+83: "South".
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -96,7 +150,13 @@ Latitude reference (Northern or Southern Hemisphere) of the image capture locati
 GPS_LONGITUDE_REF = 'GPSLongitudeRef'
 ```
 
-Longitude reference (Eastern or Western Hemisphere) of the image capture location. 69: "East". 87: "West". **Read/Write capability**: readable and writable.
+Longitude reference (Eastern or Western Hemisphere) of the image capture location.
+
+69: "East".
+
+87: "West".
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -108,7 +168,9 @@ Longitude reference (Eastern or Western Hemisphere) of the image capture locatio
 DATE_TIME_ORIGINAL = 'DateTimeOriginal'
 ```
 
-Time when the original image data was generated, for example, 2022:09:06 15:48:00. **Read/Write capability**: readable and writable.
+Time when the original image data was generated, for example, 2022:09:06 15:48:00.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 9
 
@@ -120,7 +182,9 @@ Time when the original image data was generated, for example, 2022:09:06 15:48:0
 EXPOSURE_TIME = 'ExposureTime'
 ```
 
-Exposure time, for example, 1/33 seconds. **Read/Write capability**: readable and writable.
+Exposure time, for example, 1/33 seconds.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 9
 
@@ -132,7 +196,11 @@ Exposure time, for example, 1/33 seconds. **Read/Write capability**: readable an
 SCENE_TYPE = 'SceneType'
 ```
 
-Type of the scene, for example, portrait, scenery, motion, and night. 1: "Directly photographed", indicating that the image is directly captured by the image sensor. **Read/Write capability**: readable and writable.
+Type of the scene, for example, portrait, scenery, motion, and night.
+
+1: "Directly photographed", indicating that the image is directly captured by the image sensor.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 9
 
@@ -144,7 +212,9 @@ Type of the scene, for example, portrait, scenery, motion, and night. 1: "Direct
 ISO_SPEED_RATINGS = 'ISOSpeedRatings'
 ```
 
-ISO sensitivity or ISO speed, for example, 400. **Read/Write capability**: readable and writable.
+ISO sensitivity or ISO speed, for example, 400.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 9
 
@@ -156,7 +226,9 @@ ISO sensitivity or ISO speed, for example, 400. **Read/Write capability**: reada
 F_NUMBER = 'FNumber'
 ```
 
-F number, for example, f/1.8. **Read/Write capability**: readable and writable.
+F number, for example, f/1.8.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 9
 
@@ -168,7 +240,9 @@ F number, for example, f/1.8. **Read/Write capability**: readable and writable.
 DATE_TIME = 'DateTime'
 ```
 
-Date and time of image creation. **Read/Write capability**: readable and writable.
+Date and time of image creation.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -180,7 +254,9 @@ Date and time of image creation. **Read/Write capability**: readable and writabl
 GPS_TIME_STAMP = 'GPSTimeStamp'
 ```
 
-GPS timestamp. **Read/Write capability**: readable and writable.
+GPS timestamp.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -192,7 +268,9 @@ GPS timestamp. **Read/Write capability**: readable and writable.
 GPS_DATE_STAMP = 'GPSDateStamp'
 ```
 
-GPS date stamp. **Read/Write capability**: readable and writable.
+GPS date stamp.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -204,7 +282,9 @@ GPS date stamp. **Read/Write capability**: readable and writable.
 IMAGE_DESCRIPTION = 'ImageDescription'
 ```
 
-Image description. **Read/Write capability**: readable and writable.
+Image description.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -216,7 +296,9 @@ Image description. **Read/Write capability**: readable and writable.
 MAKE = 'Make'
 ```
 
-Manufacturer. **Read/Write capability**: readable and writable.
+Manufacturer.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -228,7 +310,9 @@ Manufacturer. **Read/Write capability**: readable and writable.
 MODEL = 'Model'
 ```
 
-Device model. **Read/Write capability**: readable and writable.
+Device model.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -240,7 +324,9 @@ Device model. **Read/Write capability**: readable and writable.
 PHOTO_MODE = 'PhotoMode'
 ```
 
-Photographing mode. **Read/Write capability**: readable and writable.
+Photographing mode.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -252,7 +338,9 @@ Photographing mode. **Read/Write capability**: readable and writable.
 SENSITIVITY_TYPE = 'SensitivityType'
 ```
 
-Sensitivity type. **Read/Write capability**: readable and writable.
+Sensitivity type.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -264,7 +352,9 @@ Sensitivity type. **Read/Write capability**: readable and writable.
 STANDARD_OUTPUT_SENSITIVITY = 'StandardOutputSensitivity'
 ```
 
-Standard output sensitivity. **Read/Write capability**: readable and writable.
+Standard output sensitivity.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -276,7 +366,9 @@ Standard output sensitivity. **Read/Write capability**: readable and writable.
 RECOMMENDED_EXPOSURE_INDEX = 'RecommendedExposureIndex'
 ```
 
-Recommended exposure index. **Read/Write capability**: readable and writable.
+Recommended exposure index.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -288,7 +380,9 @@ Recommended exposure index. **Read/Write capability**: readable and writable.
 ISO_SPEED = 'ISOSpeedRatings'
 ```
 
-ISO speed. **Read/Write capability**: readable and writable.
+ISO speed.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -300,7 +394,9 @@ ISO speed. **Read/Write capability**: readable and writable.
 APERTURE_VALUE = 'ApertureValue'
 ```
 
-Lens aperture. An example in the correct format is 4/1. **Read/Write capability**: readable and writable.
+Lens aperture. An example in the correct format is 4/1.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -312,7 +408,9 @@ Lens aperture. An example in the correct format is 4/1. **Read/Write capability*
 EXPOSURE_BIAS_VALUE = 'ExposureBiasValue'
 ```
 
-Exposure bias. **Read/Write capability**: readable and writable.
+Exposure bias.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -324,7 +422,9 @@ Exposure bias. **Read/Write capability**: readable and writable.
 METERING_MODE = 'MeteringMode'
 ```
 
-Metering mode. **Read/Write capability**: readable and writable.
+Metering mode.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -336,7 +436,9 @@ Metering mode. **Read/Write capability**: readable and writable.
 LIGHT_SOURCE = 'LightSource'
 ```
 
-Light source. An example value is **Fluorescent**. **Read/Write capability**: readable and writable.
+Light source. An example value is **Fluorescent**.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -348,7 +450,9 @@ Light source. An example value is **Fluorescent**. **Read/Write capability**: re
 FLASH = 'Flash'
 ```
 
-Flash status. **Read/Write capability**: readable and writable.
+Flash status.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -360,7 +464,9 @@ Flash status. **Read/Write capability**: readable and writable.
 FOCAL_LENGTH = 'FocalLength'
 ```
 
-Focal length of the lens. **Read/Write capability**: readable and writable.
+Focal length of the lens.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -372,7 +478,9 @@ Focal length of the lens. **Read/Write capability**: readable and writable.
 USER_COMMENT = 'UserComment'
 ```
 
-User comments. **Read/Write capability**: readable and writable.
+User comments.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -384,7 +492,9 @@ User comments. **Read/Write capability**: readable and writable.
 PIXEL_X_DIMENSION = 'PixelXDimension'
 ```
 
-Pixel X dimension. **Read/Write capability**: readable and writable.
+Pixel X dimension.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -396,7 +506,9 @@ Pixel X dimension. **Read/Write capability**: readable and writable.
 PIXEL_Y_DIMENSION = 'PixelYDimension'
 ```
 
-Pixel Y dimension. **Read/Write capability**: readable and writable.
+Pixel Y dimension.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -408,7 +520,13 @@ Pixel Y dimension. **Read/Write capability**: readable and writable.
 WHITE_BALANCE = 'WhiteBalance'
 ```
 
-White balance. 0: "Auto white balance." 1: "Manual white balance." **Read/Write capability**: readable and writable.
+White balance.
+
+0: "Auto white balance."
+
+1: "Manual white balance."
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -420,7 +538,9 @@ White balance. 0: "Auto white balance." 1: "Manual white balance." **Read/Write 
 FOCAL_LENGTH_IN_35_MM_FILM = 'FocalLengthIn35mmFilm'
 ```
 
-Focal length in 35mm film. **Read/Write capability**: readable and writable.
+Focal length in 35mm film.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -432,7 +552,9 @@ Focal length in 35mm film. **Read/Write capability**: readable and writable.
 CAPTURE_MODE = 'HwMnoteCaptureMode'
 ```
 
-Capture mode. **Read/Write capability**: readable and writable.
+Capture mode.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -444,7 +566,9 @@ Capture mode. **Read/Write capability**: readable and writable.
 PHYSICAL_APERTURE = 'HwMnotePhysicalAperture'
 ```
 
-Physical aperture. **Read/Write capability**: read-only
+Physical aperture.
+
+**Read/Write capability**: read-only
 
 **Since:** 10
 
@@ -456,7 +580,9 @@ Physical aperture. **Read/Write capability**: read-only
 ROLL_ANGLE = 'HwMnoteRollAngle'
 ```
 
-Roll angle. **Read/Write capability**: read-only
+Roll angle.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -468,7 +594,9 @@ Roll angle. **Read/Write capability**: read-only
 PITCH_ANGLE = 'HwMnotePitchAngle'
 ```
 
-Pitch angle. **Read/Write capability**: read-only
+Pitch angle.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -480,7 +608,9 @@ Pitch angle. **Read/Write capability**: read-only
 SCENE_FOOD_CONF = 'HwMnoteSceneFoodConf'
 ```
 
-Photographing scene: food. **Read/Write capability**: read-only
+Photographing scene: food.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -492,7 +622,9 @@ Photographing scene: food. **Read/Write capability**: read-only
 SCENE_STAGE_CONF = 'HwMnoteSceneStageConf'
 ```
 
-Photographing scene: stage. **Read/Write capability**: read-only
+Photographing scene: stage.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -504,7 +636,9 @@ Photographing scene: stage. **Read/Write capability**: read-only
 SCENE_BLUE_SKY_CONF = 'HwMnoteSceneBlueSkyConf'
 ```
 
-Photographing scene: blue sky. **Read/Write capability**: read-only
+Photographing scene: blue sky.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -516,7 +650,9 @@ Photographing scene: blue sky. **Read/Write capability**: read-only
 SCENE_GREEN_PLANT_CONF = 'HwMnoteSceneGreenPlantConf'
 ```
 
-Photographing scene: green plant. **Read/Write capability**: read-only
+Photographing scene: green plant.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -528,7 +664,9 @@ Photographing scene: green plant. **Read/Write capability**: read-only
 SCENE_BEACH_CONF = 'HwMnoteSceneBeachConf'
 ```
 
-Photographing scene: beach. **Read/Write capability**: read-only
+Photographing scene: beach.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -540,7 +678,9 @@ Photographing scene: beach. **Read/Write capability**: read-only
 SCENE_SNOW_CONF = 'HwMnoteSceneSnowConf'
 ```
 
-Photographing scene: snow. **Read/Write capability**: read-only
+Photographing scene: snow.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -552,7 +692,9 @@ Photographing scene: snow. **Read/Write capability**: read-only
 SCENE_SUNSET_CONF = 'HwMnoteSceneSunsetConf'
 ```
 
-Photographing scene: sunset. **Read/Write capability**: read-only
+Photographing scene: sunset.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -564,7 +706,9 @@ Photographing scene: sunset. **Read/Write capability**: read-only
 SCENE_FLOWERS_CONF = 'HwMnoteSceneFlowersConf'
 ```
 
-Photographing scene: flowers. **Read/Write capability**: read-only
+Photographing scene: flowers.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -576,7 +720,9 @@ Photographing scene: flowers. **Read/Write capability**: read-only
 SCENE_NIGHT_CONF = 'HwMnoteSceneNightConf'
 ```
 
-Photographing scene: night. **Read/Write capability**: read-only
+Photographing scene: night.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -588,7 +734,9 @@ Photographing scene: night. **Read/Write capability**: read-only
 SCENE_TEXT_CONF = 'HwMnoteSceneTextConf'
 ```
 
-Photographing scene: text. **Read/Write capability**: read-only
+Photographing scene: text.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -600,7 +748,9 @@ Photographing scene: text. **Read/Write capability**: read-only
 FACE_COUNT = 'HwMnoteFaceCount'
 ```
 
-Number of faces. **Read/Write capability**: read-only
+Number of faces.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -612,7 +762,9 @@ Number of faces. **Read/Write capability**: read-only
 FOCUS_MODE = 'HwMnoteFocusMode'
 ```
 
-Focus mode. **Read/Write capability**: read-only
+Focus mode.
+
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -624,7 +776,15 @@ Focus mode. **Read/Write capability**: read-only
 COMPRESSION = 'Compression'
 ```
 
-Compression scheme used on the image data. 1: "Uncompressed". 2: "CCITT RLE". 3: "T4/Group 3 Fax". **Read/Write capability**: readable and writable.
+Compression scheme used on the image data.
+
+1: "Uncompressed".
+
+2: "CCITT RLE".
+
+3: "T4/Group 3 Fax".
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -636,7 +796,23 @@ Compression scheme used on the image data. 1: "Uncompressed". 2: "CCITT RLE". 3:
 PHOTOMETRIC_INTERPRETATION = 'PhotometricInterpretation'
 ```
 
-Color space of the image data, for example, RGB or YCbCr. 0: "Reversed mono". 1: "Normal mono". 2: "RGB". 3: "Palette". 5: "CMYK". 6: "YCbCr". 8: "CieLAB". **Read/Write capability**: readable and writable.
+Color space of the image data, for example, RGB or YCbCr.
+
+0: "Reversed mono".
+
+1: "Normal mono".
+
+2: "RGB".
+
+3: "Palette".
+
+5: "CMYK".
+
+6: "YCbCr".
+
+8: "CieLAB".
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -648,7 +824,9 @@ Color space of the image data, for example, RGB or YCbCr. 0: "Reversed mono". 1:
 STRIP_OFFSETS = 'StripOffsets'
 ```
 
-Byte offset of each strip. **Read/Write capability**: readable and writable.
+Byte offset of each strip.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -660,7 +838,10 @@ Byte offset of each strip. **Read/Write capability**: readable and writable.
 SAMPLES_PER_PIXEL = 'SamplesPerPixel'
 ```
 
-Number of components per pixel. The value is **3** for RGB and YCbCr images. The **JPEG** key is used in JPEG compressed data. **Read/Write capability**: readable and writable.
+Number of components per pixel. The value is **3** for RGB and YCbCr images. The **JPEG** key is used in JPEG
+compressed data.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -672,7 +853,9 @@ Number of components per pixel. The value is **3** for RGB and YCbCr images. The
 ROWS_PER_STRIP = 'RowsPerStrip'
 ```
 
-Number of rows per strip. **Read/Write capability**: readable and writable.
+Number of rows per strip.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -684,7 +867,9 @@ Number of rows per strip. **Read/Write capability**: readable and writable.
 STRIP_BYTE_COUNTS = 'StripByteCounts'
 ```
 
-Number of bytes in each strip after compression. **Read/Write capability**: readable and writable.
+Number of bytes in each strip after compression.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -696,7 +881,9 @@ Number of bytes in each strip after compression. **Read/Write capability**: read
 X_RESOLUTION = 'XResolution'
 ```
 
-Number of pixels per ResolutionUnit in the image width (X) direction. **Read/Write capability**: readable and writable.
+Number of pixels per ResolutionUnit in the image width (X) direction.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -708,7 +895,9 @@ Number of pixels per ResolutionUnit in the image width (X) direction. **Read/Wri
 Y_RESOLUTION = 'YResolution'
 ```
 
-Number of pixels per ResolutionUnit in the image height (Y) direction. **Read/Write capability**: readable and writable.
+Number of pixels per ResolutionUnit in the image height (Y) direction.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -720,7 +909,13 @@ Number of pixels per ResolutionUnit in the image height (Y) direction. **Read/Wr
 PLANAR_CONFIGURATION = 'PlanarConfiguration'
 ```
 
-Storage format of components of each pixel, which can be chunky or planar. 1: "Chunky format": chunky format. 2: "Planar format": planar format. **Read/Write capability**: readable and writable.
+Storage format of components of each pixel, which can be chunky or planar.
+
+1: "Chunky format": chunky format.
+
+2: "Planar format": planar format.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -732,7 +927,13 @@ Storage format of components of each pixel, which can be chunky or planar. 1: "C
 RESOLUTION_UNIT = 'ResolutionUnit'
 ```
 
-Unit of measurement for XResolution and YResolution, in inches or centimeters. 2: "Inch": measured in inches. 3: "Centimeter": measured in centimeters. **Read/Write capability**: readable and writable.
+Unit of measurement for XResolution and YResolution, in inches or centimeters.
+
+2: "Inch": measured in inches.
+
+3: "Centimeter": measured in centimeters.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -744,7 +945,9 @@ Unit of measurement for XResolution and YResolution, in inches or centimeters. 2
 TRANSFER_FUNCTION = 'TransferFunction'
 ```
 
-Transfer function for the image, which is usually used for color correction. **Read/Write capability**: readable and writable.
+Transfer function for the image, which is usually used for color correction.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -756,7 +959,9 @@ Transfer function for the image, which is usually used for color correction. **R
 SOFTWARE = 'Software'
 ```
 
-Name and version number of the software used to create the image. **Read/Write capability**: readable and writable.
+Name and version number of the software used to create the image.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -768,7 +973,9 @@ Name and version number of the software used to create the image. **Read/Write c
 ARTIST = 'Artist'
 ```
 
-Person who created the image. **Read/Write capability**: readable and writable.
+Person who created the image.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -780,7 +987,9 @@ Person who created the image. **Read/Write capability**: readable and writable.
 WHITE_POINT = 'WhitePoint'
 ```
 
-Chromaticity coordinates of the white point, the reference for "white", in the color space of the image. **Read/Write capability**: readable and writable.
+Chromaticity coordinates of the white point, the reference for "white", in the color space of the image.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -792,7 +1001,9 @@ Chromaticity coordinates of the white point, the reference for "white", in the c
 PRIMARY_CHROMATICITIES = 'PrimaryChromaticities'
 ```
 
-Chromaticities of the primaries of the image. **Read/Write capability**: readable and writable.
+Chromaticities of the primaries of the image.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -804,7 +1015,9 @@ Chromaticities of the primaries of the image. **Read/Write capability**: readabl
 YCBCR_COEFFICIENTS = 'YCbCrCoefficients'
 ```
 
-Coefficients for the conversion matrix that transforms image data from RGB to YCbCr. **Read/Write capability**: readable and writable.
+Coefficients for the conversion matrix that transforms image data from RGB to YCbCr.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -816,7 +1029,9 @@ Coefficients for the conversion matrix that transforms image data from RGB to YC
 YCBCR_SUB_SAMPLING = 'YCbCrSubSampling'
 ```
 
-Subsampling factors used for the chrominance components of a YCbCr image. **Read/Write capability**: readable and writable.
+Subsampling factors used for the chrominance components of a YCbCr image.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -828,7 +1043,13 @@ Subsampling factors used for the chrominance components of a YCbCr image. **Read
 YCBCR_POSITIONING = 'YCbCrPositioning'
 ```
 
-Positioning of subsampled chrominance components relative to luminance samples. 1: "Centered": Cb/Cr chrominance components are centered relative to the luminance pixels (common practice). 2: "Co-sited": Cb/Cr and Y sampling points align at the top-left corner. **Read/Write capability**: readable and writable.
+Positioning of subsampled chrominance components relative to luminance samples.
+
+1: "Centered": Cb/Cr chrominance components are centered relative to the luminance pixels (common practice).
+
+2: "Co-sited": Cb/Cr and Y sampling points align at the top-left corner.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -840,7 +1061,9 @@ Positioning of subsampled chrominance components relative to luminance samples. 
 REFERENCE_BLACK_WHITE = 'ReferenceBlackWhite'
 ```
 
-Reference values for black and white points. **Read/Write capability**: readable and writable.
+Reference values for black and white points.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -852,7 +1075,9 @@ Reference values for black and white points. **Read/Write capability**: readable
 COPYRIGHT = 'Copyright'
 ```
 
-Copyright notice of the image. **Read/Write capability**: readable and writable.
+Copyright notice of the image.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -864,7 +1089,9 @@ Copyright notice of the image. **Read/Write capability**: readable and writable.
 JPEG_INTERCHANGE_FORMAT = 'JPEGInterchangeFormat'
 ```
 
-Offset of the SOI marker of a JPEG interchange format bitstream. **Read/Write capability**: read-only
+Offset of the SOI marker of a JPEG interchange format bitstream.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -876,7 +1103,9 @@ Offset of the SOI marker of a JPEG interchange format bitstream. **Read/Write ca
 JPEG_INTERCHANGE_FORMAT_LENGTH = 'JPEGInterchangeFormatLength'
 ```
 
-Number of bytes of the JPEG stream. **Read/Write capability**: read-only
+Number of bytes of the JPEG stream.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -888,7 +1117,27 @@ Number of bytes of the JPEG stream. **Read/Write capability**: read-only
 EXPOSURE_PROGRAM = 'ExposureProgram'
 ```
 
-Class of the program used by the camera to set exposure when the image was captured. 0: "Not defined". 1: "Manual". 2: "Normal program". 3: "Aperture priority". 4: "Shutter priority". 5: "Creative program (biased toward depth of field)". 6: "Creative program (biased toward fast shutter speed)". 7: "Portrait mode (for closeup photos with the background out of focus)". 8: "Landscape mode (for landscape photos with the background in focus)". **Read/Write capability**: readable and writable.
+Class of the program used by the camera to set exposure when the image was captured.
+
+0: "Not defined".
+
+1: "Manual".
+
+2: "Normal program".
+
+3: "Aperture priority".
+
+4: "Shutter priority".
+
+5: "Creative program (biased toward depth of field)".
+
+6: "Creative program (biased toward fast shutter speed)".
+
+7: "Portrait mode (for closeup photos with the background out of focus)".
+
+8: "Landscape mode (for landscape photos with the background in focus)".
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -900,7 +1149,9 @@ Class of the program used by the camera to set exposure when the image was captu
 SPECTRAL_SENSITIVITY = 'SpectralSensitivity'
 ```
 
-Spectral sensitivity of each channel of the camera. **Read/Write capability**: readable and writable.
+Spectral sensitivity of each channel of the camera.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -912,7 +1163,9 @@ Spectral sensitivity of each channel of the camera. **Read/Write capability**: r
 OECF = 'OECF'
 ```
 
-Opto-Electric Conversion Function (OECF) specified in ISO 14524. **Read/Write capability**: readable and writable.
+Opto-Electric Conversion Function (OECF) specified in ISO 14524.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -924,7 +1177,9 @@ Opto-Electric Conversion Function (OECF) specified in ISO 14524. **Read/Write ca
 EXIF_VERSION = 'ExifVersion'
 ```
 
-Version of the supported Exif standard. **Read/Write capability**: readable and writable.
+Version of the supported Exif standard.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -936,7 +1191,9 @@ Version of the supported Exif standard. **Read/Write capability**: readable and 
 DATE_TIME_DIGITIZED = 'DateTimeDigitized'
 ```
 
-Date and time when the image was stored as digital data, in the format of YYYY:MM:DD HH:mm:ss. **Read/Write capability**: readable and writable.
+Date and time when the image was stored as digital data, in the format of YYYY:MM:DD HH:mm:ss.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -948,7 +1205,9 @@ Date and time when the image was stored as digital data, in the format of YYYY:M
 COMPONENTS_CONFIGURATION = 'ComponentsConfiguration'
 ```
 
-Specific information about compressed data. **Read/Write capability**: readable and writable.
+Specific information about compressed data.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -960,7 +1219,9 @@ Specific information about compressed data. **Read/Write capability**: readable 
 SHUTTER_SPEED = 'ShutterSpeedValue'
 ```
 
-Shutter speed, expressed in Additive System of Photographic Exposure (APEX) values. **Read/Write capability**: readable and writable.
+Shutter speed, expressed in Additive System of Photographic Exposure (APEX) values.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -972,7 +1233,9 @@ Shutter speed, expressed in Additive System of Photographic Exposure (APEX) valu
 BRIGHTNESS_VALUE = 'BrightnessValue'
 ```
 
-Value of brightness, expressed in APEX values. **Read/Write capability**: readable and writable.
+Value of brightness, expressed in APEX values.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -984,7 +1247,9 @@ Value of brightness, expressed in APEX values. **Read/Write capability**: readab
 MAX_APERTURE_VALUE = 'MaxApertureValue'
 ```
 
-Smallest F number of the lens. **Read/Write capability**: readable and writable.
+Smallest F number of the lens.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -996,7 +1261,9 @@ Smallest F number of the lens. **Read/Write capability**: readable and writable.
 SUBJECT_DISTANCE = 'SubjectDistance'
 ```
 
-Distance to the subject, in meters. **Read/Write capability**: readable and writable.
+Distance to the subject, in meters.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1008,7 +1275,9 @@ Distance to the subject, in meters. **Read/Write capability**: readable and writ
 SUBJECT_AREA = 'SubjectArea'
 ```
 
-Location and area of the main subject in the entire scene. **Read/Write capability**: readable and writable.
+Location and area of the main subject in the entire scene.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1020,7 +1289,11 @@ Location and area of the main subject in the entire scene. **Read/Write capabili
 MAKER_NOTE = 'MakerNote'
 ```
 
-Marker used by Exif/DCF manufacturers to record any required information. This field is read-only in API versions 12 to 19 and is readable and writable in API version 20 and later. **Read/Write capability**: readable and writable.
+Marker used by Exif/DCF manufacturers to record any required information.
+
+This field is read-only in API versions 12 to 19 and is readable and writable in API version 20 and later.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1032,7 +1305,9 @@ Marker used by Exif/DCF manufacturers to record any required information. This f
 SUBSEC_TIME = 'SubsecTime'
 ```
 
-Tag used to record fractions of seconds for the **DateTime** tag. **Read/Write capability**: readable and writable.
+Tag used to record fractions of seconds for the **DateTime** tag.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1044,7 +1319,9 @@ Tag used to record fractions of seconds for the **DateTime** tag. **Read/Write c
 SUBSEC_TIME_ORIGINAL = 'SubsecTimeOriginal'
 ```
 
-Tag used to record fractions of seconds for the **DateTimeOriginal** tag. **Read/Write capability**: readable and writable.
+Tag used to record fractions of seconds for the **DateTimeOriginal** tag.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1056,7 +1333,9 @@ Tag used to record fractions of seconds for the **DateTimeOriginal** tag. **Read
 SUBSEC_TIME_DIGITIZED = 'SubsecTimeDigitized'
 ```
 
-Tag used to record fractions of seconds for the **DateTimeDigitized** tag. **Read/Write capability**: readable and writable.
+Tag used to record fractions of seconds for the **DateTimeDigitized** tag.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1068,7 +1347,9 @@ Tag used to record fractions of seconds for the **DateTimeDigitized** tag. **Rea
 FLASHPIX_VERSION = 'FlashpixVersion'
 ```
 
-FlashPix format version supported by an FPXR file. It is used to enhance device compatibility. **Read/Write capability**: readable and writable.
+FlashPix format version supported by an FPXR file. It is used to enhance device compatibility.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1080,7 +1361,16 @@ FlashPix format version supported by an FPXR file. It is used to enhance device 
 COLOR_SPACE = 'ColorSpace'
 ```
 
-Color space information, which is usually recorded as a color space specifier. 1: "sRGB", indicating the standard sRGB color space. It is the typical default value. 2: "Adobe RGB", indicating the Adobe RGB color space. It is not formally defined in Exif, but commonly used in practice. 0xffff: "Uncalibrated", indicating that the color space is uncalibrated and unknown. **Read/Write capability**: readable and writable.
+Color space information, which is usually recorded as a color space specifier.
+
+1: "sRGB", indicating the standard sRGB color space. It is the typical default value.
+
+2: "Adobe RGB", indicating the Adobe RGB color space. It is not formally defined in Exif, but commonly used in
+practice.
+
+0xffff: "Uncalibrated", indicating that the color space is uncalibrated and unknown.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1092,7 +1382,9 @@ Color space information, which is usually recorded as a color space specifier. 1
 RELATED_SOUND_FILE = 'RelatedSoundFile'
 ```
 
-Name of an audio file related to the image data. **Read/Write capability**: readable and writable.
+Name of an audio file related to the image data.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1104,7 +1396,9 @@ Name of an audio file related to the image data. **Read/Write capability**: read
 FLASH_ENERGY = 'FlashEnergy'
 ```
 
-Strobe energy at the time the image was captured, in Beam Candle Power Seconds (BCPS). **Read/Write capability**: readable and writable.
+Strobe energy at the time the image was captured, in Beam Candle Power Seconds (BCPS).
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1116,7 +1410,9 @@ Strobe energy at the time the image was captured, in Beam Candle Power Seconds (
 SPATIAL_FREQUENCY_RESPONSE = 'SpatialFrequencyResponse'
 ```
 
-Spatial frequency table of the camera or input device. **Read/Write capability**: readable and writable.
+Spatial frequency table of the camera or input device.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1128,7 +1424,9 @@ Spatial frequency table of the camera or input device. **Read/Write capability**
 FOCAL_PLANE_X_RESOLUTION = 'FocalPlaneXResolution'
 ```
 
-Number of pixels in the image width (X) direction per FocalPlaneResolutionUnit. **Read/Write capability**: readable and writable.
+Number of pixels in the image width (X) direction per FocalPlaneResolutionUnit.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1140,7 +1438,9 @@ Number of pixels in the image width (X) direction per FocalPlaneResolutionUnit. 
 FOCAL_PLANE_Y_RESOLUTION = 'FocalPlaneYResolution'
 ```
 
-Number of pixels in the image height (Y) direction per FocalPlaneResolutionUnit. **Read/Write capability**: readable and writable.
+Number of pixels in the image height (Y) direction per FocalPlaneResolutionUnit.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1152,7 +1452,13 @@ Number of pixels in the image height (Y) direction per FocalPlaneResolutionUnit.
 FOCAL_PLANE_RESOLUTION_UNIT = 'FocalPlaneResolutionUnit'
 ```
 
-Unit for measuring FocalPlaneXResolution and FocalPlaneYResolution. 2: "Inch": measured in inches. 3: "Centimeter": measured in centimeters. **Read/Write capability**: readable and writable.
+Unit for measuring FocalPlaneXResolution and FocalPlaneYResolution.
+
+2: "Inch": measured in inches.
+
+3: "Centimeter": measured in centimeters.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1164,7 +1470,9 @@ Unit for measuring FocalPlaneXResolution and FocalPlaneYResolution. 2: "Inch": m
 SUBJECT_LOCATION = 'SubjectLocation'
 ```
 
-Location of the main subject relative to the left edge. **Read/Write capability**: readable and writable.
+Location of the main subject relative to the left edge.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1176,7 +1484,9 @@ Location of the main subject relative to the left edge. **Read/Write capability*
 EXPOSURE_INDEX = 'ExposureIndex'
 ```
 
-Exposure index selected at the time the image is captured. **Read/Write capability**: readable and writable.
+Exposure index selected at the time the image is captured.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1188,7 +1498,9 @@ Exposure index selected at the time the image is captured. **Read/Write capabili
 SENSING_METHOD = 'SensingMethod'
 ```
 
-Type of the image sensor on the camera. **Read/Write capability**: readable and writable.
+Type of the image sensor on the camera.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1200,7 +1512,9 @@ Type of the image sensor on the camera. **Read/Write capability**: readable and 
 FILE_SOURCE = 'FileSource'
 ```
 
-Image source. **Read/Write capability**: readable and writable.
+Image source.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1212,7 +1526,9 @@ Image source. **Read/Write capability**: readable and writable.
 CFA_PATTERN = 'CFAPattern'
 ```
 
-Color Filter Array (CFA) geometric pattern of the image sensor. **Read/Write capability**: readable and writable.
+Color Filter Array (CFA) geometric pattern of the image sensor.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1224,7 +1540,13 @@ Color Filter Array (CFA) geometric pattern of the image sensor. **Read/Write cap
 CUSTOM_RENDERED = 'CustomRendered'
 ```
 
-Special processing on image data. 0: "Normal process", indicating normal processing (no custom rendering). 1: "Custom process", indicating custom processing (such as artistic effect, beauty, and HDR). **Read/Write capability**: readable and writable.
+Special processing on image data.
+
+0: "Normal process", indicating normal processing (no custom rendering).
+
+1: "Custom process", indicating custom processing (such as artistic effect, beauty, and HDR).
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1236,7 +1558,15 @@ Special processing on image data. 0: "Normal process", indicating normal process
 EXPOSURE_MODE = 'ExposureMode'
 ```
 
-Exposure mode set when the image was captured. 0: "Auto exposure." 1: "Manual exposure." 2: "Auto bracket." **Read/Write capability**: readable and writable.
+Exposure mode set when the image was captured.
+
+0: "Auto exposure."
+
+1: "Manual exposure."
+
+2: "Auto bracket."
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1248,7 +1578,9 @@ Exposure mode set when the image was captured. 0: "Auto exposure." 1: "Manual ex
 DIGITAL_ZOOM_RATIO = 'DigitalZoomRatio'
 ```
 
-Digital zoom ratio when the image was captured. **Read/Write capability**: readable and writable.
+Digital zoom ratio when the image was captured.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1260,7 +1592,17 @@ Digital zoom ratio when the image was captured. **Read/Write capability**: reada
 SCENE_CAPTURE_TYPE = 'SceneCaptureType'
 ```
 
-Type of the scene that was captured. 0: "Standard." 1: "Landscape." 2: "Portrait." 3: "Night scene." **Read/Write capability**: readable and writable.
+Type of the scene that was captured.
+
+0: "Standard."
+
+1: "Landscape."
+
+2: "Portrait."
+
+3: "Night scene."
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1272,7 +1614,19 @@ Type of the scene that was captured. 0: "Standard." 1: "Landscape." 2: "Portrait
 GAIN_CONTROL = 'GainControl'
 ```
 
-Degree of overall image gain adjustment. 0: "Normal", no gain control. 1: "Low gain up." 2: "High gain up." 3: "Low gain down." 4: "High gain down." **Read/Write capability**: readable and writable.
+Degree of overall image gain adjustment.
+
+0: "Normal", no gain control.
+
+1: "Low gain up."
+
+2: "High gain up."
+
+3: "Low gain down."
+
+4: "High gain down."
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1284,7 +1638,15 @@ Degree of overall image gain adjustment. 0: "Normal", no gain control. 1: "Low g
 CONTRAST = 'Contrast'
 ```
 
-Direction of contrast processing used by the camera. 0: "Normal", normal contrast. 1: "Soft", soft contrast. 2: "Hard", hard contrast. **Read/Write capability**: readable and writable.
+Direction of contrast processing used by the camera.
+
+0: "Normal", normal contrast.
+
+1: "Soft", soft contrast.
+
+2: "Hard", hard contrast.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1296,7 +1658,15 @@ Direction of contrast processing used by the camera. 0: "Normal", normal contras
 SATURATION = 'Saturation'
 ```
 
-Direction of saturation processing used by the camera. 0:"Normal": normal saturation. 1: "Low saturation." 2: "High saturation." **Read/Write capability**: readable and writable.
+Direction of saturation processing used by the camera.
+
+0:"Normal": normal saturation.
+
+1: "Low saturation."
+
+2: "High saturation."
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1308,7 +1678,15 @@ Direction of saturation processing used by the camera. 0:"Normal": normal satura
 SHARPNESS = 'Sharpness'
 ```
 
-Direction of sharpness processing used by the camera. 0:"Normal": normal sharpness. 1: "Soft." 2: "Hard." **Read/Write capability**: readable and writable.
+Direction of sharpness processing used by the camera.
+
+0:"Normal": normal sharpness.
+
+1: "Soft."
+
+2: "Hard."
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1320,7 +1698,9 @@ Direction of sharpness processing used by the camera. 0:"Normal": normal sharpne
 DEVICE_SETTING_DESCRIPTION = 'DeviceSettingDescription'
 ```
 
-Information about the photographing conditions of a specific camera model. **Read/Write capability**: readable and writable.
+Information about the photographing conditions of a specific camera model.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1332,7 +1712,17 @@ Information about the photographing conditions of a specific camera model. **Rea
 SUBJECT_DISTANCE_RANGE = 'SubjectDistanceRange'
 ```
 
-Distance to the subject. 0: "Unknown." 1: "Macro." 2: "Close view." 3: "Distant view." **Read/Write capability**: readable and writable.
+Distance to the subject.
+
+0: "Unknown."
+
+1: "Macro."
+
+2: "Close view."
+
+3: "Distant view."
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1344,7 +1734,9 @@ Distance to the subject. 0: "Unknown." 1: "Macro." 2: "Close view." 3: "Distant 
 IMAGE_UNIQUE_ID = 'ImageUniqueID'
 ```
 
-Unique identifier assigned to each image. **Read/Write capability**: readable and writable.
+Unique identifier assigned to each image.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1356,7 +1748,9 @@ Unique identifier assigned to each image. **Read/Write capability**: readable an
 GPS_VERSION_ID = 'GPSVersionID'
 ```
 
-GPS information version. **Read/Write capability**: readable and writable.
+GPS information version.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1368,7 +1762,13 @@ GPS information version. **Read/Write capability**: readable and writable.
 GPS_ALTITUDE_REF = 'GPSAltitudeRef'
 ```
 
-Whether the latitude is north or south latitude. 0: Sea level, which is above sea level. 1: "Sea level reference," which is below the sea level. **Read/Write capability**: readable and writable.
+Whether the latitude is north or south latitude.
+
+0: Sea level, which is above sea level.
+
+1: "Sea level reference," which is below the sea level.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1380,7 +1780,9 @@ Whether the latitude is north or south latitude. 0: Sea level, which is above se
 GPS_ALTITUDE = 'GPSAltitude'
 ```
 
-Altitude based on the reference in GPSAltitudeRef. **Read/Write capability**: readable and writable.
+Altitude based on the reference in GPSAltitudeRef.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1392,7 +1794,9 @@ Altitude based on the reference in GPSAltitudeRef. **Read/Write capability**: re
 GPS_SATELLITES = 'GPSSatellites'
 ```
 
-GPS satellites used for measurement. **Read/Write capability**: readable and writable.
+GPS satellites used for measurement.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1404,7 +1808,14 @@ GPS satellites used for measurement. **Read/Write capability**: readable and wri
 GPS_STATUS = 'GPSStatus'
 ```
 
-Status of the GPS receiver when the image was recorded. 'A': "Measurement in progress", GPS is working, satellite signals are locked, and location data is trustworthy. 'V': "Measurement interrupted", GPS is not working, current positioning is unavailable, and location data may be missing or incorrect. **Read/Write capability**: readable and writable.
+Status of the GPS receiver when the image was recorded.
+
+'A': "Measurement in progress", GPS is working, satellite signals are locked, and location data is trustworthy.
+
+'V': "Measurement interrupted", GPS is not working, current positioning is unavailable, and location data may be
+missing or incorrect.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1416,7 +1827,13 @@ Status of the GPS receiver when the image was recorded. 'A': "Measurement in pro
 GPS_MEASURE_MODE = 'GPSMeasureMode'
 ```
 
-GPS measurement pmode. Whether the 2D (planar) or 3D (with height) measurement mode is used for GPS positioning. 2: "2-dimensional measurement", (latitude+longitude). 3: "3-dimensional measurement", (latitude + longitude + height). **Read/Write capability**: readable and writable.
+GPS measurement pmode. Whether the 2D (planar) or 3D (with height) measurement mode is used for GPS positioning.
+
+2: "2-dimensional measurement", (latitude+longitude).
+
+3: "3-dimensional measurement", (latitude + longitude + height).
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1428,7 +1845,10 @@ GPS measurement pmode. Whether the 2D (planar) or 3D (with height) measurement m
 GPS_DOP = 'GPSDOP'
 ```
 
-GPS Dilution of Precision (DOP), which reflects the precision of GPS measurements taken when the photo was captured. **Read/Write capability**: readable and writable.
+GPS Dilution of Precision (DOP), which reflects the precision of GPS measurements taken when the photo was
+captured.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1440,7 +1860,15 @@ GPS Dilution of Precision (DOP), which reflects the precision of GPS measurement
 GPS_SPEED_REF = 'GPSSpeedRef'
 ```
 
-Unit used to express the movement speed of the GPS receiver. 'K': "km/h". 'M': "mph". 'N': "knots". **Read/Write capability**: readable and writable.
+Unit used to express the movement speed of the GPS receiver.
+
+'K': "km/h".
+
+'M': "mph".
+
+'N': "knots".
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1452,7 +1880,9 @@ Unit used to express the movement speed of the GPS receiver. 'K': "km/h". 'M': "
 GPS_SPEED = 'GPSSpeed'
 ```
 
-Movement speed of the GPS receiver. **Read/Write capability**: readable and writable.
+Movement speed of the GPS receiver.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1464,7 +1894,15 @@ Movement speed of the GPS receiver. **Read/Write capability**: readable and writ
 GPS_TRACK_REF = 'GPSTrackRef'
 ```
 
-Which type of "North" is used as the reference for the direction angle. 'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and navigation systems. 'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic declination varies by location and changes over time. **Read/Write capability**: readable and writable.
+Which type of "North" is used as the reference for the direction angle.
+
+'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and
+navigation systems.
+
+'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic
+declination varies by location and changes over time.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1476,7 +1914,10 @@ Which type of "North" is used as the reference for the direction angle. 'T': "Tr
 GPS_TRACK = 'GPSTrack'
 ```
 
-Movement direction of the GPS receiver. Direction of movement (heading) of the camera at the moment the photo was taken, measured in degrees. **Read/Write capability**: readable and writable.
+Movement direction of the GPS receiver. Direction of movement (heading) of the camera at the moment the photo was
+taken, measured in degrees.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1488,7 +1929,15 @@ Movement direction of the GPS receiver. Direction of movement (heading) of the c
 GPS_IMG_DIRECTION_REF = 'GPSImgDirectionRef'
 ```
 
-Reference of the direction of the image when it was captured. 'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and navigation systems. 'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic declination varies by location and changes over time. **Read/Write capability**: readable and writable.
+Reference of the direction of the image when it was captured.
+
+'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and
+navigation systems.
+
+'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic
+declination varies by location and changes over time.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1500,7 +1949,9 @@ Reference of the direction of the image when it was captured. 'T': "True directi
 GPS_IMG_DIRECTION = 'GPSImgDirection'
 ```
 
-Direction of the image when it was captured. **Read/Write capability**: readable and writable.
+Direction of the image when it was captured.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1512,7 +1963,9 @@ Direction of the image when it was captured. **Read/Write capability**: readable
 GPS_MAP_DATUM = 'GPSMapDatum'
 ```
 
-Geodetic survey data used by the GPS receiver. **Read/Write capability**: readable and writable.
+Geodetic survey data used by the GPS receiver.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1524,7 +1977,13 @@ Geodetic survey data used by the GPS receiver. **Read/Write capability**: readab
 GPS_DEST_LATITUDE_REF = 'GPSDestLatitudeRef'
 ```
 
-Whether the latitude of the destination point is north or south latitude. 78: "North". 83: "South". **Read/Write capability**: readable and writable.
+Whether the latitude of the destination point is north or south latitude.
+
+78: "North".
+
+83: "South".
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1536,7 +1995,9 @@ Whether the latitude of the destination point is north or south latitude. 78: "N
 GPS_DEST_LATITUDE = 'GPSDestLatitude'
 ```
 
-Latitude of the destination point. **Read/Write capability**: readable and writable.
+Latitude of the destination point.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1548,7 +2009,13 @@ Latitude of the destination point. **Read/Write capability**: readable and writa
 GPS_DEST_LONGITUDE_REF = 'GPSDestLongitudeRef'
 ```
 
-Whether the longitude of the destination point is east or west longitude. 69: "East". 87: "West". **Read/Write capability**: readable and writable.
+Whether the longitude of the destination point is east or west longitude.
+
+69: "East".
+
+87: "West".
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1560,7 +2027,9 @@ Whether the longitude of the destination point is east or west longitude. 69: "E
 GPS_DEST_LONGITUDE = 'GPSDestLongitude'
 ```
 
-Longitude of the destination point. **Read/Write capability**: readable and writable.
+Longitude of the destination point.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1572,7 +2041,15 @@ Longitude of the destination point. **Read/Write capability**: readable and writ
 GPS_DEST_BEARING_REF = 'GPSDestBearingRef'
 ```
 
-Reference of the bearing to the destination point. 'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and navigation systems. 'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic declination varies by location and changes over time. **Read/Write capability**: readable and writable.
+Reference of the bearing to the destination point.
+
+'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and
+navigation systems.
+
+'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic
+declination varies by location and changes over time.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1584,7 +2061,9 @@ Reference of the bearing to the destination point. 'T': "True direction", which 
 GPS_DEST_BEARING = 'GPSDestBearing'
 ```
 
-Bearing to the destination point. **Read/Write capability**: readable and writable.
+Bearing to the destination point.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1596,7 +2075,15 @@ Bearing to the destination point. **Read/Write capability**: readable and writab
 GPS_DEST_DISTANCE_REF = 'GPSDestDistanceRef'
 ```
 
-Unit used to express the distance to the destination point. 'K': "km." 'M': "miles." 'N': "nautical miles." **Read/Write capability**: readable and writable.
+Unit used to express the distance to the destination point.
+
+'K': "km."
+
+'M': "miles."
+
+'N': "nautical miles."
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1608,7 +2095,9 @@ Unit used to express the distance to the destination point. 'K': "km." 'M': "mil
 GPS_DEST_DISTANCE = 'GPSDestDistance'
 ```
 
-Distance to the destination point. **Read/Write capability**: readable and writable.
+Distance to the destination point.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1620,7 +2109,9 @@ Distance to the destination point. **Read/Write capability**: readable and writa
 GPS_PROCESSING_METHOD = 'GPSProcessingMethod'
 ```
 
-String that records the name of the method used for positioning. **Read/Write capability**: readable and writable.
+String that records the name of the method used for positioning.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1632,7 +2123,9 @@ String that records the name of the method used for positioning. **Read/Write ca
 GPS_AREA_INFORMATION = 'GPSAreaInformation'
 ```
 
-String that records the name of the GPS area. **Read/Write capability**: readable and writable.
+String that records the name of the GPS area.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1644,7 +2137,13 @@ String that records the name of the GPS area. **Read/Write capability**: readabl
 GPS_DIFFERENTIAL = 'GPSDifferential'
 ```
 
-Whether differential correction is applied to the GPS receiver. It is critical to accurate location accuracy. 0: "Without correction", which indicates that no differential correction is used. 1:"Correction applied", which indicates that differential correction is used. **Read/Write capability**: readable and writable.
+Whether differential correction is applied to the GPS receiver. It is critical to accurate location accuracy.
+
+0: "Without correction", which indicates that no differential correction is used.
+
+1:"Correction applied", which indicates that differential correction is used.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1656,7 +2155,9 @@ Whether differential correction is applied to the GPS receiver. It is critical t
 BODY_SERIAL_NUMBER = 'BodySerialNumber'
 ```
 
-Serial number of the camera body. **Read/Write capability**: readable and writable.
+Serial number of the camera body.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1668,7 +2169,9 @@ Serial number of the camera body. **Read/Write capability**: readable and writab
 CAMERA_OWNER_NAME = 'CameraOwnerName'
 ```
 
-Name of the camera owner. **Read/Write capability**: readable and writable.
+Name of the camera owner.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1680,7 +2183,9 @@ Name of the camera owner. **Read/Write capability**: readable and writable.
 COMPOSITE_IMAGE = 'CompositeImage'
 ```
 
-Whether the image is a composite image. **Read/Write capability**: readable and writable.
+Whether the image is a composite image.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1692,7 +2197,9 @@ Whether the image is a composite image. **Read/Write capability**: readable and 
 COMPRESSED_BITS_PER_PIXEL = 'CompressedBitsPerPixel'
 ```
 
-Number of bits per pixel. It is specific to compressed data. **Read/Write capability**: readable and writable.
+Number of bits per pixel. It is specific to compressed data.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1704,7 +2211,9 @@ Number of bits per pixel. It is specific to compressed data. **Read/Write capabi
 DNG_VERSION = 'DNGVersion'
 ```
 
-DNG version. It encodes the DNG 4-tier version number. **Read/Write capability**: readable and writable.
+DNG version. It encodes the DNG 4-tier version number.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1716,7 +2225,10 @@ DNG version. It encodes the DNG 4-tier version number. **Read/Write capability**
 DEFAULT_CROP_SIZE = 'DefaultCropSize'
 ```
 
-Size of the final image area, in raw image coordinates, taking into account extra pixels around the edges of the final image. **Read/Write capability**: readable and writable.
+Size of the final image area, in raw image coordinates, taking into account extra pixels around the edges of the
+final image.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1728,7 +2240,9 @@ Size of the final image area, in raw image coordinates, taking into account extr
 GAMMA = 'Gamma'
 ```
 
-Gamma value. **Read/Write capability**: readable and writable.
+Gamma value.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1740,7 +2254,9 @@ Gamma value. **Read/Write capability**: readable and writable.
 ISO_SPEED_LATITUDE_YYY = 'ISOSpeedLatitudeyyy'
 ```
 
-ISO speed latitude yyy value of the camera or input device, which is defined in ISO 12232. **Read/Write capability**: readable and writable.
+ISO speed latitude yyy value of the camera or input device, which is defined in ISO 12232.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1752,7 +2268,9 @@ ISO speed latitude yyy value of the camera or input device, which is defined in 
 ISO_SPEED_LATITUDE_ZZZ = 'ISOSpeedLatitudezzz'
 ```
 
-ISO speed latitude zzz value of the camera or input device, which is defined in ISO 12232. **Read/Write capability**: readable and writable.
+ISO speed latitude zzz value of the camera or input device, which is defined in ISO 12232.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1764,7 +2282,9 @@ ISO speed latitude zzz value of the camera or input device, which is defined in 
 LENS_MAKE = 'LensMake'
 ```
 
-Manufacturer of the lens. **Read/Write capability**: readable and writable.
+Manufacturer of the lens.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1776,7 +2296,9 @@ Manufacturer of the lens. **Read/Write capability**: readable and writable.
 LENS_MODEL = 'LensModel'
 ```
 
-Model of the lens. **Read/Write capability**: readable and writable.
+Model of the lens.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1788,7 +2310,9 @@ Model of the lens. **Read/Write capability**: readable and writable.
 LENS_SERIAL_NUMBER = 'LensSerialNumber'
 ```
 
-Serial number of the lens. **Read/Write capability**: readable and writable.
+Serial number of the lens.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1800,7 +2324,9 @@ Serial number of the lens. **Read/Write capability**: readable and writable.
 LENS_SPECIFICATION = 'LensSpecification'
 ```
 
-Specifications of the lens. **Read/Write capability**: readable and writable.
+Specifications of the lens.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1812,7 +2338,11 @@ Specifications of the lens. **Read/Write capability**: readable and writable.
 NEW_SUBFILE_TYPE = 'NewSubfileType'
 ```
 
-Data type of a subfile, such as a full-resolution image, a thumbnail, or a part of a multi-frame image. The value is a bit mask. The value 0 indicates a full-resolution image, **1** indicates a thumbnail, and **2** indicates a part of a multi-frame image. **Read/Write capability**: readable and writable.
+Data type of a subfile, such as a full-resolution image, a thumbnail, or a part of a multi-frame image. The value
+is a bit mask. The value 0 indicates a full-resolution image, **1** indicates a thumbnail, and **2** indicates a
+part of a multi-frame image.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1824,7 +2354,9 @@ Data type of a subfile, such as a full-resolution image, a thumbnail, or a part 
 OFFSET_TIME = 'OffsetTime'
 ```
 
-Time with an offset from UTC when the image was captured. **Read/Write capability**: readable and writable.
+Time with an offset from UTC when the image was captured.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1836,7 +2368,9 @@ Time with an offset from UTC when the image was captured. **Read/Write capabilit
 OFFSET_TIME_DIGITIZED = 'OffsetTimeDigitized'
 ```
 
-Time with an offset from UTC when the image was digitized. It helps to accurately adjust the timestamp. **Read/Write capability**: readable and writable.
+Time with an offset from UTC when the image was digitized. It helps to accurately adjust the timestamp.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1848,7 +2382,9 @@ Time with an offset from UTC when the image was digitized. It helps to accuratel
 OFFSET_TIME_ORIGINAL = 'OffsetTimeOriginal'
 ```
 
-Time with an offset from UTC when the original image was created. It is critical for time-sensitive applications. **Read/Write capability**: readable and writable.
+Time with an offset from UTC when the original image was created. It is critical for time-sensitive applications.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1860,7 +2396,9 @@ Time with an offset from UTC when the original image was created. It is critical
 SOURCE_EXPOSURE_TIMES_OF_COMPOSITE_IMAGE = 'SourceExposureTimesOfCompositeImage'
 ```
 
-Exposure time of source images of the composite image. **Read/Write capability**: readable and writable.
+Exposure time of source images of the composite image.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1872,7 +2410,9 @@ Exposure time of source images of the composite image. **Read/Write capability**
 SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE = 'SourceImageNumberOfCompositeImage'
 ```
 
-Number of source images of the composite image. **Read/Write capability**: readable and writable.
+Number of source images of the composite image.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1884,7 +2424,9 @@ Number of source images of the composite image. **Read/Write capability**: reada
 SUBFILE_TYPE = 'SubfileType'
 ```
 
-Type of data contained in this subfile. This tag has been deprecated. Use **NewSubfileType** instead. **Read/Write capability**: readable and writable.
+Type of data contained in this subfile. This tag has been deprecated. Use **NewSubfileType** instead.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1896,7 +2438,9 @@ Type of data contained in this subfile. This tag has been deprecated. Use **NewS
 GPS_H_POSITIONING_ERROR = 'GPSHPositioningError'
 ```
 
-Horizontal positioning error, in meters. **Read/Write capability**: readable and writable.
+Horizontal positioning error, in meters.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1908,7 +2452,11 @@ Horizontal positioning error, in meters. **Read/Write capability**: readable and
 PHOTOGRAPHIC_SENSITIVITY = 'PhotographicSensitivity'
 ```
 
-ISO sensitivity (ISO speed) used when the image was captured. It is the recommended field in Exif 2.3 and later. The earlier field, ISOSpeedRatings (Tag 0x8827), has the same data type and meaning. However, if both fields are present, the **PhotographicSensitivity** value should be used. **Read/Write capability**: readable and writable.
+ISO sensitivity (ISO speed) used when the image was captured. It is the recommended field in Exif 2.3 and later.
+The earlier field, ISOSpeedRatings (Tag 0x8827), has the same data type and meaning. However, if both fields are
+present, the **PhotographicSensitivity** value should be used.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1920,7 +2468,9 @@ ISO sensitivity (ISO speed) used when the image was captured. It is the recommen
 BURST_NUMBER = 'HwMnoteBurstNumber'
 ```
 
-Number of burst shooting times. **Read/Write capability**: read-only
+Number of burst shooting times.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -1932,7 +2482,9 @@ Number of burst shooting times. **Read/Write capability**: read-only
 FACE_CONF = 'HwMnoteFaceConf'
 ```
 
-Face confidence. **Read/Write capability**: read-only
+Face confidence.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -1944,7 +2496,9 @@ Face confidence. **Read/Write capability**: read-only
 FACE_LEYE_CENTER = 'HwMnoteFaceLeyeCenter'
 ```
 
-Left eye centered. **Read/Write capability**: read-only
+Left eye centered.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -1956,7 +2510,9 @@ Left eye centered. **Read/Write capability**: read-only
 FACE_MOUTH_CENTER = 'HwMnoteFaceMouthCenter'
 ```
 
-Mouth centered. **Read/Write capability**: read-only
+Mouth centered.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -1968,7 +2524,9 @@ Mouth centered. **Read/Write capability**: read-only
 FACE_POINTER = 'HwMnoteFacePointer'
 ```
 
-Face pointer. **Read/Write capability**: read-only
+Face pointer.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -1980,7 +2538,9 @@ Face pointer. **Read/Write capability**: read-only
 FACE_RECT = 'HwMnoteFaceRect'
 ```
 
-Face rectangle. **Read/Write capability**: read-only
+Face rectangle.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -1992,7 +2552,9 @@ Face rectangle. **Read/Write capability**: read-only
 FACE_REYE_CENTER = 'HwMnoteFaceReyeCenter'
 ```
 
-Right eye centered. **Read/Write capability**: read-only
+Right eye centered.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -2004,7 +2566,9 @@ Right eye centered. **Read/Write capability**: read-only
 FACE_SMILE_SCORE = 'HwMnoteFaceSmileScore'
 ```
 
-Smile score of for faces. **Read/Write capability**: read-only
+Smile score of for faces.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -2016,7 +2580,9 @@ Smile score of for faces. **Read/Write capability**: read-only
 FACE_VERSION = 'HwMnoteFaceVersion'
 ```
 
-Facial recognition algorithm version. **Read/Write capability**: read-only
+Facial recognition algorithm version.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -2028,7 +2594,9 @@ Facial recognition algorithm version. **Read/Write capability**: read-only
 FRONT_CAMERA = 'HwMnoteFrontCamera'
 ```
 
-Whether the front camera is used to take a selfie. **Read/Write capability**: read-only
+Whether the front camera is used to take a selfie.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -2040,7 +2608,9 @@ Whether the front camera is used to take a selfie. **Read/Write capability**: re
 SCENE_POINTER = 'HwMnoteScenePointer'
 ```
 
-Pointer to the scene. **Read/Write capability**: read-only
+Pointer to the scene.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -2052,7 +2622,9 @@ Pointer to the scene. **Read/Write capability**: read-only
 SCENE_VERSION = 'HwMnoteSceneVersion'
 ```
 
-Scene algorithm version. **Read/Write capability**: read-only
+Scene algorithm version.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -2064,7 +2636,9 @@ Scene algorithm version. **Read/Write capability**: read-only
 IS_XMAGE_SUPPORTED = 'HwMnoteIsXmageSupported'
 ```
 
-Whether XMAGE is supported. **Read/Write capability**: readable and writable.
+Whether XMAGE is supported.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2076,7 +2650,9 @@ Whether XMAGE is supported. **Read/Write capability**: readable and writable.
 XMAGE_MODE = 'HwMnoteXmageMode'
 ```
 
-XMAGE watermark mode. **Read/Write capability**: readable and writable.
+XMAGE watermark mode.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2088,7 +2664,9 @@ XMAGE watermark mode. **Read/Write capability**: readable and writable.
 XMAGE_LEFT = 'HwMnoteXmageLeft'
 ```
 
-X1 coordinate of the watermark region. **Read/Write capability**: readable and writable.
+X1 coordinate of the watermark region.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2100,7 +2678,9 @@ X1 coordinate of the watermark region. **Read/Write capability**: readable and w
 XMAGE_TOP = 'HwMnoteXmageTop'
 ```
 
-Y1 coordinate of the watermark region. **Read/Write capability**: readable and writable.
+Y1 coordinate of the watermark region.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2112,7 +2692,9 @@ Y1 coordinate of the watermark region. **Read/Write capability**: readable and w
 XMAGE_RIGHT = 'HwMnoteXmageRight'
 ```
 
-X2 coordinate of the watermark region. **Read/Write capability**: readable and writable.
+X2 coordinate of the watermark region.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2124,7 +2706,9 @@ X2 coordinate of the watermark region. **Read/Write capability**: readable and w
 XMAGE_BOTTOM = 'HwMnoteXmageBottom'
 ```
 
-Y2 coordinate of the watermark region. **Read/Write capability**: readable and writable.
+Y2 coordinate of the watermark region.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2136,7 +2720,9 @@ Y2 coordinate of the watermark region. **Read/Write capability**: readable and w
 CLOUD_ENHANCEMENT_MODE = 'HwMnoteCloudEnhancementMode'
 ```
 
-Cloud enhancement mode. **Read/Write capability**: readable and writable.
+Cloud enhancement mode.
+
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2148,7 +2734,9 @@ Cloud enhancement mode. **Read/Write capability**: readable and writable.
 WIND_SNAPSHOT_MODE = 'HwMnoteWindSnapshotMode'
 ```
 
-Motion snapshot mode. **Read/Write capability**: read-only
+Motion snapshot mode.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -2160,7 +2748,9 @@ Motion snapshot mode. **Read/Write capability**: read-only
 GIF_LOOP_COUNT = 'GIFLoopCount'
 ```
 
-Number of GIF loops. The value **0** means an infinite loop, and other values means the number of loops. **Read/Write capability**: read-only
+Number of GIF loops. The value **0** means an infinite loop, and other values means the number of loops.
+
+**Read/Write capability**: read-only
 
 **Since:** 12
 

@@ -18,7 +18,9 @@ import { audio } from '@kit.AudioKit';
 capturerFlags: number
 ```
 
-Flags that control the capturer behavior. Set this parameter to **0**.
+Flags that control the capturer behavior.
+
+Set this parameter to **0**.
 
 **Type:** number
 

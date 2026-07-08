@@ -637,7 +637,7 @@ Query the channel layout of the renderer client.
 | Parameter | Description |
 | -- | -- |
 | [OH_AudioRenderer](capi-ohaudio-oh-audiorendererstruct.md)* renderer | Reference created by OH_AudioStreamBuilder_GenerateRenderer() |
-| [OH_AudioChannelLayout](../AVCodecKit/capi-native-audio-channel-layout-h.md#oh_audiochannellayout)* channelLayout | Pointer to a variable to receive the channel layout |
+| OH_AudioChannelLayout* channelLayout | Pointer to a variable to receive the channel layout |
 
 **Returns**:
 
@@ -1043,7 +1043,7 @@ Configure audio session strategy and behavior parameters to adjust the focus pre
 | Parameter | Description |
 | -- | -- |
 | [OH_AudioRenderer](capi-ohaudio-oh-audiorendererstruct.md)* renderer | AudioRenderer created by OH_AudioStreamBuilder_GenerateRenderer(). |
-| const OH_AudioSession_Strategy* strategy | pointer to [OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md)which is used to set the audio session strategy. |
+| [const OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md)* strategy | pointer to [OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md)which is used to set the audio session strategy. |
 | uint32_t behavior | Audio session behavior flag, which can be a single flag or a bitwiseOR combination of multiple flags [OH_AudioSession_BehaviorFlags](capi-native-audio-session-base-h.md#oh_audiosession_behaviorflags). |
 
 **Returns**:

@@ -34,7 +34,8 @@ The overflow animation area
 duration: number
 ```
 
-The overflow animation duration, unit is ms Unit: milliseconds, The value must be an integer within [0,3500].
+The overflow animation duration, unit is ms
+Unit: milliseconds, The value must be an integer within [0,3500].
 
 **Type:** number
 

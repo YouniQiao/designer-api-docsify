@@ -1,6 +1,9 @@
 # PiPController
 
-画中画控制器实例。用于启动、停止画中画以及更新回调注册等。 下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-create-f.md#create-1)方法获取到PiPController实例，再通过此实例调用对应方 法。
+画中画控制器实例。用于启动、停止画中画以及更新回调注册等。
+
+下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-create-f.md#create-1)方法获取到PiPController实例，再通过此实例调用对应方
+法。
 
 **起始版本：** 11
 
@@ -180,7 +183,9 @@ this.pipController.off('stateChange');
 off(type: 'controlPanelActionEvent'): void
 ```
 
-关闭画中画控制面板控件动作事件的监听。推荐使用 [off('controlEvent')](arkts-arkui-pipcontroller-i.md#off-3) 来关闭画中画控制面板控件动作事件的监听。
+关闭画中画控制面板控件动作事件的监听。推荐使用
+[off('controlEvent')](arkts-arkui-pipcontroller-i.md#off-3)
+来关闭画中画控制面板控件动作事件的监听。
 
 **起始版本：** 11
 
@@ -377,7 +382,9 @@ this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string)
 on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void
 ```
 
-开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用 [on('controlEvent')](arkts-arkui-pipcontroller-i.md#on-3) 来开启画中画控制面板控件动作事件的监听。
+开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用
+[on('controlEvent')](arkts-arkui-pipcontroller-i.md#on-3)
+来开启画中画控制面板控件动作事件的监听。
 
 **起始版本：** 11
 
@@ -559,7 +566,9 @@ this.pipController.on('activeStatusChange', callback);
 setAutoStartEnabled(enable: boolean): void
 ```
 
-设置是否在返回桌面时自动启动画中画，默认不自动拉起。 在使用XComponent方案实现画中画功能并结合Navigation进行路由管理时，首次调用setAutoStartEnabled(true)方法，系统会缓存当前应用传入的NavigationId的栈顶信息。
+设置是否在返回桌面时自动启动画中画，默认不自动拉起。
+
+在使用XComponent方案实现画中画功能并结合Navigation进行路由管理时，首次调用setAutoStartEnabled(true)方法，系统会缓存当前应用传入的NavigationId的栈顶信息。
 
 **起始版本：** 11
 

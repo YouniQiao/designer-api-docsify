@@ -20,7 +20,8 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 count: number
 ```
 
-Number of photos in the scenario where a recommendation word is searched. The value range is all integers.
+Number of photos in the scenario where a recommendation word is searched.
+The value range is all integers.
 
 **Type:** number
 

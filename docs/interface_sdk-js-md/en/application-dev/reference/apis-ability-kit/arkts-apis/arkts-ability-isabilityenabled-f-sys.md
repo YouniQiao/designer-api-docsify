@@ -12,7 +12,8 @@ import { bundleManager } from '@kit.AbilityKit';
 function isAbilityEnabled(info: AbilityInfo, appIndex: number): Promise<boolean>
 ```
 
-Checks whether an ability of an application or an application clone is enabled. This API uses a promise to return the result.
+Checks whether an ability of an application or an application clone is enabled. This API uses a promise to return
+the result.
 
 **Since:** 12
 

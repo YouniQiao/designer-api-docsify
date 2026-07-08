@@ -34,7 +34,8 @@ Name of the image creator or artist.
 readonly compression?: number
 ```
 
-Compression scheme used for image data (e.g., None, LZW, JPEG, Deflate). The value should be an integer.
+Compression scheme used for image data (e.g., None, LZW, JPEG, Deflate).
+The value should be an integer.
 
 **Type:** number
 
@@ -178,7 +179,8 @@ Indicates image orientation for correct display rotation/flip.
 readonly photometricInterpretation?: number
 ```
 
-Defines how pixel colors are interpreted (e.g., RGB, grayscale). The value should be an integer.
+Defines how pixel colors are interpreted (e.g., RGB, grayscale).
+The value should be an integer.
 
 **Type:** number
 
@@ -210,7 +212,8 @@ Chromaticity coordinates of the RGB primaries.
 readonly resolutionUnit?: number
 ```
 
-Unit for X/Y resolution. The value should be an integer.
+Unit for X/Y resolution.
+The value should be an integer.
 
 **Type:** number
 
@@ -242,7 +245,8 @@ Software used to create or process the image.
 readonly tileLength?: number
 ```
 
-Height of each image tile in pixels. The value should be an integer.
+Height of each image tile in pixels.
+The value should be an integer.
 
 **Type:** number
 
@@ -258,7 +262,8 @@ Height of each image tile in pixels. The value should be an integer.
 readonly tileWidth?: number
 ```
 
-Width of each image tile in pixels. The value should be an integer.
+Width of each image tile in pixels.
+The value should be an integer.
 
 **Type:** number
 

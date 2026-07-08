@@ -12,7 +12,8 @@ import { connection } from '@kit.NetworkKit';
 function addVlanIp(ifName: string, vlanId: number, address: LinkAddress): Promise<void>
 ```
 
-Add ip of vlan interface by vlanId. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
+Add ip of vlan interface by vlanId.
+To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
 
 **Since:** 23
 

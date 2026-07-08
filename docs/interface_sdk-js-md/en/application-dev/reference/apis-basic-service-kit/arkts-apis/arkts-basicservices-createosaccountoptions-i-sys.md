@@ -20,7 +20,8 @@ import { osAccount } from '@kit.BasicServicesKit';
 allowedPreinstalledBundles?: Array<string>
 ```
 
-Trustlist of the preinstalled applications, which can be installed on the device. The default value is **std:: nullopt**.
+Trustlist of the preinstalled applications, which can be installed on the device. The default value is **std::
+nullopt**.
 
 **Type:** Array<string>
 
@@ -36,7 +37,8 @@ Trustlist of the preinstalled applications, which can be installed on the device
 disallowedPreinstalledBundles?: Array<string>
 ```
 
-Forbidden list of the preinstalled applications, which cannot be installed on the device. The value is left empty by default.
+Forbidden list of the preinstalled applications, which cannot be installed on the device. The value is left empty
+by default.
 
 **Type:** Array<string>
 
@@ -52,7 +54,13 @@ Forbidden list of the preinstalled applications, which cannot be installed on th
 shortName: string
 ```
 
-Short name of the account (used as the name of the personal folder). **The short name cannot**: 1. Contain any of the following characters: < >| : " * ? / \ 2. Contain any of the following: . or .. 3. Exceed 255 characters.
+Short name of the account (used as the name of the personal folder).
+
+**The short name cannot**:
+
+1. Contain any of the following characters: < >| : " * ? / \
+2. Contain any of the following: . or ..
+3. Exceed 255 characters.
 
 **Type:** string
 

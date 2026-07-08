@@ -14,7 +14,8 @@
 callerTokenId?: number
 ```
 
-主叫token标识。 取值范围：(-∞,+∞)。
+主叫token标识。
+取值范围：(-∞,+∞)。
 
 **类型：** number
 
@@ -78,7 +79,8 @@ operationInfo: OperationInfo[]
 ticketExpireTimeMs?: number
 ```
 
-凭据过期时间，单位为毫秒。 取值范围：(-∞,+∞)。
+凭据过期时间，单位为毫秒。
+取值范围：(-∞,+∞)。
 
 **类型：** number
 

@@ -12,7 +12,8 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 ```
 
-Obtains all information about the requested efficiency resources, including the resource type. This API uses a promise to return the result.
+Obtains all information about the requested efficiency resources, including the resource type. This API uses a
+promise to return the result.
 
 **Since:** 20
 

@@ -1,6 +1,7 @@
 # AVMimeTypes
 
-Enumerates the MIME type, which is set by using [setMimeType](arkts-media-mediasource-i.md#setmimetype-1).
+Enumerates the MIME type, which is set by using
+[setMimeType](arkts-media-mediasource-i.md#setmimetype-1).
 
 **Since:** 12
 

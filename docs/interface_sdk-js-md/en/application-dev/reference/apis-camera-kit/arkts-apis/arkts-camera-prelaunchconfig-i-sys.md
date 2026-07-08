@@ -1,6 +1,8 @@
 # PrelaunchConfig (System API)
 
-Defines the camera prelaunch configuration. Currently, the configuration is used for sensor-level prelaunch. It will be used for stream-level prelaunch in a later version.
+Defines the camera prelaunch configuration.
+Currently, the configuration is used for sensor-level prelaunch. It will be used for stream-level prelaunch in a
+later version.
 
 **Since:** 10
 

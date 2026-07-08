@@ -12,7 +12,8 @@ import { storageStatistics } from '@kit.CoreFileKit';
 function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 ```
 
-Obtains the storage space (in bytes) of this application. This API uses an asynchronous callback to return the result.
+Obtains the storage space (in bytes) of this application. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 9
 

@@ -18,7 +18,9 @@ import { componentUtils } from '@kit.ArkUI';
 centerX: number
 ```
 
-X-coordinate of the center point. Unit: vp
+X-coordinate of the center point.
+
+Unit: vp
 
 **Type:** number
 
@@ -36,7 +38,9 @@ X-coordinate of the center point. Unit: vp
 centerY: number
 ```
 
-Y-coordinate of the center point. Unit: vp
+Y-coordinate of the center point.
+
+Unit: vp
 
 **Type:** number
 

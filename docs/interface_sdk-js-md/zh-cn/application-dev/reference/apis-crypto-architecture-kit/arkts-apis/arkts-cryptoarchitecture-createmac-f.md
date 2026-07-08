@@ -6,7 +6,9 @@
 function createMac(algName: string): Mac
 ```
 
-生成Mac实例，用于消息认证码的计算与操作。 支持的规格详见[HMAC消息认证码算法规格](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
+生成Mac实例，用于消息认证码的计算与操作。
+
+支持的规格详见[HMAC消息认证码算法规格](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
 
 **起始版本：** 9
 
@@ -58,7 +60,9 @@ try {
 function createMac(macSpec: MacSpec): Mac
 ```
 
-生成Mac实例，用于进行消息认证码的计算与操作。 支持的规格详见[MAC消息认证码算法规格](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
+生成Mac实例，用于进行消息认证码的计算与操作。
+
+支持的规格详见[MAC消息认证码算法规格](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
 
 **起始版本：** 18
 

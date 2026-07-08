@@ -132,7 +132,11 @@ Obtains the CRL extensions in DER format.
 getIssuerName(): DataBlob
 ```
 
-Obtains the issuer of the X.509 CRL. > **NOTE** > > The obtained X.509 CRL issuer name contains a string terminator.
+Obtains the issuer of the X.509 CRL.
+
+> **NOTE**
+>
+> The obtained X.509 CRL issuer name contains a string terminator.
 
 **Since:** 11
 
@@ -347,7 +351,8 @@ Obtains the revoked certificate entry from the X.509 CRL based on the specified 
 getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void
 ```
 
-Obtains all the revoked certificate entries from the X.509 CRL. This API uses an asynchronous callback to return the result.
+Obtains all the revoked certificate entries from the X.509 CRL. This API uses an asynchronous callback to return
+the result.
 
 **Since:** 11
 
@@ -459,7 +464,8 @@ Obtains the signing algorithm of the X.509 CRL.
 getSignatureAlgOid(): string
 ```
 
-Obtains the OID of the X.509 CRL signing algorithm. OIDs are allocated by the International Organization for Standardization (ISO).
+Obtains the OID of the X.509 CRL signing algorithm. OIDs are allocated by the International Organization for
+Standardization (ISO).
 
 **Since:** 11
 
@@ -741,7 +747,8 @@ Converts this object into a string in the specified encoding format.
 verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 ```
 
-Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses an asynchronous callback to return the result.
+Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses an asynchronous callback
+to return the result.
 
 **Since:** 11
 
@@ -769,7 +776,8 @@ Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This AP
 verify(key: cryptoFramework.PubKey): Promise<void>
 ```
 
-Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses a promise to return the result.
+Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses a promise to return the
+result.
 
 **Since:** 11
 

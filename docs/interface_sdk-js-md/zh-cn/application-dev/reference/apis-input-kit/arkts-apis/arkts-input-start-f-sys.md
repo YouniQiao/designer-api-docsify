@@ -6,7 +6,13 @@
 function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void
 ```
 
-启动键鼠穿越，使用callback异步回调。 > **说明：** > > 从 API version 9开始支持，从API version 23开始废弃。建议使用 > [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-activatecooperate-f-sys.md#activatecooperate-1) > 替代。
+启动键鼠穿越，使用callback异步回调。
+
+> **说明：**
+>
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用
+> [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-activatecooperate-f-sys.md#activatecooperate-1)
+> 替代。
 
 **起始版本：** 9
 
@@ -75,7 +81,13 @@ struct Index {
 function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>
 ```
 
-启动键鼠穿越，使用Promise异步回调。 > **说明：** > > 从 API version 9开始支持，从API version 23开始废弃。建议使用 > [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-activatecooperate-f-sys.md#activatecooperate-2) > 替代。
+启动键鼠穿越，使用Promise异步回调。
+
+> **说明：**
+>
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用
+> [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-activatecooperate-f-sys.md#activatecooperate-2)
+> 替代。
 
 **起始版本：** 9
 

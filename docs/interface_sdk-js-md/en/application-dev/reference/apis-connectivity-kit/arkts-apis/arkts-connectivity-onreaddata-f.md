@@ -6,7 +6,9 @@
 function onReadData(callback: Callback<DataParams>): void
 ```
 
-Subscribes to the event reported when data is read from the port. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+Subscribes to the event reported when data is read from the port.
+
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
 

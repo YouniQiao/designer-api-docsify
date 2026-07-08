@@ -1,6 +1,7 @@
 # InterruptAction
 
-Describes the callback invoked for audio interruption or focus gain events.When the audio of an application is interrupted by another application, the callback is invoked to notify the former application.
+Describes the callback invoked for audio interruption or focus gain events.When the audio of an application
+is interrupted by another application, the callback is invoked to notify the former application.
 
 **Since:** 7
 
@@ -22,7 +23,8 @@ import { audio } from '@kit.AudioKit';
 actionType: InterruptActionType
 ```
 
-Event type. The value TYPE_ACTIVATED means the focus gain event, and TYPE_INTERRUPT means the audio interruption event.
+Event type.
+The value TYPE_ACTIVATED means the focus gain event, and TYPE_INTERRUPT means the audio interruption event.
 
 **Type:** InterruptActionType
 
@@ -40,7 +42,8 @@ Event type. The value TYPE_ACTIVATED means the focus gain event, and TYPE_INTERR
 activated?: boolean
 ```
 
-Whether the focus is gained or released. **true** if the focus is gained or released, **false** if the focus fails to be gained or released.
+Whether the focus is gained or released. **true** if the focus is gained or released, **false** if the focus
+fails to be gained or released.
 
 **Type:** boolean
 

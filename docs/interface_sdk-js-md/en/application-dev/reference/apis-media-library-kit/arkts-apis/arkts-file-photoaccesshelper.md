@@ -34,7 +34,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | --- | --- |
 | [AutoPlayScene](arkts-medialibrary-autoplayscene-c.md) | Automatic playback scene of moving photo. |
 | [BaseSelectOptions](arkts-medialibrary-baseselectoptions-c.md) | Class BaseSelectOptions, which is extracted from class PhotoSelectOptions |
-| [ContextRecoveryInfo](arkts-medialibrary-contextrecoveryinfo-c.md) | Context information of the exit status of PhotoPicker, which can be used for on-site recovery of PhotoPicker next time. |
+| [ContextRecoveryInfo](arkts-medialibrary-contextrecoveryinfo-c.md) | Context information of the exit status of PhotoPicker,which can be used for on-site recovery of PhotoPicker next time. |
 | [FileSizeFilter](arkts-medialibrary-filesizefilter-c.md) | Media file size filtering configuration. |
 | [GridPinchMode](arkts-medialibrary-gridpinchmode-c.md) | Grid pinch mode |
 | [MediaAlbumChangeRequest](arkts-medialibrary-mediaalbumchangerequest-c.md) | Defines the class of media album change request. |
@@ -45,10 +45,10 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [PhotoSelectOptions](arkts-medialibrary-photoselectoptions-c.md) | PhotoSelectOptions extends base class BaseSelectOptions |
 | [PhotoSelectResult](arkts-medialibrary-photoselectresult-c.md) | Defines information about the images or videos selected. |
 | [PhotoViewMimeTypeFileSizeFilter](arkts-medialibrary-photoviewmimetypefilesizefilter-c.md) | Media file type and size combined filtering configuration. |
-| [PhotoViewPicker](arkts-medialibrary-photoviewpicker-c.md) | Provides APIs for the user to select images and videos. Before using the APIs of PhotoViewPicker, you need to create a PhotoViewPicker instance. |
+| [PhotoViewPicker](arkts-medialibrary-photoviewpicker-c.md) | Provides APIs for the user to select images and videos.Before using the APIs of PhotoViewPicker, you need to create a PhotoViewPicker instance. |
 | [RecentPhotoInfo](arkts-medialibrary-recentphotoinfo-c.md) | Recent photo info |
 | [RecentPhotoOptions](arkts-medialibrary-recentphotooptions-c.md) | RecentPhotoOptions Object |
-| [RecommendationOptions](arkts-medialibrary-recommendationoptions-c.md) | Defines the image recommendation options. The image recommendation feature depends on the image data analysis capability, which varies with devices. |
+| [RecommendationOptions](arkts-medialibrary-recommendationoptions-c.md) | Defines the image recommendation options.The image recommendation feature depends on the image data analysis capability, which varies with devices. |
 | [RequestReadPermissionResult](arkts-medialibrary-requestreadpermissionresult-c.md) | Request read permission result |
 | [VideoDurationFilter](arkts-medialibrary-videodurationfilter-c.md) | Media file video duration filtering configuration. |
 
@@ -58,8 +58,8 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | Name | Description |
 | --- | --- |
 | [AnalysisAlbum](arkts-medialibrary-analysisalbum-c-sys.md) | Analysis album to create. |
-| [CloudEnhancement](arkts-medialibrary-cloudenhancement-c-sys.md) | Provides APIs for cloud enhancement management, including managing the tasks of generating AI-powered cloud enhancement photos and obtaining the association between the original photos and AI cloud enhancement photos. |
-| [CloudMediaAssetManager](arkts-medialibrary-cloudmediaassetmanager-c-sys.md) | A class used for cloud media asset management. It is used to manage download tasks for media assets stored in the cloud and delete local data and files pertaining to these cloud-based assets. |
+| [CloudEnhancement](arkts-medialibrary-cloudenhancement-c-sys.md) | Provides APIs for cloud enhancement management,including managing the tasks of generating AI-powered cloud enhancement photosand obtaining the association between the original photos and AI cloud enhancement photos. |
+| [CloudMediaAssetManager](arkts-medialibrary-cloudmediaassetmanager-c-sys.md) | A class used for cloud media asset management. It is used to manage download tasks for media assets storedin the cloud and delete local data and files pertaining to these cloud-based assets. |
 | [DefaultCoverOrderInfo](arkts-medialibrary-defaultcoverorderinfo-c-sys.md) | Default Cover Order |
 | [HighlightAlbum](arkts-medialibrary-highlightalbum-c-sys.md) | Provides APIs for managing the Highlights album, which is an automatically generated collection of memorable photos or videos. |
 | [KnowledgeContent](arkts-medialibrary-knowledgecontent-c-sys.md) | Knowledge Content class, used for geting related entity. |
@@ -71,7 +71,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [MediaHighlightAlbumChangeRequest](arkts-medialibrary-mediahighlightalbumchangerequest-c-sys.md) | Defines the class of media highlight album change request. |
 | [PhotoAssetCustomRecordManager](arkts-medialibrary-photoassetcustomrecordmanager-c-sys.md) | Defines the class of media asset custom record manager. |
 | [PhotoSelectOptions](arkts-medialibrary-photoselectoptions-c-sys.md) | PhotoSelectOptions extends base class BaseSelectOptions |
-| [RecommendationOptions](arkts-medialibrary-recommendationoptions-c-sys.md) | Defines the image recommendation options. The image recommendation feature depends on the image data analysis capability, which varies with devices. |
+| [RecommendationOptions](arkts-medialibrary-recommendationoptions-c-sys.md) | Defines the image recommendation options.The image recommendation feature depends on the image data analysis capability, which varies with devices. |
 | [ResultSet](arkts-medialibrary-resultset-c-sys.md) | Provides methods for accessing a database result set generated by querying the database. |
 | [TaskSignal](arkts-medialibrary-tasksignal-c-sys.md) | for interrupting batch operations. |
 <!--DelEnd-->
@@ -125,8 +125,8 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [ChangeData](arkts-medialibrary-changedata-i-sys.md) | Defines the change data |
 | [CloudAssetDownloadProgressInfo](arkts-medialibrary-cloudassetdownloadprogressinfo-i-sys.md) | Download cloud asset callback info. |
 | [CloudAssetDownloadStatus](arkts-medialibrary-cloudassetdownloadstatus-i-sys.md) | Download cloud asset status info. |
-| [CloudEnhancementTaskState](arkts-medialibrary-cloudenhancementtaskstate-i-sys.md) | Represents the cloud enhancement task information, which includes the cloud enhancement task state and other information related to certain states. |
-| [CloudMediaAssetStatus](arkts-medialibrary-cloudmediaassetstatus-i-sys.md) | Describes the details of a cloud media asset download task. It is the return value of the API used by applications to obtain the cloud asset download task status. |
+| [CloudEnhancementTaskState](arkts-medialibrary-cloudenhancementtaskstate-i-sys.md) | Represents the cloud enhancement task information,which includes the cloud enhancement task state and other information related to certain states. |
+| [CloudMediaAssetStatus](arkts-medialibrary-cloudmediaassetstatus-i-sys.md) | Describes the details of a cloud media asset download task.It is the return value of the API used by applications to obtain the cloud asset download task status. |
 | [ContextMap](arkts-medialibrary-contextmap-i-sys.md) | Provides APIs for input Context Map. |
 | [DeepOptimizeSpaceProgress](arkts-medialibrary-deepoptimizespaceprogress-i-sys.md) | Defines the DeepOptimizeSpaceProgress data structure. |
 | [Entity](arkts-medialibrary-entity-i-sys.md) | Provides APIs for output Entity. |
@@ -255,7 +255,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 
 | Name | Description |
 | --- | --- |
-| [ProgressListener](arkts-medialibrary-progresslistener-t-sys.md) | Indicates the type of the progress of batch operation. Progress callback, which can be the size or numberof files. |
+| [ProgressListener](arkts-medialibrary-progresslistener-t-sys.md) | Indicates the type of the progress of batch operation.Progress callback, which can be the size or numberof files. |
 | [ResultListener](arkts-medialibrary-resultlistener-t-sys.md) | Indicates the type of the result of batch operation. |
 | [ValueType](arkts-medialibrary-valuetype-t-sys.md) | Indicates possible value types |
 | [ValuesBucket](arkts-medialibrary-valuesbucket-t-sys.md) | Values in buckets are stored in key-value pairs, change {[key: string]: ValueType;} to Record&lt;string, ValueType&gt; |

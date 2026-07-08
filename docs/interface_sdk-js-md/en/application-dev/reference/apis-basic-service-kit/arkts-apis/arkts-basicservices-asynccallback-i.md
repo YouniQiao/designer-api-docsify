@@ -1,6 +1,8 @@
 # AsyncCallback
 
-Defines a common callback that carries an error parameter and asynchronous return value.The error parameter is of the [BusinessError](arkts-basicservices-businesserror-i.md) type. The type of the asynchronous return value is defined by the developer.
+Defines a common callback that carries an error parameter and asynchronous return value.The error parameter is of
+the [BusinessError](arkts-basicservices-businesserror-i.md) type. The type of the asynchronous return value is defined by the
+developer.
 
 **Since:** 6
 

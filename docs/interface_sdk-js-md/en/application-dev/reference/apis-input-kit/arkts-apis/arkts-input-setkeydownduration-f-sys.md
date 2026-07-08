@@ -12,7 +12,8 @@ import { shortKey } from '@kit.InputKit';
 function setKeyDownDuration(businessKey: string, delay: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the result.
+Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 10
 

@@ -6,7 +6,9 @@
 function wrapKeyItem(keyAlias: string, params: HuksOptions): Promise<HuksReturnResult>
 ```
 
-加密导出密钥。使用Promise异步回调。 <!--Del-->该功能暂不支持。<!--DelEnd-->
+加密导出密钥。使用Promise异步回调。
+
+<!--Del-->该功能暂不支持。<!--DelEnd-->
 
 **起始版本：** 20
 

@@ -1,6 +1,8 @@
 # Session
 
-**Session** implements a session, which saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to take a photo or record a video.
+**Session** implements a session, which saves all [CameraInput](arkts-camera-camerainput-i.md) and
+[CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera and requests the camera
+to take a photo or record a video.
 
 **Since:** 11
 
@@ -97,7 +99,8 @@ Starts configuration for the session.
 canAddInput(cameraInput: CameraInput): boolean
 ```
 
-Checks whether a **CameraInput** instance can be added to this session. This API must be called after [beginConfig](arkts-camera-session-i.md#beginconfig-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
+Checks whether a **CameraInput** instance can be added to this session. This API must be called after
+[beginConfig](arkts-camera-session-i.md#beginconfig-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
 
 **Since:** 11
 
@@ -123,7 +126,8 @@ Checks whether a **CameraInput** instance can be added to this session. This API
 canAddOutput(cameraOutput: CameraOutput): boolean
 ```
 
-Determines whether a CameraOutput instance can be added to this session. This API must be called after [addInput](arkts-camera-session-i.md#addinput-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
+Determines whether a CameraOutput instance can be added to this session. This API must be called after
+[addInput](arkts-camera-session-i.md#addinput-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
 
 **Since:** 11
 
@@ -255,7 +259,9 @@ Releases this session. This API uses a promise to return the result.
 removeInput(cameraInput: CameraInput): void
 ```
 
-Removes a [CameraInput](arkts-camera-camerainput-i.md) instance from this session. This API must be called after [beginConfig](arkts-camera-session-i.md#beginconfig-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
+Removes a [CameraInput](arkts-camera-camerainput-i.md) instance from this session. This API must be called
+after [beginConfig](arkts-camera-session-i.md#beginconfig-1) and before
+[commitConfig](arkts-camera-session-i.md#commitconfig-2).
 
 **Since:** 11
 

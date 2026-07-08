@@ -1,6 +1,9 @@
 # StaticSubscriberExtensionContext (System API)
 
-The **StaticSubscriberExtensionContext** module, inherited from **StaticSubscriberExtensionAbility**, provides context for StaticSubscriberExtensionAbilities. You can use the APIs of this module to start StaticSubscriberExtensionAbilities.
+The **StaticSubscriberExtensionContext** module, inherited from **StaticSubscriberExtensionAbility**, provides
+context for StaticSubscriberExtensionAbilities.
+
+You can use the APIs of this module to start StaticSubscriberExtensionAbilities.
 
 **Inheritance/Implementation:** StaticSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
@@ -22,7 +25,15 @@ import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
 startAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability that belongs to the same application as this StaticSubscriberExtensionAbility. This API uses an asynchronous callback to return the result. Observe the following when using this API: - If an application running in the background needs to call this API to start an ability, it must have the **ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission. - If **visible** of the target ability is **false** in cross-application scenarios, the caller must have the **ohos.permission.START_INVISIBLE_ABILITY** permission.
+Starts an ability that belongs to the same application as this StaticSubscriberExtensionAbility. This API uses an
+asynchronous callback to return the result.
+
+Observe the following when using this API:
+
+- If an application running in the background needs to call this API to start an ability, it must have the
+**ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission.
+- If **visible** of the target ability is **false** in cross-application scenarios, the caller must have the
+**ohos.permission.START_INVISIBLE_ABILITY** permission.
 
 **Since:** 10
 
@@ -104,7 +115,15 @@ class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbilit
 startAbility(want: Want): Promise<void>
 ```
 
-Starts an ability that belongs to the same application as this StaticSubscriberExtensionAbility. This API uses a promise to return the result. Observe the following when using this API: - If an application running in the background needs to call this API to start an ability, it must have the **ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission. - If **visible** of the target ability is **false** in cross-application scenarios, the caller must have the **ohos.permission.START_INVISIBLE_ABILITY** permission.
+Starts an ability that belongs to the same application as this StaticSubscriberExtensionAbility. This API uses a
+promise to return the result.
+
+Observe the following when using this API:
+
+- If an application running in the background needs to call this API to start an ability, it must have the
+**ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission.
+- If **visible** of the target ability is **false** in cross-application scenarios, the caller must have the
+**ohos.permission.START_INVISIBLE_ABILITY** permission.
 
 **Since:** 10
 

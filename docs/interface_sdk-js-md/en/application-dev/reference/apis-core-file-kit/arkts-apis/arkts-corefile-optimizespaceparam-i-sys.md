@@ -20,7 +20,8 @@ import { cloudSync } from '@kit.CoreFileKit';
 agingDays: number
 ```
 
-Aging days. The system optimizes the local images and videos that have been uploaded to the cloud but not viewed for more than the aging days.
+Aging days. The system optimizes the local images and videos that have been uploaded to the cloud but not viewed
+for more than the aging days.
 
 **Type:** number
 
@@ -38,7 +39,8 @@ Aging days. The system optimizes the local images and videos that have been uplo
 totalSize:number
 ```
 
-Total size of the optimization space. You can obtain the total size of all files to be aged through the media library API. The size is transferred by the application and is in bytes.
+Total size of the optimization space. You can obtain the total size of all files to be aged through the media
+library API. The size is transferred by the application and is in bytes.
 
 **Type:** number
 

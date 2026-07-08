@@ -392,7 +392,8 @@ onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternal
      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>
 ```
 
-Callback to be called to open the resource handle before crypto operations. NOTE: the handle returned must be closed by onCloseResource.
+Callback to be called to open the resource handle before crypto operations.
+NOTE: the handle returned must be closed by onCloseResource.
 
 **Since:** 22
 

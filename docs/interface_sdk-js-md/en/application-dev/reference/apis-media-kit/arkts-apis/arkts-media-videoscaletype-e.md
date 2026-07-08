@@ -26,7 +26,8 @@ Default mode. The video will be stretched to fit the window.
 VIDEO_SCALE_TYPE_FIT_CROP = 1
 ```
 
-Maintains the video's aspect ratio, and scales to fill the shortest side of the window, with the longer side cropped.
+Maintains the video's aspect ratio, and scales to fill the shortest side of the window, with the longer side
+cropped.
 
 **Since:** 9
 
@@ -40,7 +41,8 @@ Maintains the video's aspect ratio, and scales to fill the shortest side of the 
 VIDEO_SCALE_TYPE_SCALED_ASPECT = 2
 ```
 
-Maintains the video's aspect ratio, and scales to fill the longer side of the window, with the shorter side centered and unfilled parts left black.
+Maintains the video's aspect ratio, and scales to fill the longer side of the window, with the shorter side
+centered and unfilled parts left black.
 
 **Since:** 20
 

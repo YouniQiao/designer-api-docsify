@@ -12,7 +12,8 @@ import { bundleManager } from '@kit.MDMKit';
 function removeDisallowedUninstallBundles(admin: Want, appIds: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Removes the applications that cannot be uninstalled by the current user. This API uses an asynchronous callback to return the result.
+Removes the applications that cannot be uninstalled by the current user. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 10
 
@@ -77,7 +78,8 @@ bundleManager.removeDisallowedUninstallBundles(wantTemp, appIds, (err) => {
 function removeDisallowedUninstallBundles(admin: Want, appIds: Array<string>, userId: number, callback: AsyncCallback<void>): void
 ```
 
-Removes the applications that cannot be uninstalled by the user specified by **userId**. This API uses an asynchronous callback to return the result.
+Removes the applications that cannot be uninstalled by the user specified by **userId**. This API uses an
+asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -143,7 +145,8 @@ bundleManager.removeDisallowedUninstallBundles(wantTemp, appIds, 100, (err) => {
 function removeDisallowedUninstallBundles(admin: Want, appIds: Array<string>, userId?: number): Promise<void>
 ```
 
-Removes the applications that cannot be uninstalled by the current or specified user. This API uses a promise to return the result.
+Removes the applications that cannot be uninstalled by the current or specified user. This API uses a promise to
+return the result.
 
 **Since:** 10
 

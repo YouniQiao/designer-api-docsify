@@ -1,6 +1,7 @@
 # MediaKeySystem
 
-Manages and record MediaKeySessions. Before calling an MediaKeySystem method, we must use getMediaKeySystem to get a MediaKeySystem instance, then we can call functions.
+Manages and record MediaKeySessions. Before calling an MediaKeySystem method, we must use getMediaKeySystem
+to get a MediaKeySystem instance, then we can call functions.
 
 **Since:** 14
 
@@ -340,7 +341,8 @@ Get offline media key status corresponding to the mediaKeyId.
 getStatistics(): StatisticKeyValue[]
 ```
 
-Get performance statistics information.That includes currentSessionNum, version, decryptNumber, and errorDecryptNumber.
+Get performance statistics information.That includes currentSessionNum, version, decryptNumber,
+and errorDecryptNumber.
 
 **Since:** 14
 

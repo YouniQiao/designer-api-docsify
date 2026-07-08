@@ -12,7 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void
 ```
 
-Binds a process to {@code NetHandle}. <p>All the sockets created from the process will be bound to the {@code NetHandle}, and the resolution of all host names will be managed by the {@code NetHandle}.</p>
+Binds a process to {@code NetHandle}.
+<p>All the sockets created from the process will be bound to the {@code NetHandle},
+and the resolution of all host names will be managed by the {@code NetHandle}.</p>
 
 **Since:** 9
 
@@ -96,7 +98,9 @@ netCon.register((error: BusinessError) => {
 function setAppNet(netHandle: NetHandle): Promise<void>
 ```
 
-Binds a process to {@code NetHandle}. <p>All the sockets created from the process will be bound to the {@code NetHandle}, and the resolution of all host names will be managed by the {@code NetHandle}.</p>
+Binds a process to {@code NetHandle}.
+<p>All the sockets created from the process will be bound to the {@code NetHandle},
+and the resolution of all host names will be managed by the {@code NetHandle}.</p>
 
 **Since:** 9
 

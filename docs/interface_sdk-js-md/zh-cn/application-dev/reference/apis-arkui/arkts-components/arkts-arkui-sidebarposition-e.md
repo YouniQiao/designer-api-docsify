@@ -9,7 +9,7 @@
 ## Start
 
 ```TypeScript
-Start = 0
+Start
 ```
 
 侧边栏位于容器左侧。
@@ -23,7 +23,7 @@ Start = 0
 ## End
 
 ```TypeScript
-End = 1
+End
 ```
 
 侧边栏位于容器右侧。

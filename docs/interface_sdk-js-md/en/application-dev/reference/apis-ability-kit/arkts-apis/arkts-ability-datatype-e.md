@@ -1,6 +1,6 @@
 # DataType
 
-Enumerates the types of data under lock screen.
+Enumerates the types of sensitive data that can be accessed under the lock screen.
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ Enumerates the types of data under lock screen.
 MEDIA_DATA = 0x00000001
 ```
 
-Media photo and video data.
+Media data type.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ Media photo and video data.
 ALL_DATA = 0xffffffff
 ```
 
-All data type.
+All sensitive data types.
 
 **Since:** 12
 

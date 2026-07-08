@@ -9,7 +9,7 @@ Position of the navigation page.
 ## Start
 
 ```TypeScript
-Start = 0
+Start
 ```
 
 When two columns are displayed, the main column is at the start of the main axis.
@@ -23,7 +23,7 @@ When two columns are displayed, the main column is at the start of the main axis
 ## End
 
 ```TypeScript
-End = 1
+End
 ```
 
 When two columns are displayed, the main column is at the end of the main axis.

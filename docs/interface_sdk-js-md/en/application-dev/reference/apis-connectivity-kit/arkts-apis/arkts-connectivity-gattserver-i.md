@@ -1,6 +1,7 @@
 # GattServer
 
-Manages GATT server. Before calling an Gatt server method, you must use {@link createGattServer} to create an GattServer instance.
+Manages GATT server. Before calling an Gatt server method, you must use {@link createGattServer} to create an
+GattServer instance.
 
 **Since:** 9
 
@@ -22,7 +23,10 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 addService(service: GattService): void
 ```
 
-Adds a specified service to be hosted. The added service and its characteristics are provided by the local device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Adds a specified service to be hosted.
+
+The added service and its characteristics are provided by the local device.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -96,7 +100,8 @@ try {
 close(): void
 ```
 
-Closes this {@code GattServer} object and unregisters its callbacks. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Closes this {@code GattServer} object and unregisters its callbacks.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -139,7 +144,10 @@ try {
 notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): void
 ```
 
-Sends a notification of a change in a specified local characteristic. This method should be called for every BLE peripheral device that has requested notifications. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Sends a notification of a change in a specified local characteristic.
+
+This method should be called for every BLE peripheral device that has requested notifications.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -204,7 +212,8 @@ try {
 off(type: 'characteristicRead', callback?: Callback<CharacteristicReadRequest>): void
 ```
 
-Unsubscribe characteristic read event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Unsubscribe characteristic read event.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -252,7 +261,8 @@ gattServer.off("characteristicRead");
 off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteRequest>): void
 ```
 
-Unsubscribe characteristic write event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Unsubscribe characteristic write event.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -300,7 +310,8 @@ gattServer.off("characteristicWrite");
 off(type: 'descriptorRead', callback?: Callback<DescriptorReadRequest>): void
 ```
 
-Unsubscribe descriptor read event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Unsubscribe descriptor read event.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -348,7 +359,8 @@ gattServer.off("descriptorRead");
 off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteRequest>): void
 ```
 
-Unsubscribe descriptor write event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Unsubscribe descriptor write event.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -396,7 +408,8 @@ gattServer.off("descriptorWrite");
 off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void
 ```
 
-Unsubscribe server connection state changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Unsubscribe server connection state changed event.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -444,7 +457,8 @@ gattServer.off("connectStateChange");
 on(type: 'characteristicRead', callback: Callback<CharacteristicReadRequest>): void
 ```
 
-Subscribe characteristic read event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Subscribe characteristic read event.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -506,7 +520,8 @@ gattServer.on("characteristicRead", ReadCharacteristicReq);
 on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteRequest>): void
 ```
 
-Subscribe characteristic write event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Subscribe characteristic write event.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -571,7 +586,8 @@ gattServer.on("characteristicWrite", WriteCharacteristicReq);
 on(type: 'descriptorRead', callback: Callback<DescriptorReadRequest>): void
 ```
 
-Subscribe descriptor read event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Subscribe descriptor read event.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -633,7 +649,8 @@ gattServer.on("descriptorRead", ReadDescriptorReq);
 on(type: 'descriptorWrite', callback: Callback<DescriptorWriteRequest>): void
 ```
 
-Subscribe descriptor write event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Subscribe descriptor write event.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -698,7 +715,8 @@ gattServer.on("descriptorWrite", WriteDescriptorReq);
 on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void
 ```
 
-Subscribe server connection state changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Subscribe server connection state changed event.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -750,7 +768,8 @@ gattServer.on("connectStateChange", Connected);
 removeService(serviceUuid: string): void
 ```
 
-Removes a specified service from the list of GATT services provided by this device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Removes a specified service from the list of GATT services provided by this device.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -801,7 +820,8 @@ try {
 sendResponse(serverResponse: ServerResponse): void
 ```
 
-Sends a response to a specified read or write request to a given BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Sends a response to a specified read or write request to a given BLE peripheral device.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -863,7 +883,9 @@ try {
 startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void
 ```
 
-Starts BLE advertising. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
+Starts BLE advertising.
+On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to
+ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -951,7 +973,9 @@ try {
 stopAdvertising(): void
 ```
 
-Stops BLE advertising. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
+Stops BLE advertising.
+On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to
+ACCESS_BLUETOOTH.
 
 **Since:** 9
 

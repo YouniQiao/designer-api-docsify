@@ -12,7 +12,10 @@ import { bundleState } from '@kit.BackgroundTasksKit';
 function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void
 ```
 
-Queries the usage priority group of the calling application. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the usage priority group of the calling application.
+
+The priority defined in a priority group restricts the resource usage of an application,
+for example, restricting the running of background tasks.
 
 **Since:** 7
 
@@ -49,7 +52,10 @@ bundleState.queryAppUsagePriorityGroup((err: BusinessError, res: number) => {
 function queryAppUsagePriorityGroup(): Promise<number>
 ```
 
-Queries the usage priority group of the calling application. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the usage priority group of the calling application.
+
+The priority defined in a priority group restricts the resource usage of an application,
+for example, restricting the running of background tasks.
 
 **Since:** 7
 

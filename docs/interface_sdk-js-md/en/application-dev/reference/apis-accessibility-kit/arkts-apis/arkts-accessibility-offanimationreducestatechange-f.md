@@ -12,7 +12,8 @@ import { accessibility } from '@kit.AccessibilityKit';
 function offAnimationReduceStateChange(callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the state changes in animation reduction mode. This API uses an asynchronous callback to return the result.
+Unsubscribes from the state changes in animation reduction mode. This API uses an asynchronous callback to return
+the result.
 
 **Since:** 23
 

@@ -13,7 +13,8 @@ function notifyPrintService(jobId: string, type: 'spooler_closed_for_cancelled' 
     callback: AsyncCallback<void>): void
 ```
 
-Notifies the print service of the spooler shutdown information. This API uses an asynchronous callback to return the result.
+Notifies the print service of the spooler shutdown information. This API uses an asynchronous callback to return
+the result.
 
 **Since:** 11
 

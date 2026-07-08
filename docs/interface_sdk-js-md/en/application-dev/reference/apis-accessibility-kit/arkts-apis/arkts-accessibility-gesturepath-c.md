@@ -1,6 +1,7 @@
 # GesturePath
 
-The **GesturePath** module provides APIs for creating gesture path information required for an accessibility application to inject gestures.
+The **GesturePath** module provides APIs for creating gesture path information required for an accessibility
+application to inject gestures.
 
 **Since:** 9
 

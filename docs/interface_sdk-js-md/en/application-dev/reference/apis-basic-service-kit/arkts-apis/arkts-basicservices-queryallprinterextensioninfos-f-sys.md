@@ -12,7 +12,8 @@ import { print } from '@kit.BasicServicesKit';
 function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExtensionInfo>>): void
 ```
 
-Obtains the information of all installed printer extensions. This API uses an asynchronous callback to return the result.
+Obtains the information of all installed printer extensions. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 10
 

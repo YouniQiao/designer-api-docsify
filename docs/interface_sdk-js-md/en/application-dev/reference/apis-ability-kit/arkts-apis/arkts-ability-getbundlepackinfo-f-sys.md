@@ -13,7 +13,8 @@ function getBundlePackInfo(bundleName: string,
     bundlePackFlag : BundlePackFlag, callback: AsyncCallback<BundlePackInfo>): void
 ```
 
-Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses an asynchronous callback to return the result.
+Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 9
 
@@ -48,7 +49,8 @@ Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API 
 function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag): Promise<BundlePackInfo>
 ```
 
-Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses a promise to return the result.
+Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses a promise to return the
+result.
 
 **Since:** 9
 

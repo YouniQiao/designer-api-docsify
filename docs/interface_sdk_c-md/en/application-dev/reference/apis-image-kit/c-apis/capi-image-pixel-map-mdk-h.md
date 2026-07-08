@@ -2,7 +2,7 @@
 
 ## Overview
 
-Declares the APIs that can lock, access, and unlock a pixel map.Need link <b>libpixelmap_ndk.z.so</b>
+Declares the APIs that can lock, access, and unlock a pixel map.
 
 **Library**: libpixelmap_ndk.z.so
 

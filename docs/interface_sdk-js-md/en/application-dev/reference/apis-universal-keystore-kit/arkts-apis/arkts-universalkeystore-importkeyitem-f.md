@@ -47,7 +47,7 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 | [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | queried credential does not exist |
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
 | [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
-| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with same alias is already exist<br>**Applicable version:** 20 and later |
+| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists<br>**Applicable version:** 20 and later |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
 
 **Example**
@@ -148,7 +148,7 @@ Imports a key in plaintext. This API uses a promise to return the result.
 | [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | queried credential does not exist |
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
 | [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
-| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with same alias is already exist<br>**Applicable version:** 20 and later |
+| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists<br>**Applicable version:** 20 and later |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
 
 **Example**

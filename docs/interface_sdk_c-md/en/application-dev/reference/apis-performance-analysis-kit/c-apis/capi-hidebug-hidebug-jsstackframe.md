@@ -6,7 +6,7 @@ typedef struct HiDebug_JsStackFrame {...} HiDebug_JsStackFrame
 
 ## Overview
 
-Defines Js stack frame content
+Defines a struct for the JS stack frame content.
 
 **Since**: 20
 
@@ -20,12 +20,12 @@ Defines Js stack frame content
 
 | Name | Description |
 | -- | -- |
-| uint64_t relativePc | The pc relative to the start of current file in /proc/self/maps |
-| int32_t line | The line number of the source code from url |
-| int32_t column | The column number of the source code from url |
-| const char* mapName | The name parsed by pc from /proc/self/maps, maybe NULL |
-| const char* functionName | The functionName of current frame, maybe NULL |
-| const char* url | The url of current frame, maybe NULL |
-| const char* packageName | The packageName of current frame, maybe NULL |
+| uint64_t relativePc | Relative PC address, which is the offset of the current PC relative to the start address of its mapping area (such as an executable file or shared library). |
+| int32_t line | Line number of the code corresponding to the current stack frame in the file. |
+| int32_t column | Column number of the code corresponding to the current stack frame in the specified line. |
+| const char* mapName | Name of the mapping area to which the current stack frame belongs. |
+| const char* functionName | Name of the function corresponding to the current stack frame. |
+| const char* url | URL of the code file corresponding to the current stack frame. It can be used to find the corresponding codefile in the local path or on the remote server. |
+| const char* packageName | Name of the package to which the code corresponding to the current stack frame belongs. |
 
 

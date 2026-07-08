@@ -1,6 +1,8 @@
 # MakerNoteHuaweiMetadata
 
-MakerNoteHuaweiMetadata implements Metadata Photo metadata from Huawei cameras.
+MakerNoteHuaweiMetadata implements Metadata
+
+Photo metadata from Huawei cameras.
 
 **Inheritance/Implementation:** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-metadata-i.md)
 
@@ -20,7 +22,8 @@ import { image } from '@kit.ImageKit';
 clone(): Promise<MakerNoteHuaweiMetadata>
 ```
 
-Clones [MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md) metadata. This API returns the result asynchronously through a promise.
+Clones [MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md) metadata. This API returns the result
+asynchronously through a promise.
 
 **Since:** 23
 
@@ -60,7 +63,8 @@ Returns an empty [MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.
+Obtains all properties and their values from the image metadata. This API returns the result asynchronously
+through a promise.
 
 **Since:** 23
 
@@ -164,7 +168,10 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [PropertyKey](arkts-image-propertykey-e.md).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously
+through a promise.
+
+For details about the properties, see [PropertyKey](arkts-image-propertykey-e.md).
 
 **Since:** 23
 
@@ -196,7 +203,8 @@ Sets the values of specified properties in image metadata in batches. This API r
 burstNumber?: number
 ```
 
-Number of burst shots. The value range is all integers.
+Number of burst shots.
+The value range is all integers.
 
 **Type:** number
 
@@ -212,7 +220,8 @@ Number of burst shots. The value range is all integers.
 captureMode?: number
 ```
 
-Capture mode. The value range is all integers.
+Capture mode.
+The value range is all integers.
 
 **Type:** number
 
@@ -260,7 +269,8 @@ Confidences of a specified number of faces.
 faceCount?: number
 ```
 
-Number of faces. The value range is all integers.
+Number of faces.
+The value range is all integers.
 
 **Type:** number
 
@@ -340,7 +350,9 @@ Whether to use the front camera. **true** indicates yes; **false** indicates no.
 isWindSnapshot?: boolean
 ```
 
-Whether the wind snapshot mode is used. **true** indicates yes; **false** indicates no. This mode is a specialized photography mode designed for capturing fast-moving subjects or scenes prone to blurring, such as in windy conditions or when photographing moving objects.
+Whether the wind snapshot mode is used. **true** indicates yes; **false** indicates no.
+This mode is a specialized photography mode designed for capturing fast-moving subjects or scenes prone to
+blurring, such as in windy conditions or when photographing moving objects.
 
 **Type:** boolean
 
@@ -372,7 +384,8 @@ Whether XMAGE is supported. **true** indicates yes; **false** indicates no.
 physicalAperture?: number
 ```
 
-Physical aperture, in fNumber. The value range is all integers.
+Physical aperture, in fNumber.
+The value range is all integers.
 
 **Type:** number
 
@@ -388,7 +401,8 @@ Physical aperture, in fNumber. The value range is all integers.
 pitchAngle?: number
 ```
 
-Pitch angle. The value range is all integers.
+Pitch angle.
+The value range is all integers.
 
 **Type:** number
 
@@ -404,7 +418,8 @@ Pitch angle. The value range is all integers.
 rollAngle?: number
 ```
 
-Horizontal pan angle. The value range is all integers.
+Horizontal pan angle.
+The value range is all integers.
 
 **Type:** number
 
@@ -420,7 +435,8 @@ Horizontal pan angle. The value range is all integers.
 sceneBeachConfidence?: number
 ```
 
-Capture scene: beach confidence. The value range is all integers.
+Capture scene: beach confidence.
+The value range is all integers.
 
 **Type:** number
 
@@ -436,7 +452,8 @@ Capture scene: beach confidence. The value range is all integers.
 sceneBlueSkyConfidence?: number
 ```
 
-Capture scene: blue sky confidence. The value range is all integers.
+Capture scene: blue sky confidence.
+The value range is all integers.
 
 **Type:** number
 
@@ -452,7 +469,8 @@ Capture scene: blue sky confidence. The value range is all integers.
 sceneFlowersConfidence?: number
 ```
 
-Capture scene: flower confidence. The value range is all integers.
+Capture scene: flower confidence.
+The value range is all integers.
 
 **Type:** number
 
@@ -468,7 +486,8 @@ Capture scene: flower confidence. The value range is all integers.
 sceneFoodConfidence?: number
 ```
 
-Capture scene: food confidence. The value range is all integers.
+Capture scene: food confidence.
+The value range is all integers.
 
 **Type:** number
 
@@ -484,7 +503,8 @@ Capture scene: food confidence. The value range is all integers.
 sceneGreenPlantConfidence?: number
 ```
 
-Capture scene: green plant confidence. The value range is all integers.
+Capture scene: green plant confidence.
+The value range is all integers.
 
 **Type:** number
 
@@ -500,7 +520,8 @@ Capture scene: green plant confidence. The value range is all integers.
 sceneNightConfidence?: number
 ```
 
-Capture scene: night scene confidence. The value range is all integers.
+Capture scene: night scene confidence.
+The value range is all integers.
 
 **Type:** number
 
@@ -516,7 +537,8 @@ Capture scene: night scene confidence. The value range is all integers.
 sceneSnowConfidence?: number
 ```
 
-Capture scene: snow confidence. The value range is all integers.
+Capture scene: snow confidence.
+The value range is all integers.
 
 **Type:** number
 
@@ -532,7 +554,8 @@ Capture scene: snow confidence. The value range is all integers.
 sceneStageConfidence?: number
 ```
 
-Capture scene: stage performance confidence. The value range is all integers.
+Capture scene: stage performance confidence.
+The value range is all integers.
 
 **Type:** number
 
@@ -548,7 +571,8 @@ Capture scene: stage performance confidence. The value range is all integers.
 sceneSunsetConfidence?: number
 ```
 
-Capture scene: sunset confidence. The value range is all integers.
+Capture scene: sunset confidence.
+The value range is all integers.
 
 **Type:** number
 
@@ -564,7 +588,8 @@ Capture scene: sunset confidence. The value range is all integers.
 sceneTextConfidence?: number
 ```
 
-Capture scene: text confidence. The value range is all integers.
+Capture scene: text confidence.
+The value range is all integers.
 
 **Type:** number
 
@@ -580,7 +605,8 @@ Capture scene: text confidence. The value range is all integers.
 sceneVersion?: number
 ```
 
-Version number of the scene recognition algorithm. The value range is all integers.
+Version number of the scene recognition algorithm.
+The value range is all integers.
 
 **Type:** number
 
@@ -596,7 +622,9 @@ Version number of the scene recognition algorithm. The value range is all intege
 xmageBottom?: number
 ```
 
-Vertical coordinate of the bottom boundary of the effective content area (excluding the watermark coverage area) on the original image, relative to the top-left origin of the image. The unit is px. The value range is all integers.
+Vertical coordinate of the bottom boundary of the effective content area (excluding the watermark coverage area)
+on the original image, relative to the top-left origin of the image. The unit is px.
+The value range is all integers.
 
 **Type:** number
 
@@ -628,7 +656,9 @@ XMAGE color mode.
 xmageLeft?: number
 ```
 
-Horizontal coordinate of the left boundary of the effective content area (excluding the watermark coverage area) on the original image, relative to the top-left origin of the image. The unit is px. The value range is all integers.
+Horizontal coordinate of the left boundary of the effective content area (excluding the watermark coverage area)
+on the original image, relative to the top-left origin of the image. The unit is px.
+The value range is all integers.
 
 **Type:** number
 
@@ -644,7 +674,9 @@ Horizontal coordinate of the left boundary of the effective content area (exclud
 xmageRight?: number
 ```
 
-Horizontal coordinate of the right boundary of the effective content area (excluding the watermark coverage area) on the original image, relative to the top-left origin of the image. The unit is px. The value range is all integers.
+Horizontal coordinate of the right boundary of the effective content area (excluding the watermark coverage area)
+on the original image, relative to the top-left origin of the image. The unit is px.
+The value range is all integers.
 
 **Type:** number
 
@@ -660,7 +692,9 @@ Horizontal coordinate of the right boundary of the effective content area (exclu
 xmageTop?: number
 ```
 
-Vertical coordinate of the top boundary of the effective content area (excluding the watermark coverage area) on the original image, relative to the top-left origin of the image. The unit is px. The value range is all integers.
+Vertical coordinate of the top boundary of the effective content area (excluding the watermark coverage area) on
+the original image, relative to the top-left origin of the image. The unit is px.
+The value range is all integers.
 
 **Type:** number
 
@@ -676,7 +710,8 @@ Vertical coordinate of the top boundary of the effective content area (excluding
 xmageWatermarkMode?: number
 ```
 
-XMAGE watermark mode. For details, see [Constants](@ohos.multimedia.image:image.Constants). The value range is all integers.
+XMAGE watermark mode. For details, see [Constants](@ohos.multimedia.image:image.Constants).
+The value range is all integers.
 
 **Type:** number
 
