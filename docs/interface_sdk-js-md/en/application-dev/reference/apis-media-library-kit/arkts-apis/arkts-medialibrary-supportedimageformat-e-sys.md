@@ -1,6 +1,6 @@
 # SupportedImageFormat (System API)
 
-Enumerates the types of av file format.
+Enumerates the supported image formats.
 
 **Since:** 20
 

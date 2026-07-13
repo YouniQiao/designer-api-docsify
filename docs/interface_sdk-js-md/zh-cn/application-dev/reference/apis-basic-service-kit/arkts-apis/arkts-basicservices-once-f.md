@@ -32,8 +32,8 @@ let innerEvent: emitter.InnerEvent = {
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-// 收到eventId为1的事件后执行该回调函数
+};
+// 收到eventId为1的事件后执行该回调处理函数
 emitter.once(innerEvent, callback);
 
 ```
@@ -67,9 +67,9 @@ import { Callback } from '@kit.BasicServicesKit';
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
+};
 // 收到eventId为"eventId"的事件后执行该回调函数
-emitter.once("eventId", callback);
+emitter.once('eventId', callback);
 
 ```
 
@@ -116,9 +116,9 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
   if (eventData?.data instanceof Sample) {
     eventData?.data?.printCount();
   }
-}
+};
 // 收到eventId为"eventId"的事件后执行回调函数
-emitter.once("eventId", callback);
+emitter.once('eventId', callback);
 
 ```
 

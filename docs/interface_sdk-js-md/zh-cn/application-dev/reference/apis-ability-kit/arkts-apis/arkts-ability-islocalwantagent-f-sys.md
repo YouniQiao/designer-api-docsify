@@ -72,6 +72,7 @@ let localWantAgentInfo: wantAgent.LocalWantAgentInfo = {
 // 创建WantAgent实例并获取是否为本地WantAgent实例
 try {
   wantAgentData = wantAgent.createLocalWantAgent(localWantAgentInfo);
+  // 判断WantAgent实例是否为本地实例
   let isLocal: boolean = wantAgent.isLocalWantAgent(wantAgentData);
 } catch (err) {
   console.error('call isLocalWantAgent failed');

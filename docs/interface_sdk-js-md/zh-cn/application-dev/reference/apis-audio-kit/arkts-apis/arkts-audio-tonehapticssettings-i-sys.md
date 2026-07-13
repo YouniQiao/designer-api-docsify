@@ -14,6 +14,8 @@
 hapticsUri?: string
 ```
 
+振动URI。
+
 **类型：** string
 
 **起始版本：** 14
@@ -27,6 +29,8 @@ hapticsUri?: string
 ```TypeScript
 mode: ToneHapticsMode
 ```
+
+铃音振动模式。
 
 **类型：** ToneHapticsMode
 

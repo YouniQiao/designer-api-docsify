@@ -35,7 +35,7 @@ Obtains the number of subscriptions to a specified event.
 **Example**
 
 ```TypeScript
-let count: number = emitter.getListenerCount("eventId");
+let count: number = emitter.getListenerCount('eventId');
 
 ```
 

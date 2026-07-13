@@ -1,6 +1,6 @@
 # PriorityNotificationType
 
-Enumerates the priority notification types.
+Describes the priority type of a notification.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ Default.
 PRIMARY_CONTACT = 'PRIMARY_CONTACT'
 ```
 
-Primary contacts.
+Primary contact.
 
 **Since:** 23
 

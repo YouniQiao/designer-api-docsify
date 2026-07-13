@@ -29,18 +29,18 @@ function clearAllMissions(callback: AsyncCallback<void>): void
 **示例：**
 
 ```TypeScript
-import missionManager from '@ohos.application.missionManager'
+import missionManager from '@ohos.application.missionManager';
 
 try {
   missionManager.clearAllMissions(err => {
     if (err) {
-      console.error('clearAllMissions failed: ${err.message}');
+      console.error(`clearAllMissions failed: ${err.message}`);
     } else {
       console.info('clearAllMissions successfully.');
     }
   });
 } catch (err) {
-  console.error('clearAllMissions failed: ${err.message}');
+  console.error(`clearAllMissions failed: ${err.message}`);
 }
 
 ```

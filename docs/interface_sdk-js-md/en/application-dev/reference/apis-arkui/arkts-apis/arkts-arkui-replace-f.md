@@ -31,6 +31,8 @@ Replaces the current page with another one in the application and destroys the c
 **Example**
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
+
 class RouterParams {
   data1: string;
 
@@ -47,6 +49,8 @@ router.replace({
 ```
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
+
 class RouterParams {
   data1: string;
 

@@ -1,5 +1,11 @@
 # getLocalAddress (System API)
 
+## Modules to Import
+
+```TypeScript
+import { manager } from '@kit.ConnectivityKit';
+```
+
 ## getLocalAddress
 
 ```TypeScript

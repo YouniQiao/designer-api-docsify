@@ -41,7 +41,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 获取鼠标指针速度
+            // 获取鼠标光标速度
             pointer.getPointerSpeed((error: BusinessError, speed: number) => {
               if (error) {
                 console.error(`Failed to get pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

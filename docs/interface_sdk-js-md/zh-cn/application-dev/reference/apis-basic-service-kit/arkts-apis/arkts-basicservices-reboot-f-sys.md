@@ -36,8 +36,8 @@ function reboot(reason: string): void
 ```TypeScript
 try {
     power.reboot('reboot_test');
-} catch(err) {
-    console.error('reboot failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to reboot. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

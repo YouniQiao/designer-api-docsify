@@ -38,7 +38,7 @@ function queryTouchEvents(count: number) : Promise<Array<TouchEvent>>
 **示例：**
 
 ```TypeScript
-import { inputMonitor, TouchEvent } from '@kit.InputKit'
+import { inputMonitor, TouchEvent } from '@kit.InputKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {

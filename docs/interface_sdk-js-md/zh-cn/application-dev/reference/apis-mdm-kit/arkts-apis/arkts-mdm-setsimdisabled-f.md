@@ -43,7 +43,9 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
+  // 设置要禁用的卡槽ID
   let slotId: number = 0;
+  // 禁用指定卡槽的SIM卡
   telephonyManager.setSimDisabled(wantTemp, slotId);
   console.info(`Succeeded in setting slotId: ${slotId} disabled.`);
 } catch (err) {

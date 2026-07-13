@@ -35,11 +35,11 @@ function registerShutdownCallback(callback: Callback<boolean>): void
 ```TypeScript
 try {
     power.registerShutdownCallback((isReboot: boolean) => {
-        console.info('device shutdown is: ' + isReboot);
+        console.info('device is reboot: ' + isReboot);
     });
     console.info('register shutdown callback success.');
-} catch(err) {
-    console.error('register shutdown callback failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to register shutdown callback. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

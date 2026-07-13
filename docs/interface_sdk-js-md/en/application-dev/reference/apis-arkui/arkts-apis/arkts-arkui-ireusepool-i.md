@@ -177,7 +177,7 @@ struct Index {
     // Obtain the pool and schedule pre-rendering.
     const pool = UIUtils.getCustomComponentContext(this).getReusePool();
     // Preload the reusable components in preRenderBuilder to this global reuse pool and execute preRenderBuilder once.
-    pool!.preRender(new WrappedBuilder<[]>(preRenderBuilder.bind(this)), 1)
+    pool!.preRender(new WrappedBuilder<[]>(preRenderBuilder), 1)
       .then(() => {
         console.info('ReusableComponent preRender completes');
       });

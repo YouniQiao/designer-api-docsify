@@ -1,6 +1,6 @@
 # AnalysisAlbum (System API)
 
-Analysis album to create.
+Implements an **Analysis** album.
 
 **Since:** 18
 
@@ -20,7 +20,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 constructor(album: Album)
 ```
 
-The constructor to create an analysisAlbum instance.
+Constructor.
 
 **Since:** 18
 
@@ -32,14 +32,14 @@ The constructor to create an analysisAlbum instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | Album | Yes | Album |
+| album | Album | Yes | **Highlights** album. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 
 **Example**
 
@@ -72,7 +72,7 @@ async function example(context: Context) {
 getOrderPosition(assets: Array<PhotoAsset>): Promise<Array<number>>
 ```
 
-Obtains the sequence of assets in the Analysis album.
+Obtains the sequence of assets in the **Analysis** album.
 
 **Since:** 18
 
@@ -92,7 +92,7 @@ Obtains the sequence of assets in the Analysis album.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Returns the order of positions of assets |
+| Promise&lt;Array&lt;number&gt;&gt; | Sequence number of an asset in the album. |
 
 **Error codes:**
 
@@ -100,8 +100,8 @@ Obtains the sequence of assets in the Analysis album.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14000011 | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
+| 14000011 | Internal system error. It is recommended to retry and check the logs.<br>Possible causes:<br>1. Database corrupted;<br>2. The file system is abnormal;<br>3. The IPC request timed out. |
 
 **Example**
 
@@ -148,7 +148,7 @@ async function example(context: Context) {
 getRelationship(): Promise<string>
 ```
 
-Get the relationship in the album with the phone owner
+Obtains the relationships of a person in the portrait album.
 
 **Since:** 21
 
@@ -162,7 +162,7 @@ Get the relationship in the album with the phone owner
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the relationship of the album with the phone owner |
+| Promise&lt;string&gt; | Relationships of the person in the portrait album. |
 
 **Error codes:**
 
@@ -170,7 +170,7 @@ Get the relationship in the album with the phone owner
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes:<br>1. Database corrupted;<br>2. The file system is abnormal;<br>3. The IPC request timed out. |
 
 **Example**
 

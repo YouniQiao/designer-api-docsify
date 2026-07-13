@@ -34,7 +34,7 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-function CreateUnpremultipliedPixelMap() {
+function createUnpremultipliedPixelMap() {
   const color: ArrayBuffer = new ArrayBuffer(16); // 16为需要创建的像素缓冲区大小，取值为：width * height * 4。
   let bufferArr = new Uint8Array(color);
   for (let i = 0; i < bufferArr.length; i += 4) {
@@ -43,16 +43,16 @@ function CreateUnpremultipliedPixelMap() {
     bufferArr[i + 2] = 122;
     bufferArr[i + 3] = 122;
   }
-  let optsForPre: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 2, width: 2 } , alphaType: image.AlphaType.PREMUL}
+  let optsForPre: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 2, width: 2 }, alphaType: image.AlphaType.PREMUL};
   let srcPixelMap = image.createPixelMapSync(color, optsForPre);
-  let optsForUnpre: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 2, width: 2 } , alphaType: image.AlphaType.UNPREMUL}
+  let optsForUnpre: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 2, width: 2 }, alphaType: image.AlphaType.UNPREMUL};
   let dstPixelMap = image.createPixelMapSync(optsForUnpre);
-  image.createUnpremultipliedPixelMap(srcPixelMap, dstPixelMap, (error: BusinessError) => {
-    if (error) {
-      console.error(`Failed to convert PixelMap. Code is ${error.code}, message is ${error.message}`);
+  image.createUnpremultipliedPixelMap(srcPixelMap, dstPixelMap, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to convert the PixelMap. Code: ${err.code}, message: ${err.message}`);
       return;
     }
-    console.info('Succeeded in converting PixelMap.');
+    console.info('Succeeded in converting the PixelMap.');
   });
 }
 
@@ -98,7 +98,7 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-function CreateUnpremultipliedPixelMap() {
+function createUnpremultipliedPixelMap() {
   const color: ArrayBuffer = new ArrayBuffer(16); // 16为需要创建的像素缓冲区大小，取值为：width * height * 4。
   let bufferArr = new Uint8Array(color);
   for (let i = 0; i < bufferArr.length; i += 4) {
@@ -107,14 +107,14 @@ function CreateUnpremultipliedPixelMap() {
     bufferArr[i + 2] = 122;
     bufferArr[i + 3] = 122;
   }
-  let optsForPre: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 2, width: 2 } , alphaType: image.AlphaType.PREMUL}
+  let optsForPre: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 2, width: 2 }, alphaType: image.AlphaType.PREMUL};
   let srcPixelMap = image.createPixelMapSync(color, optsForPre);
-  let optsForUnpre: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 2, width: 2 } , alphaType: image.AlphaType.UNPREMUL}
+  let optsForUnpre: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 2, width: 2 }, alphaType: image.AlphaType.UNPREMUL};
   let dstPixelMap = image.createPixelMapSync(optsForUnpre);
   image.createUnpremultipliedPixelMap(srcPixelMap, dstPixelMap).then(() => {
-    console.info('Succeeded in converting PixelMap.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to convert PixelMap. Code is ${error.code}, message is ${error.message}`);
+    console.info('Succeeded in converting the PixelMap.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to convert the PixelMap. Code: ${err.code}, message: ${err.message}`);
   });
 }
 

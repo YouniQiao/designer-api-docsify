@@ -1,6 +1,6 @@
 # ChangeData
 
-Defines the change data
+Defines the return value of the listener callback.
 
 **Since:** 10
 

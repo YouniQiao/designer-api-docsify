@@ -1,5 +1,11 @@
 # getLocalName
 
+## Modules to Import
+
+```TypeScript
+import { manager } from '@kit.ConnectivityKit';
+```
+
 ## getLocalName
 
 ```TypeScript

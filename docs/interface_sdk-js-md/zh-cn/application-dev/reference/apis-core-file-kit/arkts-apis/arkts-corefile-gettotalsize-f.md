@@ -29,10 +29,10 @@ function getTotalSize(): Promise<number>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getTotalSize().then((number: number) => {
-  console.info("getTotalSize successfully:" + JSON.stringify(number));
+storageStatistics.getTotalSize().then((totalSize: number) => {
+  console.info('getTotalSize successfully:' + totalSize);
 }).catch((err: BusinessError) => {
-  console.error("getTotalSize failed with error:"+ JSON.stringify(err));
+  console.error(`getTotalSize failed. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

@@ -1,8 +1,8 @@
 # PhotoViewMIMETypes
 
-PhotoViewMIMETypes represents the type of media resource that photo picker selects.
+Enumerates the media file types.
 
-**Since:** 12
+**Since:** 10
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -12,11 +12,11 @@ PhotoViewMIMETypes represents the type of media resource that photo picker selec
 IMAGE_TYPE = 'image/*'
 ```
 
-IMAGE_TYPE indicates that the selected media resources are images.
+Image.
 
-**Since:** 12
+**Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,11 +26,11 @@ IMAGE_TYPE indicates that the selected media resources are images.
 VIDEO_TYPE = 'video/*'
 ```
 
-VIDEO_TYPE indicates that the selected media resources are videos.
+Video.
 
-**Since:** 12
+**Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -40,11 +40,11 @@ VIDEO_TYPE indicates that the selected media resources are videos.
 IMAGE_VIDEO_TYPE = '*/*'
 ```
 
-IMAGE_VIDEO_TYPE indicates that the selected media resources are images and videos.
+Image and video.
 
-**Since:** 12
+**Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -54,7 +54,7 @@ IMAGE_VIDEO_TYPE indicates that the selected media resources are images and vide
 MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'
 ```
 
-MOVING_PHOTO_IMAGE_TYPE indicates that the selected media resources are moving photos.
+Moving photo.
 
 **Since:** 12
 

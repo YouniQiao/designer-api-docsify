@@ -32,3 +32,21 @@ Describes unsubscribing from the device-cloud automatic synchronization trigger 
 | --- | --- |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
+**Example**
+
+```TypeScript
+function autoSyncTriggerObserver(info: cloudData.AutoSyncTriggerInfo) {
+  console.info(`Auto sync triggered, mode: ${info.mode}`);
+}
+
+// Subscribe to an observer.
+cloudData.onAutoSyncTrigger(autoSyncTriggerObserver);
+
+// Unsubscribe from a specified observer.
+cloudData.offAutoSyncTrigger(autoSyncTriggerObserver);
+
+// Unsubscribe from all observers.
+cloudData.offAutoSyncTrigger();
+
+```
+

@@ -29,7 +29,7 @@ function getListenerCount(eventId: number | string): number
 **示例：**
 
 ```TypeScript
-let count: number = emitter.getListenerCount("eventId");
+let count: number = emitter.getListenerCount('eventId');
 
 ```
 

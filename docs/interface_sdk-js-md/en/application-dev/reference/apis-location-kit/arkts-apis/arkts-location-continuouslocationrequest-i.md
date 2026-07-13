@@ -2,7 +2,7 @@
 
 Configuring parameters in continuous location requests.
 
-**Since:** 22
+**Since:** 12
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -22,9 +22,9 @@ Location report interval, in seconds.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -38,9 +38,9 @@ Location scenario. You can select a user activity scenario or power consumption 
 
 **Type:** UserActivityScenario | PowerConsumptionScenario
 
-**Since:** 22
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -54,9 +54,9 @@ Indicates whether to obtain POI information near the current location.
 
 **Type:** boolean
 
-**Since:** 22
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Location.Location.Core
 

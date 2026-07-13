@@ -30,6 +30,8 @@ Location accuracy.
 
 **Substitutes:** accuracy
 
+**Model restriction:** This API can be used only in the FA model.
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 ## altitude
@@ -47,6 +49,8 @@ Altitude.
 **Deprecated since:** 9
 
 **Substitutes:** altitude
+
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Location.Location.Lite
 
@@ -66,6 +70,8 @@ Latitude.
 
 **Substitutes:** latitude
 
+**Model restriction:** This API can be used only in the FA model.
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 ## longitude
@@ -84,6 +90,8 @@ Longitude.
 
 **Substitutes:** longitude
 
+**Model restriction:** This API can be used only in the FA model.
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 ## time
@@ -101,6 +109,8 @@ Time when the location is obtained.
 **Deprecated since:** 9
 
 **Substitutes:** timeStamp
+
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Location.Location.Lite
 

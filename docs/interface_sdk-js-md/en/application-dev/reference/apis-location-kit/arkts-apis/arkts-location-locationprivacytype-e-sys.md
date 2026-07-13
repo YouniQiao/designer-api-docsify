@@ -25,7 +25,7 @@ Other scenarios.
 ## STARTUP
 
 ```TypeScript
-STARTUP
+STARTUP = 1
 ```
 
 Privacy agreement for the startup wizard scenario.
@@ -39,7 +39,7 @@ Privacy agreement for the startup wizard scenario.
 ## CORE_LOCATION
 
 ```TypeScript
-CORE_LOCATION
+CORE_LOCATION = 2
 ```
 
 Privacy agreement pop-up when network location is enabled.

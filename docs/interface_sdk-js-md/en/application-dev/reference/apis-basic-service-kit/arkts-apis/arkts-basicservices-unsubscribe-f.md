@@ -52,7 +52,7 @@ let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {
 try {
   commonEventManager.createSubscriber(subscribeInfo,
     (err: BusinessError, commonEventSubscriber: commonEventManager.CommonEventSubscriber) => {
-      if(!err) {
+      if (!err) {
         console.info(`Succeeded in creating subscriber.`);
         subscriber = commonEventSubscriber;
         // Subscribe to a common event.

@@ -9,4 +9,4 @@ QoS provides APIs.
 
 | Name | Description |
 | -- | -- |
-| [qos.h](capi-qos-h.md) | Declares the QoS interfaces in C.Quality-of-service (QoS) refers to the priority scheduling attribute of tasksin OpenHarmony. Developers can use QoS to categorize tasks to be executed toindicate the degree of their relevance to user interactions, the system canschedule the time and running order of tasks according to the QoS set by the tasks. |
+| [qos.h](capi-qos-h.md) | This file declares the C APIs provided by Quality of Service (QoS) for setting, obtaining, and cancelingthread QoS levels, helping the system perform differentiated scheduling based on task priority. It also provides CAPIs related to the Gewu service (on-device AI inference acceleration service) for operations such as creatingsessions, submitting inference requests, receiving replies, canceling requests, and destroying sessions. These APIsare applicable to scenarios where AI model inference needs to be executed locally with fine-grained control overresource scheduling. |

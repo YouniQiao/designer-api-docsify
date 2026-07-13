@@ -34,8 +34,8 @@ batteryStats.getBatteryStats()
 .then((data: batteryStats.BatteryStatsInfo[]) => {
     console.info('battery statistics info: ' + data);
 })
-.catch((err: Error) => {
-    console.error('get battery statistics failed, err: ' + err);
+.catch((err: BusinessError) => {
+    console.error(`Failed to get battery statistics. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```
@@ -72,11 +72,11 @@ function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void
 **示例：**
 
 ```TypeScript
-batteryStats.getBatteryStats((err: Error, data : batteryStats.BatteryStatsInfo[]) => {
-    if (typeof err === 'undefined') {
-        console.info('battery statistics info: ' + data);
+batteryStats.getBatteryStats((err: BusinessError, data: batteryStats.BatteryStatsInfo[]) => {
+    if (err) {
+        console.error(`Failed to get battery statistics. Code: ${err.code}, message: ${err.message}`);
     } else {
-        console.error('get battery statistics failed, err: ' + err);
+        console.info('battery statistics info: ' + data);
     }
 });
 

@@ -26,22 +26,22 @@ Get WiFi/BT scanning information, and use the WiFi/BT scanning information for l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | LocatingRequiredDataConfig | Yes | Indicates the request parameters for obtaining the data required for locating. |
+| config | LocatingRequiredDataConfig | Yes | Indicates the request parametersfor obtaining the data required for locating. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;LocatingRequiredData&gt;&gt; | The promise returned by the function, for reporting WiFi/BT scan info. |
+| Promise&lt;Array&lt;LocatingRequiredData&gt;&gt; | The promise returned by the function,for reporting WiFi/BT scan info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call ${geoLocationManager.getLocatingRequiredData} due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed.A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatoryparameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call${geoLocationManager.getLocatingRequiredData} due to limited device capabilities. |
 | [3301800](../errorcode-geoLocationManager.md#3301800-failed-to-start-wifi-or-bluetooth-scanning) | Failed to start WiFi or Bluetooth scanning. |
 
 **Example**

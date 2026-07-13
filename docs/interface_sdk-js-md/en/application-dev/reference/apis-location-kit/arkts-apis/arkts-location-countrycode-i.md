@@ -2,7 +2,7 @@
 
 Country code structure.
 
-**Since:** 22
+**Since:** 9
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -22,7 +22,7 @@ Country code character string.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 9
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -36,7 +36,7 @@ Country code source.
 
 **Type:** CountryCodeType
 
-**Since:** 22
+**Since:** 9
 
 **System capability:** SystemCapability.Location.Location.Core
 

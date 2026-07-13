@@ -1,5 +1,11 @@
 # offPairingRequest (System API)
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
+
 ## offPairingRequest
 
 ```TypeScript

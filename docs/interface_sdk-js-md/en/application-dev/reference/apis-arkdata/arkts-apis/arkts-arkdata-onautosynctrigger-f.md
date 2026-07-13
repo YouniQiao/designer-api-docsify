@@ -32,3 +32,14 @@ Describes the triggering method for automatic device-cloud synchronization subsc
 | --- | --- |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
+**Example**
+
+```TypeScript
+function autoSyncTriggerObserver(info: cloudData.AutoSyncTriggerInfo) {
+  console.info(`Auto sync triggered, mode: ${info.mode}`);
+}
+
+cloudData.onAutoSyncTrigger(autoSyncTriggerObserver);
+
+```
+

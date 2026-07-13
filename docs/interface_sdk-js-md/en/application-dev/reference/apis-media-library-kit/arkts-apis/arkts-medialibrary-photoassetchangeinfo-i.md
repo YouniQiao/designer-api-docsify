@@ -1,6 +1,6 @@
 # PhotoAssetChangeInfo
 
-Defines the photo asset info.
+Describes the information about a media asset.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 albumUri: string
 ```
 
-URI of the album that the image or video belongs to.
+URI of the album that the media asset belongs to.
 
 **Type:** string
 
@@ -32,7 +32,7 @@ URI of the album that the image or video belongs to.
 mediaType: PhotoType
 ```
 
-Media type of the photo or video.
+Type of the media asset (image or video).
 
 **Type:** PhotoType
 
@@ -46,7 +46,7 @@ Media type of the photo or video.
 uri: string
 ```
 
-URI of the photo or video.
+URI of the media asset.
 
 **Type:** string
 

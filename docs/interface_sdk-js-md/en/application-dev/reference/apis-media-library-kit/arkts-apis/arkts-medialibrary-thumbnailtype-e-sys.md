@@ -14,7 +14,7 @@ Enumerates thumbnail types.
 LCD = 1
 ```
 
-LCD thumbnail
+LCD thumbnail.
 
 **Since:** 13
 
@@ -28,7 +28,7 @@ LCD thumbnail
 THM = 2
 ```
 
-THM thumbnail
+THM thumbnail.
 
 **Since:** 13
 

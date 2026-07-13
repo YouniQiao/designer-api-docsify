@@ -1,5 +1,11 @@
 # offAcbStateChange
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
+
 ## offAcbStateChange
 
 ```TypeScript

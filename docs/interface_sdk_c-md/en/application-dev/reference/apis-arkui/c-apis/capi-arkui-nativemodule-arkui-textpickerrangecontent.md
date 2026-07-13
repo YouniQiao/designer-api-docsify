@@ -6,7 +6,7 @@ typedef struct ARKUI_TextPickerRangeContent {...} ARKUI_TextPickerRangeContent
 
 ## Overview
 
-Defines the input structure of the single-column text picker with image resources.
+Defines the option content supported by the single-column text picker, including text and image resources.
 
 **Since**: 12
 

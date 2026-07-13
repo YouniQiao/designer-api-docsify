@@ -40,9 +40,9 @@ let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
 };
 
 // Callback for subscriber creation.
-function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) {
+let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
     if (err.code) {
-        console.error(`createSubscriber failed, code is ${err.code}`);
+        console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("createSubscriber");
         subscriber = commonEventSubscriber;
@@ -50,7 +50,7 @@ function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManag
 }
 
 // Create a subscriber.
-commonEvent.createSubscriber(subscribeInfo, createCB);
+commonEvent.createSubscriber(subscribeInfo, createCallBack);
 
 ```
 
@@ -101,7 +101,7 @@ commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEv
     console.info("createSubscriber");
     subscriber = commonEventSubscriber;
 }).catch((err:Base.BusinessError) => {
-    console.error(`createSubscriber failed, code is ${err.code}`);
+    console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
 });
 
 ```

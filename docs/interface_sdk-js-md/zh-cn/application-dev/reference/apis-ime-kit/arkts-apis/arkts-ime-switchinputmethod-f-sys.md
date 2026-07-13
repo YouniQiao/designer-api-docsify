@@ -36,7 +36,7 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 | [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800005](../errorcode-inputmethod-framework.md#12800005-配置固化失败) | configuration persistence error. |
+| [12800005](../errorcode-inputmethod-framework.md#12800005-配置持久化失败) | configuration persistence error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause:a system error, such as null pointer, IPC exception. |
 
 **示例：**

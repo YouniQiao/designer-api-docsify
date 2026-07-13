@@ -38,10 +38,10 @@ function getAppPowerPercent(uid: number): number
 
 ```TypeScript
 try {
-    let percent = batteryStats.getAppPowerPercent(10021);
+    let percent = batteryStats.getAppPowerPercent(10021); // 10021为示例UID，实际使用时需通过bundleManager.getBundleInfoForSelf等接口获取应用UID
     console.info('battery statistics percent of app is: ' + percent);
-} catch(err) {
-    console.error('get battery statistics percent of app failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to get battery statistics percent of app. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

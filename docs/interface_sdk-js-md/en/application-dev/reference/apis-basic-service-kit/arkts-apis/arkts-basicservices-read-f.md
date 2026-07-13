@@ -65,7 +65,7 @@ function read() {
   if (!serialManager.hasSerialRight(portId)) {
     serialManager.requestSerialRight(portId).then(result => {
       if (!result) {
-        // If the application does not have the access permission and is not granted by the user, the application exits.
+        // If the application does not have the access permission and the user does not grant the permission, the application exits.
         console.error('user is not granted the operation permission');
         return;
       } else {
@@ -89,6 +89,14 @@ function read() {
   }).catch((error: Error) => {
     console.error('read usbSerial error, ' + JSON.stringify(error));
   })
+
+  // Close the serial port device.
+  try {
+    serialManager.close(portId);
+    console.info('close usbSerial success, portId: ' + portId);
+  } catch (error) {
+    console.error('close usbSerial error, ' + JSON.stringify(error));
+  }
 }
 
 ```

@@ -6,7 +6,7 @@ export type FunctionInfo = _FunctionInfo
 
 Describes the basic information of a function.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 

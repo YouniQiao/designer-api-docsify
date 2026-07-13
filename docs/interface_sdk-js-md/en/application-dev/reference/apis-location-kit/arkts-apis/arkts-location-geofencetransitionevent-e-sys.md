@@ -2,7 +2,7 @@
 
 Enum for geofence transition status.
 
-**Since:** 22
+**Since:** 12
 
 **System capability:** SystemCapability.Location.Location.Geofence
 

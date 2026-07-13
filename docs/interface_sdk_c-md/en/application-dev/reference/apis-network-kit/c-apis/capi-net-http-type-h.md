@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the data structure for the C APIs of the http module.
+Defines the data structures for the C APIs of the HTTP request module.
 
 **Library**: libnet_http.so
 
@@ -18,17 +18,18 @@ Defines the data structure for the C APIs of the http module.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [Http_Buffer](capi-netstack-http-buffer.md) | Http_Buffer | Buffer. |
-| [Http_ClientCert](capi-netstack-http-clientcert.md) | Http_ClientCert | Client certificate which is sent to the remote server, the the remote server will use it to verify theclient's identification. |
-| [Http_CustomProxy](capi-netstack-http-customproxy.md) | Http_CustomProxy | Custom proxy configuration. |
-| [Http_Proxy](capi-netstack-http-proxy.md) | Http_Proxy | Proxy configuration. |
-| [Http_PerformanceTiming](capi-netstack-http-performancetiming.md) | Http_PerformanceTiming | Response timing information. It will be collected in {@link Http_Response.performanceTiming}. |
-| [Http_RequestOptions](capi-netstack-http-requestoptions.md) | Http_RequestOptions | Defines the parameters for http request options. |
-| [Http_Response](capi-netstack-http-response.md) | Http_Response | Defines the parameters for http response. |
-| [Http_Request](capi-netstack-http-request.md) | Http_Request | Http request. |
-| [Http_EventsHandler](capi-netstack-http-eventshandler.md) | Http_EventsHandler | Callbacks to watch different events. |
-| [Http_Headers](capi-netstack-http-headers.md) | Http_Headers | Headers of the request or response. |
-| [*next](capi-netstack-8hnext.md) | - | The value type of the header map of the request or response. |
+| [Http_Buffer](capi-netstack-http-buffer.md) | Http_Buffer | Defines the HTTP buffer structure. |
+| [Http_HeaderValue](capi-netstack-http-headervalue.md) | Http_HeaderValue | Defines the type of a mapped value in a request or response header. |
+| [Http_HeaderEntry](capi-netstack-http-headerentry.md) | Http_HeaderEntry | Defines all key-value pairs in the request or response header. |
+| [Http_ClientCert](capi-netstack-http-clientcert.md) | Http_ClientCert | Defines the client certificate sent to a remote server, which will be used by the server to verify theidentity of the client. |
+| [Http_CustomProxy](capi-netstack-http-customproxy.md) | Http_CustomProxy | Defines the custom proxy configuration. |
+| [Http_Proxy](capi-netstack-http-proxy.md) | Http_Proxy | Defines the proxy configuration structure. |
+| [Http_PerformanceTiming](capi-netstack-http-performancetiming.md) | Http_PerformanceTiming | Defines the HTTP response timing information, which will be collected via [Http_Response](capi-netstack-http-response.md). |
+| [Http_RequestOptions](capi-netstack-http-requestoptions.md) | Http_RequestOptions | Defines the structure of HTTP requests. |
+| [Http_Response](capi-netstack-http-response.md) | Http_Response | Defines the structure of HTTP responses. |
+| [Http_Request](capi-netstack-http-request.md) | Http_Request | Defines an HTTP request. |
+| [Http_EventsHandler](capi-netstack-http-eventshandler.md) | Http_EventsHandler | Defines the callback for various HTTP events. |
+| [Http_Headers](capi-netstack-http-headers.md) | Http_Headers | Defines the header of an HTTP request or response. |
 
 ### Enum
 
@@ -45,17 +46,17 @@ Defines the data structure for the C APIs of the http module.
 
 | Name | Description |
 | -- | -- |
-| OHOS_HTTP_MAX_PATH_LEN 128 | Maximum length of the HTTP request directory path.<br>**Since**: 20 |
-| OHOS_HTTP_MAX_STR_LEN 256 | Maximum length of the HTTP request string.<br>**Since**: 20 |
-| OHOS_HTTP_DNS_SERVER_NUM_MAX 3 | Maximum number of DNS servers supported by an HTTP request.<br>**Since**: 20 |
-| NET_HTTP_METHOD_GET "GET" | HTTP get method.<br>**Since**: 20 |
-| NET_HTTPMETHOD_HEAD "HEAD" | HTTP head method.<br>**Since**: 20 |
-| NET_HTTPMETHOD_OPTIONS "OPTIONS" | HTTP options method.<br>**Since**: 20 |
-| NET_HTTPMETHOD_TRACE "TRACE" | HTTP trace method.<br>**Since**: 20 |
-| NET_HTTPMETHOD_DELETE "DELETE" | HTTP delete method.<br>**Since**: 20 |
-| NET_HTTP_METHOD_POST "POST" | HTTP post method.<br>**Since**: 20 |
-| NET_HTTP_METHOD_PUT "PUT" | HTTP put method.<br>**Since**: 20 |
-| NET_HTTP_METHOD_PATCH "CONNECT" | HTTP connect method.<br>**Since**: 20 |
+| OHOS_HTTP_MAX_PATH_LEN 128 | Defines the maximum path length of an HTTP request.<br>**Since**: 20 |
+| OHOS_HTTP_MAX_STR_LEN 256 | Defines the maximum string length of an HTTP request.<br>**Since**: 20 |
+| OHOS_HTTP_DNS_SERVER_NUM_MAX 3 | Defines the maximum number of DNS servers for an HTTP request.<br>**Since**: 20 |
+| NET_HTTP_METHOD_GET "GET" | Sets the HTTP request method to GET.<br>**Since**: 20 |
+| NET_HTTPMETHOD_HEAD "HEAD" | Sets the HTTP request method to HEAD.<br>**Since**: 20 |
+| NET_HTTPMETHOD_OPTIONS "OPTIONS" | Sets the HTTP request method to OPTIONS.<br>**Since**: 20 |
+| NET_HTTPMETHOD_TRACE "TRACE" | Sets the HTTP request method to TRACE.<br>**Since**: 20 |
+| NET_HTTPMETHOD_DELETE "DELETE" | Sets the HTTP request method to DELETE.<br>**Since**: 20 |
+| NET_HTTP_METHOD_POST "POST" | Sets the HTTP request method to POST.<br>**Since**: 20 |
+| NET_HTTP_METHOD_PUT "PUT" | Sets the HTTP request method to PUT.<br>**Since**: 20 |
+| NET_HTTP_METHOD_PATCH "CONNECT" | Sets the HTTP request method to CONNECT.<br>**Since**: 20 |
 
 ### Function
 
@@ -66,13 +67,6 @@ Defines the data structure for the C APIs of the http module.
 | [typedef void (\*Http_OnProgressCallback)(uint64_t totalSize, uint64_t transferredSize)](#http_onprogresscallback) | Http_OnProgressCallback | Callback function invoked during request/response data transmission. |
 | [typedef void (\*Http_OnHeaderReceiveCallback)(Http_Headers *headers)](#http_onheaderreceivecallback) | Http_OnHeaderReceiveCallback | Callback called when header are received. |
 | [typedef void (\*Http_OnVoidCallback)(void)](#http_onvoidcallback) | Http_OnVoidCallback | Empty callback function for requested DataEnd or Canceled event callback. |
-
-### Variable
-
-| Name | Description |
-| -- | -- |
-| Http_HeaderValue  |  |
-| Http_HeaderEntry  |  |
 
 ## Enum type description
 
@@ -122,6 +116,7 @@ Defines http error code.
 | OH_HTTP_SSL_CA_NOT_EXIST = (OH_HTTP_NETSTACK_E_BASE + 77) | @brief The SSL CA certificate does not exist or is inaccessible. |
 | OH_HTTP_REMOTE_FILE_NOT_FOUND = (OH_HTTP_NETSTACK_E_BASE + 78) | @brief Remote file not found. |
 | OH_HTTP_AUTHENTICATION_ERROR = (OH_HTTP_NETSTACK_E_BASE + 94) | @brief Authentication error. |
+| OH_HTTP_REQUEST_INTERCEPTED = (OH_HTTP_NETSTACK_E_BASE + 996) | The request was intercepted by the HTTP global interceptor.<br>**Since**: 26.0.0 |
 | OH_HTTP_ACCESS_DOMAIN_NOT_ALLOWED = (OH_HTTP_NETSTACK_E_BASE + 998) | @brief It is not allowed to access this domain. |
 | OH_HTTP_UNKNOWN_ERROR = (OH_HTTP_NETSTACK_E_BASE + 999) | @brief Unknown error. |
 

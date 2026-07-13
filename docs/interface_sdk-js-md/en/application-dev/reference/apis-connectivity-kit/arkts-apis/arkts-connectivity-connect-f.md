@@ -1,5 +1,11 @@
 # connect
 
+## Modules to Import
+
+```TypeScript
+import { dataTransfer } from '@kit.ConnectivityKit';
+```
+
 ## connect
 
 ```TypeScript

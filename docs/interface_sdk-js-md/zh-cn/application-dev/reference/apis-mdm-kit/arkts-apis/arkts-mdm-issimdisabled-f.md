@@ -49,7 +49,9 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
+  // 设置要查询的卡槽ID
   let slotId: number = 0;
+  // 查询指定卡槽的SIM卡是否被禁用
   let result: boolean = telephonyManager.isSimDisabled(wantTemp, slotId);
   console.info(`Succeeded in querying slotId: ${slotId} is disabled or not, result: ${result}`);
 } catch (err) {

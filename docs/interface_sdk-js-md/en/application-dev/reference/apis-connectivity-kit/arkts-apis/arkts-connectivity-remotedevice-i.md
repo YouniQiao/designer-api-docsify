@@ -6,6 +6,12 @@ Remote device operation methods.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
+
 ## getAcbState
 
 ```TypeScript

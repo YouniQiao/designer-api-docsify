@@ -22,13 +22,13 @@ function createComponentObserver(id: string): ComponentObserver
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | component id. |
+| id | string | 是 | 组件id。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ComponentObserver | create listener for observer component event. |
+| ComponentObserver | 创建用于观察组件事件的监听器。 |
 
 **示例：**
 

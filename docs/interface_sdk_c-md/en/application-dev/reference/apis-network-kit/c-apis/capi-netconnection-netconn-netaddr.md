@@ -6,7 +6,7 @@ typedef struct NetConn_NetAddr {...} NetConn_NetAddr
 
 ## Overview
 
-Defines the network address.
+Defines network addresses.
 
 **Since**: 11
 
@@ -20,9 +20,9 @@ Defines the network address.
 
 | Name | Description |
 | -- | -- |
-| uint8_t family | Network address family |
-| uint8_t prefixlen | Prefix length |
-| uint8_t port | Port number |
+| uint8_t family | Network address family. |
+| uint8_t prefixlen | Prefix length. |
+| uint8_t port | Port number. |
 | char address[NETCONN_MAX_STR_LEN] | Address |
 
 

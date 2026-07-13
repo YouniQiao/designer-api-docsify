@@ -38,19 +38,20 @@ function getMissionSnapShot(deviceId: string, missionId: number, callback: Async
 import { missionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
 let testMissionId = 2;
 
 try {
   missionManager.getMissionSnapShot('', testMissionId, (err: BusinessError, data: missionManager.MissionSnapshot) => {
     if (err) {
-      console.error(`getMissionSnapShot failed: ${err.message}`);
+      console.error(`getMissionSnapShot failed. Code: ${err.code}, message: ${err.message}.`);
     } else {
       console.info(`getMissionSnapShot successfully: ${JSON.stringify(data)}`);
     }
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
-  console.error(`getMissionSnapShot failed: ${err.message}`);
+  console.error(`getMissionSnapShot failed. Code: ${err.code}, message: ${err.message}.`);
 }
 
 ```
@@ -99,17 +100,18 @@ function getMissionSnapShot(deviceId: string, missionId: number): Promise<Missio
 import { missionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
 let testMissionId = 2;
 
 try {
   missionManager.getMissionSnapShot('', testMissionId).then((data: missionManager.MissionSnapshot) => {
     console.info(`getMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
   }).catch((error: BusinessError) => {
-    console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
+    console.error(`getMissionSnapShot failed. Code: ${error.code}, message: ${error.message}.`);
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
-  console.error(`getMissionSnapShot failed. Cause: ${err.message}`);
+  console.error(`getMissionSnapShot failed. Code: ${err.code}, message: ${err.message}.`);
 }
 
 ```

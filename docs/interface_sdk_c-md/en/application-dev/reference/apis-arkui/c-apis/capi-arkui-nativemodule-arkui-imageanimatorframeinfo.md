@@ -6,7 +6,7 @@ typedef struct ArkUI_ImageAnimatorFrameInfo ArkUI_ImageAnimatorFrameInfo
 
 ## Overview
 
-Defines the image frame.
+Defines the image animation frame information.
 
 **Since**: 12
 

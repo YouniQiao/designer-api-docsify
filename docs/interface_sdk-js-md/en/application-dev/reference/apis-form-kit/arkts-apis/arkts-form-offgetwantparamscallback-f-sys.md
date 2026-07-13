@@ -38,3 +38,18 @@ Unregister callback of getting the want parameters of the form.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 
+**Example**
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formHost.offGetWantParamsCallback();
+  console.info(`offGetWantParamsCallback success`);
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+
+```
+

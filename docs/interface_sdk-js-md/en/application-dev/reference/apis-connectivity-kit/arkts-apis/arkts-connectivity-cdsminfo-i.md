@@ -6,6 +6,12 @@ Describes the coordinated devices set information.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { cdsm } from '@kit.ConnectivityKit';
+```
+
 ## members
 
 ```TypeScript

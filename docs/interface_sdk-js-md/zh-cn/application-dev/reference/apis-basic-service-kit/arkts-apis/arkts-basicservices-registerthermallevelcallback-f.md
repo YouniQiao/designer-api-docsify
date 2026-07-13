@@ -32,8 +32,8 @@ try {
         console.info('thermal level is: ' + level);
     });
     console.info('register thermal level callback success.');
-} catch(err) {
-    console.error('register thermal level callback failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to register thermal level callback. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

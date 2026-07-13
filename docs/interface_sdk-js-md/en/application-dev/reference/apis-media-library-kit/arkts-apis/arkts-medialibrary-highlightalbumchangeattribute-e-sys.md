@@ -1,6 +1,6 @@
 # HighlightAlbumChangeAttribute (System API)
 
-Enumerates the types of the highlights album attribute which can be set.
+Enumerates the attributes of a highlights album.
 
 **Since:** 21
 
@@ -14,7 +14,7 @@ Enumerates the types of the highlights album attribute which can be set.
 IS_VIEWED = 0
 ```
 
-The highlight has been viewed or not.
+Whether the highlights album has been viewed.
 
 **Since:** 21
 
@@ -28,7 +28,7 @@ The highlight has been viewed or not.
 NOTIFICATION_TIME = 1
 ```
 
-Time of this highlight notification.
+Time when the application sends a highlight notification.
 
 **Since:** 21
 
@@ -42,7 +42,7 @@ Time of this highlight notification.
 IS_FAVORITE = 2
 ```
 
-Favorite of this highlight album.
+Whether the highlights album is marked as a favorite.
 
 **Since:** 21
 

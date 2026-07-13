@@ -6,6 +6,12 @@ Describes the advertising parameters.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from '@kit.ConnectivityKit';
+```
+
 ## advertisingData
 
 ```TypeScript

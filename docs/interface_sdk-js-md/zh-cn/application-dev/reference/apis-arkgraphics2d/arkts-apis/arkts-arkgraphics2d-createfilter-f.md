@@ -21,7 +21,8 @@ function createFilter(): Filter
 **示例：**
 
 ```TypeScript
-let filter : uiEffect.Filter = uiEffect.createFilter()
+// 创建Filter实例
+let filter : uiEffect.Filter = uiEffect.createFilter();
 
 ```
 

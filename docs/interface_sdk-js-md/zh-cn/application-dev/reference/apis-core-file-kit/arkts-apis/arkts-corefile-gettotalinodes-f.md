@@ -33,9 +33,9 @@ function getTotalInodes(): Promise<number>
 import { BusinessError } from '@kit.BasicServicesKit';
 
 storageStatistics.getTotalInodes().then((totalInodes: number) => {
-  console.info("getTotalInodes successfully: " + totalInodes);
+  console.info('getTotalInodes successfully:' + totalInodes);
 }).catch((err: BusinessError) => {
-  console.error(`getTotalInodes failed. Code: ${err.code}, Message: ${err.message}`);
+  console.error(`getTotalInodes failed. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

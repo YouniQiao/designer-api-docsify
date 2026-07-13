@@ -6,7 +6,7 @@ typedef struct NetStack_Certificates {...} NetStack_Certificates
 
 ## Overview
 
-Defines the certificate information.
+Define certificate information.
 
 **Since**: 12
 
@@ -20,7 +20,7 @@ Defines the certificate information.
 
 | Name | Description |
 | -- | -- |
-| char **content | PEM content of the certificates |
-| size_t length | Number of certificates |
+| char **content | PEM content of the certificate. |
+| size_t length | Number of certificates. |
 
 

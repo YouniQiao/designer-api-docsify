@@ -47,7 +47,7 @@ struct Index {
           let FACTORY_MODE = 0;
           try {
             // 设置屏蔽状态
-            inputConsumer.setShieldStatus(FACTORY_MODE,true);
+            inputConsumer.setShieldStatus(FACTORY_MODE, true);
             console.info(`Succeeded in setting shield status.`);
           } catch (error) {
             console.error(`Failed to set shield status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

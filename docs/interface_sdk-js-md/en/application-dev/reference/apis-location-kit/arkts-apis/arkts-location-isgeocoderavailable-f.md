@@ -14,7 +14,7 @@ function isGeocoderAvailable(): boolean
 
 Obtain geocoding service status.
 
-**Since:** 22
+**Since:** 9
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 

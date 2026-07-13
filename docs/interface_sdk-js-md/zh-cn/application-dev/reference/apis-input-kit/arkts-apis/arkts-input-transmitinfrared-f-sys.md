@@ -45,10 +45,10 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 设置红外载波频率及红外电平信号模式
+            // 设置红外频率及红外电平信号模式
             infraredEmitter.transmitInfrared(38000, [100, 200, 300, 400]);
           } catch (error) {
-            console.error(`Failed to set infrared frequencies, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to transmit infrared signal, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

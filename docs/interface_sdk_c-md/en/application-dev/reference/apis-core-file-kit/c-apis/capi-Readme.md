@@ -7,6 +7,8 @@
     - [oh_cloud_disk_manager.h](capi-oh-cloud-disk-manager-h.md)
     - [cloud_disk_error_code.h](capi-cloud-disk-error-code-h.md)
     - [oh_environment.h](capi-oh-environment-h.md)
+    - [swapfs_errcode.h](capi-swapfs-errcode-h.md)
+    - [oh_swapfs.h](capi-oh-swapfs-h.md)
 - Module
     - [fileShare](capi-fileshare.md)
     - [fileUri](capi-fileuri.md)
@@ -14,6 +16,7 @@
     - [FileIO](capi-fileio.md)
     - [CloudDisk](capi-clouddisk.md)
     - [Environment](capi-environment.md)
+    - [Swapfs](capi-swapfs.md)
 - Struct
     - [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md)
     - [FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md)
@@ -31,3 +34,9 @@
     - [CloudDisk_ResultList](capi-clouddisk-clouddisk-resultlist.md)
     - [CloudDisk_DisplayNameInfo](capi-clouddisk-clouddisk-displaynameinfo.md)
     - [CloudDisk_SyncFolder](capi-clouddisk-clouddisk-syncfolder.md)
+    - [OH_SwapfsConfig](capi-swapfs-oh-swapfsconfig.md)
+    - [OH_SwapfsSwapOutRequest](capi-swapfs-oh-swapfsswapoutrequest.md)
+    - [OH_SwapfsSwapInRequest](capi-swapfs-oh-swapfsswapinrequest.md)
+    - [OH_SwapfsDataInfo](capi-swapfs-oh-swapfsdatainfo.md)
+    - [OH_SwapfsStats](capi-swapfs-oh-swapfsstats.md)
+    - [OH_SwapfsManager](capi-swapfs-oh-swapfsmanager.md)

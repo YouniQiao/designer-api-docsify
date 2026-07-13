@@ -1,6 +1,6 @@
 # WatermarkConfig（系统接口）
 
-Set configures of a watermark to AVRecorder. The position starts at top left corner.
+设置AVRecorder的水印配置。水印位置从左上角开始计算。
 
 **起始版本：** 13
 
@@ -14,7 +14,7 @@ Set configures of a watermark to AVRecorder. The position starts at top left cor
 left: number
 ```
 
-Offset of the watermark to the left line of pixel.
+水印到左侧像素行的偏移量。
 
 **类型：** number
 
@@ -30,7 +30,7 @@ Offset of the watermark to the left line of pixel.
 top: number
 ```
 
-Offset of the watermark to the top line of pixel.
+水印到顶部像素行的偏移量。
 
 **类型：** number
 

@@ -1,6 +1,6 @@
 # PhotoAssetChangeData
 
-Defines the photo or video change data.
+Describes the change data of a media asset.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 thumbnailChangeStatus: ThumbnailChangeStatus
 ```
 
-Change status of the thumbnail corresponding to the photo or video.
+Change status of the thumbnail (image/video).
 
 **Type:** ThumbnailChangeStatus
 
@@ -34,7 +34,7 @@ Change status of the thumbnail corresponding to the photo or video.
 version: number
 ```
 
-Version of the photo or video information. It is used to determine the sequence of notifications.
+Version number of the media asset notification, which is used to determine the order of notifications.
 
 **Type:** number
 

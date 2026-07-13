@@ -41,7 +41,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 获取触摸板捏合开关
+            // 获取触控板捏合开关
             pointer.getTouchpadPinchSwitch((error: BusinessError, state: boolean) => {
               if (error) {
                 console.error(`Failed to get touchpad pinch switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

@@ -1,6 +1,6 @@
 # PhotoAssetCustomRecord (System API)
 
-Custom record of media asset.
+Provides APIs for custom user behavior recording for Gallery.
 
 **Since:** 20
 
@@ -20,8 +20,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 readonly fileId: number
 ```
 
-Indicates the media asset file Id.
-It must be must be greater than 0.
+File ID, which must be an integer greater than 0.
 
 **Type:** number
 
@@ -37,8 +36,7 @@ It must be must be greater than 0.
 readonly lcdJumpCount: number
 ```
 
-Indicates the media asset lcd jump count.
-It must be must be greater than 0.
+Number of times the image or video was jumped to in large view. The value must be an integer greater than 0.
 
 **Type:** number
 
@@ -54,8 +52,7 @@ It must be must be greater than 0.
 readonly shareCount: number
 ```
 
-Indicates the media asset share count.
-It must be must be greater than 0.
+Number of times that image or video was shared. The value must be an integer greater than 0.
 
 **Type:** number
 

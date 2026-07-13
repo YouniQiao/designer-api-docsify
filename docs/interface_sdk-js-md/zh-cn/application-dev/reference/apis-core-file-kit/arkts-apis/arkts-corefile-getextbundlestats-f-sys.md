@@ -48,7 +48,7 @@ import { storageStatistics } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let userId: number = 100;
-let businessName: string = 'com.example.storagedemo';
+let businessName: string = "com.example.storagedemo";
 storageStatistics.getExtBundleStats(userId, businessName).then((bundleStats: storageStatistics.ExtBundleStats) => {
   console.info("getExtBundleStats successfully.");
 }).catch((err: BusinessError) => {

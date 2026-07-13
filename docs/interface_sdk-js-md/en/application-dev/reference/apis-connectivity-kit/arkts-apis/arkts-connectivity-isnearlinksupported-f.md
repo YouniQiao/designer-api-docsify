@@ -1,5 +1,11 @@
 # isNearLinkSupported
 
+## Modules to Import
+
+```TypeScript
+import { manager } from '@kit.ConnectivityKit';
+```
+
 ## isNearLinkSupported
 
 ```TypeScript

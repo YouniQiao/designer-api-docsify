@@ -41,7 +41,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 获取触摸板点击开关
+            // 获取触控板点击开关
             pointer.getTouchpadTapSwitch((error: BusinessError, state: boolean) => {
               if (error) {
                 console.error(`Failed to get touchpad tap switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

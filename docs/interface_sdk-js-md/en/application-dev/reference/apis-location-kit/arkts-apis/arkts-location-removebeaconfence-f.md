@@ -16,7 +16,8 @@ Remove a beacon fence.
 
 **Since:** 20
 
-**Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+**Required permissions:** 
+- API version 20 - 24: ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -38,7 +39,7 @@ Remove a beacon fence.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API.<br>**Applicable version:** 20 - 24 |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call ${geoLocationManager.removeBeaconFence}due to limited device capabilities. |
 | [3501602](../errorcode-geoLocationManager.md#3501602-failed-to-delete-a-beacon-fence-because-of-incorrect-information) | Failed to delete the fence due to incorrect beacon fence information. |
 

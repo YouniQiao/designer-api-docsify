@@ -116,7 +116,7 @@ export class MyFenceExtensionAbility extends FenceExtensionAbility {
 context: FenceExtensionContext
 ```
 
-Indicates fence extension context.
+Indicates the fence extension context.
 
 **Type:** FenceExtensionContext
 

@@ -19,7 +19,9 @@ Declare underlying data structure.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AudioFormat](capi-ohaudiosuite-oh-audioformat.md) | OH_AudioFormat | Define the audio format info structure, used to describe basic audio format. |
+| [OH_AudioSuite_SystemNodeFormat](capi-ohaudiosuite-oh-audiosuite-systemnodeformat.md) | OH_AudioSuite_SystemNodeFormat | Define the audio format info structure, used to describe basic audio format for system node. |
 | [OH_AudioDataArray](capi-ohaudiosuite-oh-audiodataarray.md) | OH_AudioDataArray | Define the audio data array structure.This structure is used to get the processed audio data after acquisition processing during multi-channel rendering. |
+| [OH_AudioSuite_MetaFrame](capi-ohaudiosuite-oh-audiosuite-metaframe.md) | OH_AudioSuite_MetaFrame | Define the audio meta data frame structure.This structure is used to pass audio data and meta data together. |
 | [OH_EqualizerFrequencyBandGains](capi-ohaudiosuite-oh-equalizerfrequencybandgains.md) | OH_EqualizerFrequencyBandGains | Specify equalizer frequency band gains. |
 | [OH_AudioSuite_SpaceRenderPositionParams](capi-ohaudiosuite-oh-audiosuite-spacerenderpositionparams.md) | OH_AudioSuite_SpaceRenderPositionParams | Definition of the parameter structure for fixed position mode in 3D spatial rendering.Left-hand coordinate system: Extend your left hand, forming an "L" shape with your thumb and index finger.Point the thumb to the right, the index finger upward, and the remaining fingers forward.This establishes a left-hand coordinate system. In this system, the thumb, index finger,and other fingers represent the positive directions of the x, y, and z axes, respectively. |
 | [OH_AudioSuite_SpaceRenderRotationParams](capi-ohaudiosuite-oh-audiosuite-spacerenderrotationparams.md) | OH_AudioSuite_SpaceRenderRotationParams | Space rendering dynamic mode parameters. |
@@ -35,6 +37,7 @@ Declare underlying data structure.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_AudioNode_Type](#oh_audionode_type) | OH_AudioNode_Type | Define audio node type. |
+| [OH_AudioSuite_SystemNodeType](#oh_audiosuite_systemnodetype) | OH_AudioSuite_SystemNodeType | Define audio node system type. |
 | [OH_AudioSuite_PipelineWorkMode](#oh_audiosuite_pipelineworkmode) | OH_AudioSuite_PipelineWorkMode | Define pipeline work mode |
 | [OH_AudioSuite_PipelineState](#oh_audiosuite_pipelinestate) | OH_AudioSuite_PipelineState | Define pipeline state |
 | [OH_AudioSuite_Result](#oh_audiosuite_result) | OH_AudioSuite_Result | Define the result of the function execution. |
@@ -100,6 +103,23 @@ Define audio node type.
 | EFFECT_NODE_TYPE_GENERAL_VOICE_CHANGE = 210 |  |
 | EFFECT_NODE_TYPE_TEMPO_PITCH = 211 |  |
 | EFFECT_NODE_TYPE_HOA_SPACE_RENDER = 212 |  |
+
+### OH_AudioSuite_SystemNodeType
+
+```c
+enum OH_AudioSuite_SystemNodeType
+```
+
+**Description**
+
+Define audio node system type.
+
+**Since**: 26.0.0
+
+| Enum item | Description |
+| -- | -- |
+| OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_DIALOGUE_ENHANCE = 301 |  |
+| OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_VOICE_BEAUTIFIER = 302 |  |
 
 ### OH_AudioSuite_PipelineWorkMode
 

@@ -40,9 +40,10 @@ function requestSerialRight(portId: number): Promise<boolean>
 ```TypeScript
 import { JSON } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // 获取串口列表
-function requestSerialRight() {
+function requestSerialRightExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {
@@ -61,7 +62,9 @@ function requestSerialRight() {
       } else {
         console.info('grant permission successfully');
       }
-    });
+    }).catch((err: BusinessError) => {
+    console.error(`Failed to request serial right. Code: ${err.code}, message: ${err.message}`);
+  });
   }
 }
 

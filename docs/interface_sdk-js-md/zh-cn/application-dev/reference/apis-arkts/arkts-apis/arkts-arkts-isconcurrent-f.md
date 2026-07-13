@@ -30,9 +30,9 @@ function isConcurrent(func: Function): boolean
 
 ```TypeScript
 @Concurrent
-function emptyFunc() {}
+function emptyFunc(): void {}
 
-let result: Boolean = taskpool.isConcurrent(emptyFunc);
+let result: boolean = taskpool.isConcurrent(emptyFunc);
 console.info("result is: " + result);
 
 ```

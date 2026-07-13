@@ -12,7 +12,7 @@ Enumeration type of filter operator.
 EQUAL_TO = 0
 ```
 
-Filter operator: equal to
+Equal to.
 
 **Since:** 19
 
@@ -26,7 +26,7 @@ Filter operator: equal to
 NOT_EQUAL_TO = 1
 ```
 
-Filter operator: not equal to
+Not equal to.
 
 **Since:** 19
 
@@ -40,7 +40,7 @@ Filter operator: not equal to
 MORE_THAN = 2
 ```
 
-Filter operator: more than
+Greater than.
 
 **Since:** 19
 
@@ -54,7 +54,7 @@ Filter operator: more than
 LESS_THAN = 3
 ```
 
-Filter operator: less than
+Less than.
 
 **Since:** 19
 
@@ -68,7 +68,7 @@ Filter operator: less than
 MORE_THAN_OR_EQUAL_TO = 4
 ```
 
-Filter operator: more than or equal to
+Greater than or equal to.
 
 **Since:** 19
 
@@ -82,7 +82,7 @@ Filter operator: more than or equal to
 LESS_THAN_OR_EQUAL_TO = 5
 ```
 
-Filter operator: less than or equal to
+Less than or equal to.
 
 **Since:** 19
 
@@ -96,7 +96,7 @@ Filter operator: less than or equal to
 BETWEEN = 6
 ```
 
-Filter operator: between
+Within the specified range.
 
 **Since:** 19
 

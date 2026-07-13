@@ -72,10 +72,10 @@ struct Index {
               numLock: false,
               scrollLock: false,
               toolType: 1,
-            }
+            };
             let mouseButtonUp: inputEventClient.MouseEventData = {
               mouseEvent: mouseButtonUpData
-            }
+            };
             // 注入鼠标事件
             inputEventClient.injectMouseEvent(mouseButtonUp);
 
@@ -105,15 +105,13 @@ struct Index {
               numLock: false,
               scrollLock: false,
               toolType: 1,
-            }
+            };
             let mouseButtonDown: inputEventClient.MouseEventData = {
               mouseEvent: mouseButtonDownData
             };
             // 注入鼠标事件
             inputEventClient.injectMouseEvent(mouseButtonDown);
-          }
-
-          catch (error) {
+          } catch (error) {
             console.error(`Failed to inject MouseEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })

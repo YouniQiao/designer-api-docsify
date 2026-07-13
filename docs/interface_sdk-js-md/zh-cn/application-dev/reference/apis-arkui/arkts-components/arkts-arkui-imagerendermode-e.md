@@ -9,7 +9,7 @@
 ## Original
 
 ```TypeScript
-Original = 0
+Original
 ```
 
 原色渲染模式。
@@ -25,7 +25,7 @@ Original = 0
 ## Template
 
 ```TypeScript
-Template = 1
+Template
 ```
 
 Render the image as a template image, ignoring the color information of the image.

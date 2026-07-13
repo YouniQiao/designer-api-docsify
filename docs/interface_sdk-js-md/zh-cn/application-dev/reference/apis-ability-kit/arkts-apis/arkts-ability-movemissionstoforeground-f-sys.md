@@ -41,7 +41,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
     if (error.code) {
-      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}.`);
+      console.error(`getMissionInfos failed, Code: ${error.code}, message: ${error.message}.`);
       return;
     }
     if (missionInfos.length < 1) {
@@ -54,9 +54,10 @@ try {
         toShows.push(missionInfo.missionId);
       }
     }
+    // 将指定任务批量切换到前台
     missionManager.moveMissionsToForeground(toShows, (err: BusinessError, data: void) => {
       if (err) {
-        console.error(`moveMissionsToForeground failed: ${err.message}`);
+        console.error(`moveMissionsToForeground failed. Code: ${err.code}, message: ${err.message}.`);
       } else {
         console.info(`moveMissionsToForeground successfully: ${JSON.stringify(data)}`);
       }
@@ -113,7 +114,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
     if (error.code) {
-      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}.`);
+      console.error(`getMissionInfos failed, Code: ${error.code}, message: ${error.message}.`);
       return;
     }
     if (missionInfos.length < 1) {
@@ -126,9 +127,10 @@ try {
         toShows.push(missionInfo.missionId);
       }
     }
+    // 将指定任务批量切换到前台，并将第一个任务移动到最顶层
     missionManager.moveMissionsToForeground(toShows, toShows[0], (err: BusinessError, data: void) => {
       if (err) {
-        console.error(`moveMissionsToForeground failed: ${err.message}`);
+        console.error(`moveMissionsToForeground failed. Code: ${err.code}, message: ${err.message}.`);
       } else {
         console.info(`moveMissionsToForeground successfully`);
       }

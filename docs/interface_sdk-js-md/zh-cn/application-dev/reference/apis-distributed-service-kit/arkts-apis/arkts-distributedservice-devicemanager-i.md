@@ -43,14 +43,14 @@ bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: As
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class Data {
+class BindResultData {
   deviceId: string = '';
 }
-
-// 认证的设备信息，可以从发现的结果中获取
+// 设备标识，可通过startDiscovering发现设备后从discoverSuccess回调获取DeviceBasicInfo.deviceId，或通过getAvailableDeviceListSync/getAvailableDeviceList获取可信设备的DeviceBasicInfo.deviceId
 let deviceId = 'XXXXXXXX';
+// 认证参数
 let bindParam: Record<string, string | number> = {
-  'bindType': 1, // 认证类型： 1 - 无账号PIN码认证
+  'bindType': 1, // 绑定类型： 1 - PIN码认证
   'targetPkgName': 'xxxx',
   'appName': 'xxxx',
   'appOperation': 'xxxx',
@@ -58,17 +58,19 @@ let bindParam: Record<string, string | number> = {
 };
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.bindTarget(deviceId, bindParam, (err: BusinessError, data: Data) => {
+  // 认证设备
+  dmInstance.bindTarget(deviceId, bindParam, (err: BusinessError, data: BindResultData) => {
     if (err) {
-      console.error('bindTarget errCode:' + err.code + ',errMessage:' + err.message);
+      console.error(`Failed to bind target. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('bindTarget result:' + JSON.stringify(data));
   });
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('bindTarget errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to bind target. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -107,17 +109,19 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 获取所有在线可信设备
   dmInstance.getAvailableDeviceList((err: BusinessError, data: Array<distributedDeviceManager.DeviceBasicInfo>) => {
     if (err) {
-      console.error('getAvailableDeviceList errCode:' + err.code + ',errMessage:' + err.message);
+      console.error(`Failed to get available device list. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('get available device info: ' + JSON.stringify(data));
   });
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getAvailableDeviceList errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get available device list. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -155,12 +159,19 @@ getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-dmInstance.getAvailableDeviceList().then((data: Array<distributedDeviceManager.DeviceBasicInfo>) => {
-  console.info('get available device info: ' + JSON.stringify(data));
+try {
+  // 创建设备管理实例
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 获取所有在线可信设备
+  dmInstance.getAvailableDeviceList().then((data: Array<distributedDeviceManager.DeviceBasicInfo>) => {
+    console.info('get available device info: ' + JSON.stringify(data));
   }).catch((err: BusinessError) => {
-    console.error('getAvailableDeviceList errCode:' + err.code + ',errMessage:' + err.message);
-});
+    console.error(`Failed to get available device list. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get available device list. Code: ${error.code}, message: ${error.message}`);
+}
 
 ```
 
@@ -198,11 +209,13 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 同步获取所有在线可信设备
   let deviceInfoList: Array<distributedDeviceManager.DeviceBasicInfo> = dmInstance.getAvailableDeviceListSync();
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getAvailableDeviceListSync errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get available device list sync. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -248,14 +261,16 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  // 设备网络标识，可以从可信设备列表中获取
+  // 设备网络标识，可通过getAvailableDeviceListSync或getAvailableDeviceList接口获取可信设备列表中的DeviceBasicInfo.networkId
   let networkId = 'xxxxxxx';
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 通过设备网络标识获取设备名称
   let deviceName: string = dmInstance.getDeviceName(networkId);
   console.info('device name: ' + JSON.stringify(deviceName)); 
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getDeviceName errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get device name. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -301,14 +316,16 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  // 设备网络标识，可以从可信设备列表中获取
+  // 设备网络标识，可通过getAvailableDeviceListSync或getAvailableDeviceList接口获取可信设备列表中的DeviceBasicInfo.networkId
   let networkId = 'xxxxxxx';
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 通过设备网络标识获取设备类型
   let deviceType: number = dmInstance.getDeviceType(networkId);
   console.info('device type: ' + JSON.stringify(deviceType)); 
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getDeviceType errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get device type. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -347,12 +364,14 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 获取本地设备标识
   let deviceId: string = dmInstance.getLocalDeviceId();
   console.info('local device id: ' + JSON.stringify(deviceId));
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getLocalDeviceId errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get local device id. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -391,12 +410,14 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 获取本地设备名称
   let deviceName: string = dmInstance.getLocalDeviceName();
   console.info('local device name: ' + JSON.stringify(deviceName));
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getLocalDeviceName errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get local device name. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -435,12 +456,14 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 获取本地设备网络标识
   let deviceNetworkId: string = dmInstance.getLocalDeviceNetworkId();
   console.info('local device networkId: ' + JSON.stringify(deviceNetworkId));
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getLocalDeviceNetworkId errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get local device network id. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -479,12 +502,14 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 获取本地设备类型
   let deviceType: number = dmInstance.getLocalDeviceType();
   console.info('local device type: ' + JSON.stringify(deviceType));
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getLocalDeviceType errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get local device type. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -523,7 +548,7 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; 
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class Data {
+class DeviceStateChangeData {
   action: distributedDeviceManager.DeviceStateChange = 0;
   device: distributedDeviceManager.DeviceBasicInfo = {
     deviceId: '',
@@ -534,13 +559,15 @@ class Data {
 }
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('deviceStateChange', (data: Data) => {
+  // 取消注册设备状态变化回调
+  dmInstance.off('deviceStateChange', (data: DeviceStateChangeData) => {
     console.info('deviceStateChange' + JSON.stringify(data));
   });
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceStateChange errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to unregister device state change. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -579,7 +606,7 @@ off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>):
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class Data {
+class DiscoverSuccessData {
   device: distributedDeviceManager.DeviceBasicInfo = {
     deviceId: '',
     deviceName: '',
@@ -589,13 +616,15 @@ class Data {
 }
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('discoverSuccess', (data: Data) => {
+  // 取消注册设备发现成功回调
+  dmInstance.off('discoverSuccess', (data: DiscoverSuccessData) => {
     console.info('discoverSuccess' + JSON.stringify(data));
   });
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverSuccess errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to unregister discover success callback. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -634,18 +663,20 @@ off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): voi
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class Data {
+class DeviceNameChangeData {
   deviceName: string = '';
 }
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('deviceNameChange', (data: Data) => {
+  // 取消注册设备名称变更回调
+  dmInstance.off('deviceNameChange', (data: DeviceNameChangeData) => {
     console.info('deviceNameChange' + JSON.stringify(data));
   });
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceNameChange errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to unregister device name change callback. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -684,18 +715,20 @@ off(type: 'discoverFailure', callback?: Callback<{ reason: number; }>): void
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class Data {
+class DiscoverFailureData {
   reason: number = 0;
 }
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('discoverFailure', (data: Data) => {
+  // 取消注册设备发现失败回调
+  dmInstance.off('discoverFailure', (data: DiscoverFailureData) => {
     console.info('discoverFailure' + JSON.stringify(data));
   });
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverFailure errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to unregister discover failure callback. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -735,13 +768,15 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 取消注册设备管理服务死亡回调
   dmInstance.off('serviceDie', () => {
     console.info('serviceDie off');
   });
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('serviceDie errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to unregister service die callback. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -780,7 +815,7 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; de
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class Data {
+class DeviceStateChangeData {
   action: distributedDeviceManager.DeviceStateChange = 0;
   device: distributedDeviceManager.DeviceBasicInfo = {
     deviceId: '',
@@ -791,13 +826,15 @@ class Data {
 }
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('deviceStateChange', (data: Data) => {
+  // 注册设备状态变化回调
+  dmInstance.on('deviceStateChange', (data: DeviceStateChangeData) => {
     console.info('deviceStateChange on:' + JSON.stringify(data));
   });
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceStateChange errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to register device state change. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -836,7 +873,7 @@ on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): v
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class Data {
+class DiscoverSuccessData {
   device: distributedDeviceManager.DeviceBasicInfo = {
     deviceId: '',
     deviceName: '',
@@ -846,13 +883,15 @@ class Data {
 }
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('discoverSuccess', (data: Data) => {
+  // 注册设备发现成功回调
+  dmInstance.on('discoverSuccess', (data: DiscoverSuccessData) => {
     console.info('discoverSuccess:' + JSON.stringify(data));
   });
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverSuccess errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to register discover success callback. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -891,18 +930,20 @@ on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class Data {
+class DeviceNameChangeData {
   deviceName: string = '';
 }
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('deviceNameChange', (data: Data) => {
+  // 注册设备名称变更回调
+  dmInstance.on('deviceNameChange', (data: DeviceNameChangeData) => {
     console.info('deviceNameChange on:' + JSON.stringify(data));
   });
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceNameChange errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to register device name change callback. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -941,18 +982,20 @@ on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class Data {
+class DiscoverFailureData {
   reason: number = 0;
 }
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('discoverFailure', (data: Data) => {
+  // 注册设备发现失败回调
+  dmInstance.on('discoverFailure', (data: DiscoverFailureData) => {
     console.info('discoverFailure on:' + JSON.stringify(data));
   });
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverFailure errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to register discover failure callback. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -992,13 +1035,15 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 注册设备管理服务死亡回调
   dmInstance.on('serviceDie', () => {
     console.info('serviceDie on');
   });
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('serviceDie errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to register service die callback. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -1039,30 +1084,22 @@ startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [k
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-interface DiscoverParam {
-  discoverTargetType: number;
-}
-
-interface FilterOptions {
-  availableStatus: number;
-  discoverDistance: number;
-  authenticationStatus: number;
-  authorizationType: number;
-}
-
+// 发现标识，discoverTargetType为1表示发现目标为设备
 let discoverParam: Record<string, number> = {
   'discoverTargetType': 1
 };
+// 发现设备过滤信息，availableStatus为0表示发现离线设备
 let filterOptions: Record<string, number> = {
   'availableStatus': 0
 };
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.startDiscovering(discoverParam, filterOptions); // 当有设备发现时，通过discoverSuccess回调通知给应用程序
+  dmInstance.startDiscovering(discoverParam, filterOptions); // 当有设备发现时，通过discoverSuccess回调通知给应用
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('startDiscovering errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to start discovering. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -1095,11 +1132,13 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 停止发现周边设备
   dmInstance.stopDiscovering();
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('stopDiscovering errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to stop discovering. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```
@@ -1139,12 +1178,15 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // 设备标识，可以从发现的结果（startDiscovering的discoverSuccess回调）或可信设备列表（getAvailableDeviceListSync/getAvailableDeviceList返回的DeviceBasicInfo）中获取
   let deviceId = 'XXXXXXXX';
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 解除认证设备
   dmInstance.unbindTarget(deviceId);
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('unbindTarget errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to unbind target. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```

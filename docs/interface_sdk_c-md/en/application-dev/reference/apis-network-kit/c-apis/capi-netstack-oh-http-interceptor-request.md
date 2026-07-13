@@ -6,7 +6,7 @@ typedef struct OH_Http_Interceptor_Request {...} OH_Http_Interceptor_Request
 
 ## Overview
 
-Defines interceptor request
+Defines a struct for the HTTP request data packet of the interceptor.
 
 **Since**: 24
 
@@ -20,9 +20,9 @@ Defines interceptor request
 
 | Name | Description |
 | -- | -- |
-| [Http_Buffer](capi-netstack-http-buffer.md) url | Request url, see [Http_Buffer](capi-netstack-http-buffer.md).<br>**Since**: 24 |
-| [Http_Buffer](capi-netstack-http-buffer.md) method | Request method, see [Http_Buffer](capi-netstack-http-buffer.md).<br>**Since**: 24 |
-| [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) *headers | Header of http Request, see [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md).<br>**Since**: 24 |
-| [Http_Buffer](capi-netstack-http-buffer.md) body | Request body, see [Http_Buffer](capi-netstack-http-buffer.md).<br>**Since**: 24 |
+| [Http_Buffer](capi-netstack-http-buffer.md) url | Request URL. For details, see [Http_Buffer](capi-netstack-http-buffer.md).<br>**Since**: 24 |
+| [Http_Buffer](capi-netstack-http-buffer.md) method | Request method. For details, see [Http_Buffer](capi-netstack-http-buffer.md).<br>**Since**: 24 |
+| [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) *headers | HTTP request header. For details, see [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md).<br>**Since**: 24 |
+| [Http_Buffer](capi-netstack-http-buffer.md) body | Request body. For details, see [Http_Buffer](capi-netstack-http-buffer.md).<br>**Since**: 24 |
 
 

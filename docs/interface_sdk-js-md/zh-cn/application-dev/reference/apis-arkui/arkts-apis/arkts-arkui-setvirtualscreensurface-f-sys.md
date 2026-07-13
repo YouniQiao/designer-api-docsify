@@ -6,7 +6,7 @@
 function setVirtualScreenSurface(screenId:number, surfaceId: string, callback: AsyncCallback<void>): void
 ```
 
-设置虚拟屏幕的surface，表示当前虚拟屏用于显示对应surface中的内容，使用callback异步回调。
+设置虚拟屏幕的surface，使用callback异步回调。
 
 **起始版本：** 9
 
@@ -83,7 +83,7 @@ struct Index {
 function setVirtualScreenSurface(screenId:number, surfaceId: string): Promise<void>
 ```
 
-设置虚拟屏幕的surface，表示当前虚拟屏用于显示对应surface中的内容，使用Promise异步回调。
+设置虚拟屏幕的surface，使用Promise异步回调。
 
 **起始版本：** 9
 

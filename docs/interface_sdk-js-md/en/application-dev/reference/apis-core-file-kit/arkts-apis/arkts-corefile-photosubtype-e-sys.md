@@ -1,6 +1,6 @@
 # PhotoSubType (System API)
 
-Enumeration types for different types of FileAsset
+Enumerates the [FileAsset](arkts-corefile-fileasset-i-sys.md) types.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ Enumeration types for different types of FileAsset
 DEFAULT
 ```
 
-Default Photo Type
+Default (photo) type.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Default Photo Type
 SCREENSHOT
 ```
 
-Screenshot Photo Type
+Screenshots and screen recording files.
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ Screenshot Photo Type
 CAMERA
 ```
 
-Camera Photo Type
+Photos and videos taken by a camera.
 
 **Since:** 10
 

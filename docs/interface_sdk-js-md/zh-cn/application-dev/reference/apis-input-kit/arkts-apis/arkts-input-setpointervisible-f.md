@@ -51,7 +51,7 @@ struct Index {
           } catch (error) {
             console.error(`Failed to set pointer cursor visible, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
-        })
+        });
     }
   }
 }

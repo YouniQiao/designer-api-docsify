@@ -40,8 +40,8 @@ function getHardwareUnitPowerPercent(type: ConsumptionType): number
 try {
     let percent = batteryStats.getHardwareUnitPowerPercent(batteryStats.ConsumptionType.CONSUMPTION_TYPE_SCREEN);
     console.info('battery statistics percent of hardware is: ' + percent);
-} catch(err) {
-    console.error('get battery statistics percent of hardware failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to get battery statistics percent of hardware. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

@@ -47,7 +47,7 @@ try {
   // driver-12345为示例driverUid，应用开发时可通过queryDeviceInfo查询到相应设备匹配到的驱动的driverUid作为入参
   let driverInfos : Array<deviceManager.DriverInfo> = deviceManager.queryDriverInfo("driver-12345");
   for (let item of driverInfos) {
-    console.info(`driver name is ${item.driverName}`)
+    console.info(`driver name is ${item.driverName}`);
   }
 } catch (error) {
   let err: BusinessError = error as BusinessError;

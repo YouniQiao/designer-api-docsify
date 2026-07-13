@@ -30,6 +30,8 @@ The key is generated and used in the secure environment.
 
 **Since:** 26.0.0
 
+**Required permissions:** ohos.permission.ACCESS_SE_KEY
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Security.Huks.Core

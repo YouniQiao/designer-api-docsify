@@ -8,6 +8,12 @@ Describes the remote device's model information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
+
 ## iconId
 
 ```TypeScript

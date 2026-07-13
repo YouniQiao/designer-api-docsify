@@ -1,20 +1,19 @@
 # on（系统接口）
 
-## on('cooperate')
+## on('receiveImage')
 
 ```TypeScript
-function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void
+function on(type: 'receiveImage', sessionId: number,
+        callback: Callback<EventCallbackInfo>): void
 ```
 
-注册监听键鼠穿越状态。
+Registers receiveImage event.
 
-**起始版本：** 10
+**起始版本：** 18
 
-**废弃版本：** 11
+**模型约束：** 此接口仅可在Stage模型下使用。
 
-**替代接口：** on(type:
-
-**系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
 
@@ -22,49 +21,47 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'cooperate' | 是 | 监听类型，取值为'cooperate' |
-| callback | Callback&lt;{ networkId: string, msg: CooperateMsg }&gt; | 是 |  |
+| type | 'receiveImage' | 是 | Registration Type, 'receiveImage'. |
+| sessionId | number | 是 | Ability connection Session id. |
+| callback | Callback&lt;EventCallbackInfo&gt; | 是 | Used to handle ('receiveImage') command. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types.<br>3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **示例：**
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
-class Data {
-  networkId: string = "networkId";
-  msg: cooperate.CooperateMsg = 0;
-}
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
-try {
-  cooperate.on('cooperate', (data: Data) => {
-    console.info(`Keyboard mouse crossing event: ${JSON.stringify(data)}`);
-  });
-} catch (error) {
-  console.error(`Register failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
+// sessionId需通过协同会话创建接口获取
+let sessionId = 100;
+// 注册receiveImage事件监听
+abilityConnectionManager.on('receiveImage', sessionId, (callbackInfo) => {
+  hilog.info(0x0000, 'testTag', 'session receiveImage, sessionId is', callbackInfo.sessionId);
+});
 
 ```
 
 
-## on('cooperateMessage')
+## on('collaborateEvent')
 
 ```TypeScript
-function on(type: 'cooperateMessage', callback: Callback<CooperateMessage>): void
+function on(type: 'collaborateEvent', sessionId: number,
+        callback: Callback<CollaborateEventInfo>): void
 ```
 
-注册监听键鼠穿越状态。
+Registers collaborateEvent event.
 
-**起始版本：** 11
+**起始版本：** 18
 
-**需要权限：** ohos.permission.COOPERATE_MANAGER
+**模型约束：** 此接口仅可在Stage模型下使用。
 
-**系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
 
@@ -72,47 +69,45 @@ function on(type: 'cooperateMessage', callback: Callback<CooperateMessage>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'cooperateMessage' | 是 | 监听类型，取值为'cooperateMessage' |
-| callback | Callback&lt;CooperateMessage&gt; | 是 | 回调函数，异步返回键鼠穿越状态消息。 |
+| type | 'collaborateEvent' | 是 | Registration Type, 'collaborateEvent'. |
+| sessionId | number | 是 | Ability connection Session id. |
+| callback | Callback&lt;CollaborateEventInfo&gt; | 是 | Called when an error event comes. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types.<br>3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **示例：**
 
 ```TypeScript
-function callback(msg: cooperate.CooperateMessage) {
-  console.info(`Keyboard mouse crossing event: ${JSON.stringify(msg)}`);
-  return false;
-}
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
-try {
-  cooperate.on('cooperateMessage', callback);
-} catch (error) {
-  console.error(`Register failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
+// sessionId需通过协同会话创建接口获取
+let sessionId = 100;
+// 注册collaborateEvent事件监听
+abilityConnectionManager.on('collaborateEvent', sessionId, (callbackInfo) => {
+  hilog.info(0x0000, 'testTag', 'session collaborateEvent, eventType is', callbackInfo.eventType);
+});
 
 ```
 
 
-## on('cooperateMouse')
+## on('collaborateEvent')
 
 ```TypeScript
-function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseLocation>): void
+function on(type: 'collaborateEvent', sessionId: number,
+        callback: Callback<CollaborateEventInfo>): void
 ```
 
-注册监听指定设备鼠标光标位置。
+Registers collaborateEvent event.
 
-**起始版本：** 12
+**起始版本：** 18
 
-**需要权限：** ohos.permission.COOPERATE_MANAGER
-
-**系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
 
@@ -120,32 +115,29 @@ function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseL
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'cooperateMouse' | 是 | 监听类型，取值为'cooperateMouse' |
-| networkId | string | 是 | 目标设备描述符 |
-| callback | Callback&lt;MouseLocation&gt; | 是 | 回调函数，异步返回指定监听设备鼠标光标位置信息。 |
+| type | 'collaborateEvent' | 是 | Registration Type, 'collaborateEvent'. |
+| sessionId | number | 是 | Ability connection Session id. |
+| callback | Callback&lt;CollaborateEventInfo&gt; | 是 | Called when an error event comes. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified.<br>2.Incorrect parameter types.<br>3.Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 **示例：**
 
 ```TypeScript
-function callback(data: cooperate.MouseLocation) {
-  console.info('displayX:' + data.displayX + 'displayY:' + data.displayY + 'displayWidth:' +
-  data.displayWidth + 'displayHeight:' + data.displayHeight);
-}
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
-try {
-  let networkId: string = 'Default';
-  cooperate.on('cooperateMouse', networkId, callback);
-} catch (error) {
-  console.error(`Register failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
+// sessionId需通过协同会话创建接口获取
+let sessionId = 100;
+// 注册collaborateEvent事件监听
+abilityConnectionManager.on('collaborateEvent', sessionId, (callbackInfo) => {
+  hilog.info(0x0000, 'testTag', 'session collaborateEvent, eventType is', callbackInfo.eventType);
+});
 
 ```
 

@@ -6,7 +6,7 @@ typedef struct OH_Http_Interceptor_Headers {...} OH_Http_Interceptor_Headers
 
 ## Overview
 
-Defines interceptor header.
+Defines a struct for the request/response header information of the interceptor.
 
 **Since**: 24
 
@@ -20,7 +20,7 @@ Defines interceptor header.
 
 | Name | Description |
 | -- | -- |
-| char *data | Header data<br>**Since**: 24 |
-| struct [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) *next | Next Header<br>**Since**: 24 |
+| char *data | Pointer to the request/response header information of the interceptor.<br>**Since**: 24 |
+| struct [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) *next | Pointer to the next header information.<br>**Since**: 24 |
 
 

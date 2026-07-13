@@ -1,4 +1,4 @@
-# PositionType
+# PositionType (System API)
 
 Enumerates the file locations.
 
@@ -6,29 +6,7 @@ Enumerates the file locations.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-## LOCAL
-
-```TypeScript
-LOCAL = 1
-```
-
-Asset exists only in local device
-
-**Since:** 16
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## CLOUD
-
-```TypeScript
-CLOUD = 2
-```
-
-Stored only on the cloud.
-
-**Since:** 16
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+**System API:** This is a system API.
 
 ## LOCAL_AND_CLOUD
 

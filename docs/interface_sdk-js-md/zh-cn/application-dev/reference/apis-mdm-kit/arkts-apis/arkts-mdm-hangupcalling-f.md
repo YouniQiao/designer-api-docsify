@@ -43,6 +43,7 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
+  // 挂断当前通话
   telephonyManager.hangupCalling(wantTemp);
 } catch (err) {
   console.error(`Failed to hang up calling. Code: ${err.code}, message: ${err.message}`);

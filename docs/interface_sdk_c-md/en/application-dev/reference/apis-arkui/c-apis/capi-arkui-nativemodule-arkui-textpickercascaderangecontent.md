@@ -6,7 +6,7 @@ typedef struct ARKUI_TextPickerCascadeRangeContent {...} ARKUI_TextPickerCascade
 
 ## Overview
 
-Defines the input structure of the interconnected multi-column text picker.
+Defines a multi-column cascade picker.
 
 **Since**: 12
 

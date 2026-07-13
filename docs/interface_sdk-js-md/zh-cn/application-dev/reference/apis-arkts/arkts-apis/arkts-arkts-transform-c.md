@@ -62,13 +62,13 @@ class TestTransform extends stream.Transform {
   }
 
   doFlush(callback: Function) {
-    callback(null, 'test');
+    callback(null, "test");
   }
 }
 
 let transform = new TestTransform();
-transform.end('my test');
-transform.on('data', (data) => {
+transform.end("my test");
+transform.on("data", (data) => {
   console.info("data is", data.data); // data is test
 });
 

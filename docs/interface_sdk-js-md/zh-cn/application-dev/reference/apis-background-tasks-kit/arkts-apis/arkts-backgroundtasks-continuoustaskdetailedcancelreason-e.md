@@ -34,20 +34,6 @@ SYSTEM_CANCEL_DATA_TRANSFER_LOW_SPEED = 4
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
-## SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_USE_AVSESSION
-
-```TypeScript
-SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_USE_AVSESSION = 5
-```
-
-申请AUDIO_PLAYBACK类型长时任务，但是未接入[AVSession](../../../../media/avsession/avsession-overview.md)。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
-
 ## SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_RUNNING
 
 ```TypeScript

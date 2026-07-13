@@ -41,11 +41,11 @@ function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// 定义订阅者，用于保存创建成功的订阅者对象，后续使用其完成订阅及退订的动作
+// 定义订阅者，用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
 let subscriber: commonEventManager.CommonEventSubscriber | null = null;
 // 订阅者信息
 let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {
-  events: ["event"]
+  events: ['event']
 };
 
 // 创建订阅者
@@ -60,9 +60,9 @@ try {
         // 订阅公共事件
         try {
           commonEventManager.subscribeToEvent(subscriber, (data: commonEventManager.CommonEventData) => {
-            console.info(`Succeeded to receive common event, data is ` + JSON.stringify(data));
+            console.info(`Succeeded to receive common event, data is ${JSON.stringify(data)}`);
           }).then(() => {
-            console.info(`Succeeded to subscribe.`);
+            console.info(`Succeeded in subscribing.`);
           }).catch((err: BusinessError) => {
             console.error(`Failed to subscribe. Code is ${err.code}, message is ${err.message}`);
           });

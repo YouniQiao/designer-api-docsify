@@ -1,6 +1,6 @@
 # @ohos.arkui.inspector
 
-Used to do observer layout and draw event for component.
+用于观察组件的布局和绘制事件。
 
 **起始版本：** 10
 
@@ -18,5 +18,5 @@ Used to do observer layout and draw event for component.
 
 | 名称 | 说明 |
 | --- | --- |
-| [ComponentObserver](arkts-arkui-componentobserver-i.md) | The ComponentObserver is used to listen for layout and draw events. |
+| [ComponentObserver](arkts-arkui-componentobserver-i.md) | ComponentObserver用于监听布局和绘制事件。 |
 

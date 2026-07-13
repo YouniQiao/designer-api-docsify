@@ -37,12 +37,14 @@ function turnOnBluetooth(admin: Want): void
 import { Want } from '@kit.AbilityKit';
 import { bluetoothManager } from '@kit.MDMKit';
 
+// 创建企业设备管理扩展组件
 let wantTemp: Want = {
   // 需根据实际情况进行替换
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
+  // 开启蓝牙
   bluetoothManager.turnOnBluetooth(wantTemp);
   console.info(`Succeeded in turning on bluetooth.`);
 } catch(err) {

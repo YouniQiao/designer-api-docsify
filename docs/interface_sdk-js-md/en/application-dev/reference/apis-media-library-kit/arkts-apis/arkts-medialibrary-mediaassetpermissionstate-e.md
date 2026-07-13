@@ -40,7 +40,7 @@ Asset not exists.
 READ_PERMISSION = 2
 ```
 
-The application has read permission when accessing the asset
+The application has read permission when accessing the asset.
 
 **Since:** 26.0.0
 

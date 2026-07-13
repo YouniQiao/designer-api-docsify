@@ -36,14 +36,14 @@ function getRawDescriptor(pipe: USBDevicePipe): Uint8Array
 **示例：**
 
 ```TypeScript
-function getRawDescriptor() {
+async function getRawDescriptor() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
     return;
   }
 
-  usbManager.requestRight(devicesList?.[0]?.name);
+  await usbManager.requestRight(devicesList?.[0]?.name);
   let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
   usbManager.getRawDescriptor(devicepipe);
   usbManager.closePipe(devicepipe);

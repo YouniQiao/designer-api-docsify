@@ -10,7 +10,7 @@ import { geoLocationManager } from '@kit.LocationKit';
 
 ```TypeScript
 function isWlanBssidMatched(
-    wlanBssidArray: Array<string>, rssiThreshold: number, needStartScan: boolean): Promise<boolean>
+      wlanBssidArray: Array<string>, rssiThreshold: number, needStartScan: boolean): Promise<boolean>
 ```
 
 Check whether the WLAN scan results match the WLAN BSSID list.
@@ -29,7 +29,7 @@ Check whether the WLAN scan results match the WLAN BSSID list.
 | --- | --- | --- | --- |
 | wlanBssidArray | Array&lt;string&gt; | Yes | Indicates the list of WLAN BSSIDs that need to be matched. |
 | rssiThreshold | number | Yes | Indicates the WLAN RSSI threshold, only matching WLAN BSSID withRSSI greater than this threshold. |
-| needStartScan | boolean | Yes | Indicates whether a WLAN scan needs to be initiated. |
+| needStartScan | boolean | Yes | Indicate whether a WLAN scan needs to be initiated. |
 
 **Return value:**
 

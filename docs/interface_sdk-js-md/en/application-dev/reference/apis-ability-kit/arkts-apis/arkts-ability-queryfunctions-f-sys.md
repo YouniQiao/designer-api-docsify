@@ -14,7 +14,7 @@ function queryFunctions(): Promise<Array<FunctionInfo>>
 
 Query all available functions.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_FUNCTION
 

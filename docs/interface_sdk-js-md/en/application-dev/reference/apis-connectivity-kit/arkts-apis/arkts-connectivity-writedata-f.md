@@ -1,5 +1,11 @@
 # writeData
 
+## Modules to Import
+
+```TypeScript
+import { dataTransfer } from '@kit.ConnectivityKit';
+```
+
 ## writeData
 
 ```TypeScript

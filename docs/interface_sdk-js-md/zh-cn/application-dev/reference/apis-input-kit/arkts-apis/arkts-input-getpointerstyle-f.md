@@ -41,7 +41,7 @@ struct Index {
         .onClick(() => {
           // 获取应用内最近一个窗口
           window.getLastWindow(this.getUIContext().getHostContext(), (error: BusinessError, win: window.Window) => {
-            if (error.code) {
+            if (error) {
               console.error(`Failed to obtain the top window, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
               return;
             }

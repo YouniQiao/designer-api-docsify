@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the APIs for http.
+Defines the APIs of the HTTP request module.
 
 **Library**: libnet_http.so
 
@@ -123,7 +123,7 @@ Obtains the value of a request or response header by key.
 
 | Type | Description |
 | -- | -- |
-| Http_HeaderValue * | Http_HeaderValue Pointer to the obtained {@link Http_HeaderValue}. |
+| [Http_HeaderValue *](capi-netstack-http-headervalue.md) | Http_HeaderValue Pointer to the obtained [Http_HeaderValue](capi-netstack-http-headervalue.md). |
 
 ### OH_Http_GetHeaderEntries()
 
@@ -149,7 +149,7 @@ Obtains all the key-value pairs of a request or response header.
 
 | Type | Description |
 | -- | -- |
-| Http_HeaderEntry * | Http_HeaderEntry Pointers to all obtained key-value pairs {@link Http_HeaderEntry}. |
+| [Http_HeaderEntry *](capi-netstack-http-headerentry.md) | Http_HeaderEntry Pointers to all obtained key-value pairs [Http_HeaderEntry](capi-netstack-http-headerentry.md). |
 
 ### OH_Http_DestroyHeaderEntries()
 
@@ -169,7 +169,7 @@ Destroys all key-value pairs obtained in [OH_Http_GetHeaderEntries](capi-net-htt
 
 | Parameter | Description |
 | -- | -- |
-| Http_HeaderEntry **headerEntry | Pointer to the {@link Http_HeaderEntry} to be destroyed, headerEntry ends with null. |
+| [Http_HeaderEntry](capi-netstack-http-headerentry.md) **headerEntry | Pointer to the [Http_HeaderEntry](capi-netstack-http-headerentry.md) to be destroyed, headerEntry ends with null. |
 
 ### OH_Http_CreateRequest()
 

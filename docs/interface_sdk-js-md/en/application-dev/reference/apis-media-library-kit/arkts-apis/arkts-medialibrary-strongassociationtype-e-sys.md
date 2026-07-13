@@ -1,6 +1,6 @@
 # StrongAssociationType (System API)
 
-Enumerates the flags of cloud-based enhancements for photos and videos.
+Enumerates the strong association types of photos.
 
 **Since:** 20
 
@@ -14,7 +14,7 @@ Enumerates the flags of cloud-based enhancements for photos and videos.
 NORMAL = 0
 ```
 
-Regular image or video.
+Common photo.
 
 **Since:** 20
 
@@ -28,7 +28,7 @@ Regular image or video.
 CLOUD_ENHANCEMENT = 1
 ```
 
-Cloud-based enhancement for photos and videos.
+Cloud-enhanced photo.
 
 **Since:** 20
 

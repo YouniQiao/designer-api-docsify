@@ -6,7 +6,7 @@ typedef struct ArkUI_PickerIndicatorDivider {...} ArkUI_PickerIndicatorDivider
 
 ## Overview
 
-Style parameters of divider indicator.
+Defines the style parameter of the divider-style indicator.
 
 **Since**: 23
 

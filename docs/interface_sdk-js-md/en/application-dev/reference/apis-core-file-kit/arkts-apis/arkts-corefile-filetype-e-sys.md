@@ -1,6 +1,6 @@
 # FileType (System API)
 
-Enumeration types for different kinds of Files
+Enumerates media file types.
 
 **Since:** 9
 
@@ -18,13 +18,13 @@ Enumeration types for different kinds of Files
 IMAGE = 1
 ```
 
-Image file type
+Image.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** IMAGE
+**Substitutes:** [IMAGE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-phototype-e.md#image)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -36,13 +36,13 @@ Image file type
 VIDEO
 ```
 
-Video file type
+Video.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** VIDEO
+**Substitutes:** [VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-phototype-e.md#video)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -54,7 +54,7 @@ Video file type
 AUDIO
 ```
 
-Audio file type
+Audio.
 
 **Since:** 9
 

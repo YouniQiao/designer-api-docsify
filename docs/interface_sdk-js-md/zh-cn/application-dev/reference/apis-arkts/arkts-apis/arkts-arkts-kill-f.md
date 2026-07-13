@@ -32,8 +32,8 @@ function kill(signal: number, pid: number): boolean
 **示例：**
 
 ```TypeScript
-let pres = process.pid;
-let result = process.kill(28, pres);
+let pid = process.pid;
+let result = process.kill(28, pid);
 
 ```
 

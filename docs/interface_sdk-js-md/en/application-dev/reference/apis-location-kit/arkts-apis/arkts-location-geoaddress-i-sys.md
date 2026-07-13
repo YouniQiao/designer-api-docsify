@@ -2,7 +2,7 @@
 
 Data struct describes geographic locations.
 
-**Since:** 22
+**Since:** 9
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 

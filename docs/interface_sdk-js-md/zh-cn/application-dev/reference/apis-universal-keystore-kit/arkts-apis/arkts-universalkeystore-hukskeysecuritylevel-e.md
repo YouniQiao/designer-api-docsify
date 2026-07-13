@@ -30,6 +30,8 @@ HUKS_KEY_SECURITY_LEVEL_SE = 1
 
 **起始版本：** 26.0.0
 
+**需要权限：** ohos.permission.ACCESS_SE_KEY
+
 **元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core

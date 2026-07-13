@@ -1,6 +1,6 @@
 # AnalysisResult (System API)
 
-Asset analysis result info.
+Defines the asset analysis result.
 
 **Since:** 24
 
@@ -20,7 +20,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 result: number
 ```
 
-The result code of asset analysis.
+Result code of asset analysis.
 
 **Type:** number
 

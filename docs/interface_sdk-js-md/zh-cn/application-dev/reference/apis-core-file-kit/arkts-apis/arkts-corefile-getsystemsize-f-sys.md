@@ -35,10 +35,11 @@ function getSystemSize(callback: AsyncCallback<number>): void
 **示例：**
 
 ```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 storageStatistics.getSystemSize((error: BusinessError, number: number) => {
   if (error) {
-    console.error("getSystemSize failed with error:" + JSON.stringify(error));
+    console.error(`getSystemSize failed with err, code is: ${error.code}, message is: ${error.message}`);
   } else {
     // do something
     console.info("getSystemSize successfully:" + number);
@@ -87,7 +88,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 storageStatistics.getSystemSize().then((number: number) => {
   console.info("getSystemSize successfully:" + number);
 }).catch((err: BusinessError) => {
-  console.error("getSystemSize failed with error:" + JSON.stringify(err));
+  console.error(`getSystemSize failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 
 ```

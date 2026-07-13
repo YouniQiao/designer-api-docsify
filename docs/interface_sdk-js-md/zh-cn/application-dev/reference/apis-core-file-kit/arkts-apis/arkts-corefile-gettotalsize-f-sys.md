@@ -37,12 +37,12 @@ function getTotalSize(callback: AsyncCallback<number>): void
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getTotalSize((error: BusinessError, number: number) => {
+storageStatistics.getTotalSize((error: BusinessError, totalSize: number) => {
   if (error) {
-    console.error("getTotalSize failed with error:" + JSON.stringify(error));
+    console.error(`getTotalSize failed. Code: ${error.code}, message: ${error.message}`);
   } else {
     // do something
-    console.info("getTotalSize successfully:" + number);
+    console.info('getTotalSize successfully:' + totalSize);
   }
 });
 

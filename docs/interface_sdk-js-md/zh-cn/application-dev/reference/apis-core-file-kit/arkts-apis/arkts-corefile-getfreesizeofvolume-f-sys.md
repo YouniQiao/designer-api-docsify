@@ -48,14 +48,14 @@ volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
   let uuid: string = volumes[0].uuid;
   storageStatistics.getFreeSizeOfVolume(uuid, (error: BusinessError, number: number) => {
     if (error) {
-      console.error("getFreeSizeOfVolume failed with error:" + JSON.stringify(error));
+      console.error(`getFreeSizeOfVolume failed with err, code is: ${error.code}, message is: ${error.message}`);
     } else {
       // do something
       console.info("getFreeSizeOfVolume successfully: " + number);
     }
   });
 }).catch((err: BusinessError) => {
-  console.error("getAllVolumes failed with error:" + JSON.stringify(err));
+  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 
 ```
@@ -115,10 +115,10 @@ volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
   storageStatistics.getFreeSizeOfVolume(uuid).then((number: number) => {
     console.info("getFreeSizeOfVolume successfully:" + number);
   }).catch((err: BusinessError) => {
-    console.error("getFreeSizeOfVolume failed with error:" + JSON.stringify(err));
+    console.error(`getFreeSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
   });
 }).catch((err: BusinessError) => {
-  console.error("getAllVolumes failed with error:" + JSON.stringify(err));
+  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 
 ```

@@ -41,11 +41,11 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-function DemoCreatePixelMapFromSurfaceWithTransformation(surfaceId: string, transformEnabled: boolean) {
+function createPixelMapFromSurfaceWithTransformation(surfaceId: string, transformEnabled: boolean) {
   image.createPixelMapFromSurfaceWithTransformation(surfaceId, transformEnabled).then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in creating PixelMap.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create PixelMap. Code: ${error.code}, message: ${error.message}`);
+    console.info('Succeeded in creating the PixelMap from Surface.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
   });
 }
 

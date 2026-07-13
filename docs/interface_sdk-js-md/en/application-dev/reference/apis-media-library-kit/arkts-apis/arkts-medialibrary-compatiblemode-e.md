@@ -1,6 +1,6 @@
 # CompatibleMode
 
-Enumerates the video transcoding mode.
+Enumerates the compatible modes.
 
 **Since:** 15
 

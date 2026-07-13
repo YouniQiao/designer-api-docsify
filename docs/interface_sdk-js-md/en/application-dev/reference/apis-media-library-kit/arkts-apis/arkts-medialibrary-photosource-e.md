@@ -12,7 +12,7 @@ Enumeration of PhotoSource type
 ALL = 0
 ```
 
-all resource
+Images and videos from all sources.
 
 **Since:** 20
 
@@ -26,7 +26,7 @@ all resource
 CAMERA = 1
 ```
 
-camera resource
+Image or video taken by the camera.
 
 **Since:** 20
 
@@ -40,7 +40,7 @@ camera resource
 SCREENSHOT = 2
 ```
 
-screenshot resource
+Screenshot or screen capture video.
 
 **Since:** 20
 

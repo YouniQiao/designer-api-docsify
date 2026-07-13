@@ -1,5 +1,11 @@
 # openDoubleClickSettingsPage
 
+## Modules to Import
+
+```TypeScript
+import { settingsLite } from '@kit.BasicServicesKit';
+```
+
 ## openDoubleClickSettingsPage
 
 ```TypeScript

@@ -4,7 +4,7 @@
 type PhotoAssetParams = Record<string, MemberType>[]
 ```
 
-Indicates the type of a batch photo asset member.
+Defines the array of record types that map file property names to their values.
 
 **Since:** 21
 

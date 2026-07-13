@@ -12,7 +12,7 @@ Enumerates the types of the resources to write.
 IMAGE_RESOURCE = 1
 ```
 
-Image resource
+Image resource.
 
 **Since:** 11
 
@@ -26,7 +26,7 @@ Image resource
 VIDEO_RESOURCE = 2
 ```
 
-Video resource
+Video resource.
 
 **Since:** 11
 

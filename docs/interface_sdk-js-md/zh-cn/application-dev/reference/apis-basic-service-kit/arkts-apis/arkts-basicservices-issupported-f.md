@@ -35,9 +35,9 @@ function isSupported(type: RunningLockType): boolean
 ```TypeScript
 try {
     let isSupported = runningLock.isSupported(runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL);
-    console.info('BACKGROUND type supported: ' + isSupported);
-} catch(err) {
-    console.error('check supported failed, err: ' + err);
+    console.info('PROXIMITY_SCREEN_CONTROL type supported: ' + isSupported);
+} catch (err) {
+    console.error(`Failed to check supported. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

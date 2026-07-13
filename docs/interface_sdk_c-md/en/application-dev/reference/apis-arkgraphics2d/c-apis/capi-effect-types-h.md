@@ -18,7 +18,7 @@ This file declares the data types of the image effect filter.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_Filter_ColorMatrix](capi-effectkit-oh-filter-colormatrix.md) | OH_Filter_ColorMatrix | Describes a matrix used to create an effect filter. |
+| [OH_Filter_ColorMatrix](capi-effectkit-oh-filter-colormatrix.md) | - | Describes a matrix used to create an effect filter. |
 | [OH_Filter](capi-effectkit-oh-filter.md) | OH_Filter | Defines a struct for a filter used to generate a filter PixelMap. |
 | [OH_PixelmapNative](capi-effectkit-oh-pixelmapnative.md) | OH_PixelmapNative | Defines a pixel map defined by the image framework. |
 

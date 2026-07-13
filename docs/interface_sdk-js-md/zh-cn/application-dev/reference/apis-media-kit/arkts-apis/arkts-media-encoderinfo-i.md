@@ -1,6 +1,6 @@
 # EncoderInfo
 
-Describes the information about an encoder.
+编码器信息描述。
 
 **起始版本：** 11
 
@@ -12,7 +12,7 @@ Describes the information about an encoder.
 bitRate?: Range
 ```
 
-Bit rate range of the encoder, with the minimum and maximum bit rates specified, in bit/s.
+编码器比特率范围，包含最小和最大比特率，单位为bit/s。
 
 **类型：** Range
 
@@ -26,9 +26,7 @@ Bit rate range of the encoder, with the minimum and maximum bit rates specified,
 channels?: Range
 ```
 
-Number of audio channels for the audio capturer, with the minimum and maximum numbers of audio channels
-specified.
-This parameter is available only for audio encoders.
+音频采集器的声道数范围，包含最小和最大声道数。仅在音频编码器中可用。
 
 **类型：** Range
 
@@ -42,8 +40,7 @@ This parameter is available only for audio encoders.
 frameRate?: Range
 ```
 
-Video frame rate range, with the minimum and maximum frame rates specified, in fps.
-This parameter is available only for video encoders.
+视频帧率范围，包含最小和最大帧率，单位为fps。仅在视频编码器中可用。
 
 **类型：** Range
 
@@ -57,8 +54,7 @@ This parameter is available only for video encoders.
 height?: Range
 ```
 
-Video frame height range, with the minimum and maximum heights specified, in px.
-This parameter is available only for video encoders.
+视频帧高度范围，包含最小和最大高度，单位为像素（px）。仅在视频编码器中可用。
 
 **类型：** Range
 
@@ -72,7 +68,7 @@ This parameter is available only for video encoders.
 mimeType: CodecMimeType
 ```
 
-MIME type of the encoder.
+编码器的MIME类型。
 
 **类型：** CodecMimeType
 
@@ -86,8 +82,7 @@ MIME type of the encoder.
 sampleRate?: Array<number>
 ```
 
-Audio sampling rate, including all available audio sampling rates, in Hz. The value depends on the encoder type,
-and this parameter is available only for audio encoders.
+音频采样率，包含所有可用的音频采样率，单位为Hz。仅在音频编码器中可用。
 
 **类型：** Array<number>
 
@@ -101,7 +96,7 @@ and this parameter is available only for audio encoders.
 type: string
 ```
 
-Encoder type. The value **audio** means an audio encoder, and **video** means a video encoder.
+编码器类型。值audio表示音频编码器，值video表示视频编码器。
 
 **类型：** string
 
@@ -115,8 +110,7 @@ Encoder type. The value **audio** means an audio encoder, and **video** means a 
 width?: Range
 ```
 
-Video frame width range, with the minimum and maximum widths specified, in px.
-This parameter is available only for video encoders.
+视频帧宽度范围，包含最小和最大宽度，单位为像素（px）。仅在视频编码器中可用。
 
 **类型：** Range
 

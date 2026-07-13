@@ -1,8 +1,8 @@
 # IconType
 
-Declare enum IconType
+Defines the icon type of the element on the left of the **ComposeListItem** component.
 
-**Since:** 20
+**Since:** 10
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -12,13 +12,13 @@ Declare enum IconType
 BADGE = 1
 ```
 
-Badge type.
+Badge with an icon size of 8 x 8 vp.
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,13 +28,13 @@ Badge type.
 NORMAL_ICON = 2
 ```
 
-Normal icon type.
+Small icon with an icon size of 16 x 16 vp.
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,13 +44,13 @@ Normal icon type.
 SYSTEM_ICON = 3
 ```
 
-System icon type.
+System icon with an icon size of 24 x 24 vp.
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,13 +60,13 @@ System icon type.
 HEAD_SCULPTURE = 4
 ```
 
-HeadSculpture type.
+Profile picture with an icon size of 40 x 40 vp.
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,13 +76,13 @@ HeadSculpture type.
 APP_ICON = 5
 ```
 
-App icon type.
+Application icon with an icon size of 64 x 64 vp.
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,13 +92,13 @@ App icon type.
 PREVIEW = 6
 ```
 
-Preview type.
+Preview image with an icon size of 96 x 96 vp.
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,13 +108,13 @@ Preview type.
 LONGITUDINAL = 7
 ```
 
-Longitudinal type.
+Icon with a horizontal special ratio (width is greater than height), keeping the longest side at 96 vp.
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,13 +124,13 @@ Longitudinal type.
 VERTICAL = 8
 ```
 
-Vertical type.
+Icon with a vertical special ratio (height is greater than width), keeping the longest side at 96 vp.
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

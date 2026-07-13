@@ -33,23 +33,23 @@ Obtains the device information.
 ArkTS（方舟编程语言）示例：
 
 ```TypeScript
+interface DeviceData {
+  brand: string;
+}
+
 export default class Page {
   getInfo() {
-    interface DeviceData {
-      brand: string;
-    }
-
     try {
       Device.getInfo({
         success: (data: DeviceData) => {
-          console.info('Device information obtained successfully. Device brand:' + data.brand);
+          console.info(`Device information obtained successfully. Device brand: ${data.brand}`);
         },
-        fail: (data: string, code: number) => {
+        fail: (data: any, code: number) => {
           console.error(`Failed to obtain device information. Code: ${code}, message: ${data}`);
         },
       });
     } catch (error) {
-      console.error('Device information API is not supported');
+      console.error('Failed to call device information API:', error);
     }
   }
 }
@@ -68,7 +68,7 @@ JS示例：
 ```
 
 ```TypeScript
-/*xxx.css*/
+/* xxx.css */
 .container {
     display: flex;
     flex-direction: column;
@@ -108,7 +108,7 @@ JS示例：
 ```
 
 ```TypeScript
-//xxx.js
+// xxx.js
 import Device from '@system.device';
 
 export default {
@@ -120,7 +120,7 @@ export default {
     try {
       Device.getInfo({
         success: (data) => {
-          console.info('Device information obtained successfully. Device brand:' + data.brand);
+          console.info(`Device information obtained successfully. Device brand: ${data.brand}`);
           this.brandInfo = 'Device brand: ' + data.brand;
         },
         fail: (data, code) => {
@@ -129,7 +129,7 @@ export default {
         },
       });
     } catch (error) {
-      console.error('Device information API is not supported');
+      console.error('Failed to call device information API:', error);
       this.brandInfo = 'Current device does not support this API';
     }
   }

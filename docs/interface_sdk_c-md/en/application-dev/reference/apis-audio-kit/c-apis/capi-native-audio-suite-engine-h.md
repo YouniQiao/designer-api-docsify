@@ -27,18 +27,24 @@ Declare audio suite engine related interfaces.This file provides interfaces for 
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_GetPipelineState(OH_AudioSuitePipeline* audioSuitePipeline, OH_AudioSuite_PipelineState* pipelineState)](#oh_audiosuiteengine_getpipelinestate) | - | Request to get one pipeline state |
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_RenderFrame(OH_AudioSuitePipeline* audioSuitePipeline, void* audioData, int32_t requestFrameSize, int32_t* responseSize, bool* finishedFlag)](#oh_audiosuiteengine_renderframe) | - | The application uses this interface for audio data processing.The application needs to call this interface to retrieve the data processed with effects frame by frame.After the application calls this interface,the pipeline will sequentially fetch data from the output node forward, process the effects,and ultimately fill the processed data into the audioData pointer passed by the application.The pipeline will attempt to fill the data according to the requestFrameSize as much as possible,and the actual size of the data processed by the pipeline will be returned to the application via responseSize.The pipeline supports multiple input nodes,each of which will obtain raw audio data from the applicationthrough the data acquisition interface registered by the application.When the application has handed over all the data prepared for each input node to the pipeline,the application should pass a finish flag during the last callback.Once all inputs in the pipeline have passed the finish flag,the pipeline will inform the application through the finishedFlag in the OH_AudioSuiteEngine_RenderFrame interfaceafter processing is complete.When finishedFlag is true, the application should no longer call this interface. |
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_MultiRenderFrame(OH_AudioSuitePipeline* audioSuitePipeline, OH_AudioDataArray* audioDataArray, int32_t* responseSize, bool* finishedFlag)](#oh_audiosuiteengine_multirenderframe) | - | The application uses this interface for audio data processing.For most nodes, a piece of data is obtained from the preceding node, processed,and then passed on to the subsequent node.For nodes with multiple outputs, such as the [EFFECT_MULTII_OUTPUT_NODE_TYPE_AUDIO_SEPARATION](capi-native-audio-suite-base-h.md#oh_audionode_type),a piece of data is obtained from the preceding node, processed by an algorithm,and then multiple pieces of data are passed on to the subsequent nodes.If such nodes exist in the pipeline, this interface must be used to obtain the processed data.The size of the audioDataArray should correspond one-to-one with the number of data outputs from the node.For the audio source separation node, audioDataArray should have two elements:the first element carries the vocal sound, and the second element carries the background sound. |
+| [int32_t OH_AudioSuiteEngine_MetaRenderFrame(OH_AudioSuitePipeline* audioSuitePipeline, OH_AudioSuite_MetaFrame* metaFrame, int32_t* responseAudioSize, int32_t* responseMetaSize, bool* finishedFlag)](#oh_audiosuiteengine_metarenderframe) | - | The application uses this interface for audio data and meta data processing.The application needs to set the audioData and metaData pointers in the metaFrame structure,as well as the data sizes (audioDataSize and metaDataSize).The actual sizes of the processed data will be returned through responseAudioSize and responseMetaSize. |
 | [OH_AudioSuite_Result OH_AudioSuiteNodeBuilder_Create(OH_AudioNodeBuilder** builder)](#oh_audiosuitenodebuilder_create) | - | Create an audio node builder which can be used to create an audio nodeThe builder is a tool used to create nodes, and it can be utilized to set the properties of the nodes to be created.After creating a node, the builder can be reused.However, it must be noted that if the attributes of the new node are inconsistent with the previous node,the application must use OH_AudioSuiteNodeBuilder_Reset to reset the builder. |
 | [OH_AudioSuite_Result OH_AudioSuiteNodeBuilder_Destroy(OH_AudioNodeBuilder* builder)](#oh_audiosuitenodebuilder_destroy) | - | Destroy audio node builder.This function must be called when you are done using the builder. |
 | [OH_AudioSuite_Result OH_AudioSuiteNodeBuilder_Reset(OH_AudioNodeBuilder* builder)](#oh_audiosuitenodebuilder_reset) | - | Reset audio node builder.If the application intends to reuse the builder to add new nodesand the properties of the new nodes differ from those of the previously created nodes,the application must call this interface to clear all properties, such as audio node type, e.t.c. |
 | [OH_AudioSuite_Result OH_AudioSuiteNodeBuilder_SetNodeType(OH_AudioNodeBuilder* builder, OH_AudioNode_Type type)](#oh_audiosuitenodebuilder_setnodetype) | - | Set the audio node type to be created by the builder.When creating a node, other parameters are validated based on the node type,so this method needs to be executed for all types of nodes. |
+| [int32_t OH_AudioSuiteNodeBuilderSystem_SetNodeType(OH_AudioNodeBuilder* builder, OH_AudioSuite_SystemNodeType type)](#oh_audiosuitenodebuildersystem_setnodetype) | - | Set the audio node type to be created by the builder. |
 | [OH_AudioSuite_Result OH_AudioSuiteNodeBuilder_SetFormat(OH_AudioNodeBuilder* builder, OH_AudioFormat audioFormat)](#oh_audiosuitenodebuilder_setformat) | - | Set the audio format supported by the node.For [INPUT_NODE_TYPE_DEFAULT](capi-native-audio-suite-base-h.md#oh_audionode_type),the set audioFormat is used to specify the format in which the application writes data.For [OUTPUT_NODE_TYPE_DEFAULT](capi-native-audio-suite-base-h.md#oh_audionode_type),the set audioFormat is used to specify the format in which the application ultimately wants to retrieve the data.Other types of nodes do not support this setting. |
+| [int32_t OH_AudioSuiteNodeBuilderSystem_SetFormat(OH_AudioNodeBuilder* builder, OH_AudioSuite_SystemNodeFormat audioFormat)](#oh_audiosuitenodebuildersystem_setformat) | - | Set the audio format supported by the node. |
 | [typedef int32_t (\*OH_InputNode_RequestDataCallback)(OH_AudioNode* audioNode, void* userData, void* audioData, int32_t audioDataSize, bool* finished)](#oh_inputnode_requestdatacallback) | OH_InputNode_RequestDataCallback | Callback function of request data, Only [INPUT_NODE_TYPE_DEFAULT](capi-native-audio-suite-base-h.md#oh_audionode_type) support this setting.This function allows the application to write partial data which ranges from 0 to the audioDataSize.The application should fill the data according to the size of audioDataSize.When all the data from the application has been passed to the pipeline through the callback,the application should set finished to true in the last callback.When finished is set to true, the pipeline will no longer call this interface to obtain data from the application.This callback is triggered when the pipeline needs audio data from the input node during rendering process.The callback is triggered repeatedly during [OH_AudioSuiteEngine_RenderFrame](capi-native-audio-suite-engine-h.md#oh_audiosuiteengine_renderframe) execution until finished is setto true. |
 | [OH_AudioSuite_Result OH_AudioSuiteNodeBuilder_SetRequestDataCallback(OH_AudioNodeBuilder* builder, OH_InputNode_RequestDataCallback callback, void* userData)](#oh_audiosuitenodebuilder_setrequestdatacallback) | - | Set input node request data callback, Only [INPUT_NODE_TYPE_DEFAULT](capi-native-audio-suite-base-h.md#oh_audionode_type) support this setting. |
+| [typedef int32_t (\*OH_InputNode_RequestMetaDataCallback)(OH_AudioNode* audioNode, void* userData, OH_AudioSuite_MetaFrame* metaFrame, int32_t* responseMetaDataSize, bool* finished)](#oh_inputnode_requestmetadatacallback) | OH_InputNode_RequestMetaDataCallback | Callback function of request meta data, Only [INPUT_NODE_TYPE_DEFAULT](capi-native-audio-suite-base-h.md#oh_audionode_type) support this setting.Each time the application or user invokes [OH_AudioSuiteEngine_MetaRenderFrame](capi-native-audio-suite-engine-h.md#oh_audiosuiteengine_metarenderframe),the callback is triggered once. |
+| [int32_t OH_AudioSuiteNodeBuilder_SetRequestMetaDataCallback(OH_AudioNodeBuilder* builder, OH_InputNode_RequestMetaDataCallback callback, void* userData)](#oh_audiosuitenodebuilder_setrequestmetadatacallback) | - | Set input node request meta data callback with frame structure,Only [INPUT_NODE_TYPE_DEFAULT](capi-native-audio-suite-base-h.md#oh_audionode_type) support this setting. |
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_CreateNode(OH_AudioSuitePipeline* audioSuitePipeline, OH_AudioNodeBuilder* builder, OH_AudioNode** audioNode)](#oh_audiosuiteengine_createnode) | - | Request to create audio node with audio node builder.When executing this function, the system will validate the parameters based on the audio node type in the builder.The application can determine the cause of the error through the return value. |
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_DestroyNode(OH_AudioNode* audioNode)](#oh_audiosuiteengine_destroynode) | - | Destroy an audio node.Whether the node can be deleted depends on the state of the pipeline it belongs to.If the pipeline is not in the stopped state and the node is in an active processing path,the operation will return that deletion is not supported. |
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_GetNodeBypassStatus(OH_AudioNode* audioNode, bool* bypassStatus)](#oh_audiosuiteengine_getnodebypassstatus) | - | Request to get audio node bypass status.Only effect node support bypass,When application call this interface with an input node or output node,it will return [AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) |
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_BypassEffectNode(OH_AudioNode* audioNode, bool bypass)](#oh_audiosuiteengine_bypasseffectnode) | - | Request to set the effect node bypass.This command can only be set on an effect node. when bypass is set true,the effect node only passes data to the next node without performing any effect processing. |
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_SetAudioFormat(OH_AudioNode* audioNode, OH_AudioFormat* audioFormat)](#oh_audiosuiteengine_setaudioformat) | - | Set the audio format for input and output nodes, specify the audio format of the audio source forthe input node, or specify the target audio format for the output node. |
+| [int32_t OH_AudioSuiteEngineSystem_SetAudioFormat(OH_AudioNode* audioNode, OH_AudioSuite_SystemNodeFormat* audioFormat)](#oh_audiosuiteenginesystem_setaudioformat) | - | Set the audio format for input and output nodes, specify the audio format of the audio source forthe input node, or specify the target audio format for the output node. |
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_ConnectNodes(OH_AudioNode* sourceAudioNode, OH_AudioNode* destAudioNode)](#oh_audiosuiteengine_connectnodes) | - | Executing the connect command will link two nodes in sequence.Connect two nodes will alter the topology of the pipeline. This may result in partial data loss,so it is recommended to perform this command when the engine is in stopped state.Node connections follow a specific order: the input node is the starting point of the pipeline,multiple effect nodes can be connected in between, and the output node is the endpoint of the pipeline. |
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_DisconnectNodes(OH_AudioNode* sourceAudioNode, OH_AudioNode* destAudioNode)](#oh_audiosuiteengine_disconnectnodes) | - | Executing the disconnect command will sever the connection between two nodes.This command alters the pipeline's topology and may result in partial data loss.It is recommended to perform this operation when the engine is in a stopped state. |
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_IsNodeTypeSupported(OH_AudioNode_Type nodeType, bool* isSupported)](#oh_audiosuiteengine_isnodetypesupported) | - | Request to check whether the current system supports a specific node type. |
@@ -63,6 +69,9 @@ Declare audio suite engine related interfaces.This file provides interfaces for 
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_SetGeneralVoiceChangeType(OH_AudioNode* audioNode, OH_AudioSuite_GeneralVoiceChangeType type)](#oh_audiosuiteengine_setgeneralvoicechangetype) | - | Set general voice change type of audio node. |
 | [OH_AudioSuite_Result OH_AudioSuiteEngine_GetGeneralVoiceChangeType(OH_AudioNode* audioNode, OH_AudioSuite_GeneralVoiceChangeType* type)](#oh_audiosuiteengine_getgeneralvoicechangetype) | - | Get general voice change type of audio node. |
 | [OH_AudioSuite_Result OH_AudioSuite_PrintInfo(OH_AudioSuiteEngine* audioSuiteEngine, OH_AudioSuitePipeline* audioSuitePipeline, int fd)](#oh_audiosuite_printinfo) | - | Print AudioSuite runtime snapshot. |
+| [int32_t OH_AudioSuiteEngineSystem_SetNodeParam(OH_AudioNode* audioNode, uint8_t* param, uint32_t paramSize)](#oh_audiosuiteenginesystem_setnodeparam) | - | Set param of system node. |
+| [int32_t OH_AudioSuiteEngineSystem_GetNodeParam(OH_AudioNode* audioNode, uint8_t* param, uint32_t paramSize)](#oh_audiosuiteenginesystem_getnodeparam) | - | Get param of system node. |
+| [int32_t OH_AudioSuiteEngineSystem_GetNodeInOutSize(OH_AudioNode* audioNode, uint32_t* inSize, uint32_t* outSize)](#oh_audiosuiteenginesystem_getnodeinoutsize) | - | Get input and output frame size of system node. |
 
 ## Function description
 
@@ -292,6 +301,34 @@ The application uses this interface for audio data processing.For most nodes, a 
 | -- | -- |
 | [OH_AudioSuite_Result](capi-native-audio-suite-base-h.md#oh_audiosuite_result) | [AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds<br> or [AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is nullptr or not valid value.<br> or [AUDIOSUITE_ERROR_PIPELINE_NOT_EXIST](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if pipeline does not exist or has already been destroyed.<br> or [AUDIOSUITE_ERROR_INVALID_STATE](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the pipeline is in the Stop state.<br> or [AUDIOSUITE_ERROR_UNSUPPORTED_OPERATION](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if in the last call, finishedFlag was set to true.<br> or [AUDIOSUITE_ERROR_TIMEOUT](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if an operation times out before completion.<br> or [AUDIOSUITE_ERROR_SYSTEM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the system has other abnormalities. |
 
+### OH_AudioSuiteEngine_MetaRenderFrame()
+
+```c
+int32_t OH_AudioSuiteEngine_MetaRenderFrame(OH_AudioSuitePipeline* audioSuitePipeline, OH_AudioSuite_MetaFrame* metaFrame, int32_t* responseAudioSize, int32_t* responseMetaSize, bool* finishedFlag)
+```
+
+**Description**
+
+The application uses this interface for audio data and meta data processing.The application needs to set the audioData and metaData pointers in the metaFrame structure,as well as the data sizes (audioDataSize and metaDataSize).The actual sizes of the processed data will be returned through responseAudioSize and responseMetaSize.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioSuitePipeline](capi-ohaudiosuite-oh-audiosuitepipelinestruct.md)* audioSuitePipeline | Reference created by [OH_AudioSuiteEngine_CreatePipeline](capi-native-audio-suite-engine-h.md#oh_audiosuiteengine_createpipeline). |
+| [OH_AudioSuite_MetaFrame](capi-ohaudiosuite-oh-audiosuite-metaframe.md)* metaFrame | Pointer to audio meta data frame structure. |
+| int32_t* responseAudioSize | Size of audio data the interface really write, unit is byte. |
+| int32_t* responseMetaSize | Size of meta data the interface really write, unit is byte. |
+| bool* finishedFlag | This flag is used to indicate to the user whether all data processing has been completed. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | <ul><br>         <li>[AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is nullptr or not valid value.</li><br>         <li>[AUDIOSUITE_ERROR_PIPELINE_NOT_EXIST](capi-native-audio-suite-base-h.md#oh_audiosuite_result)<br>             if pipeline does not exist or has already been destroyed.</li><br>         <li>[AUDIOSUITE_ERROR_INVALID_STATE](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the pipeline is in the Stop state.</li><br>         <li>[AUDIOSUITE_ERROR_UNSUPPORTED_OPERATION](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if in the last call, finishedFlag was set to true.</li><br>         <li>[AUDIOSUITE_ERROR_TIMEOUT](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if an operation times out before completion.</li><br>         <li>[AUDIOSUITE_ERROR_SYSTEM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the system has other abnormalities.</li><br>         </ul> |
+
 ### OH_AudioSuiteNodeBuilder_Create()
 
 ```c
@@ -389,6 +426,31 @@ Set the audio node type to be created by the builder.When creating a node, other
 | -- | -- |
 | [OH_AudioSuite_Result](capi-native-audio-suite-base-h.md#oh_audiosuite_result) | [AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds<br> or [AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is invalid, e.g. builder is nullptr, e.t.c.<br> or [AUDIOSUITE_ERROR_SYSTEM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the system has other abnormalities. |
 
+### OH_AudioSuiteNodeBuilderSystem_SetNodeType()
+
+```c
+int32_t OH_AudioSuiteNodeBuilderSystem_SetNodeType(OH_AudioNodeBuilder* builder, OH_AudioSuite_SystemNodeType type)
+```
+
+**Description**
+
+Set the audio node type to be created by the builder.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioNodeBuilder](capi-ohaudiosuite-oh-audionodebuilderstruct.md)* builder | Reference created by [OH_AudioSuiteNodeBuilder_Create](capi-native-audio-suite-engine-h.md#oh_audiosuitenodebuilder_create). |
+| [OH_AudioSuite_SystemNodeType](capi-native-audio-suite-base-h.md#oh_audiosuite_systemnodetype) type | Audio system node type. [OH_AudioSuite_SystemNodeType](capi-native-audio-suite-base-h.md#oh_audiosuite_systemnodetype) |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | <ul><br>         <li>[AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is invalid, e.g. builder is nullptr, e.t.c.</li><br>         </ul> |
+
 ### OH_AudioSuiteNodeBuilder_SetFormat()
 
 ```c
@@ -413,6 +475,31 @@ Set the audio format supported by the node.For [INPUT_NODE_TYPE_DEFAULT](capi-na
 | Type | Description |
 | -- | -- |
 | [OH_AudioSuite_Result](capi-native-audio-suite-base-h.md#oh_audiosuite_result) | [AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds<br> or [AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is invalid, e.g. builder is nullptr, e.t.c.<br> or [AUDIOSUITE_ERROR_UNSUPPORTED_FORMAT](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if an unsupported format is set in audioFormat.<br> or [AUDIOSUITE_ERROR_SYSTEM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the system has other abnormalities. |
+
+### OH_AudioSuiteNodeBuilderSystem_SetFormat()
+
+```c
+int32_t OH_AudioSuiteNodeBuilderSystem_SetFormat(OH_AudioNodeBuilder* builder, OH_AudioSuite_SystemNodeFormat audioFormat)
+```
+
+**Description**
+
+Set the audio format supported by the node.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioNodeBuilder](capi-ohaudiosuite-oh-audionodebuilderstruct.md)* builder | Reference created by [OH_AudioSuiteNodeBuilder_Create](capi-native-audio-suite-engine-h.md#oh_audiosuitenodebuilder_create). |
+| [OH_AudioSuite_SystemNodeFormat](capi-ohaudiosuite-oh-audiosuite-systemnodeformat.md) audioFormat | audio node format. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | <ul><br>         <li>[AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is invalid, e.g. builder is nullptr, e.t.c.</li><br>         <li>[AUDIOSUITE_ERROR_UNSUPPORTED_FORMAT](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if an unsupported format is set in audioFormat.</li><br>         </ul> |
 
 ### OH_InputNode_RequestDataCallback()
 
@@ -467,6 +554,60 @@ Set input node request data callback, Only [INPUT_NODE_TYPE_DEFAULT](capi-native
 | Type | Description |
 | -- | -- |
 | [OH_AudioSuite_Result](capi-native-audio-suite-base-h.md#oh_audiosuite_result) | [AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds<br> or [AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is invalid, e.g. builder is nullptr, e.t.c.<br> or [AUDIOSUITE_ERROR_TIMEOUT](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if an operation times out before completion.<br> or [AUDIOSUITE_ERROR_SYSTEM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the system has other abnormalities. |
+
+### OH_InputNode_RequestMetaDataCallback()
+
+```c
+typedef int32_t (*OH_InputNode_RequestMetaDataCallback)(OH_AudioNode* audioNode, void* userData, OH_AudioSuite_MetaFrame* metaFrame, int32_t* responseMetaDataSize, bool* finished)
+```
+
+**Description**
+
+Callback function of request meta data, Only [INPUT_NODE_TYPE_DEFAULT](capi-native-audio-suite-base-h.md#oh_audionode_type) support this setting.Each time the application or user invokes [OH_AudioSuiteEngine_MetaRenderFrame](capi-native-audio-suite-engine-h.md#oh_audiosuiteengine_metarenderframe),the callback is triggered once.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| (OH_AudioNode\* audioNode | AudioNode where this callback occurs. |
+| void\* userData | User data which is passed by user. |
+| [OH_AudioSuite_MetaFrame](capi-ohaudiosuite-oh-audiosuite-metaframe.md)\* metaFrame | Pointer to audio meta data frame structure. |
+| int32_t\* responseMetaDataSize | Size of meta data the application really write, unit is byte. |
+| bool\* finished | This Boolean value indicates whether all audio data was successfully written. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | <ul><br>         <li>Length of the valid audio data that has written into audioData buffer.<br>             The return value must be in range of [0, metaFrame->audioDataSize].</li><br>         </ul> |
+
+### OH_AudioSuiteNodeBuilder_SetRequestMetaDataCallback()
+
+```c
+int32_t OH_AudioSuiteNodeBuilder_SetRequestMetaDataCallback(OH_AudioNodeBuilder* builder, OH_InputNode_RequestMetaDataCallback callback, void* userData)
+```
+
+**Description**
+
+Set input node request meta data callback with frame structure,Only [INPUT_NODE_TYPE_DEFAULT](capi-native-audio-suite-base-h.md#oh_audionode_type) support this setting.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioNodeBuilder](capi-ohaudiosuite-oh-audionodebuilderstruct.md)* builder | Reference created by [OH_AudioSuiteNodeBuilder_Create](capi-native-audio-suite-engine-h.md#oh_audiosuitenodebuilder_create). |
+| [OH_InputNode_RequestMetaDataCallback](capi-native-audio-suite-engine-h.md#oh_inputnode_requestmetadatacallback) callback | Callback to functions that will write audio data and meta data. |
+| void* userData | Pointer to an application data structure that will be passed to the callback functions. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | <ul><br>         <li>[AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is invalid, e.g. builder is nullptr, e.t.c.</li><br>         <li>[AUDIOSUITE_ERROR_TIMEOUT](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if an operation times out before completion.</li><br>         <li>[AUDIOSUITE_ERROR_SYSTEM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the system has other abnormalities.</li><br>         </ul> |
 
 ### OH_AudioSuiteEngine_CreateNode()
 
@@ -592,6 +733,31 @@ Set the audio format for input and output nodes, specify the audio format of the
 | Type | Description |
 | -- | -- |
 | [OH_AudioSuite_Result](capi-native-audio-suite-base-h.md#oh_audiosuite_result) | <ul><br>         <li>[AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds</li><br>         <li>[AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is nullptr.</li><br>         <li>[AUDIOSUITE_ERROR_NODE_NOT_EXIST](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if audioNode does not exist or has been destroyed.</li><br>         <li>[AUDIOSUITE_ERROR_UNSUPPORTED_OPERATION](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the audioNode is an effect node.</li><br>         <li>[AUDIOSUITE_ERROR_UNSUPPORTED_FORMAT](capi-native-audio-suite-base-h.md#oh_audiosuite_result)<br>             if an unsupported format is set in audioFormat. [since 26.0.0]</li><br>         <li>[AUDIOSUITE_ERROR_INVALID_STATE](capi-native-audio-suite-base-h.md#oh_audiosuite_result)<br>             if the pipeline where the node resides is not in the stop state.</li><br>         <li>[AUDIOSUITE_ERROR_TIMEOUT](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if an operation times out before completion.</li><br>         <li>[AUDIOSUITE_ERROR_SYSTEM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the system has other abnormalities.</li><br>         </ul> |
+
+### OH_AudioSuiteEngineSystem_SetAudioFormat()
+
+```c
+int32_t OH_AudioSuiteEngineSystem_SetAudioFormat(OH_AudioNode* audioNode, OH_AudioSuite_SystemNodeFormat* audioFormat)
+```
+
+**Description**
+
+Set the audio format for input and output nodes, specify the audio format of the audio source forthe input node, or specify the target audio format for the output node.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioNode](capi-ohaudiosuite-oh-audionodestruct.md)* audioNode | Reference created by [OH_AudioSuiteEngine_CreateNode](capi-native-audio-suite-engine-h.md#oh_audiosuiteengine_createnode). |
+| [OH_AudioSuite_SystemNodeFormat](capi-ohaudiosuite-oh-audiosuite-systemnodeformat.md)* audioFormat | Audio Format. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | <ul><br>         <li>[AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is nullptr.</li><br>         <li>[AUDIOSUITE_ERROR_NODE_NOT_EXIST](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if audioNode does not exist or has been destroyed.</li><br>         <li>[AUDIOSUITE_ERROR_UNSUPPORTED_OPERATION](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the audioNode is an effect node.</li><br>         <li>[AUDIOSUITE_ERROR_INVALID_STATE](capi-native-audio-suite-base-h.md#oh_audiosuite_result)<br>             if the pipeline where the node resides is not in the stop state.</li><br>         <li>[AUDIOSUITE_ERROR_TIMEOUT](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if an operation times out before completion.</li><br>         <li>[AUDIOSUITE_ERROR_SYSTEM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the system has other abnormalities.</li><br>         </ul> |
 
 ### OH_AudioSuiteEngine_ConnectNodes()
 
@@ -1195,5 +1361,83 @@ Print AudioSuite runtime snapshot.
 | Type | Description |
 | -- | -- |
 | [OH_AudioSuite_Result](capi-native-audio-suite-base-h.md#oh_audiosuite_result) | [AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds,<br> or [AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is nullptr or not valid value.<br> or [AUDIOSUITE_ERROR_SYSTEM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the system has other abnormalities. |
+
+### OH_AudioSuiteEngineSystem_SetNodeParam()
+
+```c
+int32_t OH_AudioSuiteEngineSystem_SetNodeParam(OH_AudioNode* audioNode, uint8_t* param, uint32_t paramSize)
+```
+
+**Description**
+
+Set param of system node.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioNode](capi-ohaudiosuite-oh-audionodestruct.md)* audioNode | Reference created by [OH_AudioSuiteEngine_CreateNode](capi-native-audio-suite-engine-h.md#oh_audiosuiteengine_createnode). |
+| uint8_t* param | Parameter buffer. |
+| uint32_t paramSize | Parameter buffer size. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | <ul><br>         <li>[AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[AUDIOSUITE_ERROR_NODE_NOT_EXIST](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if audioNode does not exist or has been destroyed.</li><br>         <li>[AUDIOSUITE_ERROR_UNSUPPORTED_OPERATION](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if audioNode is not a system node.</li><br>         <li>[AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is invalid, e.g. audioNode is nullptr, e.t.c.</li><br>         <li>[AUDIOSUITE_ERROR_TIMEOUT](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if an operation times out before completion.</li><br>         <li>[AUDIOSUITE_ERROR_SYSTEM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the system has other abnormalities.</li><br>         </ul> |
+
+### OH_AudioSuiteEngineSystem_GetNodeParam()
+
+```c
+int32_t OH_AudioSuiteEngineSystem_GetNodeParam(OH_AudioNode* audioNode, uint8_t* param, uint32_t paramSize)
+```
+
+**Description**
+
+Get param of system node.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioNode](capi-ohaudiosuite-oh-audionodestruct.md)* audioNode | Reference created by [OH_AudioSuiteEngine_CreateNode](capi-native-audio-suite-engine-h.md#oh_audiosuiteengine_createnode). |
+| uint8_t* param | Parameter buffer. |
+| uint32_t paramSize | Parameter buffer size. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | <ul><br>         <li>[AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[AUDIOSUITE_ERROR_NODE_NOT_EXIST](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if audioNode does not exist or has been destroyed.</li><br>         <li>[AUDIOSUITE_ERROR_UNSUPPORTED_OPERATION](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if audioNode is not a system node.</li><br>         <li>[AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is invalid, e.g. audioNode is nullptr, e.t.c.</li><br>         <li>[AUDIOSUITE_ERROR_TIMEOUT](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if an operation times out before completion.</li><br>         <li>[AUDIOSUITE_ERROR_SYSTEM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the system has other abnormalities.</li><br>         </ul> |
+
+### OH_AudioSuiteEngineSystem_GetNodeInOutSize()
+
+```c
+int32_t OH_AudioSuiteEngineSystem_GetNodeInOutSize(OH_AudioNode* audioNode, uint32_t* inSize, uint32_t* outSize)
+```
+
+**Description**
+
+Get input and output frame size of system node.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_AudioNode](capi-ohaudiosuite-oh-audionodestruct.md)* audioNode | Reference created by [OH_AudioSuiteEngine_CreateNode](capi-native-audio-suite-engine-h.md#oh_audiosuiteengine_createnode). |
+| uint32_t* inSize | Input frame size, unit is byte. |
+| uint32_t* outSize | Output frame size, unit is byte. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | <ul><br>         <li>[AUDIOSUITE_SUCCESS](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if execution succeeds.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[AUDIOSUITE_ERROR_NODE_NOT_EXIST](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if audioNode does not exist or has been destroyed.</li><br>         <li>[AUDIOSUITE_ERROR_UNSUPPORTED_OPERATION](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if audioNode is not a system node.</li><br>         <li>[AUDIOSUITE_ERROR_INVALID_PARAM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if parameter is invalid, e.g. audioNode is nullptr, e.t.c.</li><br>         <li>[AUDIOSUITE_ERROR_TIMEOUT](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if an operation times out before completion.</li><br>         <li>[AUDIOSUITE_ERROR_SYSTEM](capi-native-audio-suite-base-h.md#oh_audiosuite_result) if the system has other abnormalities.</li><br>         </ul> |
 
 

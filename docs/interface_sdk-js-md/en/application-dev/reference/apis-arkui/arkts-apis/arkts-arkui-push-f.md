@@ -31,6 +31,8 @@ Navigates to a specified page in the application.
 **Example**
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
+
 class innerParams {
   data3: number[];
 
@@ -57,6 +59,8 @@ router.push({
 ```
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
+
 class innerParams {
   data3: number[];
 

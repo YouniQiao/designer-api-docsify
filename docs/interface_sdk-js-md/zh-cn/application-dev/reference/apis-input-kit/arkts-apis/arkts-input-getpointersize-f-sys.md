@@ -41,7 +41,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 获取鼠标指针大小
+            // 获取鼠标光标大小
             pointer.getPointerSize((error: BusinessError, size: number) => {
               if (error) {
                 console.error(`Failed to get pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

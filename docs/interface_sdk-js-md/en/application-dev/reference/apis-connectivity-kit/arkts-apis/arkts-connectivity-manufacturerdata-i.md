@@ -6,6 +6,12 @@ Describes the manufacturer data.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from '@kit.ConnectivityKit';
+```
+
 ## manufacturerData
 
 ```TypeScript

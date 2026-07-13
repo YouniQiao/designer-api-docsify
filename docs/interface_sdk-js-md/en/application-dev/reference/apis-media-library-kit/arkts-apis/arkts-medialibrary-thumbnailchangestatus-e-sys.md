@@ -1,6 +1,6 @@
 # ThumbnailChangeStatus (System API)
 
-Enumeration status of thumbnail change.
+Enumerates the change statuses of thumbnails (including images and videos).
 
 **Since:** 20
 
@@ -14,7 +14,7 @@ Enumeration status of thumbnail change.
 THUMBNAIL_NOT_EXISTS = 0
 ```
 
-No thumbnail is generated.
+The thumbnail does not exist.
 
 **Since:** 20
 
@@ -28,7 +28,7 @@ No thumbnail is generated.
 THUMBNAIL_ADD = 1
 ```
 
-A thumbnail is added.
+The thumbnail has been re-created.
 
 **Since:** 20
 
@@ -42,7 +42,7 @@ A thumbnail is added.
 THUMBNAIL_UPDATE = 2
 ```
 
-The original image is modified, and a thumbnail is regenerated.
+The thumbnail has been updated.
 
 **Since:** 20
 
@@ -56,7 +56,7 @@ The original image is modified, and a thumbnail is regenerated.
 THUMBNAIL_NOT_CHANGE = 3
 ```
 
-The thumbnail does not change.
+The thumbnail has not changed.
 
 **Since:** 20
 

@@ -1,6 +1,6 @@
 # AssetCompatibleCapability
 
-Asset compatibility capabilities.
+Defines the asset compatibility capability.
 
 **Since:** 24
 
@@ -18,7 +18,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 supportedHighResolution: boolean
 ```
 
-Enable support for high-resolution asset.
+Whether high-resolution assets are supported. **true**: yes; **false**: no.
 
 **Type:** boolean
 
@@ -40,9 +40,11 @@ Supported MIME types.
 
 **Type:** Array<string>
 
+**Since:** 26.0.0
+
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

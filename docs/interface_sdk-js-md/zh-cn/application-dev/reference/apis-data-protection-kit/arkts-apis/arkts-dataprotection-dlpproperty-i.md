@@ -60,7 +60,7 @@ extensionFields?: Record<string, Object>
 fileId?: string
 ```
 
-表示文件的标识，默认为空。长度不超过255字节，超出此范围抛出错误码19100001。
+表示文件的标识，默认为空。长度不超过255字节，超出此范围抛出错误码401。
 
 **类型：** string
 

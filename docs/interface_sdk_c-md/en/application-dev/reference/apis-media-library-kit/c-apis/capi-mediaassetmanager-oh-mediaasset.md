@@ -6,7 +6,7 @@ typedef struct OH_MediaAsset OH_MediaAsset
 
 ## Overview
 
-Define Media AssetThis structure provides the ability to encapsulate file asset attributes.
+The struct describes a media asset.
 
 **Since**: 12
 

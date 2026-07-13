@@ -1,6 +1,6 @@
 # CloudAssetDownloadStatus (System API)
 
-Download cloud asset status info.
+Describes the status information about a batch download.
 
 **Since:** 21
 
@@ -20,7 +20,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 readonly taskInfos: string[]
 ```
 
-Download cloud asset auto status info.
+Array of strings containing the information of each individual download item within this batch download.
 
 **Type:** string[]
 

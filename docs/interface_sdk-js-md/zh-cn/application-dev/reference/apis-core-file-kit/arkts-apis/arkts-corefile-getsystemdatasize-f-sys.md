@@ -40,7 +40,7 @@ import { storageStatistics } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 storageStatistics.getSystemDataSize().then((systemDataSize: number) => {
-  console.info("getSystemDataSize successfully: " + JSON.stringify(systemDataSize));
+  console.info("getSystemDataSize successfully: " + systemDataSize);
 }).catch((err: BusinessError) => {
   console.error(`getSystemDataSize failed with err, code is: ${err.code}, message is: ${err.message}`);
 });

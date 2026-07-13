@@ -38,8 +38,8 @@ let innerEvent: emitter.InnerEvent = {
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-// Execute the callback after receiving the event whose eventId is 1.
+};
+// Execute the callback after receiving the event whose ID is 1.
 emitter.once(innerEvent, callback);
 
 ```
@@ -73,9 +73,9 @@ import { Callback } from '@kit.BasicServicesKit';
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
+};
 // Execute the callback after receiving the event whose event ID is eventId.
-emitter.once("eventId", callback);
+emitter.once('eventId', callback);
 
 ```
 
@@ -122,9 +122,9 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
   if (eventData?.data instanceof Sample) {
     eventData?.data?.printCount();
   }
-}
+};
 // Execute the callback after receiving the event whose event ID is eventId.
-emitter.once("eventId", callback);
+emitter.once('eventId', callback);
 
 ```
 

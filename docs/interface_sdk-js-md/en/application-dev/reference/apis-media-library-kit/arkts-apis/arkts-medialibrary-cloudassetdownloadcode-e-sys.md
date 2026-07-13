@@ -1,6 +1,6 @@
 # CloudAssetDownloadCode (System API)
 
-Add download cloud asset task result code.
+Enumerates the status codes returned when adding an item to a batch download.
 
 **Since:** 21
 
@@ -14,7 +14,7 @@ Add download cloud asset task result code.
 ADD_DOWNLOAD_TASK_SUCCESS = 0
 ```
 
-Add download cloud asset success
+The individual download item is successfully added.
 
 **Since:** 21
 
@@ -28,7 +28,7 @@ Add download cloud asset success
 DOWNLOAD_ASSET_NOT_EXIST = 1
 ```
 
-The asset is not exist when adding download cloud asset
+The requested asset does not exist.
 
 **Since:** 21
 

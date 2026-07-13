@@ -1,6 +1,6 @@
 # AlbumChangeInfo
 
-Defines the detailed attributes of an album.
+Describes the information about an album.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 albumOrder?: number
 ```
 
-The album order of album asset.
+Sorting value of the album.
 
 **Type:** number
 
@@ -34,7 +34,7 @@ The album order of album asset.
 coverInfo?: PhotoAssetChangeInfo
 ```
 
-Detailed asset change information of the cover.
+Information of the album cover asset.
 
 **Type:** PhotoAssetChangeInfo
 
@@ -50,7 +50,7 @@ Detailed asset change information of the cover.
 hidden?: boolean
 ```
 
-hidden state of the album.
+Whether the album is hidden. **true** if hidden, **false** otherwise.
 
 **Type:** boolean
 
@@ -68,7 +68,7 @@ hidden state of the album.
 hiddenCount: number
 ```
 
-Total number of hidden photos and videos in the album.
+Number of hidden assets in the album.
 
 **Type:** number
 
@@ -84,7 +84,7 @@ Total number of hidden photos and videos in the album.
 hiddenCoverInfo?: PhotoAssetChangeInfo
 ```
 
-Cover changes of hidden assets in the album.
+Information of the hidden album cover asset.
 
 **Type:** PhotoAssetChangeInfo
 
@@ -100,7 +100,7 @@ Cover changes of hidden assets in the album.
 hiddenCoverUri: string
 ```
 
-Cover of hidden assets in the album.
+URI of the hidden cover asset in the album.
 
 **Type:** string
 
@@ -116,8 +116,7 @@ Cover of hidden assets in the album.
 isCoverChanged: boolean
 ```
 
-Whether the album cover content is changed. It is used to distinguish between attribute changes and
-content changes of a photo.
+Whether the file content of the album cover has changed. **true** if changed, **false** otherwise.
 
 **Type:** boolean
 
@@ -133,8 +132,7 @@ content changes of a photo.
 isHiddenCoverChanged: boolean
 ```
 
-Whether the cover of hidden assets in the album is changed. It is used to distinguish between attribute
-changes and content changes of a cover asset.
+Whether the file content of the hidden album cover has changed. **true** if changed, **false** otherwise.
 
 **Type:** boolean
 
@@ -168,7 +166,7 @@ The virtual path of album.
 orderSection?: number
 ```
 
-The order section of album asset.
+Section that defines the order of the album, specifying where the album is displayed in the Gallery.
 
 **Type:** number
 

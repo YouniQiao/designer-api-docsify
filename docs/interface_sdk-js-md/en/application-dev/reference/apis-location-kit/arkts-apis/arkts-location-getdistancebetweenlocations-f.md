@@ -14,9 +14,9 @@ function getDistanceBetweenLocations(location1: Location, location2: Location): 
 
 Obtains the distance between two locations.
 
-**Since:** 22
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Location.Location.Core
 

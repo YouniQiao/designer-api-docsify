@@ -51,7 +51,9 @@ for (let value of queue) {
 // value: 4
 
 // 使用方法二：
+// 获取Queue的迭代器
 let iter = queue[Symbol.iterator]();
+// 通过迭代器的next方法遍历元素
 let temp: IteratorResult<number> = iter.next().value;
 while(temp != undefined) {
   console.info("value: " + temp);
@@ -99,17 +101,19 @@ add(element: T): boolean
 **示例：**
 
 ```TypeScript
-class C1 {
-  name: string = ""
-  age: string = ""
+class PersonInfo {
+  name: string = "";
+  age: string = "";
 }
-let queue = new Queue<number | string | C1 | number[]>();
-let result = queue.add("a");
-let result1 = queue.add(1);
+// 创建支持多种类型的Queue实例
+let queue = new Queue<number | string | PersonInfo | number[]>();
+// 向队列尾部添加元素
+queue.add("a");
+queue.add(1);
 let b = [1, 2, 3];
-let result2 = queue.add(b);
-let c : C1 = {name : "Dylan", age : "13"};
-let result3 = queue.add(c);
+queue.add(b);
+let c : PersonInfo = {name : "Dylan", age : "13"};
+queue.add(c);
 console.info("result:", queue.length);  // result: 4
 
 ```
@@ -137,7 +141,9 @@ Queue的构造函数。
 **示例：**
 
 ```TypeScript
+// 创建Queue实例
 let queue = new Queue<number | string | Object>();
+console.info("queue length:", queue.length);  // queue length: 0
 
 ```
 
@@ -176,6 +182,7 @@ queue.add(2);
 queue.add(4);
 queue.add(5);
 queue.add(4);
+// 遍历Queue中的每个元素，对每个元素执行回调函数
 queue.forEach((value: number, index: number): void => {
   console.info("value:" + value, "index:" + index);
 });
@@ -221,6 +228,7 @@ queue.add(2);
 queue.add(4);
 queue.add(5);
 queue.add(2);
+// 获取队列的头元素
 let result = queue.getFirst();
 console.info("result:", result);  // result: 2
 
@@ -262,6 +270,7 @@ queue.add(4);
 queue.add(5);
 queue.add(2);
 queue.add(4);
+// 删除队列头部元素，并返回被删除元素
 let result = queue.pop();
 console.info("result:", result);  // result: 2
 

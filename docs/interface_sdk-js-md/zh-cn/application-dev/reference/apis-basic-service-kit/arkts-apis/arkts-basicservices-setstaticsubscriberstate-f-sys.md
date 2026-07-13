@@ -39,7 +39,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 commonEventManager.setStaticSubscriberState(true, (err: BusinessError) => {
   if (err.code != 0) {
-    console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
+    console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
     return;
   }
   console.info(`setStaticSubscriberState success`);
@@ -92,8 +92,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 commonEventManager.setStaticSubscriberState(false).then(() => {
   console.info(`setStaticSubscriberState success`);
-}).catch ((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
+}).catch((err: BusinessError) => {
+  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
 });
 
 ```
@@ -142,11 +142,11 @@ function setStaticSubscriberState(enable: boolean, events?: Array<string>): Prom
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let evenName: string[] = ['usual.event.SEND_DATA'];
-commonEventManager.setStaticSubscriberState(true, evenName).then(() => {
-  console.info(`setStaticSubscriberState success, state is ${true}`);
+let eventName: string[] = ['usual.event.SEND_DATA'];
+commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
+  console.info(`setStaticSubscriberState success`);
 }).catch((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
+  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
 });
 
 ```

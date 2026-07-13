@@ -29,11 +29,11 @@ function createRunningLock(name: string, type: RunningLockType, callback: AsyncC
 **示例：**
 
 ```TypeScript
-runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND, (err: Error, lock: runningLock.RunningLock) => {
-    if (typeof err === 'undefined') {
-        console.info('created running lock: ' + lock);
+runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND, (err: BusinessError, lock: runningLock.RunningLock) => {
+    if (err) {
+        console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
     } else {
-        console.error('create running lock failed, err: ' + err);
+        console.info('created running lock: ' + lock);
     }
 });
 
@@ -78,8 +78,8 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 .then((lock: runningLock.RunningLock) => {
     console.info('created running lock: ' + lock);
 })
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
+.catch((err: BusinessError) => {
+    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

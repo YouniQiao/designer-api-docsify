@@ -32,8 +32,8 @@ try {
         console.info('unsubscribe thermal level success.');
     });
     console.info('unregister thermal level callback success.');
-} catch(err) {
-    console.error('unregister thermal level callback failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to unregister thermal level callback. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

@@ -1,6 +1,6 @@
 # PhotoAssetChangeData
 
-Defines the photo or video change data.
+Describes the change data of a media asset.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 assetAfterChange: PhotoAssetChangeInfo | null
 ```
 
-Photo or video information after change.
+Data of the media asset after change. In the case of asset deletion, **assetAfterChange** is null.
 
 **Type:** PhotoAssetChangeInfo | null
 
@@ -32,7 +32,7 @@ Photo or video information after change.
 assetBeforeChange: PhotoAssetChangeInfo | null
 ```
 
-Photo or video information before change.
+Data of the media asset before change. In the case of asset addition, **assetBeforeChange** is null.
 
 **Type:** PhotoAssetChangeInfo | null
 
@@ -46,8 +46,7 @@ Photo or video information before change.
 isContentChanged: boolean
 ```
 
-Whether the content of a photo or video changes. It is used to distinguish between attribute changes
-and content changes of a photo or video.
+Whether the content of the media asset is changed. **true** if changed, **false** otherwise.
 
 **Type:** boolean
 
@@ -61,7 +60,7 @@ and content changes of a photo or video.
 isDeleted: boolean
 ```
 
-Whether the photo or video is permanently completely.
+Whether the media asset is deleted. **true** if deleted, **false** otherwise.
 
 **Type:** boolean
 

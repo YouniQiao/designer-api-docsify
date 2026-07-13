@@ -1,6 +1,6 @@
 # AlbumType (System API)
 
-Album type.
+Enumerates the album types.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ Album type.
 USER = 0
 ```
 
-Album created by user.
+User album.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Album created by user.
 SYSTEM = 1024
 ```
 
-Album created by system, which metadata cannot be modified by user.
+System album.
 
 **Since:** 10
 

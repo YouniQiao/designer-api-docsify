@@ -1,6 +1,6 @@
 # MediaAssetProgressHandler
 
-Data handler used to notify the progress of required media asset data
+**MediaAssetProgressHandler** is used to obtain the media asset processing progress from **onProgress()**.
 
 **Since:** 15
 
@@ -18,7 +18,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 onProgress(progress: number): void
 ```
 
-Indicates the progress of required media asset data
+Called when the progress of the requested video is returned.
 
 **Since:** 15
 
@@ -28,5 +28,5 @@ Indicates the progress of required media asset data
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | number | Yes | Progress in percentage. Value range: 0 to 100 |
+| progress | number | Yes | Progress in percentage. <br>Value range: [0, 100] |
 

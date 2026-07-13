@@ -14,9 +14,10 @@ function setReverseGeocodingMockInfo(mockInfos: Array<ReverseGeocodingMockInfo>)
 
 Set the configuration parameters for simulating reverse geocoding.
 
-**Since:** 20
+**Since:** 9
 
-**Required permissions:** ohos.permission.MOCK_LOCATION
+**Required permissions:** 
+- API version 20+: ohos.permission.MOCK_LOCATION
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -26,17 +27,17 @@ Set the configuration parameters for simulating reverse geocoding.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mockInfos | Array&lt;ReverseGeocodingMockInfo&gt; | Yes | Indicates the set of locations and place names to be simulated. |
+| mockInfos | Array&lt;ReverseGeocodingMockInfo&gt; | Yes | Indicates the set of locations and place names to besimulated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call ${geoLocationManager.setReverseGeocodingMockInfo} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API.<br>**Applicable version:** 20 and later |
 
 **Example**
 

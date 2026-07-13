@@ -44,9 +44,10 @@ function read(portId: number, buffer: Uint8Array, timeout?: number): Promise<num
 ```TypeScript
 import { JSON } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // 获取串口列表
-function read() {
+function readExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {
@@ -65,6 +66,8 @@ function read() {
       } else {
         console.info('grant permission successfully');
       }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to request serial right. Code: ${err.code}, message: ${err.message}`);
     });
   }
 
@@ -73,7 +76,8 @@ function read() {
     serialManager.open(portId)
     console.info('open usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('open usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to open usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 
   // 异步读取
@@ -81,7 +85,8 @@ function read() {
   serialManager.read(portId, readBuffer, 2000).then((size: number) => {
     console.info('read usbSerial success, readBuffer: ' + readBuffer.toString());
   }).catch((error: Error) => {
-    console.error('read usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to read usbSerial. Code: ${err.code}, message: ${err.message}`);
   })
 
   // 关闭串口
@@ -89,7 +94,8 @@ function read() {
     serialManager.close(portId);
     console.info('close usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('close usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to close usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 }
 

@@ -119,7 +119,7 @@ export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAb
 context: WebNativeMessagingExtensionContext
 ```
 
-Indicates web native messaging extension ability context.
+Indicates the context of this web native messaging extension ability.
 
 **Type:** WebNativeMessagingExtensionContext
 

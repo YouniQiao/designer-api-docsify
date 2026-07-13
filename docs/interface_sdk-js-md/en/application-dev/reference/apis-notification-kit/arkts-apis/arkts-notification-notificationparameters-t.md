@@ -4,7 +4,7 @@
 export type NotificationParameters = _NotificationParameters
 ```
 
-Defines Notification Parameters to describe the key information of wantAgent in the notification.
+Describes partial information about the **wantAgent** in the notification request.
 
 **Since:** 24
 

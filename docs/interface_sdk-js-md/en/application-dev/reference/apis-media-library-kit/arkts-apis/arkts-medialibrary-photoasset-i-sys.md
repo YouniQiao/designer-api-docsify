@@ -1,6 +1,6 @@
 # PhotoAsset
 
-Defines the photo asset
+Provides APIs for encapsulating file asset attributes.
 
 **Inheritance/Implementation:** PhotoAsset extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md)
 
@@ -20,7 +20,7 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 getAnalysisData(analysisType: photoAccessHelper.AnalysisType): Promise<string>
 ```
 
-Get analysis data of the asset.
+Obtains analysis data. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -34,13 +34,13 @@ Get analysis data of the asset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| analysisType | photoAccessHelper.AnalysisType | Yes | Analysis type |
+| analysisType | photoAccessHelper.AnalysisType | Yes | Smart analysis type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns analysis info into a json string |
+| Promise&lt;string&gt; | Promise used to return the analysis result obtained. |
 
 **Error codes:**
 
@@ -48,7 +48,7 @@ Get analysis data of the asset.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 ## requestSource
@@ -57,7 +57,7 @@ Get analysis data of the asset.
 requestSource(): Promise<number>
 ```
 
-Opens the source file to obtain the file descriptor (FD). This API uses a promise to return the result.
+Opens the source file and returns the FD. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -71,7 +71,7 @@ Opens the source file to obtain the file descriptor (FD). This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns opened source asset fd. |
+| Promise&lt;number&gt; | Promise used to return the FD obtained. |
 
 **Error codes:**
 

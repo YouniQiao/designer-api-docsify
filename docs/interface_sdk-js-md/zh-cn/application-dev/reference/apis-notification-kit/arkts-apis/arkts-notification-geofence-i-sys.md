@@ -30,7 +30,7 @@ coordinateSystemType:CoordinateSystemType
 delayTime?:number
 ```
 
-围栏延迟时间，单位秒，进入围栏后触发围栏的延迟时间，取值范围：[0, 300]。默认值为0。
+围栏延迟时间，单位：秒，进入围栏后触发围栏的延迟时间，取值范围：[0, 300]。默认值为0。
 
 **类型：** number
 
@@ -94,7 +94,7 @@ monitorEvent:MonitorEvent
 radius:number
 ```
 
-围栏半径，单位米，取值范围：[200, 2000]。
+围栏半径，单位：米，取值范围：[200, 2000]。
 
 **类型：** number
 

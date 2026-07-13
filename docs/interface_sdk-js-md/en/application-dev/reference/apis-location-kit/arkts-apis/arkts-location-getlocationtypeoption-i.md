@@ -26,6 +26,8 @@ Called when the execution is completed.
 
 **Deprecated since:** 9
 
+**Model restriction:** This API can be used only in the FA model.
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 ## fail
@@ -42,6 +44,8 @@ Called when the location types fail to be obtained.
 
 **Deprecated since:** 9
 
+**Model restriction:** This API can be used only in the FA model.
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 ## success
@@ -57,6 +61,8 @@ Called when the location types are obtained.
 **Since:** 3
 
 **Deprecated since:** 9
+
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Location.Location.Lite
 

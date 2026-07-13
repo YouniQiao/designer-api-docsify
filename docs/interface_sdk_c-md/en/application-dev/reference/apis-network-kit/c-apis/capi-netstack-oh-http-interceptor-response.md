@@ -6,7 +6,7 @@ typedef struct OH_Http_Interceptor_Response {...} OH_Http_Interceptor_Response
 
 ## Overview
 
-Defines interceptor response
+Defines a struct for the HTTP response data packet of the interceptor.
 
 **Since**: 24
 
@@ -20,9 +20,9 @@ Defines interceptor response
 
 | Name | Description |
 | -- | -- |
-| [Http_Buffer](capi-netstack-http-buffer.md) body | Response body, see [Http_Buffer](capi-netstack-http-buffer.md).<br>**Since**: 24 |
-| [Http_ResponseCode](capi-net-http-type-h.md#http_responsecode) responseCode | Server status code, see [Http_ResponseCode](capi-net-http-type-h.md#http_responsecode).<br>**Since**: 24 |
-| [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) *headers | Header of http response, see [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md).<br>**Since**: 24 |
-| [Http_PerformanceTiming](capi-netstack-http-performancetiming.md) performanceTiming | The time taken of various stages of HTTP request, see [Http_PerformanceTiming](capi-netstack-http-performancetiming.md).<br>**Since**: 24 |
+| [Http_Buffer](capi-netstack-http-buffer.md) body | Response body. For details, see [Http_Buffer](capi-netstack-http-buffer.md).<br>**Since**: 24 |
+| [Http_ResponseCode](capi-net-http-type-h.md#http_responsecode) responseCode | Response status code. For details, see [Http_ResponseCode](capi-net-http-type-h.md#http_responsecode).<br>**Since**: 24 |
+| [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) *headers | HTTP response header. For details, see [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md).<br>**Since**: 24 |
+| [Http_PerformanceTiming](capi-netstack-http-performancetiming.md) performanceTiming | Response performance information. For details, see [Http_PerformanceTiming](capi-netstack-http-performancetiming.md).<br>**Since**: 24 |
 
 

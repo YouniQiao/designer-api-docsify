@@ -1,5 +1,11 @@
 # offDeviceFound
 
+## Modules to Import
+
+```TypeScript
+import { scan } from '@kit.ConnectivityKit';
+```
+
 ## offDeviceFound
 
 ```TypeScript

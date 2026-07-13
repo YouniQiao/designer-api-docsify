@@ -2,7 +2,7 @@
 
 Configuring parameters in single location requests.
 
-**Since:** 22
+**Since:** 12
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -22,9 +22,9 @@ Priority of the location request.
 
 **Type:** LocatingPriority
 
-**Since:** 22
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -38,9 +38,9 @@ Timeout of a single location request, in milliseconds.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -54,9 +54,9 @@ Indicates whether to obtain POI information near the current location.
 
 **Type:** boolean
 
-**Since:** 22
+**Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Location.Location.Core
 

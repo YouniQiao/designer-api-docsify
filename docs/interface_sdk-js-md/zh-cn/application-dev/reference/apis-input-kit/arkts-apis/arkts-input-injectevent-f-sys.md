@@ -50,7 +50,7 @@ struct Index {
               keyCode: 2,
               keyDownDuration: 0,
               isIntercepted: false
-            }
+            };
             // 注入事件
             inputEventClient.injectEvent({ KeyEvent: backKeyDown });
 

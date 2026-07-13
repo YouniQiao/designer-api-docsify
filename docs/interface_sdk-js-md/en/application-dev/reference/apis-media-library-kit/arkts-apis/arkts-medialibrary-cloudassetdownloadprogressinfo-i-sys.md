@@ -1,6 +1,6 @@
 # CloudAssetDownloadProgressInfo (System API)
 
-Download cloud asset callback info.
+Describes the progress information about a batch download.
 
 **Since:** 21
 
@@ -20,7 +20,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 readonly autoPauseReason: number
 ```
 
-Download cloud asset auto pause reason.
+Reason for automatic pause.
 
 **Type:** number
 
@@ -36,7 +36,7 @@ Download cloud asset auto pause reason.
 readonly downloadEventType: CloudAssetDownloadNotifyType
 ```
 
-Download cloud asset callback event type.
+Type of event that triggers this update.
 
 **Type:** CloudAssetDownloadNotifyType
 
@@ -52,7 +52,7 @@ Download cloud asset callback event type.
 readonly fileId: number
 ```
 
-Download cloud asset file id.
+ID of the file being downloaded.
 
 **Type:** number
 
@@ -68,7 +68,7 @@ Download cloud asset file id.
 readonly percent: number
 ```
 
-Download cloud asset progress.
+Download completion percentage.
 
 **Type:** number
 

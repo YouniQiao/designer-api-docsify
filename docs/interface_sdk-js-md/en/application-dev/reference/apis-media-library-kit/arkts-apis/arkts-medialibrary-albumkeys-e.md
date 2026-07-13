@@ -1,8 +1,8 @@
 # AlbumKeys
 
-Enumerates the key album attributes.
+Enumerates the album keys.
 
-**Since:** 12
+**Since:** 10
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -14,7 +14,7 @@ URI = 'uri'
 
 URI of the album.
 
-**Since:** 12
+**Since:** 10
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,19 +26,7 @@ ALBUM_NAME = 'album_name'
 
 Name of the album.
 
-**Since:** 12
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## ALBUM_LPATH
-
-```TypeScript
-ALBUM_LPATH = 'lpath'
-```
-
-Virtual path of the album.
-
-**Since:** 23
+**Since:** 10
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,7 +36,7 @@ Virtual path of the album.
 CHANGE_TIME = 'change_time'
 ```
 
-change time of album
+Time when the album is changed.
 
 **Since:** 23
 

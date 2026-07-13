@@ -51,6 +51,7 @@ let wantTemp: Want = {
 };
 
 try {
+  // 获取当前默认数据流量卡的卡槽ID
   let slotId: number = telephonyManager.getDefaultData(wantTemp);
   console.info(`success to get default data SIM ID, current is ${slotId}`);
 } catch (err) {

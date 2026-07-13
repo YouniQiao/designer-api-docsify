@@ -6,7 +6,7 @@ typedef struct NetConn_NetHandle {...} NetConn_NetHandle
 
 ## Overview
 
-Defines the network handle.
+Defines network handles for network IDs.
 
 **Since**: 11
 
@@ -20,6 +20,6 @@ Defines the network handle.
 
 | Name | Description |
 | -- | -- |
-| int32_t netId | Network ID |
+| int32_t netId | Network ID. |
 
 

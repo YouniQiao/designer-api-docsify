@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the APIs for http global interceptor.
+Defines the APIs of the HTTP global interceptor module. With interceptors, you can monitor HTTP mobile dataand implement the logging feature.
 
 **Library**: libhttp_interceptor.so
 
@@ -18,12 +18,12 @@ Defines the APIs for http global interceptor.
 
 | Name | Description |
 | -- | -- |
-| [int32_t OH_Http_AddReadOnlyInterceptor(struct OH_Http_Interceptor *interceptor)](#oh_http_addreadonlyinterceptor) | add a read-only http global interceptor for HTTP requests. |
+| [int32_t OH_Http_AddReadOnlyInterceptor(struct OH_Http_Interceptor *interceptor)](#oh_http_addreadonlyinterceptor) | Adds a global read-only HTTP interceptor. |
 | [int32_t OH_Http_AddWritableInterceptor(struct OH_Http_Interceptor *interceptor)](#oh_http_addwritableinterceptor) | add a writable http global interceptor for HTTP requests. |
-| [int32_t OH_Http_RemoveInterceptor(struct OH_Http_Interceptor *interceptor)](#oh_http_removeinterceptor) | delete a specific http global interceptor |
-| [int32_t OH_Http_RemoveAllInterceptors(int32_t groupId)](#oh_http_removeallinterceptors) | Deletes all HTTP interceptors matching the specified group ID. |
-| [int32_t OH_Http_StartAllInterceptors(int32_t groupId)](#oh_http_startallinterceptors) | start all http global interceptors by groupId |
-| [int32_t OH_Http_StopAllInterceptors(int32_t groupId)](#oh_http_stopallinterceptors) | stop all http global interceptors by groupId |
+| [int32_t OH_Http_RemoveInterceptor(struct OH_Http_Interceptor *interceptor)](#oh_http_removeinterceptor) | Removes a specified global HTTP interceptor. |
+| [int32_t OH_Http_RemoveAllInterceptors(int32_t groupId)](#oh_http_removeallinterceptors) | Removes all HTTP interceptors of a specified group ID. |
+| [int32_t OH_Http_StartAllInterceptors(int32_t groupId)](#oh_http_startallinterceptors) | Enables all HTTP interceptors of a specified group ID. |
+| [int32_t OH_Http_StopAllInterceptors(int32_t groupId)](#oh_http_stopallinterceptors) | Disables all HTTP interceptors of a specified group ID. |
 
 ## Function description
 
@@ -35,7 +35,7 @@ int32_t OH_Http_AddReadOnlyInterceptor(struct OH_Http_Interceptor *interceptor)
 
 **Description**
 
-add a read-only http global interceptor for HTTP requests.
+Adds a global read-only HTTP interceptor.
 
 >**Note**: 
 >The interceptor remains active until it is explicitly removed by the developer.
@@ -56,7 +56,7 @@ add a read-only http global interceptor for HTTP requests.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>         [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
+| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>     [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
 
 ### OH_Http_AddWritableInterceptor()
 
@@ -97,7 +97,7 @@ int32_t OH_Http_RemoveInterceptor(struct OH_Http_Interceptor *interceptor)
 
 **Description**
 
-delete a specific http global interceptor
+Removes a specified global HTTP interceptor.
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -113,7 +113,7 @@ delete a specific http global interceptor
 
 | Type | Description |
 | -- | -- |
-| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>         [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
+| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>     [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
 
 ### OH_Http_RemoveAllInterceptors()
 
@@ -123,7 +123,7 @@ int32_t OH_Http_RemoveAllInterceptors(int32_t groupId)
 
 **Description**
 
-Deletes all HTTP interceptors matching the specified group ID.
+Removes all HTTP interceptors of a specified group ID.
 
 >**Note**: 
 >The groupId is allocated and managed by the application itself when creating
@@ -146,7 +146,7 @@ Deletes all HTTP interceptors matching the specified group ID.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>         [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
+| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>     [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
 
 ### OH_Http_StartAllInterceptors()
 
@@ -156,7 +156,7 @@ int32_t OH_Http_StartAllInterceptors(int32_t groupId)
 
 **Description**
 
-start all http global interceptors by groupId
+Enables all HTTP interceptors of a specified group ID.
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -172,7 +172,7 @@ start all http global interceptors by groupId
 
 | Type | Description |
 | -- | -- |
-| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>         [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
+| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>     [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
 
 ### OH_Http_StopAllInterceptors()
 
@@ -182,7 +182,7 @@ int32_t OH_Http_StopAllInterceptors(int32_t groupId)
 
 **Description**
 
-stop all http global interceptors by groupId
+Disables all HTTP interceptors of a specified group ID.
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -198,6 +198,6 @@ stop all http global interceptors by groupId
 
 | Type | Description |
 | -- | -- |
-| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>         [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
+| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>     [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
 
 

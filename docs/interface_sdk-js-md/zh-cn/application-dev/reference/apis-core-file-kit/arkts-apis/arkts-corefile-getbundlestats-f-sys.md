@@ -51,17 +51,17 @@ try {
 
   let packageName:string = bundleName;
   let index:number = resourceInfo.appIndex;
-  storageStatistics.getBundleStats(packageName, (err: BusinessError, BundleStats: storageStatistics.BundleStats) => {
+  storageStatistics.getBundleStats(packageName, (err: BusinessError, bundleStats: storageStatistics.BundleStats) => {
     if (err) {
-      hilog.error(0x0000, 'testTag', 'getBundleStats failed with error: %{public}s', JSON.stringify(err));
+      console.error(`getBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
     } else {
-      hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
+      hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(bundleStats));
     }
   }, index);
 
 } catch (err) {
   let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed: %{public}s', message);
+  console.error(`getBundleResourceInfo failed with err, message is: ${message}`);
 }
 
 ```
@@ -123,15 +123,15 @@ try {
 
   let packageName:string = bundleName;
   let index:number = resourceInfo.appIndex;
-  storageStatistics.getBundleStats(packageName, index).then((BundleStats: storageStatistics.BundleStats) => {
-    hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
+  storageStatistics.getBundleStats(packageName, index).then((bundleStats: storageStatistics.BundleStats) => {
+    hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(bundleStats));
   }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getBundleStats failed with error: %{public}s', JSON.stringify(err));
+    console.error(`getBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
   });
 
 } catch (err) {
   let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with error: %{public}s', message);
+  console.error(`getBundleResourceInfo failed with err, message is: ${message}`);
 }
 
 ```

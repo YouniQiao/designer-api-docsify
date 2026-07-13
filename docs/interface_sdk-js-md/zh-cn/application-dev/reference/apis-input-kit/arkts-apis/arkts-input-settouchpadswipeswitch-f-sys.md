@@ -42,7 +42,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 设置触摸板滑动开关
+            // 设置触控板滑动开关
             pointer.setTouchpadSwipeSwitch(true, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set touchpad swipe switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

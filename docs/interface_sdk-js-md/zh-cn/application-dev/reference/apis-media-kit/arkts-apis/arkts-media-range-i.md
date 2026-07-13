@@ -1,6 +1,6 @@
 # Range
 
-Provides Range with lower and upper limit.
+包含上下限的范围。
 
 **起始版本：** 11
 
@@ -12,7 +12,7 @@ Provides Range with lower and upper limit.
 max: number
 ```
 
-Maximum value.
+最大值。
 
 **类型：** number
 
@@ -26,7 +26,7 @@ Maximum value.
 min: number
 ```
 
-Minimum value.
+最小值。
 
 **类型：** number
 

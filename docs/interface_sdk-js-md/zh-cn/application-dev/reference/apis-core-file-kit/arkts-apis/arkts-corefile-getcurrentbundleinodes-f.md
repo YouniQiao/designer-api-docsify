@@ -33,10 +33,10 @@ function getCurrentBundleInodes(): Promise<number>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-storageStatistics.getCurrentBundleInodes().then((curInodes: number) => {
-  console.info("getCurrentBundleInodes successfully: " + curInodes);
+storageStatistics.getCurrentBundleInodes().then((bundleInodes: number) => {
+  console.info('getCurrentBundleInodes successfully:' + bundleInodes);
 }).catch((err: BusinessError) => {
-  console.error(`getCurrentBundleInodes failed. Code: ${err.code}, Message: ${err.message}`);
+  console.error(`getCurrentBundleInodes failed. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

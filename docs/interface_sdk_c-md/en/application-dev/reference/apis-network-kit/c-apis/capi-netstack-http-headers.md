@@ -6,7 +6,7 @@ typedef struct Http_Headers Http_Headers
 
 ## Overview
 
-Headers of the request or response.
+Defines the header of an HTTP request or response.
 
 **Since**: 20
 

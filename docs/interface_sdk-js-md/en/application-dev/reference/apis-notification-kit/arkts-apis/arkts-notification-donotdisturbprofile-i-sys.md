@@ -1,7 +1,5 @@
 # DoNotDisturbProfile (System API)
 
-Do Not Disturb profile.
-
 **Since:** 12
 
 **System capability:** SystemCapability.Notification.Notification

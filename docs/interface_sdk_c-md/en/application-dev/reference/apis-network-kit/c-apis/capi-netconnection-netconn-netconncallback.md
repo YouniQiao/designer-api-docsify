@@ -6,7 +6,7 @@ typedef struct NetConn_NetConnCallback {...} NetConn_NetConnCallback
 
 ## Overview
 
-Defines the network connection callbacks.
+Defines a struct for the network status listener callback collection. All callback events must be registered;those not requiring attention can be set to empty.
 
 **Since**: 12
 
@@ -20,11 +20,11 @@ Defines the network connection callbacks.
 
 | Name | Description |
 | -- | -- |
-| [OH_NetConn_NetworkAvailable](capi-net-connection-type-h.md#oh_netconn_networkavailable) onNetworkAvailable | Callback for network available |
-| [OH_NetConn_NetCapabilitiesChange](capi-net-connection-type-h.md#oh_netconn_netcapabilitieschange) onNetCapabilitiesChange | Callback for network capabilities changed |
-| [OH_NetConn_NetConnectionPropertiesChange](capi-net-connection-type-h.md#oh_netconn_netconnectionpropertieschange) onConnetionProperties | Callback for network connection properties changed |
-| [OH_NetConn_NetLost](capi-net-connection-type-h.md#oh_netconn_netlost) onNetLost | Callback for network lost |
-| [OH_NetConn_NetUnavailable](capi-net-connection-type-h.md#oh_netconn_netunavailable) onNetUnavailable | Callback for network unavailable, this function invoked while network can not be available in given timeout |
-| [OH_NetConn_NetBlockStatusChange](capi-net-connection-type-h.md#oh_netconn_netblockstatuschange) onNetBlockStatusChange | Callback for network blocked status changed |
+| [OH_NetConn_NetworkAvailable](capi-net-connection-type-h.md#oh_netconn_networkavailable) onNetworkAvailable | Callback invoked when the network is available. |
+| [OH_NetConn_NetCapabilitiesChange](capi-net-connection-type-h.md#oh_netconn_netcapabilitieschange) onNetCapabilitiesChange | Callback invoked when the network capabilities change. |
+| [OH_NetConn_NetConnectionPropertiesChange](capi-net-connection-type-h.md#oh_netconn_netconnectionpropertieschange) onConnetionProperties | Callback invoked when network connection properties change. |
+| [OH_NetConn_NetLost](capi-net-connection-type-h.md#oh_netconn_netlost) onNetLost | Callback invoked when the network is disconnected. |
+| [OH_NetConn_NetUnavailable](capi-net-connection-type-h.md#oh_netconn_netunavailable) onNetUnavailable | Callback invoked when the network is unavailable. This callback is triggered when the network is not activatedwithin the specified timeout interval. If the timeout interval is not set, this callback is not triggered. |
+| [OH_NetConn_NetBlockStatusChange](capi-net-connection-type-h.md#oh_netconn_netblockstatuschange) onNetBlockStatusChange | Callback invoked when the network blocking status changes. |
 
 

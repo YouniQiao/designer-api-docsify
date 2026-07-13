@@ -1,6 +1,6 @@
 # NotifyType
 
-Enumeration types of data change.
+Enumerates the notification event types.
 
 **Since:** 10
 
@@ -12,7 +12,7 @@ Enumeration types of data change.
 NOTIFY_ADD
 ```
 
-Data(assets or albums) have been newly created
+A file asset or album is added.
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ Data(assets or albums) have been newly created
 NOTIFY_UPDATE
 ```
 
-Data(assets or albums) have been modified
+A file asset or album is updated.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Data(assets or albums) have been modified
 NOTIFY_REMOVE
 ```
 
-Data(assets or albums) have been removed
+A file asset or album is removed.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ Data(assets or albums) have been removed
 NOTIFY_ALBUM_ADD_ASSET
 ```
 
-Assets have been added to an album.
+A file asset is added to the album.
 
 **Since:** 10
 
@@ -60,7 +60,7 @@ Assets have been added to an album.
 NOTIFY_ALBUM_REMOVE_ASSET
 ```
 
-Assets have been removed from an album.
+A file asset is removed from the album.
 
 **Since:** 10
 

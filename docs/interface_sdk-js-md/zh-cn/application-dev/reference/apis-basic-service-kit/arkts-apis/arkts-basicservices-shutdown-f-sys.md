@@ -36,8 +36,8 @@ function shutdown(reason: string): void
 ```TypeScript
 try {
     power.shutdown('shutdown_test');
-} catch(err) {
-    console.error('shutdown failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to shutdown. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

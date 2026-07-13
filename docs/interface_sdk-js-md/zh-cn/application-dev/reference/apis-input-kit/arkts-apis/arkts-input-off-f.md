@@ -46,7 +46,7 @@ struct Index {
             // 监听设备热插拔事件
             inputDevice.on('change', callback);
           } catch (error) {
-            console.error(`Failed to listen device event , Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to listen to device event, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
 
           // 取消指定的监听。
@@ -54,7 +54,7 @@ struct Index {
             // 取消监听设备热插拔事件
             inputDevice.off('change', callback);
           } catch (error) {
-            console.error(`Failed to cancel listening device event, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to cancel listening to device event, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
 
           // 取消所有监听。

@@ -4,7 +4,7 @@
 type MemberType = number | string | boolean
 ```
 
-Indicates the type of file asset member.
+Represents the type of a file asset member.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Indicates the type of file asset member.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-| string |  |
-| boolean |  |
+| number | The member is a number. |
+| string | The member is a string. |
+| boolean | The member is a Boolean value. |
 

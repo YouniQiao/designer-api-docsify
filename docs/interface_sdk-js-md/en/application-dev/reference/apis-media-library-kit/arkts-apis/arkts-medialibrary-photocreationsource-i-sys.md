@@ -20,7 +20,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 appId?: string
 ```
 
-ID of the target application
+ID of the target application.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ ID of the target application
 appName?: string
 ```
 
-Name of the target application
+Name of the target application.
 
 **Type:** string
 
@@ -52,7 +52,7 @@ Name of the target application
 bundleName?: string
 ```
 
-Bundle name of the target application
+Bundle name of the target application.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ Bundle name of the target application
 tokenId?: number
 ```
 
-Token ID of the target application
+Token ID of the target application.
 
 **Type:** number
 

@@ -72,7 +72,7 @@ The type of icon
 primaryText?: ResourceStr
 ```
 
-Sets the primaryText
+Sets the primaryText.
 
 **Type:** ResourceStr
 

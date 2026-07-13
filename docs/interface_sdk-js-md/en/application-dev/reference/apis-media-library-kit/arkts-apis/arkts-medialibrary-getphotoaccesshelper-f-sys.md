@@ -12,7 +12,7 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 function getPhotoAccessHelper(context: Context, userId: number): PhotoAccessHelper
 ```
 
-Returns an instance of PhotoAccessHelper
+Obtains a PhotoAccessHelper instance for the specified user, letting you access and modify media files in an album.
 
 **Since:** 19
 
@@ -28,14 +28,14 @@ Returns an instance of PhotoAccessHelper
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Hap context information |
-| userId | number | Yes | Target userId |
+| context | Context | Yes | Context of the ability instance. |
+| userId | number | Yes | ID of the user. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PhotoAccessHelper | Instance of PhotoAccessHelper |
+| PhotoAccessHelper | PhotoAccessHelper instance obtained. |
 
 **Error codes:**
 

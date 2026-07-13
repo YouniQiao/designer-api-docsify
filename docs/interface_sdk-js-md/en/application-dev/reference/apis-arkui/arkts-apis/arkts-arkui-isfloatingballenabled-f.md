@@ -27,6 +27,7 @@ Checks whether the device supports floating balls.
 **Example**
 
 ```TypeScript
+// Check whether the current device supports the floating ball feature.
 let enable: boolean = floatingBall.isFloatingBallEnabled();
 console.info('Floating ball enabled is: ' + enable);
 

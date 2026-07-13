@@ -37,11 +37,11 @@ function getTotalSizeSync(): number
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 try {
-  let number = storageStatistics.getTotalSizeSync();
-  console.info("getTotalSizeSync successfully:" + JSON.stringify(number));
+  let totalSize = storageStatistics.getTotalSizeSync();
+  console.info('getTotalSizeSync successfully:' + totalSize);
 } catch (err) {
   let error: BusinessError = err as BusinessError;
-  console.error("getTotalSizeSync failed with error:" + JSON.stringify(error));
+  console.error(`getTotalSizeSync failed. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```

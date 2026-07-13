@@ -25,13 +25,13 @@ function isScreenOn(callback: AsyncCallback<boolean>): void
 **示例：**
 
 ```TypeScript
-power.isScreenOn((err: Error, data: boolean) => {
-    if (typeof err === 'undefined') {
-        console.info('screen on status is ' + data);
-    } else {
-        console.error('check screen status failed, err: ' + err);
+power.isScreenOn((err: BusinessError, data: boolean) => {
+    if (err) {
+        console.error(`Failed to check screen status. Code: ${err.code}, message: ${err.message}`);
+        return;
     }
-})
+    console.info('screen on status is ' + data);
+});
 
 ```
 
@@ -65,9 +65,9 @@ power.isScreenOn()
 .then((data: boolean) => {
     console.info('screen on status is ' + data);
 })
-.catch((err: Error) => {
-    console.error('check screen status failed, err: ' + err);
-})
+.catch((err: BusinessError) => {
+    console.error(`Failed to check screen status. Code: ${err.code}, message: ${err.message}`);
+});
 
 ```
 

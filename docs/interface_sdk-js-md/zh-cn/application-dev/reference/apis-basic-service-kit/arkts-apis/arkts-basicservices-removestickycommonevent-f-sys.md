@@ -41,7 +41,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 commonEventManager.removeStickyCommonEvent('sticky_event', (err: BusinessError) => {
   if (err) {
-    console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMes: ${err.message}`);
+    console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMsg: ${err.message}`);
     return;
   }
   console.info(`removeStickyCommonEvent success`);
@@ -96,8 +96,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
   console.info(`removeStickyCommonEvent success`);
-}).catch ((err: BusinessError) => {
-  console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMes: ${err.message}`);
+}).catch((err: BusinessError) => {
+  console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMsg: ${err.message}`);
 });
 
 ```

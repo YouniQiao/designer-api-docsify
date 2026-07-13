@@ -33,11 +33,11 @@ function create(name: string, type: RunningLockType, callback: AsyncCallback<Run
 
 ```TypeScript
 
-runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error, lock: runningLock.RunningLock) => {
-    if (typeof err === 'undefined') {
-        console.info('created running lock: ' + lock);
+runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: BusinessError, lock: runningLock.RunningLock) => {
+    if (err) {
+        console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
     } else {
-        console.error('create running lock failed, err: ' + err);
+        console.info('created running lock: ' + lock); // 创建并保存锁对象后，需要结合hold、unhold方法使用
     }
 });
 
@@ -84,10 +84,10 @@ function create(name: string, type: RunningLockType): Promise<RunningLock>
 
 runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL)
 .then((lock: runningLock.RunningLock) => {
-    console.info('created running lock: ' + lock);
+    console.info('created running lock: ' + lock); // 创建并保存锁对象后，需要结合hold、unhold方法使用
 })
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
+.catch((err: BusinessError) => {
+    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

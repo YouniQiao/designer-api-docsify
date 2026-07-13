@@ -1,6 +1,6 @@
 # AVRecorderProfile
 
-Describes the audio and video recording profile.
+音视频录制配置参数。
 
 **起始版本：** 9
 
@@ -12,7 +12,7 @@ Describes the audio and video recording profile.
 enableStableQualityMode?: boolean
 ```
 
-Whether to enable video encoding policy to quality stable encoding.
+是否启用视频编码策略以实现质量稳定编码。
 
 **类型：** boolean
 

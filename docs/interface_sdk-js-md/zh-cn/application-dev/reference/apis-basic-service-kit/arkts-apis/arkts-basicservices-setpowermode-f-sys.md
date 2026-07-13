@@ -35,12 +35,12 @@ function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): voi
 **示例：**
 
 ```TypeScript
-power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE, (err: Error) => {
-    if (typeof err === 'undefined') {
-        console.info('set power mode to MODE_PERFORMANCE');
-    } else {
-        console.error('set power mode failed, err: ' + err);
+power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE, (err: BusinessError) => {
+    if (err) {
+        console.error(`Failed to set power mode. Code: ${err.code}, message: ${err.message}`);
+        return;
     }
+    console.info('set power mode to MODE_PERFORMANCE');
 });
 
 ```
@@ -90,8 +90,8 @@ power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE)
 .then(() => {
     console.info('set power mode to MODE_PERFORMANCE');
 })
-.catch((err : Error)=> {
-    console.error('set power mode failed, err: ' + err);
+.catch((err: BusinessError) => {
+    console.error(`Failed to set power mode. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

@@ -40,7 +40,7 @@ Constructor.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **Example**
@@ -56,7 +56,7 @@ let assetEditData: photoAccessHelper.MediaAssetEditData = new photoAccessHelper.
 compatibleFormat: string
 ```
 
-Compatible format
+Format of the edited data.
 
 **Type:** string
 
@@ -72,7 +72,7 @@ Compatible format
 data: string
 ```
 
-Edit data
+Content edited.
 
 **Type:** string
 
@@ -88,7 +88,7 @@ Edit data
 formatVersion: string
 ```
 
-Format version
+Version of the data format.
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # DeviceRemindType (System API)
 
-The notification reminder type.
+Defines the notification reminder type.
 
 **Since:** 9
 

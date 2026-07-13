@@ -1,6 +1,6 @@
 # AppLinkState (System API)
 
-App link state of an asset
+Enumerates the states of a file memory link.
 
 **Since:** 24
 
@@ -14,7 +14,7 @@ App link state of an asset
 DEFAULT = 0
 ```
 
-Unknow whether an asset has app link or not
+Whether the file has a memory link cannot be determined.
 
 **Since:** 24
 
@@ -30,7 +30,7 @@ Unknow whether an asset has app link or not
 HAS_NO_LINK = 1
 ```
 
-An asset has no app link
+The file does not have a memory link.
 
 **Since:** 24
 
@@ -46,7 +46,7 @@ An asset has no app link
 HAS_LINK = 2
 ```
 
-An asset has app link
+The file has a memory link.
 
 **Since:** 24
 

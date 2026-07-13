@@ -46,7 +46,7 @@ authUserList?: Array<AuthUser>
 contactAccount: string
 ```
 
-表示联系人账号。长度不超过255字节，超出此范围抛出错误码19100001。
+表示联系人账号。长度不超过255字节，超出此范围抛出错误码401。
 
 **类型：** string
 
@@ -110,7 +110,7 @@ offlineAccess: boolean
 ownerAccount: string
 ```
 
-表示权限设置者账号。长度不超过255字节，超出此范围抛出错误码19100001。
+表示权限设置者账号。长度不超过255字节，超出此范围抛出错误码401。
 
 **类型：** string
 
@@ -126,7 +126,7 @@ ownerAccount: string
 ownerAccountID: string
 ```
 
-表示权限设置者账号的ID。长度不超过255字节，超出此范围抛出错误码19100001。
+表示权限设置者账号的ID。长度不超过255字节，超出此范围抛出错误码401。
 
 **类型：** string
 

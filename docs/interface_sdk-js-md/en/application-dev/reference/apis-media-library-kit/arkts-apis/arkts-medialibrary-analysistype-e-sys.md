@@ -1,6 +1,6 @@
 # AnalysisType (System API)
 
-Analysis type
+Enumerates the smart analysis types.
 
 **Since:** 11
 
@@ -14,7 +14,7 @@ Analysis type
 ANALYSIS_AESTHETICS_SCORE = 0
 ```
 
-Analysis of aesthetics score
+Aesthetics score.
 
 **Since:** 11
 
@@ -28,7 +28,7 @@ Analysis of aesthetics score
 ANALYSIS_LABEL = 1
 ```
 
-Analysis of label
+Label.
 
 **Since:** 11
 
@@ -42,7 +42,7 @@ Analysis of label
 ANALYSIS_OCR = 2
 ```
 
-Analysis of ocr
+Optical character recognition (OCR) analysis.
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ Analysis of ocr
 ANALYSIS_FACE = 3
 ```
 
-Analysis of face
+Facial detection analysis.
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ Analysis of face
 ANALYSIS_OBJECT = 4
 ```
 
-Analysis of object
+Object detection analysis.
 
 **Since:** 11
 
@@ -84,7 +84,7 @@ Analysis of object
 ANALYSIS_RECOMMENDATION = 5
 ```
 
-Analysis of recommendation
+Recommendation analysis.
 
 **Since:** 11
 
@@ -98,7 +98,7 @@ Analysis of recommendation
 ANALYSIS_SEGMENTATION = 6
 ```
 
-Analysis of segmentation
+Segmentation analysis.
 
 **Since:** 11
 
@@ -112,7 +112,7 @@ Analysis of segmentation
 ANALYSIS_COMPOSITION = 7
 ```
 
-Analysis of composition
+Aesthetic composition analysis.
 
 **Since:** 11
 
@@ -126,7 +126,7 @@ Analysis of composition
 ANALYSIS_SALIENCY = 8
 ```
 
-Analysis of saliency
+Salience analysis.
 
 **Since:** 11
 
@@ -140,7 +140,7 @@ Analysis of saliency
 ANALYSIS_DETAIL_ADDRESS = 9
 ```
 
-Analysis of photo detail address info
+Detailed address analysis.
 
 **Since:** 11
 
@@ -154,7 +154,7 @@ Analysis of photo detail address info
 ANALYSIS_HUMAN_FACE_TAG = 10
 ```
 
-Analysis of human face tag
+Face clustering analysis.
 
 **Since:** 12
 
@@ -168,7 +168,7 @@ Analysis of human face tag
 ANALYSIS_HEAD_POSITION = 11
 ```
 
-Analysis of head position
+Analysis of the position of a person's or pet's head.
 
 **Since:** 12
 
@@ -182,7 +182,7 @@ Analysis of head position
 ANALYSIS_BONE_POSE = 12
 ```
 
-Analysis of bone pose
+Analysis of the position of skeletal elements (bones) in a human body.
 
 **Since:** 12
 
@@ -196,7 +196,7 @@ Analysis of bone pose
 ANALYSIS_VIDEO_LABEL = 13
 ```
 
-Analysis of video label
+Video label analysis.
 
 **Since:** 12
 
@@ -210,7 +210,7 @@ Analysis of video label
 ANALYSIS_HIGHLIGHT = 14
 ```
 
-Analysis of highlight
+Highlight label.
 
 **Since:** 12
 
@@ -224,7 +224,7 @@ Analysis of highlight
 ANALYSIS_MULTI_CROP = 15
 ```
 
-Analysis of multi crop
+Label for 2D panning detection boxes.
 
 **Since:** 12
 
@@ -238,7 +238,7 @@ Analysis of multi crop
 ANALYSIS_SEARCH_INDEX = 16
 ```
 
-Analysis of search index
+Foreground index analysis.
 
 **Since:** 18
 
@@ -252,7 +252,7 @@ Analysis of search index
 ANALYSIS_SELECTED = 17
 ```
 
-Analysis of selected.
+Preferred analysis.
 
 **Since:** 24
 
@@ -268,7 +268,7 @@ Analysis of selected.
 ANALYSIS_DUPLICATE_SIMILARITY = 18
 ```
 
-Analysis of duplicate and similarity.
+Repetition and similarity analysis.
 
 **Since:** 24
 
@@ -284,7 +284,7 @@ Analysis of duplicate and similarity.
 ANALYSIS_NEGATIVE_EMOTION = 19
 ```
 
-Analysis of negative emotion.
+Negative emotion analysis.
 
 **Since:** 24
 
@@ -300,7 +300,7 @@ Analysis of negative emotion.
 ANALYSIS_FACE_AESTHETICS = 20
 ```
 
-Analysis of face aesthetics.
+Facial aesthetics analysis.
 
 **Since:** 24
 
@@ -316,7 +316,7 @@ Analysis of face aesthetics.
 ANALYSIS_MAGIC_EMOJI = 21
 ```
 
-Analysis of magic emoji.
+Magic emoji analysis.
 
 **Since:** 24
 
@@ -332,7 +332,7 @@ Analysis of magic emoji.
 ANALYSIS_AI_EDIT = 22
 ```
 
-Analysis of AI edit.
+AI editing analysis.
 
 **Since:** 24
 

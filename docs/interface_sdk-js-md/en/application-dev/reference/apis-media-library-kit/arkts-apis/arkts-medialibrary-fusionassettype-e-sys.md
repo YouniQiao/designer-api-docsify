@@ -12,7 +12,7 @@ Enumeration of fusion asset type
 COMPATIBLE_ASSET = 0
 ```
 
-compatible asset
+Compatible asset
 
 **Since:** 22
 

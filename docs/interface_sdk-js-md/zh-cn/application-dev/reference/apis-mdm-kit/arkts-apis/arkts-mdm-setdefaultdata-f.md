@@ -46,8 +46,10 @@ let wantTemp: Want = {
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
+// 设置要作为默认数据流量卡的卡槽ID
 let slotId: number = 0;
 try {
+  // 设置指定卡槽为默认数据流量卡
   telephonyManager.setDefaultData(wantTemp, slotId);
   console.info(`success to set default data SIM ID`);
 } catch (err) {

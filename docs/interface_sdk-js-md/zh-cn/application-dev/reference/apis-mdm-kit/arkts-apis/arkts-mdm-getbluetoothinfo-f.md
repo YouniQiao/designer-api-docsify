@@ -43,6 +43,7 @@ function getBluetoothInfo(admin: Want): BluetoothInfo
 import { bluetoothManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
 
+// 创建企业设备管理扩展组件
 let wantTemp: Want = {
   // 需根据实际情况进行替换
   bundleName: 'com.example.myapplication',
@@ -50,6 +51,7 @@ let wantTemp: Want = {
 };
 
 try {
+  // 获取蓝牙信息
   let result: bluetoothManager.BluetoothInfo = bluetoothManager.getBluetoothInfo(wantTemp);
   console.info(`Succeeded in getting bluetooth info: ${JSON.stringify(result)}`);
 } catch(err) {

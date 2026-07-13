@@ -43,8 +43,8 @@ struct Index {
             // 查询是否有红外发射器
             infraredEmitter.hasIrEmitter().then((result: boolean) => {
               console.info(`Succeeded in querying infrared emitter: ${JSON.stringify(result)}.`);
-            }).catch((error: BusinessError)=> {
-              console.error(`Failed to query infrared emitter, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);})
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to query infrared emitter, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`)})
         })
     }
   }

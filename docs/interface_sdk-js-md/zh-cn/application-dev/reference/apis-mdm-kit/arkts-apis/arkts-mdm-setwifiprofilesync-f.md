@@ -34,7 +34,7 @@ function setWifiProfileSync(admin: Want, profile: WifiProfile): void
 
 **示例：**
 
-适用于公共开发Wi-Fi
+适用于公共开放Wi-Fi
 
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';

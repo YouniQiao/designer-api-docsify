@@ -37,10 +37,11 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-} catch(err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('createDeviceManager errCode:' + e.code + ',errMessage:' + e.message);
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to create device manager. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```

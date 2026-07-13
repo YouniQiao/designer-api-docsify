@@ -37,8 +37,8 @@ function hibernate(clearMemory: boolean): void
 ```TypeScript
 try {
     power.hibernate(true);
-} catch(err) {
-    console.error('hibernate failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to hibernate device. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

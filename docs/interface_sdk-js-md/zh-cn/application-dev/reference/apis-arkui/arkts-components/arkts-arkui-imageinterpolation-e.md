@@ -9,7 +9,7 @@
 ## None
 
 ```TypeScript
-None = 0
+None
 ```
 
 最近邻插值。
@@ -25,7 +25,7 @@ None = 0
 ## Low
 
 ```TypeScript
-Low = 1
+Low
 ```
 
 Low usage of interpolated image data.
@@ -41,7 +41,7 @@ Low usage of interpolated image data.
 ## Medium
 
 ```TypeScript
-Medium = 2
+Medium
 ```
 
 Interpolated image data is used moderately.
@@ -57,7 +57,7 @@ Interpolated image data is used moderately.
 ## High
 
 ```TypeScript
-High = 3
+High
 ```
 
 High usage of interpolated image data may affect the speed of image rendering.

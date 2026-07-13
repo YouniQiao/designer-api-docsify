@@ -25,11 +25,15 @@ Disables the display of a confirm dialog box before returning to the previous pa
 **Example**
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
+
 router.disableAlertBeforeBackPage();
 
 ```
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
+
 router.disableAlertBeforeBackPage();
 
 ```

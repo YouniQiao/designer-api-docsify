@@ -1,6 +1,6 @@
 # PositionType (System API)
 
-File position
+Enumerates the file location.
 
 **Since:** 10
 
@@ -18,13 +18,13 @@ File position
 LOCAL = 1
 ```
 
-File exists only on local device
+Stored only on a local device.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [LOCAL](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-positiontype-e.md#local)
+**Substitutes:** [LOCAL](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-positiontype-e-sys.md#local)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -36,13 +36,13 @@ File exists only on local device
 CLOUD
 ```
 
-File exists only on cloud
+Stored only on the cloud.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-positiontype-e.md#cloud)
+**Substitutes:** [CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-positiontype-e-sys.md#cloud)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -54,7 +54,7 @@ File exists only on cloud
 BOTH
 ```
 
-File exists on both local and cloud
+Stored both on a local device and the cloud.
 
 **Since:** 10
 

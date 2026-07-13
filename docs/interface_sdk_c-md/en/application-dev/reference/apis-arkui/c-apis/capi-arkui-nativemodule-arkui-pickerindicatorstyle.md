@@ -6,7 +6,7 @@ typedef struct ArkUI_PickerIndicatorStyle ArkUI_PickerIndicatorStyle
 
 ## Overview
 
-Definition of indicator style.
+Defines the style of the selected item indicator.
 
 **Since**: 23
 

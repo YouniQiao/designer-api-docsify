@@ -1,6 +1,6 @@
 # MetaSourceType（系统接口）
 
-Enumerates meta source type for recorder.
+录制的元数据源类型枚举。
 
 **起始版本：** 12
 
@@ -14,7 +14,7 @@ Enumerates meta source type for recorder.
 VIDEO_MAKER_INFO = 0
 ```
 
-Maker info for video.
+视频的Maker信息。
 
 **起始版本：** 12
 

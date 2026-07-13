@@ -45,10 +45,10 @@ struct Index {
         .onClick(() => {
           // 示例查询设备ID为1的设备键盘类型。
           try {
-            let type: inputDevice.KeyboardType = inputDevice.getKeyboardTypeSync(1)
-            console.info(`Succeeded in getting keyboard type: ${JSON.stringify(type)}.`)
+            let type: inputDevice.KeyboardType = inputDevice.getKeyboardTypeSync(1);
+            console.info(`Succeeded in getting keyboard type: ${JSON.stringify(type)}.`);
           } catch (error) {
-            console.error(`Failed to get keyboard type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`)
+            console.error(`Failed to get keyboard type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

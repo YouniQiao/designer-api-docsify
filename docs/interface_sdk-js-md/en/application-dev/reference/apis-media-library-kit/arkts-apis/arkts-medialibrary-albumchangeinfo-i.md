@@ -1,6 +1,6 @@
 # AlbumChangeInfo
 
-Defines the detailed attributes of an album.
+Describes the information about an album.
 
 **Since:** 20
 
@@ -46,7 +46,7 @@ Subtype of the album.
 albumType: AlbumType
 ```
 
-Album type.
+Type of the album.
 
 **Type:** AlbumType
 
@@ -60,7 +60,7 @@ Album type.
 albumUri: string
 ```
 
-Album URI.
+URI of the album.
 
 **Type:** string
 
@@ -74,7 +74,7 @@ Album URI.
 count: number
 ```
 
-Total number of photos and videos in the album.
+Total number of assets in the album, including images and videos.
 
 **Type:** number
 
@@ -88,7 +88,7 @@ Total number of photos and videos in the album.
 coverUri: string
 ```
 
-Cover URI.
+URI of the album cover asset.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ Cover URI.
 imageCount: number
 ```
 
-Total number of photos in the album.
+Number of images in the album.
 
 **Type:** number
 
@@ -116,7 +116,7 @@ Total number of photos in the album.
 videoCount: number
 ```
 
-Total number of videos in the album.
+Number of videos in the album.
 
 **Type:** number
 

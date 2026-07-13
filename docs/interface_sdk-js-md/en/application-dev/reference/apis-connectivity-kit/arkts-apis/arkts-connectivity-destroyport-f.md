@@ -1,5 +1,11 @@
 # destroyPort
 
+## Modules to Import
+
+```TypeScript
+import { dataTransfer } from '@kit.ConnectivityKit';
+```
+
 ## destroyPort
 
 ```TypeScript

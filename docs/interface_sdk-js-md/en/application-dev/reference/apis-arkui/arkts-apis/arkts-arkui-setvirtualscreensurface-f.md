@@ -12,8 +12,7 @@ import { display } from '@kit.ArkUI';
 function setVirtualScreenSurface(screenId: number, surfaceId: string): Promise<void>
 ```
 
-Sets a surface for a virtual screen. **surfaceId** identifies a surface, the content of which will be shown on this
-virtual screen. This API uses a promise to return the result.
+Sets a surface for a virtual screen. This API uses a promise to return the result.
 
 **Since:** 16
 

@@ -41,7 +41,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 struct Index {
   build() {
     RelativeContainer() {
-      Button("getMouseScrollDirection")
+      Button('getMouseScrollDirection')
         .onClick(() => {
           try {
             // 获取鼠标滚动方向

@@ -6,7 +6,7 @@ struct WebSocket_OpenResult {...}
 
 ## Overview
 
-Defines the parameters for the connection success reported by the server.
+Defines the parameters for the connection success received by the WebSocket client.
 
 **Since**: 11
 
@@ -20,7 +20,7 @@ Defines the parameters for the connection success reported by the server.
 
 | Name | Description |
 | -- | -- |
-| uint32_t code | Connection success code |
-| const char *reason | Connection success reason |
+| uint32_t code | Result code for successful WebSocket client connection. |
+| const char *reason | Reason for successful WebSocket client connection. |
 
 

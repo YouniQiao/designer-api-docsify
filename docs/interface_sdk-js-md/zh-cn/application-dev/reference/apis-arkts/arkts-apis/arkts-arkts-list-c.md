@@ -99,19 +99,24 @@ add(element: T): boolean
 **示例：**
 
 ```TypeScript
+// 创建支持多种类型元素的List实例
 let list = new List<string | number | boolean | object>();
 let result1 = list.add("a");
+console.info("result = ", result1); // result =  true
 let result2 = list.add(1);
-let b = [1, 2, 3];
-let result3 = list.add(b);
-class C {
-  name: string = ''
-  age: string = ''
+console.info("result = ", result2); // result =  true
+let numArray = [1, 2, 3];
+let result3 = list.add(numArray);
+console.info("result = ", result3); // result =  true
+class PersonInfo {
+  name: string = "";
+  age: string = "";
 }
-let c: C = {name : "Dylan", age : "13"};
-let result4 = list.add(c);
+let personInfo: PersonInfo = {name : "Dylan", age : "13"};
+let result4 = list.add(personInfo);
+console.info("result = ", result4); // result =  true
 let result5 = list.add(false);
-console.info("result = ", result5) // result =  true
+console.info("result = ", result5); // result =  true
 
 ```
 
@@ -138,7 +143,7 @@ clear(): void
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -205,7 +210,7 @@ convertToArray(): Array<T>
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -250,7 +255,7 @@ equal(obj: Object): boolean
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -293,11 +298,12 @@ forEach(callbackFn: (value: T, index?: number, List?: List<T>) => void, thisArg?
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
 list.add(4);
+// 遍历List中的每个元素并打印值和下标
 list.forEach((value: number, index: number) => {
   console.info("value:" + value, "index:" + index);
 });
@@ -344,7 +350,7 @@ get(index: number): T
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -387,7 +393,7 @@ getFirst(): T
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -432,7 +438,7 @@ getIndexOf(element: T): number
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -475,7 +481,7 @@ getLast(): T
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -520,7 +526,7 @@ getLastIndexOf(element: T): number
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -570,7 +576,7 @@ getSubList(fromIndex: number, toIndex: number): List<T>
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(6);
@@ -690,7 +696,7 @@ isEmpty(): boolean
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -735,7 +741,7 @@ remove(element: T): boolean
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -781,7 +787,7 @@ removeByIndex(index: number): T
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -822,13 +828,13 @@ replaceAllElements(callbackFn: (value: T, index?: number, list?: List<T>) => T, 
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(4);
 list.add(5);
 list.add(4);
 list.replaceAllElements((value: number) => {
-  // 用户操作逻辑根据实际场景进行添加。
+  // 用户操作逻辑根据实际场景进行添加
   if (value === 5) {
     return value * 2;
   }
@@ -915,7 +921,7 @@ sort(comparator: ListComparatorFn<T>): void
 **示例：**
 
 ```TypeScript
-let list = new List<number>()
+let list = new List<number>();
 list.add(2);
 list.add(1);
 list.add(3);

@@ -42,7 +42,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let request: backgroundTaskManager.EfficiencyResourcesRequest = {
     resourceTypes: backgroundTaskManager.ResourceType.CPU, // 申请CPU资源
     isApply: true, // 申请资源
-    timeOut: 0, // 资源使用超时时间（ms）
+    timeOut: 0, // 资源使用时间（ms）
     reason: 'apply', // 申请资源原因
     isPersist: true, // 永久持有资源
     isProcess: false, // 应用申请

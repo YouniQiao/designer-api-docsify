@@ -9,13 +9,13 @@ Provides a SelectionContainer component interface.
 ## Modules to Import
 
 ```TypeScript
-import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerMenuOptions } from '@kit.ArkUI';
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from '@kit.ArkUI';
 ```
 
 ## constructor
 
 ```TypeScript
-(): SelectionContainerAttribute
+(value?: SelectionContainerOptions): SelectionContainerAttribute
 ```
 
 Defines the constructor of SelectionContainer.
@@ -27,6 +27,12 @@ Defines the constructor of SelectionContainer.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | SelectionContainerOptions | No | Initialization options of the component. |
 
 **Return value:**
 

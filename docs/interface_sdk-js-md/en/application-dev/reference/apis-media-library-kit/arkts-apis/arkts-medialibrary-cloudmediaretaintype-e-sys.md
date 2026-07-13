@@ -28,7 +28,7 @@ Deletes the local metadata and thumbnail of the original files from the cloud.
 HDC_RETAIN_FORCE = 1
 ```
 
-Deletes the local metadata and thumbnail of the original files from the hdc device.
+Deletes the local metadata and thumbnail of the original files from the home storage device.
 
 **Since:** 22
 

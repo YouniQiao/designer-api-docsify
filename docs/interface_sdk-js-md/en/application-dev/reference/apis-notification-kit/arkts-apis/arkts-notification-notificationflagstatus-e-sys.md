@@ -28,7 +28,7 @@ Default flag, which has the same effect as **TYPE_OPEN**.
 TYPE_OPEN = 1
 ```
 
-The notification flag is enabled.
+The notification flag is opened.
 
 **Since:** 11
 
@@ -42,7 +42,7 @@ The notification flag is enabled.
 TYPE_CLOSE = 2
 ```
 
-The notification flag is disabled.
+The notification flag is closed.
 
 **Since:** 11
 

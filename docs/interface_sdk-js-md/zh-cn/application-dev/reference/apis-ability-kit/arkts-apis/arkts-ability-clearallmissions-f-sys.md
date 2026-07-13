@@ -39,14 +39,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   missionManager.clearAllMissions((err: BusinessError) => {
     if (err) {
-      console.error(`clearAllMissions failed: ${err.message}`);
+      console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('clearAllMissions successfully.');
     }
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
-  console.error(`clearAllMissions failed: ${err.message}`);
+  console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```
@@ -91,11 +91,11 @@ try {
   missionManager.clearAllMissions().then((data: void) => {
     console.info(`clearAllMissions successfully. Data: ${JSON.stringify(data)}`);
   }).catch((err: BusinessError) => {
-    console.error(`clearAllMissions failed: ${err.message}`);
+    console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}.`);
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
-  console.error(`clearAllMissions failed: ${err.message}`);
+  console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}.`);
 }
 
 ```

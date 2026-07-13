@@ -30,6 +30,8 @@ Obtains the geographic location.
 
 **Required permissions:** ohos.permission.LOCATION
 
+**Model restriction:** This API can be used only in the FA model.
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 **Parameters:**
@@ -50,6 +52,8 @@ Obtains the location types supported by the system.
 
 **Deprecated since:** 9
 
+**Model restriction:** This API can be used only in the FA model.
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 **Parameters:**
@@ -69,6 +73,8 @@ Obtains the supported coordinate system types.
 **Since:** 3
 
 **Deprecated since:** 9
+
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Location.Location.Lite
 
@@ -94,6 +100,8 @@ Listens to the geographical location. If this method is called multiple times, t
 
 **Required permissions:** ohos.permission.LOCATION
 
+**Model restriction:** This API can be used only in the FA model.
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 **Parameters:**
@@ -117,6 +125,8 @@ Cancels listening to the geographical location.
 **Substitutes:** event:locationChange
 
 **Required permissions:** ohos.permission.LOCATION
+
+**Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Location.Location.Lite
 

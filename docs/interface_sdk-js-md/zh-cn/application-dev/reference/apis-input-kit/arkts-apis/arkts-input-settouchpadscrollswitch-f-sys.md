@@ -42,7 +42,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 设置触摸板滚动开关
+            // 设置触控板滚动开关
             pointer.setTouchpadScrollSwitch(true, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set touchpad scroll switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

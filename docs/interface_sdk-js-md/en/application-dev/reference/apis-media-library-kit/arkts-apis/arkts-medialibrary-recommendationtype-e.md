@@ -12,7 +12,7 @@ Enumerates the types of recommended images.
 QR_OR_BAR_CODE = 1
 ```
 
-QR_OR_BAR_CODE indicates that QR code or barcode photos can be recommended
+QR code or barcode.
 
 **Since:** 11
 
@@ -26,7 +26,7 @@ QR_OR_BAR_CODE indicates that QR code or barcode photos can be recommended
 QR_CODE = 2
 ```
 
-QR_CODE indicates that QR code photos can be recommended
+QR code.
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ QR_CODE indicates that QR code photos can be recommended
 BAR_CODE = 3
 ```
 
-BAR_CODE indicates that barcode photos can be recommended
+Barcode.
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ BAR_CODE indicates that barcode photos can be recommended
 ID_CARD = 4
 ```
 
-ID_CARD indicates that QR code or barcode photos can be recommended
+ID card.
 
 **Since:** 11
 
@@ -68,7 +68,7 @@ ID_CARD indicates that QR code or barcode photos can be recommended
 PROFILE_PICTURE = 5
 ```
 
-PROFILE_PICTURE indicates that profile picture photos can be recommended
+Profile.
 
 **Since:** 11
 
@@ -82,7 +82,7 @@ PROFILE_PICTURE indicates that profile picture photos can be recommended
 PASSPORT = 6
 ```
 
-PASSPORT indicates that passport photos can be recommended
+Passport.
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ PASSPORT indicates that passport photos can be recommended
 BANK_CARD = 7
 ```
 
-BANK_CARD indicates that bank card photos can be recommended
+Bank card.
 
 **Since:** 12
 
@@ -110,7 +110,7 @@ BANK_CARD indicates that bank card photos can be recommended
 DRIVER_LICENSE = 8
 ```
 
-DRIVER_LICENSE indicates that driver license photos can be recommended
+Driver license.
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ DRIVER_LICENSE indicates that driver license photos can be recommended
 DRIVING_LICENSE = 9
 ```
 
-DRIVING_LICENSE indicates that driving license photos can be recommended
+Vehicle license.
 
 **Since:** 12
 
@@ -138,7 +138,7 @@ DRIVING_LICENSE indicates that driving license photos can be recommended
 FEATURED_SINGLE_PORTRAIT = 10
 ```
 
-FEATURED_SINGLE_PORTRAIT indicates that featured single portrait photos can be recommended
+Recommended portrait.
 
 **Since:** 12
 

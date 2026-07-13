@@ -51,11 +51,14 @@ for (let value of stack) {
 // value: 4
 
 // 使用方法二：
+// 创建迭代器
 let iter = stack[Symbol.iterator]();
-let temp: IteratorResult<number> = iter.next().value;
-while(temp != undefined) {
-  console.info("value: " + temp);
-  temp = iter.next().value;
+// 获取第一个迭代结果
+let currentValue: IteratorResult<number> = iter.next().value;
+// 循环遍历迭代器中的元素
+while (currentValue != undefined) {
+  console.info("value: " + currentValue);
+  currentValue = iter.next().value;
 }
 // value: 2
 // value: 4
@@ -87,7 +90,9 @@ Stack的构造函数。
 **示例：**
 
 ```TypeScript
+// 创建Stack实例
 let stack = new Stack<number | string | Object>();
+console.info("length:", stack.length);  // length: 0
 
 ```
 
@@ -126,7 +131,8 @@ stack.push(2);
 stack.push(4);
 stack.push(5);
 stack.push(4);
-stack.forEach((value : number, index: number) :void => {
+// 遍历stack中每个元素并执行回调函数
+stack.forEach((value: number, index: number): void => {
   console.info("value:" + value, "index:" + index);
 });
 // value:2 index:0
@@ -170,6 +176,7 @@ stack.push(2);
 stack.push(4);
 stack.push(5);
 stack.push(4);
+// 判断栈是否为空
 let result = stack.isEmpty();
 console.info("result:", result);  // result: false
 
@@ -215,6 +222,7 @@ stack.push(2);
 stack.push(4);
 stack.push(5);
 stack.push(2);
+// 查找元素5首次出现的下标
 let result = stack.locate(5);
 console.info("result:", result);  // result: 2
 
@@ -255,6 +263,7 @@ stack.push(2);
 stack.push(4);
 stack.push(5);
 stack.push(2);
+// 查看栈顶元素，但不删除
 let result = stack.peek();
 console.info("result:", result);  // result: 2
 
@@ -296,6 +305,7 @@ stack.push(4);
 stack.push(5);
 stack.push(2);
 stack.push(4);
+// 删除栈顶元素并返回该元素
 let result = stack.pop(); 
 console.info("result = " + result); // result = 4
 
@@ -336,15 +346,24 @@ push(item: T): T
 **示例：**
 
 ```TypeScript
-class C1 {
-  name: string = ""
-  age: string = ""
+class PersonInfo {
+  name: string = "";
+  age: string = "";
+  constructor(name: string, age: string) {
+    this.name = name;
+    this.age = age;
+  }
 }
-let stack = new Stack<number | string | C1>();
-let result = stack.push("a");
-let result1 = stack.push(1);
-let c : C1  = {name : "Dylan", age : "13"};
-let result2 = stack.push(c);
+// 创建支持多种类型的Stack实例
+let stack = new Stack<number | string | PersonInfo>();
+// 向栈中push字符串元素
+console.info("push:", stack.push("a"));  // push: a
+// 向栈中push数字元素
+console.info("push:", stack.push(1));  //  push: 1
+// 创建类实例并push到栈中
+let person1: PersonInfo = new PersonInfo("Dylan", "13");
+let result = stack.push(person1);
+console.info("result instanceof PersonInfo:", result instanceof PersonInfo);  // result instanceof PersonInfo: true
 console.info("length:", stack.length);  // length: 3
 
 ```

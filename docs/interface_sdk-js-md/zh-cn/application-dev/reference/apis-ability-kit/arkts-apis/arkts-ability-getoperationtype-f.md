@@ -72,6 +72,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
   if (err) {
     console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
   } else {
+    // 创建WantAgent成功，保存返回的WantAgent对象
     wantAgentData = data;
   }
   // getOperationTypeCallback回调
@@ -83,6 +84,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
     }
   }
   try {
+    // 调用getOperationType接口获取WantAgent实例的操作类型
     wantAgent.getOperationType(wantAgentData, getOperationTypeCallback);
   } catch (err) {
     console.error(`getOperationTypeCallback failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
@@ -90,6 +92,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // 调用getWantAgent接口创建WantAgent对象
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   console.error(`getWantAgent failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
@@ -175,9 +178,11 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
   if (err) {
     console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
   } else {
+    // 创建WantAgent成功，保存返回的WantAgent对象
     wantAgentData = data;
   }
   try {
+    // 使用Promise方式获取WantAgent实例的操作类型
     wantAgent.getOperationType(wantAgentData).then((data) => {
       console.info(`getOperationType ok! ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
@@ -189,6 +194,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // 调用getWantAgent接口创建WantAgent对象
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   console.error(`getWantAgent failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);

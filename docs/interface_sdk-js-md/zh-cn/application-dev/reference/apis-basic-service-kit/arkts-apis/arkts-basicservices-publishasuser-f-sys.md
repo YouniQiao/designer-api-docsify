@@ -27,7 +27,7 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [1500003](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500003-事件发送频率过高) | The common event sending frequency too high.<br>**适用版本：** 20+ |
+| [1500003](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500003-公共事件发送频率过高) | The common event sending frequency too high.<br>**适用版本：** 20+ |
 | [1500006](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500006-无效userid) | Invalid userId.<br>**适用版本：** 21+ |
 | [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) | Failed to send the message to the common event service. |
 | [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) | Failed to initialize the common event service. |
@@ -91,7 +91,7 @@ function publishAsUser(
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [1500003](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500003-事件发送频率过高) | The common event sending frequency too high.<br>**适用版本：** 20+ |
+| [1500003](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500003-公共事件发送频率过高) | The common event sending frequency too high.<br>**适用版本：** 20+ |
 | [1500006](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500006-无效userid) | Invalid userId.<br>**适用版本：** 21+ |
 | [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) | Failed to send the message to the common event service. |
 | [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) | Failed to initialize the common event service. |
@@ -103,10 +103,10 @@ function publishAsUser(
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // 公共事件相关信息
-let options:commonEventManager.CommonEventPublishData = {
+let options: commonEventManager.CommonEventPublishData = {
   code: 0,       // 公共事件的初始代码
-  data: 'initial data',// 公共事件的初始数据
-}
+  data: 'initial data', // 公共事件的初始数据
+};
 
 // 指定发送的用户
 let userId = 100;

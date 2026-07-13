@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the common types and APIs for the ImageAnimator component.
+Defines **ImageAnimator** node types for **NativeNode** APIs.
 
 **Library**: libace_ndk.z.so
 
@@ -18,31 +18,31 @@ Defines the common types and APIs for the ImageAnimator component.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md) | ArkUI_ImageAnimatorFrameInfo | Defines the image frame. |
+| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md) | ArkUI_ImageAnimatorFrameInfo | Defines the image animation frame information. |
 
 ### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ArkUI_AnimationStatus](#arkui_animationstatus) | ArkUI_AnimationStatus | Defines the playback status for the image animator. |
+| [ArkUI_AnimationStatus](#arkui_animationstatus) | ArkUI_AnimationStatus | Enumerates the playback states of the frame-by-frame animation. |
 
 ### Function
 
 | Name | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromString(char* src)](#oh_arkui_imageanimatorframeinfo_createfromstring) | Create a image frame from the image path. |
-| [ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromDrawableDescriptor(ArkUI_DrawableDescriptor* drawable)](#oh_arkui_imageanimatorframeinfo_createfromdrawabledescriptor) | Create a image frame from the drawable descriptor. |
-| [void OH_ArkUI_ImageAnimatorFrameInfo_Dispose(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_dispose) | Destroy the pointer to the image frame. |
-| [void OH_ArkUI_ImageAnimatorFrameInfo_SetWidth(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t width)](#oh_arkui_imageanimatorframeinfo_setwidth) | Set the width of the image frame. |
-| [int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetWidth(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_getwidth) | Get the width of the image frame. |
-| [void OH_ArkUI_ImageAnimatorFrameInfo_SetHeight(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t height)](#oh_arkui_imageanimatorframeinfo_setheight) | Set the height of the image frame. |
-| [int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetHeight(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_getheight) | Get the height of the image frame. |
-| [void OH_ArkUI_ImageAnimatorFrameInfo_SetTop(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t top)](#oh_arkui_imageanimatorframeinfo_settop) | Set the vertical coordinate of the image relative to the upper left corner of the widget. |
-| [int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetTop(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_gettop) | Get the vertical coordinate of the image relative to the upper left corner of the widget. |
-| [void OH_ArkUI_ImageAnimatorFrameInfo_SetLeft(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t left)](#oh_arkui_imageanimatorframeinfo_setleft) | Set the horizontal coordinate of the image relative to the upper left corner of the widget. |
-| [int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetLeft(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_getleft) | Get the horizontal coordinate of the image relative to the upper left corner of the widget. |
-| [void OH_ArkUI_ImageAnimatorFrameInfo_SetDuration(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t duration)](#oh_arkui_imageanimatorframeinfo_setduration) | Set the playback duration of the image frame. |
-| [int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetDuration(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_getduration) | Get the playback duration of the image frame. |
+| [ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromString(char* src)](#oh_arkui_imageanimatorframeinfo_createfromstring) | Creates an image frame information object based on an image path, with the image format being SVG, PNG, orJPG. Both relative and absolute paths in the application sandbox are supported. |
+| [ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromDrawableDescriptor(ArkUI_DrawableDescriptor* drawable)](#oh_arkui_imageanimatorframeinfo_createfromdrawabledescriptor) | Creates an image frame information object based on an [[ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md) object, with theimage format being Resource or PixelMap. |
+| [void OH_ArkUI_ImageAnimatorFrameInfo_Dispose(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_dispose) | Disposes of the pointer to an image frame information object. |
+| [void OH_ArkUI_ImageAnimatorFrameInfo_SetWidth(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t width)](#oh_arkui_imageanimatorframeinfo_setwidth) | Sets the image width. |
+| [int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetWidth(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_getwidth) | Obtains the image width. |
+| [void OH_ArkUI_ImageAnimatorFrameInfo_SetHeight(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t height)](#oh_arkui_imageanimatorframeinfo_setheight) | Sets the image height. |
+| [int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetHeight(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_getheight) | Obtains the image height. |
+| [void OH_ArkUI_ImageAnimatorFrameInfo_SetTop(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t top)](#oh_arkui_imageanimatorframeinfo_settop) | Sets the vertical coordinate of an image relative to the upper left corner of the component. |
+| [int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetTop(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_gettop) | Obtains the vertical coordinate of an image relative to the upper left corner of the component. |
+| [void OH_ArkUI_ImageAnimatorFrameInfo_SetLeft(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t left)](#oh_arkui_imageanimatorframeinfo_setleft) | Sets the horizontal coordinate of an image relative to the upper left corner of the component. |
+| [int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetLeft(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_getleft) | Obtains the horizontal coordinate of an image relative to the upper left corner of the component. |
+| [void OH_ArkUI_ImageAnimatorFrameInfo_SetDuration(ArkUI_ImageAnimatorFrameInfo* imageInfo, int32_t duration)](#oh_arkui_imageanimatorframeinfo_setduration) | Sets the playback duration of an image. |
+| [int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetDuration(ArkUI_ImageAnimatorFrameInfo* imageInfo)](#oh_arkui_imageanimatorframeinfo_getduration) | Obtains the playback duration of an image. |
 
 ## Enum type description
 
@@ -54,7 +54,7 @@ enum ArkUI_AnimationStatus
 
 **Description**
 
-Defines the playback status for the image animator.
+Enumerates the playback states of the frame-by-frame animation.
 
 **Since**: 12
 
@@ -76,7 +76,7 @@ ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromString(c
 
 **Description**
 
-Create a image frame from the image path.
+Creates an image frame information object based on an image path, with the image format being SVG, PNG, orJPG. Both relative and absolute paths in the application sandbox are supported.
 
 **Since**: 12
 
@@ -84,13 +84,13 @@ Create a image frame from the image path.
 
 | Parameter | Description |
 | -- | -- |
-| char* src | Indicates the image path. |
+| char* src | Pointer to the image path, which can be a relative or absolute path in the application sandbox. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo*](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md) | Returns the pointer to the image frame object.<br> If a null pointer is returned, the object fails to be created. The possible cause is that<br> the src parameter is abnormal, for example, the pointer is null. |
+| [ArkUI_ImageAnimatorFrameInfo*](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md) | Pointer to the image frame information object. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_CreateFromDrawableDescriptor()
 
@@ -100,7 +100,7 @@ ArkUI_ImageAnimatorFrameInfo* OH_ArkUI_ImageAnimatorFrameInfo_CreateFromDrawable
 
 **Description**
 
-Create a image frame from the drawable descriptor.
+Creates an image frame information object based on an [[ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md) object, with theimage format being Resource or PixelMap.
 
 **Since**: 12
 
@@ -108,13 +108,13 @@ Create a image frame from the drawable descriptor.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md)* drawable | Indicates the pointer to the drawable descriptor. |
+| [ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md)* drawable | Pointer to an **ArkUI_DrawableDescriptor** object created using Resource or PixelMap. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo*](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md) | Returns the pointer to the image frame object. If a null pointer is returned, the object fails to be created.<br>     The possible cause is that the drawable parameter is abnormal, for example, the pointer is null. |
+| [ArkUI_ImageAnimatorFrameInfo*](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md) | Pointer to the image frame information object. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_Dispose()
 
@@ -124,7 +124,7 @@ void OH_ArkUI_ImageAnimatorFrameInfo_Dispose(ArkUI_ImageAnimatorFrameInfo* image
 
 **Description**
 
-Destroy the pointer to the image frame.
+Disposes of the pointer to an image frame information object.
 
 **Since**: 12
 
@@ -132,7 +132,7 @@ Destroy the pointer to the image frame.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Indicates the pointer to the image frame. |
+| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_SetWidth()
 
@@ -142,7 +142,7 @@ void OH_ArkUI_ImageAnimatorFrameInfo_SetWidth(ArkUI_ImageAnimatorFrameInfo* imag
 
 **Description**
 
-Set the width of the image frame.
+Sets the image width.
 
 **Since**: 12
 
@@ -150,8 +150,8 @@ Set the width of the image frame.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Indicates the pointer to the image frame. |
-| int32_t width | Indicates the width of the image frame, and the unit is PX. |
+| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
+| int32_t width | Image width, in px. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_GetWidth()
 
@@ -161,7 +161,7 @@ int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetWidth(ArkUI_ImageAnimatorFrameInfo* i
 
 **Description**
 
-Get the width of the image frame.
+Obtains the image width.
 
 **Since**: 12
 
@@ -169,13 +169,13 @@ Get the width of the image frame.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Indicates the pointer to the image frame. |
+| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the width of the image frame, and the unit is PX. Return 0 when the imageInfo is null. |
+| int32_t | Image width, in px. If imageInfo is a null pointer, 0 is returned. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_SetHeight()
 
@@ -185,7 +185,7 @@ void OH_ArkUI_ImageAnimatorFrameInfo_SetHeight(ArkUI_ImageAnimatorFrameInfo* ima
 
 **Description**
 
-Set the height of the image frame.
+Sets the image height.
 
 **Since**: 12
 
@@ -193,8 +193,8 @@ Set the height of the image frame.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Indicates the pointer to the image frame. |
-| int32_t height | Indicates the height of the image frame, and the unit is PX. |
+| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
+| int32_t height | Image height, in px. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_GetHeight()
 
@@ -204,7 +204,7 @@ int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetHeight(ArkUI_ImageAnimatorFrameInfo* 
 
 **Description**
 
-Get the height of the image frame.
+Obtains the image height.
 
 **Since**: 12
 
@@ -212,13 +212,13 @@ Get the height of the image frame.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Indicates the pointer to the image frame. |
+| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the height of the image frame, and the unit is PX. Return 0 when the imageInfo is null. |
+| int32_t | Image height, in px. If imageInfo is a null pointer, 0 is returned. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_SetTop()
 
@@ -228,7 +228,7 @@ void OH_ArkUI_ImageAnimatorFrameInfo_SetTop(ArkUI_ImageAnimatorFrameInfo* imageI
 
 **Description**
 
-Set the vertical coordinate of the image relative to the upper left corner of the widget.
+Sets the vertical coordinate of an image relative to the upper left corner of the component.
 
 **Since**: 12
 
@@ -236,8 +236,8 @@ Set the vertical coordinate of the image relative to the upper left corner of th
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Indicates the pointer to the image frame. |
-| int32_t top | Indicates the vertical coordinate of the image relative to the upper left corner of the widget,and the unit is PX. |
+| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
+| int32_t top | Vertical coordinate of the image relative to the upper left corner of the component, in px. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_GetTop()
 
@@ -247,7 +247,7 @@ int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetTop(ArkUI_ImageAnimatorFrameInfo* ima
 
 **Description**
 
-Get the vertical coordinate of the image relative to the upper left corner of the widget.
+Obtains the vertical coordinate of an image relative to the upper left corner of the component.
 
 **Since**: 12
 
@@ -255,13 +255,13 @@ Get the vertical coordinate of the image relative to the upper left corner of th
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Indicates the pointer to the image frame. |
+| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the vertical coordinate of the image relative to the upper left corner of the widget,<br> and the unit is PX. Return 0 when the imageInfo is null. |
+| int32_t | Vertical coordinate of the image relative to the upper left corner of the component, in px. If imageInfo<br>     is a null pointer, 0 is returned. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_SetLeft()
 
@@ -271,7 +271,7 @@ void OH_ArkUI_ImageAnimatorFrameInfo_SetLeft(ArkUI_ImageAnimatorFrameInfo* image
 
 **Description**
 
-Set the horizontal coordinate of the image relative to the upper left corner of the widget.
+Sets the horizontal coordinate of an image relative to the upper left corner of the component.
 
 **Since**: 12
 
@@ -279,8 +279,8 @@ Set the horizontal coordinate of the image relative to the upper left corner of 
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Indicates the pointer to the image frame. |
-| int32_t left | Indicates the horizontal coordinate of the image relative to the upper left corner of the widget,and the unit is PX. |
+| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
+| int32_t left | Horizontal coordinate of the image relative to the upper left corner of the component, in px. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_GetLeft()
 
@@ -290,7 +290,7 @@ int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetLeft(ArkUI_ImageAnimatorFrameInfo* im
 
 **Description**
 
-Get the horizontal coordinate of the image relative to the upper left corner of the widget.
+Obtains the horizontal coordinate of an image relative to the upper left corner of the component.
 
 **Since**: 12
 
@@ -298,13 +298,13 @@ Get the horizontal coordinate of the image relative to the upper left corner of 
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Indicates the pointer to the image frame. |
+| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the horizontal coordinate of the image relative to the upper left corner of the widget,<br> and the unit is PX. Return 0 when the imageInfo is null. |
+| int32_t | Horizontal coordinate of the image relative to the upper left corner of the component, in px. If imageInfo<br>      is a null pointer, 0 is returned. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_SetDuration()
 
@@ -314,7 +314,7 @@ void OH_ArkUI_ImageAnimatorFrameInfo_SetDuration(ArkUI_ImageAnimatorFrameInfo* i
 
 **Description**
 
-Set the playback duration of the image frame.
+Sets the playback duration of an image.
 
 **Since**: 12
 
@@ -322,8 +322,8 @@ Set the playback duration of the image frame.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Indicates the pointer to the image frame. |
-| int32_t duration | Indicates the playback duration of each image frame, and the unit is milliseconds. |
+| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
+| int32_t duration | Playback duration of an image, in ms. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_GetDuration()
 
@@ -333,7 +333,7 @@ int32_t OH_ArkUI_ImageAnimatorFrameInfo_GetDuration(ArkUI_ImageAnimatorFrameInfo
 
 **Description**
 
-Get the playback duration of the image frame.
+Obtains the playback duration of an image.
 
 **Since**: 12
 
@@ -341,12 +341,12 @@ Get the playback duration of the image frame.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Indicates the pointer to the image frame. |
+| [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md)* imageInfo | Pointer to the image frame information object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the playback duration of the image frame, and the unit is milliseconds.<br> Return 0 when the imageInfo is null. |
+| int32_t | Playback duration of the image, in milliseconds. If imageInfo is a null pointer, 0 is returned. |
 
 

@@ -35,15 +35,16 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 **示例：**
 
 ```TypeScript
-import { uiEffect } from "@kit.ArkGraphics2D"
+import { uiEffect } from '@kit.ArkGraphics2D'
 
+// 创建支持HDR的BrightnessBlender实例
 let blender : uiEffect.HdrBrightnessBlender =
   uiEffect.createHdrBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
     positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})
 
 @Entry
 @Component
-struct example {
+struct Example {
   build() {
     RelativeContainer() {
       Image($r("app.media.screenshot"))

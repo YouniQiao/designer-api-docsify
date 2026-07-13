@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines APIs related to media asset.Provides the ability to obtain image or video information.
+The file declares the APIs related to media assets. You can use the APIs to obtain image or video information.
 
 **Library**: libmedia_asset_manager.so
 
@@ -18,23 +18,23 @@ Defines APIs related to media asset.Provides the ability to obtain image or vide
 
 | Name | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetUri(OH_MediaAsset* mediaAsset, const char** uri)](#oh_mediaasset_geturi) | Get the uri of the media asset. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetMediaType(OH_MediaAsset* mediaAsset, MediaLibrary_MediaType* mediaType)](#oh_mediaasset_getmediatype) | Get the media file type of the media asset. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetMediaSubType(OH_MediaAsset* mediaAsset, MediaLibrary_MediaSubType* mediaSubType)](#oh_mediaasset_getmediasubtype) | Get the subtype of the media asset. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetDisplayName(OH_MediaAsset* mediaAsset, const char** displayName)](#oh_mediaasset_getdisplayname) | Get the display name of the media asset. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetSize(OH_MediaAsset* mediaAsset, uint32_t* size)](#oh_mediaasset_getsize) | Get the file size of the media asset |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetDateAdded(OH_MediaAsset* mediaAsset, uint32_t* dateAdded)](#oh_mediaasset_getdateadded) | Get the date of asset creation. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetDateModified(OH_MediaAsset* mediaAsset, uint32_t* dateModified)](#oh_mediaasset_getdatemodified) | Get the modified date of the asset. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetDateTaken(OH_MediaAsset* mediaAsset, uint32_t* dateTaken)](#oh_mediaasset_getdatetaken) | Get the date taken of the asset. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetDateAddedMs(OH_MediaAsset* mediaAsset, uint32_t* dateAddedMs)](#oh_mediaasset_getdateaddedms) | Get the creation time of the asset in milliseconds. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetDateModifiedMs(OH_MediaAsset* mediaAsset, uint32_t* dateModifiedMs)](#oh_mediaasset_getdatemodifiedms) | Get the modified time of the asset in milliseconds. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetDuration(OH_MediaAsset* mediaAsset, uint32_t* duration)](#oh_mediaasset_getduration) | Get the duration of the media asset in milliseconds. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetWidth(OH_MediaAsset* mediaAsset, uint32_t* width)](#oh_mediaasset_getwidth) | Get the image width(in pixels) of the media asset. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetHeight(OH_MediaAsset* mediaAsset, uint32_t* height)](#oh_mediaasset_getheight) | Get the image height(in pixels) of the media asset. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetOrientation(OH_MediaAsset* mediaAsset, uint32_t* orientation)](#oh_mediaasset_getorientation) | Get the orientation of the image. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_IsFavorite(OH_MediaAsset* mediaAsset, uint32_t* favorite)](#oh_mediaasset_isfavorite) | Get the favorite state of the asset. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_GetTitle(OH_MediaAsset* mediaAsset, const char** title)](#oh_mediaasset_gettitle) | Get the title of the media asset. |
-| [MediaLibrary_ErrorCode OH_MediaAsset_Release(OH_MediaAsset* mediaAsset)](#oh_mediaasset_release) | Release the media asset |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetUri(OH_MediaAsset* mediaAsset, const char** uri)](#oh_mediaasset_geturi) | Obtains the URI of a media asset. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetMediaType(OH_MediaAsset* mediaAsset, MediaLibrary_MediaType* mediaType)](#oh_mediaasset_getmediatype) | Obtains the type of a media asset. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetMediaSubType(OH_MediaAsset* mediaAsset, MediaLibrary_MediaSubType* mediaSubType)](#oh_mediaasset_getmediasubtype) | Obtains the subtype of a media asset. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetDisplayName(OH_MediaAsset* mediaAsset, const char** displayName)](#oh_mediaasset_getdisplayname) | Obtains the display name of a media asset. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetSize(OH_MediaAsset* mediaAsset, uint32_t* size)](#oh_mediaasset_getsize) | Obtains the size of a media asset file. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetDateAdded(OH_MediaAsset* mediaAsset, uint32_t* dateAdded)](#oh_mediaasset_getdateadded) | Obtains the date when a media asset was added. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetDateModified(OH_MediaAsset* mediaAsset, uint32_t* dateModified)](#oh_mediaasset_getdatemodified) | Obtains the date when a media asset (content not the media asset name) was last modified. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetDateTaken(OH_MediaAsset* mediaAsset, uint32_t* dateTaken)](#oh_mediaasset_getdatetaken) | Obtains the date when a media asset was taken. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetDateAddedMs(OH_MediaAsset* mediaAsset, uint32_t* dateAddedMs)](#oh_mediaasset_getdateaddedms) | Obtains the date when a media asset was added, in ms. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetDateModifiedMs(OH_MediaAsset* mediaAsset, uint32_t* dateModifiedMs)](#oh_mediaasset_getdatemodifiedms) | Obtains the date when a media asset (content not the media asset name) was last modified, in ms. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetDuration(OH_MediaAsset* mediaAsset, uint32_t* duration)](#oh_mediaasset_getduration) | Obtains the duration of a media asset, in ms. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetWidth(OH_MediaAsset* mediaAsset, uint32_t* width)](#oh_mediaasset_getwidth) | Obtains the image width (in pixels) of a media asset. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetHeight(OH_MediaAsset* mediaAsset, uint32_t* height)](#oh_mediaasset_getheight) | Obtains the image height (in pixels) of a media asset. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetOrientation(OH_MediaAsset* mediaAsset, uint32_t* orientation)](#oh_mediaasset_getorientation) | Obtains the orientation of a media asset, in degrees. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_IsFavorite(OH_MediaAsset* mediaAsset, uint32_t* favorite)](#oh_mediaasset_isfavorite) | Checks whether a media asset is favorited. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_GetTitle(OH_MediaAsset* mediaAsset, const char** title)](#oh_mediaasset_gettitle) | Obtains the title of a media asset. |
+| [MediaLibrary_ErrorCode OH_MediaAsset_Release(OH_MediaAsset* mediaAsset)](#oh_mediaasset_release) | Releases a media asset. |
 
 ## Function description
 
@@ -46,7 +46,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetUri(OH_MediaAsset* mediaAsset, const cha
 
 **Description**
 
-Get the uri of the media asset.
+Obtains the URI of a media asset.
 
 **Since**: 12
 
@@ -54,14 +54,14 @@ Get the uri of the media asset.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| const char** uri | the uri of the media asset. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| const char** uri | Double pointer to the URI obtained. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetMediaType()
 
@@ -71,7 +71,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetMediaType(OH_MediaAsset* mediaAsset, Med
 
 **Description**
 
-Get the media file type of the media asset.
+Obtains the type of a media asset.
 
 **Since**: 13
 
@@ -79,14 +79,14 @@ Get the media file type of the media asset.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| [MediaLibrary_MediaType](capi-media-asset-base-capi-h.md#medialibrary_mediatype)* mediaType | the media file type of the media asset. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| [MediaLibrary_MediaType](capi-media-asset-base-capi-h.md#medialibrary_mediatype)* mediaType | Pointer to the media asset type obtained. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetMediaSubType()
 
@@ -96,7 +96,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetMediaSubType(OH_MediaAsset* mediaAsset, 
 
 **Description**
 
-Get the subtype of the media asset.
+Obtains the subtype of a media asset.
 
 **Since**: 13
 
@@ -104,14 +104,14 @@ Get the subtype of the media asset.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| [MediaLibrary_MediaSubType](capi-media-asset-base-capi-h.md#medialibrary_mediasubtype)* mediaSubType | the subtype of the media asset. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| [MediaLibrary_MediaSubType](capi-media-asset-base-capi-h.md#medialibrary_mediasubtype)* mediaSubType | Pointer to the media asset subtype obtained. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDisplayName()
 
@@ -121,7 +121,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDisplayName(OH_MediaAsset* mediaAsset, c
 
 **Description**
 
-Get the display name of the media asset.
+Obtains the display name of a media asset.
 
 **Since**: 12
 
@@ -129,14 +129,14 @@ Get the display name of the media asset.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| const char** displayName | the display name of the media asset. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| const char** displayName | Double pointer to the display name obtained. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetSize()
 
@@ -146,7 +146,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetSize(OH_MediaAsset* mediaAsset, uint32_t
 
 **Description**
 
-Get the file size of the media asset
+Obtains the size of a media asset file.
 
 **Since**: 12
 
@@ -154,14 +154,14 @@ Get the file size of the media asset
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| uint32_t* size | the file size(in bytes) of the media asset. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| uint32_t* size | Pointer to the file size obtained, in bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDateAdded()
 
@@ -171,7 +171,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDateAdded(OH_MediaAsset* mediaAsset, uin
 
 **Description**
 
-Get the date of asset creation.
+Obtains the date when a media asset was added.
 
 **Since**: 13
 
@@ -179,14 +179,14 @@ Get the date of asset creation.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| uint32_t* dateAdded | the creation date of the asset.The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970). |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| uint32_t* dateAdded | Pointer to the date obtained. The value is the number of seconds elapsed since the Unix Epoch time (00:00:00 UTC on January 1, 1970). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDateModified()
 
@@ -196,7 +196,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDateModified(OH_MediaAsset* mediaAsset, 
 
 **Description**
 
-Get the modified date of the asset.
+Obtains the date when a media asset (content not the media asset name) was last modified.
 
 **Since**: 13
 
@@ -204,14 +204,14 @@ Get the modified date of the asset.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| uint32_t* dateModified | the modified date of the asset.The value is the number of seconds elapsed since the Epoch time. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| uint32_t* dateModified | Pointer to the date obtained. The value is the number of milliseconds elapsed since the UnixEpoch time. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDateTaken()
 
@@ -221,7 +221,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDateTaken(OH_MediaAsset* mediaAsset, uin
 
 **Description**
 
-Get the date taken of the asset.
+Obtains the date when a media asset was taken.
 
 **Since**: 13
 
@@ -229,14 +229,14 @@ Get the date taken of the asset.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| uint32_t* dateTaken | the date taken of the asset.The value is the number of seconds elapsed since the Epoch time. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| uint32_t* dateTaken | Pointer to the date obtained. The value is the number of seconds elapsed since the Unix Epoch time. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDateAddedMs()
 
@@ -246,7 +246,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDateAddedMs(OH_MediaAsset* mediaAsset, u
 
 **Description**
 
-Get the creation time of the asset in milliseconds.
+Obtains the date when a media asset was added, in ms.
 
 **Since**: 13
 
@@ -254,14 +254,14 @@ Get the creation time of the asset in milliseconds.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| uint32_t* dateAddedMs | the creation time of the asset in milliseconds. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| uint32_t* dateAddedMs | Pointer to the date obtained, in ms. The value is the number of milliseconds elapsed since theUnix Epoch time. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDateModifiedMs()
 
@@ -271,7 +271,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDateModifiedMs(OH_MediaAsset* mediaAsset
 
 **Description**
 
-Get the modified time of the asset in milliseconds.
+Obtains the date when a media asset (content not the media asset name) was last modified, in ms.
 
 **Since**: 12
 
@@ -279,14 +279,14 @@ Get the modified time of the asset in milliseconds.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| uint32_t* dateModifiedMs | the modified time of the asset in milliseconds. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| uint32_t* dateModifiedMs | Pointer to the date obtained, in ms. The value is the number of milliseconds elapsed since theUnix Epoch time. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDuration()
 
@@ -296,7 +296,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDuration(OH_MediaAsset* mediaAsset, uint
 
 **Description**
 
-Get the duration of the media asset in milliseconds.
+Obtains the duration of a media asset, in ms.
 
 **Since**: 13
 
@@ -304,14 +304,14 @@ Get the duration of the media asset in milliseconds.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| uint32_t* duration | the duration of the media asset in milliseconds. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| uint32_t* duration | Pointer to the duration obtained, in ms. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetWidth()
 
@@ -321,7 +321,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetWidth(OH_MediaAsset* mediaAsset, uint32_
 
 **Description**
 
-Get the image width(in pixels) of the media asset.
+Obtains the image width (in pixels) of a media asset.
 
 **Since**: 12
 
@@ -329,14 +329,14 @@ Get the image width(in pixels) of the media asset.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| uint32_t* width | the image width(in pixels) of the media asset. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| uint32_t* width | Pointer to the image width obtained, in pixels. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetHeight()
 
@@ -346,7 +346,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetHeight(OH_MediaAsset* mediaAsset, uint32
 
 **Description**
 
-Get the image height(in pixels) of the media asset.
+Obtains the image height (in pixels) of a media asset.
 
 **Since**: 12
 
@@ -354,14 +354,14 @@ Get the image height(in pixels) of the media asset.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| uint32_t* height | the image height(in pixels) of the media asset. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| uint32_t* height | Pointer to the image height obtained, in pixels. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetOrientation()
 
@@ -371,7 +371,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetOrientation(OH_MediaAsset* mediaAsset, u
 
 **Description**
 
-Get the orientation of the image.
+Obtains the orientation of a media asset, in degrees.
 
 **Since**: 12
 
@@ -379,14 +379,14 @@ Get the orientation of the image.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| uint32_t* orientation | the orientation of the image. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| uint32_t* orientation | Pointer to the orientation of the image obtained, in degrees. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_IsFavorite()
 
@@ -396,7 +396,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_IsFavorite(OH_MediaAsset* mediaAsset, uint3
 
 **Description**
 
-Get the favorite state of the asset.
+Checks whether a media asset is favorited.
 
 **Since**: 13
 
@@ -404,14 +404,14 @@ Get the favorite state of the asset.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| uint32_t* favorite | the favorite state of the media asset. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| uint32_t* favorite | Pointer to the favorite status obtained. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetTitle()
 
@@ -421,7 +421,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetTitle(OH_MediaAsset* mediaAsset, const c
 
 **Description**
 
-Get the title of the media asset.
+Obtains the title of a media asset.
 
 **Since**: 13
 
@@ -429,14 +429,14 @@ Get the title of the media asset.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
-| const char** title | the title of the media asset. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| const char** title | Pointer to the media asset title obtained. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed.<br>         [MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_Release()
 
@@ -446,7 +446,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_Release(OH_MediaAsset* mediaAsset)
 
 **Description**
 
-Release the media asset
+Releases a media asset.
 
 **Since**: 12
 
@@ -454,12 +454,12 @@ Release the media asset
 
 | Parameter | Description |
 | -- | -- |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | the [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md)* mediaAsset | Pointer to an [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) instance. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | [MEDIA_LIBRARY_OK](capi-media-asset-base-capi-h.md#medialibrary_errorcode) if the method call succeeds.<br>         [MEDIA_LIBRARY_PARAMETER_ERROR](capi-media-asset-base-capi-h.md#medialibrary_errorcode) Parameter error. Possible causes:<br>                                                1. Mandatory parameters are left unspecified.<br>                                                2. Incorrect parameter types.<br>                                                3. Parameter verification failed. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed. |
 
 

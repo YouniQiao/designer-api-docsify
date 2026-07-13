@@ -1,6 +1,6 @@
 # CompositeDisplayMode (System API)
 
-Enumerates the composite photo display mode.
+Enumerates the display modes available for a composite image.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enumerates the composite photo display mode.
 DEFAULT = 0
 ```
 
-The composite photo display mode is default.
+Displays the original composite image.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ The composite photo display mode is default.
 CLOUD_ENHANCEMENT = 1
 ```
 
-The composite photo display mode is cloud enhancement.
+Displays the cloud-enhanced composite image.
 
 **Since:** 23
 

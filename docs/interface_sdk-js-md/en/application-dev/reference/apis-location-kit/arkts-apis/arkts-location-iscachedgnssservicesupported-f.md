@@ -26,7 +26,7 @@ Check whether the cached GNSS service is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns {@code true} if cached service is available, returns {@code false} otherwise. |
+| boolean | Returns {@code true} if cached GNSS service is available, returns {@code false} otherwise. |
 
 **Error codes:**
 

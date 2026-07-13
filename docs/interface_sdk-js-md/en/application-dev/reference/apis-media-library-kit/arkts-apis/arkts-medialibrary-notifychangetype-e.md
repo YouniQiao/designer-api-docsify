@@ -1,6 +1,6 @@
 # NotifyChangeType
 
-Enumerates the types of media asset and album changes.
+Enumerates the types of changes that trigger the media asset or album change events.
 
 **Since:** 20
 
@@ -12,7 +12,7 @@ Enumerates the types of media asset and album changes.
 NOTIFY_CHANGE_ADD = 0
 ```
 
-Media assets and albums are added.
+A media asset or an album is created.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ Media assets and albums are added.
 NOTIFY_CHANGE_UPDATE = 1
 ```
 
-Data(assets or albums) have been modified.
+A media asset or an album is modified.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ Data(assets or albums) have been modified.
 NOTIFY_CHANGE_REMOVE = 2
 ```
 
-Media assets and albums are deleted.
+A media asset or an album is deleted.
 
 **Since:** 20
 

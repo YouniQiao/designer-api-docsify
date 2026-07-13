@@ -72,8 +72,9 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 // getWantAgent回调
 function getWantAgentCallback(err: BusinessError, data: WantAgent) {
   if (err) {
-    console.info(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
+    console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
   } else {
+    // 创建WantAgent成功，保存返回的WantAgent对象
     wantAgentData = data;
   }
   // trigger回调
@@ -85,6 +86,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
     }
   }
   try {
+    // 调用trigger接口触发WantAgent实例执行指定操作
     wantAgent.trigger(wantAgentData, triggerInfo, triggerCallback);
   } catch (err) {
     let code = (err as BusinessError).code;
@@ -94,6 +96,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // 调用getWantAgent接口创建WantAgent对象
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   let code = (err as BusinessError).code;

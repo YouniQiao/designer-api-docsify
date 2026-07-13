@@ -141,7 +141,7 @@ class TestWritable extends stream.Writable {
 }
 
 let writableStream = new TestWritable();
-writableStream.write('data', 'utf8');
+writableStream.write("data", "utf8");
 
 ```
 
@@ -183,8 +183,8 @@ class TestWritable extends stream.Writable {
 }
 
 let writableStream = new TestWritable();
-writableStream.write('data1', 'utf8');
-writableStream.write('data2', 'utf8');
+writableStream.write("data1", "utf8");
+writableStream.write("data2", "utf8");
 writableStream.uncork();
 writableStream.end();
 
@@ -241,8 +241,8 @@ class TestWritable extends stream.Writable {
 }
 
 let writableStream = new TestWritable();
-writableStream.write('test', 'utf8');
-writableStream.end('finish', 'utf8', () => {
+writableStream.write("test", "utf8");
+writableStream.end("finish", "utf8", () => {
   console.info("Writable is end"); // Writable is end
 });
 
@@ -275,7 +275,7 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 class TestWritable extends stream.Writable {
   constructor() {
     super();
- }
+  }
 
   doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
     callback();
@@ -287,9 +287,9 @@ let testListenerCalled = false;
 let testListener = () => {
   testListenerCalled = true;
 };
-writableStream.on('finish', testListener);
-writableStream.off('finish');
-writableStream.write('test');
+writableStream.on("finish", testListener);
+writableStream.off("finish");
+writableStream.write("test");
 writableStream.end();
 setTimeout(() => {
   console.info("Writable off test", testListenerCalled.toString()); // Writable off test false
@@ -336,7 +336,7 @@ let writable = new TestWritable();
 writable.on('error', () => {
   console.info("Writable event test", callbackCalled.toString()); // Writable event test false
 });
-writable.write('hello', 'utf8', () => {
+writable.write("hello", "utf8", () => {
 });
 
 ```
@@ -381,7 +381,7 @@ class TestWritable extends stream.Writable {
 }
 
 let writableStream = new TestWritable();
-let result = writableStream.setDefaultEncoding('utf8');
+let result = writableStream.setDefaultEncoding("utf8");
 console.info("Writable is result", result); // Writable is result true
 
 ```
@@ -421,11 +421,11 @@ class TestWritable extends stream.Writable {
 
 let writableStream = new TestWritable();
 writableStream.cork();
-writableStream.write('data1', 'utf8');
-writableStream.write('data2', 'utf8');
+writableStream.write("data1", "utf8");
+writableStream.write("data2", "utf8");
 writableStream.uncork();
 writableStream.end();
-writableStream.on('finish', () => {
+writableStream.on("finish", () => {
   console.info("all Data is End"); // all Data is End
 });
 
@@ -482,7 +482,7 @@ class TestWritable extends stream.Writable {
 }
 
 let writableStream = new TestWritable();
-writableStream.write('test', 'utf8');
+writableStream.write("test", "utf8");
 
 ```
 

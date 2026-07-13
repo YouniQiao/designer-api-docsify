@@ -42,7 +42,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 设置触摸板滚动方向
+            // 设置触控板滚动方向
             pointer.setTouchpadScrollDirection(true, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -109,7 +109,7 @@ struct Index {
         .onClick(() => {
           try {
             // 设置触摸板滚动方向
-            pointer.setTouchpadScrollDirection (false).then(() => {
+            pointer.setTouchpadScrollDirection(false).then(() => {
               console.info(`Succeeded in setting touchpad scroll direction.`);
             }).catch((error: BusinessError) => {
               console.error(`Failed to set touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

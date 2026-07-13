@@ -12,7 +12,7 @@ Enumerates the types of the moving photo badge.
 NOT_MOVING_PHOTO = 0
 ```
 
-NOT_MOVING_PHOTO indicates that non-moving photos.
+The media file is not a moving photo.
 
 **Since:** 22
 
@@ -26,7 +26,7 @@ NOT_MOVING_PHOTO indicates that non-moving photos.
 MOVING_PHOTO_ENABLED = 1
 ```
 
-MOVING_PHOTO_ENABLED indicates that the motion photo effect is activated.
+The moving photo effect is enabled.
 
 **Since:** 22
 
@@ -40,7 +40,7 @@ MOVING_PHOTO_ENABLED indicates that the motion photo effect is activated.
 MOVING_PHOTO_DISABLED =	2
 ```
 
-MOVING_PHOTO_DISABLED indicates that the motion photo effect is deactivated.
+The moving photo effect is disabled.
 
 **Since:** 22
 

@@ -55,7 +55,7 @@ function close() {
   if (!serialManager.hasSerialRight(portId)) {
     serialManager.requestSerialRight(portId).then(result => {
       if (!result) {
-        // If the application does not have the access permission and is not granted by the user, the application exits.
+        // If the application does not have the access permission and the user does not grant the permission, the application exits.
         console.error('user is not granted the operation permission');
         return;
       } else {

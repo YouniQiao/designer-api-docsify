@@ -33,7 +33,6 @@
     - [LowPowerVideoSink](capi-lowpowervideosink.md)
     - [AVMetadataExtractor](capi-avmetadataextractor.md)
     - [AVTranscoder](capi-avtranscoder.md)
-    - [avmetakeys](capi-avmetakeys.md)
     - [AVMediaBase](capi-avmediabase.md)
     - [AVSinkBase](capi-avsinkbase.md)
 - Struct

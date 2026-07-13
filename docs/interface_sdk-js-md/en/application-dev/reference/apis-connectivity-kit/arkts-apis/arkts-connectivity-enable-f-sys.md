@@ -1,5 +1,11 @@
 # enable (System API)
 
+## Modules to Import
+
+```TypeScript
+import { manager } from '@kit.ConnectivityKit';
+```
+
 ## enable
 
 ```TypeScript

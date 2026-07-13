@@ -12,7 +12,7 @@ Enumeration type of scene.
 GRID_TO_PHOTO_BROWSER = 0
 ```
 
-GRID_TO_PHOTO_BROWSER indicates that the view is transitioning from the grid to the photo browser.
+Tap the grid icon to browse the large image.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ GRID_TO_PHOTO_BROWSER indicates that the view is transitioning from the grid to 
 PHOTO_BROWSER_SWIPE = 1
 ```
 
-PHOTO_BROWSER_SWIPE indicates that a swipe operation occurs in the photo browser.
+Swipe left or right in the large image scene.
 
 **Since:** 23
 

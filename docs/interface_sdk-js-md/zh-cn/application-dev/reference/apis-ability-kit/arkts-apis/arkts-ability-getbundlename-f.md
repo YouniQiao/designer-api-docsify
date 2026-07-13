@@ -71,6 +71,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
   if (err) {
     console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
   } else {
+    // 创建WantAgent成功，保存返回的WantAgent对象
     wantAgentData = data;
   }
   // getBundleName回调
@@ -82,6 +83,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
     }
   }
   try {
+    // 调用getBundleName接口获取WantAgent实例的包名
     wantAgent.getBundleName(wantAgentData, getBundleNameCallback);
   } catch (err) {
     console.error(`getBundleName failed! ${err.code} ${err.message}`);
@@ -89,6 +91,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // 调用getWantAgent接口创建WantAgent对象
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   console.error(`getWantAgent failed! ${err.code} ${err.message}`);
@@ -173,12 +176,14 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
   if (err) {
     console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
   } else {
+    // 创建WantAgent成功，保存返回的WantAgent对象
     wantAgentData = data;
   }
   try {
-    wantAgent.getBundleName(wantAgentData).then((data)=>{
+    // 使用Promise方式获取WantAgent实例的包名
+    wantAgent.getBundleName(wantAgentData).then((data) => {
       console.info(`getBundleName ok! ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError)=>{
+    }).catch((err: BusinessError) => {
       console.error(`getBundleName failed! ${err.code} ${err.message}`);
     });
   } catch(err){
@@ -186,6 +191,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
   }
 }
 try {
+  // 调用getWantAgent接口创建WantAgent对象
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch(err) {
   console.error(`getWantAgent failed! ${err.code} ${err.message}`);

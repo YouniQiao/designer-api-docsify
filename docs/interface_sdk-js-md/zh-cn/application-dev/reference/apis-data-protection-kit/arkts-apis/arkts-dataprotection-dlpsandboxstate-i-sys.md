@@ -30,7 +30,7 @@ appIndex: number
 bundleName: string
 ```
 
-表示应用包名。最小7字节，最大128字节。超出此范围抛出错误码19100001。
+表示应用包名。
 
 **类型：** string
 

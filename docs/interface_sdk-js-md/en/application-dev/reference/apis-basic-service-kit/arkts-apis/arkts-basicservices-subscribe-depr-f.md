@@ -29,7 +29,7 @@ Subscribes to common events. This API uses an asynchronous callback to return th
 import Base from '@ohos.base';
 import CommonEventManager from '@ohos.commonEventManager';
 
-let subscriber:CommonEventManager.CommonEventSubscriber;// Used to save the created subscriber object for subsequent subscription and unsubscription.
+let subscriber:CommonEventManager.CommonEventSubscriber; // Used to save the created subscriber object for subsequent subscription and unsubscription.
 
 // Subscriber information.
 let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
@@ -37,28 +37,28 @@ let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
 };
 
 // Callback for common event subscription.
-function subscribeCB(err:Base.BusinessError, data:CommonEventManager.CommonEventData) {
+let subscribeCallBack = (err:Base.BusinessError, data:CommonEventManager.CommonEventData) => {
     if (err.code) {
-        console.error(`subscribe failed, code is ${err.code}`);
+        console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("subscribe " + JSON.stringify(data));
     }
 }
 
 // Callback for subscriber creation.
-function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) {
+let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
     if (err.code) {
-        console.error(`createSubscriber failed, code is ${err.code}`);
+        console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("createSubscriber");
         subscriber = commonEventSubscriber;
-        // Subscribe to a common event.
-        commonEvent.subscribe(subscriber, subscribeCB);
+         // Subscribe to a common event.
+        commonEvent.subscribe(subscriber, subscribeCallBack);
     }
 }
 
 // Create a subscriber.
-commonEvent.createSubscriber(subscribeInfo, createCB);
+commonEvent.createSubscriber(subscribeInfo, createCallBack);
 
 ```
 

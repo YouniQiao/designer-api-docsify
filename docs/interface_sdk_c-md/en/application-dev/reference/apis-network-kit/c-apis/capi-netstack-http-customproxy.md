@@ -6,7 +6,7 @@ typedef struct Http_CustomProxy {...} Http_CustomProxy
 
 ## Overview
 
-Custom proxy configuration.
+Defines the custom proxy configuration.
 
 **Since**: 20
 
@@ -21,7 +21,7 @@ Custom proxy configuration.
 | Name | Description |
 | -- | -- |
 | const char *host;
-  int32_t port;
-  const char *exclusionLists | Indicates the URL of the proxy server. If you do not set port explicitly, port will be 1080. |
+    int32_t port;
+    const char *exclusionLists | Host name of the proxy server. If no port is explicitly set, the port number is defaulted to **1080**. |
 
 

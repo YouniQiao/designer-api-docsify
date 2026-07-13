@@ -1,6 +1,6 @@
 # DoNotDisturbType (System API)
 
-DND time type.
+Defines the DND time type.
 
 **Since:** 9
 

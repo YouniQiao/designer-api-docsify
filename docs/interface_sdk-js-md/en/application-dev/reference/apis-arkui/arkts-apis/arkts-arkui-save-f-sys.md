@@ -62,7 +62,7 @@ let screenshotOptions: screenshot.ScreenshotOptions = {
 // Call the save method to obtain the screenshot.
 screenshot.save(screenshotOptions, (err: BusinessError, pixelMap: image.PixelMap) => {
   if (err) {
-    console.error(`Failed to save screenshot. Code: ${err.code}, message : ${err.message}`);
+    console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
@@ -183,8 +183,8 @@ let screenshotOptions: screenshot.ScreenshotOptions = {
 try {
   let promise = screenshot.save(screenshotOptions);
   promise.then((pixelMap: image.PixelMap) => {
-    let pixelNumber = pixelMap.getPixelBytesNumber();
-    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelNumber}`);
+    let pixelBytesNumber = pixelMap.getPixelBytesNumber();
+    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelBytesNumber}`);
     pixelMap.release(); // Release the memory in time after the PixelMap is used.
   }).catch((err: BusinessError) => {
     console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);

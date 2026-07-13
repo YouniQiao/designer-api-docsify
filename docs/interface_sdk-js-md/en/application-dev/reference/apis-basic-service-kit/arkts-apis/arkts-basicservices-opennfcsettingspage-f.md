@@ -1,5 +1,11 @@
 # openNfcSettingsPage
 
+## Modules to Import
+
+```TypeScript
+import { settingsLite } from '@kit.BasicServicesKit';
+```
+
 ## openNfcSettingsPage
 
 ```TypeScript

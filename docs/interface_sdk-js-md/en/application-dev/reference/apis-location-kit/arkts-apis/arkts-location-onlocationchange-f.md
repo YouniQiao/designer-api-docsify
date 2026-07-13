@@ -17,24 +17,26 @@ Subscribe location changed.
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
+**Required permissions:** 
+- API version 23+: ohos.permission.APPROXIMATELY_LOCATION
 
-**System capability:** SystemCapability.Location.Location.Core
+**System capability:** 
+- API version 23 and later: SystemCapability.Location.Location.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | LocationRequest \| ContinuousLocationRequest | Yes | Indicates the location request parameters. |
-| callback | Callback&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| request | LocationRequest \| ContinuousLocationRequest | Yes | Indicates the location requestparameters.<br>**Since:** 23 |
+| callback | Callback&lt;Location&gt; | Yes | Indicates the callback for reporting the location result.<br>**Since:** 23 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call ${geoLocationManager.on('locationChange')} due to limited device capabilities. |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API.<br>**Applicable version:** 23 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed.<br>**Applicable version:** 23 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call ${geoLocationManager.on('locationChange')} due to limited device capabilities.<br>**Applicable version:** 23 and later |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable.<br>**Applicable version:** 23 and later |
+| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off.<br>**Applicable version:** 23 and later |
 

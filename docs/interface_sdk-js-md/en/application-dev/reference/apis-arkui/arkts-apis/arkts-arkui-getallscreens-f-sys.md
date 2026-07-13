@@ -85,6 +85,27 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let screenClass: screen.Screen | null = null;
+// Obtain all screen objects.
+screen.getAllScreens((err: BusinessError, data: Array<screen.Screen>) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to get all screens. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting all screens. Data: ${JSON.stringify(data)}`);
+  if (data.length > 0) {
+    screenClass = data[0];
+  }
+}, true);
+
+```
+
 
 ## getAllScreens
 
@@ -167,4 +188,23 @@ Obtains all screens. This API uses a promise to return the result.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let screenClass: screen.Screen | null = null;
+// Obtain all screen objects.
+let promise: Promise<Array<screen.Screen>> = screen.getAllScreens(true);
+promise.then((data: Array<screen.Screen>) => {
+  if(data.length > 0){
+    screenClass = data[0];
+  }
+  console.info(`Succeeded in getting all screens. Data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get all screens. Code: ${err.code}, message: ${err.message}`);
+});
+
+```
 

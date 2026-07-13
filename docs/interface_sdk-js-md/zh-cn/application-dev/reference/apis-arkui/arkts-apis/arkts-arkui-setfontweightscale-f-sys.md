@@ -45,14 +45,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let fontWeightScale = 1;
 
 try {
-    uiAppearance.setFontWeightScale(fontWeightScale).then(() => {
-      console.info('Set fontWeightScale successfully.');
-    }).catch((error:Error) => {
-      console.error('Set fontWeightScale failed, ' + error.message);
-    });
+  uiAppearance.setFontWeightScale(fontWeightScale).then(() => {
+    console.info('Set fontWeightScale successfully.');
+  }).catch((error: BusinessError) => {
+    console.error(`Set fontWeightScale failed. Code: ${error.code}, message: ${error.message}`);
+  });
 } catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('Set fontWeightScale failed, ' + message);
+  let err = error as BusinessError;
+  console.error(`Set fontWeightScale failed. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

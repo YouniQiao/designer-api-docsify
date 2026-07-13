@@ -6,7 +6,7 @@ struct WebSocket_CloseResult {...}
 
 ## Overview
 
-Defines the parameters for connection closing by the server.
+Defines the parameters for the connection closure received by the WebSocket client.
 
 **Since**: 11
 
@@ -20,7 +20,7 @@ Defines the parameters for connection closing by the server.
 
 | Name | Description |
 | -- | -- |
-| uint32_t code | Error code |
-| const char *reason | Error cause |
+| uint32_t code | Error code. |
+| const char *reason | Error cause. |
 
 

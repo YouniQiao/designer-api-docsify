@@ -1,5 +1,11 @@
 # offConnectionStateChanged
 
+## Modules to Import
+
+```TypeScript
+import { dataTransfer } from '@kit.ConnectivityKit';
+```
+
 ## offConnectionStateChanged
 
 ```TypeScript

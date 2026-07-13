@@ -37,11 +37,11 @@ function getFreeSizeSync(): number
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 try {
-  let number = storageStatistics.getFreeSizeSync();
-  console.info("getFreeSizeSync successfully:" + JSON.stringify(number));
+  let freeSize = storageStatistics.getFreeSizeSync();
+  console.info('getFreeSizeSync successfully:' + freeSize);
 } catch (err) {
   let error: BusinessError = err as BusinessError;
-  console.error("getFreeSizeSync failed with error:" + JSON.stringify(error));
+  console.error(`getFreeSizeSync failed. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```

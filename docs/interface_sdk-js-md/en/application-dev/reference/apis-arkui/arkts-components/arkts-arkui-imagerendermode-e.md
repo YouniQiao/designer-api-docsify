@@ -9,7 +9,7 @@ Interpolation effect of the image.
 ## Original
 
 ```TypeScript
-Original = 0
+Original
 ```
 
 Render image pixels as they are in the original source image.
@@ -25,7 +25,7 @@ Render image pixels as they are in the original source image.
 ## Template
 
 ```TypeScript
-Template = 1
+Template
 ```
 
 Render image pixels to create a monochrome template image.

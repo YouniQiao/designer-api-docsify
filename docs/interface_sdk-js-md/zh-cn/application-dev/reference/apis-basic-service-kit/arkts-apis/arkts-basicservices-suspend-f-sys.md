@@ -37,8 +37,8 @@ function suspend(isImmediate?: boolean): void
 ```TypeScript
 try {
     power.suspend();
-} catch(err) {
-    console.error('suspend failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to suspend device. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

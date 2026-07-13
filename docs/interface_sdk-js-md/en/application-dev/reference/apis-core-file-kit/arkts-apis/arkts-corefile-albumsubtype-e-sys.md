@@ -1,12 +1,12 @@
 # AlbumSubType (System API)
 
-Album subtype
+Enumerates the album subtypes.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** AlbumSubType
+**Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumsubtype-e.md)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -18,13 +18,13 @@ Album subtype
 USER_GENERIC = 1
 ```
 
-Generic user-created albums.
+User album.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** USER_GENERIC
+**Substitutes:** [USER_GENERIC](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumsubtype-e.md#user_generic)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -36,13 +36,13 @@ Generic user-created albums.
 FAVORITE = 1025
 ```
 
-Favorite album, which assets are marked as favorite.
+Favorites.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** FAVORITE
+**Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumsubtype-e.md#favorite)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -54,13 +54,13 @@ Favorite album, which assets are marked as favorite.
 VIDEO
 ```
 
-Video album, which contains all video assets.
+Video album.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** VIDEO
+**Substitutes:** [VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumsubtype-e.md#video)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -72,13 +72,13 @@ Video album, which contains all video assets.
 HIDDEN
 ```
 
-Hidden album, which assets are marked as hidden.
+Hidden album.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** HIDDEN
+**Substitutes:** [HIDDEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumsubtype-e-sys.md#hidden)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -90,13 +90,13 @@ Hidden album, which assets are marked as hidden.
 TRASH
 ```
 
-Trash album, which assets are deleted.
+Trash.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** TRASH
+**Substitutes:** [TRASH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumsubtype-e-sys.md#trash)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -108,13 +108,13 @@ Trash album, which assets are deleted.
 SCREENSHOT
 ```
 
-Screenshot album
+Album for screenshots and screen recording files.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** SCREENSHOT
+**Substitutes:** [SCREENSHOT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumsubtype-e-sys.md#screenshot)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -126,13 +126,13 @@ Screenshot album
 CAMERA
 ```
 
-Camera album
+Album for photos and videos taken by the camera.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** CAMERA
+**Substitutes:** [CAMERA](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumsubtype-e-sys.md#camera)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -144,13 +144,13 @@ Camera album
 ANY = 2147483647
 ```
 
-Any album
+Any album.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** ANY
+**Substitutes:** [ANY](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumsubtype-e.md#any)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

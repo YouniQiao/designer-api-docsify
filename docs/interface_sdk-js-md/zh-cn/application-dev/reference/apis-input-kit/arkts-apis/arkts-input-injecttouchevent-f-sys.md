@@ -65,7 +65,7 @@ struct Index {
               rawX: 0,
               rawY: 0,
               toolType: 0,
-            }
+            };
 
             let touchEventUpData: TouchEvent = {
               action: 3,
@@ -77,11 +77,11 @@ struct Index {
               actionTime: 0,
               screenId: 0,
               windowId: 0
-            }
+            };
             ;
             let touchEventUp: inputEventClient.TouchEventData = {
               touchEvent: touchEventUpData
-            }
+            };
             // 注入触摸事件
             inputEventClient.injectTouchEvent(touchEventUp);
 
@@ -95,7 +95,7 @@ struct Index {
               actionTime: 0,
               screenId: 0,
               windowId: 0
-            }
+            };
             ;
             let touchEventDown: inputEventClient.TouchEventData = {
               touchEvent: touchEventDownData

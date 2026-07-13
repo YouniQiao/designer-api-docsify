@@ -4,7 +4,7 @@
 type ValuesBucket = Record<string, ValueType>
 ```
 
-Values in buckets are stored in key-value pairs, change {[key: string]: ValueType;} to Record<string, ValueType>
+Defines the type of key and value in a KV pair.
 
 **Since:** 22
 

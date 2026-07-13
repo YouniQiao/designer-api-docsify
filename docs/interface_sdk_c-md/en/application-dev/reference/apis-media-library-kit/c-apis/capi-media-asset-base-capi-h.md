@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the structure and enumeration for Media Asset Manager.OH_MediaAssetManager structure: This structure provides the ability to request resources from a media library. <br> MediaLibrary_RequestId type: This type is returned when requesting a media library resource.The request ID is used to cancel the request. <br> MediaLibrary_DeliveryMode enumeration: This enumeration defines the delivery mode of the requested resources. <br> OH_MediaLibrary_OnDataPrepared function pointer: This function is called when the requested source is prepared. <br> MediaLibrary_RequestOptions structure: This structure provides options for requesting media library resources. <br>
+The file declares the structs and enums for the media asset manager.
 
 **Library**: libmedia_asset_manager.so
 
@@ -18,40 +18,40 @@ Defines the structure and enumeration for Media Asset Manager.OH_MediaAssetManag
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) | MediaLibrary_RequestId | Define MediaLibrary_RequestIdThis type is returned when requesting a media library resource.The request id is used to cancel the request.The value is all zero like "00000000-0000-0000-0000-000000000000" if the request fails. |
-| [MediaLibrary_RequestOptions](capi-mediaassetmanager-medialibrary-requestoptions.md) | MediaLibrary_RequestOptions | Request OptionsThis structure provides options for requesting media library resources. |
-| [OH_MediaAssetManager](capi-mediaassetmanager-oh-mediaassetmanager.md) | OH_MediaAssetManager | Define Media Asset ManagerThis structure provides the ability to request media library resources.Null pointer is returned if the creation fails. |
-| [OH_MediaAssetChangeRequest](capi-mediaassetmanager-oh-mediaassetchangerequest.md) | OH_MediaAssetChangeRequest | Define Media Asset Change RequestThis structure provides the ability to handle a media asset change request. |
-| [OH_MovingPhoto](capi-mediaassetmanager-oh-movingphoto.md) | OH_MovingPhoto | Define Moving PhotoThis structure provides the ability to obtain information about moving photo. |
-| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) | OH_MediaAsset | Define Media AssetThis structure provides the ability to encapsulate file asset attributes. |
+| [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) | MediaLibrary_RequestId | Defines a struct for the request ID. |
+| [MediaLibrary_RequestOptions](capi-mediaassetmanager-medialibrary-requestoptions.md) | MediaLibrary_RequestOptions | The struct defines how media assets are requested and processed. |
+| [OH_MediaAssetManager](capi-mediaassetmanager-oh-mediaassetmanager.md) | OH_MediaAssetManager | The struct describes the media asset manager. |
+| [OH_MediaAssetChangeRequest](capi-mediaassetmanager-oh-mediaassetchangerequest.md) | OH_MediaAssetChangeRequest | The struct describes a media asset change request. |
+| [OH_MovingPhoto](capi-mediaassetmanager-oh-movingphoto.md) | OH_MovingPhoto | The struct describes a moving photo. |
+| [OH_MediaAsset](capi-mediaassetmanager-oh-mediaasset.md) | OH_MediaAsset | The struct describes a media asset. |
 
 ### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [MediaLibrary_ErrorCode](#medialibrary_errorcode) | MediaLibrary_ErrorCode | Enum for media library error code. |
-| [MediaLibrary_DeliveryMode](#medialibrary_deliverymode) | MediaLibrary_DeliveryMode | Delivery ModeThis enumeration defines the delivery mode of the requested resources.The delivery mode can be set to fast mode, high quality mode, or balanced mode. |
-| [MediaLibrary_MediaType](#medialibrary_mediatype) | MediaLibrary_MediaType | Enum for media type. |
-| [MediaLibrary_MediaSubType](#medialibrary_mediasubtype) | MediaLibrary_MediaSubType | Enum for media asset subtype. |
-| [MediaLibrary_ResourceType](#medialibrary_resourcetype) | MediaLibrary_ResourceType | Enum for resource types. |
-| [MediaLibrary_ImageFileType](#medialibrary_imagefiletype) | MediaLibrary_ImageFileType | Enum for image file Type. |
-| [MediaLibrary_MediaQuality](#medialibrary_mediaquality) | MediaLibrary_MediaQuality | Enum for media quality. |
-| [MediaLibrary_MediaContentType](#medialibrary_mediacontenttype) | MediaLibrary_MediaContentType | Enum for media content type. |
+| [MediaLibrary_ErrorCode](#medialibrary_errorcode) | MediaLibrary_ErrorCode | Enumerates the error codes of the media library. |
+| [MediaLibrary_DeliveryMode](#medialibrary_deliverymode) | MediaLibrary_DeliveryMode | Enumerates the delivery modes of the requested media asset. |
+| [MediaLibrary_MediaType](#medialibrary_mediatype) | MediaLibrary_MediaType | Enumerates the media asset types. |
+| [MediaLibrary_MediaSubType](#medialibrary_mediasubtype) | MediaLibrary_MediaSubType | Enumerates the media asset subtypes. |
+| [MediaLibrary_ResourceType](#medialibrary_resourcetype) | MediaLibrary_ResourceType | Enumerates the media library resource types. |
+| [MediaLibrary_ImageFileType](#medialibrary_imagefiletype) | MediaLibrary_ImageFileType | Enumerates the image file types. |
+| [MediaLibrary_MediaQuality](#medialibrary_mediaquality) | MediaLibrary_MediaQuality | Enumerates the media resource quality, |
+| [MediaLibrary_MediaContentType](#medialibrary_mediacontenttype) | MediaLibrary_MediaContentType | Enumerates the media content types. |
 
 ### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*OH_MediaLibrary_OnDataPrepared)(int32_t result, MediaLibrary_RequestId requestId)](#oh_medialibrary_ondataprepared) | OH_MediaLibrary_OnDataPrepared | Called when a requested source is prepared.This function is called when the requested source is prepared. |
-| [typedef void (\*OH_MediaLibrary_OnImageDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_ImageSourceNative* imageSourceNative)](#oh_medialibrary_onimagedataprepared) | OH_MediaLibrary_OnImageDataPrepared | Called when a requested image source is prepared.This function is called when the requested image source is prepared. |
-| [typedef void (\*OH_MediaLibrary_OnMovingPhotoDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_MovingPhoto* movingPhoto)](#oh_medialibrary_onmovingphotodataprepared) | OH_MediaLibrary_OnMovingPhotoDataPrepared | Called when a requested moving photo is prepared.This function is called when the requested moving photo is prepared. |
-| [typedef void (\*OH_MediaLibrary_OnQuickImageDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_ImageSourceNative* imageSourceNative, OH_PictureNative* pictureNative)](#oh_medialibrary_onquickimagedataprepared) | OH_MediaLibrary_OnQuickImageDataPrepared | Called when a requested quickly image is prepared.This function is called when the requested quickly image is prepared.When there is an image buffer in the system,a picture object will be returned, reducing the decoding time. |
+| [typedef void (\*OH_MediaLibrary_OnDataPrepared)(int32_t result, MediaLibrary_RequestId requestId)](#oh_medialibrary_ondataprepared) | OH_MediaLibrary_OnDataPrepared | Called when the requested media asset is ready. |
+| [typedef void (\*OH_MediaLibrary_OnImageDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_ImageSourceNative* imageSourceNative)](#oh_medialibrary_onimagedataprepared) | OH_MediaLibrary_OnImageDataPrepared | Called when the requested image is ready. |
+| [typedef void (\*OH_MediaLibrary_OnMovingPhotoDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_MovingPhoto* movingPhoto)](#oh_medialibrary_onmovingphotodataprepared) | OH_MediaLibrary_OnMovingPhotoDataPrepared | Called when the requested moving photo is ready. |
+| [typedef void (\*OH_MediaLibrary_OnQuickImageDataPrepared)(MediaLibrary_ErrorCode result, MediaLibrary_RequestId requestId, MediaLibrary_MediaQuality mediaQuality, MediaLibrary_MediaContentType type, OH_ImageSourceNative* imageSourceNative, OH_PictureNative* pictureNative)](#oh_medialibrary_onquickimagedataprepared) | OH_MediaLibrary_OnQuickImageDataPrepared | This callback is called when the requested image source is ready. If an image buffer exists in the system, animage object is returned, reducing the encoding time. |
 
 ### Variable
 
 | Name | Description |
 | -- | -- |
-| static const int32_t UUID_STR_MAX_LENGTH = 37 | Define UUID max lengthThis constant defines the maximum length of a UUID string.<br>**Since**: 12<br>**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core |
+| static const int32_t UUID_STR_MAX_LENGTH = 37 | Maximum length of a request ID.<br>**Since**: 12<br>**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core |
 
 ## Enum type description
 
@@ -63,21 +63,21 @@ enum MediaLibrary_ErrorCode
 
 **Description**
 
-Enum for media library error code.
+Enumerates the error codes of the media library.
 
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| MEDIA_LIBRARY_OK = 0 | Media library result is ok. |
-| MEDIA_LIBRARY_PERMISSION_DENIED = 201 | Permission is denied. |
-| MEDIA_LIBRARY_PARAMETER_ERROR = 401 | Mandatory parameters are left unspecifiedor incorrect parameter types or parameter verification failed. |
-| MEDIA_LIBRARY_NO_SUCH_FILE = 23800101 | File does not exist. |
+| MEDIA_LIBRARY_OK = 0 | Operation success. |
+| MEDIA_LIBRARY_PERMISSION_DENIED = 201 | No access permission. |
+| MEDIA_LIBRARY_PARAMETER_ERROR = 401 | A mandatory parameter is not specified, the parameter type is incorrect, or parameter verification failed. |
+| MEDIA_LIBRARY_NO_SUCH_FILE = 23800101 | The file does not exist. |
 | MEDIA_LIBRARY_INVALID_DISPLAY_NAME = 23800102 | Invalid display name. |
-| MEDIA_LIBRARY_INVALID_ASSET_URI = 23800103 | Invalid asset uri. |
-| MEDIA_LIBRARY_INVALID_PHOTO_KEY = 23800104 | Member is not a valid PhotoKey. |
-| MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED = 23800201 | Operation is not supported. |
-| MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR = 23800301 | Internal system error.It is recommended to retry and check the logs.Possible causes:1. Database corrupted.2. The file system is abnormal.3. The IPC request timed out. |
+| MEDIA_LIBRARY_INVALID_ASSET_URI = 23800103 | Invalid asset URI. |
+| MEDIA_LIBRARY_INVALID_PHOTO_KEY = 23800104 | Invalid PhotoKey. |
+| MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED = 23800201 | Unsupported operation. |
+| MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR = 23800301 | Internal system error. Retry the operation and check logs. Possible causes:<br>1. The database is corrupted.<br>2. The file system is abnormal.<br>3. The IPC request timed out. |
 
 ### MediaLibrary_DeliveryMode
 
@@ -87,7 +87,7 @@ enum MediaLibrary_DeliveryMode
 
 **Description**
 
-Delivery ModeThis enumeration defines the delivery mode of the requested resources.The delivery mode can be set to fast mode, high quality mode, or balanced mode.
+Enumerates the delivery modes of the requested media asset.
 
 **Since**: 12
 
@@ -105,7 +105,7 @@ enum MediaLibrary_MediaType
 
 **Description**
 
-Enum for media type.
+Enumerates the media asset types.
 
 **Since**: 12
 
@@ -122,7 +122,7 @@ enum MediaLibrary_MediaSubType
 
 **Description**
 
-Enum for media asset subtype.
+Enumerates the media asset subtypes.
 
 **Since**: 12
 
@@ -140,7 +140,7 @@ enum MediaLibrary_ResourceType
 
 **Description**
 
-Enum for resource types.
+Enumerates the media library resource types.
 
 **Since**: 12
 
@@ -157,15 +157,15 @@ enum MediaLibrary_ImageFileType
 
 **Description**
 
-Enum for image file Type.
+Enumerates the image file types.
 
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
 | MEDIA_LIBRARY_IMAGE_JPEG = 1 | JPEG type |
-| MEDIA_LIBRARY_IMAGE_HEIF = 2 | HEIF type<br>**Since**: 23 |
-| MEDIA_LIBRARY_FILE_VIDEO = 3 | MPEG type<br>**Since**: 19 |
+| MEDIA_LIBRARY_IMAGE_HEIF = 2 | HEIF.<br>**Since**: 23 |
+| MEDIA_LIBRARY_FILE_VIDEO = 3 | MPEG.<br>**Since**: 19 |
 
 ### MediaLibrary_MediaQuality
 
@@ -175,7 +175,7 @@ enum MediaLibrary_MediaQuality
 
 **Description**
 
-Enum for media quality.
+Enumerates the media resource quality,
 
 **Since**: 12
 
@@ -192,7 +192,7 @@ enum MediaLibrary_MediaContentType
 
 **Description**
 
-Enum for media content type.
+Enumerates the media content types.
 
 **Since**: 12
 
@@ -212,7 +212,7 @@ typedef void (*OH_MediaLibrary_OnDataPrepared)(int32_t result, MediaLibrary_Requ
 
 **Description**
 
-Called when a requested source is prepared.This function is called when the requested source is prepared.
+Called when the requested media asset is ready.
 
 **Since**: 12
 
@@ -220,7 +220,7 @@ Called when a requested source is prepared.This function is called when the requ
 
 | Parameter | Description |
 | -- | -- |
-| (int32_t result | Results of the processing of the requested resources. |
+| (int32_t result | Request processing result. |
 | [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | Request ID. |
 
 ### OH_MediaLibrary_OnImageDataPrepared()
@@ -231,7 +231,7 @@ typedef void (*OH_MediaLibrary_OnImageDataPrepared)(MediaLibrary_ErrorCode resul
 
 **Description**
 
-Called when a requested image source is prepared.This function is called when the requested image source is prepared.
+Called when the requested image is ready.
 
 **Since**: 12
 
@@ -239,11 +239,11 @@ Called when a requested image source is prepared.This function is called when th
 
 | Parameter | Description |
 | -- | -- |
-| (MediaLibrary_ErrorCode result | results [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) of the processing of the requested resources. |
-| [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | indicates the [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) of the request. |
-| [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | the [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) of the requested source. |
-| [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | the [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) of the requested source. |
-| OH_ImageSourceNative\* imageSourceNative | it used to obtain [OH_ImageSourceNative](../ImageKit/capi-image-nativemodule-oh-imagesourcenative.md) information when image source is prepared. |
+| (MediaLibrary_ErrorCode result | Request processing result, which is specified by [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode). |
+| [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | Request ID, which is specified by [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md). |
+| [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | Quality of the requested source, which is specified by [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality). |
+| [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | Media content type of the requested source, which is specified by [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype). |
+| [OH_ImageSourceNative](../ImageKit/capi-image-nativemodule-oh-imagesourcenative.md)\* imageSourceNative | Pointer to the [OH_ImageSourceNative](../ImageKit/capi-image-nativemodule-oh-imagesourcenative.md) instance obtained when the requested image isready. |
 
 ### OH_MediaLibrary_OnMovingPhotoDataPrepared()
 
@@ -253,7 +253,7 @@ typedef void (*OH_MediaLibrary_OnMovingPhotoDataPrepared)(MediaLibrary_ErrorCode
 
 **Description**
 
-Called when a requested moving photo is prepared.This function is called when the requested moving photo is prepared.
+Called when the requested moving photo is ready.
 
 **Since**: 13
 
@@ -261,11 +261,11 @@ Called when a requested moving photo is prepared.This function is called when th
 
 | Parameter | Description |
 | -- | -- |
-| (MediaLibrary_ErrorCode result | results [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) of the processing of the requested resources. |
-| [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | indicates the [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) of the request. |
-| [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | the [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) of the requested source. |
-| [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | the [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) of the requested source. |
-| [OH_MovingPhoto](capi-mediaassetmanager-oh-movingphoto.md)\* movingPhoto | it used to obtain [OH_MovingPhoto](capi-mediaassetmanager-oh-movingphoto.md) information when the data is prepared. |
+| (MediaLibrary_ErrorCode result | Request processing result, which is specified by [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode). |
+| [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | Request ID, which is specified by [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md). |
+| [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | Quality of the requested resource, which is specified by [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality). |
+| [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | Media content type of the requested resource, which is specifiedby [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype). |
+| [OH_MovingPhoto](capi-mediaassetmanager-oh-movingphoto.md)\* movingPhoto | Pointer to the [OH_MovingPhoto](capi-mediaassetmanager-oh-movingphoto.md) instance obtained when the requested moving photo is ready. |
 
 ### OH_MediaLibrary_OnQuickImageDataPrepared()
 
@@ -275,7 +275,7 @@ typedef void (*OH_MediaLibrary_OnQuickImageDataPrepared)(MediaLibrary_ErrorCode 
 
 **Description**
 
-Called when a requested quickly image is prepared.This function is called when the requested quickly image is prepared.When there is an image buffer in the system,a picture object will be returned, reducing the decoding time.
+This callback is called when the requested image source is ready. If an image buffer exists in the system, animage object is returned, reducing the encoding time.
 
 **Since**: 23
 
@@ -283,11 +283,11 @@ Called when a requested quickly image is prepared.This function is called when t
 
 | Parameter | Description |
 | -- | -- |
-| (MediaLibrary_ErrorCode result | results [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) of the processing of the requested resources. |
-| [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | indicates the [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) of the request. |
-| [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | the [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) of the requested source. |
-| [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | the [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) of the requested source. |
-| OH_ImageSourceNative\* imageSourceNative | it is used to obtain [OH_ImageSourceNative](../ImageKit/capi-image-nativemodule-oh-imagesourcenative.md) information when image file is prepared,otherwise imageSourceNative is null. |
-| [OH_PictureNative](../ImageKit/capi-image-nativemodule-oh-picturenative.md)\* pictureNative | it is used to obtain [OH_PictureNative](../ImageKit/capi-image-nativemodule-oh-picturenative.md) information when image source is prepared,otherwise OH_PictureNative is null. |
+| (MediaLibrary_ErrorCode result | Result of processing the requested resource. |
+| [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | **MediaLibrary_RequestId** of the requested resource. |
+| [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | **MediaLibrary_MediaQuality** of the requested resource. |
+| [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | **MediaLibrary_MediaContentType** of the requested resource. |
+| [OH_ImageSourceNative](../ImageKit/capi-image-nativemodule-oh-imagesourcenative.md)\* imageSourceNative | Used to obtain the **OH_ImageSourceNative** information when preparing the image file.Otherwise, **imageSourceNative** is null. |
+| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md)\* pictureNative | Used to obtain the **OH_PictureNative** information when preparing the image source. Otherwise,**pictureNative** is null. |
 
 

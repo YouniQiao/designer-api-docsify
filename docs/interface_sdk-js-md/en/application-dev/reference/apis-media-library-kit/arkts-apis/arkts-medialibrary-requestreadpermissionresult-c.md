@@ -18,7 +18,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 authorizedUris?: Array<string>
 ```
 
-The list of authorized URI.
+URIs that have been created and granted the save permission.
 
 **Type:** Array<string>
 
@@ -36,7 +36,7 @@ The list of authorized URI.
 invalidUris?: Array<string>
 ```
 
-The list of invalid URI.
+URIs that may be deleted, hidden, or renamed.
 
 **Type:** Array<string>
 

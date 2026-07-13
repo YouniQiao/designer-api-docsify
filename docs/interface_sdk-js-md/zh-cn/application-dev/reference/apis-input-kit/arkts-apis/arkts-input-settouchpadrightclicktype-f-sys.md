@@ -42,8 +42,8 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 设置触摸板右键点击类型
-            pointer.setTouchpadRightClickType(pointer.RightClickType.TOUCHPAD_RIGHT_BUTTON , (error: BusinessError) => {
+            // 设置触控板右键点击类型
+            pointer.setTouchpadRightClickType(pointer.RightClickType.TOUCHPAD_RIGHT_BUTTON, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                 return;

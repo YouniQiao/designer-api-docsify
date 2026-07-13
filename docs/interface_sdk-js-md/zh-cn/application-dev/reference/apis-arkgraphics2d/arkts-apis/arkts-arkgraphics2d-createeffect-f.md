@@ -23,7 +23,8 @@ function createEffect(): VisualEffect
 **示例：**
 
 ```TypeScript
-let visualEffect : uiEffect.VisualEffect = uiEffect.createEffect()
+// 创建VisualEffect实例
+let visualEffect : uiEffect.VisualEffect = uiEffect.createEffect();
 
 ```
 

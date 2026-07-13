@@ -48,7 +48,9 @@ let wantTemp: Want = {
 
 // 此处参数appId的赋值应替换为开发者自己指定的浏览器的应用ID
 let appId: string = 'com.example.******_******/******5t5CoBM=';
+// 浏览器策略名称
 let policyName: string = 'InsecurePrivateNetworkRequestsAllowed';
+// 浏览器策略值
 let policyValue: string = '{"level":"mandatory","scope":"machine","source":"platform","value":true}';
 
 try {

@@ -37,8 +37,8 @@ function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number
 import { BusinessError } from '@kit.BasicServicesKit';
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 
-let id = 1;
-backgroundTaskManager.getRemainingDelayTime(id, (error: BusinessError, res: number) => {
+let requestId = 1;
+backgroundTaskManager.getRemainingDelayTime(requestId, (error: BusinessError, res: number) => {
   if(error) {
     console.error(`callback => Operation getRemainingDelayTime failed. code is ${error.code} message is ${error.message}`);
   } else {
@@ -91,8 +91,8 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 import { BusinessError } from '@kit.BasicServicesKit';
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 
-let id = 1;
-backgroundTaskManager.getRemainingDelayTime(id).then((res: number) => {
+let requestId = 1;
+backgroundTaskManager.getRemainingDelayTime(requestId).then((res: number) => {
   console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
 }).catch((error: BusinessError) => {
   console.error(`promise => Operation getRemainingDelayTime failed. code is ${error.code} message is ${error.message}`);

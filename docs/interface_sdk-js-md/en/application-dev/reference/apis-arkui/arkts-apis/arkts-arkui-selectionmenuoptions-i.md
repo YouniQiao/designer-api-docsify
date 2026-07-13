@@ -18,8 +18,7 @@ import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component. Different materials have different effects,
-which can influence the backgroundColor, border, shadow, and other visual attributes.
+Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes.
 
 **Type:** uiMaterial.Material
 
@@ -37,12 +36,7 @@ which can influence the backgroundColor, border, shadow, and other visual attrib
 controller?: RichEditorController
 ```
 
-Expanded drop-down menu options.
-
-If this parameter is left empty, the expanded drop-down menu is not displayed.
-
-The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More**
-shows the expanded drop-down menu.
+Expanded drop-down menu options. If this parameter is left empty, the expanded drop-down menu is not displayed. The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More** shows the expanded drop-down menu.
 
 **Type:** RichEditorController
 
@@ -60,15 +54,7 @@ shows the expanded drop-down menu.
 editorMenuOptions?: Array<EditorMenuOptions>
 ```
 
-Edit menu.
-
-If **editorMenuOptions** is not set, the edit menu is not displayed.
-
-When both **action** and **builder** in **EditorMenuOptions** are configured, clicking the edit icon will trigger
-both.
-
-By default, the context menu is not closed when the edit menu icon is clicked. You can configure
-**closeSelectionMenu** of **RichEditorController** in **action** to enable the menu to be closed.
+Edit menu. If **editorMenuOptions** is not set, the edit menu is not displayed. When both **action** and **builder** in **EditorMenuOptions** are configured, clicking the edit icon will trigger both. By default, the context menu is not closed when the edit menu icon is clicked. You can configure **closeSelectionMenu** of **RichEditorController** in **action** to enable the menu to be closed.
 
 **Type:** Array<EditorMenuOptions>
 
@@ -86,12 +72,7 @@ By default, the context menu is not closed when the edit menu icon is clicked. Y
 expandedMenuOptions?: Array<ExpandedMenuOptions>
 ```
 
-Expanded drop-down menu options.
-
-If this parameter is left empty, the expanded drop-down menu is not displayed.
-
-The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More**
-shows the expanded drop-down menu.
+Expanded drop-down menu options. If this parameter is left empty, the expanded drop-down menu is not displayed. The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More** shows the expanded drop-down menu.
 
 **Type:** Array<ExpandedMenuOptions>
 
@@ -109,13 +90,7 @@ shows the expanded drop-down menu.
 onCopy?: (event?: EditorEventInfo) => void
 ```
 
-Event callback to take the place of the preset copy menu option.
-
-It is effective only when the **controller** parameter is set and the preset menu is available.
-
-**NOTE**
-
-**event** indicates the returned information.
+Event callback to take the place of the preset copy menu option. It is effective only when the **controller** parameter is set and the preset menu is available. **NOTE** **event** indicates the returned information.
 
 **Type:** (event?: EditorEventInfo) => void
 
@@ -133,13 +108,7 @@ It is effective only when the **controller** parameter is set and the preset men
 onCut?: (event?: EditorEventInfo) => void
 ```
 
-Event callback to take the place of the preset cut menu option.
-
-It is effective only when the **controller** parameter is set and the preset menu is available.
-
-**NOTE**
-
-**event** indicates the returned information.
+Event callback to take the place of the preset cut menu option. It is effective only when the **controller** parameter is set and the preset menu is available. **NOTE** **event** indicates the returned information.
 
 **Type:** (event?: EditorEventInfo) => void
 
@@ -157,13 +126,7 @@ It is effective only when the **controller** parameter is set and the preset men
 onPaste?: (event?: EditorEventInfo) => void
 ```
 
-Event callback to take the place of the preset paste menu option.
-
-It is effective only when the **controller** parameter is set and the preset menu is available.
-
-**NOTE**
-
-**event** indicates the returned information.
+Event callback to take the place of the preset paste menu option. It is effective only when the **controller** parameter is set and the preset menu is available. **NOTE** **event** indicates the returned information.
 
 **Type:** (event?: EditorEventInfo) => void
 
@@ -181,13 +144,7 @@ It is effective only when the **controller** parameter is set and the preset men
 onSelectAll?: (event?: EditorEventInfo) => void
 ```
 
-Event callback to take the place of the preset select-all menu option.
-
-It is effective only when the **controller** parameter is set and the preset menu is available.
-
-**NOTE**
-
-**event** indicates the returned information.
+Event callback to take the place of the preset select-all menu option. It is effective only when the **controller** parameter is set and the preset menu is available. **NOTE** **event** indicates the returned information.
 
 **Type:** (event?: EditorEventInfo) => void
 

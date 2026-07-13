@@ -6,7 +6,7 @@ typedef struct NetConn_NetSpecifier {...} NetConn_NetSpecifier
 
 ## Overview
 
-Definition of network specifier.
+Defines network feature sets.
 
 **Since**: 12
 
@@ -20,7 +20,7 @@ Definition of network specifier.
 
 | Name | Description |
 | -- | -- |
-| [NetConn_NetCapabilities](capi-netconnection-netconn-netcapabilities.md) caps | Network capabilities. |
-| char *bearerPrivateIdentifier | Network identifier |
+| [NetConn_NetCapabilities](capi-netconnection-netconn-netcapabilities.md) caps | Network capability set. |
+| char *bearerPrivateIdentifier | Network ID. |
 
 

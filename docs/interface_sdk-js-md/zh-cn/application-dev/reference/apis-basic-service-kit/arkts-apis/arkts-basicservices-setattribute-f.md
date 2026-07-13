@@ -35,9 +35,10 @@ function setAttribute(portId: number, attribute: SerialAttribute): void
 ```TypeScript
 import { JSON } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // 获取串口列表
-function setAttribute() {
+function setAttributeExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {
@@ -56,6 +57,8 @@ function setAttribute() {
       } else {
         console.info('grant permission successfully');
       }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to request serial right. Code: ${err.code}, message: ${err.message}`);
     });
   }
 
@@ -64,8 +67,8 @@ function setAttribute() {
     serialManager.open(portId)
     console.info('open usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('open usbSerial error, ' + JSON.stringify(error));
-    return;
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to open usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 
   // 设置串口配置
@@ -79,7 +82,8 @@ function setAttribute() {
     serialManager.setAttribute(portId, attribute);
     console.info('setAttribute usbSerial success, attribute: ' + JSON.stringify(attribute));
   } catch (error) {
-    console.error('setAttribute usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to set attribute. Code: ${err.code}, message: ${err.message}`);
   }
 
   // 关闭串口
@@ -87,7 +91,8 @@ function setAttribute() {
     serialManager.close(portId);
     console.info('close usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('close usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to close usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 }
 

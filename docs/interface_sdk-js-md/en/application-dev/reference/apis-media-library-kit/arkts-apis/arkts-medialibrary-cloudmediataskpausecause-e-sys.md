@@ -14,7 +14,7 @@ Enumerates the reasons why a cloud media asset download task is paused.
 NO_PAUSE = 0
 ```
 
-The device temperature is excessively high.
+Downloading is proceeding normally without any pauses.
 
 **Since:** 14
 
@@ -28,7 +28,7 @@ The device temperature is excessively high.
 TEMPERATURE_LIMIT = 1
 ```
 
-The device temperature is excessively high.
+Downloading is proceeding normally without any pauses.
 
 **Since:** 14
 
@@ -42,7 +42,7 @@ The device temperature is excessively high.
 ROM_LIMIT = 2
 ```
 
-Network traffic is restricted, and Wi-Fi is not available.
+The local disk space is insufficient.
 
 **Since:** 14
 
@@ -56,7 +56,7 @@ Network traffic is restricted, and Wi-Fi is not available.
 NETWORK_FLOW_LIMIT = 3
 ```
 
-Network traffic is restricted, and Wi-Fi is not available.
+The local disk space is insufficient.
 
 **Since:** 14
 
@@ -70,7 +70,7 @@ Network traffic is restricted, and Wi-Fi is not available.
 WIFI_UNAVAILABLE = 4
 ```
 
-Power usage is restricted.
+The network is abnormal.
 
 **Since:** 14
 
@@ -84,7 +84,7 @@ Power usage is restricted.
 POWER_LIMIT = 5
 ```
 
-Power usage is restricted.
+The network is abnormal.
 
 **Since:** 14
 

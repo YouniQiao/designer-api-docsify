@@ -53,7 +53,7 @@ try {
     }
     missionManager.moveMissionsToBackground(toHides, (err: BusinessError, data: Array<number>) => {
       if (err) {
-        console.error(`moveMissionsToBackground failed: ${err.message}`);
+        console.error(`moveMissionsToBackground failed. Code: ${err.code}, message: ${err.message}.`);
       } else {
         console.info(`moveMissionsToBackground successfully: ${JSON.stringify(data)}`);
       }

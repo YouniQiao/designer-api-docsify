@@ -12,7 +12,7 @@ Enumerates the types of recommended images.
 COLOR_STYLE_PHOTO = 12
 ```
 
-COLOR_STYLE_PHOTO indicates that color style photo can be recommended
+Recommended style.
 
 **Since:** 18
 
@@ -26,7 +26,7 @@ COLOR_STYLE_PHOTO indicates that color style photo can be recommended
 CAT = 13
 ```
 
-CAT indicates that cat photos can be recommended
+Cat images will be recommended.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ CAT indicates that cat photos can be recommended
 DOG = 14
 ```
 
-DOG indicates that dog photos can be recommended
+Dog images will be recommended.
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ DOG indicates that dog photos can be recommended
 ARCHITECTURE = 15
 ```
 
-ARCHITECTURE indicates that architecture photos can be recommended
+Architecture images will be recommended.
 
 **Since:** 23
 
@@ -74,7 +74,7 @@ ARCHITECTURE indicates that architecture photos can be recommended
 LANDSCAPE = 16
 ```
 
-LANDSCAPE indicates that landscape photos can be recommended
+Landscape images will be recommended.
 
 **Since:** 23
 
@@ -90,7 +90,7 @@ LANDSCAPE indicates that landscape photos can be recommended
 GAUSSIAN_SPLAT_3D = 17
 ```
 
-GAUSSIAN_SPLAT_3D indicates that images generated with 3D Gaussian splatting can be recommended
+Images generated using the 3D Gaussian technology will be recommended.
 
 **Since:** 24
 

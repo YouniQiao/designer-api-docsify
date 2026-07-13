@@ -6,7 +6,7 @@ typedef struct MediaLibrary_RequestOptions {...} MediaLibrary_RequestOptions
 
 ## Overview
 
-Request OptionsThis structure provides options for requesting media library resources.
+The struct defines how media assets are requested and processed.
 
 **Since**: 12
 

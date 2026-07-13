@@ -1,5 +1,11 @@
 # createClient
 
+## Modules to Import
+
+```TypeScript
+import { ssap } from '@kit.ConnectivityKit';
+```
+
 ## createClient
 
 ```TypeScript

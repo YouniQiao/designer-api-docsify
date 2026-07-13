@@ -29,7 +29,7 @@ function getNotificationSwitch(switchName: string, userId: number): Promise<Swit
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | switchName | string | 是 | 通知开关名称。取值为：DEAL（交易类通知聚合开关）、LOGISTICS（物流类通知聚合开关）。 |
-| userId | number | 是 | 用户ID。<br>取值范围为全体整数。 |
+| userId | number | 是 | 用户ID。 |
 
 **返回值：**
 

@@ -46,10 +46,10 @@ struct Index {
         .onClick(() => {
           // 查询ID为1的输入设备对于17、22和2055按键的支持情况。
           try {
-            let supportResult: Array<Boolean> = inputDevice.supportKeysSync(1, [17, 22, 2055])
-            console.info(`Succeeded in querying support keys, result: ${JSON.stringify(supportResult)}.`)
+            let supportResult: Array<Boolean> = inputDevice.supportKeysSync(1, [17, 22, 2055]);
+            console.info(`Succeeded in querying support keys, result: ${JSON.stringify(supportResult)}.`);
           } catch (error) {
-            console.error(`Failed to query support key, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`)
+            console.error(`Failed to query support key, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

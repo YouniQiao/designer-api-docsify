@@ -1,6 +1,6 @@
 # RequestOptions
 
-Options to request media asset
+Represents request options.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 sourceMode?: SourceMode
 ```
 
-Indicates the source mode
+Type of the asset file requested, which can be the original file or edited file.
 
 **Type:** SourceMode
 

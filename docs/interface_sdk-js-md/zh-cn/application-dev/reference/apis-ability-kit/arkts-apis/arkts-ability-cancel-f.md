@@ -71,6 +71,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
   if (err) {
     console.error(`getWantAgent failed, err code: ${err.code}, err msg: ${err.message}.`);
   } else {
+    // 创建WantAgent成功，保存返回的WantAgent对象
     wantAgentData = data;
   }
   // cancel回调
@@ -82,6 +83,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
     }
   }
   try {
+    // 调用cancel接口取消WantAgent实例
     wantAgent.cancel(wantAgentData, cancelCallback);
   } catch (err) {
     let code = (err as BusinessError).code;
@@ -91,6 +93,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // 调用getWantAgent接口创建WantAgent对象
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   let code = (err as BusinessError).code;
@@ -177,9 +180,11 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
   if (err) {
     console.error(`getWantAgent failed, err code: ${err.code}, err msg: ${err.message}.`);
   } else {
+    // 创建WantAgent成功，保存返回的WantAgent对象
     wantAgentData = data;
   }
   try {
+    // 使用Promise方式取消WantAgent实例
     wantAgent.cancel(wantAgentData).then((data) => {
       console.info('cancel success.');
     }).catch((err: BusinessError) => {
@@ -193,6 +198,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // 调用getWantAgent接口创建WantAgent对象
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   let code = (err as BusinessError).code;

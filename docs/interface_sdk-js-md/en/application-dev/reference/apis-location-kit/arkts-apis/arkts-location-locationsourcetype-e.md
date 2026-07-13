@@ -2,7 +2,7 @@
 
 Enum for the source of the location.
 
-**Since:** 22
+**Since:** 12
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -14,9 +14,9 @@ GNSS = 1
 
 The location is obtained from the GNSS.
 
-**Since:** 22
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -28,9 +28,9 @@ NETWORK = 2
 
 The location comes from the network positioning technology.
 
-**Since:** 22
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -42,9 +42,9 @@ INDOOR = 3
 
 The location comes from the indoor positioning technology.
 
-**Since:** 22
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -56,9 +56,9 @@ RTK = 4
 
 The location comes from the GNSS RTK technology.
 
-**Since:** 22
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 

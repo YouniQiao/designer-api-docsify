@@ -71,6 +71,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
   if (err) {
     console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}.`);
   } else {
+    // 创建WantAgent成功，保存返回的WantAgent对象
     wantAgentData = data;
   }
   // getUid回调
@@ -82,6 +83,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
     }
   }
   try {
+    // 调用getUid接口获取WantAgent实例所属应用的UID
     wantAgent.getUid(wantAgentData, getUidCallback);
   } catch (err) {
     let code = (err as BusinessError).code;
@@ -91,6 +93,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // 调用getWantAgent接口创建WantAgent对象
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   let code = (err as BusinessError).code;
@@ -177,9 +180,11 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
   if (err) {
     console.error(`getWantAgent failed, err code: ${err.code}, err msg: ${err.message}.`);
   } else {
+    // 创建WantAgent成功，保存返回的WantAgent对象
     wantAgentData = data;
   }
   try {
+    // 使用Promise方式获取WantAgent实例所属应用的UID
     wantAgent.getUid(wantAgentData).then((data) => {
       console.info(`getUid ok, data: ${JSON.stringify(data)}.`);
     }).catch((err: BusinessError) => {
@@ -193,6 +198,7 @@ function getWantAgentCallback(err: BusinessError, data: WantAgent) {
 }
 
 try {
+  // 调用getWantAgent接口创建WantAgent对象
   wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   let code = (err as BusinessError).code;

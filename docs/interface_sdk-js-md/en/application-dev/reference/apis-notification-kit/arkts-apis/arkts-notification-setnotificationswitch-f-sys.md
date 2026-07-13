@@ -12,7 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function setNotificationSwitch(switchName: string, switchState: boolean, userId: number): Promise<void>
 ```
 
-Sets the status of the notification switch. Use Promise asynchronous callback.
+Sets the notification switch state. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -28,9 +28,9 @@ Sets the status of the notification switch. Use Promise asynchronous callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| switchName | string | Yes | Notification switch name. Values are:DEAL (transaction-related notification aggregation switch) andLOGISTICS (logistics-related notification aggregation switch). |
-| switchState | boolean | Yes | Whether to enable the notification switch.- true: enabled.- false: disabled. |
-| userId | number | Yes | User ID.<br>The value range is all integers. |
+| switchName | string | Yes | Name of the notification switch. The value can be **DEAL** (aggregatedswitch for transaction notifications) or **LOGISTICS** (aggregated switch for logisticsnotifications). |
+| switchState | boolean | Yes | Whether to enable the notification switch.<br> - **true**: enable.<br> - **false**: disable. |
+| userId | number | Yes | User ID. |
 
 **Return value:**
 

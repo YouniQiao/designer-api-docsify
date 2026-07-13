@@ -14,7 +14,7 @@ function addGnssGeofence(fenceRequest: GnssGeofenceRequest): Promise<number>
 
 Add a geofence.
 
-**Since:** 22
+**Since:** 12
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 

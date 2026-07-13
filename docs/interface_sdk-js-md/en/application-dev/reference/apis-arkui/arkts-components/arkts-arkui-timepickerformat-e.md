@@ -9,7 +9,7 @@ Enumerates time display formats of the time picker.
 ## HOUR_MINUTE
 
 ```TypeScript
-HOUR_MINUTE = 0
+HOUR_MINUTE
 ```
 
 Time format displaying hours and minutes.
@@ -25,7 +25,7 @@ Time format displaying hours and minutes.
 ## HOUR_MINUTE_SECOND
 
 ```TypeScript
-HOUR_MINUTE_SECOND = 1
+HOUR_MINUTE_SECOND
 ```
 
 Time format displaying hours, minutes, and seconds.

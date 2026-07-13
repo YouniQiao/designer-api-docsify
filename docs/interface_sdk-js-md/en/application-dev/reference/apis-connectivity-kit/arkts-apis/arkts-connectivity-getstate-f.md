@@ -1,5 +1,11 @@
 # getState
 
+## Modules to Import
+
+```TypeScript
+import { manager } from '@kit.ConnectivityKit';
+```
+
 ## getState
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # PhotoViewMimeTypeFileSizeFilter
 
-Media file type and size combined filtering configuration.
+Describes the settings for filtering media files by type and size.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 photoViewMimeType: PhotoViewMIMETypes
 ```
 
-Specifing filter Type.
+Media file types used for filtering.
 
 **Type:** PhotoViewMIMETypes
 
@@ -34,7 +34,7 @@ Specifing filter Type.
 sizeFilter: FileSizeFilter
 ```
 
-Specifing file size filtering configuration.
+Media file size used for filtering.
 
 **Type:** FileSizeFilter
 

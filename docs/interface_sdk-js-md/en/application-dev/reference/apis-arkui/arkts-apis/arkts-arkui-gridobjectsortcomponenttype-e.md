@@ -1,8 +1,8 @@
 # GridObjectSortComponentType
 
-Controls the style types of GridObjectSortComponent.
+Enumerates display types for nodes in the **GridObjectSortComponent** component.
 
-**Since:** 12
+**Since:** 11
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -12,9 +12,9 @@ Controls the style types of GridObjectSortComponent.
 IMAGE_TEXT = "image_text"
 ```
 
-The GridObjectSortComponent image text type.
+Image with text.
 
-**Since:** 12
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,9 +28,9 @@ The GridObjectSortComponent image text type.
 TEXT = "text"
 ```
 
-The GridObjectSortComponent text type.
+Text only.
 
-**Since:** 12
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 

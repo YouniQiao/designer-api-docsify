@@ -12,7 +12,7 @@ Enumeration type of grid pinch mode.
 FULL_FUNCTION_GRID = 0
 ```
 
-FULL_FUNCTION_GRID indicates that the grid supports selection and other operations after pinch-to-zoom gesture.
+Users are allowed to pinch the grid, and then select it or click it to operate the large image.
 
 **Since:** 23
 

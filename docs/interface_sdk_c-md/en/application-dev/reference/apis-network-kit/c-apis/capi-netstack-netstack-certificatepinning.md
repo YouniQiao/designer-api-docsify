@@ -6,7 +6,7 @@ typedef struct NetStack_CertificatePinning {...} NetStack_CertificatePinning
 
 ## Overview
 
-Defines the certificate lock information.
+Defines certificate pinning information.
 
 **Since**: 12
 

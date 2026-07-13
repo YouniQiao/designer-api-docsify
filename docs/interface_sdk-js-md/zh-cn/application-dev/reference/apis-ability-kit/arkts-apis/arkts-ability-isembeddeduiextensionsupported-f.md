@@ -27,6 +27,7 @@ import { abilityManager, UIAbility } from '@kit.AbilityKit';
 
 export default class EntryAbility extends UIAbility {
   onForeground() {
+    // 判断当前设备是否支持EmbeddedUIExtensionAbility
     let isSupported: boolean = abilityManager.isEmbeddedUIExtensionSupported();
     console.info(`isEmbeddedUIExtensionSupported is ${isSupported}`);
   }

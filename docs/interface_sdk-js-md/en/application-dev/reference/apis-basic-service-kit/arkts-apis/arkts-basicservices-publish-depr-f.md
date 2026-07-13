@@ -29,16 +29,16 @@ Publishes a common event. This API uses an asynchronous callback to return the r
 import Base from '@ohos.base';
 
 // Callback for common event publication.
-function publishCB(err:Base.BusinessError) {
+let publishCallBack = (err: Base.BusinessError) => {
     if (err.code) {
-        console.error(`publish failed, code is ${err.code}`);
+        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("publish");
+        console.info('publish');
     }
 }
 
 // Publish a common event.
-commonEvent.publish("event", publishCB);
+commonEvent.publish("event", publishCallBack);
 
 ```
 
@@ -78,19 +78,19 @@ let options:CommonEventManager.CommonEventPublishData = {
     code: 0,             // Initial code of the common event.
     data: "initial data", // Initial data of the common event.
     isOrdered: true  // The common event is an ordered one.
-}
+};
 
 // Callback for common event publication.
-function publishCB(err:Base.BusinessError) {
+let publishCallBack = (err: Base.BusinessError) => {
     if (err.code) {
-        console.error(`publish failed, code is ${err.code}`);
+        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("publish");
     }
 }
 
 // Publish a common event.
-commonEvent.publish("event", options, publishCB);
+commonEvent.publish("event", options, publishCallBack);
 
 ```
 

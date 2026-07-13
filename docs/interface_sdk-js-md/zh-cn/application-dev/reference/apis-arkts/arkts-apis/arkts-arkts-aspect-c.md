@@ -66,7 +66,7 @@ console.info('result is ' + result);
 console.info('asp.msg is ' + asp.msg);
 // 输出结果：asp.msg is msg111
 
-// 前后插桩的例子
+// 分别添加前置和后置插桩的例子
 class AroundTest {
   foo(arg: string) {
     console.info('execute foo with arg ' + arg);

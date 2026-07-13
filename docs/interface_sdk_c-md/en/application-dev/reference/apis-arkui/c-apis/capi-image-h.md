@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the common types for the Image component.
+Defines **Image** node types for **NativeNode** APIs.
 
 **Library**: libace_ndk.z.so
 
@@ -19,11 +19,11 @@ Defines the common types for the Image component.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [ArkUI_ImageRepeat](#arkui_imagerepeat) | ArkUI_ImageRepeat | Enumerates the image repeat patterns. |
-| [ArkUI_ImageSize](#arkui_imagesize) | ArkUI_ImageSize | Defines the image size. |
-| [ArkUI_ObjectFit](#arkui_objectfit) | ArkUI_ObjectFit | Defines how the image is resized to fit its container. |
-| [ArkUI_ImageInterpolation](#arkui_imageinterpolation) | ArkUI_ImageInterpolation | Enumerates the image interpolation effect. |
-| [ArkUI_DynamicRangeMode](#arkui_dynamicrangemode) | ArkUI_DynamicRangeMode | Enumerates the image dynamic range mode. |
-| [ArkUI_ImageRotateOrientation](#arkui_imagerotateorientation) | ArkUI_ImageRotateOrientation | Enumerates the image rotate orientation. |
+| [ArkUI_ImageSize](#arkui_imagesize) | ArkUI_ImageSize | Enumerates the image sizes. |
+| [ArkUI_ObjectFit](#arkui_objectfit) | ArkUI_ObjectFit | Enumerates the image filling effects of the {@link Image} component. |
+| [ArkUI_ImageInterpolation](#arkui_imageinterpolation) | ArkUI_ImageInterpolation | Enumerates the image interpolation effects. This attribute mitigates aliasing during image scaling. Thisattribute is not applicable to SVG images. |
+| [ArkUI_DynamicRangeMode](#arkui_dynamicrangemode) | ArkUI_DynamicRangeMode | Enumerates the dynamic range modes (for example, SDR/HDR) for images, controlling the display range of imagebrightness and color gamut. |
+| [ArkUI_ImageRotateOrientation](#arkui_imagerotateorientation) | ArkUI_ImageRotateOrientation | Enumerates image rotation directions. |
 | [ArkUI_ImageRenderMode](#arkui_imagerendermode) | ArkUI_ImageRenderMode | Enumerates the image rendering modes. |
 
 ## Enum type description
@@ -55,7 +55,7 @@ enum ArkUI_ImageSize
 
 **Description**
 
-Defines the image size.
+Enumerates the image sizes.
 
 **Since**: 12
 
@@ -73,7 +73,7 @@ enum ArkUI_ObjectFit
 
 **Description**
 
-Defines how the image is resized to fit its container.
+Enumerates the image filling effects of the {@link Image} component.
 
 **Since**: 12
 
@@ -104,7 +104,7 @@ enum ArkUI_ImageInterpolation
 
 **Description**
 
-Enumerates the image interpolation effect.
+Enumerates the image interpolation effects. This attribute mitigates aliasing during image scaling. Thisattribute is not applicable to SVG images.
 
 **Since**: 12
 
@@ -123,7 +123,7 @@ enum ArkUI_DynamicRangeMode
 
 **Description**
 
-Enumerates the image dynamic range mode.
+Enumerates the dynamic range modes (for example, SDR/HDR) for images, controlling the display range of imagebrightness and color gamut.
 
 **Since**: 21
 
@@ -141,7 +141,7 @@ enum ArkUI_ImageRotateOrientation
 
 **Description**
 
-Enumerates the image rotate orientation.
+Enumerates image rotation directions.
 
 **Since**: 21
 

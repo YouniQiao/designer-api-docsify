@@ -18,8 +18,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 fill(color: ResourceColor): T
 ```
 
-Sets the fill color of this shape, which determines its opacity, with black representing full transparency and
-white representing full opacity.
+Sets the fill color of this shape, which determines its opacity, with black representing full transparency and white representing full opacity.
 
 **Since:** 12
 

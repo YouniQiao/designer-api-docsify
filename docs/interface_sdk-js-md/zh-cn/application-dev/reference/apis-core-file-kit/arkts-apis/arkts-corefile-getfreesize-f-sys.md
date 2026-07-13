@@ -37,12 +37,12 @@ function getFreeSize(callback: AsyncCallback<number>): void
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getFreeSize((error: BusinessError, number: number) => {
+storageStatistics.getFreeSize((error: BusinessError, freeSize: number) => {
   if (error) {
-    console.error("getFreeSize failed with error:" + JSON.stringify(error));
+    console.error(`getFreeSize failed. Code: ${error.code}, message: ${error.message}`);
   } else {
     // do something
-    console.info("getFreeSize successfully:" + number);
+    console.info('getFreeSize successfully:' + freeSize);
   }
 });
 

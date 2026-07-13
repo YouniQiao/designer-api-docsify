@@ -41,15 +41,32 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileUri } from '@kit.CoreFileKit';
 
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-    printTask.off('block', () => {
-        console.info('unregister state block');
-    })
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('print err ' + JSON.stringify(error));
-})
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("打印").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('block', () => {
+                            console.info('unregister state block');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error('print err ' + JSON.stringify(error));
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
 
 ```
 
@@ -88,15 +105,32 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileUri } from '@kit.CoreFileKit';
 
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-    printTask.off('succeed', () => {
-        console.info('unregister state succeed');
-    })
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('print err ' + JSON.stringify(error));
-})
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("打印").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('succeed', () => {
+                            console.info('unregister state succeed');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error('print err ' + JSON.stringify(error));
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
 
 ```
 
@@ -135,15 +169,32 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileUri } from '@kit.CoreFileKit';
 
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-    printTask.off('fail', () => {
-        console.info('unregister state fail');
-    })
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('print err ' + JSON.stringify(error));
-})
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("打印").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('fail', () => {
+                            console.info('unregister state fail');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error('print err ' + JSON.stringify(error));
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
 
 ```
 
@@ -182,15 +233,32 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileUri } from '@kit.CoreFileKit';
 
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-    printTask.off('cancel', () => {
-        console.info('unregister state cancel');
-    })
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('print err ' + JSON.stringify(error));
-})
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("打印").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('cancel', () => {
+                            console.info('unregister state cancel');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error('print err ' + JSON.stringify(error));
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
 
 ```
 
@@ -229,15 +297,32 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileUri } from '@kit.CoreFileKit';
 
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-    printTask.on('block', () => {
-        console.info('print state is block');
-    })
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('print err ' + JSON.stringify(error));
-})
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("打印").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('block', () => {
+                            console.info('print state is block');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error('print err ' + JSON.stringify(error));
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
 
 ```
 
@@ -276,15 +361,32 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileUri } from '@kit.CoreFileKit';
 
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-    printTask.on('succeed', () => {
-        console.info('print state is succeed');
-    })
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('print err ' + JSON.stringify(error));
-})
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("打印").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('succeed', () => {
+                            console.info('print state is succeed');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error('print err ' + JSON.stringify(error));
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
 
 ```
 
@@ -323,15 +425,32 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileUri } from '@kit.CoreFileKit';
 
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-    printTask.on('fail', () => {
-        console.info('print state is fail');
-    })
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('print err ' + JSON.stringify(error));
-})
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("打印").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('fail', () => {
+                            console.info('print state is fail');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error('print err ' + JSON.stringify(error));
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
 
 ```
 
@@ -370,15 +489,32 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileUri } from '@kit.CoreFileKit';
 
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-    printTask.on('cancel', () => {
-        console.info('print state is cancel');
-    })
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('print err ' + JSON.stringify(error));
-})
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("打印").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('cancel', () => {
+                            console.info('print state is cancel');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error('print err ' + JSON.stringify(error));
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
 
 ```
 

@@ -32,11 +32,13 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 释放设备管理实例
   distributedDeviceManager.releaseDeviceManager(dmInstance);
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('release device manager errCode:' + e.code + ',errMessage:' + e.message);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to release device manager. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```

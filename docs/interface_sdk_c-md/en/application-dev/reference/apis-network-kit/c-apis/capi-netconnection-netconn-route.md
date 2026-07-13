@@ -6,7 +6,7 @@ typedef struct NetConn_Route {...} NetConn_Route
 
 ## Overview
 
-Defines the route configuration information.
+Defines the route configuration.
 
 **Since**: 11
 
@@ -21,9 +21,9 @@ Defines the route configuration information.
 | Name | Description |
 | -- | -- |
 | char iface[NETCONN_MAX_STR_LEN] | Network interface |
-| [NetConn_NetAddr](capi-netconnection-netconn-netaddr.md) destination | Destination address |
-| [NetConn_NetAddr](capi-netconnection-netconn-netaddr.md) gateway | Gateway address |
-| int32_t hasGateway | Gateway exists or not |
-| int32_t isDefaultRoute | Default route or not |
+| [NetConn_NetAddr](capi-netconnection-netconn-netaddr.md) destination | Destination address. |
+| [NetConn_NetAddr](capi-netconnection-netconn-netaddr.md) gateway | Gateway IP address. |
+| int32_t hasGateway | Whether a gateway exists. |
+| int32_t isDefaultRoute | Whether the default route is used. |
 
 

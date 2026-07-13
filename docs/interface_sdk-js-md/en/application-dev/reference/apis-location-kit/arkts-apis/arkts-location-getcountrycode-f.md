@@ -14,7 +14,7 @@ function getCountryCode(callback: AsyncCallback<CountryCode>): void
 
 Obtain the current country code.
 
-**Since:** 22
+**Since:** 9
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -62,7 +62,7 @@ function getCountryCode(): Promise<CountryCode>
 
 Obtain the current country code.
 
-**Since:** 22
+**Since:** 9
 
 **System capability:** SystemCapability.Location.Location.Core
 

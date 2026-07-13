@@ -41,7 +41,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 获取触摸板滑动开关
+            // 获取触控板滑动开关
             pointer.getTouchpadSwipeSwitch((error: BusinessError, state: boolean) => {
               if (error) {
                 console.error(`Failed to get touchpad swipe switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

@@ -42,7 +42,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 设置鼠标指针速度
+            // 设置鼠标光标速度
             pointer.setPointerSpeed(5, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -53,7 +53,7 @@ struct Index {
           } catch (error) {
             console.error(`Failed to set pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
-        })
+        });
     }
   }
 }

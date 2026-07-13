@@ -19,12 +19,12 @@ Defines C APIs for the SSL/TLS certificate chain verification module.
 | Name | Description |
 | -- | -- |
 | [uint32_t OH_NetStack_CertVerification(const struct NetStack_CertBlob *cert, const struct NetStack_CertBlob *caCert)](#oh_netstack_certverification) | Provides certificate chain verification APIs for external systems. |
-| [int32_t OH_NetStack_GetPinSetForHostName(const char *hostname, NetStack_CertificatePinning *pin)](#oh_netstack_getpinsetforhostname) | Gets pin set for hostname. |
-| [int32_t OH_NetStack_GetCertificatesForHostName(const char *hostname, NetStack_Certificates *certs)](#oh_netstack_getcertificatesforhostname) | Gets certificates for hostname. |
-| [void OH_Netstack_DestroyCertificatesContent(NetStack_Certificates *certs)](#oh_netstack_destroycertificatescontent) | Frees content of the certificates. |
-| [int32_t OH_Netstack_IsCleartextPermitted(bool *isCleartextPermitted)](#oh_netstack_iscleartextpermitted) | Checks whether the Cleartext traffic is permitted. |
-| [int32_t OH_Netstack_IsCleartextPermittedByHostName(const char *hostname, bool *isCleartextPermitted)](#oh_netstack_iscleartextpermittedbyhostname) | Checks whether the Cleartext traffic for a specified hostname is permitted. |
-| [int32_t OH_Netstack_IsCleartextCfgByComponent(const char *component, bool *componentCfg)](#oh_netstack_iscleartextcfgbycomponent) | Checks whether the component is configured for Cleartext traffic interception. |
+| [int32_t OH_NetStack_GetPinSetForHostName(const char *hostname, NetStack_CertificatePinning *pin)](#oh_netstack_getpinsetforhostname) | Obtains the certificate lock information. |
+| [int32_t OH_NetStack_GetCertificatesForHostName(const char *hostname, NetStack_Certificates *certs)](#oh_netstack_getcertificatesforhostname) | Obtains the certificate information. |
+| [void OH_Netstack_DestroyCertificatesContent(NetStack_Certificates *certs)](#oh_netstack_destroycertificatescontent) | Releases the certificate content. |
+| [int32_t OH_Netstack_IsCleartextPermitted(bool *isCleartextPermitted)](#oh_netstack_iscleartextpermitted) | Boolean value indicating whether plaintext HTTP is allowed. |
+| [int32_t OH_Netstack_IsCleartextPermittedByHostName(const char *hostname, bool *isCleartextPermitted)](#oh_netstack_iscleartextpermittedbyhostname) | Boolean value indicating whether host name–based plaintext HTTP is allowed. |
+| [int32_t OH_Netstack_IsCleartextCfgByComponent(const char *component, bool *componentCfg)](#oh_netstack_iscleartextcfgbycomponent) | Checks whether plaintext HTTP interception is enabled. |
 | [uint32_t OH_NetStack_CreateAndVerifySortedCertChain(const struct NetStack_CertBlob *cert, size_t certCount, const struct NetStack_CertBlob *caCert, const char *hostname, struct NetStack_CertBlob **outSortedChain, size_t *outSortedCount)](#oh_netstack_createandverifysortedcertchain) | Creates and verifies a sorted certificate chain. |
 | [void OH_NetStack_FreeCertChain(struct NetStack_CertBlob *certChain, size_t certCount)](#oh_netstack_freecertchain) | Frees the certificate chain allocated by OH_NetStack_CreateAndVerifySortedCertChain. |
 
@@ -49,13 +49,13 @@ Provides certificate chain verification APIs for external systems.
 | Parameter | Description |
 | -- | -- |
 | [const struct NetStack_CertBlob](capi-netstack-netstack-certblob.md) *cert | Certificate to be verified. |
-| [const struct NetStack_CertBlob](capi-netstack-netstack-certblob.md) *caCert | CA certificate specified by the user. If this parameter is left blank, the preset certificate is used. |
+| [const struct NetStack_CertBlob](capi-netstack-netstack-certblob.md) *caCert | Certificate specified by the user. If this parameter is left blank, the preset certificate is used forverification. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| uint32_t | 0 - success.<br> 2305001 - Unspecified error.<br> 2305002 - Unable to get issuer certificate.<br> 2305003 - Unable to get certificate revocation list (CRL).<br> 2305004 - Unable to decrypt certificate signature.<br> 2305005 - Unable to decrypt CRL signature.<br> 2305006 - Unable to decode issuer public key.<br> 2305007 - Certificate signature failure.<br> 2305008 - CRL signature failure.<br> 2305009 - Certificate is not yet valid.<br> 2305010 - Certificate has expired.<br> 2305011 - CRL is not yet valid.<br> 2305012 - CRL has expired.<br> 2305023 - Certificate has been revoked.<br> 2305024 - Invalid certificate authority (CA).<br> 2305027 - Certificate is untrusted. |
+| uint32_t | 0: Success.<br>     <br>2305001: Unknown error.<br>     <br>2305002: Failed to obtain the issuer certificate.<br>     <br>2305003: Failed to obtain the certificate revocation list (CRL).<br>     <br>2305004: Failed to decrypt the certificate signature.<br>     <br>2305005: Failed to decrypt the CRL signature.<br>     <br>2305006: Failed to decode the issuer public key.<br>     <br>2305007: Failed to sign the certificate.<br>     <br>2305008: Failed to sign the CRL.<br>     <br>2305009: Certificate not activated.<br>     <br>2305010: Certificate expired.<br>     <br>2305011: CRL not activated.<br>     <br>2305012: CRL expired.<br>     <br>2305023: Certificate revoked.<br>     <br>2305024: Invalid certificate authority (CA).<br>     <br>2305027: Untrusted certificate. |
 
 ### OH_NetStack_GetPinSetForHostName()
 
@@ -65,7 +65,7 @@ int32_t OH_NetStack_GetPinSetForHostName(const char *hostname, NetStack_Certific
 
 **Description**
 
-Gets pin set for hostname.
+Obtains the certificate lock information.
 
 **System capability**: SystemCapability.Communication.NetStack
 
@@ -75,14 +75,14 @@ Gets pin set for hostname.
 
 | Parameter | Description |
 | -- | -- |
-| const char *hostname | Hostname. |
-| [NetStack_CertificatePinning](capi-netstack-netstack-certificatepinning.md) *pin | Certificate lock information. |
+| const char *hostname | Host name. |
+| [NetStack_CertificatePinning](capi-netstack-netstack-certificatepinning.md) *pin | Defines the certificate lock information structure. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0 - Success.<br>         401 - Parameter error.<br>         2305999 - Out of memory. |
+| int32_t | 0: Success.<br>     <br>401: Parameter error.<br>     <br>2305999: Memory error. |
 
 ### OH_NetStack_GetCertificatesForHostName()
 
@@ -92,7 +92,7 @@ int32_t OH_NetStack_GetCertificatesForHostName(const char *hostname, NetStack_Ce
 
 **Description**
 
-Gets certificates for hostname.
+Obtains the certificate information.
 
 **System capability**: SystemCapability.Communication.NetStack
 
@@ -102,14 +102,14 @@ Gets certificates for hostname.
 
 | Parameter | Description |
 | -- | -- |
-| const char *hostname | Hostname. |
-| [NetStack_Certificates](capi-netstack-netstack-certificates.md) *certs | Certificate Information. |
+| const char *hostname | Host name. |
+| [NetStack_Certificates](capi-netstack-netstack-certificates.md) *certs | Defines the certificate information structure. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0 - Success.<br>         401 - Parameter error.<br>         2305999 - Out of memory. |
+| int32_t | 0: Success.<br>     <br>401: Parameter error.<br>     <br>2305999: Memory error. |
 
 ### OH_Netstack_DestroyCertificatesContent()
 
@@ -119,7 +119,7 @@ void OH_Netstack_DestroyCertificatesContent(NetStack_Certificates *certs)
 
 **Description**
 
-Frees content of the certificates.
+Releases the certificate content.
 
 **System capability**: SystemCapability.Communication.NetStack
 
@@ -129,7 +129,7 @@ Frees content of the certificates.
 
 | Parameter | Description |
 | -- | -- |
-| [NetStack_Certificates](capi-netstack-netstack-certificates.md) *certs | Certificate. |
+| [NetStack_Certificates](capi-netstack-netstack-certificates.md) *certs | Represents the certificate information. |
 
 ### OH_Netstack_IsCleartextPermitted()
 
@@ -139,7 +139,7 @@ int32_t OH_Netstack_IsCleartextPermitted(bool *isCleartextPermitted)
 
 **Description**
 
-Checks whether the Cleartext traffic is permitted.
+Boolean value indicating whether plaintext HTTP is allowed.
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -149,13 +149,13 @@ Checks whether the Cleartext traffic is permitted.
 
 | Parameter | Description |
 | -- | -- |
-| bool *isCleartextPermitted | Indicates output parameter,{@code true} if the Cleartext traffic is permitted, {@code false} otherwise. |
+| bool *isCleartextPermitted | Boolean value indicating whether plaintext HTTP is allowed. The value **true** meansthat plaintext HTTP is allowed, and the value **false** means the opposite. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0 - Success.<br>         201 - Permission denied.<br>         401 - Parameter error. |
+| int32_t | 0: Success.<br>     <br>201: Permission denied.<br>     <br>401: Parameter error. |
 
 ### OH_Netstack_IsCleartextPermittedByHostName()
 
@@ -165,7 +165,7 @@ int32_t OH_Netstack_IsCleartextPermittedByHostName(const char *hostname, bool *i
 
 **Description**
 
-Checks whether the Cleartext traffic for a specified hostname is permitted.
+Boolean value indicating whether host name–based plaintext HTTP is allowed.
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -175,14 +175,14 @@ Checks whether the Cleartext traffic for a specified hostname is permitted.
 
 | Parameter | Description |
 | -- | -- |
-| const char *hostname | Indicates the host name. |
-| bool *isCleartextPermitted | Indicates output parameter,{@code true} if the Cleartext traffic for a specified hostname is permitted, {@code false} otherwise. |
+| const char *hostname | Host name. |
+| bool *isCleartextPermitted | Boolean value indicating whether host name–based plaintext HTTP is allowed. The value true** means that host name–based plaintext HTTP is allowed, and the value **false** means the opposite. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0 - Success.<br>         201 - Permission denied.<br>         401 - Parameter error. |
+| int32_t | 0: Success.<br>     <br>201: Permission denied.<br>     <br>401: Parameter error. |
 
 ### OH_Netstack_IsCleartextCfgByComponent()
 
@@ -192,7 +192,7 @@ int32_t OH_Netstack_IsCleartextCfgByComponent(const char *component, bool *compo
 
 **Description**
 
-Checks whether the component is configured for Cleartext traffic interception.
+Checks whether plaintext HTTP interception is enabled.
 
 **Since**: 20
 
@@ -200,14 +200,14 @@ Checks whether the component is configured for Cleartext traffic interception.
 
 | Parameter | Description |
 | -- | -- |
-| const char *component | Indicates the component name. |
-| bool *componentCfg | Indicates output parameter,{@code true} if the component is configured for Cleartext traffic interception, {@code false} otherwise. |
+| const char *component | Component name. The following components are supported: Network Kit and ArkWeb. |
+| bool *componentCfg | Output parameter, which indicates whether plaintext HTTP interception is enabled. The value true** indicates that plaintext HTTP interception is enabled, and the value **false** indicates the opposite. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0 - Success.<br>         2100001 - Invalid parameter value. |
+| int32_t | 0: Success.<br>     <br>2100001: Invalid parameter value. |
 
 ### OH_NetStack_CreateAndVerifySortedCertChain()
 

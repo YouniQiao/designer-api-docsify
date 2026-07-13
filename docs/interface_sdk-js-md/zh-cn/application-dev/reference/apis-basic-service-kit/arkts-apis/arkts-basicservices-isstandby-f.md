@@ -30,8 +30,8 @@ function isStandby(): boolean
 try {
     let isStandby = power.isStandby();
     console.info('device is in standby: ' + isStandby);
-} catch(err) {
-    console.error('check isStandby failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to check isStandby. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

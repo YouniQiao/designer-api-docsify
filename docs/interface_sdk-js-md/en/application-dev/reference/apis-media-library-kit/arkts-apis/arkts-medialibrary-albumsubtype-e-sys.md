@@ -1,6 +1,6 @@
 # AlbumSubtype
 
-Album subtype
+Enumerate the album subtypes.
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ Album subtype
 HIDDEN
 ```
 
-Hidden album, which assets are marked as hidden.
+Hidden album.
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ Hidden album, which assets are marked as hidden.
 TRASH
 ```
 
-Trash album, which assets are deleted.
+Trash.
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ Trash album, which assets are deleted.
 SCREENSHOT
 ```
 
-Screenshot album
+Album for screenshots and screen recording files.
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ Screenshot album
 CAMERA
 ```
 
-Camera album
+Album for photos and videos taken by the camera.
 
 **Since:** 12
 
@@ -68,7 +68,7 @@ Camera album
 SOURCE_GENERIC = 2049
 ```
 
-Source album
+Source album.
 
 **Since:** 12
 
@@ -82,7 +82,7 @@ Source album
 CLASSIFY = 4097
 ```
 
-Classify album
+Classified album.
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ Classify album
 GEOGRAPHY_LOCATION = 4099
 ```
 
-Location album
+Geographic location album.
 
 **Since:** 12
 
@@ -110,7 +110,7 @@ Location album
 GEOGRAPHY_CITY
 ```
 
-City album
+City album.
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ City album
 SHOOTING_MODE
 ```
 
-ShootingMode album
+Shooting mode album.
 
 **Since:** 12
 
@@ -138,7 +138,7 @@ ShootingMode album
 PORTRAIT
 ```
 
-Portrait album
+Portrait album.
 
 **Since:** 12
 
@@ -152,7 +152,7 @@ Portrait album
 GROUP_PHOTO
 ```
 
-Group photo album
+Group photo album.
 
 **Since:** 12
 
@@ -166,7 +166,7 @@ Group photo album
 HIGHLIGHT = 4104
 ```
 
-Highlight album
+Highlights album.
 
 **Since:** 12
 
@@ -180,7 +180,7 @@ Highlight album
 HIGHLIGHT_SUGGESTIONS
 ```
 
-Highlight suggestions album
+Highlights suggestion album.
 
 **Since:** 12
 

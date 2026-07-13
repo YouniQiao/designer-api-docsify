@@ -1,6 +1,6 @@
 # NotificationClassification（系统接口）
 
-描述通知分类信息。
+通知分类信息。
 
 **起始版本：** 26.0.0
 

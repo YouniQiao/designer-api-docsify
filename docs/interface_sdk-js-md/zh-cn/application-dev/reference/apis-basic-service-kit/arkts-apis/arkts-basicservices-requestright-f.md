@@ -34,7 +34,7 @@ function requestRight(deviceName: string): Promise<boolean>
 **示例：**
 
 ```TypeScript
-function requestRight() {
+async function requestRight() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
@@ -42,10 +42,10 @@ function requestRight() {
   }
 
   let device: usbManager.USBDevice = devicesList?.[0];
-  usbManager.requestRight(device.name).then(ret => {
+  await usbManager.requestRight(device.name).then(ret => {
     console.info(`requestRight = ${ret}`);
   }).catch((error: BusinessError) => {
-    console.error(`requestRight failed : ${error}`);
+    console.error(`Failed to request right. Code: ${error.code}, message: ${error.message}`);
   });
 }
 

@@ -35,9 +35,10 @@ function cancelSerialRight(portId: number): void
 ```TypeScript
 import { JSON } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // 获取串口列表
-function cancelSerialRight() {
+function cancelSerialRightExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {
@@ -56,6 +57,8 @@ function cancelSerialRight() {
       } else {
         console.info('grant permission successfully');
       }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to request serial right. Code: ${err.code}, message: ${err.message}`);
     });
   }
 
@@ -64,7 +67,8 @@ function cancelSerialRight() {
     serialManager.cancelSerialRight(portId);
     console.info('cancelSerialRight success, portId: ', portId);
   } catch (error) {
-    console.error('cancelSerialRight error, ', JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to cancel serial right. Code: ${err.code}, message: ${err.message}`);
   }
 }
 

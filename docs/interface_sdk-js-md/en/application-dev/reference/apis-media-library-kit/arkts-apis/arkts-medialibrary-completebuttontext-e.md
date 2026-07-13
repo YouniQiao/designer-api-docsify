@@ -1,6 +1,6 @@
 # CompleteButtonText
 
-Enum: complete button text
+Enumerates the text displayed on the complete button.
 
 **Since:** 14
 
@@ -12,7 +12,7 @@ Enum: complete button text
 TEXT_DONE = 0
 ```
 
-Complete button text: done
+The text "Done" is displayed.
 
 **Since:** 14
 
@@ -26,7 +26,7 @@ Complete button text: done
 TEXT_SEND = 1
 ```
 
-Complete button text: send
+The text "Send" is displayed.
 
 **Since:** 14
 
@@ -40,7 +40,7 @@ Complete button text: send
 TEXT_ADD = 2
 ```
 
-Complete button text: add
+The text "Add" is displayed.
 
 **Since:** 14
 

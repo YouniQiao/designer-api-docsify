@@ -43,7 +43,9 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
+  // 设置要启用的卡槽ID
   let slotId: number = 0;
+  // 启用指定卡槽的SIM卡
   telephonyManager.setSimEnabled(wantTemp, slotId);
   console.info(`Succeeded in setting slotId: ${slotId} enabled.`);
 } catch (err) {

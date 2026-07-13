@@ -1,6 +1,6 @@
 # CoverUriSource (System API)
 
-Enumerates the source types of cover URIs.
+Enumerates the sources of the album covers.
 
 **Since:** 20
 

@@ -31,7 +31,9 @@ function isAppUid(v: number): boolean
 **示例：**
 
 ```TypeScript
-let result = process.isAppUid(688);
+// uid通过process.uid获取
+let pres = process.uid;
+let result = process.isAppUid(pres);
 
 ```
 

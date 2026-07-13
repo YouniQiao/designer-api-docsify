@@ -42,7 +42,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 设置鼠标指针大小
+            // 设置鼠标光标大小
             pointer.setPointerSize(1, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

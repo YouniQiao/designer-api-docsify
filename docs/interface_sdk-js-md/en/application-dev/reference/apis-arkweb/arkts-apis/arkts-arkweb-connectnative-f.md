@@ -26,7 +26,7 @@ Connects the current ability to the specified web native message extension abili
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIAbilityContext | Yes | Context of the web native message extension. |
+| context | UIAbilityContext | Yes | Context of the caller UIAbility. |
 | want | Want | Yes | Want information about the target ability. |
 | callback | WebExtensionConnectionCallback | Yes | Callback object of the WebExtensionConnection status. |
 

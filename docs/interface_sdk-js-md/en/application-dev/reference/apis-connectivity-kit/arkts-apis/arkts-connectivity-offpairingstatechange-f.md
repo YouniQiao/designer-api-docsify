@@ -1,5 +1,11 @@
 # offPairingStateChange
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
+
 ## offPairingStateChange
 
 ```TypeScript

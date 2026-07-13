@@ -32,19 +32,19 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 import Base from '@ohos.base';
 
 // 发布公共事件回调
-function publishCB(err:Base.BusinessError) {
+let publishCallBack = (err:Base.BusinessError) => {
     if (err.code) {
-        console.error(`publishAsUser failed, code is ${err.code}`);
+        console.error(`Failed to publishAsUser. Code: ${err.code}, message: ${err.message}`);
     } else {
-        console.info("publishAsUser");
+        console.info('publishAsUser');
     }
 }
 
 // 指定发送的用户
-let userId = 100;
+const userId = 100;
 
 // 发布公共事件
-commonEvent.publishAsUser("event", userId, publishCB);
+commonEvent.publishAsUser('event', userId, publishCallBack);
 
 ```
 
@@ -89,16 +89,16 @@ import CommonEventManager from '@ohos.commonEventManager';
 
 // 公共事件相关信息
 let options:CommonEventManager.CommonEventPublishData = {
-    code: 0,             // 公共事件的初始代码
-    data: "initial data",// 公共事件的初始数据
-}
+    code: 0,              // 公共事件的初始代码
+    data: 'initial data', // 公共事件的初始数据
+};
 
 // 发布公共事件回调
-function publishCB(err:Base.BusinessError) {
+let publishCallBack = (err:Base.BusinessError) => {
     if (err.code) {
-        console.error(`publishAsUser failed, code is ${err.code}`);
+        console.error(`Failed to publishAsUser. Code: ${err.code}, message: ${err.message}`);
     } else {
-        console.info("publishAsUser");
+        console.info('publishAsUser');
     }
 }
 
@@ -106,7 +106,7 @@ function publishCB(err:Base.BusinessError) {
 let userId = 100;
 
 // 发布公共事件
-commonEvent.publishAsUser("event", userId, options, publishCB);
+commonEvent.publishAsUser('event', userId, options, publishCallBack);
 
 ```
 

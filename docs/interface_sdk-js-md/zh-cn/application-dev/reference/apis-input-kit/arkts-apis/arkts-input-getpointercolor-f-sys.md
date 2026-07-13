@@ -41,7 +41,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 获取鼠标指针颜色
+            // 获取鼠标光标颜色
             pointer.getPointerColor((error: BusinessError, color: number) => {
               if (error) {
                 console.error(`Failed to get pointer color, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

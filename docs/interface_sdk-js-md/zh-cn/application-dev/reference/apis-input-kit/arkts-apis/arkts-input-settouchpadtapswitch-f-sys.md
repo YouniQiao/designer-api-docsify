@@ -42,7 +42,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 设置触摸板点击开关
+            // 设置触控板点击开关
             pointer.setTouchpadTapSwitch(true, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set touchpad tap switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

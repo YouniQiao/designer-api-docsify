@@ -38,15 +38,14 @@ Creates a PixelMap object from surface id.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-function CreatePixelMapFromSurfaceSync(surfaceId: string) {
+function createPixelMapFromSurfaceSync(surfaceId: string) {
   let region: image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
   try {
     let pixelMap: image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId, region);
-    console.info('Succeeded in creating PixelMap from Surface.');
-    return pixelMap;
+    console.info('Succeeded in creating the PixelMap from Surface.');
   } catch (e) {
-    const error = e as BusinessError;
-    console.error(`Failed to create PixelMap. Code is ${error.code}, message is ${error.message}`);
+    const err = e as BusinessError;
+    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
   }
 }
 
@@ -90,14 +89,13 @@ Creates a PixelMap object from surface id.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-function CreatePixelMapFromSurfaceSync(surfaceId: string) {
+function createPixelMapFromSurfaceSync(surfaceId: string) {
   try {
     let pixelMap: image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId);
-    console.info('Succeeded in creating PixelMap from Surface.');
-    return pixelMap;
+    console.info('Succeeded in creating the PixelMap from Surface.');
   } catch (e) {
-    const error = e as BusinessError;
-    console.error(`Failed to create PixelMap. Code is ${error.code}, message is ${error.message}`);
+    const err = e as BusinessError;
+    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
   }
 }
 

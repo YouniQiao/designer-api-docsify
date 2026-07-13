@@ -1,6 +1,6 @@
 # AlbumChangeData
 
-Defines the album change data.
+Describes the change data of an album.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 version: number
 ```
 
-Version of the album information. It is used to determine the sequence of notifications.
+Version number of the album notification, which is used to determine the order of notifications.
 
 **Type:** number
 

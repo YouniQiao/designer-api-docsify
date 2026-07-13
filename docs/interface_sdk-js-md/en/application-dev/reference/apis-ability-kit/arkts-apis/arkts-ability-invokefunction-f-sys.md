@@ -15,7 +15,7 @@ function invokeFunction(functionNamespace: string, functionName: string,
 
 Invoke a function by functionNamespace and functionName.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_FUNCTION
 

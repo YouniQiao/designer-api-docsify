@@ -41,7 +41,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 获取触摸板滚动开关
+            // 获取触控板滚动开关
             pointer.getTouchpadScrollSwitch((error: BusinessError, state: boolean) => {
               if (error) {
                 console.error(`Failed to get touchpad scroll switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

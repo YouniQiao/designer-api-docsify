@@ -27,7 +27,7 @@ import { JSON } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
 
 // 获取串口设备清单 
-function getPortList() {
+function getPortListExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {

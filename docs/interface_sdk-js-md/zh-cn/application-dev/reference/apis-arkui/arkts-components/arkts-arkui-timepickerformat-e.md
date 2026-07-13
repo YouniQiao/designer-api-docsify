@@ -9,7 +9,7 @@
 ## HOUR_MINUTE
 
 ```TypeScript
-HOUR_MINUTE = 0
+HOUR_MINUTE
 ```
 
 按照小时和分钟进行显示。
@@ -25,7 +25,7 @@ HOUR_MINUTE = 0
 ## HOUR_MINUTE_SECOND
 
 ```TypeScript
-HOUR_MINUTE_SECOND = 1
+HOUR_MINUTE_SECOND
 ```
 
 Hour and minute and second

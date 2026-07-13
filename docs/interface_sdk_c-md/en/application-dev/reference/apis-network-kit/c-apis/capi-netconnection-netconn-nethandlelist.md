@@ -6,7 +6,7 @@ typedef struct NetConn_NetHandleList {...} NetConn_NetHandleList
 
 ## Overview
 
-Defines the network handle list.
+Defines the network list.
 
 **Since**: 11
 
@@ -21,6 +21,6 @@ Defines the network handle list.
 | Name | Description |
 | -- | -- |
 | [NetConn_NetHandle](capi-netconnection-netconn-nethandle.md) netHandles[NETCONN_MAX_NET_SIZE] | Network handle list |
-| int32_t netHandleListSize | Actual size of the network handle list |
+| int32_t netHandleListSize | Actual size of the network handle list. |
 
 

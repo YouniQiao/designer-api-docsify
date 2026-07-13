@@ -105,7 +105,7 @@ struct Index {
             inputDevice.getKeyboardRepeatDelay().then((delay: number) => {
               console.info(`Succeeded in getting keyboard repeat delay.`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to get keyboard, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Failed to get keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
           } catch (error) {
             console.error(`Failed to get keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

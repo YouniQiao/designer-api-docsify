@@ -6,7 +6,7 @@ typedef struct OH_MovingPhoto OH_MovingPhoto
 
 ## Overview
 
-Define Moving PhotoThis structure provides the ability to obtain information about moving photo.
+The struct describes a moving photo.
 
 **Since**: 13
 

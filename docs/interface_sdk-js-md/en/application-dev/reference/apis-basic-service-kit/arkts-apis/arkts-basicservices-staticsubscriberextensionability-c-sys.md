@@ -41,11 +41,11 @@ Represents a callback of the common event of a static subscriber.
 ```TypeScript
 import { commonEventManager } from '@kit.BasicServicesKit';
 
-  class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
-      onReceiveEvent(event: commonEventManager.CommonEventData) {
-          console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
-      }
+class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
+  onReceiveEvent(event: commonEventManager.CommonEventData) {
+    console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
   }
+}
 
 ```
 

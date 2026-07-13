@@ -1,5 +1,11 @@
 # createPort
 
+## Modules to Import
+
+```TypeScript
+import { dataTransfer } from '@kit.ConnectivityKit';
+```
+
 ## createPort
 
 ```TypeScript

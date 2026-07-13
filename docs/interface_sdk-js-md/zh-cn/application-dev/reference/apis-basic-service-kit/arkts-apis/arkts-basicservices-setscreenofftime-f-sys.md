@@ -37,8 +37,8 @@ function setScreenOffTime(timeout: number): void
 ```TypeScript
 try {
     power.setScreenOffTime(30000);
-} catch(err) {
-    console.error('set screen off time failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to set screen off time. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

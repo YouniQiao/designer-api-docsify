@@ -45,9 +45,10 @@ function writeSync(portId: number, buffer: Uint8Array, timeout?: number): number
 import { JSON } from '@kit.ArkTS';
 import { buffer } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // 获取串口列表
-function writeSync() {
+function writeSyncExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {
@@ -66,6 +67,8 @@ function writeSync() {
       } else {
         console.info('grant permission successfully');
       }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to request serial right. Code: ${err.code}, message: ${err.message}`);
     });
   }
 
@@ -74,7 +77,8 @@ function writeSync() {
     serialManager.open(portId)
     console.info('open usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('open usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to open usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 
   // 同步写入
@@ -83,7 +87,8 @@ function writeSync() {
     serialManager.writeSync(portId, writeSyncBuffer, 2000);
     console.info('writeSync usbSerial success, writeSyncBuffer: ' + writeSyncBuffer.toString());
   } catch (error) {
-    console.error('writeSync usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to writeSync usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
   
   // 关闭串口
@@ -91,7 +96,8 @@ function writeSync() {
     serialManager.close(portId);
     console.info('close usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('close usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to close usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 }
 

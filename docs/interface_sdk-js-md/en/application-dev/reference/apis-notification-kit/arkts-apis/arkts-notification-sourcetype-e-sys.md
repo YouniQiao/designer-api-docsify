@@ -1,6 +1,6 @@
 # SourceType (System API)
 
-Notification source type.
+Defines the notification source type.
 
 **Since:** 9
 

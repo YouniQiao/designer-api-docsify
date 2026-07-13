@@ -29,10 +29,10 @@ function getFreeSize(): Promise<number>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getFreeSize().then((number: number) => {
-  console.info("getFreeSize successfully:" + JSON.stringify(number));
+storageStatistics.getFreeSize().then((freeSize: number) => {
+  console.info('getFreeSize successfully:' + freeSize);
 }).catch((err: BusinessError) => {
-  console.error("getFreeSize failed with error:" + JSON.stringify(err));
+  console.error(`getFreeSize failed. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

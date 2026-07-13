@@ -46,8 +46,10 @@ let wantTemp: Want = {
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
+// 设置要启用的卡槽ID
 let slotId: number = 0;
 try {
+  // 启用指定卡槽的SIM卡
   telephonyManager.activeSim(wantTemp, slotId);
   console.info(`success to active SIM`);
 } catch (err) {

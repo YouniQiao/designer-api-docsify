@@ -48,14 +48,14 @@ let param: usbManager.USBControlParams = {
   data: new Uint8Array(18)
 };
 
-function controlTransfer() {
+async function controlTransfer() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
     return;
   }
 
-  usbManager.requestRight(devicesList[0].name);
+  await usbManager.requestRight(devicesList[0].name);
   let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList[0]);
   usbManager.controlTransfer(devicepipe, param).then((ret: number) => {
   console.info(`controlTransfer = ${ret}`);

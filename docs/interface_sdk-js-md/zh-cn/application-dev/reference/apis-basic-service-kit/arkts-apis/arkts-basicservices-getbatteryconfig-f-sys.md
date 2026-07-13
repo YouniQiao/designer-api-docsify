@@ -42,7 +42,7 @@ import {batteryInfo} from '@kit.BasicServicesKit';
 let sceneName = 'xxx';
 let result = batteryInfo.getBatteryConfig(sceneName);
 
-console.info("The result is: " + result);
+console.info('The result is: ' + result);
 
 ```
 

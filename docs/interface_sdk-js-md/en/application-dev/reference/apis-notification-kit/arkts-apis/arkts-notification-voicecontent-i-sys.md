@@ -1,6 +1,6 @@
 # VoiceContent (System API)
 
-Describes the generated voice content for notification.
+Returns the notification voice broadcast content.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ Describes the generated voice content for notification.
 readonly textContent?: string
 ```
 
-The voice content text for audio playback.
+Text voice broadcast content.
 
 **Type:** string
 

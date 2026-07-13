@@ -2,7 +2,7 @@
 
 Enum for sports type
 
-**Since:** 22
+**Since:** 18
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -14,37 +14,37 @@ RUNNING = 1
 
 Indicates running.
 
-**Since:** 22
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Location.Location.Core
 
 ## WALKING
 
 ```TypeScript
-WALKING
+WALKING = 2
 ```
 
 Indicates walking.
 
-**Since:** 22
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Location.Location.Core
 
 ## CYCLING
 
 ```TypeScript
-CYCLING
+CYCLING = 3
 ```
 
 Indicates cycling.
 
-**Since:** 22
+**Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Location.Location.Core
 

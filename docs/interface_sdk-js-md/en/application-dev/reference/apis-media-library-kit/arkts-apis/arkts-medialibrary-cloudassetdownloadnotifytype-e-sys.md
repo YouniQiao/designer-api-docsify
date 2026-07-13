@@ -1,6 +1,6 @@
 # CloudAssetDownloadNotifyType (System API)
 
-Enumerates download cloud asset event type.
+Enumerates the types of events reported during a cloud asset download.
 
 **Since:** 21
 
@@ -14,7 +14,7 @@ Enumerates download cloud asset event type.
 DOWNLOAD_PROGRESS = 0
 ```
 
-Progress info event
+Fired when download progress is updated.
 
 **Since:** 21
 
@@ -28,7 +28,7 @@ Progress info event
 DOWNLOAD_FINISHED = 1
 ```
 
-Download finish event
+Fired when a download completes successfully.
 
 **Since:** 21
 
@@ -42,7 +42,7 @@ Download finish event
 DOWNLOAD_FAILED = 2
 ```
 
-Download failed event
+Fired when a download fails.
 
 **Since:** 21
 
@@ -56,7 +56,7 @@ Download failed event
 DOWNLOAD_ASSET_DELETED = 3
 ```
 
-Download asset is deleted event
+Fired when a downloaded asset is deleted.
 
 **Since:** 21
 
@@ -70,7 +70,7 @@ Download asset is deleted event
 DOWNLOAD_AUTO_PAUSED = 4
 ```
 
-Download asset auto pause event
+Fired when the system automatically pauses a download.
 
 **Since:** 21
 
@@ -84,7 +84,7 @@ Download asset auto pause event
 DOWNLOAD_AUTO_RESUMED = 5
 ```
 
-Download asset auto resume event
+Fired when the system automatically resumes a download.
 
 **Since:** 21
 
@@ -98,7 +98,7 @@ Download asset auto resume event
 DOWNLOAD_REFRESHED = 6
 ```
 
-Many Download assets status changed event
+Fired when the download status is refreshed.
 
 **Since:** 21
 

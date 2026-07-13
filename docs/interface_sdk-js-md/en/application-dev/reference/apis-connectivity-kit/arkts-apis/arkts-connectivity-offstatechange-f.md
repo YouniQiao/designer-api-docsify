@@ -1,5 +1,11 @@
 # offStateChange
 
+## Modules to Import
+
+```TypeScript
+import { manager } from '@kit.ConnectivityKit';
+```
+
 ## offStateChange
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # PhotoAsset
 
-Defines the photo asset
+Provides APIs for encapsulating file asset attributes.
 
 **Inheritance/Implementation:** PhotoAsset extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md)
 
@@ -34,14 +34,14 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns void |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **Example**
@@ -92,7 +92,7 @@ Converts a Sendable PhotoAsset object to a non-Sendable PhotoAsset object.
 
 | Type | Description |
 | --- | --- |
-| photoAccessHelper.PhotoAsset | Returns the instance if the operation is successful. |
+| photoAccessHelper.PhotoAsset | [PhotoAsset](arkts-file-photoaccesshelper.md) ofthe non-Sendable type. |
 
 **Error codes:**
 
@@ -134,7 +134,7 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 get(member: string): photoAccessHelper.MemberType
 ```
 
-Obtains a PhotoAsset member parameter.
+Obtains a **PhotoAsset** member parameter.
 
 **Since:** 12
 
@@ -144,19 +144,19 @@ Obtains a PhotoAsset member parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| member | string | Yes | Name of the member parameter to obtain.Except 'uri', 'media_type', 'subtype', and 'display_name', you must pass in PhotoKeys in fetchColumns.For example, to obtain the title, pass in fetchColumns: ['title']. |
+| member | string | Yes | Name of the member parameter to obtain.<br>Except **'uri'**, **'media_type'**, **'subtype'**, and **'display_name'**, you must pass in[PhotoKeys](arkts-medialibrary-photokeys-e.md) in **fetchColumns**. For example,to obtain the title, pass in **fetchColumns: ['title']**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| photoAccessHelper.MemberType | Returns the value of the specified photo asset member |
+| photoAccessHelper.MemberType | **PhotoAsset** member parameter obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 
 **Example**
 
@@ -214,14 +214,14 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Returns the thumbnail's pixelMap. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the PixelMap of the thumbnail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **Example**
@@ -264,7 +264,7 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 set(member: string, value: string): void
 ```
 
-Sets a PhotoAsset member parameter.
+Sets a **PhotoAsset** member parameter.
 
 **Since:** 12
 
@@ -274,14 +274,14 @@ Sets a PhotoAsset member parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| member | string | Yes | Name of the parameter to set, for example, PhotoKeys.TITLE.The value contains 1 to 255 characters. |
-| value | string | Yes | Value to set. Only the value of PhotoKeys. TITLE can be changed.The title must meet the following requirements:- It does not contain a file name extension.- The file name, which is in the format of title+file name extension, does not exceed 255 characters.- The title does not contain any of the following characters:\ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| member | string | Yes | Name of the parameter to set, for example,[PhotoKeys](arkts-medialibrary-photokeys-e.md).TITLE. The string length rangesfrom 1 to 255. |
+| value | string | Yes | Value to set. Only the value of[PhotoKeys](arkts-medialibrary-photokeys-e.md).TITLE can be changed. The titlemust meet the following requirements:<br>- It must not contain a file name extension.<br>- The string length ranges from 1 to 255. (The asset file name is in the format of title + file nameextension.)<br>- It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 
 **Example**
 

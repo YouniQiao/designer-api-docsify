@@ -35,11 +35,11 @@ onReceiveEvent(event: CommonEventData): void
 ```TypeScript
 import { commonEventManager } from '@kit.BasicServicesKit';
 
-  class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
-      onReceiveEvent(event: commonEventManager.CommonEventData) {
-          console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
-      }
+class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
+  onReceiveEvent(event: commonEventManager.CommonEventData) {
+    console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
   }
+}
 
 ```
 

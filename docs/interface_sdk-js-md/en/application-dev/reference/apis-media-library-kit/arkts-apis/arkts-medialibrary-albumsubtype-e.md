@@ -1,6 +1,6 @@
 # AlbumSubtype
 
-Album subtype
+Enumerate the album subtypes.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Favorites.
 VIDEO
 ```
 
-Video album, which contains all video assets.
+Video album.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ Video album, which contains all video assets.
 IMAGE = 1031
 ```
 
-Image album
+Photo album.
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ Image album
 ANY = 2147483647
 ```
 
-Any album
+Any album.
 
 **Since:** 12
 

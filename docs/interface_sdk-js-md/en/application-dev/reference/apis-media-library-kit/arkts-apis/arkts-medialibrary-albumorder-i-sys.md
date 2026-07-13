@@ -1,6 +1,6 @@
 # AlbumOrder (System API)
 
-Defines the album sorting information.
+Describes the album sorting order.
 
 **Since:** 20
 
@@ -20,7 +20,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 albumId: number
 ```
 
-The album id of album asset.
+Album ID.
 
 **Type:** number
 
@@ -36,7 +36,7 @@ The album id of album asset.
 albumOrder: number
 ```
 
-The album order of album asset.
+Sorting value of the album.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ The album order of album asset.
 orderSection: number
 ```
 
-The order section of album asset.
+Sorting section of the album.
 
 **Type:** number
 
@@ -68,7 +68,7 @@ The order section of album asset.
 orderStatus: number
 ```
 
-The order status of album asset.
+Sorting status of the album.
 
 **Type:** number
 
@@ -84,7 +84,7 @@ The order status of album asset.
 orderType: number
 ```
 
-The order type of album asset.
+Sorting type of the album.
 
 **Type:** number
 

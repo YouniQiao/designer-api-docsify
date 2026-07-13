@@ -32,7 +32,7 @@ function createSubscriber(
 import Base from '@ohos.base';
 import CommonEventManager from '@ohos.commonEventManager';
 
-let subscriber:CommonEventManager.CommonEventSubscriber; // 用于保存创建成功的订阅者对象，后续使用其完成订阅及退订的动作
+let subscriber:CommonEventManager.CommonEventSubscriber; // 用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
 
 // 订阅者信息
 let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
@@ -40,9 +40,9 @@ let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
 };
 
 // 创建订阅者回调
-function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) {
+let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
     if (err.code) {
-        console.error(`createSubscriber failed, code is ${err.code}`);
+        console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("createSubscriber");
         subscriber = commonEventSubscriber;
@@ -50,7 +50,7 @@ function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManag
 }
 
 // 创建订阅者
-commonEvent.createSubscriber(subscribeInfo, createCB);
+commonEvent.createSubscriber(subscribeInfo, createCallBack);
 
 ```
 
@@ -89,7 +89,7 @@ function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<Comm
 import Base from '@ohos.base';
 import CommonEventManager from '@ohos.commonEventManager';
 
-let subscriber:CommonEventManager.CommonEventSubscriber; // 用于保存创建成功的订阅者对象，后续使用其完成订阅及退订的动作
+let subscriber:CommonEventManager.CommonEventSubscriber; // 用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
 
 // 订阅者信息
 let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
@@ -101,7 +101,7 @@ commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEv
     console.info("createSubscriber");
     subscriber = commonEventSubscriber;
 }).catch((err:Base.BusinessError) => {
-    console.error(`createSubscriber failed, code is ${err.code}`);
+    console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
 });
 
 ```

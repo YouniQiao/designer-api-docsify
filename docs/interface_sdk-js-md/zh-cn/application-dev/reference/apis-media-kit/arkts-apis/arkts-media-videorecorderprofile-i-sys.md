@@ -1,6 +1,6 @@
 # VideoRecorderProfile（系统接口）
 
-Provides the video recorder profile definitions.
+视频录制配置参数定义。
 
 **起始版本：** 9
 
@@ -14,7 +14,7 @@ Provides the video recorder profile definitions.
 readonly audioBitrate: number
 ```
 
-Indicates the audio bit rate, in bit/s.
+音频比特率，单位为bit/s。
 
 **类型：** number
 
@@ -30,7 +30,7 @@ Indicates the audio bit rate, in bit/s.
 readonly audioChannels: number
 ```
 
-Indicates the number of audio channels.
+音频声道数。
 
 **类型：** number
 
@@ -46,7 +46,7 @@ Indicates the number of audio channels.
 readonly audioCodec: CodecMimeType
 ```
 
-Indicates the audio encoding format.
+音频编码格式。
 
 **类型：** CodecMimeType
 
@@ -62,7 +62,7 @@ Indicates the audio encoding format.
 readonly audioSampleRate: number
 ```
 
-Indicates the audio sampling rate, in Hz.
+音频采样率，单位为Hz。
 
 **类型：** number
 
@@ -78,7 +78,7 @@ Indicates the audio sampling rate, in Hz.
 readonly fileFormat: ContainerFormatType
 ```
 
-Indicates the output file format.
+输出文件格式。
 
 **类型：** ContainerFormatType
 
@@ -94,7 +94,7 @@ Indicates the output file format.
 readonly videoBitrate: number
 ```
 
-Indicates the video bit rate, in bit/s.
+视频比特率，单位为bit/s。
 
 **类型：** number
 
@@ -110,7 +110,7 @@ Indicates the video bit rate, in bit/s.
 readonly videoCodec: CodecMimeType
 ```
 
-Indicates the video encoding format.
+视频编码格式。
 
 **类型：** CodecMimeType
 
@@ -126,7 +126,7 @@ Indicates the video encoding format.
 readonly videoFrameHeight: number
 ```
 
-Indicates the video height, in px.
+视频高度，单位为像素（px）。
 
 **类型：** number
 
@@ -142,7 +142,7 @@ Indicates the video height, in px.
 readonly videoFrameRate: number
 ```
 
-Indicates the video frame rate, in fps.
+视频帧率，单位为fps。
 
 **类型：** number
 
@@ -158,7 +158,7 @@ Indicates the video frame rate, in fps.
 readonly videoFrameWidth: number
 ```
 
-Indicates the video width, in px.
+视频宽度，单位为像素（px）。
 
 **类型：** number
 

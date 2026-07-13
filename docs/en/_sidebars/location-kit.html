@@ -1,6 +1,6 @@
 <div class="tree-section">
   <details>
-    <summary class="tree-section-label">ArkTS API <span class="tree-count">(145)</span></summary>
+    <summary class="tree-section-label">ArkTS API <span class="tree-count">(160)</span></summary>
     <ul class="tree-l1">
 <li class="has-children"><details>
 <summary>@ohos.app.ability.FenceExtensionAbility <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-app-ability-fenceextensionability.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
@@ -18,6 +18,7 @@
 <summary>@ohos.geoLocationManager <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-geolocationmanager.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l2">
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-addbeaconfence-f.md">addBeaconFence</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-addfusionfence-f-sys.md">addFusionFence(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-addgnssgeofence-f.md">addGnssGeofence</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-disablelocation-f-sys.md">disableLocation(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-disablelocationbyuserid-f-sys.md">disableLocationByUserId(system api)</a></li>
@@ -46,6 +47,7 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-getpostprocessingtrack-f.md">getPostProcessingTrack</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-isbeaconfencesupported-f.md">isBeaconFenceSupported</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-iscachedgnssservicesupported-f.md">isCachedGnssServiceSupported</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-isfusionfencesupported-f-sys.md">isFusionFenceSupported(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-isgeocoderavailable-f.md">isGeocoderAvailable</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-isgnssfenceservicesupported-f.md">isGnssFenceServiceSupported</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-isgnssservicesupported-f.md">isGnssServiceSupported</a></li>
@@ -61,6 +63,7 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-on-f-sys.md">on(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-onlocationchange-f.md">onLocationChange</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-removebeaconfence-f.md">removeBeaconFence</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-removefusionfence-f-sys.md">removeFusionFence(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-removegnssgeofence-f.md">removeGnssGeofence</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-sendcommand-f.md">sendCommand</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-setlocationprivacyconfirmstatus-f-sys.md">setLocationPrivacyConfirmStatus(system api)</a></li>
@@ -74,8 +77,9 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-beaconmanufacturedata-i.md">BeaconManufactureData</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-bluetoothscaninfo-i-sys.md">BluetoothScanInfo(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-bluetoothscanresult-i.md">BluetoothScanResult</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-bluetoothsearchrequest-i.md">BluetoothSearchRequest</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-bluetoothsearchrequestparams-i.md">BluetoothSearchRequestParams</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-cachedgnsslocationsrequest-i.md">CachedGnssLocationsRequest</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-cellfence-i-sys.md">CellFence(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-cellinfo-i-sys.md">CellInfo(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-continuouslocationrequest-i.md">ContinuousLocationRequest</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-continuouslocationrequest-i-sys.md">ContinuousLocationRequest(system api)</a></li>
@@ -83,32 +87,42 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-currentlocationrequest-i.md">CurrentLocationRequest</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-districtinfo-i.md">DistrictInfo</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-districtrequestparams-i.md">DistrictRequestParams</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-fusionfencerequestparams-i-sys.md">FusionFenceRequestParams(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-fusionfencetransition-i-sys.md">FusionFenceTransition(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-geoaddress-i.md">GeoAddress</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-geoaddress-i-sys.md">GeoAddress(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-geocoderequest-i.md">GeoCodeRequest</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-geofence-i.md">Geofence</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-geofencerequest-i.md">GeofenceRequest</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-geofencetransition-i.md">GeofenceTransition</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-gnssfence-i-sys.md">GnssFence(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-gnssgeofencerequest-i.md">GnssGeofenceRequest</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-locatingrequireddata-i-sys.md">LocatingRequiredData(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-locatingrequireddataconfig-i-sys.md">LocatingRequiredDataConfig(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-location-i.md">Location</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-location-i-sys.md">Location(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-locationcommand-i.md">LocationCommand</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-locationmockconfig-i-sys.md">LocationMockConfig(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-locationrequest-i.md">LocationRequest</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-matchingwlaninfo-i.md">MatchingWlanInfo</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-poi-i.md">Poi</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-poiinfo-i.md">PoiInfo</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-point-i.md">Point</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-reversegeocoderequest-i.md">ReverseGeoCodeRequest</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-reversegeocodingmockinfo-i-sys.md">ReverseGeocodingMockInfo(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-satellitestatusinfo-i.md">SatelliteStatusInfo</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-singlelocationrequest-i.md">SingleLocationRequest</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-wififence-i-sys.md">WifiFence(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-wifiscaninfo-i-sys.md">WifiScanInfo(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-wirelesssignalfeature-i-sys.md">WirelessSignalFeature(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-beaconfenceinfotype-e.md">BeaconFenceInfoType</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-coordinatesystemtype-e.md">CoordinateSystemType</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-countrycodetype-e.md">CountryCodeType</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-fusionfencescene-e-sys.md">FusionFenceScene(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-fusionfencetype-e-sys.md">FusionFenceType(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-geofencetransitionevent-e.md">GeofenceTransitionEvent</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-geofencetransitionevent-e-sys.md">GeofenceTransitionEvent(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-gnssfencetype-e-sys.md">GnssFenceType(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-locatingpriority-e.md">LocatingPriority</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-locatingrequireddatatype-e-sys.md">LocatingRequiredDataType(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-locationerror-e.md">LocationError</a></li>
@@ -122,6 +136,7 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-satelliteconstellationcategory-e.md">SatelliteConstellationCategory</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-sportstype-e.md">SportsType</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-useractivityscenario-e.md">UserActivityScenario</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-wififingerprinttype-e-sys.md">WifiFingerprintType(system api)</a></li>
 </ul>
 </details></li>
 <li class="has-children"><details>

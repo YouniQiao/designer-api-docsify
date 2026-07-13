@@ -12,7 +12,7 @@ Enumerates the types of image files to save.
 JPEG = 1
 ```
 
-JPEG
+JPEG.
 
 **Since:** 13
 
@@ -24,7 +24,7 @@ JPEG
 HEIF = 2
 ```
 
-HEIF
+HEIF.
 
 **Since:** 13
 

@@ -6,6 +6,12 @@ Advertising state change information.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from '@kit.ConnectivityKit';
+```
+
 ## advertisingId
 
 ```TypeScript

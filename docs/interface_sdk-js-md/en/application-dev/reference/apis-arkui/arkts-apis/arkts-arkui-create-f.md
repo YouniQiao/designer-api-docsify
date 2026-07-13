@@ -35,8 +35,8 @@ Creates a floating ball controller. This API uses a promise to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes:<br>1.The context parameter is null.<br>2.The FloatingBallConfiguration parameter is null. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible causes:<br>1.The application context or main window is invalid.<br>2.System internal error, such as null pointer or insufficient memory. |
 
 **Example**
 
@@ -44,20 +44,24 @@ Creates a floating ball controller. This API uses a promise to return the result
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 
+// Declare the floating ball controller instance.
 let floatingBallController: floatingBall.FloatingBallController | undefined = undefined;
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
 let ctx = this.getUIContext().getHostContext() as common.UIAbilityContext; 
+// Configure the floating ball controller.
 let config: floatingBall.FloatingBallConfiguration = {
   context: ctx,
 };
 try {
+  // Create a floating ball controller.
   floatingBall.create(config).then((data: floatingBall.FloatingBallController) => {
+    // Save the controller instance.
     floatingBallController = data;
     console.info(`Succeeded in creating floating ball controller. Data: ${data}`);
   }).catch((err: BusinessError) => {
     console.error(`Failed to create floating ball controller. Cause:${err.code}, message:${err.message}`);
   });
-} catch(e) {
+} catch (e) {
   console.error(`Failed to create floating ball controller. Cause:${e.code}, message:${e.message}`);
 }
 

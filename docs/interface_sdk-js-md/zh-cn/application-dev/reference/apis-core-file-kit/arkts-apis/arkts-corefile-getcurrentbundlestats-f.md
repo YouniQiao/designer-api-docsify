@@ -32,10 +32,10 @@ function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 import { BusinessError } from '@kit.BasicServicesKit';
 storageStatistics.getCurrentBundleStats((error: BusinessError, bundleStats: storageStatistics.BundleStats) => {
   if (error) {
-    console.error("getCurrentBundleStats failed with error:" + JSON.stringify(error));
+    console.error(`getCurrentBundleStats failed. Code: ${error.code}, message: ${error.message}`);
   } else {
     // do something
-    console.info("getCurrentBundleStats successfully:" + JSON.stringify(bundleStats));
+    console.info('getCurrentBundleStats successfully:' + JSON.stringify(bundleStats));
   }
 });
 
@@ -72,10 +72,10 @@ function getCurrentBundleStats(): Promise<BundleStats>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getCurrentBundleStats().then((BundleStats: storageStatistics.BundleStats) => {
-  console.info("getCurrentBundleStats successfully:" + JSON.stringify(BundleStats));
+storageStatistics.getCurrentBundleStats().then((bundleStats: storageStatistics.BundleStats) => {
+  console.info('getCurrentBundleStats successfully:' + JSON.stringify(bundleStats));
 }).catch((err: BusinessError) => {
-  console.error("getCurrentBundleStats failed with error:"+ JSON.stringify(err));
+  console.error(`getCurrentBundleStats failed. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

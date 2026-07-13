@@ -35,6 +35,7 @@ Declares the APIs to use javascript proxy and run javascript code.
 | [typedef void (\*NativeArkWeb_OnValidCallback)(const char*)](#nativearkweb_onvalidcallback) | NativeArkWeb_OnValidCallback | Defines the valid callback of the web component. |
 | [typedef void (\*NativeArkWeb_OnDestroyCallback)(const char*)](#nativearkweb_ondestroycallback) | NativeArkWeb_OnDestroyCallback | Defines the destroy callback of the web component. |
 | [typedef void (\*OH_ArkWeb_OnCookieSaveCallback)(ArkWeb_ErrorCode errorCode)](#oh_arkweb_oncookiesavecallback) | OH_ArkWeb_OnCookieSaveCallback | Defines the callback of save cookie. |
+| [typedef void (\*OH_ArkWeb_OnCookieFetchCallback)(ArkWeb_ErrorCode errorCode, char* cookieValue)](#oh_arkweb_oncookiefetchcallback) | OH_ArkWeb_OnCookieFetchCallback | Defines the callback function type invoked when the cookie fetching operation completes. |
 | [void OH_NativeArkWeb_RunJavaScript(const char* webTag, const char* jsCode, NativeArkWeb_OnJavaScriptCallback callback)](#oh_nativearkweb_runjavascript) | - | Loads a piece of code and execute JS code in the context of the currently displayed page. |
 | [void OH_NativeArkWeb_RegisterJavaScriptProxy(const char* webTag, const char* objName, const char** methodList, NativeArkWeb_OnJavaScriptProxyCallback* callback, int32_t size, bool needRefresh)](#oh_nativearkweb_registerjavascriptproxy) | - | Registers the JavaScript object and method list. |
 | [void OH_NativeArkWeb_UnregisterJavaScriptProxy(const char* webTag, const char* objName)](#oh_nativearkweb_unregisterjavascriptproxy) | - | Deletes the registered object which th given name. |
@@ -54,6 +55,8 @@ Declares the APIs to use javascript proxy and run javascript code.
 | [ArkWebEngineVersion OH_NativeArkWeb_GetActiveWebEngineVersion()](#oh_nativearkweb_getactivewebengineversion) | - |  |
 | [void OH_NativeArkWeb_LazyInitializeWebEngineInCookieManager(bool lazy)](#oh_nativearkweb_lazyinitializewebengineincookiemanager) | - |  |
 | [bool OH_NativeArkWeb_IsActiveWebEngineEvergreen()](#oh_nativearkweb_isactivewebengineevergreen) | - |  |
+| [ArkWeb_ErrorCode OH_ArkWebCookieManager_FetchCookieSync(const char* url, bool incognito, bool includeHttpOnly, bool includePartitionedCookies, char** cookieValue)](#oh_arkwebcookiemanager_fetchcookiesync) | - | Synchronously obtains the cookie value corresponding to a specified URL. |
+| [void OH_ArkWebCookieManager_FetchCookieAsync(const char* url, bool incognito, bool includeHttpOnly, bool includePartitionedCookies, OH_ArkWeb_OnCookieFetchCallback callback)](#oh_arkwebcookiemanager_fetchcookieasync) | - | Asynchronously obtains the cookie value corresponding to a specified URL. |
 
 ## Enum type description
 
@@ -145,6 +148,25 @@ Defines the callback of save cookie.
 | Parameter | Description |
 | -- | -- |
 | (ArkWeb_ErrorCode errorCode | {@link ARKWEB_SUCCESS} Save cookie success.{@link ARKWEB_COOKIE_MANAGER_INITIALIZE_FAILED} Cookie manager initialize failed.{@link ARKWEB_COOKIE_SAVE_FAILED} Save cookie failed. |
+
+### OH_ArkWeb_OnCookieFetchCallback()
+
+```c
+typedef void (*OH_ArkWeb_OnCookieFetchCallback)(ArkWeb_ErrorCode errorCode, char* cookieValue)
+```
+
+**Description**
+
+Defines the callback function type invoked when the cookie fetching operation completes.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| (ArkWeb_ErrorCode errorCode | The result code of the cookie fetching operation.{@link ARKWEB_SUCCESS} fetch cookie success.{@link ARKWEB_INVALID_URL} invalid url.{@link ARKWEB_LIBRARY_OPEN_FAILURE} Failed to open the library.{@link ARKWEB_LIBRARY_SYMBOL_NOT_FOUND} The required symbol was not found in the library. |
+| char\* cookieValue | Get the cookie value corresponding to the URL. This function will allocate memory for thecookieValue string and caller must release the string by {@link OH_ArkWeb_ReleaseString}. |
 
 ### OH_NativeArkWeb_RunJavaScript()
 
@@ -558,5 +580,55 @@ bool OH_NativeArkWeb_IsActiveWebEngineEvergreen()
 | Type | Description |
 | -- | -- |
 | bool | Whether the kernel used by the application is the evergreen kernel. The value true indicates that the<br>         kernel used by the application is the evergreen kernel, and false indicates the opposite. |
+
+### OH_ArkWebCookieManager_FetchCookieSync()
+
+```c
+ArkWeb_ErrorCode OH_ArkWebCookieManager_FetchCookieSync(const char* url, bool incognito, bool includeHttpOnly, bool includePartitionedCookies, char** cookieValue)
+```
+
+**Description**
+
+Synchronously obtains the cookie value corresponding to a specified URL.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| const char* url | URL to which the cookie to be obtained belongs. A complete URL is recommended. |
+| bool incognito | True indicates that the memory cookies of the webview in privacy mode are obtained,and false indicates that cookies in non-privacy mode are obtained. |
+| bool includeHttpOnly | If true HTTP-only cookies will also be included in the cookieValue. |
+| bool includePartitionedCookies | If true, allows fetching first-party partitioned cookies. |
+| char** cookieValue | Get the cookie value corresponding to the URL. This function will allocate memory for the*cookieValue string and caller must release the string by {@link OH_ArkWeb_ReleaseString}. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkWeb_ErrorCode | Fetch cookie result code.<br>     <ul><br>         <li>{@link ARKWEB_SUCCESS} fetch cookie success.</li><br>         <li>{@link ARKWEB_INVALID_URL} invalid url.</li><br>         <li>{@link ARKWEB_INVALID_PARAM} cookieValue is nullptr.</li><br>         <li>{@link ARKWEB_LIBRARY_OPEN_FAILURE} Failed to open the library.</li><br>         <li>{@link ARKWEB_LIBRARY_SYMBOL_NOT_FOUND} The required symbol was not found in the library.</li><br>         <li>{@link ARKWEB_COOKIE_MANAGER_NOT_INITIALIZED} It is not allowed to call on a non-UI thread without<br>                                                           initializing the CookieManager interface. please<br>                                                           initialize the CookieManager interface using<br>                                                           OH_ArkWeb_GetNativeAPI first.</li><br>     </ul> |
+
+### OH_ArkWebCookieManager_FetchCookieAsync()
+
+```c
+void OH_ArkWebCookieManager_FetchCookieAsync(const char* url, bool incognito, bool includeHttpOnly, bool includePartitionedCookies, OH_ArkWeb_OnCookieFetchCallback callback)
+```
+
+**Description**
+
+Asynchronously obtains the cookie value corresponding to a specified URL.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| const char* url | URL to which the cookie to be obtained belongs. A complete URL is recommended. |
+| bool incognito | True indicates that the memory cookies of the webview in privacy mode are obtained,and false indicates that cookies in non-privacy mode are obtained. |
+| bool includeHttpOnly | If true HTTP-only cookies will also be included in the cookieValue. |
+| bool includePartitionedCookies | If true, allows fetching first-party partitioned cookies. |
+| [OH_ArkWeb_OnCookieFetchCallback](capi-native-interface-arkweb-h.md#oh_arkweb_oncookiefetchcallback) callback | Callback execute when fetch cookie done. |
 
 

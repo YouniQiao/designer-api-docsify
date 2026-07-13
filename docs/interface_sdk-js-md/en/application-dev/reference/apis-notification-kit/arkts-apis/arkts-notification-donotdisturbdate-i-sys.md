@@ -1,6 +1,6 @@
 # DoNotDisturbDate (System API)
 
-DND time to set.
+Defines the DND time.
 
 **Since:** 9
 

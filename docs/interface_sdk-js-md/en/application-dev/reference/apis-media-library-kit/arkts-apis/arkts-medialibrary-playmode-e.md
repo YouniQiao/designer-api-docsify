@@ -1,6 +1,6 @@
 # PlayMode
 
-Enumeration type of play mode.
+Enumerates whether to support automatic playback of the moving photo.
 
 **Since:** 23
 
@@ -12,7 +12,7 @@ Enumeration type of play mode.
 DEFAULT = 0
 ```
 
-DEFAULT indicates that the default play mode.
+The automatic playback of the moving photo is not supported.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ DEFAULT indicates that the default play mode.
 AUTO_PLAY = 1
 ```
 
-AUTO_PLAY indicates that moving photos will play automatically.
+The automatic playback of the moving photo is supported.
 
 **Since:** 23
 

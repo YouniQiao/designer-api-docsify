@@ -44,7 +44,7 @@ let sceneName = 'xxx';
 let sceneValue = '0';
 let result = batteryInfo.setBatteryConfig(sceneName, sceneValue);
 
-console.info("The result is: " + result);
+console.info('The result is: ' + result);
 
 ```
 

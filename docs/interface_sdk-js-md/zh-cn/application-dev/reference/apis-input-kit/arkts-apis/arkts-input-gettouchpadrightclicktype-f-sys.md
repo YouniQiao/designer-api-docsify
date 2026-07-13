@@ -41,7 +41,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 获取触摸板右键点击类型
+            // 获取触控板右键点击类型
             pointer.getTouchpadRightClickType((error: BusinessError, type: pointer.RightClickType) => {
               if (error) {
                 console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

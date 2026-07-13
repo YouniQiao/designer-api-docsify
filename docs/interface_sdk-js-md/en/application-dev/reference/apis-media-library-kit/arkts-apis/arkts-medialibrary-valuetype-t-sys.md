@@ -4,7 +4,7 @@
 type ValueType = number | number | number | string | boolean | Uint8Array | null
 ```
 
-Indicates possible value types
+Defines the type of value in a KV pair. The type varies with the parameter function.
 
 **Since:** 22
 
@@ -14,11 +14,11 @@ Indicates possible value types
 
 | Type | Description |
 | --- | --- |
-| int |  |
-| long |  |
-| double |  |
-| string |  |
-| boolean |  |
-| Uint8Array |  |
-| null |  |
+| int | Integer. |
+| long | Long integer. |
+| double | Decimal number. |
+| string | String. |
+| boolean | Boolean. |
+| Uint8Array | Uint8 array. |
+| null | Null. |
 

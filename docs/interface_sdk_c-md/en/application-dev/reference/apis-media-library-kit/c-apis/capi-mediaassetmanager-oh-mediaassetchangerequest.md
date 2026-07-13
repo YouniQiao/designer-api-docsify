@@ -6,7 +6,7 @@ typedef struct OH_MediaAssetChangeRequest OH_MediaAssetChangeRequest
 
 ## Overview
 
-Define Media Asset Change RequestThis structure provides the ability to handle a media asset change request.
+The struct describes a media asset change request.
 
 **Since**: 12
 

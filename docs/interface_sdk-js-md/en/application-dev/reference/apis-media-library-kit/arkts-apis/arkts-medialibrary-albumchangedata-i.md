@@ -1,6 +1,6 @@
 # AlbumChangeData
 
-Defines the album change data.
+Describes the change data of an album.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 albumAfterChange: AlbumChangeInfo | null
 ```
 
-Album after change.
+Data of the album after change. In the case of album deletion, **albumAfterChange** is null.
 
 **Type:** AlbumChangeInfo | null
 
@@ -32,7 +32,7 @@ Album after change.
 albumBeforeChange: AlbumChangeInfo | null
 ```
 
-Album before change.
+Data of the album before change. If an album is added, **albumBeforeChange** is null.
 
 **Type:** AlbumChangeInfo | null
 

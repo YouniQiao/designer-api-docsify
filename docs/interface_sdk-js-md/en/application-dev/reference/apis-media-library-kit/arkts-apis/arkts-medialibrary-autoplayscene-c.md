@@ -1,6 +1,6 @@
 # AutoPlayScene
 
-Automatic playback scene of moving photo.
+Defines the playback mode of the moving photo in different scenarios.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 playMode: PlayMode
 ```
 
-Play mode of moving photo in different scenes.
+Whether to support automatic playback of the moving photo.
 
 **Type:** PlayMode
 
@@ -36,7 +36,7 @@ Play mode of moving photo in different scenes.
 sceneType: SceneType
 ```
 
-Type of moving photo scene.
+Scene of the moving photo playback.
 
 **Type:** SceneType
 

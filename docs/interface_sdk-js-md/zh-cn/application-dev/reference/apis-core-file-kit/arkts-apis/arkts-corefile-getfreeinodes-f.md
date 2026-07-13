@@ -33,9 +33,9 @@ function getFreeInodes(): Promise<number>
 import { BusinessError } from '@kit.BasicServicesKit';
 
 storageStatistics.getFreeInodes().then((freeInodes: number) => {
-  console.info("getFreeInodes successfully: " + freeInodes);
+  console.info('getFreeInodes successfully:' + freeInodes);
 }).catch((err: BusinessError) => {
-  console.error(`getFreeInodes failed. Code: ${err.code}, Message: ${err.message}`);
+  console.error(`getFreeInodes failed. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

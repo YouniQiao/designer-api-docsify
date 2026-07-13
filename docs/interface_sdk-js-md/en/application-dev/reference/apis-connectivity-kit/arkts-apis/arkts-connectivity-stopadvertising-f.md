@@ -1,5 +1,11 @@
 # stopAdvertising
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from '@kit.ConnectivityKit';
+```
+
 ## stopAdvertising
 
 ```TypeScript

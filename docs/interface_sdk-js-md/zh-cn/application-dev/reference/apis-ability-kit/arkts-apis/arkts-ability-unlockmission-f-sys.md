@@ -38,19 +38,20 @@ function unlockMission(missionId: number, callback: AsyncCallback<void>): void
 import { missionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
 let testMissionId = 2;
 
 try {
   missionManager.unlockMission(testMissionId, (err: BusinessError, data: void) => {
     if (err) {
-      console.error(`unlockMission failed: ${err.message}`);
+      console.error(`unlockMission failed. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info(`unlockMission successfully: ${JSON.stringify(data)}`);
     }
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
-  console.error(`unlockMission failed: ${err.message}`);
+  console.error(`unlockMission failed. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```
@@ -99,17 +100,18 @@ function unlockMission(missionId: number): Promise<void>
 import { missionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
 let testMissionId = 2;
 
 try {
   missionManager.unlockMission(testMissionId).then((data: void) => {
     console.info(`unlockMission successfully. Data: ${JSON.stringify(data)}`);
   }).catch((error: BusinessError) => {
-    console.error(`unlockMission failed. Cause: ${error.message}`);
+    console.error(`unlockMission failed. Code: ${error.code}, message: ${error.message}`);
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
-  console.error(`unlockMission failed. Cause: ${err.message}`);
+  console.error(`unlockMission failed. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

@@ -30,11 +30,11 @@ Obtains the BSSID of the connected Wi-Fi hotspot.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call ${geoLocationManager.getCurrentWifiBssidForLocating()} due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The applicationdoes not have the permission required to call the API. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call${geoLocationManager.getCurrentWifiBssidForLocating()} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
-| [3301900](../errorcode-geoLocationManager.md#3301900-failed-to-obtain-the-mac-address-of-the-wifi-hotspot) | Failed to obtain the BSSID of the Wi-Fi hotspot. The Wi-Fi network is not connected. |
+| [3301900](../errorcode-geoLocationManager.md#3301900-failed-to-obtain-the-mac-address-of-the-wifi-hotspot) | Failed to obtain the BSSID of the Wi-Fi hotspot.The Wi-Fi network is not connected. |
 
 **Example**
 

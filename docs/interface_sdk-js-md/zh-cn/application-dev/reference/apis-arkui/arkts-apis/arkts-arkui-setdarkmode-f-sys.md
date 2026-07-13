@@ -40,14 +40,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   uiAppearance.setDarkMode(uiAppearance.DarkMode.ALWAYS_DARK, (error) => {
     if (error) {
-      console.error('Set dark-mode failed, ' + error.message);
-    } else {
-      console.info('Set dark-mode successfully.');
+      console.error(`Set dark-mode failed. Code: ${error.code}, message: ${error.message}`);
+      return;
     }
-  })
+    console.info('Set dark-mode successfully.');
+  });
 } catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('Set dark-mode failed, ' + message);
+  let err = error as BusinessError;
+  console.error(`Set dark-mode failed. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```
@@ -98,12 +98,12 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   uiAppearance.setDarkMode(uiAppearance.DarkMode.ALWAYS_DARK).then(() => {
     console.info('Set dark-mode successfully.');
-  }).catch((error: Error) => {
-    console.error('Set dark-mode failed, ' + error.message);
+  }).catch((error: BusinessError) => {
+    console.error(`Set dark-mode failed. Code: ${error.code}, message: ${error.message}`);
   });
 } catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('Set dark-mode failed, ' + message);
+  let err = error as BusinessError;
+  console.error(`Set dark-mode failed. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

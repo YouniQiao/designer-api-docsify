@@ -12,7 +12,7 @@ Enumerates the types of the resources to write.
 PHOTO_PROXY = 3
 ```
 
-Photo proxy
+Photo proxy.
 
 **Since:** 11
 
@@ -26,7 +26,7 @@ Photo proxy
 PRIVATE_MOVING_PHOTO_RESOURCE = 4
 ```
 
-Private moving photo resource
+Private moving photo.
 
 **Since:** 13
 
@@ -40,7 +40,7 @@ Private moving photo resource
 PRIVATE_MOVING_PHOTO_METADATA = 5
 ```
 
-Private moving photo metadata
+Metadata resource of the private moving photo.
 
 **Since:** 18
 

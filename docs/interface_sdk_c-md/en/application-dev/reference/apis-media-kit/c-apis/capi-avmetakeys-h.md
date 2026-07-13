@@ -10,7 +10,7 @@ Defines audio and video metadata keys.
 
 **Since**: 23
 
-**Related module**: [avmetakeys](capi-avmetakeys.md)
+**Related module**: [AVMediaBase](capi-avmediabase.md)
 
 ## Summary
 

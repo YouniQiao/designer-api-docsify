@@ -6,7 +6,7 @@ typedef struct Http_Buffer {...} Http_Buffer
 
 ## Overview
 
-Buffer.
+Defines the HTTP buffer structure.
 
 **Since**: 20
 
@@ -20,7 +20,7 @@ Buffer.
 
 | Name | Description |
 | -- | -- |
-| const char *buffer | Content. Buffer will not be copied. |
+| const char *buffer | Buffer data. |
 | uint32_t length | Buffer length. |
 
 

@@ -1,5 +1,11 @@
 # stopScan
 
+## Modules to Import
+
+```TypeScript
+import { scan } from '@kit.ConnectivityKit';
+```
+
 ## stopScan
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the data structure for the C APIs of the http global interceptor.
+Defines the data structures for the C APIs of the global HTTP interceptor module, including the interceptorrequest/response header information, HTTP request/response data packet structure, interceptor configurationinformation, and related enum types and function pointers.
 
 **Library**: libhttp_interceptor.so
 
@@ -18,24 +18,24 @@ Defines the data structure for the C APIs of the http global interceptor.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) | OH_Http_Interceptor_Headers | Defines interceptor header. |
-| [OH_Http_Interceptor_Request](capi-netstack-oh-http-interceptor-request.md) | OH_Http_Interceptor_Request | Defines interceptor request |
-| [OH_Http_Interceptor_Response](capi-netstack-oh-http-interceptor-response.md) | OH_Http_Interceptor_Response | Defines interceptor response |
-| [OH_Http_Interceptor](capi-netstack-oh-http-interceptor.md) | OH_Http_Interceptor | Defines interceptor configuration |
+| [OH_Http_Interceptor_Headers](capi-netstack-oh-http-interceptor-headers.md) | OH_Http_Interceptor_Headers | Defines a struct for the request/response header information of the interceptor. |
+| [OH_Http_Interceptor_Request](capi-netstack-oh-http-interceptor-request.md) | OH_Http_Interceptor_Request | Defines a struct for the HTTP request data packet of the interceptor. |
+| [OH_Http_Interceptor_Response](capi-netstack-oh-http-interceptor-response.md) | OH_Http_Interceptor_Response | Defines a struct for the HTTP response data packet of the interceptor. |
+| [OH_Http_Interceptor](capi-netstack-oh-http-interceptor.md) | OH_Http_Interceptor | Defines a struct for the configuration information of the global HTTP interceptor. |
 
 ### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_Interceptor_Stage](#oh_interceptor_stage) | OH_Interceptor_Stage | Defines interceptor stage |
-| [OH_Interceptor_Type](#oh_interceptor_type) | OH_Interceptor_Type | Defines interceptor type |
-| [OH_Interceptor_Result](#oh_interceptor_result) | OH_Interceptor_Result | Defines interceptor process result |
+| [OH_Interceptor_Stage](#oh_interceptor_stage) | OH_Interceptor_Stage | Defines an enum for the interceptor stages. |
+| [OH_Interceptor_Type](#oh_interceptor_type) | OH_Interceptor_Type | Defines an enum for the interceptor types. |
+| [OH_Interceptor_Result](#oh_interceptor_result) | OH_Interceptor_Result | Defines an enum for the interceptor results. |
 
 ### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef OH_Interceptor_Result (\*OH_Http_InterceptorHandler)(OH_Http_Interceptor_Request *request, OH_Http_Interceptor_Response *response, int32_t *isModified)](#oh_http_interceptorhandler) | OH_Http_InterceptorHandler | Defines interceptor handler |
+| [typedef OH_Interceptor_Result (\*OH_Http_InterceptorHandler)(OH_Http_Interceptor_Request *request, OH_Http_Interceptor_Response *response, int32_t *isModified)](#oh_http_interceptorhandler) | OH_Http_InterceptorHandler | Defines the HTTP interceptor handler function. |
 
 ## Enum type description
 
@@ -47,14 +47,14 @@ enum OH_Interceptor_Stage
 
 **Description**
 
-Defines interceptor stage
+Defines an enum for the interceptor stages.
 
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_STAGE_REQUEST | http request hook<br>**Since**: 24 |
-| OH_STAGE_RESPONSE | http response hook<br>**Since**: 24 |
+| OH_STAGE_REQUEST | The interceptor processes the request.<br>**Since**: 24 |
+| OH_STAGE_RESPONSE | The interceptor processes the response.<br>**Since**: 24 |
 
 ### OH_Interceptor_Type
 
@@ -64,13 +64,13 @@ enum OH_Interceptor_Type
 
 **Description**
 
-Defines interceptor type
+Defines an enum for the interceptor types.
 
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_TYPE_READ_ONLY | interceptor will not modify the packet<br>**Since**: 24 |
+| OH_TYPE_READ_ONLY | Read-only interceptor.<br>**Since**: 24 |
 | OH_TYPE_MODIFY_NETWORK_KIT | interceptor will modify the packet from Network Kit<br>**Since**: 26.0.0 |
 
 ### OH_Interceptor_Result
@@ -81,14 +81,14 @@ enum OH_Interceptor_Result
 
 **Description**
 
-Defines interceptor process result
+Defines an enum for the interceptor results.
 
 **Since**: 24
 
 | Enum item | Description |
 | -- | -- |
-| OH_CONTINUE | interceptor result is continue<br>**Since**: 24 |
-| OH_ABORT | interceptor result is abort this packet<br>**Since**: 24 |
+| OH_CONTINUE | The processing continues.<br>**Since**: 24 |
+| OH_ABORT | The processing is aborted.<br>**Since**: 24 |
 
 
 ## Function description
@@ -101,7 +101,7 @@ typedef OH_Interceptor_Result (*OH_Http_InterceptorHandler)(OH_Http_Interceptor_
 
 **Description**
 
-Defines interceptor handler
+Defines the HTTP interceptor handler function.
 
 **Since**: 24
 
@@ -109,14 +109,14 @@ Defines interceptor handler
 
 | Parameter | Description |
 | -- | -- |
-| (OH_Http_Interceptor_Request \*request | http request packet. |
-| [OH_Http_Interceptor_Response](capi-netstack-oh-http-interceptor-response.md) \*response | http response packet. |
-| int32_t \*isModified | whether interceptor modified the packet. |
+| (OH_Http_Interceptor_Request \*request | Pointer to the HTTP request data packet (valid only in the request stage). |
+| [OH_Http_Interceptor_Response](capi-netstack-oh-http-interceptor-response.md) \*response | Pointer to the HTTP response data packet (valid only in the response stage). |
+| int32_t \*isModified | Output parameter, which indicates whether the interceptor has modified the data packet. Thisparameter is invalid for the interceptor of the **OH_TYPE_READ_ONLY** type. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [OH_Interceptor_Result](capi-http-interceptor-type-h.md#oh_interceptor_result) | [OH_Interceptor_Result](capi-http-interceptor-type-h.md#oh_interceptor_result) interceptor process result. |
+| [OH_Interceptor_Result](capi-http-interceptor-type-h.md#oh_interceptor_result) | Interceptor processing result. - OH_CONTINUE: The processing continues. - OH_ABORT: The processing<br>     is aborted. |
 
 

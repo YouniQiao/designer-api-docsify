@@ -12,7 +12,7 @@ Enumerates the album types.
 SMART = 4096
 ```
 
-Smart analysis album. System API: This is a system API.
+Smart analysis album.
 
 **Since:** 12
 

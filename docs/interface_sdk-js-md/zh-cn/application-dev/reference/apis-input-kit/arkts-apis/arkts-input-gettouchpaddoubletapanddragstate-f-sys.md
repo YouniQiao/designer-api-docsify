@@ -41,7 +41,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 获取触摸板双击拖拽状态
+            // 获取触控板双击拖拽状态
             pointer.getTouchpadDoubleTapAndDragState((error: BusinessError, state: boolean) => {
               if (error) {
                 console.error(`Failed to get touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

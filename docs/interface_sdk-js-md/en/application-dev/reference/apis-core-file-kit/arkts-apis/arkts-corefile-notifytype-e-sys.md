@@ -1,6 +1,6 @@
 # NotifyType (System API)
 
-NotifyType subtype
+Enumerates the notification event types.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ NotifyType subtype
 NOTIFY_ADD
 ```
 
-Type for add notification of the FileAsset or Album
+A file asset or album is added.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Type for add notification of the FileAsset or Album
 NOTIFY_UPDATE
 ```
 
-Type for update notification of the FileAsset or Album
+A file asset or album is updated.
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ Type for update notification of the FileAsset or Album
 NOTIFY_REMOVE
 ```
 
-Type for remove notification of the FileAsset or Album
+A file asset or album is removed.
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ Type for remove notification of the FileAsset or Album
 NOTIFY_ALBUM_ADD_ASSET
 ```
 
-Type for notification of the FileAsset added at an Album
+A file asset is added to the album.
 
 **Since:** 10
 
@@ -90,7 +90,7 @@ Type for notification of the FileAsset added at an Album
 NOTIFY_ALBUM_REMOVE_ASSET
 ```
 
-Type for notification of the FileAsset removed at an Album
+A file asset is removed from the album.
 
 **Since:** 10
 

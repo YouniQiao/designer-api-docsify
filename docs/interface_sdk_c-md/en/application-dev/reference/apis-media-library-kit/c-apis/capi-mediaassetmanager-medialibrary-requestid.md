@@ -6,7 +6,7 @@ typedef struct MediaLibrary_RequestId {...} MediaLibrary_RequestId
 
 ## Overview
 
-Define MediaLibrary_RequestIdThis type is returned when requesting a media library resource.The request id is used to cancel the request.The value is all zero like "00000000-0000-0000-0000-000000000000" if the request fails.
+Defines a struct for the request ID.
 
 **Since**: 12
 

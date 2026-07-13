@@ -37,7 +37,7 @@ createSubscriber的同步接口。
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// 定义订阅者，用于保存创建成功的订阅者对象，后续使用其完成订阅及退订的动作
+// 定义订阅者，用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
 let subscriber: commonEventManager.CommonEventSubscriber | null = null;
 // 订阅者信息
 let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {

@@ -1,6 +1,6 @@
 # AlbumFetchOptions (System API)
 
-Fetch parameters
+Defines the options for fetching file attributes.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { userFileManager } from '@kit.CoreFileKit';
 predicates: dataSharePredicates.DataSharePredicates
 ```
 
-Predicate to query
+Predicates that specify the fetch criteria.
 
 **Type:** dataSharePredicates.DataSharePredicates
 

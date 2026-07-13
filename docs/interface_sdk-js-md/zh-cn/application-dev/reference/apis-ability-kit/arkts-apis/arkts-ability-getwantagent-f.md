@@ -69,14 +69,15 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 // getWantAgent回调
 function getWantAgentCallback(err: BusinessError, data: WantAgent) {
   if (err.code) {
-    console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
-  } else {
-    wantAgentData = data;
-  }
+      console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
+    } else {
+      wantAgentData = data;
+    }
 }
 
 try {
-  wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
+  // 调用getWantAgent接口创建WantAgent对象
+wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
 } catch (err) {
   console.error(`getWantAgent failed, error: ${JSON.stringify(err)}`);
 }
@@ -156,6 +157,7 @@ let wantAgentInfo: wantAgent.WantAgentInfo = {
 
 try {
   wantAgent.getWantAgent(wantAgentInfo).then((data) => {
+    // 创建WantAgent成功，保存返回的WantAgent对象
     wantAgentData = data;
   }).catch((err: BusinessError) => {
     console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);

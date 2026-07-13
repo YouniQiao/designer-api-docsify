@@ -42,7 +42,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 设置触摸板指针速度
+            // 设置触控板光标速度
             pointer.setTouchpadPointerSpeed(1, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

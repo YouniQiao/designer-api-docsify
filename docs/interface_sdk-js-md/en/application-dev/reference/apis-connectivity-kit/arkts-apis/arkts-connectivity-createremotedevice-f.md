@@ -1,5 +1,11 @@
 # createRemoteDevice
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
+
 ## createRemoteDevice
 
 ```TypeScript

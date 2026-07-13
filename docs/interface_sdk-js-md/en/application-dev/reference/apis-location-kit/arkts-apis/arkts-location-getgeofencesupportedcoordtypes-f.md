@@ -14,7 +14,7 @@ function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>
 
 Obtains the coordinate system types supported by geofence.
 
-**Since:** 22
+**Since:** 12
 
 **System capability:** SystemCapability.Location.Location.Geofence
 

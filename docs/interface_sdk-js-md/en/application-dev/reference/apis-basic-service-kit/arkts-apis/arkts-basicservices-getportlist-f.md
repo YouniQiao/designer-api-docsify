@@ -40,7 +40,6 @@ function getPortList() {
     console.error('usbSerial portList is empty');
     return;
   }
-  let portId: number = portList[0].portId;
 }
 
 ```

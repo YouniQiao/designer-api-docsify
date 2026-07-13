@@ -2,7 +2,7 @@
 
 Enum for user activity scenario.
 
-**Since:** 22
+**Since:** 12
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -14,9 +14,9 @@ NAVIGATION = 0x401
 
 Navigation scenario. High positioning precision and real-time performance are required.
 
-**Since:** 22
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -28,9 +28,9 @@ SPORT = 0x402
 
 Sport scenario. High positioning precision is required.
 
-**Since:** 22
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -42,9 +42,9 @@ TRANSPORT = 0x403
 
 Transport scenario. High positioning precision and real-time performance are required.
 
-**Since:** 22
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -56,9 +56,9 @@ DAILY_LIFE_SERVICE = 0x404
 
 Daily life scenarios. Low requirements on positioning precision.
 
-**Since:** 22
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
 

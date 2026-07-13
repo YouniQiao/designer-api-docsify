@@ -33,6 +33,7 @@ function offKey(keyOptions: KeyOptions, callback?: KeyCommandCallback): void
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let leftCtrlKey = 2072;
 let cKey = 2049;
@@ -51,13 +52,15 @@ try {
   inputConsumer.offKey(keyOptions, callback);
   console.info(`Unsubscribe success`);
 } catch (error) {
-  console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to execute operation. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let leftCtrlKey = 2072;
 let cKey = 2049;
@@ -72,7 +75,8 @@ try {
   inputConsumer.offKey(keyOptions);
   console.info(`Unsubscribe all success`);
 } catch (error) {
-  console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to execute operation. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

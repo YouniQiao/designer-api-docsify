@@ -51,7 +51,7 @@ let appId: string = 'com.example.datamanagertest';
 
 export default class EntryAbility extends UIAbility {
   onCreate() {
-    console.info("MyAbilityStage onCreate");
+    console.info('MyAbilityStage onCreate');
     let context = this.context;
     const kvManagerConfig: distributedKVStore.KVManagerConfig = {
       context: context,
@@ -59,10 +59,10 @@ export default class EntryAbility extends UIAbility {
     }
     try {
       kvManager = distributedKVStore.createKVManager(kvManagerConfig);
-      console.info("Succeeded in creating KVManager");
-    } catch (e) {
-      let error = e as BusinessError;
-      console.error(`Failed to create KVManager.code is ${error.code},message is ${error.message}`);
+      console.info('Succeeded in creating KVManager');
+    } catch (err) {
+      let error = err as BusinessError;
+      console.error(`Failed to create KVManager. Code: ${error.code}, message: ${error.message}`);
     }
     if (kvManager !== undefined) {
       // Perform subsequent operations such as creating a KV store.
@@ -88,10 +88,10 @@ const kvManagerConfig: distributedKVStore.KVManagerConfig = {
 }
 try {
   kvManager = distributedKVStore.createKVManager(kvManagerConfig);
-  console.info("Succeeded in creating KVManager");
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to create KVManager.code is ${error.code},message is ${error.message}`);
+  console.info('Succeeded in creating KVManager');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to create KVManager. Code: ${error.code}, message: ${error.message}`);
 }
 if (kvManager !== undefined) {
   kvManager = kvManager as distributedKVStore.KVManager;

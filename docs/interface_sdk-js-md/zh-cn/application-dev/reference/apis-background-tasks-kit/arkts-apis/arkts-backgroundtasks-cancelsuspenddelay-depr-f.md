@@ -25,6 +25,8 @@ function cancelSuspendDelay(requestId: number): void
 **示例：**
 
 ```TypeScript
+import backgroundTaskManager from '@ohos.backgroundTaskManager';
+
 let delayInfo = backgroundTaskManager.requestSuspendDelay('test', () => {});
 backgroundTaskManager.cancelSuspendDelay(delayInfo.requestId);
 

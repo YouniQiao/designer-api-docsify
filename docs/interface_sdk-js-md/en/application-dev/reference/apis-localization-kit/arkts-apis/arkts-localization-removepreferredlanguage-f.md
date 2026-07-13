@@ -18,8 +18,6 @@ Removes a preferred language from the specified position on the preferred langua
 
 **Deprecated since:** 9
 
-**Substitutes:** [removePreferredLanguage](arkts-localization-system-c-sys.md#removepreferredlanguage-1)
-
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
 **System capability:** SystemCapability.Global.I18n

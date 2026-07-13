@@ -42,13 +42,14 @@ import { JSON } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
 
 // 获取串口列表
-function hasSerialRight() {
+function hasSerialRightExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('portList: ', JSON.stringify(portList));
   if (!portList || portList.length === 0) {
     console.error('portList is empty');
     return;
   }
+  let portId: number = portList[0].portId;
 
   // 检测设备是否可被应用访问
   if (serialManager.hasSerialRight(portId)) {

@@ -64,7 +64,11 @@ function queryEntityInfoByPromise() {
   try {
     insightIntentDriver.queryEntityInfo(queryParam)
       .then((data: Array<Record<string, Object>> | undefined) => {
-        hilog.info(0x0000, 'testTag', 'queryEntityInfo return %{public}s', JSON.stringify(data));
+        if (data) {
+          hilog.info(0x0000, 'testTag', 'queryEntityInfo return %{public}s', JSON.stringify(data));
+        } else {
+          hilog.info(0x0000, 'testTag', 'queryEntityInfo return empty result');
+        }
       })
       .catch((err: BusinessError) => {
         hilog.error(0x0000, 'testTag', 'queryEntityInfo errCode: %{public}d', err.code);

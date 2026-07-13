@@ -45,9 +45,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Sync data over Wi-Fi only.
 cloudData.setCloudStrategy(cloudData.StrategyType.NETWORK, [cloudData.NetWorkStrategy.WIFI]).then(() => {
-    console.info('Succeeded in setting the cloud strategy');
+  console.info('Succeeded in setting the cloud strategy');
 }).catch((err: BusinessError) => {
-    console.error(`Failed to set cloud strategy. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to set cloud strategy. Code: ${err.code}, message: ${err.message}`);
 });
 
 

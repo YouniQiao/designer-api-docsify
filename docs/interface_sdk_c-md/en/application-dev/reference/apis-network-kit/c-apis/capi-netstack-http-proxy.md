@@ -6,7 +6,7 @@ typedef struct Http_Proxy {...} Http_Proxy
 
 ## Overview
 
-Proxy configuration.
+Defines the proxy configuration structure.
 
 **Since**: 20
 
@@ -20,7 +20,7 @@ Proxy configuration.
 
 | Name | Description |
 | -- | -- |
-| [Http_ProxyType](capi-net-http-type-h.md#http_proxytype) proxyType | Distinguish the proxy type used by the request, see [Http_ProxyType](capi-net-http-type-h.md#http_proxytype). |
-| [Http_CustomProxy](capi-netstack-http-customproxy.md) customProxy | Custom proxy configuration, see [Http_CustomProxy](capi-netstack-http-customproxy.md). |
+| [Http_ProxyType](capi-net-http-type-h.md#http_proxytype) proxyType | Proxy configuration type. For details, see [Http_ProxyType](capi-net-http-type-h.md#http_proxytype). |
+| [Http_CustomProxy](capi-netstack-http-customproxy.md) customProxy | Custom proxy configuration. For details, see [Http_CustomProxy](capi-netstack-http-customproxy.md). |
 
 

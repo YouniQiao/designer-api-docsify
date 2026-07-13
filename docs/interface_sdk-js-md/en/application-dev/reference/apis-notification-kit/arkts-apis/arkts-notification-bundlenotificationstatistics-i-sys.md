@@ -36,7 +36,7 @@ Bundle information of the application.
 lastTime: number
 ```
 
-Last time when the application sent a notification. Data format: timestamp, in ms.
+Time when the app last published a notification.<br>Data format: timestamp.<br>Unit: millisecond.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Last time when the application sent a notification. Data format: timestamp, in m
 recentCount: number
 ```
 
-Total number of notifications released by the application in the last seven days.
+Total number of notifications published by the application in the last seven days.
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # Album
 
-Defines the album.
+Provides APIs to manage albums.
 
 **Inheritance/Implementation:** Album extends [AbsAlbum](arkts-medialibrary-absalbum-i.md)
 
@@ -32,7 +32,7 @@ Commits the modification on the album attributes to the database. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns void |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -85,7 +85,7 @@ Converts this Sendable album to a non-Sendable album.
 
 | Type | Description |
 | --- | --- |
-| photoAccessHelper.Album | Returns the instance if the operation is successful. |
+| photoAccessHelper.Album | Album of the non-Sendable type. |
 
 **Error codes:**
 

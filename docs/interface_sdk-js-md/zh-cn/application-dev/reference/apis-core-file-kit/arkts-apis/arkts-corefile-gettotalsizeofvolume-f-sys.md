@@ -48,14 +48,14 @@ volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
   let uuid: string = volumes[0].uuid;
   storageStatistics.getTotalSizeOfVolume(uuid, (error: BusinessError, number: number) => {
     if (error) {
-      console.error("getTotalSizeOfVolume failed with error:" + JSON.stringify(error));
+      console.error(`getTotalSizeOfVolume failed with err, code is: ${error.code}, message is: ${error.message}`);
     } else {
       // do something
       console.info("getTotalSizeOfVolume successfully:" + number);
     }
   });
 }).catch((err: BusinessError) => {
-  console.error("getAllVolumes failed with error:" + JSON.stringify(err));
+  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 
 ```
@@ -115,10 +115,10 @@ volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
   storageStatistics.getTotalSizeOfVolume(uuid).then((number: number) => {
     console.info("getTotalSizeOfVolume successfully:" + number);
   }).catch((err: BusinessError) => {
-    console.error("getTotalSizeOfVolume failed with error:" + JSON.stringify(err));
+    console.error(`getTotalSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
   });
 }).catch((err: BusinessError) => {
-  console.error("getAllVolumes failed with error:" + JSON.stringify(err));
+  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 
 ```

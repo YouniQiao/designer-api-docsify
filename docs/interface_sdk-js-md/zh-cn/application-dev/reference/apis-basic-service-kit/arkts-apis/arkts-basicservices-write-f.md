@@ -45,9 +45,10 @@ function write(portId: number, buffer: Uint8Array, timeout?: number): Promise<nu
 import { JSON } from '@kit.ArkTS';
 import { buffer } from '@kit.ArkTS';
 import { serialManager } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // 获取串口列表
-function write() {
+function writeExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
   if (!portList || portList.length === 0) {
@@ -66,6 +67,8 @@ function write() {
       } else {
         console.info('grant permission successfully');
       }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to request serial right. Code: ${err.code}, message: ${err.message}`);
     });
   }
 
@@ -74,7 +77,8 @@ function write() {
     serialManager.open(portId)
     console.info('open usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('open usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to open usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 
   // 异步写入
@@ -82,7 +86,8 @@ function write() {
   serialManager.write(portId, writeBuffer, 2000).then((size: number) => {
     console.info('write usbSerial success, writeBuffer: ' + writeBuffer.toString());
   }).catch((error: Error) => {
-    console.error('write usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to write usbSerial. Code: ${err.code}, message: ${err.message}`);
   })
 
   // 关闭串口
@@ -90,7 +95,8 @@ function write() {
     serialManager.close(portId);
     console.info('close usbSerial success, portId: ' + portId);
   } catch (error) {
-    console.error('close usbSerial error, ' + JSON.stringify(error));
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to close usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
 }
 

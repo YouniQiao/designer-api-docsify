@@ -1,6 +1,6 @@
 # NotificationClassification (System API)
 
-Describes the notification classification information.
+Returns the notification classification information.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ Describes the notification classification information.
 readonly classification?: string
 ```
 
-Classification of the notification identified by the system.
+Notification classification identified by the system.
 
 **Type:** string
 
@@ -32,7 +32,7 @@ Classification of the notification identified by the system.
 readonly subClassification?: string
 ```
 
-Sub-classification of the notification identified by the system.
+Notification sub-classification identified by the system.
 
 **Type:** string
 

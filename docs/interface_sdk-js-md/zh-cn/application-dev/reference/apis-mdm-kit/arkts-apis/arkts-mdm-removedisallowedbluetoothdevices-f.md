@@ -37,14 +37,16 @@ function removeDisallowedBluetoothDevices(admin: Want, deviceIds: Array<string>)
 import { bluetoothManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
 
+// 创建企业设备管理扩展组件
 let wantTemp: Want = {
   // 需根据实际情况进行替换
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
-// 需根据实际情况进行替换
+// 定义蓝牙设备MAC地址数组（需根据实际情况进行替换）
 let deviceIds: Array<string> = ["00:1A:2B:3C:4D:5E","AA:BB:CC:DD:EE:FF"];
 try {
+  // 移除蓝牙设备禁用名单
   bluetoothManager.removeDisallowedBluetoothDevices(wantTemp,deviceIds);
   console.info(`Succeeded in removing disallowed bluetooth devices.`);
 } catch(err) {

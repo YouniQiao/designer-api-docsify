@@ -49,7 +49,7 @@ struct Index {
           } catch (error) {
             console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
-        })
+        });
     }
   }
 }

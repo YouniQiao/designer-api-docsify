@@ -37,40 +37,41 @@ let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
 };
 
 // Callback for common event subscription.
-function subscribeCB(err:Base.BusinessError, data:CommonEventManager.CommonEventData) {
+let subscribeCallBack = (err:Base.BusinessError, data:CommonEventManager.CommonEventData) => {
     if (err.code) {
-        console.error(`subscribe failed, code is ${err.code}`);
+        console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("subscribe " + JSON.stringify(data));
     }
 }
 
 // Callback for subscriber creation.
-function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) {
+let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
     if (err.code) {
-        console.error(`createSubscriber failed, code is ${err.code}`);
+        console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("createSubscriber");
         subscriber = commonEventSubscriber;
-        // Subscribe to a common event.
-        commonEvent.subscribe(subscriber, subscribeCB);
+         // Subscribe to a common event.
+        commonEvent.subscribe(subscriber, subscribeCallBack);
     }
 }
 
 // Callback for common event unsubscription.
-function unsubscribeCB(err:Base.BusinessError) {
+let unsubscribeCallback = (err: Base.BusinessError) => {
     if (err.code) {
-        console.error(`unsubscribe failed, code is ${err.code}`);
+        console.error(`unsubscribe failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("unsubscribe");
     }
 }
 
 // Create a subscriber.
-commonEvent.createSubscriber(subscribeInfo, createCB);
+commonEvent.createSubscriber(subscribeInfo, createCallBack);
 
 // Unsubscribe from the common event.
-commonEvent.unsubscribe(subscriber, unsubscribeCB);
+// Note: This API must be called after the subscriber is successfully created (that is, after the createCallBack callback is executed). Only the API usage is displayed here.
+commonEvent.unsubscribe(subscriber, unsubscribeCallback);
 
 ```
 

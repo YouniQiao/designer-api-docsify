@@ -14,7 +14,7 @@
 onBadgeChanged?:(data: BadgeNumberCallbackData) => void
 ```
 
-回调返回监听到的应用信息。
+回调返回监听到的应用角标数量变化。
 
 **类型：** (data: BadgeNumberCallbackData) => void
 
@@ -46,7 +46,7 @@ onBadgeEnabledChanged?: BadgeEnabledChangedCallback
 onBatchCancel?: (data: Array<SubscribeCallbackData>) => void
 ```
 
-新接收到的通知信息。
+批量删除的通知信息。
 
 **类型：** (data: Array<SubscribeCallbackData>) => void
 

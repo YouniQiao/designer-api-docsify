@@ -6,7 +6,7 @@
 function setSync(key: string, value: string): void
 ```
 
-设置系统参数Key对应的值。
+设置系统参数key对应的值。
 
 **起始版本：** 6
 
@@ -22,16 +22,18 @@ function setSync(key: string, value: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 待设置的系统参数Key。 |
-| value | string | 是 | 待设置的系统参数值。 |
+| key | string | 是 | 待设置的系统参数key。 |
+| value | string | 是 | 待设置的系统参数值。长度限制请参考[系统参数](../../../../../device-dev/subsystems/subsys-boot-init-sysparam.md)。 |
 
 **示例：**
 
 ```TypeScript
+import { BusinessError } from '@ohos.base';
+
 try {
   systemParameter.setSync('test.parameter.key', 'default');
 } catch (e) {
-  console.error('set unexpected error: ' + e);
+  console.error(`Failed to set system parameter. Code: ${(e as BusinessError).code}, message: ${(e as BusinessError).message}`);
 }
 
 ```

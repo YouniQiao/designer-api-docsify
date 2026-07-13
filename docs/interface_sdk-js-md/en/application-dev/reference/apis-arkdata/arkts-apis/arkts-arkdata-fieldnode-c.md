@@ -49,20 +49,21 @@ Appends a child node to this **FieldNode**.
 ```TypeScript
 
 try {
-  let node: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode("root");
-  let child1: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode("child1");
-  let child2: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode("child2");
-  let child3: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode("child3");
+  let node: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode('root');
+  let child1: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode('child1');
+  let child2: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode('child2');
+  let child3: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode('child3');
   node.appendChild(child1);
   node.appendChild(child2);
   node.appendChild(child3);
-  console.info("appendNode " + JSON.stringify(node));
+  console.info('appendNode ' + JSON.stringify(node));
   child1 = null;
   child2 = null;
   child3 = null;
   node = null;
-} catch (e) {
-  console.error("AppendChild " + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to append child. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```

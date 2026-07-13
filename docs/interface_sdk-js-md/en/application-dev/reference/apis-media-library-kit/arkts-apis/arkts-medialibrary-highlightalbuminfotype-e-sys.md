@@ -42,7 +42,7 @@ Music information.
 ALBUM_INFO = 2
 ```
 
-Highlight Album information.
+Album information.
 
 **Since:** 21
 

@@ -37,8 +37,8 @@ function wakeup(detail: string): void
 ```TypeScript
 try {
     power.wakeup('wakeup_test');
-} catch(err) {
-    console.error('wakeup failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to wakeup device. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

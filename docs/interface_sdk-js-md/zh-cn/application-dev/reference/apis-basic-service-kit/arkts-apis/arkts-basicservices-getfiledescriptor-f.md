@@ -34,14 +34,14 @@ function getFileDescriptor(pipe: USBDevicePipe): number
 **示例：**
 
 ```TypeScript
-function getFileDescriptor() {
+async function getFileDescriptor() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
     console.info(`device list is empty`);
     return;
   }
 
-  usbManager.requestRight(devicesList?.[0]?.name);
+  await usbManager.requestRight(devicesList?.[0]?.name);
   let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
   let ret: number = usbManager.getFileDescriptor(devicepipe);
   console.info(`getFileDescriptor = ${ret}`);

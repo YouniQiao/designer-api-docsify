@@ -6,7 +6,7 @@ typedef struct NetConn_HttpProxy {...} NetConn_HttpProxy
 
 ## Overview
 
-Defines the proxy configuration information.
+Defines the proxy configuration.
 
 **Since**: 11
 
@@ -22,7 +22,7 @@ Defines the proxy configuration information.
 | -- | -- |
 | char host[NETCONN_MAX_STR_LEN] | Host name |
 | char exclusionList[NETCONN_MAX_EXCLUSION_SIZE][NETCONN_MAX_STR_LEN] | Exclusion list of proxy servers |
-| int32_t exclusionListSize | Actual size of the exclusion list |
-| uint16_t port | Port number |
+| int32_t exclusionListSize | Actual size of the exclusion list. |
+| uint16_t port | Port number. |
 
 

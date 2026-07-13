@@ -38,7 +38,7 @@ const DOMAIN = 0x0000;
 @Component
 struct Index {
   @State isPhysicalKeyboardExist: boolean = false;
-  @State message: string = "Click to obtain the device list and monitor device hot-plug events";
+  @State message: string = 'Click to obtain the device list and monitor device hot-plug events';
   keyboards: Map<number, inputDevice.KeyboardType> = new Map();
 
   build() {
@@ -58,7 +58,7 @@ struct Index {
                       this.keyboards.set(data[i], type);
                     }
                   }).catch((error: BusinessError) => {
-                    console.error(`Failed to connect KeyBoard, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                    console.error(`Failed to get keyboard type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                   });
                 }
               }).catch((error: BusinessError) => {
@@ -78,7 +78,7 @@ struct Index {
                     this.keyboards.set(data.deviceId, type);
                   }
                 }).catch((error: BusinessError) => {
-                  console.error(`Failed to get DeviceId, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                  console.error(`Failed to get keyboard type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                 });
                 if (this.keyboards.get(data.deviceId) === inputDevice.KeyboardType.ALPHABETIC_KEYBOARD &&
                   data.type === 'remove') {
@@ -87,11 +87,11 @@ struct Index {
                   this.keyboards.delete(data.deviceId);
                 }
               });
-              this.message = "Device monitoring enabled successfully"
+              this.message = 'Device monitoring enabled successfully'
             } catch (error) {
               // 打印错误日志
               hilog.error(DOMAIN, 'InputDevice', `Execute failed, error: %{public}s`,
-                JSON.stringify(error, ["code", "message"]));
+                JSON.stringify(error, ['code', 'message']));
               this.message = `Failed to enable device monitoring. Click to retry. Error message:${JSON.stringify(error,
                 ["code", "message"])}`
             }

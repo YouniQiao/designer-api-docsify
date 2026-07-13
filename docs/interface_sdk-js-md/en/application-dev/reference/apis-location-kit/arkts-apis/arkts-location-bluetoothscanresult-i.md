@@ -2,7 +2,7 @@
 
 Describes the contents of the bluetooth scan results.
 
-**Since:** 22
+**Since:** 16
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -22,7 +22,7 @@ Connectable of the scanned device
 
 **Type:** boolean
 
-**Since:** 22
+**Since:** 16
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -36,7 +36,7 @@ The raw data of broadcast packet
 
 **Type:** ArrayBuffer
 
-**Since:** 22
+**Since:** 16
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -50,7 +50,7 @@ Address of the scanned device
 
 **Type:** string
 
-**Since:** 22
+**Since:** 16
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -64,7 +64,7 @@ The local name of the scanned device
 
 **Type:** string
 
-**Since:** 22
+**Since:** 16
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -78,7 +78,7 @@ RSSI of the scanned device
 
 **Type:** number
 
-**Since:** 22
+**Since:** 16
 
 **System capability:** SystemCapability.Location.Location.Core
 

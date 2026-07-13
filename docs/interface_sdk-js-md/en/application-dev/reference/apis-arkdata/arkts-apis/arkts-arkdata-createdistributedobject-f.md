@@ -38,18 +38,18 @@ Creates a distributed data object.
 
 ```TypeScript
 class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
+  name: string
+  age: number
+  isVis: boolean
 
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
+  constructor(name: string, age: number, isVis: boolean) {
+    this.name = name;
+    this.age = age;
+    this.isVis = isVis;
+  }
 }
 
-let source: SourceObject = new SourceObject("jack", 18, false);
+let source: SourceObject = new SourceObject('jack', 18, false);
 let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
 
 ```

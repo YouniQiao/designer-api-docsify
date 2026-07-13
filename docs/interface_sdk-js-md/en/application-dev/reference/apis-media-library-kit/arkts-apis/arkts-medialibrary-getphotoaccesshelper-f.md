@@ -12,7 +12,7 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 function getPhotoAccessHelper(context: Context): PhotoAccessHelper
 ```
 
-Returns an instance of PhotoAccessHelper
+Obtains a PhotoAccessHelper instance, which can be used for accessing and modifying media files in an album.
 
 **Since:** 12
 
@@ -26,19 +26,19 @@ Returns an instance of PhotoAccessHelper
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Hap context information |
+| context | Context | Yes | Context of the ability instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PhotoAccessHelper | Instance of PhotoAccessHelper |
+| PhotoAccessHelper | PhotoAccessHelper instance obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 
 **Example**
 

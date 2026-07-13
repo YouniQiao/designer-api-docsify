@@ -12,7 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function getNotificationSwitch(switchName: string, userId: number): Promise<SwitchState>
 ```
 
-Obtains the status of the notification switch. Use Promise asynchronous callbacks.
+Obtains the notification switch state. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -28,14 +28,14 @@ Obtains the status of the notification switch. Use Promise asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| switchName | string | Yes | Notification switch name. Values ​​are:DEAL (transaction-related notification aggregation switch) andLOGISTICS (logistics-related notification aggregation switch). |
-| userId | number | Yes | User ID.<br>The value range is all integers. |
+| switchName | string | Yes | Name of the notification switch. The value can be **DEAL** (aggregatedswitch for transaction notifications) or **LOGISTICS** (aggregated switch for logisticsnotifications). |
+| userId | number | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SwitchState&gt; | Promise used to return the notification switch status. |
+| Promise&lt;SwitchState&gt; | Promise used to return the notification switch state. |
 
 **Error codes:**
 

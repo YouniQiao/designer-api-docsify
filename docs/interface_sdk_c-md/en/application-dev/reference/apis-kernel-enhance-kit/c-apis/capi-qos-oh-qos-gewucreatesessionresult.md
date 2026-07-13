@@ -6,7 +6,7 @@ typedef struct OH_QoS_GewuCreateSessionResult {...} OH_QoS_GewuCreateSessionResu
 
 ## Overview
 
-Defines a struct for the return results of the **OH_QoS_GewuCreateSession()** API.If the operation is successful,the created session is returned. If the operation fails, the corresponding error code is returned.
+Return result of the **OH_QoS_GewuCreateSession()** API, used to encapsulate the execution status of the Gewusession creation operation. This struct supports unified handling of both success and failure scenarios. Uponsuccess, the `session` field contains the handle to the created session. Upon failure, the `error` field stores theerror code, helping you locate and handle exceptions.
 
 **Since**: 20
 
@@ -20,7 +20,7 @@ Defines a struct for the return results of the **OH_QoS_GewuCreateSession()** AP
 
 | Name | Description |
 | -- | -- |
-| OH_QoS_GewuSession session | Handle of the session<br>**Since**: 20 |
-| [OH_QoS_GewuErrorCode](capi-qos-h.md#oh_qos_gewuerrorcode) error | Error code of creating a session<br>**Since**: 20 |
+| OH_QoS_GewuSession session | Session handle returned after a session is successfully created. This parameter is valid only when `error`is `OH_QOS_GEWU_OK`.<br>**Since**: 20 |
+| [OH_QoS_GewuErrorCode](capi-qos-h.md#oh_qos_gewuerrorcode) error | Error code.<br>- `OH_QOS_GEWU_OK`: The session is successfully created.<br>- `OH_QOS_GEWU_NOMEM`: Insufficient memory. There is not enough memory to create the session. You areadvised to release system resources and retry the session creation.<br>- `OH_QOS_GEWU_INVAL`: Invalid parameter. The input parameter does not meet the API requirements. Verifythe field types, formats, and values in `attributes`.<br>- `OH_QOS_GEWU_NOPERM`: Insufficient permission. The caller lacks the required permission for the API.Verify the application permission configuration.<br>- `OH_QOS_GEWU_EXIST`: The session already exists. An attempt was made to create a session that alreadyexists. Verify the session creation process.<br>- `OH_QOS_GEWU_NOSYS`: Subsystem not found. The system does not support the related function or thedependent subsystems are unavailable. Check system version and the status of dependent libraries.<br>The mapping between the above enumerated values andtheir numeric codes is as follows: `OH_QOS_GEWU_OK` = **0**, `OH_QOS_GEWU_NOPERM` = **201**, `OH_QOS_GEWU_NOMEM`= **203**, `OH_QOS_GEWU_INVAL` = **401**, `OH_QOS_GEWU_EXIST` = **501**, and `OH_QOS_GEWU_NOSYS` = **801**.<br>**Since**: 20 |
 
 

@@ -2,7 +2,7 @@
 
 Geofence transition status.
 
-**Since:** 22
+**Since:** 12
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -22,7 +22,7 @@ Indicate the beaconFence which transitionEvent occurs.
 
 **Type:** BeaconFence
 
-**Since:** 22
+**Since:** 20
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -36,7 +36,7 @@ ID of the geofence.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 12
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -50,7 +50,7 @@ Indicates the geofence transition status.
 
 **Type:** GeofenceTransitionEvent
 
-**Since:** 22
+**Since:** 12
 
 **System capability:** SystemCapability.Location.Location.Geofence
 

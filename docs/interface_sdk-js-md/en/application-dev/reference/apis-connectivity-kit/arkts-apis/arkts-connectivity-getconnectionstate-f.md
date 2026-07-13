@@ -1,5 +1,11 @@
 # getConnectionState
 
+## Modules to Import
+
+```TypeScript
+import { dataTransfer } from '@kit.ConnectivityKit';
+```
+
 ## getConnectionState
 
 ```TypeScript

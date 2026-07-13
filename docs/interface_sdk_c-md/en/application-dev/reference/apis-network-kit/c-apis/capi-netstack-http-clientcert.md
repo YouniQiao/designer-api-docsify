@@ -6,7 +6,7 @@ typedef struct Http_ClientCert {...} Http_ClientCert
 
 ## Overview
 
-Client certificate which is sent to the remote server, the the remote server will use it to verify theclient's identification.
+Defines the client certificate sent to a remote server, which will be used by the server to verify theidentity of the client.
 
 **Since**: 20
 
@@ -20,9 +20,9 @@ Client certificate which is sent to the remote server, the the remote server wil
 
 | Name | Description |
 | -- | -- |
-| char *certPath | A path to a client certificate. |
-| [Http_CertType](capi-net-http-type-h.md#http_certtype) type | Client certificate type, see [Http_CertType](capi-net-http-type-h.md#http_certtype). |
-| char *keyPath | File path of your client certificate private key. |
-| char *keyPassword | Password for your client certificate private key. |
+| char *certPath | Path of the certificate file. |
+| [Http_CertType](capi-net-http-type-h.md#http_certtype) type | Certificate type. The default value is **PEM**. For details, see [Http_CertType](capi-net-http-type-h.md#http_certtype). |
+| char *keyPath | Path of the certificate key file. |
+| char *keyPassword | Password of the certificate key file. |
 
 

@@ -37,12 +37,14 @@ function turnOffBluetooth(admin: Want): void
 import { Want } from '@kit.AbilityKit';
 import { bluetoothManager } from '@kit.MDMKit';
 
+// 创建企业设备管理扩展组件
 let wantTemp: Want = {
   // 需根据实际情况进行替换
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
+  // 关闭蓝牙
   bluetoothManager.turnOffBluetooth(wantTemp);
   console.info('Succeeded in turning off bluetooth.');
 } catch(err) {

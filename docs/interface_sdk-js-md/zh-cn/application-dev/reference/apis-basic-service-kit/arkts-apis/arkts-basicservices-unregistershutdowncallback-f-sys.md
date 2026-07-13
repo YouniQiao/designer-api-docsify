@@ -38,8 +38,8 @@ try {
         console.info('unsubscribe shutdown success.');
     });
     console.info('unregister shutdown callback success.');
-} catch(err) {
-    console.error('unregister shutdown callback failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to unregister shutdown callback. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

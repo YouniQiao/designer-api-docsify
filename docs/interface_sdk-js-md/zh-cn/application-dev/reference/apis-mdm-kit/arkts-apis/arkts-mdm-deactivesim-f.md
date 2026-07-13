@@ -46,8 +46,10 @@ let wantTemp: Want = {
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
+// 设置要停用的卡槽ID
 let slotId: number = 0;
 try {
+  // 停用指定卡槽的SIM卡
   telephonyManager.deactiveSim(wantTemp, slotId);
   console.info(`success to deactive SIM`);
 } catch (err) {

@@ -45,6 +45,7 @@ export default class MainUIAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
     console.info('Callee onCreate is called');
     try {
+      // 取消注册消息监听
       this.callee.off(method);
     } catch (error) {
       console.error(`Callee.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
@@ -116,9 +117,11 @@ class MyMessageAble implements rpc.Parcelable {
 
 let method = 'call_Function';
 
+// 定义Callee端的消息处理回调函数
 function funcCallBack(pdata: rpc.MessageSequence) {
   let msg = new MyMessageAble('test', '');
   pdata.readParcelable(msg);
+  // 返回处理结果给Caller
   return new MyMessageAble('test1', 'Callee test');
 }
 
@@ -126,6 +129,7 @@ export default class MainUIAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
     console.info('Callee onCreate is called');
     try {
+      // 注册消息监听，当Caller发送指定方法名时会触发回调
       this.callee.on(method, funcCallBack);
     } catch (error) {
       console.error(`Callee.on catch error, error.code: ${error.code}, error.message: ${error.message}`);

@@ -6,7 +6,7 @@ typedef struct OH_MediaAssetManager OH_MediaAssetManager
 
 ## Overview
 
-Define Media Asset ManagerThis structure provides the ability to request media library resources.Null pointer is returned if the creation fails.
+The struct describes the media asset manager.
 
 **Since**: 12
 

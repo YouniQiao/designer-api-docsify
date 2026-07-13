@@ -1,6 +1,6 @@
 # HdrMode (System API)
 
-Enumerates the HDR mode of media assets.
+Enumerates the HDR modes of media assets.
 
 **Since:** 22
 
@@ -28,7 +28,7 @@ Default type.
 HDR_ISO_SINGLE = 1
 ```
 
-Indicates ISO HDR type of single layer image
+Single-layer HDR image that complies with ISO specifications.
 
 **Since:** 22
 
@@ -42,7 +42,7 @@ Indicates ISO HDR type of single layer image
 HDR_ISO_DUAL = 2
 ```
 
-Indicates ISO HDR type of dual layer image
+Dual-layer HDR images that comply with ISO specifications.
 
 **Since:** 22
 
@@ -56,7 +56,7 @@ Indicates ISO HDR type of dual layer image
 HDR_CUVA = 3
 ```
 
-Indicates CUVA HDR type of image
+HDR image taken by a legacy device or camera.
 
 **Since:** 22
 
@@ -70,7 +70,7 @@ Indicates CUVA HDR type of image
 HDR_VIVID_SINGLE = 4
 ```
 
-Indicates HDR vivid type of single layer image
+Single-layer image that complies with the HDR Vivid standard.
 
 **Since:** 22
 
@@ -84,7 +84,7 @@ Indicates HDR vivid type of single layer image
 HDR_VIVID_DUAL = 5
 ```
 
-Indicates HDR vivid type of dual layer image
+Dual-layer image that complies with the HDR Vivid standard.
 
 **Since:** 22
 

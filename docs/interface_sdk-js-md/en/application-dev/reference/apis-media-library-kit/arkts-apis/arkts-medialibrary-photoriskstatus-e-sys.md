@@ -1,6 +1,6 @@
 # PhotoRiskStatus (System API)
 
-Enumeration of photo risk status
+Enumerates the risk types of images.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enumeration of photo risk status
 UNIDENTIFIED = 0
 ```
 
-Unidentified type.
+Default type.
 
 **Since:** 23
 
@@ -30,7 +30,7 @@ Unidentified type.
 APPROVED = 1
 ```
 
-A photo without risk.
+Approved images.
 
 **Since:** 23
 
@@ -46,7 +46,7 @@ A photo without risk.
 SUSPICIOUS = 2
 ```
 
-A photo might be a risk photo.
+Suspicious images.
 
 **Since:** 23
 
@@ -62,7 +62,7 @@ A photo might be a risk photo.
 REJECTED = 3
 ```
 
-A risk photo with confirmed
+Rejected images.
 
 **Since:** 23
 

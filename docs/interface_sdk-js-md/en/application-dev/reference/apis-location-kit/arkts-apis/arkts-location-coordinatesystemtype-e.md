@@ -2,7 +2,7 @@
 
 Enum for coordinate system type.
 
-**Since:** 22
+**Since:** 12
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -14,7 +14,7 @@ WGS84 = 1
 
 WGS84 coordinates system.
 
-**Since:** 22
+**Since:** 12
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -26,7 +26,7 @@ GCJ02 = 2
 
 GCJ-02 coordinates system.
 
-**Since:** 22
+**Since:** 12
 
 **System capability:** SystemCapability.Location.Location.Geofence
 

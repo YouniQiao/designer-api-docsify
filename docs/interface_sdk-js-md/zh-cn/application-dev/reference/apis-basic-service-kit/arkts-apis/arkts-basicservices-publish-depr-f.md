@@ -29,16 +29,16 @@ function publish(event: string, callback: AsyncCallback<void>): void
 import Base from '@ohos.base';
 
 // 发布公共事件回调
-function publishCB(err:Base.BusinessError) {
+let publishCallBack = (err: Base.BusinessError) => {
     if (err.code) {
-        console.error(`publish failed, code is ${err.code}`);
+        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("publish");
+        console.info('publish');
     }
 }
 
 // 发布公共事件
-commonEvent.publish("event", publishCB);
+commonEvent.publish("event", publishCallBack);
 
 ```
 
@@ -78,19 +78,19 @@ let options:CommonEventManager.CommonEventPublishData = {
     code: 0,             // 公共事件的初始代码
     data: "initial data", // 公共事件的初始数据
     isOrdered: true  // 有序公共事件
-}
+};
 
 // 发布公共事件回调
-function publishCB(err:Base.BusinessError) {
+let publishCallBack = (err: Base.BusinessError) => {
     if (err.code) {
-        console.error(`publish failed, code is ${err.code}`);
+        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
     } else {
         console.info("publish");
     }
 }
 
 // 发布公共事件
-commonEvent.publish("event", options, publishCB);
+commonEvent.publish("event", options, publishCallBack);
 
 ```
 

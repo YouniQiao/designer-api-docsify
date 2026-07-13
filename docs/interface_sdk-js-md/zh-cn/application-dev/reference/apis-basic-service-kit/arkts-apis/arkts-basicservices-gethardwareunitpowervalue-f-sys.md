@@ -38,10 +38,10 @@ function getHardwareUnitPowerValue(type: ConsumptionType): number
 
 ```TypeScript
 try {
-    let value = batteryStats.getHardwareUnitPowerValue(batteryStats.ConsumptionType.CONSUMPTION_TYPE_SCREEN);
+    let powerValue = batteryStats.getHardwareUnitPowerValue(batteryStats.ConsumptionType.CONSUMPTION_TYPE_SCREEN);
     console.info('battery statistics value of hardware is: ' + value);
-} catch(err) {
-    console.error('get battery statistics percent of hardware failed, err: ' + err);
+} catch (err) {
+    console.error(`Failed to get battery statistics value of hardware. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

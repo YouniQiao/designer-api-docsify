@@ -6,7 +6,7 @@ typedef struct ArkUI_PickerIndicatorBackground {...} ArkUI_PickerIndicatorBackgr
 
 ## Overview
 
-Style parameters of background indicator.
+Defines the style parameter of the background-style indicator of the selected item.
 
 **Since**: 23
 
