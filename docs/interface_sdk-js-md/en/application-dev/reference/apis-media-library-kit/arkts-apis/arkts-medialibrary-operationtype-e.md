@@ -12,7 +12,8 @@ Enumerates the predicates.
 EQUAL_TO = 1
 ```
 
-Checks for equality, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
+Checks for equality, using the first element of the **value** array to match the predicate. If the array is
+longer, only the first element is considered.
 
 **Since:** 22
 
@@ -28,7 +29,8 @@ Checks for equality, using the first element of the **value** array to match the
 NOT_EQUAL_TO = 2
 ```
 
-Checks for inequality, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
+Checks for inequality, using the first element of the **value** array to match the predicate. If the array is
+longer, only the first element is considered.
 
 **Since:** 22
 
@@ -44,7 +46,8 @@ Checks for inequality, using the first element of the **value** array to match t
 GREATER_THAN = 3
 ```
 
-Checks whether the value is greater than the predicate, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
+Checks whether the value is greater than the predicate, using the first element of the **value** array to match
+the predicate. If the array is longer, only the first element is considered.
 
 **Since:** 22
 
@@ -60,7 +63,8 @@ Checks whether the value is greater than the predicate, using the first element 
 LESS_THAN = 4
 ```
 
-Checks whether the value is less than the predicate, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
+Checks whether the value is less than the predicate, using the first element of the **value** array to match the
+predicate. If the array is longer, only the first element is considered.
 
 **Since:** 22
 
@@ -76,7 +80,8 @@ Checks whether the value is less than the predicate, using the first element of 
 GREATER_THAN_OR_EQUAL_TO = 5
 ```
 
-Checks whether the value is greater than or equal to the predicate, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
+Checks whether the value is greater than or equal to the predicate, using the first element of the **value**
+array to match the predicate. If the array is longer, only the first element is considered.
 
 **Since:** 22
 
@@ -92,7 +97,8 @@ Checks whether the value is greater than or equal to the predicate, using the fi
 LESS_THAN_OR_EQUAL_TO = 6
 ```
 
-Checks whether the value is less than or equal to the predicate, using the first element of the **value** array to match the predicate. If the array is longer, only the first element is considered.
+Checks whether the value is less than or equal to the predicate, using the first element of the **value** array
+to match the predicate. If the array is longer, only the first element is considered.
 
 **Since:** 22
 
@@ -172,7 +178,8 @@ Matches fields outside a specified range, with a maximum value length of 10.
 BEGIN_WRAP = 11
 ```
 
-Adds a left parenthesis to the predicate, similar to "(" in database queries. It must be used with a right parenthesis. No **field** or **value** is needed.
+Adds a left parenthesis to the predicate, similar to "(" in database queries. It must be used with a right
+parenthesis. No **field** or **value** is needed.
 
 **Since:** 22
 
@@ -188,7 +195,8 @@ Adds a left parenthesis to the predicate, similar to "(" in database queries. It
 END_WRAP = 12
 ```
 
-Adds a right parenthesis to the predicate, similar to ")" in database queries. It must be used with a left parenthesis. No **field** or **value** is needed.
+Adds a right parenthesis to the predicate, similar to ")" in database queries. It must be used with a left
+parenthesis. No **field** or **value** is needed.
 
 **Since:** 22
 
@@ -204,7 +212,11 @@ Adds a right parenthesis to the predicate, similar to ")" in database queries. I
 BETWEEN = 13
 ```
 
-Matches fields within a specified range, including both endpoints (closed interval). It uses the first two elements of the **value** array, where the first element is the lower boundary and the second is the upper boundary. For example, in the array [1, 2, 3, 4], the first two elements are used, with 1 as the lower boundary and 2 as the upper boundary.
+Matches fields within a specified range,
+
+including both endpoints (closed interval). It uses the first two elements of the **value** array, where the
+first element is the lower boundary and the second is the upper boundary. For example, in the array [1, 2, 3, 4],
+the first two elements are used, with 1 as the lower boundary and 2 as the upper boundary.
 
 **Since:** 22
 
@@ -220,7 +232,11 @@ Matches fields within a specified range, including both endpoints (closed interv
 NOT_BETWEEN = 14
 ```
 
-Matches fields outside a specified range, excluding both endpoints (open interval). It uses the first two elements of the **value** array, where the first element is the lower boundary and the second is the upper boundary. For example, in the array [1, 2, 3, 4], the first two elements are used, with 1 as the lower boundary and 2 as the upper boundary.
+Matches fields outside a specified range,
+
+excluding both endpoints (open interval). It uses the first two elements of the **value** array, where the first
+element is the lower boundary and the second is the upper boundary. For example, in the array [1, 2, 3, 4], the
+first two elements are used, with 1 as the lower boundary and 2 as the upper boundary.
 
 **Since:** 22
 

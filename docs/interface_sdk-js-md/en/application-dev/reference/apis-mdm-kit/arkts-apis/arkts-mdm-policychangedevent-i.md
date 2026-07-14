@@ -66,7 +66,8 @@ The JSON string containing policy parameters.
 time: number
 ```
 
-The timestamp when the policy was set. Unit: milliseconds, The value must be an integer greater than or equal to 0.
+The timestamp when the policy was set.
+Unit: milliseconds, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 

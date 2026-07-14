@@ -1,6 +1,8 @@
 # AudioManager
 
-音频音量和设备管理。 在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-getaudiomanager-f.md#getaudiomanager-1)获取AudioManager实例。
+音频音量和设备管理。
+
+在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-getaudiomanager-f.md#getaudiomanager-1)获取AudioManager实例。
 
 **起始版本：** 7
 
@@ -12,7 +14,13 @@
 getAudioParameter(key: string, callback: AsyncCallback<string>): void
 ```
 
-获取指定音频参数值。使用callback异步回调。 本接口的使用场景为：根据硬件设备的支持能力扩展音频配置。在不同的设备平台上，所支持的音频参数会存在差异。示例代码内使用样例参数，实际支持的音频配置参数见具体设备平台的资料描述。 > **说明：** > > 从API version 7开始支持，从API version 11开始废弃。
+获取指定音频参数值。使用callback异步回调。
+
+本接口的使用场景为：根据硬件设备的支持能力扩展音频配置。在不同的设备平台上，所支持的音频参数会存在差异。示例代码内使用样例参数，实际支持的音频配置参数见具体设备平台的资料描述。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 11开始废弃。
 
 **起始版本：** 7
 
@@ -33,7 +41,13 @@ getAudioParameter(key: string, callback: AsyncCallback<string>): void
 getAudioParameter(key: string): Promise<string>
 ```
 
-获取指定音频参数值。使用Promise异步回调。 本接口的使用场景为：根据硬件设备的支持能力扩展音频配置。在不同的设备平台上，所支持的音频参数会存在差异。示例代码内使用样例参数，实际支持的音频配置参数见具体设备平台的资料描述。 > **说明：** > > 从API version 7开始支持，从API version 11开始废弃。
+获取指定音频参数值。使用Promise异步回调。
+
+本接口的使用场景为：根据硬件设备的支持能力扩展音频配置。在不同的设备平台上，所支持的音频参数会存在差异。示例代码内使用样例参数，实际支持的音频配置参数见具体设备平台的资料描述。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 11开始废弃。
 
 **起始版本：** 7
 
@@ -204,7 +218,11 @@ getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>
 getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 ```
 
-获取指定流的最大音量等级。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
+获取指定流的最大音量等级。使用callback异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
 
 **起始版本：** 7
 
@@ -227,7 +245,11 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 getMaxVolume(volumeType: AudioVolumeType): Promise<number>
 ```
 
-获取指定流的最大音量等级。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
+获取指定流的最大音量等级。使用Promise异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
 
 **起始版本：** 7
 
@@ -255,7 +277,11 @@ getMaxVolume(volumeType: AudioVolumeType): Promise<number>
 getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 ```
 
-获取指定流的最小音量等级。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
+获取指定流的最小音量等级。使用callback异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
 
 **起始版本：** 7
 
@@ -278,7 +304,11 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 getMinVolume(volumeType: AudioVolumeType): Promise<number>
 ```
 
-获取指定流的最小音量等级。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
+获取指定流的最小音量等级。使用Promise异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
 
 **起始版本：** 7
 
@@ -424,7 +454,11 @@ getStreamManager(): AudioStreamManager
 getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 ```
 
-获取指定流的音量等级。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
+获取指定流的音量等级。使用callback异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
 
 **起始版本：** 7
 
@@ -447,7 +481,11 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 getVolume(volumeType: AudioVolumeType): Promise<number>
 ```
 
-获取指定流的音量等级。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
+获取指定流的音量等级。使用Promise异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
 
 **起始版本：** 7
 
@@ -495,7 +533,11 @@ getVolumeManager(): AudioVolumeManager
 isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 ```
 
-获取指定音量流的活跃状态。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
+获取指定音量流的活跃状态。使用callback异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
 
 **起始版本：** 7
 
@@ -518,7 +560,11 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 isActive(volumeType: AudioVolumeType): Promise<boolean>
 ```
 
-获取指定音量流的活跃状态。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
+获取指定音量流的活跃状态。使用Promise异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
 
 **起始版本：** 7
 
@@ -645,7 +691,11 @@ isMicrophoneMute(): Promise<boolean>
 isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 ```
 
-获取指定音量流的静音状态。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
+获取指定音量流的静音状态。使用callback异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
 
 **起始版本：** 7
 
@@ -668,7 +718,11 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 isMute(volumeType: AudioVolumeType): Promise<boolean>
 ```
 
-获取指定音量流的静音状态。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
+获取指定音量流的静音状态。使用Promise异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。在API version 9-19
 
 **起始版本：** 7
 
@@ -696,7 +750,16 @@ isMute(volumeType: AudioVolumeType): Promise<boolean>
 mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置指定音量流静音。使用callback异步回调。 当该音量流可设置的最小音量不能为0时，不支持静音操作。例如：闹钟和通话。 > **说明：** > > - 从API version 7开始支持，从API version 9开始废弃。 > > - 应用无法直接静音流音量，建议通过系统音量面板组件进行静音。具体样例和介绍请参考API文档 > [@ohos.multimedia.avVolumePanel (音量面板)](arkts-multimedia-avvolumepanel.md)。
+设置指定音量流静音。使用callback异步回调。
+
+当该音量流可设置的最小音量不能为0时，不支持静音操作。例如：闹钟和通话。
+
+> **说明：**
+>
+> - 从API version 7开始支持，从API version 9开始废弃。
+>
+> - 应用无法直接静音流音量，建议通过系统音量面板组件进行静音。具体样例和介绍请参考API文档
+> [@ohos.multimedia.avVolumePanel (音量面板)](arkts-multimedia-avvolumepanel.md)。
 
 **起始版本：** 7
 
@@ -720,7 +783,16 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 ```
 
-设置指定音量流静音。使用Promise异步回调。 当该音量流可设置的最小音量不能为0时，不支持静音操作。例如：闹钟和通话。 > **说明：** > > - 从API version 7开始支持，从API version 9开始废弃。 > > - 应用无法直接静音流音量，建议通过系统音量面板组件进行静音。具体样例和介绍请参考API文档 > [@ohos.multimedia.avVolumePanel (音量面板)](arkts-multimedia-avvolumepanel.md)。
+设置指定音量流静音。使用Promise异步回调。
+
+当该音量流可设置的最小音量不能为0时，不支持静音操作。例如：闹钟和通话。
+
+> **说明：**
+>
+> - 从API version 7开始支持，从API version 9开始废弃。
+>
+> - 应用无法直接静音流音量，建议通过系统音量面板组件进行静音。具体样例和介绍请参考API文档
+> [@ohos.multimedia.avVolumePanel (音量面板)](arkts-multimedia-avvolumepanel.md)。
 
 **起始版本：** 7
 
@@ -857,7 +929,10 @@ on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void
 on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void
 ```
 
-监听音频打断事件（当音频焦点发生变化时触发）。使用callback异步回调。 与[on('audioInterrupt')](arkts-audio-audiorenderer-i.md#on-1) 作用一致，均用于监听焦点变化。为无音频流的场景（未曾创建AudioRenderer对象），比如FM、语音唤醒等提供焦点变化监听功能。
+监听音频打断事件（当音频焦点发生变化时触发）。使用callback异步回调。
+
+与[on('audioInterrupt')](arkts-audio-audiorenderer-i.md#on-1)
+作用一致，均用于监听焦点变化。为无音频流的场景（未曾创建AudioRenderer对象），比如FM、语音唤醒等提供焦点变化监听功能。
 
 **起始版本：** 7
 
@@ -881,7 +956,13 @@ on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAct
 setAudioParameter(key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-音频参数设置。使用callback异步回调。 接口根据硬件设备的支持能力扩展音频配置。支持的参数与产品和设备强相关，非通用参数，示例代码内使用样例参数。 > **说明：** > > 从API version 7开始支持，从API version 11开始废弃。
+音频参数设置。使用callback异步回调。
+
+接口根据硬件设备的支持能力扩展音频配置。支持的参数与产品和设备强相关，非通用参数，示例代码内使用样例参数。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 11开始废弃。
 
 **起始版本：** 7
 
@@ -905,7 +986,13 @@ setAudioParameter(key: string, value: string, callback: AsyncCallback<void>): vo
 setAudioParameter(key: string, value: string): Promise<void>
 ```
 
-音频参数设置。使用Promise异步回调。 接口根据硬件设备的支持能力扩展音频配置。支持的参数与产品和设备强相关，非通用参数，示例代码内使用样例参数。 > **说明：** > > 从API version 7开始支持，从API version 11开始废弃。
+音频参数设置。使用Promise异步回调。
+
+接口根据硬件设备的支持能力扩展音频配置。支持的参数与产品和设备强相关，非通用参数，示例代码内使用样例参数。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 11开始废弃。
 
 **起始版本：** 7
 
@@ -987,7 +1074,11 @@ setDeviceActive(deviceType: ActiveDeviceType, active: boolean): Promise<void>
 setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置麦克风静音状态。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。
+设置麦克风静音状态。使用callback异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -1010,7 +1101,11 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 setMicrophoneMute(mute: boolean): Promise<void>
 ```
 
-设置麦克风静音状态。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。
+设置麦克风静音状态。使用Promise异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -1038,7 +1133,11 @@ setMicrophoneMute(mute: boolean): Promise<void>
 setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 ```
 
-设置铃声模式。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。
+设置铃声模式。使用callback异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -1061,7 +1160,11 @@ setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 setRingerMode(mode: AudioRingMode): Promise<void>
 ```
 
-设置铃声模式。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。
+设置铃声模式。使用Promise异步回调。
+
+> **说明：**
+>
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -1089,7 +1192,14 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<void>): void
 ```
 
-设置指定流的音量等级。使用callback异步回调。 > **说明：** > > - 从API version 7开始支持，从API version 9开始废弃。 > > - 应用无法直接调节系统音量，建议通过系统音量面板组件调节音量。具体样例和介绍请参考API文档 > [@ohos.multimedia.avVolumePanel (音量面板)](arkts-multimedia-avvolumepanel.md)。
+设置指定流的音量等级。使用callback异步回调。
+
+> **说明：**
+>
+> - 从API version 7开始支持，从API version 9开始废弃。
+>
+> - 应用无法直接调节系统音量，建议通过系统音量面板组件调节音量。具体样例和介绍请参考API文档
+> [@ohos.multimedia.avVolumePanel (音量面板)](arkts-multimedia-avvolumepanel.md)。
 
 **起始版本：** 7
 
@@ -1115,7 +1225,14 @@ setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<v
 setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 ```
 
-设置指定流的音量等级。使用Promise异步回调。 > **说明：** > > - 从API version 7开始支持，从API version 9开始废弃。 > > - 应用无法直接调节系统音量，建议通过系统音量面板组件调节音量。具体样例和介绍请参考API文档 > [@ohos.multimedia.avVolumePanel (音量面板)](arkts-multimedia-avvolumepanel.md)。
+设置指定流的音量等级。使用Promise异步回调。
+
+> **说明：**
+>
+> - 从API version 7开始支持，从API version 9开始废弃。
+>
+> - 应用无法直接调节系统音量，建议通过系统音量面板组件调节音量。具体样例和介绍请参考API文档
+> [@ohos.multimedia.avVolumePanel (音量面板)](arkts-multimedia-avvolumepanel.md)。
 
 **起始版本：** 7
 

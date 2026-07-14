@@ -12,7 +12,10 @@ import { defaultAppManager } from '@kit.AbilityKit';
 function getDefaultApplication(type: string, userId: number, callback: AsyncCallback<BundleInfo>) : void
 ```
 
-Obtains the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result.
+Obtains the default application based on a system-defined application type, a file type that complies with the
+media type format (either specified by **type** or **subtype**), or a
+[uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous
+callback to return the result.
 
 **Since:** 9
 
@@ -83,7 +86,10 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 function getDefaultApplication(type: string, callback: AsyncCallback<BundleInfo>) : void
 ```
 
-Obtains the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result.
+Obtains the default application based on a system-defined application type, a file type that complies with the
+media type format (either specified by **type** or **subtype**), or a
+[uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous
+callback to return the result.
 
 **Since:** 9
 
@@ -151,7 +157,10 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 function getDefaultApplication(type: string, userId?: number) : Promise<BundleInfo>
 ```
 
-Obtains the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses a promise to return the result.
+Obtains the default application based on a system-defined application type, a file type that complies with the
+media type format (either specified by **type** or **subtype**), or a
+[uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses a promise to
+return the result.
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # DateMode
 
-Defines mode of date picker.
+DateMode enum defines the mode of the date picker.
 
 **Since:** 26.0.0
 
@@ -12,7 +12,7 @@ Defines mode of date picker.
 DATE = 0
 ```
 
-The date displays three columns: year, month, and day.
+Date displays three columns: year, month, and day.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ The date displays three columns: year, month, and day.
 YEAR_AND_MONTH = 1
 ```
 
-The date displays two columns: year and month.
+Date displays two columns: year and month.
 
 **Since:** 26.0.0
 
@@ -44,7 +44,9 @@ The date displays two columns: year and month.
 MONTH_AND_DAY = 2
 ```
 
-Defines a mode that displays dates in months and days of the month. In this mode, when the month changes from December to January, year does not increment by one; if month changes from January to December, the year does not decrement. The year remains fixed at its currently set value.
+Defines a mode that displays the date as month and day. In this mode, when the month changes from December to
+January, the year does not increment; when the month changes from January to December, the year does not decrement.
+The year remains unchanged at its current setting.
 
 **Since:** 26.0.0
 

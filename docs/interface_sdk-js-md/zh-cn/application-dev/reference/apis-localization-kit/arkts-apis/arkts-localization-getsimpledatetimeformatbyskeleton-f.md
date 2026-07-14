@@ -6,7 +6,8 @@
 export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleDateTimeFormat
 ```
 
-通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-1)接口获 取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-simpledatetimeformat-c.md#format-1)的示例。
+通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-1)接口获
+取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-simpledatetimeformat-c.md#format-1)的示例。
 
 **起始版本：** 20
 
@@ -40,7 +41,8 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Int
 export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleDateTimeFormat
 ```
 
-通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-1)接口获 取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-simpledatetimeformat-c.md#format-1)的示例。
+通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-1)接口获
+取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-simpledatetimeformat-c.md#format-1)的示例。
 
 **起始版本：** 18
 

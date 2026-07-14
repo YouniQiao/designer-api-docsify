@@ -642,7 +642,13 @@ try {
 static setSystemLanguage(language: string): void
 ```
 
-设置系统语言。若要监听系统语言变化，可以监听 [公共事件](../../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考 [系统语言与区域](../../../../internationalization/i18n-system-language-region.md#开发步骤)。 <br>**说明：** <br>可以通过[i18n.System.getSystemLanguage()](../../../../reference/apis-localization-kit/js-apis-i18n.md#getsystemlanguage9)接口获取系统语言。 <br>从API version 21开始，也可以使用[param工具](../../../../tools/param-tool.md#获取系统参数的值)的“param get persist.global.language”命令获取系统语言。
+设置系统语言。若要监听系统语言变化，可以监听
+[公共事件](../../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed)
+OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考
+[系统语言与区域](../../../../internationalization/i18n-system-language-region.md#开发步骤)。
+<br>**说明：**
+<br>可以通过[i18n.System.getSystemLanguage()](../../../../reference/apis-localization-kit/js-apis-i18n.md#getsystemlanguage9)接口获取系统语言。
+<br>从API version 21开始，也可以使用[param工具](../../../../tools/param-tool.md#获取系统参数的值)的“param get persist.global.language”命令获取系统语言。
 
 **起始版本：** 9
 
@@ -916,7 +922,12 @@ try {
 static setSystemRegion(region: string): void
 ```
 
-设置系统地区。若要监听系统地区变化，可以监听 [公共事件](../../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考 [系统语言与区域](../../../../internationalization/i18n-system-language-region.md#开发步骤)。 <br>**说明：** <br>可以通过[i18n.System.getSystemRegion()](../../../../reference/apis-localization-kit/js-apis-i18n.md#getsystemregion9)接口获取系统地区。
+设置系统地区。若要监听系统地区变化，可以监听
+[公共事件](../../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed)
+OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考
+[系统语言与区域](../../../../internationalization/i18n-system-language-region.md#开发步骤)。
+<br>**说明：**
+<br>可以通过[i18n.System.getSystemRegion()](../../../../reference/apis-localization-kit/js-apis-i18n.md#getsystemregion9)接口获取系统地区。
 
 **起始版本：** 9
 

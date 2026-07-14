@@ -18,7 +18,9 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 extraFileSize?: number
 ```
 
-Maximum file size in **FilterOperator.BETWEEN** mode. The default value is **-1**. The unit is bytes.
+Maximum file size in **FilterOperator.BETWEEN** mode. The default value is **-1**.
+
+The unit is bytes.
 
 **Type:** number
 
@@ -34,7 +36,9 @@ Maximum file size in **FilterOperator.BETWEEN** mode. The default value is **-1*
 fileSize: number
 ```
 
-File size used for filtering. The unit is bytes.
+File size used for filtering.
+
+The unit is bytes.
 
 **Type:** number
 
@@ -50,7 +54,9 @@ File size used for filtering. The unit is bytes.
 filterOperator: FilterOperator
 ```
 
-Filter operator. For example, files can be filtered based on being greater than or less than a certain file size.
+Filter operator.
+
+For example, files can be filtered based on being greater than or less than a certain file size.
 
 **Type:** FilterOperator
 

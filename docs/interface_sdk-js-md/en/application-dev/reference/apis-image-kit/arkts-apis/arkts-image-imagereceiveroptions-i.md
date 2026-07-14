@@ -18,7 +18,9 @@ import { image } from '@kit.ImageKit';
 capacity?: number
 ```
 
-Maximum number of images that can be accessed simultaneously. The value range is all integers, The value must be a positive integer less than or equal to 64.
+Maximum number of images that can be accessed simultaneously.
+The value range is all integers, The value must be a positive integer less than
+or equal to 64.
 
 **Type:** number
 

@@ -52,7 +52,9 @@ public description?: ResourceStr
 public icon?: ResourceStr
 ```
 
-左侧元素的图标资源。 默认不设置或设置为undefined，表示不显示icon图标资源。
+左侧元素的图标资源。
+
+默认不设置或设置为undefined，表示不显示icon图标资源。
 
 **类型：** ResourceStr
 
@@ -70,7 +72,9 @@ public icon?: ResourceStr
 public iconStyle?: IconTypeV2
 ```
 
-左侧元素的图标样式。 默认不设置或设置为undefined，表示不显示icon图标资源。
+左侧元素的图标样式。
+
+默认不设置或设置为undefined，表示不显示icon图标资源。
 
 **类型：** IconTypeV2
 
@@ -124,7 +128,9 @@ public secondaryText?: ResourceStr
 public symbolStyle?: SymbolGlyphModifier
 ```
 
-左侧元素的Symbol图标资源，优先级大于icon，同时设置了icon和Symbol图标，只显示Symbol图标。 默认不设置或设置为undefined，Symbol图标不显示。
+左侧元素的Symbol图标资源，优先级大于icon，同时设置了icon和Symbol图标，只显示Symbol图标。
+
+默认不设置或设置为undefined，Symbol图标不显示。
 
 **类型：** SymbolGlyphModifier
 

@@ -12,7 +12,11 @@ Enumerates the log modes of video files.
 DEFAULT = 0
 ```
 
-Default type. A value of **0** indicates that the video is either not in log mode or its type has not yet been determined. This value may later be updated to **1** for some videos after type determination, so it is not recommended for use in queries.
+Default type.
+
+A value of **0** indicates that the video is either not in log mode or its type has not yet been determined. This
+value may later be updated to **1** for some videos after type determination, so it is not recommended for use in
+queries.
 
 **Since:** 22
 

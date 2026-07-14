@@ -12,7 +12,9 @@
 arrow?: OperateIcon
 ```
 
-右侧元素为箭头，大小为12*24vp。 默认不设置或设置为undefined，右侧箭头不显示。
+右侧元素为箭头，大小为12*24vp。
+
+默认不设置或设置为undefined，右侧箭头不显示。
 
 **类型：** OperateIcon
 
@@ -30,7 +32,9 @@ arrow?: OperateIcon
 button?: OperateButton
 ```
 
-右侧元素为按钮。 默认不设置或设置为undefined，右侧按钮不显示。
+右侧元素为按钮。
+
+默认不设置或设置为undefined，右侧按钮不显示。
 
 **类型：** OperateButton
 
@@ -48,7 +52,9 @@ button?: OperateButton
 checkbox?: OperateCheck
 ```
 
-右侧元素为多选框，大小为24*24vp。 默认不设置或设置为undefined，右侧多选框不显示。
+右侧元素为多选框，大小为24*24vp。
+
+默认不设置或设置为undefined，右侧多选框不显示。
 
 **类型：** OperateCheck
 
@@ -66,7 +72,9 @@ checkbox?: OperateCheck
 icon?: OperateIcon
 ```
 
-右侧元素的第一个图标，大小为24*24vp。 默认不设置或设置为undefined，右侧图标不显示。
+右侧元素的第一个图标，大小为24*24vp。
+
+默认不设置或设置为undefined，右侧图标不显示。
 
 **类型：** OperateIcon
 
@@ -84,7 +92,9 @@ icon?: OperateIcon
 image?: ResourceStr
 ```
 
-右侧元素为图片，大小为48*48vp。 默认不设置或设置为undefined，右侧图片不显示。
+右侧元素为图片，大小为48*48vp。
+
+默认不设置或设置为undefined，右侧图片不显示。
 
 **类型：** ResourceStr
 
@@ -102,7 +112,9 @@ image?: ResourceStr
 radio?: OperateCheck
 ```
 
-右侧元素为单选框，大小为24*24vp。 默认不设置或设置为undefined，右侧单选框不显示。
+右侧元素为单选框，大小为24*24vp。
+
+默认不设置或设置为undefined，右侧单选框不显示。
 
 **类型：** OperateCheck
 
@@ -120,7 +132,9 @@ radio?: OperateCheck
 subIcon?: OperateIcon
 ```
 
-右侧元素的第二个图标，大小为24*24vp。 默认不设置或设置为undefined，右侧第二个图标不显示。
+右侧元素的第二个图标，大小为24*24vp。
+
+默认不设置或设置为undefined，右侧第二个图标不显示。
 
 **类型：** OperateIcon
 
@@ -138,7 +152,9 @@ subIcon?: OperateIcon
 switch?: OperateCheck
 ```
 
-右侧元素为开关。 默认不设置或设置为undefined，右侧开关不显示。
+右侧元素为开关。
+
+默认不设置或设置为undefined，右侧开关不显示。
 
 **类型：** OperateCheck
 
@@ -156,7 +172,9 @@ switch?: OperateCheck
 symbolStyle?: SymbolGlyphModifier
 ```
 
-右侧元素为Symbol图标资源，大小为48*48vp。 默认不设置或设置为undefined，右侧Symbol图标不显示。
+右侧元素为Symbol图标资源，大小为48*48vp。
+
+默认不设置或设置为undefined，右侧Symbol图标不显示。
 
 **类型：** SymbolGlyphModifier
 
@@ -174,7 +192,9 @@ symbolStyle?: SymbolGlyphModifier
 text?: ResourceStr
 ```
 
-右侧元素为文字。 默认不设置或设置为undefined，右侧文字不显示。
+右侧元素为文字。
+
+默认不设置或设置为undefined，右侧文字不显示。
 
 **类型：** ResourceStr
 

@@ -1,6 +1,11 @@
 # FocusController
 
-Provides capabilities to control focus, including features such as clearing, moving, and activating focus. > **NOTE** > > In the following API examples, you must first use [getFocusController()](arkts-arkui-uicontext-c.md#getfocuscontroller-1) in > **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
+Provides capabilities to control focus, including features such as clearing, moving, and activating focus.
+
+> **NOTE**
+>
+> In the following API examples, you must first use [getFocusController()](arkts-arkui-uicontext-c.md#getfocuscontroller-1) in
+> **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
 
@@ -41,7 +46,8 @@ Sets the [focus activation state](../../../../ui/arkts-common-events-focus-event
 clearFocus(): void
 ```
 
-Clears the focus and forcibly moves the focus to the root container node of the page, causing other nodes in the focus chain to lose focus.
+Clears the focus and forcibly moves the focus to the root container node of the page, causing other nodes in the
+focus chain to lose focus.
 
 **Since:** 12
 
@@ -57,7 +63,10 @@ Clears the focus and forcibly moves the focus to the root container node of the 
 isActive(): boolean
 ```
 
-Obtains the focus activation state of the UI instance. For details about the focus activation state, see [Basic Concepts](../../../../ui/arkts-common-events-focus-event.md#basic-concepts).
+Obtains the focus activation state of the UI instance.
+
+For details about the focus activation state, see
+[Basic Concepts](../../../../ui/arkts-common-events-focus-event.md#basic-concepts).
 
 **Since:** 20
 

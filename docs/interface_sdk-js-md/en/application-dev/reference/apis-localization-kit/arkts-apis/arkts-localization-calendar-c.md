@@ -64,7 +64,8 @@ try {
 compareDays(date: Date): number
 ```
 
-Compares the current date of this **Calendar** object with the specified date for the difference in the number of days.
+Compares the current date of this **Calendar** object with the specified date for the difference in the number of
+days.
 
 **Since:** 11
 

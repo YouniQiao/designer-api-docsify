@@ -72,7 +72,8 @@ Indicates country name.
 locale?: string
 ```
 
-Indicates language used for the location description. zh indicates Chinese, and en indicates English.
+Indicates language used for the location description.
+zh indicates Chinese, and en indicates English.
 
 **Type:** string
 

@@ -12,7 +12,13 @@ import { media } from '@kit.MediaKit';
 function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 ```
 
-Creates an AVRecorder instance. This API uses an asynchronous callback to return the result. > **NOTE** > > An application can create multiple AVRecorder instances. However, because the device shares a common audio > channel, only one instance can record audio at a time. Any attempt to create the second instance for audio > recording fails due to audio channel conflicts.
+Creates an AVRecorder instance. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+>
+> An application can create multiple AVRecorder instances. However, because the device shares a common audio
+> channel, only one instance can record audio at a time. Any attempt to create the second instance for audio
+> recording fails due to audio channel conflicts.
 
 **Since:** 9
 
@@ -54,7 +60,13 @@ media.createAVRecorder((error: BusinessError, recorder: media.AVRecorder) => {
 function createAVRecorder(): Promise<AVRecorder>
 ```
 
-Creates an AVRecorder instance. This API uses a promise to return the result. > **NOTE** > > An application can create multiple AVRecorder instances. However, because the device shares a common audio > channel, only one instance can record audio at a time. Any attempt to create the second instance for audio > recording fails due to audio channel conflicts.
+Creates an AVRecorder instance. This API uses a promise to return the result.
+
+> **NOTE**
+>
+> An application can create multiple AVRecorder instances. However, because the device shares a common audio
+> channel, only one instance can record audio at a time. Any attempt to create the second instance for audio
+> recording fails due to audio channel conflicts.
 
 **Since:** 9
 

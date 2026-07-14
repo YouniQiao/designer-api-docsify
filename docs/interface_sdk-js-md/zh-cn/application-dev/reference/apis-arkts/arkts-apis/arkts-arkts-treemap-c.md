@@ -1,6 +1,7 @@
 # TreeMap
 
-TreeMap可用于存储具有关联关系的key-value键值对集合，存储元素中key值唯一，每个key对应一个value。 TreeMap底层使用红黑树实现，可以利用二叉树特性快速查找键值对。key值有序存储，可以实现快速的插入和删除。
+TreeMap可用于存储具有关联关系的key-value键值对集合，存储元素中key值唯一，每个key对应一个value。
+TreeMap底层使用红黑树实现，可以利用二叉树特性快速查找键值对。key值有序存储，可以实现快速的插入和删除。
 
 **起始版本：** 8
 
@@ -247,7 +248,8 @@ while (!nextResult.done) {
 forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?: Object): void
 ```
 
-通过回调函数来遍历实例对象上的元素及其下标。 不会对已删除的key执行回调。
+通过回调函数来遍历实例对象上的元素及其下标。
+不会对已删除的key执行回调。
 
 **起始版本：** 8
 

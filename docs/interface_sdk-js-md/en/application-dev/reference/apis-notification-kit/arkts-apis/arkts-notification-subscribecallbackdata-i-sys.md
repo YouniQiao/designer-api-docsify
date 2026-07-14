@@ -14,7 +14,8 @@ Returns notification information carrying system property values.
 readonly notificationClassification?: NotificationClassification
 ```
 
-Notification classification information. It exists only when enableClassification in NotificationSubscribeInfo is true.
+Notification classification information. It exists only when enableClassification in
+NotificationSubscribeInfo is true.
 
 **Type:** NotificationClassification
 
@@ -32,7 +33,10 @@ Notification classification information. It exists only when enableClassificatio
 readonly reason?: number
 ```
 
-Reason for deletion. The options are as follows: - **1**: The notification is deleted after being tapped. - **2**: The notification is deleted by the user.
+Reason for deletion. The options are as follows:
+
+- **1**: The notification is deleted after being tapped.
+- **2**: The notification is deleted by the user.
 
 **Type:** number
 
@@ -112,7 +116,8 @@ Notification vibration.
 readonly voiceContent?: VoiceContent
 ```
 
-Voice broadcast content of the notification. It exists only when voiceContentOptions.enabled is true in NotificationSubscribeInfo.
+Voice broadcast content of the notification. It exists only when voiceContentOptions.enabled is true in
+NotificationSubscribeInfo.
 
 **Type:** VoiceContent
 

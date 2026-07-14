@@ -12,7 +12,11 @@ import { huks } from '@kit.UniversalKeystoreKit';
 function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void
 ```
 
-Deletes a key. This API uses an asynchronous callback to return the result. > **NOTE** > Deleting SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md) > requires the ohos.permission.ACCESS_SE_KEY permission.
+Deletes a key. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+> Deleting SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
@@ -146,7 +150,12 @@ export default {
 function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 ```
 
-Deletes a key. This API uses a promise to return the result. > **NOTE** > > Deleting SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md) > requires the ohos.permission.ACCESS_SE_KEY permission.
+Deletes a key. This API uses a promise to return the result.
+
+> **NOTE**
+>
+> Deleting SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 

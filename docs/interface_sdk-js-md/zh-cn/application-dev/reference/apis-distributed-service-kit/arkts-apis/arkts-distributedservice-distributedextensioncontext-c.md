@@ -14,7 +14,11 @@
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 ```
 
-连接到远程服务扩展能力。 此方法连接到远程设备上的服务扩展能力。 必须实现{@link ConnectOptions}接口才能获取目标的代理 连接时的服务扩展。
+连接到远程服务扩展能力。
+
+此方法连接到远程设备上的服务扩展能力。
+必须实现{@link ConnectOptions}接口才能获取目标的代理
+连接时的服务扩展。
 
 **起始版本：** 26.0.0
 

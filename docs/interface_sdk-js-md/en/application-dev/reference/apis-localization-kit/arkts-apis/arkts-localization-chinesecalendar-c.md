@@ -1,6 +1,7 @@
 # ChineseCalendar
 
-Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar, such as leap month.
+Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar,
+such as leap month.
 
 **Inheritance/Implementation:** ChineseCalendar extends [Calendar](arkts-localization-calendar-c.md)
 

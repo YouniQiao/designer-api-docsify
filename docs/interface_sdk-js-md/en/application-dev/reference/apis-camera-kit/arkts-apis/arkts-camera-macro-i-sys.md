@@ -1,6 +1,7 @@
 # Macro (System API)
 
-Macro inherits from [MacroQuery](arkts-camera-macroquery-i-sys.md). It provides the API to enable macro photography.
+Macro inherits from [MacroQuery](arkts-camera-macroquery-i-sys.md).
+It provides the API to enable macro photography.
 
 **Inheritance/Implementation:** Macro extends [MacroQuery](arkts-camera-macroquery-i-sys.md)
 
@@ -22,7 +23,13 @@ import { camera } from '@kit.CameraKit';
 enableMacro(enabled: boolean): void
 ```
 
-Enables or disables macro photography. > **NOTE** > > Before calling this API, call > [isMacroSupported](arkts-camera-macroquery-i-sys.md#ismacrosupported-1) to check whether the > current device supports macro photography.
+Enables or disables macro photography.
+
+> **NOTE**
+>
+> Before calling this API, call
+> [isMacroSupported](arkts-camera-macroquery-i-sys.md#ismacrosupported-1) to check whether the
+> current device supports macro photography.
 
 **Since:** 19
 

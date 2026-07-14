@@ -18,7 +18,11 @@ import { cert } from '@kit.DeviceCertificateKit';
 allowDownloadIntermediateCa?: boolean
 ```
 
-Whether to allow the application to download the missing intermediate CA certificate from the network. **true** means yes; **false** otherwise. The default value is **false**. The download address is obtained from the certificate AIA extension. Only HTTP is supported. To use the network for download, you need to request the **ohos.permission.INTERNET** permission. For details about the permission configuration, see [Declaring Permissions](../../../../security/AccessToken/declare-permissions.md).
+Whether to allow the application to download the missing intermediate CA certificate from the network.
+**true** means yes; **false** otherwise. The default value is **false**.
+The download address is obtained from the certificate AIA extension. Only HTTP is supported. To use the network
+for download, you need to request the **ohos.permission.INTERNET** permission. For details about the permission
+configuration, see [Declaring Permissions](../../../../security/AccessToken/declare-permissions.md).
 
 **Type:** boolean
 
@@ -148,7 +152,8 @@ List of trusted anchors.
 trustSystemCa?: boolean
 ```
 
-Whether to use the prebuilt CA certificate to validate the certificate chain. **true** means yes; **false** otherwise.
+Whether to use the prebuilt CA certificate to validate the certificate chain. **true** means yes; **false**
+otherwise.
 
 **Type:** boolean
 

@@ -1,6 +1,6 @@
 # DisplayMode
 
-Enum for DisplayMode
+DisplayMode enum defines the display mode of the picker.
 
 **Since:** 26.0.0
 
@@ -12,7 +12,7 @@ Enum for DisplayMode
 DATE = 0
 ```
 
-Display date only.
+Displays only the date.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ Display date only.
 TIME = 1
 ```
 
-Display time only.
+Displays only the time.
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ Display time only.
 DATE_TIME = 2
 ```
 
-Display both date and time.
+Displays both date and time.
 
 **Since:** 26.0.0
 

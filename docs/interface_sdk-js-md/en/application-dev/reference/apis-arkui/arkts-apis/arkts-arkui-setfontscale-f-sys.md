@@ -12,7 +12,9 @@ import { uiAppearance } from '@kit.ArkUI';
 function setFontScale(fontScale: number): Promise<void>
 ```
 
-Sets the system font scale. **Permission required**: ohos.permission.UPDATE_CONFIGURATION
+Sets the system font scale.
+
+**Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 12
 

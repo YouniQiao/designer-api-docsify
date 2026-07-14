@@ -12,7 +12,8 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function installPublicCertificate(keystore: Uint8Array, keystorePwd: string) : Promise<CMResult>
 ```
 
-Installs the public credential of the user. This API is called only by the certificate management application. This API uses a promise to return the result.
+Installs the public credential of the user. This API is called only by the certificate management application. This
+API uses a promise to return the result.
 
 **Since:** 26.0.0
 

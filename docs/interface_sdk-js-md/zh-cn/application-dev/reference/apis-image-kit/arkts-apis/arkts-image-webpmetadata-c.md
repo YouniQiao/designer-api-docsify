@@ -12,7 +12,8 @@ WebP metadata.
 readonly canvasHeight?: number
 ```
 
-Canvas Height. Unit: px, The value should be an integer.
+Canvas Height.
+Unit: px, The value should be an integer.
 
 **类型：** number
 
@@ -28,7 +29,8 @@ Canvas Height. Unit: px, The value should be an integer.
 readonly canvasWidth?: number
 ```
 
-Canvas Width. Unit: px, The value should be an integer.
+Canvas Width.
+Unit: px, The value should be an integer.
 
 **类型：** number
 
@@ -44,7 +46,8 @@ Canvas Width. Unit: px, The value should be an integer.
 readonly delayTime?: number
 ```
 
-Delay of each frame. Unit: ms, The value should be an integer.
+Delay of each frame.
+Unit: ms, The value should be an integer.
 
 **类型：** number
 
@@ -76,7 +79,8 @@ WebP图片动画循环的次数。如果取值为0，则表示不限次数。
 readonly unclampedDelayTime?: number
 ```
 
-Unclamped delay of each frame. Unit: ms, The value should be an integer.
+Unclamped delay of each frame.
+Unit: ms, The value should be an integer.
 
 **类型：** number
 

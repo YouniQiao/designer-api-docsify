@@ -2,7 +2,7 @@
 
 ## Overview
 
-Declares the APIs for managing access token.
+Declares the APIs for implementing application access control.
 
 **Library**: ability_access_control.so
 
@@ -18,7 +18,7 @@ Declares the APIs for managing access token.
 
 | Name | Description |
 | -- | -- |
-| [bool OH_AT_CheckSelfPermission(const char *permission)](#oh_at_checkselfpermission) | Checks whether this application has been granted the given permission. |
+| [bool OH_AT_CheckSelfPermission(const char *permission)](#oh_at_checkselfpermission) | Checks whether a permission is granted to this application. |
 
 ## Function description
 
@@ -30,7 +30,7 @@ bool OH_AT_CheckSelfPermission(const char *permission)
 
 **Description**
 
-Checks whether this application has been granted the given permission.
+Checks whether a permission is granted to this application.
 
 **Since**: 12
 
@@ -38,12 +38,12 @@ Checks whether this application has been granted the given permission.
 
 | Parameter | Description |
 | -- | -- |
-| const char *permission | - Name of the permission to be granted. |
+| const char *permission | - Pointer to the permission to check. For details about the permission,see [the application permission list](docroot://security/AccessToken/app-permissions.md). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| bool | true  - The permission has been granted to this application.<br>         false - The permission has not been granted to this application. |
+| bool | Returns true if the permission has been granted to the application. Returns false otherwise. |
 
 

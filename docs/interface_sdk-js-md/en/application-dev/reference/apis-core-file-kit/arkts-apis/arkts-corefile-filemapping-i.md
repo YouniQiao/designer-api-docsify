@@ -1,6 +1,7 @@
 # FileMapping
 
-File mapping object. Before invoking the FileMapping method, you need to use the mmap() method (synchronous or asynchronous) to construct a FileMapping instance.
+File mapping object. Before invoking the FileMapping method, you need to use the mmap() method (synchronous or
+asynchronous) to construct a FileMapping instance.
 
 **Since:** 26.0.0
 
@@ -59,7 +60,8 @@ fileIo.closeSync(file);
 flip(): void
 ```
 
-Mode reversal. That is, the limit attribute is set to the current position, and then the current position is set to 0.
+Mode reversal. That is, the limit attribute is set to the current position, and then the current position is set
+to 0.
 
 **Since:** 26.0.0
 
@@ -183,7 +185,10 @@ fileIo.closeSync(file);
 msync(): Promise<void>
 ```
 
-Synchronizes the dirty page data in the entire file mapping area to the disk file and uses the promise asynchronous callback function. Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
+Synchronizes the dirty page data in the entire file mapping area to the disk file and uses the promise
+asynchronous callback function.
+Note: If the file is not stored on the local device, calling this API does not ensure that all changes are
+stored persistently.
 
 **Since:** 26.0.0
 
@@ -237,7 +242,10 @@ mapping.msync().then(() => {
 msync(position: number, length: number): Promise<void>
 ```
 
-Synchronizes the dirty page data in the specified range of the file mapping area to the disk file and uses the promise asynchronous callback function. Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
+Synchronizes the dirty page data in the specified range of the file mapping area to the disk file and uses the
+promise asynchronous callback function.
+Note: If the file is not stored on the local device, calling this API does not ensure that all changes are
+stored persistently.
 
 **Since:** 26.0.0
 
@@ -298,7 +306,10 @@ mapping.msync(50, buffer.byteLength).then(() => {
 msyncSync(): void
 ```
 
-Synchronizes the dirty page data of the entire file mapping area to the disk file by using the synchronization method. Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
+Synchronizes the dirty page data of the entire file mapping area to the disk file by using the synchronization
+method.
+Note: If the file is not stored on the local device, calling this API does not ensure that all changes are
+stored persistently.
 
 **Since:** 26.0.0
 
@@ -343,7 +354,10 @@ fileIo.closeSync(file);
 msyncSync(position: number, length: number): void
 ```
 
-Synchronize the dirty page data in the specified range of the file mapping area to the disk file by using the synchronization method. Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
+Synchronize the dirty page data in the specified range of the file mapping area to the disk file by using the
+synchronization method.
+Note: If the file is not stored on the local device, calling this API does not ensure that all changes are
+stored persistently.
 
 **Since:** 26.0.0
 
@@ -502,7 +516,8 @@ fileIo.closeSync(file);
 remaining(): number
 ```
 
-Obtains the number of remaining bytes between the current position (position) and the upper bound (limit) of the readable and writable area.
+Obtains the number of remaining bytes between the current position (position) and the upper bound (limit) of the
+readable and writable area.
 
 **Since:** 26.0.0
 
@@ -546,7 +561,8 @@ fileIo.closeSync(file);
 setLimit(limit: number): void
 ```
 
-Sets the upper bound of the readable and writable area of the file mapping area. The upper bound does not exceed the total capacity of the mapping area (0 <= limit <= capacity).
+Sets the upper bound of the readable and writable area of the file mapping area. The upper bound does not exceed
+the total capacity of the mapping area (0 <= limit <= capacity).
 
 **Since:** 26.0.0
 

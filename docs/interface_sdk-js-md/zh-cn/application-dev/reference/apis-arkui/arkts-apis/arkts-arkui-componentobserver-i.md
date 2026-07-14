@@ -12,7 +12,8 @@ ComponentObserver用于监听布局和绘制事件。
 off(type: 'layout', callback?: () => void): void
 ```
 
-使用句柄注销具有相应查询条件的回调。 当组件布局完成时不再触发此回调。
+使用句柄注销具有相应查询条件的回调。
+当组件布局完成时不再触发此回调。
 
 **起始版本：** 10
 
@@ -35,7 +36,8 @@ off(type: 'layout', callback?: () => void): void
 off(type: 'draw', callback?: () => void): void
 ```
 
-使用句柄注销具有相应查询条件的回调。 当组件绘制完成时不再触发此回调。
+使用句柄注销具有相应查询条件的回调。
+当组件绘制完成时不再触发此回调。
 
 **起始版本：** 10
 
@@ -58,7 +60,8 @@ off(type: 'draw', callback?: () => void): void
 off(type: 'drawChildren', callback?: Callback<void>): void
 ```
 
-使用句柄注销具有相应查询条件的回调。 当组件的子级绘制完成时，不会触发此回调。
+使用句柄注销具有相应查询条件的回调。
+当组件的子级绘制完成时，不会触发此回调。
 
 **起始版本：** 20
 
@@ -234,7 +237,8 @@ struct ImageExample {
 on(type: 'layout', callback: () => void): void
 ```
 
-使用句柄注册具有相应查询条件的回调。 当组件布局完成时会触发此回调。
+使用句柄注册具有相应查询条件的回调。
+当组件布局完成时会触发此回调。
 
 **起始版本：** 10
 
@@ -257,7 +261,8 @@ on(type: 'layout', callback: () => void): void
 on(type: 'draw', callback: () => void): void
 ```
 
-使用句柄注册具有相应查询条件的回调。 当组件绘制完成时会触发此回调。
+使用句柄注册具有相应查询条件的回调。
+当组件绘制完成时会触发此回调。
 
 **起始版本：** 10
 
@@ -280,7 +285,8 @@ on(type: 'draw', callback: () => void): void
 on(type: 'drawChildren', callback: Callback<void>): void
 ```
 
-使用句柄注册具有相应查询条件的回调。 当组件的子级绘制完成时，会触发此回调。
+使用句柄注册具有相应查询条件的回调。
+当组件的子级绘制完成时，会触发此回调。
 
 **起始版本：** 20
 

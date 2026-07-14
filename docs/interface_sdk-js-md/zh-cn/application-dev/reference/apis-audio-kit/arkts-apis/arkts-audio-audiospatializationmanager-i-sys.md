@@ -1,6 +1,13 @@
 # AudioSpatializationManager
 
-空间音频管理。 在使用AudioSpatializationManager的接口之前，需先通过 [getSpatializationManager](arkts-audio-audiomanager-i.md#getspatializationmanager-1)获取AudioSpatializationManager实例。 > **说明：** > > - 本Interface首批接口从API version 18开始支持。
+空间音频管理。
+
+在使用AudioSpatializationManager的接口之前，需先通过
+[getSpatializationManager](arkts-audio-audiomanager-i.md#getspatializationmanager-1)获取AudioSpatializationManager实例。
+
+> **说明：**
+>
+> - 本Interface首批接口从API version 18开始支持。
 
 **起始版本：** 18
 
@@ -882,7 +889,8 @@ offPersonalizedSpatializationEnabledChangeForAnyDevice(
       callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-取消订阅指定设备的个性化空间启用状态更改事件。 当状态发生变化时，已注册的客户端将收到回调。
+取消订阅指定设备的个性化空间启用状态更改事件。
+当状态发生变化时，已注册的客户端将收到回调。
 
 **起始版本：** 26.0.0
 
@@ -939,7 +947,8 @@ offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): vo
 on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the spatialization enable state change events. When the spatialization enable state changes, registered clients will receive the callback.
+Subscribes to the spatialization enable state change events. When the spatialization enable state changes,
+registered clients will receive the callback.
 
 **起始版本：** 11
 
@@ -983,7 +992,8 @@ audioSpatializationManager.on('spatializationEnabledChange', (isSpatializationEn
 on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the spatialization enable state change events by the specified device. When the spatialization enable state changes, registered clients will receive the callback.
+Subscribes to the spatialization enable state change events by the specified device.
+When the spatialization enable state changes, registered clients will receive the callback.
 
 **起始版本：** 12
 
@@ -1024,7 +1034,8 @@ audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', (audioS
 on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the head tracking enable state change events. When the head tracking enable state changes, registered clients will receive the callback.
+Subscribes to the head tracking enable state change events. When the head tracking enable state changes,
+registered clients will receive the callback.
 
 **起始版本：** 11
 
@@ -1068,7 +1079,8 @@ audioSpatializationManager.on('headTrackingEnabledChange', (isHeadTrackingEnable
 on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the head tracking enable state change events by the specified device. When the head tracking enable state changes, registered clients will receive the callback.
+Subscribes to the head tracking enable state change events by the specified device.
+When the head tracking enable state changes, registered clients will receive the callback.
 
 **起始版本：** 12
 
@@ -1109,7 +1121,8 @@ audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpa
 onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the adaptive spatial rendering enable state change events. When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
+Subscribes to the adaptive spatial rendering enable state change events.
+When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
 
 **起始版本：** 24
 
@@ -1137,7 +1150,8 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
       callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-指定设备订阅个性化空间化使能状态变更事件。 当状态发生变化时，已注册的客户端将收到回调。
+指定设备订阅个性化空间化使能状态变更事件。
+当状态发生变化时，已注册的客户端将收到回调。
 
 **起始版本：** 26.0.0
 
@@ -1165,7 +1179,8 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
 onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 ```
 
-订阅空间音源类型变化事件。当当前空间音源类型发生变化时， 注册的客户端将收到回调。
+订阅空间音源类型变化事件。当当前空间音源类型发生变化时，
+注册的客户端将收到回调。
 
 **起始版本：** 24
 
@@ -1194,7 +1209,9 @@ onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the adaptive spatial rendering enabled or disabled by the specified device. This method uses a promise to return the result. When the adaptive spatial rendering is enabled, spatial audio rendering will not take effect on stereo audio.
+Sets the adaptive spatial rendering enabled or disabled by the specified device.
+This method uses a promise to return the result.
+When the adaptive spatial rendering is enabled, spatial audio rendering will not take effect on stereo audio.
 
 **起始版本：** 24
 
@@ -1342,7 +1359,8 @@ audioSpatializationManager.setHeadTrackingEnabled(enable).then(() => {
 setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the head tracking enabled or disabled by the specified device. This method uses a promise to return the result.
+Sets the head tracking enabled or disabled by the specified device.
+This method uses a promise to return the result.
 
 **起始版本：** 12
 
@@ -1560,7 +1578,8 @@ audioSpatializationManager.setSpatializationEnabled(enable).then(() => {
 setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the spatialization enabled or disabled by the specified device. This method uses a promise to return the result.
+Sets the spatialization enabled or disabled by the specified device.
+This method uses a promise to return the result.
 
 **起始版本：** 12
 

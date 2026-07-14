@@ -18,7 +18,9 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 contextRecoveryInfo: ContextRecoveryInfo
 ```
 
-Information about the context of exiting the PhotoPicker. This information is returned when the selection process is complete and is used by the application within **PhotoSelectOptions** during the subsequent launch of the PhotoPicker to restore the state from the previous exit.
+Information about the context of exiting the PhotoPicker. This information is returned when the selection process
+is complete and is used by the application within **PhotoSelectOptions** during the subsequent launch of the
+PhotoPicker to restore the state from the previous exit.
 
 **Type:** ContextRecoveryInfo
 
@@ -34,7 +36,8 @@ Information about the context of exiting the PhotoPicker. This information is re
 isOriginalPhoto: boolean
 ```
 
-Whether the selected media file is the original image. **true** if yes, **false** otherwise. The default value is **false**.
+Whether the selected media file is the original image. **true** if yes, **false** otherwise. The default value is
+**false**.
 
 **Type:** boolean
 
@@ -50,7 +53,10 @@ Whether the selected media file is the original image. **true** if yes, **false*
 movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>
 ```
 
-Array of moving photo badge states for the media files selected from Gallery. If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise, it is empty.
+Array of moving photo badge states for the media files selected from Gallery.
+
+If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise,
+it is empty.
 
 **Type:** Array<MovingPhotoBadgeStateType>
 
@@ -66,7 +72,12 @@ Array of moving photo badge states for the media files selected from Gallery. If
 photoUris: Array<string>
 ```
 
-URIs of the media files selected. This URI array can be used only by calling the [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-i.md#getassets-1) API through temporary authorization. For details, see [Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+URIs of the media files selected.
+
+This URI array can be used only by calling the
+[photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-i.md#getassets-1)
+API through temporary authorization. For details, see
+[Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Type:** Array<string>
 

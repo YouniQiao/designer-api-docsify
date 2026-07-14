@@ -12,7 +12,8 @@ import { hash } from '@kit.CoreFileKit';
 function createHash(algorithm: string): HashStream
 ```
 
-Creates a **HashStream** instance, which can be used to generate a message digest (a hash value) using the given algorithm.
+Creates a **HashStream** instance, which can be used to generate a message digest (a hash value) using the given
+algorithm.
 
 **Since:** 12
 

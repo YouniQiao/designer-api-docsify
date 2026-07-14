@@ -54,7 +54,8 @@ fileIo.closeSync(file);
 lock(exclusive?: boolean): Promise<void>
 ```
 
-Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses a promise to return the result.
+Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses a promise to return the
+result.
 
 **Since:** 9
 
@@ -106,7 +107,8 @@ file.lock(true).then(() => {
 lock(callback: AsyncCallback<void>): void
 ```
 
-Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to return the result.
+Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 9
 
@@ -153,7 +155,8 @@ file.lock((err: BusinessError) => {
 lock(exclusive: boolean, callback: AsyncCallback<void>): void
 ```
 
-Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to return the result.
+Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 9
 

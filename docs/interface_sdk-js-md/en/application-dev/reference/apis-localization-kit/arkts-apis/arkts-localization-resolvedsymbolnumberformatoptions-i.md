@@ -1,6 +1,7 @@
 # ResolvedSymbolNumberFormatOptions
 
-Represents optional element for the ResolvedSymbolNumberFormatOptions object. Define the resolved symbol element and value that need to get.
+Represents optional element for the ResolvedSymbolNumberFormatOptions object.
+Define the resolved symbol element and value that need to get.
 
 **Inheritance/Implementation:** ResolvedSymbolNumberFormatOptions extends [Intl.ResolvedNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-resolvednumberformatoptions-i.md)
 

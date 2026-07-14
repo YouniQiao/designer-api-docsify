@@ -30,7 +30,8 @@ XComponent的控制器。
 imageAIOptions?: ImageAIOptions
 ```
 
-AI图像分析选项。 您可以通过此参数配置分析类型或绑定分析器控制器。
+AI图像分析选项。
+您可以通过此参数配置分析类型或绑定分析器控制器。
 
 **类型：** ImageAIOptions
 

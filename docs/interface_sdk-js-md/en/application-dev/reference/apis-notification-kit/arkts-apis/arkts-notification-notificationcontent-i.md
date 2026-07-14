@@ -12,7 +12,10 @@ Describes the notification contents.
 contentType?: notification.ContentType
 ```
 
-Notification content type. This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use **notificationContentType** instead.
+Notification content type.
+
+This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use
+**notificationContentType** instead.
 
 **Type:** notification.ContentType
 
@@ -30,7 +33,9 @@ Notification content type. This attribute is supported since API version 7 and d
 longText?: NotificationLongTextContent
 ```
 
-Long text notification content. This parameter is used when **notificationContentType** is **NOTIFICATION_CONTENT_LONG_TEXT**. The complete long text content can be displayed after the notification is expanded.
+Long text notification content. This parameter is used when **notificationContentType** is
+**NOTIFICATION_CONTENT_LONG_TEXT**. The complete long text content can be displayed after the notification is
+expanded.
 
 **Type:** NotificationLongTextContent
 
@@ -44,7 +49,8 @@ Long text notification content. This parameter is used when **notificationConten
 multiLine?: NotificationMultiLineContent
 ```
 
-Multi-line notification content. This parameter is used when **notificationContentType** is **NOTIFICATION_CONTENT_MULTILINE**. The notification is displayed in a multi-line list style after expansion.
+Multi-line notification content. This parameter is used when **notificationContentType** is
+**NOTIFICATION_CONTENT_MULTILINE**. The notification is displayed in a multi-line list style after expansion.
 
 **Type:** NotificationMultiLineContent
 
@@ -58,7 +64,8 @@ Multi-line notification content. This parameter is used when **notificationConte
 normal?: NotificationBasicContent
 ```
 
-Basic notification content. This parameter is used when **notificationContentType** is **NOTIFICATION_CONTENT_BASIC_TEXT**. The notification displays the title and body in a plain text style.
+Basic notification content. This parameter is used when **notificationContentType** is
+**NOTIFICATION_CONTENT_BASIC_TEXT**. The notification displays the title and body in a plain text style.
 
 **Type:** NotificationBasicContent
 
@@ -72,7 +79,10 @@ Basic notification content. This parameter is used when **notificationContentTyp
 notificationContentType?: notificationManager.ContentType
 ```
 
-Notification content type, used to specify the content layout type of the notification, which determines the display style of the notification in the notification center. It must be used together with the corresponding notification content object. For example, when this parameter is set to **NOTIFICATION_CONTENT_BASIC_TEXT**, the **normal** field must be specified at the same time.
+Notification content type, used to specify the content layout type of the notification, which determines the
+display style of the notification in the notification center. It must be used together with the corresponding
+notification content object. For example, when this parameter is set to **NOTIFICATION_CONTENT_BASIC_TEXT**, the
+**normal** field must be specified at the same time.
 
 **Type:** notificationManager.ContentType
 
@@ -86,7 +96,8 @@ Notification content type, used to specify the content layout type of the notifi
 picture?: NotificationPictureContent
 ```
 
-Picture notification content. This parameter is used when **notificationContentType** is **NOTIFICATION_CONTENT_PICTURE**. The picture can be displayed after the notification is expanded.
+Picture notification content. This parameter is used when **notificationContentType** is
+**NOTIFICATION_CONTENT_PICTURE**. The picture can be displayed after the notification is expanded.
 
 **Type:** NotificationPictureContent
 
@@ -100,7 +111,9 @@ Picture notification content. This parameter is used when **notificationContentT
 systemLiveView?: NotificationSystemLiveViewContent
 ```
 
-System live view notification content. Third-party applications are not supported to directly create this type of notification. After a system agent creates a system live view notification, a third-party application can publish a notification with the same ID to update the specified content.
+System live view notification content. Third-party applications are not supported to directly create this type
+of notification. After a system agent creates a system live view notification, a third-party application can
+publish a notification with the same ID to update the specified content.
 
 **Type:** NotificationSystemLiveViewContent
 

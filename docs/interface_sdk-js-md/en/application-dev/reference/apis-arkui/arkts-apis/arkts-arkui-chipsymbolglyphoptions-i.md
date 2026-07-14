@@ -1,6 +1,12 @@
 # ChipSymbolGlyphOptions
 
-Defines the prefix and suffix icon options. > **NOTE** > > The animation type cannot be modified via > [SymbolEffect](SymbolGlyphAttribute#symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean)) and > animations cannot be set via **effectStrategy**.
+Defines the prefix and suffix icon options.
+
+> **NOTE**
+>
+> The animation type cannot be modified via
+> [SymbolEffect](SymbolGlyphAttribute#symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean)) and
+> animations cannot be set via **effectStrategy**.
 
 **Since:** 12
 
@@ -18,7 +24,11 @@ import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, Accessib
 activated?: SymbolGlyphModifier
 ```
 
-Icon settings for the activated state. Default value: The prefix or suffix icon is not displayed. If the value is **undefined**, the default value is used.
+Icon settings for the activated state.
+
+Default value: The prefix or suffix icon is not displayed.
+
+If the value is **undefined**, the default value is used.
 
 **Type:** SymbolGlyphModifier
 
@@ -36,7 +46,11 @@ Icon settings for the activated state. Default value: The prefix or suffix icon 
 normal?: SymbolGlyphModifier
 ```
 
-Sets the icon in the inactive state. Default value: The prefix or suffix icon is not displayed. If the value is **undefined**, the default value is used.
+Sets the icon in the inactive state.
+
+Default value: The prefix or suffix icon is not displayed.
+
+If the value is **undefined**, the default value is used.
 
 **Type:** SymbolGlyphModifier
 

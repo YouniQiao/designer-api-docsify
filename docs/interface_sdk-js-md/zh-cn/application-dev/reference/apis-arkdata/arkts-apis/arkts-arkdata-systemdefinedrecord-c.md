@@ -1,6 +1,10 @@
 # SystemDefinedRecord
 
-SystemDefinedRecord是[UnifiedRecord](arkts-arkdata-unifiedrecord-c.md)的子类，也是OpenHarmony系统特有数据类型的基类，用于描述仅在 OpenHarmony系统范围内流通的特有数据类型，推荐开发者优先使用SystemDefinedRecord的子类描述数据，如 [SystemDefinedForm](arkts-arkdata-systemdefinedform-c.md)、 [SystemDefinedAppItem](arkts-arkdata-systemdefinedappitem-c.md)、 [SystemDefinedPixelMap](arkts-arkdata-systemdefinedpixelmap-c.md)等具体子类。
+SystemDefinedRecord是[UnifiedRecord](arkts-arkdata-unifiedrecord-c.md)的子类，也是OpenHarmony系统特有数据类型的基类，用于描述仅在
+OpenHarmony系统范围内流通的特有数据类型，推荐开发者优先使用SystemDefinedRecord的子类描述数据，如
+[SystemDefinedForm](arkts-arkdata-systemdefinedform-c.md)、
+[SystemDefinedAppItem](arkts-arkdata-systemdefinedappitem-c.md)、
+[SystemDefinedPixelMap](arkts-arkdata-systemdefinedpixelmap-c.md)等具体子类。
 
 **继承/实现关系：** SystemDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md)
 

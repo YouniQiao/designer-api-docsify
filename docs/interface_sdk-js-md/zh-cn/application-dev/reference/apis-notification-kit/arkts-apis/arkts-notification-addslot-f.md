@@ -12,7 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 ```
 
-创建指定类型的通知渠道。使用callback异步回调。 通知渠道NotificationSlot定义了通知的提醒方式（如提示音、振动、横幅等）和级别。 发布通知前，应用需先创建对应类型的通知渠道，或者发布通知时系统将自动创建对应类型的通知渠道。 同一类型的通知渠道只能创建一个。
+创建指定类型的通知渠道。使用callback异步回调。
+
+通知渠道NotificationSlot定义了通知的提醒方式（如提示音、振动、横幅等）和级别。
+发布通知前，应用需先创建对应类型的通知渠道，或者发布通知时系统将自动创建对应类型的通知渠道。
+同一类型的通知渠道只能创建一个。
 
 **起始版本：** 9
 
@@ -59,7 +63,11 @@ notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION, a
 function addSlot(type: SlotType): Promise<void>
 ```
 
-创建指定类型的通知渠道。使用Promise异步回调。 通知渠道NotificationSlot定义了通知的提醒方式（如提示音、振动、横幅等）和级别。 发布通知前，应用需先创建对应类型的通知渠道，或者发布通知时系统将自动创建对应类型的通知渠道。 同一类型的通知渠道只能创建一个。
+创建指定类型的通知渠道。使用Promise异步回调。
+
+通知渠道NotificationSlot定义了通知的提醒方式（如提示音、振动、横幅等）和级别。
+发布通知前，应用需先创建对应类型的通知渠道，或者发布通知时系统将自动创建对应类型的通知渠道。
+同一类型的通知渠道只能创建一个。
 
 **起始版本：** 9
 

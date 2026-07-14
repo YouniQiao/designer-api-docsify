@@ -20,7 +20,8 @@ import { privacyManager } from '@kit.AbilityKit';
 accessCount: number
 ```
 
-Total number of accesses for this permission, indicating the cumulative number of successful uses of this permission within the query time window.
+Total number of accesses for this permission, indicating the cumulative number of successful uses of this
+permission within the query time window.
 
 **Type:** number
 
@@ -36,7 +37,9 @@ Total number of accesses for this permission, indicating the cumulative number o
 accessRecords: Array<UsedRecordDetail>
 ```
 
-Access record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL. Default value: Query the last 10 successful access records.
+Access record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL.
+
+Default value: Query the last 10 successful access records.
 
 **Type:** Array<UsedRecordDetail>
 
@@ -70,7 +73,8 @@ Extension identity, with a maximum length of 48 characters.
 lastAccessDuration: number
 ```
 
-Last access duration. Unit: milliseconds.
+Last access duration.
+Unit: milliseconds.
 
 **Type:** number
 
@@ -86,7 +90,8 @@ Last access duration. Unit: milliseconds.
 lastAccessTime: number
 ```
 
-Last time when the permission was accessed. Unit: milliseconds.
+Last time when the permission was accessed.
+Unit: milliseconds.
 
 **Type:** number
 
@@ -102,7 +107,8 @@ Last time when the permission was accessed. Unit: milliseconds.
 lastRejectTime: number
 ```
 
-Last time when the access to the permission was rejected. Unit: milliseconds.
+Last time when the access to the permission was rejected.
+Unit: milliseconds.
 
 **Type:** number
 
@@ -134,7 +140,8 @@ Permission name, used to identify the sensitive permission corresponding to the 
 rejectCount: number
 ```
 
-Total number of rejections for this permission, indicating the cumulative number of failed or denied permission accesses within the query time window.
+Total number of rejections for this permission, indicating the cumulative number of failed or denied permission
+accesses within the query time window.
 
 **Type:** number
 
@@ -150,7 +157,9 @@ Total number of rejections for this permission, indicating the cumulative number
 rejectRecords: Array<UsedRecordDetail>
 ```
 
-Rejection record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL. Default value: Query the last 10 failed or rejected records.
+Rejection record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL.
+
+Default value: Query the last 10 failed or rejected records.
 
 **Type:** Array<UsedRecordDetail>
 

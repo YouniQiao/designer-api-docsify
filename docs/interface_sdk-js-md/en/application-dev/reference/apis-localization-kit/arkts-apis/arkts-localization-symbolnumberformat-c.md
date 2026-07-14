@@ -1,6 +1,9 @@
 # SymbolNumberFormat
 
-Provide a Number formatting interface that supports custom symbols. This interface formats number values into strings with custom symbols, and can replace variable symbols in the formatted result with custom fixed symbols (e.g., replacing "null" to "NA").
+Provide a Number formatting interface that supports custom symbols.
+This interface formats number values into strings with custom symbols,
+and can replace variable symbols in the formatted result with custom fixed symbols
+(e.g., replacing "null" to "NA").
 
 **Inheritance/Implementation:** SymbolNumberFormat implements [Intl.NumberFormat](../../apis-na/arkts-apis/arkts-na-numberformat-i.md)
 
@@ -192,7 +195,8 @@ Parse a localized string to number object. For example, "123,456" will parse to 
 public resolvedOptions(): ResolvedSymbolNumberFormatOptions
 ```
 
-Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. Define the resolved symbol element and value that need to get.
+Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.
+Define the resolved symbol element and value that need to get.
 
 **Since:** 26.0.0
 

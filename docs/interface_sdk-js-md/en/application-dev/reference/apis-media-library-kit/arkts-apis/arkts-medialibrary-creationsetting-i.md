@@ -1,6 +1,7 @@
 # CreationSetting
 
-Represents the configuration for saving images or videos to the media library, including the file name, file type, and other related parameters.
+Represents the configuration for saving images or videos to the media library, including the file name, file type,
+and other related parameters.
 
 **Since:** 23
 
@@ -36,7 +37,8 @@ File name extension, for example, **'jpg'**.
 photoType: PhotoType
 ```
 
-[PhotoType](arkts-medialibrary-phototype-e.md) of the created media file, which can be **IMAGE** or **VIDEO**.
+[PhotoType](arkts-medialibrary-phototype-e.md) of the created media file, which can
+be **IMAGE** or **VIDEO**.
 
 **Type:** PhotoType
 
@@ -54,7 +56,14 @@ photoType: PhotoType
 title?: string
 ```
 
-Title of the image or video. If this parameter is not passed, the system generates a value. The parameter specifications are as follows: - It must not contain a file name extension. - It must not contain any invalid characters, which are:\ / : * ? " ' ` < > | { } [ ] - The file name consists of the title and file name extension. The file name string length ranges from 1 to 255. Therefore, the title length cannot be too long.
+Title of the image or video.
+
+If this parameter is not passed, the system generates a value. The parameter specifications are as follows:
+
+- It must not contain a file name extension.
+- It must not contain any invalid characters, which are:\ / : * ? " ' ` < > | { } [ ]
+- The file name consists of the title and file name extension. The file name string length ranges from 1 to 255.
+Therefore, the title length cannot be too long.
 
 **Type:** string
 

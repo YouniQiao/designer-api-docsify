@@ -38,7 +38,8 @@ Authorization result string.
 needPermissionDialog: boolean
 ```
 
-Whether the current CLI command requires a permission dialog. The value **true** indicates that a permission dialog is required, and **false** indicates that no permission dialog is required.
+Whether the current CLI command requires a permission dialog. The value **true** indicates that a permission
+dialog is required, and **false** indicates that no permission dialog is required.
 
 **Type:** boolean
 
@@ -56,7 +57,9 @@ Whether the current CLI command requires a permission dialog. The value **true**
 permissionNameList: Array<Permissions>
 ```
 
-List of permission names that the agent initiating CLI-related operations currently does not satisfy. If the related permissions are not satisfied, the CLI cannot be started, or the started CLI process cannot obtain the corresponding permissions.
+List of permission names that the agent initiating CLI-related operations currently does not satisfy. If the
+related permissions are not satisfied, the CLI cannot be started, or the started CLI process cannot obtain the
+corresponding permissions.
 
 **Type:** Array<Permissions>
 

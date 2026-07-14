@@ -18,7 +18,9 @@ import { matrix4 } from '@kit.ArkUI';
 x: number
 ```
 
-X-coordinate. Value range: (-∞, +∞)
+X-coordinate.
+
+Value range: (-∞, +∞)
 
 **Type:** number
 
@@ -36,7 +38,9 @@ X-coordinate. Value range: (-∞, +∞)
 y: number
 ```
 
-Y-coordinate. Value range: (-∞, +∞)
+Y-coordinate.
+
+Value range: (-∞, +∞)
 
 **Type:** number
 

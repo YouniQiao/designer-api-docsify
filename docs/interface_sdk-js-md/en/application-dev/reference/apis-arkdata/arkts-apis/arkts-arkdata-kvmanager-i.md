@@ -1,6 +1,7 @@
 # KVManager
 
-Provides an instance to obtain information about a distributed KV store. Before calling any API in **KVManager**, you must use [createKVManager](arkts-arkdata-createkvmanager-f.md#createkvmanager-1) to create a **KVManager** instance.
+Provides an instance to obtain information about a distributed KV store. Before calling any API in **KVManager**,
+you must use [createKVManager](arkts-arkdata-createkvmanager-f.md#createkvmanager-1) to create a **KVManager** instance.
 
 **Since:** 9
 
@@ -315,7 +316,11 @@ try {
 getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
-Obtains the IDs of all distributed KV stores that are created by [getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1) and have not been deleted by [deleteKVStore](arkts-arkdata-kvmanager-i.md#deletekvstore-1) . This API uses an asynchronous callback to return the result.
+Obtains the IDs of all distributed KV stores that are created by
+[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)
+and have not been deleted by
+[deleteKVStore](arkts-arkdata-kvmanager-i.md#deletekvstore-1)
+. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -364,7 +369,11 @@ try {
 getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
-Obtains the IDs of all distributed KV stores that are created by [getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1) and have not been deleted by [deleteKVStore](arkts-arkdata-kvmanager-i.md#deletekvstore-1) . This API uses a promise to return the result.
+Obtains the IDs of all distributed KV stores that are created by
+[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)
+and have not been deleted by
+[deleteKVStore](arkts-arkdata-kvmanager-i.md#deletekvstore-1)
+. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -417,7 +426,16 @@ try {
 getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): void
 ```
 
-Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses an asynchronous callback to return the result. > **NOTE** > > If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV > store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV > store instance. For important data that cannot be regenerated, you are advised to use the backup and restore > feature to prevent data loss. For details, see > [Database Backup and Restoration](../../../../database/data-backup-and-restore.md).
+Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses an
+asynchronous callback to return the result.
+
+> **NOTE**
+>
+> If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV
+> store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV
+> store instance. For important data that cannot be regenerated, you are advised to use the backup and restore
+> feature to prevent data loss. For details, see
+> [Database Backup and Restoration](../../../../database/data-backup-and-restore.md).
 
 **Since:** 9
 
@@ -481,7 +499,16 @@ try {
 getKVStore<T>(storeId: string, options: Options): Promise<T>
 ```
 
-Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses a promise to return the result. > **NOTE** > > If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV > store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV > store instance. For important data that cannot be regenerated, you are advised to use the backup and restore > feature to prevent data loss. For details, see > [Database Backup and Restoration](../../../../database/data-backup-and-restore.md).
+Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses a
+promise to return the result.
+
+> **NOTE**
+>
+> If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV
+> store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV
+> store instance. For important data that cannot be regenerated, you are advised to use the backup and restore
+> feature to prevent data loss. For details, see
+> [Database Backup and Restoration](../../../../database/data-backup-and-restore.md).
 
 **Since:** 9
 
@@ -546,7 +573,9 @@ try {
 off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 ```
 
-Unsubscribes from the termination (death) of the distributed data service. The **deathCallback** parameter must be a callback registered for subscribing to the termination of the distributed data service. Otherwise, the unsubscription will fail.
+Unsubscribes from the termination (death) of the distributed data service. The **deathCallback** parameter must
+be a callback registered for subscribing to the termination of the distributed data service. Otherwise, the
+unsubscription will fail.
 
 **Since:** 9
 
@@ -589,7 +618,9 @@ try {
 on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 ```
 
-Subscribes to the termination (death) of the distributed data service. If the service is terminated, you need to register the callbacks for data change notifications and cross-device sync completion notifications again. In addition, an error will be returned for a sync operation.
+Subscribes to the termination (death) of the distributed data service. If the service is terminated, you need to
+register the callbacks for data change notifications and cross-device sync completion notifications again. In
+addition, an error will be returned for a sync operation.
 
 **Since:** 9
 

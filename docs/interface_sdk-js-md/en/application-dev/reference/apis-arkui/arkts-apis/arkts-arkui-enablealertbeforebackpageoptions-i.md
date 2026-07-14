@@ -1,6 +1,6 @@
 # EnableAlertBeforeBackPageOptions
 
-Defines the option of EnableAlertBeforeBackPage.
+Defines the **EnableAlertBeforeBackPage** parameter.
 
 **Since:** 6
 
@@ -22,7 +22,8 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 cancel?: (errMsg: string) => void
 ```
 
-Called when the operation is cancelled.
+Called when the **Cancel** button in the confirm dialog box is clicked. **errMsg** indicates the returned
+information.
 
 **Type:** (errMsg: string) => void
 
@@ -58,7 +59,7 @@ Called when the dialog box is closed.
 message: string
 ```
 
-dialog context.
+Content displayed in the confirm dialog box.
 
 **Type:** string
 
@@ -76,7 +77,7 @@ dialog context.
 success?: (errMsg: string) => void
 ```
 
-Called when the dialog box is displayed.
+Called when the **OK** button in the confirm dialog box is clicked. **errMsg** indicates the returned information.
 
 **Type:** (errMsg: string) => void
 

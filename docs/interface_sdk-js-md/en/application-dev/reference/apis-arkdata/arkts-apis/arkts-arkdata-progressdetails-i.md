@@ -32,7 +32,9 @@ Describes the code of data sync progress.
 details: Record<string, TableDetails>
 ```
 
-Statistics of each table. The key indicates the table name, and the value indicates the device-cloud sync statistics of the table.
+Statistics of each table.
+
+The key indicates the table name, and the value indicates the device-cloud sync statistics of the table.
 
 **Type:** Record<string, TableDetails>
 

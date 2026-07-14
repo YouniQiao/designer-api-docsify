@@ -72,7 +72,8 @@ Name of the album.
 DATE_ADDED
 ```
 
-Date when the file was added. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
+Date when the file was added. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on
+January 1, 1970).
 
 **Since:** 9
 
@@ -90,7 +91,8 @@ Date when the file was added. The value is the number of seconds elapsed since t
 DATE_MODIFIED
 ```
 
-Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
+Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed
+since the Epoch time (00:00:00 UTC on January 1, 1970).
 
 **Since:** 9
 

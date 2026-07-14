@@ -18,7 +18,9 @@ import { relationalStore } from '@kit.ArkData';
 autoCleanDeviceDirtyData?: boolean
 ```
 
-Specifies whether to clean up dirty data that is synchronized to the local but deleted on the remote device. <br>Default value:true.
+Specifies whether to clean up dirty data that is synchronized to
+the local but deleted on the remote device.
+<br>Default value:true.
 
 **Type:** boolean
 

@@ -28,7 +28,8 @@ Spacious grid level. This level is the number of standard grid columns minus 1.
 STANDARD = 1
 ```
 
-Standard grid level. The number of standard grid columns varies with the device size. If no number of standard grid columns is configured, the system uses the default number of columns.
+Standard grid level. The number of standard grid columns varies with the device size. If no number of standard
+grid columns is configured, the system uses the default number of columns.
 
 **Since:** 23
 

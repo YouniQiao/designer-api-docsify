@@ -1,6 +1,7 @@
 # PhotoSelectOptions
 
-Defines additional options for selecting media assets from Gallery. It inherits from **BaseSelectOptions**. It is used to start the picker of the corresponding user ID space.
+Defines additional options for selecting media assets from Gallery. It inherits from **BaseSelectOptions**. It is
+used to start the picker of the corresponding user ID space.
 
 **Inheritance/Implementation:** PhotoSelectOptions extends [BaseSelectOptions](arkts-medialibrary-baseselectoptions-c.md)
 
@@ -20,7 +21,10 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 completeButtonText?: CompleteButtonText
 ```
 
-Text displayed on the complete button. The complete button is located in the lower-right corner of the page. It is used by users to signify that they have finished selecting images.
+Text displayed on the complete button.
+
+The complete button is located in the lower-right corner of the page. It is used by users to signify that they
+have finished selecting images.
 
 **Type:** CompleteButtonText
 
@@ -36,7 +40,11 @@ Text displayed on the complete button. The complete button is located in the low
 contextRecoveryInfo?: ContextRecoveryInfo
 ```
 
-Information for restoring the PhotoPicker's state from the last exit. When the selection process is complete, the PhotoPicker returns **contextRecoveryInfo** to the application. The application can then use the information to restore the PhotoPicker's state and the last viewed grid interface the next time it starts the PhotoPicker.
+Information for restoring the PhotoPicker's state from the last exit.
+
+When the selection process is complete, the PhotoPicker returns **contextRecoveryInfo** to the application. The
+application can then use the information to restore the PhotoPicker's state and the last viewed grid interface
+the next time it starts the PhotoPicker.
 
 **Type:** ContextRecoveryInfo
 
@@ -52,7 +60,9 @@ Information for restoring the PhotoPicker's state from the last exit. When the s
 isDestroyedWithNavigation?: boolean
 ```
 
-Whether destruction with [Navigation](Navigation) is supported. **true** if supported, **false** otherwise. The default value is **false**.
+Whether destruction with
+[Navigation](Navigation) is
+supported. **true** if supported, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
@@ -86,7 +96,8 @@ Whether the image can be edited. **true** if editable, **false** otherwise.
 isOriginalSupported?: boolean
 ```
 
-Whether to display the button for selecting the original image. **true** to display, **false** otherwise. The default value is **false**.
+Whether to display the button for selecting the original image. **true** to display, **false** otherwise. The
+default value is **false**.
 
 **Type:** boolean
 
@@ -102,7 +113,14 @@ Whether to display the button for selecting the original image. **true** to disp
 isReturnToPhotoBrowserEnabled?: boolean
 ```
 
-Whether to automatically switch to the full image preview mode after a photo is taken in single-selection mode. **true** means to switch, and **false** means the opposite. The default value is **false**. Note: This parameter takes effect only when [SingleSelectionMode](arkts-medialibrary-singleselectionmode-e.md) is set to **BROWSER_MODE** or **BROWSER_AND_SELECT_MODE** and [BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-baseselectoptions-c.md) is set to **true**.
+Whether to automatically switch to the full image preview mode after a photo is taken in single-selection mode.
+**true** means to switch, and **false** means the opposite. The default value is **false**.
+
+Note: This parameter takes effect only when
+[SingleSelectionMode](arkts-medialibrary-singleselectionmode-e.md) is set to
+**BROWSER_MODE** or **BROWSER_AND_SELECT_MODE** and
+[BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-baseselectoptions-c.md)
+is set to **true**.
 
 **Type:** boolean
 
@@ -156,7 +174,9 @@ Support selection order adjustment.
 maxPhotoSelectNumber?: number
 ```
 
-Maximum number of photos that can be selected. A maximum of 500 photos can be selected. The default value is **500**.
+Maximum number of photos that can be selected.
+
+A maximum of 500 photos can be selected. The default value is **500**.
 
 **Type:** number
 
@@ -174,7 +194,9 @@ Maximum number of photos that can be selected. A maximum of 500 photos can be se
 maxVideoSelectNumber?: number
 ```
 
-Maximum number of videos that can be selected. A maximum of 500 videos can be selected. The default value is **500**.
+Maximum number of videos that can be selected.
+
+A maximum of 500 videos can be selected. The default value is **500**.
 
 **Type:** number
 

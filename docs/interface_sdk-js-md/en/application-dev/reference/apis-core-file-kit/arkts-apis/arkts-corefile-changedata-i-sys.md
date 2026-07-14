@@ -24,7 +24,8 @@ import { userFileManager } from '@kit.CoreFileKit';
 subUris: Array<string>
 ```
 
-URIs of the changed files in the album. The value may be undefined. Check whether the value is undefined before using it.
+URIs of the changed files in the album. The value may be undefined. Check whether the value is undefined before
+using it.
 
 **Type:** Array<string>
 

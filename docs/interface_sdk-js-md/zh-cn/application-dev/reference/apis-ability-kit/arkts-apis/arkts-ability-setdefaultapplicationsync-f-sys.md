@@ -6,7 +6,8 @@
 function setDefaultApplicationSync(type: string, elementName: ElementName, userId?: number): void
 ```
 
-以同步方法根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformdatatype-e.md)类型设置默认应用。
+以同步方法根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者
+[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformdatatype-e.md)类型设置默认应用。
 
 **起始版本：** 10
 

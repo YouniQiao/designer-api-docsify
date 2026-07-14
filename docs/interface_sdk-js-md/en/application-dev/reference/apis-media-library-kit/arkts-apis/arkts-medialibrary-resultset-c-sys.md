@@ -1,6 +1,9 @@
 # ResultSet (System API)
 
-Defines APIs to access the result set obtained by querying the RDB store. Before calling any of the following APIs, you must use [query](arkts-medialibrary-photoaccesshelper-i-sys.md#query-1) to obtain a ResultSet instance.
+Defines APIs to access the result set obtained by querying the RDB store.
+
+Before calling any of the following APIs, you must use [query](arkts-medialibrary-photoaccesshelper-i-sys.md#query-1) to
+obtain a ResultSet instance.
 
 **Since:** 22
 
@@ -303,7 +306,8 @@ Number of columns in the result set.
 isAtLastRow: boolean
 ```
 
-Whether the cursor is in the last row of the result set. **true** if the cursor is in the last row; **false** otherwise.
+Whether the cursor is in the last row of the result set. **true** if the cursor is in the last row; **false**
+otherwise.
 
 **Type:** boolean
 

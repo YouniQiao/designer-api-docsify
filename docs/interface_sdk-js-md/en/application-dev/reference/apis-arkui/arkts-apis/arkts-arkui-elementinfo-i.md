@@ -1,6 +1,7 @@
 # ElementInfo
 
-Defines information about the components associated with the observable object, including system components and custom components.
+Defines information about the components associated with the observable object, including system components and
+custom components.
 
 **Since:** 23
 

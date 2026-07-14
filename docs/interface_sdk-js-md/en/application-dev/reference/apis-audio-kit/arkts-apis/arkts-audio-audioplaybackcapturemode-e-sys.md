@@ -12,7 +12,13 @@ Defines mode for playback capture, each mode means different target streams to c
 MODE_ONLY_VOIP = 0x4000
 ```
 
-Only voip mode. Capture only voice/video communication streams. If {@link AudioCapturerOptions#playbackCaptureUid} is set, only the voice/video communication stream of the specified application is captured. The {@link AudioCapturerOptions#playbackCaptureUid} takes effect only when this mode is set. This mode requires the `ohos.permission.CAPTURE_VOICE_DOWNLINK_AUDIO` permission; otherwise {@link createAudioCapturer} fails.
+Only voip mode. Capture only voice/video communication streams.
+If {@link AudioCapturerOptions#playbackCaptureUid} is set, only the
+voice/video communication stream of the specified application is captured.
+The {@link AudioCapturerOptions#playbackCaptureUid} takes effect only when
+this mode is set.
+This mode requires the `ohos.permission.CAPTURE_VOICE_DOWNLINK_AUDIO`
+permission; otherwise {@link createAudioCapturer} fails.
 
 **Since:** 26.0.0
 

@@ -66,7 +66,9 @@ checkbox?: OperateCheckV2
 icon?: OperateIconV2
 ```
 
-左侧元素的图标资源。 默认不设置或设置为undefined，表示不显示icon图标资源。
+左侧元素的图标资源。
+
+默认不设置或设置为undefined，表示不显示icon图标资源。
 
 **类型：** OperateIconV2
 

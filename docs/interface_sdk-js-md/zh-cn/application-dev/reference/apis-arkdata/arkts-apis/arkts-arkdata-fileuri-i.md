@@ -28,7 +28,8 @@ details?: Record<string, number | number | number | string | Uint8Array>
 fileType: string
 ```
 
-文件类型（必须是标准化数据类型（即[UTD预置列表](../../../../database/uniform-data-type-list.md)中各类型对应的UTD-ID或自定义UTD-ID）。fileType最大长度限制为1 024个字节，超出限制时抛出异常。
+文件类型（必须是标准化数据类型（即[UTD预置列表](../../../../database/uniform-data-type-list.md)中各类型对应的UTD-ID或自定义UTD-ID）。fileType最大长度限制为1
+024个字节，超出限制时抛出异常。
 
 **类型：** string
 
@@ -44,7 +45,8 @@ fileType: string
 oriUri: string
 ```
 
-文件的原始URI路径。支持本地文件绝对路径、file://协议和http/https网络URL格式。长度限制为4096字节。例如：`/data/local/tmp/test.txt`、 `file:///data/local/tmp/test.txt`或`http://example.com/file.txt`。
+文件的原始URI路径。支持本地文件绝对路径、file://协议和http/https网络URL格式。长度限制为4096字节。例如：`/data/local/tmp/test.txt`、
+`file:///data/local/tmp/test.txt`或`http://example.com/file.txt`。
 
 **类型：** string
 
@@ -60,7 +62,8 @@ oriUri: string
 readonly uniformDataType: 'general.file-uri'
 ```
 
-统一数据类型标识为文件地址类型数据，固定为“general.file-uri”，数据类型描述信息见 [UniformDataType](arkts-arkdata-uniformdatatype-e.md)。
+统一数据类型标识为文件地址类型数据，固定为“general.file-uri”，数据类型描述信息见
+[UniformDataType](arkts-arkdata-uniformdatatype-e.md)。
 
 **类型：** 'general.file-uri'
 
@@ -76,7 +79,8 @@ readonly uniformDataType: 'general.file-uri'
 uriAuthorizationPolicies?: Array<number>
 ```
 
-用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST（读+写+持久化授权）。只针对单个record使用，优先级最高，具体策略见 [UriPermission](arkts-arkdata-uripermission-e.md)。
+用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST（读+写+持久化授权）。只针对单个record使用，优先级最高，具体策略见
+[UriPermission](arkts-arkdata-uripermission-e.md)。
 
 **类型：** Array<number>
 

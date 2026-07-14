@@ -1,6 +1,7 @@
 # RevokeSaveSuccessResponse
 
-[revokeSave](arkts-arkdata-dataobject-i.md#revokesave-1) 接口回调信息。
+[revokeSave](arkts-arkdata-dataobject-i.md#revokesave-1)
+接口回调信息。
 
 **起始版本：** 9
 

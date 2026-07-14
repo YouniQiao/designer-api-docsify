@@ -13,7 +13,8 @@ function setUserGrantedBundleState(targetBundle: BundleOption,
     enabledBundles: BundleOption[], enabled: boolean): Promise<void>
 ```
 
-Sets the enabling state of device notification access for the specified application. This API uses a promise to return the result.
+Sets the enabling state of device notification access for the specified application.
+This API uses a promise to return the result.
 
 **Since:** 22
 

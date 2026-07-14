@@ -12,7 +12,8 @@ Gif metadata.
 readonly canvasHeight?: number
 ```
 
-Canvas height. Unit: px, The value should be an integer.
+Canvas height.
+Unit: px, The value should be an integer.
 
 **类型：** number
 
@@ -28,7 +29,8 @@ Canvas height. Unit: px, The value should be an integer.
 readonly canvasWidth?: number
 ```
 
-Canvas width. Unit: px, The value should be an integer.
+Canvas width.
+Unit: px, The value should be an integer.
 
 **类型：** number
 
@@ -44,7 +46,8 @@ Canvas width. Unit: px, The value should be an integer.
 readonly delayTime?: number
 ```
 
-Delay of each frame in milliseconds. Unit: ms, The value should be an integer.
+Delay of each frame in milliseconds.
+Unit: ms, The value should be an integer.
 
 **类型：** number
 
@@ -60,7 +63,12 @@ Delay of each frame in milliseconds. Unit: ms, The value should be an integer.
 readonly disposalType?: number
 ```
 
-Disposal type of each frame in the image. 0 - No disposal specified. 1 - Do not dispose. 2 - Restore to background color. 3 - Restore to previous. The value range is all integers.
+Disposal type of each frame in the image.
+0 - No disposal specified.
+1 - Do not dispose.
+2 - Restore to background color.
+3 - Restore to previous.
+The value range is all integers.
 
 **类型：** number
 
@@ -92,7 +100,8 @@ whether the GIF image has a global color map.
 readonly loopCount?: number
 ```
 
-Loop count. The value range is all integers.
+Loop count.
+The value range is all integers.
 
 **类型：** number
 
@@ -108,7 +117,8 @@ Loop count. The value range is all integers.
 readonly unclampedDelayTime?: number
 ```
 
-Unclamped delay of each frame in milliseconds. Unit: ms, The value should be an integer.
+Unclamped delay of each frame in milliseconds.
+Unit: ms, The value should be an integer.
 
 **类型：** number
 

@@ -1,6 +1,8 @@
 # WatchEventListener
 
-(event: WatchEvent): void Provides APIs for observing events.
+(event: WatchEvent): void
+
+Provides APIs for observing events.
 
 **Since:** 10
 

@@ -12,7 +12,8 @@
 abilityName: string
 ```
 
-卡片对应的ability名。建议遵循Ability组件命名规范：取值为长度不超过127字节的字符串，以字母开头，可包含字母、数字、下划线（_）或点号（.）；确保该名称在整个应用中唯一。推荐使用"包名.Ability名"格式（如 "com.example.myapplication.MainAbility"）。
+卡片对应的ability名。建议遵循Ability组件命名规范：取值为长度不超过127字节的字符串，以字母开头，可包含字母、数字、下划线（_）或点号（.）；确保该名称在整个应用中唯一。推荐使用"包名.Ability名"格式（如
+"com.example.myapplication.MainAbility"）。
 
 **类型：** string
 
@@ -108,7 +109,8 @@ module: string
 readonly uniformDataType: 'openharmony.form'
 ```
 
-统一数据类型标识为卡片类型数据，固定为“openharmony.form”，数据类型描述信息见 [UniformDataType](arkts-arkdata-uniformdatatype-e.md)。
+统一数据类型标识为卡片类型数据，固定为“openharmony.form”，数据类型描述信息见
+[UniformDataType](arkts-arkdata-uniformdatatype-e.md)。
 
 **类型：** 'openharmony.form'
 

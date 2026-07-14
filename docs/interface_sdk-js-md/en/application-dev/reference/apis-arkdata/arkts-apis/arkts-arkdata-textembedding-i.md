@@ -1,6 +1,7 @@
 # TextEmbedding
 
-Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported.
+Describes the text embedding functions of the multi-modal embedding model.
+Chinese and English are supported.
 
 **Since:** 15
 
@@ -18,7 +19,8 @@ import { intelligence } from '@kit.ArkData';
 getEmbedding(text: string): Promise<Array<number>>
 ```
 
-Obtains the embedding vector of the given text. The model can process up to 512 characters of text per inference, supporting both Chinese and English.
+Obtains the embedding vector of the given text.
+The model can process up to 512 characters of text per inference, supporting both Chinese and English.
 
 **Since:** 15
 
@@ -67,7 +69,8 @@ textEmbedding.getEmbedding(text)
 getEmbedding(batchTexts: Array<string>): Promise<Array<Array<number>>>
 ```
 
-Obtains the embedding vector of a given batch of text. The model can process up to 512 characters of text per inference, supporting both Chinese and English.
+Obtains the embedding vector of a given batch of text.
+The model can process up to 512 characters of text per inference, supporting both Chinese and English.
 
 **Since:** 15
 

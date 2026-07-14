@@ -1,6 +1,8 @@
 # UIExtensionProxy（系统接口）
 
-该接口用于向UIExtensionAbility发送数据。<br/> 当UIExtensionAbility连接成功时，<br/> 它从UIExtensionComponent的onRemoteReady回调中返回。
+该接口用于向UIExtensionAbility发送数据。<br/>
+当UIExtensionAbility连接成功时，<br/>
+它从UIExtensionComponent的onRemoteReady回调中返回。
 
 **起始版本：** 10
 
@@ -14,7 +16,8 @@
 off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-注销监听UIExtensionAbility注册异步数据接收回调的监听器。 AnonyMous Object Rectification
+注销监听UIExtensionAbility注册异步数据接收回调的监听器。
+AnonyMous Object Rectification
 
 **起始版本：** 18
 
@@ -37,7 +40,8 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-注销监听UIExtensionAbility注册同步数据接收回调的监听器。 AnonyMous Object Rectification
+注销监听UIExtensionAbility注册同步数据接收回调的监听器。
+AnonyMous Object Rectification
 
 **起始版本：** 18
 
@@ -60,7 +64,8 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-注册监听器，用于监听UIExtensionAbility注册异步数据接收回调。 AnonyMous Object Rectification
+注册监听器，用于监听UIExtensionAbility注册异步数据接收回调。
+AnonyMous Object Rectification
 
 **起始版本：** 18
 
@@ -83,7 +88,8 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-注册监听器，用于监听UIExtensionAbility注册同步数据接收回调。 AnonyMous Object Rectification
+注册监听器，用于监听UIExtensionAbility注册同步数据接收回调。
+AnonyMous Object Rectification
 
 **起始版本：** 18
 
@@ -106,7 +112,8 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 send(data: Record<string, Object>): void
 ```
 
-该接口用于向UIExtensionAbility发送数据。 AnonyMous Object Rectification
+该接口用于向UIExtensionAbility发送数据。
+AnonyMous Object Rectification
 
 **起始版本：** 18
 
@@ -128,7 +135,8 @@ send(data: Record<string, Object>): void
 sendSync(data: Record<string, Object>): Record<string, Object>
 ```
 
-该接口用于向UIExtensionAbility发送数据，并以阻塞方式等待结果。 AnonyMous Object Rectification
+该接口用于向UIExtensionAbility发送数据，并以阻塞方式等待结果。
+AnonyMous Object Rectification
 
 **起始版本：** 18
 

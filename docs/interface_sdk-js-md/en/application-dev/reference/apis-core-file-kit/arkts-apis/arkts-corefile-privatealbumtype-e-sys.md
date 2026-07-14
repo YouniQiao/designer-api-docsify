@@ -1,6 +1,9 @@
 # PrivateAlbumType (System API)
 
-Enumerates the system album types. This API will be deprecated. Use [AlbumType](arkts-corefile-albumtype-e-sys.md) and [AlbumSubType](arkts-corefile-albumsubtype-e-sys.md) instead.
+Enumerates the system album types.
+
+This API will be deprecated. Use [AlbumType](arkts-corefile-albumtype-e-sys.md) and
+[AlbumSubType](arkts-corefile-albumsubtype-e-sys.md) instead.
 
 **Since:** 9
 

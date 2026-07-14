@@ -6,7 +6,8 @@
 function apiAvailable(version: string | number): boolean
 ```
 
-检查指定的API版本在当前设备上是否可用。 此方法提供跨不同OpenHarmony/分布式操作系统版本的兼容性检查。它会根据输入格式和API版本范围自动选择合适的版本检查方法。
+检查指定的API版本在当前设备上是否可用。
+此方法提供跨不同OpenHarmony/分布式操作系统版本的兼容性检查。它会根据输入格式和API版本范围自动选择合适的版本检查方法。
 
 **起始版本：** 26.0.0
 

@@ -80,7 +80,8 @@ function createDataShareHelper(
   ): void
 ```
 
-Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in proxy mode. This API uses an asynchronous callback to return the result.
+Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in
+proxy mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -148,7 +149,8 @@ function createDataShareHelper(
   ): Promise<DataShareHelper>
 ```
 
-Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in proxy mode. This API uses a promise to return the result.
+Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in
+proxy mode. This API uses a promise to return the result.
 
 **Since:** 9
 

@@ -1,6 +1,7 @@
 # WebSocket
 
-<p>Defines a WebSocket object. Before invoking WebSocket APIs, you need to call webSocket.createWebSocket to create a WebSocket object.</p>
+<p>Defines a WebSocket object. Before invoking WebSocket APIs,
+you need to call webSocket.createWebSocket to create a WebSocket object.</p>
 
 **Since:** 11
 
@@ -443,7 +444,8 @@ ws.off('openInfo', callback1);
 off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void
 ```
 
-Cancels listening for the message events of a WebSocket connection. data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
+Cancels listening for the message events of a WebSocket connection.
+data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
 
 **Since:** 11
 
@@ -670,7 +672,8 @@ ws.on('openInfo', (err: BusinessError, value: webSocket.WebSocketOpenInfo) => {
 on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void
 ```
 
-Enables listening for the message events of a WebSocket connection. data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
+Enables listening for the message events of a WebSocket connection.
+data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
 
 **Since:** 11
 

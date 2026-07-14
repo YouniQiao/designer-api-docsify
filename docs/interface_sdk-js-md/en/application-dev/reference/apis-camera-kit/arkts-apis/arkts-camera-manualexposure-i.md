@@ -1,6 +1,7 @@
 # ManualExposure (System API)
 
-ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md) Provides APIs to obtain and set the exposure duration.
+ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md)
+Provides APIs to obtain and set the exposure duration.
 
 **Inheritance/Implementation:** ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md)
 
@@ -49,7 +50,8 @@ Gets current exposure value.
 setExposureDuration(exposureDuration: number): void
 ```
 
-Sets Exposure duration value, units: microseconds.
+Sets Exposure duration value, units: microseconds.This control is only effective if
+ExposureMode is set to EXPOSURE_MODE_MANUAL.
 
 **Since:** 24
 

@@ -24,7 +24,9 @@ import { userFileManager } from '@kit.CoreFileKit';
 cameraShotKey?: string
 ```
 
-Key for the Ultra Snapshot feature. This parameter is available only for the system camera, and the key value is defined by the system camera.
+Key for the Ultra Snapshot feature.
+
+This parameter is available only for the system camera, and the key value is defined by the system camera.
 
 **Type:** string
 

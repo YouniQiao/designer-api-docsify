@@ -12,7 +12,8 @@ import { window } from '@kit.ArkUI';
 function minimizeAllWithExclusion(displayId: number, excludeWindowId: number): Promise<void>
 ```
 
-Minimizes all main windows on a display while keeping one window open. This API uses a promise to return the result.
+Minimizes all main windows on a display while keeping one window open. This API uses a promise to return the
+result.
 
 **Since:** 23
 

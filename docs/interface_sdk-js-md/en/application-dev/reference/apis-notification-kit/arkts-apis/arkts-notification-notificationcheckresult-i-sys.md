@@ -20,7 +20,11 @@ import { notificationManager } from '@kit.NotificationKit';
 code: number
 ```
 
-Result code. **0**: display. **1**: no display.
+Result code.
+
+**0**: display.
+
+**1**: no display.
 
 **Type:** number
 

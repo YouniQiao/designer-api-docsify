@@ -38,7 +38,8 @@ Indicates additional information map.
 arfcn: number
 ```
 
-Indicates absolute radio frequency channel number (ARFCN). The value should be an integer.
+Indicates absolute radio frequency channel number (ARFCN).
+The value should be an integer.
 
 **Type:** number
 
@@ -74,7 +75,8 @@ Indicates ID of cell.
 lac: number
 ```
 
-Indicates location area code(LAC). The value should be an integer.
+Indicates location area code(LAC).
+The value should be an integer.
 
 **Type:** number
 
@@ -92,7 +94,8 @@ Indicates location area code(LAC). The value should be an integer.
 mcc: number
 ```
 
-Indicates mobile country code (MCC). The value should be an integer.
+Indicates mobile country code (MCC).
+The value should be an integer.
 
 **Type:** number
 
@@ -110,7 +113,8 @@ Indicates mobile country code (MCC). The value should be an integer.
 mnc: number
 ```
 
-Indicates mobile network code (MNC). The value should be an integer.
+Indicates mobile network code (MNC).
+The value should be an integer.
 
 **Type:** number
 
@@ -128,7 +132,8 @@ Indicates mobile network code (MNC). The value should be an integer.
 pci: number
 ```
 
-Indicates physical cell identifier (PCI). The value should be an integer.
+Indicates physical cell identifier (PCI).
+The value should be an integer.
 
 **Type:** number
 
@@ -146,7 +151,8 @@ Indicates physical cell identifier (PCI). The value should be an integer.
 rat: number
 ```
 
-Indicates radio access technology (RAT). The value should be an integer.
+Indicates radio access technology (RAT).
+The value should be an integer.
 
 **Type:** number
 
@@ -164,7 +170,8 @@ Indicates radio access technology (RAT). The value should be an integer.
 signalIntensity: number
 ```
 
-Indicates signal intensity. The value should be an integer.
+Indicates signal intensity.
+The value should be an integer.
 
 **Type:** number
 
@@ -182,7 +189,8 @@ Indicates signal intensity. The value should be an integer.
 tac?: number
 ```
 
-Indicates tracking area code (TAC). The value range is all integers.
+Indicates tracking area code (TAC).
+The value range is all integers.
 
 **Type:** number
 

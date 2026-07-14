@@ -4,7 +4,9 @@
 type MemberType = number | number | number | string | boolean
 ```
 
-Defines the types of the PhotoAsset members. The member types are the union of the types listed in the following table.
+Defines the types of the PhotoAsset members.
+
+The member types are the union of the types listed in the following table.
 
 **Since:** 10
 

@@ -1,6 +1,7 @@
 # XComponentController
 
-定义XComponent的控制器。 您可以将该控制器绑定到XComponent，以通过控制器调用组件接口。
+定义XComponent的控制器。
+您可以将该控制器绑定到XComponent，以通过控制器调用组件接口。
 
 **起始版本：** 12
 
@@ -26,7 +27,8 @@ constructor()
 getXComponentContext(): Object
 ```
 
-获取XComponent对象的context。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+获取XComponent对象的context。
+该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **起始版本：** 12
 
@@ -46,7 +48,8 @@ getXComponentContext(): Object
 getXComponentSurfaceId(): string
 ```
 
-获取XComponent所持有的surface的ID，可用于@ohos相关接口。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+获取XComponent所持有的surface的ID，可用于@ohos相关接口。
+该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **起始版本：** 12
 
@@ -268,7 +271,8 @@ setXComponentSurfaceSize(value: {
   }): void
 ```
 
-设置XComponent所持有的surface的宽度和高度。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+设置XComponent所持有的surface的宽度和高度。
+该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **起始版本：** 9
 
@@ -290,7 +294,10 @@ setXComponentSurfaceSize(value: {
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-在给定设置中启动AI图像分析。 调用此接口前，请确保已启用AI图像分析器。 由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。 如果在执行完成之前重复调用此接口，将触发错误回调。
+在给定设置中启动AI图像分析。
+调用此接口前，请确保已启用AI图像分析器。
+由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。
+如果在执行完成之前重复调用此接口，将触发错误回调。
 
 **起始版本：** 12
 
@@ -326,7 +333,8 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 stopImageAnalyzer(): void
 ```
 
-停止AI图像分析。 AI图像分析器显示的内容将被销毁。
+停止AI图像分析。
+AI图像分析器显示的内容将被销毁。
 
 **起始版本：** 12
 

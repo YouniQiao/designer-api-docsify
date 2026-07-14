@@ -32,7 +32,8 @@ Alias of a certificate. The value contains up to 128 bytes.
 state: boolean
 ```
 
-Certificate state. The value **true** indicates that the certificate is enabled, and **false** means the opposite.
+Certificate state. The value **true** indicates that the certificate is enabled, and **false** means the
+opposite.
 
 **Type:** boolean
 

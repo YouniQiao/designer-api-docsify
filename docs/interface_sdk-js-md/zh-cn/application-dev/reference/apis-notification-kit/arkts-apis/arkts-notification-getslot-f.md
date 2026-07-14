@@ -12,7 +12,10 @@ import { notificationManager } from '@kit.NotificationKit';
 function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void
 ```
 
-获取指定类型的通知渠道。使用callback异步回调。 用于查询已创建的通知渠道的详细配置信息，包括提醒方式、级别、锁屏显示等设置。 需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
+获取指定类型的通知渠道。使用callback异步回调。
+
+用于查询已创建的通知渠道的详细配置信息，包括提醒方式、级别、锁屏显示等设置。
+需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
 
 **起始版本：** 9
 
@@ -59,7 +62,10 @@ notificationManager.getSlot(slotType, getSlotCallback);
 function getSlot(slotType: SlotType): Promise<NotificationSlot>
 ```
 
-获取指定类型的通知渠道。使用Promise异步回调。 用于查询已创建的通知渠道的详细配置信息，包括提醒方式、级别、锁屏显示等设置。 需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
+获取指定类型的通知渠道。使用Promise异步回调。
+
+用于查询已创建的通知渠道的详细配置信息，包括提醒方式、级别、锁屏显示等设置。
+需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
 
 **起始版本：** 9
 

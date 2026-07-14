@@ -20,7 +20,8 @@ import { deviceStandby } from '@kit.BackgroundTasksKit';
 duration: number
 ```
 
-The exemption duration. <br>Unit:s
+The exemption duration.
+<br>Unit:s
 
 **Type:** number
 

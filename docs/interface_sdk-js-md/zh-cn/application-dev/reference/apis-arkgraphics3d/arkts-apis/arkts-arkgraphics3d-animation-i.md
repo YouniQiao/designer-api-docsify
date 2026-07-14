@@ -184,7 +184,8 @@ readonly running: boolean
 speed?: number
 ```
 
-动画速度因子 负值使用给定速度因子反向播放动画
+动画速度因子
+负值使用给定速度因子反向播放动画
 
 **类型：** number
 

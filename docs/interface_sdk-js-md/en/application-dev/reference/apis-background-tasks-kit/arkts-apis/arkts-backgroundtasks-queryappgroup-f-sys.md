@@ -12,7 +12,10 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 function queryAppGroup(callback: AsyncCallback<number>): void
 ```
 
-Queries the app group of the calling application. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the app group of the calling application.
+
+The priority defined in a priority group restricts the resource usage of an application,
+for example, restricting the running of background tasks.
 
 **Since:** 9
 
@@ -67,7 +70,10 @@ usageStatistics.queryAppGroup((err: BusinessError, res: number) => {
 function queryAppGroup(): Promise<number>
 ```
 
-Queries the app group of the calling application. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the app group of the calling application.
+
+The priority defined in a priority group restricts the resource usage of an application,
+for example, restricting the running of background tasks.
 
 **Since:** 9
 
@@ -119,7 +125,10 @@ usageStatistics.queryAppGroup().then((res: number) => {
 function queryAppGroup(bundleName: string, callback: AsyncCallback<number>): void
 ```
 
-Queries the usage priority group by bundleName. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the usage priority group by bundleName.
+
+The priority defined in a priority group restricts the resource usage of an application,
+for example, restricting the running of background tasks.
 
 **Since:** 9
 
@@ -176,7 +185,10 @@ usageStatistics.queryAppGroup(bundleName, (err: BusinessError, res: number) => {
 function queryAppGroup(bundleName: string): Promise<number>
 ```
 
-Queries the usage priority group by bundleName. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the usage priority group by bundleName.
+
+The priority defined in a priority group restricts the resource usage of an application,
+for example, restricting the running of background tasks.
 
 **Since:** 9
 

@@ -20,7 +20,8 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 cameraShotKey?: string
 ```
 
-Key for the Ultra Snapshot feature, which allows the camera to take photos or record videos with the screen off. (This parameter is available only for the system camera, and the key value is defined by the system camera.)
+Key for the Ultra Snapshot feature, which allows the camera to take photos or record videos with the screen off.
+(This parameter is available only for the system camera, and the key value is defined by the system camera.)
 
 **Type:** string
 

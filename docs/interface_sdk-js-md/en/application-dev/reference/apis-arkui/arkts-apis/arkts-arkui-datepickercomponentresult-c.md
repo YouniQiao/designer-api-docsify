@@ -1,6 +1,6 @@
 # DatePickerComponentResult
 
-Defines result of DatePickerComponent.
+DatePickerComponentResult defines the selection result of the date time picker.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,8 @@ import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerCompo
 day?: number
 ```
 
-Day of selected date.
+Day of the selected date.
+The value should be an integer.
 
 **Type:** number
 
@@ -36,7 +37,8 @@ Day of selected date.
 hour?: number
 ```
 
-Hour portion of selected time.
+Hour part of the selected time.
+The value should be an integer.
 
 **Type:** number
 
@@ -54,7 +56,8 @@ Hour portion of selected time.
 minute?: number
 ```
 
-Minute portion of selected time.
+Minute part of the selected time.
+The value should be an integer.
 
 **Type:** number
 
@@ -72,7 +75,8 @@ Minute portion of selected time.
 month?: number
 ```
 
-Month index of selected date. The index is zero-based. 0 indicates January, and 11 indicates December.
+Month index of the selected date, starting from 0, where 0 indicates January and 11 indicates December.
+The value should be an integer.
 
 **Type:** number
 
@@ -90,7 +94,8 @@ Month index of selected date. The index is zero-based. 0 indicates January, and 
 second?: number
 ```
 
-Second portion of selected time.
+Second part of the selected time.
+The value should be an integer.
 
 **Type:** number
 
@@ -108,7 +113,8 @@ Second portion of selected time.
 year?: number
 ```
 
-Year of selected date.
+Year of the selected date.
+The value should be an integer.
 
 **Type:** number
 

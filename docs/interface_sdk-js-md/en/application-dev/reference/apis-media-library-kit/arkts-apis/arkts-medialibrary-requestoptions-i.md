@@ -18,7 +18,9 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 compatibleMode?: CompatibleMode
 ```
 
-HDR video transcoding policy, which can be **FAST_ORIGINAL_FORMAT_MODE** (maintaining the original HDR format) or **COMPATIBLE_FORMAT_MODE** (converting HDR content to SDR format). The default value is **FAST_ORIGINAL_FORMAT_MODE**.
+HDR video transcoding policy, which can be **FAST_ORIGINAL_FORMAT_MODE** (maintaining the original HDR format) or
+**COMPATIBLE_FORMAT_MODE** (converting HDR content to SDR format). The default value is
+**FAST_ORIGINAL_FORMAT_MODE**.
 
 **Type:** CompatibleMode
 

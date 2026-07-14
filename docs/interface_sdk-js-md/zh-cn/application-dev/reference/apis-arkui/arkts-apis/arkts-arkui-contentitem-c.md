@@ -12,7 +12,11 @@
 description?: ResourceStr
 ```
 
-中间元素的描述内容。 默认不设置或设置为undefined，描述内容不显示。 **文字处理规则：** 文本超长后无限换行显示。
+中间元素的描述内容。
+
+默认不设置或设置为undefined，描述内容不显示。
+
+**文字处理规则：** 文本超长后无限换行显示。
 
 **类型：** ResourceStr
 
@@ -30,7 +34,9 @@ description?: ResourceStr
 icon?: ResourceStr
 ```
 
-左侧元素的图标资源。 默认不设置或设置为undefined，icon图标资源不显示。
+左侧元素的图标资源。
+
+默认不设置或设置为undefined，icon图标资源不显示。
 
 **类型：** ResourceStr
 
@@ -48,7 +54,9 @@ icon?: ResourceStr
 iconStyle?: IconType
 ```
 
-左侧元素的图标样式。 默认不设置或设置为undefined，icon图标资源不显示。
+左侧元素的图标样式。
+
+默认不设置或设置为undefined，icon图标资源不显示。
 
 **类型：** IconType
 
@@ -66,7 +74,11 @@ iconStyle?: IconType
 primaryText?: ResourceStr
 ```
 
-中间元素的标题内容。 默认不设置或设置为undefined，标题内容不显示。 **文字处理规则：** 文本超长后无限换行显示。
+中间元素的标题内容。
+
+默认不设置或设置为undefined，标题内容不显示。
+
+**文字处理规则：** 文本超长后无限换行显示。
 
 **类型：** ResourceStr
 
@@ -84,7 +96,11 @@ primaryText?: ResourceStr
 secondaryText?: ResourceStr
 ```
 
-中间元素的副标题内容。 默认不设置或设置为undefined，副标题内容不显示。 **文字处理规则：** 文本超长后无限换行显示。
+中间元素的副标题内容。
+
+默认不设置或设置为undefined，副标题内容不显示。
+
+**文字处理规则：** 文本超长后无限换行显示。
 
 **类型：** ResourceStr
 
@@ -102,7 +118,9 @@ secondaryText?: ResourceStr
 symbolStyle?: SymbolGlyphModifier
 ```
 
-左侧元素的Symbol图标资源，优先级大于icon，同时设置了icon和Symbol图标，只显示Symbol图标。 默认不设置或设置为undefined，Symbol图标不显示。
+左侧元素的Symbol图标资源，优先级大于icon，同时设置了icon和Symbol图标，只显示Symbol图标。
+
+默认不设置或设置为undefined，Symbol图标不显示。
 
 **类型：** SymbolGlyphModifier
 

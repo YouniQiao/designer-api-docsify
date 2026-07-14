@@ -1,8 +1,12 @@
 # RouterState
 
-页面状态信息。
+定义路由器的状态。
 
-**起始版本：** 8
+**起始版本：** 3
+
+**废弃版本：** 8
+
+**替代接口：** RouterState
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,9 +20,11 @@ index: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 3
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**废弃版本：** 8
+
+**替代接口：** index
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,27 +38,11 @@ name: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 3
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**废弃版本：** 8
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## params
-
-```TypeScript
-params: Object
-```
-
-表示当前页面携带的参数。
-
-**类型：** Object
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**替代接口：** name
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,9 +56,11 @@ path: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 3
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**废弃版本：** 8
+
+**替代接口：** path
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

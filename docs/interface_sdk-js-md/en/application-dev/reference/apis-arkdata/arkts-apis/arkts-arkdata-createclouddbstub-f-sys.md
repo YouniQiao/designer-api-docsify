@@ -12,7 +12,9 @@ import { cloudExtension } from '@kit.ArkData';
 function createCloudDBStub(instance: CloudDB): Promise<rpc.RemoteObject>
 ```
 
-Creates a RemoteObject instance based on a CloudDB instance. The system uses this object to call the APIs of the CloudDB instance. This API uses a promise to return the result.
+Creates a RemoteObject instance based on a CloudDB instance.
+The system uses this object to call the APIs of the CloudDB instance.
+This API uses a promise to return the result.
 
 **Since:** 11
 

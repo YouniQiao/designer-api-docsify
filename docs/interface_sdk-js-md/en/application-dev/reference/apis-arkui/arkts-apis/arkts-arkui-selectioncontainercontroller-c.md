@@ -18,7 +18,8 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 clearTextSelection(): void
 ```
 
-Clears the current text selection of the SelectionContainer, and closes the selection menu if it is currently shown.
+Clears the current text selection of the SelectionContainer,
+and closes the selection menu if it is currently shown.
 
 **Since:** 26.0.0
 

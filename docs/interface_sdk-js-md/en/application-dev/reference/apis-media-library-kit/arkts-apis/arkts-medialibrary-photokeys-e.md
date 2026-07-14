@@ -12,7 +12,13 @@ Defines the key information about an image or video file.
 URI = 'uri'
 ```
 
-URI of the file. **Note**: Only the [DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-c.md#equalto-1) predicate can be used for this field during photo query.
+URI of the file.
+
+**Note**:
+
+Only the
+[DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-c.md#equalto-1)
+predicate can be used for this field during photo query.
 
 **Since:** 10
 
@@ -40,7 +46,11 @@ Type of the file.
 DISPLAY_NAME = 'display_name'
 ```
 
-File name displayed. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The file name length ranges from 1 to 255. - The base name must not contain any invalid characters, which are:.. \ / : * ? " ' ` < > | { } [ ]
+File name displayed. The file name must meet the following requirements:
+
+- A valid file name must include a base name and a supported image or video extension.
+- The file name length ranges from 1 to 255.
+- The base name must not contain any invalid characters, which are:.. \ / : * ? " ' ` < > | { } [ ]
 
 **Since:** 10
 
@@ -82,7 +92,8 @@ Unix timestamp when the file was created, in seconds.
 DATE_MODIFIED = 'date_modified'
 ```
 
-Unix timestamp when the file content (not the file name) was last modified, in seconds. This value is updated when the file content is modified, but not when the file name is modified.
+Unix timestamp when the file content (not the file name) was last modified, in seconds. This value is updated
+when the file content is modified, but not when the file name is modified.
 
 **Since:** 10
 
@@ -194,7 +205,11 @@ Title of the file.
 DATE_ADDED_MS = 'date_added_ms'
 ```
 
-Unix timestamp when the file was created, in milliseconds. **Note**: The photos queried cannot be sorted based on this field.
+Unix timestamp when the file was created, in milliseconds.
+
+**Note**:
+
+The photos queried cannot be sorted based on this field.
 
 **Since:** 12
 
@@ -208,7 +223,12 @@ Unix timestamp when the file was created, in milliseconds. **Note**: The photos 
 DATE_MODIFIED_MS = 'date_modified_ms'
 ```
 
-Unix timestamp when the file was modified, in milliseconds. This value is updated when the file content is modified, but not when the file name is modified. **Note**: The photos queried cannot be sorted based on this field.
+Unix timestamp when the file was modified, in milliseconds. This value is updated when the file content is
+modified, but not when the file name is modified.
+
+**Note**:
+
+The photos queried cannot be sorted based on this field.
 
 **Since:** 12
 
@@ -306,7 +326,8 @@ Width and height of a thumbnail image, in the format of a **width:height** strin
 DETAIL_TIME = 'detail_time'
 ```
 
-Detailed time. The value is a string of time when the image or video was taken in the time zone and does not change with the time zone.
+Detailed time. The value is a string of time when the image or video was taken in the time zone and does not
+change with the time zone.
 
 **Since:** 13
 

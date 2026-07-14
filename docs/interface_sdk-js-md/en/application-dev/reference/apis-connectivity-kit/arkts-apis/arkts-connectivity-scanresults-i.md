@@ -18,7 +18,8 @@ import { scan } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Address of the remote device. The length is 17, and the value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Address of the remote device.
+The length is 17, and the value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -98,7 +99,8 @@ Indicates whether the remote device is connectable.
 rssi: number
 ```
 
-RSSI of the remote device. Unit: dBm. The value is an integer within [-128,127], and the value 127 indicates an invalid RSSI.
+RSSI of the remote device.
+Unit: dBm. The value is an integer within [-128,127], and the value 127 indicates an invalid RSSI.
 
 **Type:** number
 

@@ -1,6 +1,10 @@
 # MediaSourceInfo
 
-Implements a **MediaSourceInfo** object to provide the information about the media source. > **NOTE** > > - The sample effect is subject to the actual device.
+Implements a **MediaSourceInfo** object to provide the information about the media source.
+
+> **NOTE**
+>
+> - The sample effect is subject to the actual device.
 
 **Since:** 12
 

@@ -18,7 +18,8 @@ import { ssap } from '@kit.ConnectivityKit';
 events?: Event[]
 ```
 
-The events belong to this service. <br>This field is not supported in [addService](arkts-connectivity-server-i.md#addservice-1) method.
+The events belong to this service.
+<br>This field is not supported in [addService](arkts-connectivity-server-i.md#addservice-1) method.
 
 **Type:** Event[]
 
@@ -36,7 +37,8 @@ The events belong to this service. <br>This field is not supported in [addServic
 methods?: Method[]
 ```
 
-The methods belong to this service. <br>This field is not supported in [addService](arkts-connectivity-server-i.md#addservice-1) method.
+The methods belong to this service.
+<br>This field is not supported in [addService](arkts-connectivity-server-i.md#addservice-1) method.
 
 **Type:** Method[]
 

@@ -18,7 +18,8 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 bottom: number
 ```
 
-Y coordinate of the lower right corner of the component border. The value is an integer greater than 0. <br>Unit: px
+Y coordinate of the lower right corner of the component border. The value is an integer greater than 0.
+<br>Unit: px
 
 **Type:** number
 
@@ -34,7 +35,8 @@ Y coordinate of the lower right corner of the component border. The value is an 
 displayId?: number
 ```
 
-ID of the display to which the component border belongs. The value is an integer greater than or equal to 0. <br>Default value: the default screen ID of the device.
+ID of the display to which the component border belongs. The value is an integer greater than or equal to 0.
+<br>Default value: the default screen ID of the device.
 
 **Type:** number
 
@@ -50,7 +52,8 @@ ID of the display to which the component border belongs. The value is an integer
 left: number
 ```
 
-X coordinate of the upper left corner of the component border. The value is an integer greater than 0. <br>Unit: px
+X coordinate of the upper left corner of the component border. The value is an integer greater than 0.
+<br>Unit: px
 
 **Type:** number
 
@@ -66,7 +69,8 @@ X coordinate of the upper left corner of the component border. The value is an i
 right: number
 ```
 
-X coordinate of the lower right corner of the component border. The value is an integer greater than 0. <br>Unit: px
+X coordinate of the lower right corner of the component border. The value is an integer greater than 0.
+<br>Unit: px
 
 **Type:** number
 
@@ -82,7 +86,8 @@ X coordinate of the lower right corner of the component border. The value is an 
 top: number
 ```
 
-Y coordinate of the upper left corner of the component border. The value is an integer greater than 0. <br>Unit: px
+Y coordinate of the upper left corner of the component border. The value is an integer greater than 0.
+<br>Unit: px
 
 **Type:** number
 

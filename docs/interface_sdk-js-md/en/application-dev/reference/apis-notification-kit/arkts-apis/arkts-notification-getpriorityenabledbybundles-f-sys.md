@@ -12,7 +12,8 @@ import { notificationManager } from '@kit.NotificationKit';
 function getPriorityEnabledByBundles(bundles: Array<BundleOption>): Promise<Map<BundleOption, boolean>>
 ```
 
-Obtains whether priority notifications are enabled for applications in batches. This API uses a promise to return the result.
+Obtains whether priority notifications are enabled for applications in batches. This API uses a promise to return
+the result.
 
 **Since:** 23
 

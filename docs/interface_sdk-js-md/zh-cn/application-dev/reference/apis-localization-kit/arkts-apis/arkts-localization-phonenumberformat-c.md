@@ -43,7 +43,11 @@ let phoneNumberFormat: i18n.PhoneNumberFormat = new i18n.PhoneNumberFormat('CN',
 format(phoneNumber: string): string
 ```
 
-对电话号码进行格式化。 > **说明** > > 从API version 12开始，支持对拨号中的电话号码进行格式化。
+对电话号码进行格式化。
+
+> **说明**
+>
+> 从API version 12开始，支持对拨号中的电话号码进行格式化。
 
 **起始版本：** 8
 
@@ -90,7 +94,11 @@ for (let i = 0; i < phoneNumber.length; i++) {
 getLocationName(phoneNumber: string, locale: string): string
 ```
 
-获取电话号码归属地。 > **说明** > > 从API version 23开始，支持对拨号中的电话号码实时获取归属地。
+获取电话号码归属地。
+
+> **说明**
+>
+> 从API version 23开始，支持对拨号中的电话号码实时获取归属地。
 
 **起始版本：** 9
 

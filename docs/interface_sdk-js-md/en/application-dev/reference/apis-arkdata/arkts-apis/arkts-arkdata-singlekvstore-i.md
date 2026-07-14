@@ -1,6 +1,10 @@
 # SingleKVStore
 
-Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data changes or across-device data sync completion events. Before calling any method in **SingleKVStore**, you must use [getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1) to obtain a **SingleKVStore** instance.
+Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data
+changes or across-device data sync completion events.
+Before calling any method in **SingleKVStore**, you must use
+[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)
+to obtain a **SingleKVStore** instance.
 
 **Since:** 9
 
@@ -174,7 +178,9 @@ try {
 closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void
 ```
 
-Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](arkts-arkdata-singlekvstore-i.md#getresultset-2). This API uses an asynchronous callback to return the result.
+Closes the **KVStoreResultSet** object returned by
+[SingleKvStore.getResultSet](arkts-arkdata-singlekvstore-i.md#getresultset-2). This API
+uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -233,7 +239,9 @@ try {
 closeResultSet(resultSet: KVStoreResultSet): Promise<void>
 ```
 
-Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](arkts-arkdata-singlekvstore-i.md#getresultset-2). This API uses a promise to return the result.
+Closes the **KVStoreResultSet** object returned by
+[SingleKvStore.getResultSet](arkts-arkdata-singlekvstore-i.md#getresultset-2). This API
+uses a promise to return the result.
 
 **Since:** 9
 
@@ -808,7 +816,8 @@ try {
 enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets cross-device data sync, which can be enabled or disabled. This API uses an asynchronous callback to return the result.
+Sets cross-device data sync, which can be enabled or disabled. This API uses an asynchronous callback to return
+the result.
 
 **Since:** 9
 
@@ -970,7 +979,8 @@ Obtains the value of the specified key. This API uses a promise to return the re
 getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains all KV pairs that match the specified key prefix. This API uses an asynchronous callback to return the result.
+Obtains all KV pairs that match the specified key prefix. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 9
 
@@ -1117,7 +1127,8 @@ try {
 getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains the KV pairs that match the specified **Query** object. This API uses an asynchronous callback to return the result.
+Obtains the KV pairs that match the specified **Query** object. This API uses an asynchronous callback to return
+the result.
 
 **Since:** 9
 
@@ -1269,7 +1280,8 @@ try {
 getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-Obtains a result set with the specified prefix from this single KV store. This API uses an asynchronous callback to return the result.
+Obtains a result set with the specified prefix from this single KV store. This API uses an asynchronous callback
+to return the result.
 
 **Since:** 9
 
@@ -1351,7 +1363,8 @@ try {
 getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
-Obtains a result set with the specified prefix from this single KV store. This API uses a promise to return the result.
+Obtains a result set with the specified prefix from this single KV store. This API uses a promise to return the
+result.
 
 **Since:** 9
 
@@ -1430,7 +1443,8 @@ try {
 getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-Obtains a **KVStoreResultSet** object that matches the specified **Query** object. This API uses an asynchronous callback to return the result.
+Obtains a **KVStoreResultSet** object that matches the specified **Query** object. This API uses an asynchronous
+callback to return the result.
 
 **Since:** 9
 
@@ -1504,7 +1518,8 @@ try {
 getResultSet(query: Query): Promise<KVStoreResultSet>
 ```
 
-Obtains a **KVStoreResultSet** object that matches the specified **Query** object. This API uses a promise to return the result.
+Obtains a **KVStoreResultSet** object that matches the specified **Query** object. This API uses a promise to
+return the result.
 
 **Since:** 9
 
@@ -1576,7 +1591,8 @@ try {
 getResultSize(query: Query, callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of results that match the specified **Query** object. This API uses an asynchronous callback to return the result.
+Obtains the number of results that match the specified **Query** object. This API uses an asynchronous callback
+to return the result.
 
 **Since:** 9
 
@@ -1649,7 +1665,8 @@ try {
 getResultSize(query: Query): Promise<number>
 ```
 
-Obtains the number of results that match the specified **Query** object. This API uses a promise to return the result.
+Obtains the number of results that match the specified **Query** object. This API uses a promise to return the
+result.
 
 **Since:** 9
 
@@ -2025,7 +2042,8 @@ try {
 put(key: string, value: Uint8Array | string | number | number | boolean, callback: AsyncCallback<void>): void
 ```
 
-Adds a KV pair of the specified type to this KV store. This API uses an asynchronous callback to return the result.
+Adds a KV pair of the specified type to this KV store. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 9
 
@@ -2286,7 +2304,16 @@ try {
 removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes data of a device. This API uses an asynchronous callback to return the result. > **NOTE** > > **deviceId** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md).
+Deletes data of a device. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+>
+> **deviceId** is **networkId** in
+> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be
+> obtained by
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md).
 
 **Since:** 9
 
@@ -2355,7 +2382,16 @@ try {
 removeDeviceData(deviceId: string): Promise<void>
 ```
 
-Deletes data of a device. This API uses a promise to return the result. > **NOTE** > > **deviceId** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md).
+Deletes data of a device. This API uses a promise to return the result.
+
+> **NOTE**
+>
+> **deviceId** is **networkId** in
+> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be
+> obtained by
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md).
 
 **Since:** 9
 
@@ -2419,7 +2455,8 @@ try {
 restore(file: string, callback: AsyncCallback<void>): void
 ```
 
-Restores a distributed KV store from a database file. This API uses an asynchronous callback to return the result.
+Restores a distributed KV store from a database file. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 9
 
@@ -2665,7 +2702,12 @@ try {
 setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the default delay for cross-device data sync. This API uses an asynchronous callback to return the result. > **NOTE** > > After the default delay is set, calling [sync](arkts-arkdata-syncmode-e.md) will not trigger the cross- > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
+Sets the default delay for cross-device data sync. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+>
+> After the default delay is set, calling [sync](arkts-arkdata-syncmode-e.md) will not trigger the cross-
+> device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
 
 **Since:** 9
 
@@ -2713,7 +2755,12 @@ try {
 setSyncParam(defaultAllowedDelayMs: number): Promise<void>
 ```
 
-Sets the default delay for cross-device data sync. This API uses a promise to return the result. > **NOTE** > > After the default delay is set, calling [sync](arkts-arkdata-syncmode-e.md) will not trigger the cross- > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
+Sets the default delay for cross-device data sync. This API uses a promise to return the result.
+
+> **NOTE**
+>
+> After the default delay is set, calling [sync](arkts-arkdata-syncmode-e.md) will not trigger the cross-
+> device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
 
 **Since:** 9
 
@@ -2993,7 +3040,16 @@ try {
 sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 ```
 
-Starts cross-device data sync manually. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../../database/data-sync-of-kv-store.md). > **NOTE** > > **deviceIds** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > .
+Starts cross-device data sync manually. For details about the sync modes of KV stores, see
+[Cross-Device Synchronization of KV Stores](../../../../database/data-sync-of-kv-store.md).
+
+> **NOTE**
+>
+> **deviceIds** is **networkId** in
+> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be
+> obtained by
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)
+> .
 
 **Since:** 9
 
@@ -3081,7 +3137,16 @@ export default class EntryAbility extends UIAbility {
 sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: number): void
 ```
 
-Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../../database/data-sync-of-kv-store.md). > **NOTE** > > **deviceIds** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > .
+Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync
+modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../../database/data-sync-of-kv-store.md).
+
+> **NOTE**
+>
+> **deviceIds** is **networkId** in
+> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be
+> obtained by
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)
+> .
 
 **Since:** 9
 

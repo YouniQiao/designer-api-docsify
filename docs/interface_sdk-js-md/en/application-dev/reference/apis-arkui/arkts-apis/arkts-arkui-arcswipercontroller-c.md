@@ -1,6 +1,7 @@
 # ArcSwiperController
 
-Implements the controller of the **ArcSwiper** component. You can bind this object to the **ArcSwiper** component and use it to control page switching.
+Implements the controller of the **ArcSwiper** component. You can bind this object to the **ArcSwiper** component and
+use it to control page switching.
 
 **Since:** 18
 
@@ -52,7 +53,8 @@ Stops an animation.
 showNext()
 ```
 
-Turns to the next page. Page turning occurs with the animation, whose duration is specified by [duration](arkts-arkui-arcswiperattribute-c.md#duration-1).
+Turns to the next page. Page turning occurs with the animation, whose duration is specified by
+[duration](arkts-arkui-arcswiperattribute-c.md#duration-1).
 
 **Since:** 18
 
@@ -66,7 +68,8 @@ Turns to the next page. Page turning occurs with the animation, whose duration i
 showPrevious()
 ```
 
-Turns to the previous page. Page turning occurs with the animation, whose duration is specified by [duration](arkts-arkui-arcswiperattribute-c.md#duration-1).
+Turns to the previous page. Page turning occurs with the animation, whose duration is specified by
+[duration](arkts-arkui-arcswiperattribute-c.md#duration-1).
 
 **Since:** 18
 

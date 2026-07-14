@@ -12,7 +12,8 @@ import { bundleManager } from '@kit.AbilityKit';
 function setAbilityEnabled(info: AbilityInfo, appIndex: number, isEnabled: boolean): Promise<void>
 ```
 
-Enables or disables an ability of an application or an application clone. This API uses a promise to return the result.
+Enables or disables an ability of an application or an application clone. This API uses a promise to return the
+result.
 
 **Since:** 12
 

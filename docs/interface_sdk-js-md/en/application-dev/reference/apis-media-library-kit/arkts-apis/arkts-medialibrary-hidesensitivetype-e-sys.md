@@ -70,7 +70,12 @@ No data masking is applied.
 DEFAULT = 4
 ```
 
-Applies data masking based on the [ohos.permission.MEDIA_LOCATION](../../../../security/AccessToken/permissions-for-all-user.md#ohospermissionmedia_location) permission. The specifications are as follows: - If this permission is available, no masking is applied. - If this permission is unavailable, geographic location is masked.
+Applies data masking based on the
+[ohos.permission.MEDIA_LOCATION](../../../../security/AccessToken/permissions-for-all-user.md#ohospermissionmedia_location)
+permission. The specifications are as follows:
+
+- If this permission is available, no masking is applied.
+- If this permission is unavailable, geographic location is masked.
 
 **Since:** 23
 

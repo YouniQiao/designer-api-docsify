@@ -6,7 +6,8 @@
 function removeAppShareOptions(intention: Intention): void
 ```
 
-清除[setAppShareOptions](arkts-arkdata-setappshareoptions-f-sys.md#setappshareoptions-1)设置的管控信息。调用成功后，setAppShareOptions设置的管控信息被清除，应用内拖 拽通道数据恢复到默认使用范围。
+清除[setAppShareOptions](arkts-arkdata-setappshareoptions-f-sys.md#setappshareoptions-1)设置的管控信息。调用成功后，setAppShareOptions设置的管控信息被清除，应用内拖
+拽通道数据恢复到默认使用范围。
 
 **起始版本：** 14
 

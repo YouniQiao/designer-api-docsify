@@ -12,7 +12,8 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getIpv6Info(): Ipv6Info
 ```
 
-Obtain the IPv6 information of the Wi-Fi connection. The IPv6 information includes the host IP address, gateway address, and DNS information.
+Obtain the IPv6 information of the Wi-Fi connection.
+The IPv6 information includes the host IP address, gateway address, and DNS information.
 
 **Since:** 10
 

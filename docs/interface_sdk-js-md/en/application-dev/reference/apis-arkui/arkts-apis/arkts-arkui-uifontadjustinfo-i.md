@@ -18,7 +18,9 @@ import { font } from '@kit.ArkUI';
 to: number
 ```
 
-Weight of the font displayed in the application. Valid values are **100**, **400**, **700**, and **900**.
+Weight of the font displayed in the application.
+
+Valid values are **100**, **400**, **700**, and **900**.
 
 **Type:** number
 
@@ -36,7 +38,9 @@ Weight of the font displayed in the application. Valid values are **100**, **400
 weight: number
 ```
 
-Original weight of the font. Valid values are **50**, **80**, **100**, and **200**.
+Original weight of the font.
+
+Valid values are **50**, **80**, **100**, and **200**.
 
 **Type:** number
 

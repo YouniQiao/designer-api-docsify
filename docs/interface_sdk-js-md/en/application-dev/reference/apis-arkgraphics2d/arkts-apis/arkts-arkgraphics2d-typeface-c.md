@@ -1,6 +1,13 @@
 # Typeface
 
-Describes the style of a typeface, such as SimSun or KaiTi. > **NOTE** > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Describes the style of a typeface, such as SimSun or KaiTi.
+
+> **NOTE**
+>
+> - This module uses the physical pixel unit, px.
+>
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 11
 
@@ -155,7 +162,8 @@ Constructs a typeface from the typeface file path and arguments.
 static makeFromRawFile(rawfile: Resource): Typeface
 ```
 
-Constructs a typeface from a file, which must be stored in the **resources/rawfile** directory of the application project.
+Constructs a typeface from a file, which must be stored in the **resources/rawfile** directory of the application
+project.
 
 **Since:** 18
 
@@ -181,7 +189,8 @@ Constructs a typeface from a file, which must be stored in the **resources/rawfi
 static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface
 ```
 
-Constructs a typeface from a file with typeface arguments, which must be stored in the **resources/rawfile** directory of the application project.
+Constructs a typeface from a file with typeface arguments, which must be stored in the **resources/rawfile**
+directory of the application project.
 
 **Since:** 20
 

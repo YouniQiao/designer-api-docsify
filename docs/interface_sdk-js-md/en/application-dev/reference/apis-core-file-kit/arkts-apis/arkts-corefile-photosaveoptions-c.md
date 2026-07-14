@@ -22,7 +22,8 @@ import { picker } from '@kit.CoreFileKit';
 newFileNames?: Array<string>
 ```
 
-File name of the image or video to save. If this parameter is not specified, the user needs to enter the file name.
+File name of the image or video to save. If this parameter is not specified, the user needs to enter the file
+name.
 
 **Type:** Array<string>
 

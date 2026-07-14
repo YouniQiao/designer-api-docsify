@@ -6,7 +6,9 @@
 function cancelRetentionState(docUris: Array<string>): Promise<void>
 ```
 
-取消沙箱保留状态即恢复DLP文件关闭时自动卸载沙箱策略。使用Promise异步回调。 该接口用于取消沙箱保留状态，恢复默认行为以释放系统资源，适用于不再频繁访问DLP文件的场景。
+取消沙箱保留状态即恢复DLP文件关闭时自动卸载沙箱策略。使用Promise异步回调。
+
+该接口用于取消沙箱保留状态，恢复默认行为以释放系统资源，适用于不再频繁访问DLP文件的场景。
 
 **起始版本：** 10
 
@@ -53,7 +55,9 @@ dlpPermission.cancelRetentionState([uri]).then(() => { // 取消沙箱保留。
 function cancelRetentionState(docUris: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-取消沙箱保留状态即恢复DLP文件关闭时自动卸载沙箱策略。使用callback异步回调。 该接口用于取消沙箱保留状态，恢复默认行为以释放系统资源，适用于不再频繁访问DLP文件的场景。
+取消沙箱保留状态即恢复DLP文件关闭时自动卸载沙箱策略。使用callback异步回调。
+
+该接口用于取消沙箱保留状态，恢复默认行为以释放系统资源，适用于不再频繁访问DLP文件的场景。
 
 **起始版本：** 10
 

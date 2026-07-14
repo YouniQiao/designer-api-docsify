@@ -16,7 +16,12 @@ Enumerates the audio output formats.
 DEFAULT = 0
 ```
 
-Default output format. This API is defined but not implemented yet. Note: It is supported since API version 6 and deprecated since API version 8. You are advised to select one from [ContainerFormatType](arkts-media-containerformattype-e.md) as required.
+Default output format.
+
+This API is defined but not implemented yet.
+
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to select one from
+[ContainerFormatType](arkts-media-containerformattype-e.md) as required.
 
 **Since:** 6
 
@@ -30,7 +35,10 @@ Default output format. This API is defined but not implemented yet. Note: It is 
 MPEG_4 = 2
 ```
 
-MPEG-4. Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_MPEG_4** in [ContainerFormatType](arkts-media-containerformattype-e.md) instead.
+MPEG-4.
+
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use
+**CFT_MPEG_4** in [ContainerFormatType](arkts-media-containerformattype-e.md) instead.
 
 **Since:** 6
 
@@ -46,7 +54,13 @@ MPEG-4. Note: It is supported since API version 6 and deprecated since API versi
 AMR_NB = 3
 ```
 
-AMR_NB. This API is defined but not implemented yet. Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AMR** in [ContainerFormatType](arkts-media-containerformattype-e.md) instead. For the encoding format, use **AUDIO_AMR_NB** in [CodecMimeType](arkts-media-codecmimetype-e.md).
+AMR_NB.
+
+This API is defined but not implemented yet.
+
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AMR**
+in [ContainerFormatType](arkts-media-containerformattype-e.md) instead. For the encoding format, use **AUDIO_AMR_NB**
+in [CodecMimeType](arkts-media-codecmimetype-e.md).
 
 **Since:** 6
 
@@ -62,7 +76,13 @@ AMR_NB. This API is defined but not implemented yet. Note: It is supported since
 AMR_WB = 4
 ```
 
-AMR_WB. This API is defined but not implemented yet. Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AMR** in [ContainerFormatType](arkts-media-containerformattype-e.md) instead. For the encoding format, use **AUDIO_AMR_WB** in [CodecMimeType](arkts-media-codecmimetype-e.md).
+AMR_WB.
+
+This API is defined but not implemented yet.
+
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AMR**
+in [ContainerFormatType](arkts-media-containerformattype-e.md) instead. For the encoding format, use **AUDIO_AMR_WB**
+in [CodecMimeType](arkts-media-codecmimetype-e.md).
 
 **Since:** 6
 
@@ -78,7 +98,10 @@ AMR_WB. This API is defined but not implemented yet. Note: It is supported since
 AAC_ADTS = 6
 ```
 
-Audio Data Transport Stream (ADTS), which is a transport stream format of AAC-based audio. Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AAC** in [ContainerFormatType](arkts-media-containerformattype-e.md) instead.
+Audio Data Transport Stream (ADTS), which is a transport stream format of AAC-based audio.
+
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AAC**
+in [ContainerFormatType](arkts-media-containerformattype-e.md) instead.
 
 **Since:** 6
 

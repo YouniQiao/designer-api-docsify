@@ -20,7 +20,8 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 getFaceId(): Promise<string>
 ```
 
-Obtains the face identifier on the cover of a portrait album or group photo album. This API uses a promise to return the result.
+Obtains the face identifier on the cover of a portrait album or group photo album. This API uses a promise to
+return the result.
 
 **Since:** 13
 

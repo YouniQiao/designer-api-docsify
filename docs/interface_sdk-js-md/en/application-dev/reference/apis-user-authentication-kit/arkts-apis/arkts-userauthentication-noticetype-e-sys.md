@@ -1,6 +1,7 @@
 # NoticeType (System API)
 
-Enumerates the notification types of user authentication. This enum defines the notification types supported by the system, which are used to identify the source of a notification.
+Enumerates the notification types of user authentication. This enum defines the notification types supported by the
+system, which are used to identify the source of a notification.
 
 **Since:** 10
 
@@ -14,7 +15,8 @@ Enumerates the notification types of user authentication. This enum defines the 
 WIDGET_NOTICE = 1
 ```
 
-The notification is sent by the system authentication widget to notify the user of events related to the authentication framework.
+The notification is sent by the system authentication widget to notify the user of events related to the
+authentication framework.
 
 **Since:** 10
 

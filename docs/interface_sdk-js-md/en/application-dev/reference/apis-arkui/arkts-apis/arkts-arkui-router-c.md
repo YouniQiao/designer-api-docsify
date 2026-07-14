@@ -1,6 +1,6 @@
 # Router
 
-Defines the Router interface.
+The **Router** module provides APIs to access pages through URIs.
 
 **Since:** 3
 
@@ -22,7 +22,12 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 static back(options?: BackRouterOptions): void
 ```
 
-Returns to the previous page or a specified page.
+Returns to the previous or a specified page.
+
+> **NOTE**
+>
+> In the example, the **uri** field indicates the page route, which is specified by the **pages** list in the
+> configuration file.
 
 **Since:** 3
 
@@ -36,7 +41,7 @@ Returns to the previous page or a specified page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | BackRouterOptions | No | Options. |
+| options | BackRouterOptions | No | For details, see **BackRouterOptions**. |
 
 ## clear
 
@@ -44,7 +49,7 @@ Returns to the previous page or a specified page.
 static clear(): void
 ```
 
-Clears all historical pages and retains only the current page at the top of the stack.
+Clears all historical pages in the stack and retains only the current page at the top of the stack.
 
 **Since:** 3
 
@@ -60,7 +65,7 @@ Clears all historical pages and retains only the current page at the top of the 
 static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void
 ```
 
-cancel enableAlertBeforeBackPage
+Disables the display of a confirm dialog box before returning to the previous page.
 
 **Since:** 6
 
@@ -74,7 +79,7 @@ cancel enableAlertBeforeBackPage
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | DisableAlertBeforeBackPageOptions | No | Options. |
+| options | DisableAlertBeforeBackPageOptions | No | For details, see **DisableAlertBeforeBackPageOptions**. |
 
 ## enableAlertBeforeBackPage
 
@@ -82,7 +87,7 @@ cancel enableAlertBeforeBackPage
 static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void
 ```
 
-Pop up dialog to ask whether to back
+Enables the display of a confirm dialog box before returning to the previous page.
 
 **Since:** 6
 
@@ -96,7 +101,7 @@ Pop up dialog to ask whether to back
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | EnableAlertBeforeBackPageOptions | Yes | Options. |
+| options | EnableAlertBeforeBackPageOptions | Yes | For details, see **EnableAlertBeforeBackPageOptions**. |
 
 ## getLength
 
@@ -118,7 +123,7 @@ Obtains the number of pages in the current stack.
 
 | Type | Description |
 | --- | --- |
-| string | Number of pages in the stack. The maximum value is 32. |
+| string | Number of pages in the stack. The maximum value is **32**. |
 
 ## getParams
 
@@ -126,7 +131,7 @@ Obtains the number of pages in the current stack.
 static getParams(): ParamsInterface
 ```
 
-Obtains information about the current page params.
+Obtains parameter information about the current page.
 
 **Since:** 7
 
@@ -140,7 +145,7 @@ Obtains information about the current page params.
 
 | Type | Description |
 | --- | --- |
-| ParamsInterface | Page params. |
+| ParamsInterface | For details, see **ParamsInterface**. |
 
 ## getState
 
@@ -148,7 +153,7 @@ Obtains information about the current page params.
 static getState(): RouterState
 ```
 
-Obtains information about the current page state.
+Obtains state information about the current page.
 
 **Since:** 3
 
@@ -162,7 +167,7 @@ Obtains information about the current page state.
 
 | Type | Description |
 | --- | --- |
-| RouterState | Page state. |
+| RouterState | For details, see **RouterState**. |
 
 ## push
 
@@ -170,7 +175,11 @@ Obtains information about the current page state.
 static push(options: RouterOptions): void
 ```
 
-Navigates to a specified page in the application based on the page URL and parameters.
+Navigates to a specified page in the application.
+
+> **NOTE**
+>
+> The page routing stack supports a maximum of 32 pages.
 
 **Since:** 3
 
@@ -184,7 +193,7 @@ Navigates to a specified page in the application based on the page URL and param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Options. |
+| options | RouterOptions | Yes | Page routing parameters. For details, see **RouterOptions**. |
 
 ## replace
 
@@ -192,7 +201,7 @@ Navigates to a specified page in the application based on the page URL and param
 static replace(options: RouterOptions): void
 ```
 
-Replaces the current page with another one in the application. The current page is destroyed after replacement.
+Replaces the current page with another one in the application and destroys the current page.
 
 **Since:** 3
 
@@ -206,5 +215,5 @@ Replaces the current page with another one in the application. The current page 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Options. |
+| options | RouterOptions | Yes | Page routing parameters. For details, see **RouterOptions**. |
 

@@ -1,6 +1,7 @@
 # Query
 
-Provides methods to create a **Query** object, which defines different data query criteria. A **Query** object supports a maximum of 256 predicates.
+Provides methods to create a **Query** object, which defines different data query criteria. A **Query** object
+supports a maximum of 256 predicates.
 
 **Since:** 9
 
@@ -114,7 +115,14 @@ Defines a constructor used to create a **Query** instance.
 deviceId(deviceId: string): Query
 ```
 
-Creates a **Query** object with the device ID as the key prefix. > **NOTE** > > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md).
+Creates a **Query** object with the device ID as the key prefix.
+
+> **NOTE**
+>
+> **deviceId** can be obtained by
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md).
 
 **Since:** 9
 
@@ -205,7 +213,15 @@ try {
 equalTo(field: string, value: number | number | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is equal to the given value. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is equal to the given value.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -276,7 +292,15 @@ try {
 greaterThan(field: string, value: number | number | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is greater than the specified value. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is greater than the specified value.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -309,7 +333,16 @@ Creates a **Query** object to match the specified field whose value is greater t
 greaterThanOrEqualTo(field: string, value: number | number | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is greater than or equal to the specified
+value.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -342,7 +375,15 @@ Creates a **Query** object to match the specified field whose value is greater t
 inNumber(field: string, valueList: number[] | number[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is within the specified list of numbers. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is within the specified list of numbers.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -375,7 +416,15 @@ Creates a **Query** object to match the specified field whose value is within th
 inString(field: string, valueList: string[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is within the specified list of strings. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is within the specified list of strings.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -427,7 +476,15 @@ try {
 isNotNull(field: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not **null**. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is not **null**.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -478,7 +535,15 @@ try {
 isNull(field: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is **null**. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is **null**.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -529,7 +594,15 @@ try {
 lessThan(field: string, value: number | number | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is less than the specified value. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is less than the specified value.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -562,7 +635,15 @@ Creates a **Query** object to match the specified field whose value is less than
 lessThanOrEqualTo(field: string, value: number | number | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is less than or equal to the specified value. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is less than or equal to the specified value.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -595,7 +676,15 @@ Creates a **Query** object to match the specified field whose value is less than
 like(field: string, value: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is similar to the specified string. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is similar to the specified string.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -647,7 +736,9 @@ try {
 limit(total: number, offset: number): Query
 ```
 
-Creates a **Query** object to specify the number of records of the query result and where to start. This API must be called after the invocation of the **orderByAsc()**, **orderByDesc()**, and the query APIs of the **Query** object.
+Creates a **Query** object to specify the number of records of the query result and where to start. This API must
+be called after the invocation of the **orderByAsc()**, **orderByDesc()**, and the query APIs of the **Query**
+object.
 
 **Since:** 9
 
@@ -702,7 +793,15 @@ try {
 notEqualTo(field: string, value: number | number | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not equal to the specified value. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is not equal to the specified value.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -735,7 +834,15 @@ Creates a **Query** object to match the specified field whose value is not equal
 notInNumber(field: string, valueList: number[] | number[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not within the specified list of numbers. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is not within the specified list of numbers.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -768,7 +875,15 @@ Creates a **Query** object to match the specified field whose value is not withi
 notInString(field: string, valueList: string[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not within the specified list of strings. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is not within the specified list of strings.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -861,7 +976,15 @@ try {
 orderByAsc(field: string): Query
 ```
 
-Creates a **Query** object to sort the query results in ascending order. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to sort the query results in ascending order.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -913,7 +1036,15 @@ try {
 orderByDesc(field: string): Query
 ```
 
-Creates a **Query** object to sort the query results in descending order. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to sort the query results in descending order.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -1110,7 +1241,15 @@ try {
 unlike(field: string, value: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not similar to the specified string. > **NOTE** > > This API should be used together with [Schema](arkts-arkdata-schema-c.md). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
+Creates a **Query** object to match the specified field whose value is not similar to the specified string.
+
+> **NOTE**
+>
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
+>
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 

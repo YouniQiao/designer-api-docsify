@@ -12,7 +12,9 @@ import { wifiManager } from '@kit.MDMKit';
 function removeDisallowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void
 ```
 
-Removes disallowed Wi-Fi networks. If some Wi-Fi networks are removed from the disallowed list, the current device cannot connect to the remaining ones; if all Wi-Fi networks are removed from the disallowed list, the current device can connect to any Wi-Fi network.
+Removes disallowed Wi-Fi networks. If some Wi-Fi networks are removed from the disallowed list, the current device
+cannot connect to the remaining ones; if all Wi-Fi networks are removed from the disallowed list, the current
+device can connect to any Wi-Fi network.
 
 **Since:** 19
 

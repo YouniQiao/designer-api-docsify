@@ -12,7 +12,13 @@
 height?: Length
 ```
 
-高度，取值范围≥0。 默认值：0 默认单位：vp 异常值undefined、null、NaN和Infinity按照默认值处理。
+高度，取值范围≥0。
+
+默认值：0
+
+默认单位：vp
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** Length
 
@@ -30,7 +36,13 @@ height?: Length
 width?: Length
 ```
 
-宽度，取值范围≥0。 默认值：0 默认单位：vp 异常值undefined、null、NaN和Infinity按照默认值处理。
+宽度，取值范围≥0。
+
+默认值：0
+
+默认单位：vp
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** Length
 

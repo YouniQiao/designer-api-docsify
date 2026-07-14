@@ -97,7 +97,8 @@ if (intelligentVoiceManager != null) {
 on(type: 'serviceChange', callback: Callback<ServiceChangeType>): void
 ```
 
-Subscribes service change events. When the state of intelligent voice service changes, the callback is invoked.
+Subscribes service change events. When the state of intelligent voice service changes,
+the callback is invoked.
 
 **Since:** 10
 

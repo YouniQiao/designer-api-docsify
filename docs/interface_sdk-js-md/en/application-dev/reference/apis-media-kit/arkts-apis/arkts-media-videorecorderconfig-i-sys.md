@@ -68,7 +68,8 @@ video recorder profile, can get by "getVideoRecorderProfile", details see @Video
 rotation?: number
 ```
 
-Sets the video rotation angle in output file, and for the file to playback, in degrees. mp4 support. the range of rotation angle should be {0, 90, 180, 270}, default is 0.
+Sets the video rotation angle in output file, and for the file to playback, in degrees. mp4 support.
+the range of rotation angle should be {0, 90, 180, 270}, default is 0.
 
 **Type:** number
 
@@ -84,7 +85,9 @@ Sets the video rotation angle in output file, and for the file to playback, in d
 url: string
 ```
 
-video output uri.support two kind of uri now. format like: scheme + "://" + "context". fd: fd://fd
+video output uri.support two kind of uri now.
+format like: scheme + "://" + "context".
+fd: fd://fd
 
 **Type:** string
 

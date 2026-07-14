@@ -45,7 +45,8 @@ Obtains the URI of this moving photo.
 requestContent(imageFileUri: string, videoFileUri: string): Promise<void>
 ```
 
-Requests the image data and video data of this moving photo and writes them to the specified URIs, respectively. This API uses a promise to return the result.
+Requests the image data and video data of this moving photo and writes them to the specified URIs, respectively.
+This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -82,7 +83,8 @@ Requests the image data and video data of this moving photo and writes them to t
 requestContent(resourceType: ResourceType, fileUri: string): Promise<void>
 ```
 
-Requests the moving photo content of the specified resource type and writes it to the specified URI. This API uses a promise to return the result.
+Requests the moving photo content of the specified resource type and writes it to the specified URI. This API
+uses a promise to return the result.
 
 **Since:** 12
 
@@ -119,7 +121,8 @@ Requests the moving photo content of the specified resource type and writes it t
 requestContent(resourceType: ResourceType): Promise<ArrayBuffer>
 ```
 
-Requests the moving photo content of the specified resource type and returns it in ArrayBuffer format. This API uses a promise to return the result.
+Requests the moving photo content of the specified resource type and returns it in ArrayBuffer format. This API
+uses a promise to return the result.
 
 **Since:** 12
 

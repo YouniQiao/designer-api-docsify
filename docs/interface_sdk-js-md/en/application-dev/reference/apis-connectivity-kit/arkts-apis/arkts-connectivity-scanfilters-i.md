@@ -18,7 +18,8 @@ import { scan } from '@kit.ConnectivityKit';
 address?: string
 ```
 
-Indicates the device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Indicates the device address.
+The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -66,7 +67,8 @@ Indicates the manufacturer data.
 manufacturerDataMask?: ArrayBuffer
 ```
 
-Indicates the manufacturer data mask. If a manufacturer data mask is set in the scan filter, its length must match the manufacturer data length.
+Indicates the manufacturer data mask.
+If a manufacturer data mask is set in the scan filter, its length must match the manufacturer data length.
 
 **Type:** ArrayBuffer
 
@@ -98,7 +100,8 @@ Indicates the manufacturer ID.
 rssi?: number
 ```
 
-Indicates the RSSI. Unit: dBm, The value must be an integer within [-128,127].
+Indicates the RSSI.
+Unit: dBm, The value must be an integer within [-128,127].
 
 **Type:** number
 

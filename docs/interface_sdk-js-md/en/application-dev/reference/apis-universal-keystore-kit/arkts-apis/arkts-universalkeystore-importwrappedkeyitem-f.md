@@ -17,7 +17,12 @@ function importWrappedKeyItem(
   ): void
 ```
 
-Imports keys in secure mode. This API uses an asynchronous callback to return the result. > **NOTE** > > Importing SE security level wrapped keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md) > requires the ohos.permission.ACCESS_SE_KEY permission.
+Imports keys in secure mode. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+>
+> Importing SE security level wrapped keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
@@ -237,7 +242,12 @@ function huksImportWrappedKey() {
 function importWrappedKeyItem(keyAlias: string, wrappingKeyAlias: string, options: HuksOptions): Promise<void>
 ```
 
-Imports keys in secure mode. This API uses a promise to return the result. > **NOTE** > > Importing SE security level wrapped keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md) > requires the ohos.permission.ACCESS_SE_KEY permission.
+Imports keys in secure mode. This API uses a promise to return the result.
+
+> **NOTE**
+>
+> Importing SE security level wrapped keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 

@@ -1,6 +1,8 @@
 # DateOptions
 
-Defines date options for DatePickerComponent.
+DateOptions defines options for the date picker.
+
+Inherits from [CommonOptions](arkts-arkui-commonoptions-c.md).
 
 **Inheritance/Implementation:** DateOptions extends [CommonOptions](arkts-arkui-commonoptions-c.md)
 
@@ -20,7 +22,17 @@ import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerCompo
 lunar?: boolean
 ```
 
-Specifies whether to display lunar calendar.
+Specifies whether to display as lunar calendar.
+
+- true: Display as lunar calendar.
+- false: Do not display as lunar calendar.
+
+Default value: false
+
+**Description**:
+
+This only takes effect in Simplified Chinese and Traditional Chinese language environments.
+In other language environments, setting this property has no effect.
 
 **Type:** boolean
 
@@ -40,7 +52,9 @@ Specifies whether to display lunar calendar.
 mode?: DateMode
 ```
 
-Defines mode of date picker.
+Defines the mode of the date picker.
+
+Default value: DateMode.DATE
 
 **Type:** DateMode
 

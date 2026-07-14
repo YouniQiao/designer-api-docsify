@@ -38,7 +38,8 @@ Indicates MAC array.
 rssiAvg: number
 ```
 
-Indicates average RSSI value. The value range is all integers.
+Indicates average RSSI value.
+The value range is all integers.
 
 **Type:** number
 

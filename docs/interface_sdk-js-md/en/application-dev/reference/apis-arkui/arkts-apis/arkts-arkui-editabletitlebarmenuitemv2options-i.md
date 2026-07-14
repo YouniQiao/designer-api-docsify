@@ -36,7 +36,8 @@ Accessibility description.
 accessibilityLevel?: string
 ```
 
-Accessibility level, options: 'auto', 'yes', 'no'. value: 'auto'.
+Accessibility level, options: 'auto', 'yes', 'no'.
+value: 'auto'.
 
 **Type:** string
 

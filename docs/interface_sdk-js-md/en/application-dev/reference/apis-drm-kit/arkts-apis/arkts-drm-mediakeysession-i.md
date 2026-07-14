@@ -1,6 +1,7 @@
 # MediaKeySession
 
-Provide functions and keep a decrypt module. Before calling an MediaKeySession method, we must use MediaKeySystem's createMediaKeySession to get a MediaKeySession instance.
+Provide functions and keep a decrypt module. Before calling an MediaKeySession method, we must
+use MediaKeySystem's createMediaKeySession to get a MediaKeySession instance.
 
 **Since:** 12
 

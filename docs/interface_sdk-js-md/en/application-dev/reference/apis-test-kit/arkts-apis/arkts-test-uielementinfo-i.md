@@ -34,7 +34,8 @@ Bundle name of the application.
 readonly componentEventType?: ComponentEventType
 ```
 
-Component operation event type. If it is not a component operation event, {@link ComponentEventType.COMPONENT_UNDEFINED} is returned.
+Component operation event type.
+If it is not a component operation event, {@link ComponentEventType.COMPONENT_UNDEFINED} is returned.
 
 **Type:** ComponentEventType
 
@@ -114,7 +115,8 @@ Component or window type.
 readonly windowChangeType?: WindowChangeType
 ```
 
-Window change event type. If the event is not a window change event, {@link WindowChangeType.WINDOW_UNDEFINED} is returned.
+Window change event type.
+If the event is not a window change event, {@link WindowChangeType.WINDOW_UNDEFINED} is returned.
 
 **Type:** WindowChangeType
 

@@ -34,7 +34,8 @@ audioEncodeBitRate?: number
 audioEncoder?: AudioEncoder
 ```
 
-音频编码格式。默认值为DEFAULT，API8之后将废弃。 请使用"audioEncoderMime"替代。
+音频编码格式。默认值为DEFAULT，API8之后将废弃。
+请使用"audioEncoderMime"替代。
 
 **类型：** AudioEncoder
 
@@ -160,7 +161,10 @@ numberOfChannels?: number
 uri: string
 ```
 
-音频输出URI。支持两种URI格式。 格式：scheme + "://" + "context"。 file格式：file://path fd格式：fd://fd
+音频输出URI。支持两种URI格式。
+格式：scheme + "://" + "context"。
+file格式：file://path
+fd格式：fd://fd
 
 **类型：** string
 

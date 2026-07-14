@@ -1,6 +1,9 @@
 # AudioManager
 
-This interface implements audio volume and device management. Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-getaudiomanager-f.md#getaudiomanager-1) to obtain an AudioManager instance.
+This interface implements audio volume and device management.
+
+Before calling any API in AudioManager, you must use
+[getAudioManager](arkts-audio-getaudiomanager-f.md#getaudiomanager-1) to obtain an AudioManager instance.
 
 **Since:** 7
 
@@ -119,7 +122,10 @@ Obtains the audio scene. This API returns the result synchronously.
 getDebuggingManager(): AudioDebuggingManager
 ```
 
-Obtains an AudioDebuggingManager instance. <p><strong>NOTE</strong>: The {@link #AudioDebuggingManager} instance is a singleton. </p>
+Obtains an AudioDebuggingManager instance.
+<p><strong>NOTE</strong>:
+The {@link #AudioDebuggingManager} instance is a singleton.
+</p>
 
 **Since:** 26.0.0
 
@@ -860,7 +866,8 @@ Subscribes to the audio scene change event. This API uses an asynchronous callba
 on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void
 ```
 
-Subscribes to the event indicating that the connection status of an audio device is changed. This API uses an asynchronous callback to return the result.
+Subscribes to the event indicating that the connection status of an audio device is changed. This API uses an
+asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -883,7 +890,13 @@ Subscribes to the event indicating that the connection status of an audio device
 on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. Same as [on('audioInterrupt')](arkts-audio-audiorenderer-i.md#on-1) , this API is used to listen for focus changes. However, this API is used in scenarios without audio streams (no AudioRenderer instance is created), such as frequency modulation (FM) and voice wakeup.
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an
+asynchronous callback to return the result.
+
+Same as
+[on('audioInterrupt')](arkts-audio-audiorenderer-i.md#on-1)
+, this API is used to listen for focus changes. However, this API is used in scenarios without audio streams (no
+AudioRenderer instance is created), such as frequency modulation (FM) and voice wakeup.
 
 **Since:** 7
 

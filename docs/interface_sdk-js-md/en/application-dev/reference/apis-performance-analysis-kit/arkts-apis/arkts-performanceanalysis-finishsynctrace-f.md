@@ -12,7 +12,10 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function finishSyncTrace(level: HiTraceOutputLevel): void
 ```
 
-Stops a synchronous trace with the trace output level specified. The **level** used in **finishSyncTrace** must be the same as that of [startSyncTrace()](arkts-performanceanalysis-startsynctrace-f.md#startsynctrace-1).
+Stops a synchronous trace with the trace output level specified.
+
+The **level** used in **finishSyncTrace** must be the same as that of
+[startSyncTrace()](arkts-performanceanalysis-startsynctrace-f.md#startsynctrace-1).
 
 **Since:** 19
 

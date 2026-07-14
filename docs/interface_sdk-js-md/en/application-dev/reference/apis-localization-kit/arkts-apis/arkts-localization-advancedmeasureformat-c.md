@@ -1,6 +1,7 @@
 # AdvancedMeasureFormat
 
-Provides the number formatting capability, supporting automatic unit conversion based on specific application scenarios.
+Provides the number formatting capability, supporting automatic unit conversion based on
+specific application scenarios.
 
 **Since:** 23
 
@@ -53,7 +54,8 @@ let advancedMeasureFormat: i18n.AdvancedMeasureFormat = new i18n.AdvancedMeasure
 format(num: number): string
 ```
 
-Formats a number by appropriate measure for usage scenarios. For instance, when formatting the value 12.3 for rainfall in the English locale, the output is "12.3 mm".
+Formats a number by appropriate measure for usage scenarios. For instance, when formatting the value 12.3
+for rainfall in the English locale, the output is "12.3 mm".
 
 **Since:** 23
 

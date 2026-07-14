@@ -34,7 +34,8 @@ The type of the propertyDescriptor instance.
 isWriteable?: boolean
 ```
 
-Indicates whether the descriptor is writable. Default value: true.
+Indicates whether the descriptor is writable.
+Default value: true.
 
 **Type:** boolean
 
@@ -50,7 +51,10 @@ Indicates whether the descriptor is writable. Default value: true.
 propertyUuid: string
 ```
 
-The UUID of the {@link Property} instance which the propertyDescriptor belongs to. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+The UUID of the {@link Property} instance which the propertyDescriptor belongs to.
+The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),
+for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
+<br>NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
@@ -66,7 +70,10 @@ The UUID of the {@link Property} instance which the propertyDescriptor belongs t
 serviceUuid: string
 ```
 
-The UUID of the {@link Service} instance which the master property of descriptor belongs to. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+The UUID of the {@link Service} instance which the master property of descriptor belongs to.
+The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),
+for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
+<br>NearLink standard UUIDs are not allowed.
 
 **Type:** string
 

@@ -12,7 +12,8 @@ import { notificationManager } from '@kit.NotificationKit';
 function setSyncNotificationEnabledWithoutApp(userId: number, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable the notification sync feature for devices where the application is not installed. This API uses an asynchronous callback to return the result.
+Sets whether to enable the notification sync feature for devices where the application is not installed. This API
+uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -71,7 +72,8 @@ notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable, setSync
 function setSyncNotificationEnabledWithoutApp(userId: number, enable: boolean): Promise<void>
 ```
 
-Sets whether to enable the notification sync feature for devices where the application is not installed. This API uses a promise to return the result.
+Sets whether to enable the notification sync feature for devices where the application is not installed. This API
+uses a promise to return the result.
 
 **Since:** 9
 

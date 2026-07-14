@@ -6,7 +6,14 @@
 function removeFirewallRule(admin: Want, firewallRule?: FirewallRule): void
 ```
 
-移除设备防火墙过滤规则。 API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。 从API version 23开始，支持[LogType](arkts-mdm-logtype-e.md)。 移除规则后如果不存在[Action](arkts-mdm-action-e.md)为ALLOW规则后，会将[addFirewallRule](arkts-mdm-addfirewallrule-f.md#addfirewallrule-1)添 加的默认DENY规则清空。
+移除设备防火墙过滤规则。
+
+API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
+
+从API version 23开始，支持[LogType](arkts-mdm-logtype-e.md)。
+
+移除规则后如果不存在[Action](arkts-mdm-action-e.md)为ALLOW规则后，会将[addFirewallRule](arkts-mdm-addfirewallrule-f.md#addfirewallrule-1)添
+加的默认DENY规则清空。
 
 **起始版本：** 12
 

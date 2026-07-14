@@ -32,7 +32,8 @@ Notification switch state.
 readonly switchName: string
 ```
 
-Notification switch name. The value can be **DEAL** (aggregated switch for transaction notifications) or **LOGISTICS** (aggregated switch for logistics notifications).
+Notification switch name. The value can be **DEAL** (aggregated switch for transaction notifications) or
+**LOGISTICS** (aggregated switch for logistics notifications).
 
 **Type:** string
 

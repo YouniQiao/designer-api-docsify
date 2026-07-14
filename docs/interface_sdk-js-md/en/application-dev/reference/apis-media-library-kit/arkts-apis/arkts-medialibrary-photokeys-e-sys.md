@@ -70,7 +70,8 @@ User comment information.
 CAMERA_SHOT_KEY = 'camera_shot_key'
 ```
 
-Key for the Ultra Snapshot feature, which allows the camera to take photos or record videos with the screen off. (This parameter is available only for the system camera, and the key value is defined by the system camera.)
+Key for the Ultra Snapshot feature, which allows the camera to take photos or record videos with the screen off.
+(This parameter is available only for the system camera, and the key value is defined by the system camera.)
 
 **Since:** 10
 
@@ -140,7 +141,9 @@ Pending state.
 DATE_TRASHED_MS = 'date_trashed_ms'
 ```
 
-Date when the file was deleted. The value is the number of milliseconds elapsed since the Epoch time. **NOTE**: The photos queried cannot be sorted based on this field.
+Date when the file was deleted. The value is the number of milliseconds elapsed since the Epoch time.
+
+**NOTE**: The photos queried cannot be sorted based on this field.
 
 **Since:** 12
 
@@ -266,7 +269,8 @@ Whether the asset is displayed in the **Recent** list.
 SUM_SIZE = 'sum(size)'
 ```
 
-Total size of files. When **SUM_SIZE** is filled in **fetchColumns**, only the first asset is obtained, and the property includes the total size of all assets.
+Total size of files. When **SUM_SIZE** is filled in **fetchColumns**, only the first asset is obtained, and the
+property includes the total size of all assets.
 
 **Since:** 19
 

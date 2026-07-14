@@ -1,6 +1,7 @@
 # KVManager
 
-分布式键值数据库管理实例，用于获取分布式键值数据库的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-createkvmanager-f.md#createkvmanager-1)构建一 个KVManager实例。
+分布式键值数据库管理实例，用于获取分布式键值数据库的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-createkvmanager-f.md#createkvmanager-1)构建一
+个KVManager实例。
 
 **起始版本：** 9
 
@@ -309,7 +310,11 @@ try {
 getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
-获取所有通过 [getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1) 方法创建的且没有调用 [deleteKVStore](arkts-arkdata-kvmanager-i.md#deletekvstore-1) 方法删除的分布式键值数据库的storeId，使用callback异步回调。
+获取所有通过
+[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)
+方法创建的且没有调用
+[deleteKVStore](arkts-arkdata-kvmanager-i.md#deletekvstore-1)
+方法删除的分布式键值数据库的storeId，使用callback异步回调。
 
 **起始版本：** 9
 
@@ -358,7 +363,11 @@ try {
 getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
-获取所有通过 [getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1) 方法创建的且没有调用 [deleteKVStore](arkts-arkdata-kvmanager-i.md#deletekvstore-1) 方法删除的分布式键值数据库的storeId，使用Promise异步回调。
+获取所有通过
+[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)
+方法创建的且没有调用
+[deleteKVStore](arkts-arkdata-kvmanager-i.md#deletekvstore-1)
+方法删除的分布式键值数据库的storeId，使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -411,7 +420,14 @@ try {
 getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): void
 ```
 
-通过指定options和storeId，创建并获取分布式键值数据库，使用callback异步回调。获取数据库后，在使用完毕时需调用 [closeKVStore](arkts-arkdata-kvmanager-i.md#closekvstore-1) 关闭数据库释放资源。 > **注意：** > > 在获取已有的分布式键值数据库时，如果数据库文件无法打开（例如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，以防止数据丢失。有关备份恢复的使用方法，请参 > 阅[数据库备份与恢复](../../../../database/data-backup-and-restore.md)。
+通过指定options和storeId，创建并获取分布式键值数据库，使用callback异步回调。获取数据库后，在使用完毕时需调用
+[closeKVStore](arkts-arkdata-kvmanager-i.md#closekvstore-1)
+关闭数据库释放资源。
+
+> **注意：**
+>
+> 在获取已有的分布式键值数据库时，如果数据库文件无法打开（例如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，以防止数据丢失。有关备份恢复的使用方法，请参
+> 阅[数据库备份与恢复](../../../../database/data-backup-and-restore.md)。
 
 **起始版本：** 9
 
@@ -475,7 +491,14 @@ try {
 getKVStore<T>(storeId: string, options: Options): Promise<T>
 ```
 
-指定options和storeId，创建并获取分布式键值数据库，使用Promise回调。获取数据库后，在使用完毕时需调用 [closeKVStore](arkts-arkdata-kvmanager-i.md#closekvstore-1) 关闭数据库释放资源。 > **注意：** > > 获取已有的分布式键值数据库时，如果数据库文件无法打开（如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，防止数据丢失。备份恢复的使用方法详见 > [数据库备份与恢复](../../../../database/data-backup-and-restore.md)。
+指定options和storeId，创建并获取分布式键值数据库，使用Promise回调。获取数据库后，在使用完毕时需调用
+[closeKVStore](arkts-arkdata-kvmanager-i.md#closekvstore-1)
+关闭数据库释放资源。
+
+> **注意：**
+>
+> 获取已有的分布式键值数据库时，如果数据库文件无法打开（如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，防止数据丢失。备份恢复的使用方法详见
+> [数据库备份与恢复](../../../../database/data-backup-and-restore.md)。
 
 **起始版本：** 9
 
@@ -540,7 +563,9 @@ try {
 off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 ```
 
-取消订阅服务状态变更通知。必须先调用 [on('distributedDataServiceDie')](arkts-arkdata-kvmanager-i.md#on-1) 订阅后，才能调用off取消订阅。参数中的deathCallback必须是已经订阅过的deathCallback，否则会取消订阅失败。
+取消订阅服务状态变更通知。必须先调用
+[on('distributedDataServiceDie')](arkts-arkdata-kvmanager-i.md#on-1)
+订阅后，才能调用off取消订阅。参数中的deathCallback必须是已经订阅过的deathCallback，否则会取消订阅失败。
 
 **起始版本：** 9
 
@@ -583,7 +608,13 @@ try {
 on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 ```
 
-订阅服务终止事件。如果服务终止，需要重新调用 [on('dataChange')](arkts-arkdata-singlekvstore-i.md#on-1) 和 [on('syncComplete')](arkts-arkdata-singlekvstore-i.md#on-2) 注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。调用on订阅后，在不需要监听时必须调用 [off('distributedDataServiceDie')](arkts-arkdata-kvmanager-i.md#off-1) 取消订阅。
+订阅服务终止事件。如果服务终止，需要重新调用
+[on('dataChange')](arkts-arkdata-singlekvstore-i.md#on-1)
+和
+[on('syncComplete')](arkts-arkdata-singlekvstore-i.md#on-2)
+注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。调用on订阅后，在不需要监听时必须调用
+[off('distributedDataServiceDie')](arkts-arkdata-kvmanager-i.md#off-1)
+取消订阅。
 
 **起始版本：** 9
 

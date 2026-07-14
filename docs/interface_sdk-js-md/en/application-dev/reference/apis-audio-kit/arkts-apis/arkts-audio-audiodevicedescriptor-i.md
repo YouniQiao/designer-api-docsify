@@ -18,7 +18,9 @@ import { audio } from '@kit.AudioKit';
 readonly address: string
 ```
 
-Static MAC address of the device. For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permission.
+Static MAC address of the device.
+
+For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permission.
 
 **Type:** string
 
@@ -174,7 +176,9 @@ Model of the device.
 readonly name: string
 ```
 
-Device name. For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permission.
+Device name.
+
+For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permission.
 
 **Type:** string
 
@@ -190,7 +194,9 @@ Device name. For a Bluetooth device, you must request the ohos.permission.USE_BL
 readonly sampleRates: Array<number>
 ```
 
-Supported sampling rates. SystemCapability.Multimedia.Audio.Device
+Supported sampling rates.
+
+SystemCapability.Multimedia.Audio.Device
 
 **Type:** Array<number>
 

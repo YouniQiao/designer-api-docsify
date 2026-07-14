@@ -1,6 +1,7 @@
 # CalendarManager
 
-Before calling any of the following APIs to manage the calendar, you must use [getCalendarManager()](arkts-calendar-getcalendarmanager-f.md#getcalendarmanager-1) to obtain a **CalendarManager** object first.
+Before calling any of the following APIs to manage the calendar, you must use
+[getCalendarManager()](arkts-calendar-getcalendarmanager-f.md#getcalendarmanager-1) to obtain a **CalendarManager** object first.
 
 **Since:** 10
 
@@ -18,7 +19,8 @@ import { calendarManager } from '@kit.CalendarKit';
 createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>
 ```
 
-Creates a Calendar object based on the calendar account information. This API uses a promise to return the result.
+Creates a Calendar object based on the calendar account information.
+This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -75,7 +77,8 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void
 ```
 
-Creates a Calendar object based on the calendar account information. This API uses an asynchronous callback to return the result.
+Creates a Calendar object based on the calendar account information.
+This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -266,7 +269,13 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 editEvent(event: Event): Promise<number>
 ```
 
-Edits an event on the event creation page, with no event ID specified in **Event**. The **instanceStartTime**, **instanceEndTime**, **identifier**, **attendee**, **service**, **isLunar**, and **timeZone** attributes cannot be set. Important events cannot be added either. This API uses a promise to return the result. Events created using this API can be obtained and modified by the system calendar. Third-party applications can obtain and modify the events after they requested the **READ_WHOLE_CALENDAR** permission and the **WRITE_WHOLE_CALENDAR** permission, respectively.
+Edits an event on the event creation page, with no event ID specified in **Event**. The **instanceStartTime**, **instanceEndTime**,
+**identifier**, **attendee**, **service**, **isLunar**, and **timeZone** attributes cannot be set. Important events cannot be added either.
+This API uses a promise to return the result.
+
+Events created using this API can be obtained and modified by the system calendar.
+Third-party applications can obtain and modify the events after they requested the **READ_WHOLE_CALENDAR**
+permission and the **WRITE_WHOLE_CALENDAR** permission, respectively.
 
 **Since:** 12
 
@@ -312,7 +321,8 @@ calendarMgr?.editEvent(event).then((eventId: number): void => {
 getAllCalendars(): Promise<Calendar[]>
 ```
 
-Obtains the created and default Calendar objects of the current application. This API uses a promise to return the result.
+Obtains the created and default Calendar objects of the current application.
+This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -363,7 +373,8 @@ calendarMgr?.getAllCalendars().then((data: calendarManager.Calendar[]) => {
 getAllCalendars(callback: AsyncCallback<Calendar[]>): void
 ```
 
-Obtains the created and default Calendar objects of the current application. This API uses an asynchronous callback to return the result.
+Obtains the created and default Calendar objects of the current application.
+This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -531,7 +542,9 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 getCalendar(callback: AsyncCallback<Calendar>): void
 ```
 
-Obtains the default Calendar object, which is created when the data storage runs for the first time. This API uses an asynchronous callback to return the result. You can call this API instead of createCalendar() to use the default calendar for a new event.
+Obtains the default Calendar object, which is created when the data storage runs for the first time.
+This API uses an asynchronous callback to return the result.
+You can call this API instead of createCalendar() to use the default calendar for a new event.
 
 **Since:** 10
 

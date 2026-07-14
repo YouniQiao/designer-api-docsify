@@ -1,6 +1,7 @@
 # PictureDrawableDescriptor
 
-Creates a **PictureDrawableDescriptor** object by passing a **Picture** object. This API inherits from [DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md).
+Creates a **PictureDrawableDescriptor** object by passing a **Picture** object. This API inherits from
+[DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md).
 
 **Inheritance/Implementation:** PictureDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md)
 

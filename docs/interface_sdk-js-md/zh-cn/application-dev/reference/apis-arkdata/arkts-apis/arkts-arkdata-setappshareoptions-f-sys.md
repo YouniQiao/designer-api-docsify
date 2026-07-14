@@ -6,7 +6,8 @@
 function setAppShareOptions(intention: Intention, shareOptions: ShareOptions): void
 ```
 
-设置应用内拖拽通道数据可使用的范围[ShareOptions](arkts-arkdata-shareoptions-e.md)，目前仅支持DRAG类型数据通道的管控设置。调用成功后，应用内拖拽通道数据的使用范围被设 置为指定的ShareOptions值。
+设置应用内拖拽通道数据可使用的范围[ShareOptions](arkts-arkdata-shareoptions-e.md)，目前仅支持DRAG类型数据通道的管控设置。调用成功后，应用内拖拽通道数据的使用范围被设
+置为指定的ShareOptions值。
 
 **起始版本：** 14
 

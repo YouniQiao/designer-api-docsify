@@ -12,7 +12,8 @@ import { distributedDataObject } from '@kit.ArkData';
 function create(context: Context, source: object): DataObject
 ```
 
-Creates a distributed data object. The object properties support basic types (number, Boolean, and string) and complex types (array and nested basic types).
+Creates a distributed data object. The object properties support basic types (number, Boolean, and string) and
+complex types (array and nested basic types).
 
 **Since:** 9
 

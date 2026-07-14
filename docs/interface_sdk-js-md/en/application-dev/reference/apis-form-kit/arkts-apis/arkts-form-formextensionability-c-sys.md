@@ -1,6 +1,7 @@
 # FormExtensionAbility
 
-Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed.
+Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget
+visibility status is being changed.
 
 **Since:** 9
 

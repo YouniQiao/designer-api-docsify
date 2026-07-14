@@ -32,7 +32,8 @@ Index of the DLP sandbox application. The value ranges from 1001 to 1100.
 bundleName: string
 ```
 
-Bundle name of the application. The value contains 7 to 128 bytes. If the value is out of range, error code 19100001 is thrown.
+Bundle name of the application. The value contains 7 to 128 bytes. If the value is out of range, error code
+19100001 is thrown.
 
 **Type:** string
 

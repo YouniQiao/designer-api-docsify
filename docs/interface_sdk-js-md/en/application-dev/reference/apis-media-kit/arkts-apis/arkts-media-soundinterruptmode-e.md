@@ -12,7 +12,8 @@ Enumerates the interruption modes of the audio files with the same ID in SoundPo
 NO_INTERRUPT = 0
 ```
 
-If the former audio file is not completely played, the latter audio file with the same ID does not interrupt the former audio file. Two audio files are played concurrently.
+If the former audio file is not completely played, the latter audio file with the same ID does not interrupt the
+former audio file. Two audio files are played concurrently.
 
 **Since:** 23
 
@@ -26,7 +27,8 @@ If the former audio file is not completely played, the latter audio file with th
 SAME_SOUND_INTERRUPT = 1
 ```
 
-If the former audio file is not completely played, the latter audio file with the same ID interrupts the former audio file.
+If the former audio file is not completely played, the latter audio file with the same ID interrupts the former
+audio file.
 
 **Since:** 23
 

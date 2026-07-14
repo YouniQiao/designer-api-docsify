@@ -1,6 +1,7 @@
 # VideoRecorder（系统接口）
 
-该接口自API version 9起停止维护，建议使用AVRecorder。 视频录制管理类，用于视频录制。在调用VideoRecorder的方法前，必须先通过createVideoRecorder()创建一个VideoRecorder实例。
+该接口自API version 9起停止维护，建议使用AVRecorder。
+视频录制管理类，用于视频录制。在调用VideoRecorder的方法前，必须先通过createVideoRecorder()创建一个VideoRecorder实例。
 
 **起始版本：** 9
 
@@ -467,7 +468,8 @@ videoRecorder.release().then(() => {
 reset(callback: AsyncCallback<void>): void
 ```
 
-重置视频录制。 在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
+重置视频录制。
+在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
 
 **起始版本：** 9
 
@@ -511,7 +513,8 @@ videoRecorder.reset((err: BusinessError) => {
 reset(): Promise<void>
 ```
 
-重置视频录制。 在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
+重置视频录制。
+在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
 
 **起始版本：** 9
 

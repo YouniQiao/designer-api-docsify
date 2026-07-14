@@ -1,6 +1,7 @@
 # AudioCapturerMicInData (System API)
 
-Describes audio capturer data that contains processed audio data and microphone input (mic-in) audio data before any processing.
+Describes audio capturer data that contains processed audio data and
+microphone input (mic-in) audio data before any processing.
 
 **Since:** 24
 
@@ -38,7 +39,9 @@ Processed audio data buffer.
 ecData?: ArrayBuffer
 ```
 
-Echo reference audio data buffer. If capturer config does not set ecStreamInfo, this buffer will be null. See {@link #AudioCapturerMicInConfig} for details.
+Echo reference audio data buffer.
+If capturer config does not set ecStreamInfo, this buffer will be null.
+See {@link #AudioCapturerMicInConfig} for details.
 
 **Type:** ArrayBuffer
 

@@ -18,7 +18,9 @@ import { GridObjectSortComponentType, GridObjectSortComponentOptions, GridObject
 id: number | string
 ```
 
-Data ID, which must be unique. The default value is an empty string.
+Data ID, which must be unique.
+
+The default value is an empty string.
 
 **Type:** number | string
 
@@ -36,7 +38,11 @@ Data ID, which must be unique. The default value is an empty string.
 order: number
 ```
 
-Sequence number. The value must be greater than or equal to 0. Default value: **0**.
+Sequence number.
+
+The value must be greater than or equal to 0.
+
+Default value: **0**.
 
 **Type:** number
 
@@ -54,7 +60,8 @@ Sequence number. The value must be greater than or equal to 0. Default value: **
 selected: boolean
 ```
 
-Whether the grid object has been added. The value **true** means that the grid object has been added, and **false** means the opposite.
+Whether the grid object has been added. The value **true** means that the grid object has been added, and **false**
+means the opposite.
 
 **Type:** boolean
 
@@ -72,7 +79,8 @@ Whether the grid object has been added. The value **true** means that the grid o
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Symbol resource of the image. Required when **GridObjectSortComponentType** is set to **IMAGE_TEXT**. The priority of this property is higher than that of **url**.
+Symbol resource of the image. Required when **GridObjectSortComponentType** is set to **IMAGE_TEXT**. The priority
+of this property is higher than that of **url**.
 
 **Type:** SymbolGlyphModifier
 

@@ -28,7 +28,8 @@ constructor()
 size: number
 ```
 
-Set the maximum size of pages that can cache. Default is 1, max is 50.
+Set the maximum size of pages that can cache.
+Default is 1, max is 50.
 
 **Type:** number
 
@@ -42,7 +43,8 @@ Set the maximum size of pages that can cache. Default is 1, max is 50.
 timeToLive: number
 ```
 
-Set the lifetime in seconds in the BackForwardCache. Unit: seconds. Default is 600.
+Set the lifetime in seconds in the BackForwardCache.
+Unit: seconds. Default is 600.
 
 **Type:** number
 

@@ -18,7 +18,8 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 onAppear?: Callback<string>
 ```
 
-Called when the selection menu appears. The callback parameter is the selected text concatenated in the visual order of Text components.
+Called when the selection menu appears.
+The callback parameter is the selected text concatenated in the visual order of Text components.
 
 **Type:** Callback<string>
 
@@ -54,7 +55,8 @@ Called when the selection menu disappears.
 onMenuHide?: Callback<string>
 ```
 
-Called when the selection menu is hidden. The callback parameter is the selected text concatenated in the visual order of Text components.
+Called when the selection menu is hidden.
+The callback parameter is the selected text concatenated in the visual order of Text components.
 
 **Type:** Callback<string>
 
@@ -72,7 +74,8 @@ Called when the selection menu is hidden. The callback parameter is the selected
 onMenuShow?: Callback<string>
 ```
 
-Called when the selection menu is displayed. The callback parameter is the selected text concatenated in the visual order of Text components.
+Called when the selection menu is displayed.
+The callback parameter is the selected text concatenated in the visual order of Text components.
 
 **Type:** Callback<string>
 

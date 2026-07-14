@@ -102,7 +102,8 @@ readonly timestamp?: Date
 uriAuthorizationPolicies?: Array<UriPermission>
 ```
 
-用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST，只对单次数据生效，优先级较低，具体策略见[UriPermission](arkts-arkdata-uripermission-e.md) 。
+用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST，只对单次数据生效，优先级较低，具体策略见[UriPermission](arkts-arkdata-uripermission-e.md)
+。
 
 **类型：** Array<UriPermission>
 

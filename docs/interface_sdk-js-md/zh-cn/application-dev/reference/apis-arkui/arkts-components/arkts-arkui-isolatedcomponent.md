@@ -2,6 +2,7 @@
 
 定义IsolatedComponent组件实例。
 
+
 ## 汇总
 
 - [IsolatedOptions](arkts-arkui-isolatedcomponent-isolatedoptions-i-sys.md)

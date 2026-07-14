@@ -1,6 +1,7 @@
 # PluginComponentOptions（系统接口）
 
-定义用于构造插件组件的选项。 AnonyMous Object Rectification
+定义用于构造插件组件的选项。
+AnonyMous Object Rectification
 
 **起始版本：** 18
 
@@ -14,7 +15,8 @@
 data: any
 ```
 
-插件组件数据。 AnonyMous Object Rectification
+插件组件数据。
+AnonyMous Object Rectification
 
 **类型：** any
 
@@ -30,7 +32,8 @@ data: any
 template: PluginComponentTemplate
 ```
 
-插件组件模板。 AnonyMous Object Rectification
+插件组件模板。
+AnonyMous Object Rectification
 
 **类型：** PluginComponentTemplate
 

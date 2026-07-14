@@ -18,7 +18,8 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 extraUris: Array<string>
 ```
 
-URIs of the changed files in the album. The value may be undefined. Check whether the value is undefined before using it.
+URIs of the changed files in the album. The value may be undefined. Check whether the value is undefined before
+using it.
 
 **Type:** Array<string>
 
@@ -46,7 +47,8 @@ Notification type.
 uris: Array<string>
 ```
 
-All URIs with the same [NotifyType](arkts-medialibrary-notifytype-e.md), which can be **PhotoAsset** or **Album**.
+All URIs with the same [NotifyType](arkts-medialibrary-notifytype-e.md), which can
+be **PhotoAsset** or **Album**.
 
 **Type:** Array<string>
 

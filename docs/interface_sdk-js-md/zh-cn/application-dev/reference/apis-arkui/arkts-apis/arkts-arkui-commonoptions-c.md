@@ -1,84 +1,188 @@
 # CommonOptions
 
-CommonOptions定义了Counter的共通属性和事件。
+CommonOptions定义日期时间选择器的通用选项。
 
-**起始版本：** 11
+> **说明：**
+>
+> - Date的使用请参考
+> [TimePickerOptions](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。
+>
+> - DatePickerComponent的文本字号根据显示的总列数变化，当列数大于等于6列时，字号为14vp，其他情况下为16vp，当组件宽度过窄时，
+> 可能出现文本显示截断的情况。
+>
+> - 参数缺省或者设置为undefined时，均保持默认值。
+>
+> - 在[DateOptions](arkts-arkui-dateoptions-c.md)中设置start、end、selected时仅日期部分（年月日）设置生效，
+> 在[TimeOptions](arkts-arkui-timeoptions-c.md)中设置start、end、selected时仅时间部分（时分秒）设置生效。
+
+**起始版本：** 26.0.0
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## focusable
+## enableHapticFeedback
 
 ```TypeScript
-focusable?: boolean
+enableHapticFeedback?: boolean
 ```
 
-设置Counter是否可获焦。 **说明：** 该属性对列表型和紧凑型Counter生效。 默认值：true true：Counter可获焦；false：Counter不可获焦。 值为undefined时，按默认值处理。
+启用或禁用触控反馈。
+
+默认值：true
+
+- true：开启触控反馈。
+- false：不开启触控反馈。
+
+**说明**：
+
+1. 设置为true后，其生效情况取决于系统的硬件是否支持。
+2. 开启触控反馈时，需要在工程的[module.json5](../../../../quick-start/module-configuration-file.md)中配置
+requestPermissions字段以开启振动权限，配置如下：
+
+"requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
 **类型：** boolean
 
 **默认值：** true
 
-**起始版本：** 11
+**起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## onHoverDecrease
+## end
 
 ```TypeScript
-onHoverDecrease?: (isHover: boolean) => void
+end?: Date
 ```
 
-鼠标进入或退出Counter组件的减小按钮时触发该回调。 isHover：表示鼠标是否悬浮在组件上，进入时为true，离开时为false。 默认值：不触发鼠标进入或退出Counter组件的减小按钮时的回调。 值为undefined时，按默认值处理。
+选择器的结束日期或时间。
 
-**类型：** (isHover: boolean) => void
+默认值：Date(2100, 12, 31, 23, 59, 59)
 
-**起始版本：** 11
+取值范围：[Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
+
+**说明：**
+
+设置了end且为有效值的场景下，loop不生效。
+
+**类型：** Date
+
+**起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## onHoverIncrease
+## loop
 
 ```TypeScript
-onHoverIncrease?: (isHover: boolean) => void
+loop?: boolean
 ```
 
-鼠标进入或退出Counter组件的增加按钮时触发该回调。 isHover：表示鼠标是否悬浮在组件上，鼠标进入时为true，退出时为false。 默认值：不触发鼠标进入或退出Counter组件的增加按钮时的回调。 值为undefined时，按默认值处理。
+设置是否启用循环模式。
 
-**类型：** (isHover: boolean) => void
+- true：启用循环模式。
+- false：不启用循环模式。
 
-**起始版本：** 11
+默认值：true
+
+**类型：** boolean
+
+**默认值：** true
+
+**起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## step
+## onChange
 
 ```TypeScript
-step?: number
+onChange?: Callback<DatePickerComponentResult>
 ```
 
-设置Counter的步长。 取值范围：大于等于1的整数。 默认值：1 超出取值范围按默认值处理。
+选择日期或时间后触发该回调。
 
-**类型：** number
+**类型：** Callback<DatePickerComponentResult>
 
-**默认值：** 1
-
-**起始版本：** 11
+**起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onScrollStop
+
+```TypeScript
+onScrollStop?: Callback<DatePickerComponentResult>
+```
+
+选择器项被选中且滚动停止时触发该回调。
+
+**类型：** Callback<DatePickerComponentResult>
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## selected
+
+```TypeScript
+selected?: Date
+```
+
+选中的日期。
+默认值为当前系统日期或时间。
+
+**类型：** Date
+
+**默认值：** current system date or time
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## start
+
+```TypeScript
+start?: Date
+```
+
+选择器的起始日期或时间。
+
+默认值：Date(1970, 0, 1, 0, 0, 0)
+
+取值范围：[Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
+
+**说明：**
+
+设置了start且为有效值的场景下，loop不生效。
+
+**类型：** Date
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

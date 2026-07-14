@@ -12,7 +12,8 @@
 areaChangePlaceholder?: Record<string, ComponentContent>
 ```
 
-设置区域变化占位符。 如果设置了区域变化占位ComponentContent，在EmbeddedComponent尺寸变化完成之前显示占位节点。
+设置区域变化占位符。
+如果设置了区域变化占位ComponentContent，在EmbeddedComponent尺寸变化完成之前显示占位节点。
 
 **类型：** Record<string, ComponentContent>
 
@@ -50,7 +51,8 @@ dpiFollowStrategy?: EmbeddedDpiFollowStrategy
 placeholder?: ComponentContent
 ```
 
-设置占位符。 如果设置了占位ComponentContent，在连接未建立时显示占位节点。
+设置占位符。
+如果设置了占位ComponentContent，在连接未建立时显示占位节点。
 
 **类型：** ComponentContent
 

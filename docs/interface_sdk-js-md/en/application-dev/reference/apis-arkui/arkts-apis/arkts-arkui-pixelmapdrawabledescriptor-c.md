@@ -1,6 +1,7 @@
 # PixelMapDrawableDescriptor
 
-Implements a **PixelMapDrawableDescriptor** object, which can be created by passing in a **PixelMap** object. Inherits from [DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md).
+Implements a **PixelMapDrawableDescriptor** object, which can be created by passing in a **PixelMap** object.
+Inherits from [DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md).
 
 **Inheritance/Implementation:** PixelMapDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md)
 

@@ -210,7 +210,8 @@ struct Index {
 off(type: 'cancel', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the cancellation events of a print job. This API uses an asynchronous callback to return the result.
+Unsubscribes from the cancellation events of a print job. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 10
 
@@ -466,7 +467,8 @@ struct Index {
 on(type: 'cancel', callback: Callback<void>): void
 ```
 
-Subscribes to the cancellation events of a print job. This API uses an asynchronous callback to return the result.
+Subscribes to the cancellation events of a print job. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 10
 

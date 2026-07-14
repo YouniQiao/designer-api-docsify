@@ -36,7 +36,9 @@ Indicates the list of Bluetooth device ID that need to be search.
 rssiThreshold?: number
 ```
 
-Indicates the Bluetooth RSSI threshold, only search Bluetooth BSSID with RSSI greater than this threshold. The value range is all integers.
+Indicates the Bluetooth RSSI threshold,
+only search Bluetooth BSSID with RSSI greater than this threshold.
+The value range is all integers.
 
 **Type:** number
 

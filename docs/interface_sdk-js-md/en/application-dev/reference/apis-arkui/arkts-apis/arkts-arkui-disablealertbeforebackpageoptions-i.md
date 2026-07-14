@@ -1,6 +1,6 @@
 # DisableAlertBeforeBackPageOptions
 
-Defines the option of DisableAlertBeforeBackPage.
+Defines the **DisableAlertBeforeBackPage** parameter.
 
 **Since:** 6
 
@@ -22,7 +22,7 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 cancel?: (errMsg: string) => void
 ```
 
-Called when the operation is cancelled.
+Called when the dialog box fails to be closed. **errMsg** indicates the returned information.
 
 **Type:** (errMsg: string) => void
 
@@ -58,7 +58,7 @@ Called when the dialog box is closed.
 success?: (errMsg: string) => void
 ```
 
-Called when the dialog box is displayed.
+Called when the dialog box is closed. **errMsg** indicates the returned information.
 
 **Type:** (errMsg: string) => void
 

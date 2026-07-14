@@ -1,6 +1,7 @@
 # UnifiedRecord
 
-对UDMF支持的数据内容的抽象定义，称为数据记录。一个统一数据对象内包含一条或多条数据记录，例如一条文本记录、一条图片记录、一条HTML记录等。从API version 15开始，支持往数据记录中增加同一内容的不同数据格式（例如同 一文本可同时以纯文本、HTML或超链接等格式存储），数据使用方根据业务需要通过getEntry方法获取对应格式。
+对UDMF支持的数据内容的抽象定义，称为数据记录。一个统一数据对象内包含一条或多条数据记录，例如一条文本记录、一条图片记录、一条HTML记录等。从API version 15开始，支持往数据记录中增加同一内容的不同数据格式（例如同
+一文本可同时以纯文本、HTML或超链接等格式存储），数据使用方根据业务需要通过getEntry方法获取对应格式。
 
 **起始版本：** 10
 
@@ -92,7 +93,15 @@ let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
 constructor(type: string, value: ValueType)
 ```
 
-用于创建指定类型和值的数据记录。调用成功后，返回包含指定类型和值的UnifiedRecord对象。 当参数value为[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformdatatype-e.md)中 OPENHARMONY_PIXEL_MAP的值； 当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md)类型时，参数type必须对应为 [UniformDataType](arkts-arkdata-uniformdatatype-e.md)中OPENHARMONY_WANT的 值。
+用于创建指定类型和值的数据记录。调用成功后，返回包含指定类型和值的UnifiedRecord对象。
+
+当参数value为[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)类型时，参数type必须对应为
+[UniformDataType](arkts-arkdata-uniformdatatype-e.md)中
+OPENHARMONY_PIXEL_MAP的值；
+
+当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md)类型时，参数type必须对应为
+[UniformDataType](arkts-arkdata-uniformdatatype-e.md)中OPENHARMONY_WANT的
+值。
 
 **起始版本：** 12
 
@@ -314,7 +323,8 @@ for (let i = 0; i < records.length; i++) {
 getType(): string
 ```
 
-获取当前数据记录的类型。由于从统一数据对象中调用[getRecords](arkts-arkdata-unifieddata-c.md#getrecords-1)所取出的数据是UnifiedRecord对象，因此需要通 过本接口查询此记录的具体类型，再将该UnifiedRecord对象转换为其子类，调用子类接口。
+获取当前数据记录的类型。由于从统一数据对象中调用[getRecords](arkts-arkdata-unifieddata-c.md#getrecords-1)所取出的数据是UnifiedRecord对象，因此需要通
+过本接口查询此记录的具体类型，再将该UnifiedRecord对象转换为其子类，调用子类接口。
 
 **起始版本：** 10
 
@@ -357,7 +367,8 @@ if (records[0].getType() == uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) {
 getTypes(): Array<string>
 ```
 
-获取数据记录中数据的所有类型集合。可通过UnifiedRecord数据记录对象调用本接口，查询出此记录中数据的所有类型集合，包括使用 [addEntry](arkts-arkdata-unifiedrecord-c.md#addentry-1)函数添加的数据类型。
+获取数据记录中数据的所有类型集合。可通过UnifiedRecord数据记录对象调用本接口，查询出此记录中数据的所有类型集合，包括使用
+[addEntry](arkts-arkdata-unifiedrecord-c.md#addentry-1)函数添加的数据类型。
 
 **起始版本：** 15
 

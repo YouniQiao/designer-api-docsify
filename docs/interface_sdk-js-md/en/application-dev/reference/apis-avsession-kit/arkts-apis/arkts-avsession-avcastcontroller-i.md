@@ -331,7 +331,8 @@ Unregister listener for current media item playback events.
 off(type: 'playNext'): void
 ```
 
-Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
+Unregister playback command callback sent by remote side or media center.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
@@ -358,7 +359,8 @@ Unregister playback command callback sent by remote side or media center. When c
 off(type: 'playPrevious'): void
 ```
 
-Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
+Unregister playback command callback sent by remote side or media center.
+When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
@@ -830,7 +832,8 @@ Register listener for current media item playback events.
 on(type: 'playNext', callback: Callback<void>): void
 ```
 
-Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
+Register playback command callback sent by remote side or media center.
+Application needs update the new media resource when receive these commands by using playItem.
 
 **Since:** 10
 
@@ -858,7 +861,8 @@ Register playback command callback sent by remote side or media center. Applicat
 on(type: 'playPrevious', callback: Callback<void>): void
 ```
 
-Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
+Register playback command callback sent by remote side or media center.
+Application needs update the new media resource when receive these commands by using playItem.
 
 **Since:** 10
 
@@ -886,7 +890,8 @@ Register playback command callback sent by remote side or media center. Applicat
 on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 ```
 
-Register requested playback command callback sent by remote side or media center. The AVQueueItem may include the requested assetId, starting position and other configurations.
+Register requested playback command callback sent by remote side or media center.
+The AVQueueItem may include the requested assetId, starting position and other configurations.
 
 **Since:** 11
 
@@ -912,7 +917,8 @@ Register requested playback command callback sent by remote side or media center
 on(type: 'endOfStream', callback: Callback<void>): void
 ```
 
-Register endOfStream state callback. Application needs update the new media resource when receive these commands by using playItem.
+Register endOfStream state callback.
+Application needs update the new media resource when receive these commands by using playItem.
 
 **Since:** 11
 

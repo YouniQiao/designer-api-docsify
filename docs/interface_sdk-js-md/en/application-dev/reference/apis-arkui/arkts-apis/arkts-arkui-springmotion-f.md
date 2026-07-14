@@ -12,7 +12,8 @@ import { curves } from '@kit.ArkUI';
 function springMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICurve
 ```
 
-Creates a spring animation curve. If multiple spring animations are applied to the same attribute of an object, each animation replaces their predecessor and inherits the velocity.
+Creates a spring animation curve. If multiple spring animations are applied to the same attribute of an object,
+each animation replaces their predecessor and inherits the velocity.
 
 **Since:** 9
 

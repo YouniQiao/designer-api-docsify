@@ -1,6 +1,6 @@
 # TimeFormat
 
-Enum for TimeFormat
+TimeFormat enum defines the format of the time picker.
 
 **Since:** 26.0.0
 
@@ -12,7 +12,7 @@ Enum for TimeFormat
 HOUR_MINUTE = 0
 ```
 
-Hour and minute.
+Displays hour and minute.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ Hour and minute.
 HOUR_MINUTE_SECOND = 1
 ```
 
-Hour and minute and second.
+Displays hour, minute, and second.
 
 **Since:** 26.0.0
 

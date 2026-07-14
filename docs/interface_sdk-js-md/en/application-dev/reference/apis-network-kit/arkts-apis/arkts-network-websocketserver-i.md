@@ -1,6 +1,7 @@
 # WebSocketServer
 
-<p>Defines a WebSocketServer object. Before invoking WebSocketServer APIs, you need to call webSocketServer.createWebSocketServer to create a WebSocket Server.</p>
+<p>Defines a WebSocketServer object. Before invoking WebSocketServer APIs,
+you need to call webSocketServer.createWebSocketServer to create a WebSocket Server.</p>
 
 **Since:** 24
 

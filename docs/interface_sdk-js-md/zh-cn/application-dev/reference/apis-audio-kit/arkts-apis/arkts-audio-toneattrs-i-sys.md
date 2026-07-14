@@ -1,6 +1,9 @@
 # ToneAttrs（系统接口）
 
-管理铃声属性。在调用ToneAttrs<sup>12+</sup>的接口前，需要先通过 [createCustomizedToneAttrs](arkts-audio-createcustomizedtoneattrs-f-sys.md#createcustomizedtoneattrs-1)或 [getDefaultRingtoneAttrs](arkts-audio-systemsoundmanager-i-sys.md#getdefaultringtoneattrs-1)、 [getRingtoneAttrList](arkts-audio-systemsoundmanager-i-sys.md#getringtoneattrlist-1)等方法获取实例。
+管理铃声属性。在调用ToneAttrs<sup>12+</sup>的接口前，需要先通过
+[createCustomizedToneAttrs](arkts-audio-createcustomizedtoneattrs-f-sys.md#createcustomizedtoneattrs-1)或
+[getDefaultRingtoneAttrs](arkts-audio-systemsoundmanager-i-sys.md#getdefaultringtoneattrs-1)、
+[getRingtoneAttrList](arkts-audio-systemsoundmanager-i-sys.md#getringtoneattrlist-1)等方法获取实例。
 
 **起始版本：** 12
 

@@ -12,7 +12,12 @@ import { notificationManager } from '@kit.NotificationKit';
 function cancel(id: number, callback: AsyncCallback<void>): void
 ```
 
-根据指定的通知ID取消已发布的通知。使用callback异步回调。 取消后，对应的通知将从通知中心、状态栏等位置移除，用户不再可见。 与带label参数的notificationManager.cancel(id, label, callback)相比， 此接口不传入label，将取消与指定ID匹配的通知。当发布通知， label不为空时，则需使用接口notificationManager.cancel(id, label, callback)取消通知。
+根据指定的通知ID取消已发布的通知。使用callback异步回调。
+
+取消后，对应的通知将从通知中心、状态栏等位置移除，用户不再可见。
+与带label参数的notificationManager.cancel(id, label, callback)相比，
+此接口不传入label，将取消与指定ID匹配的通知。当发布通知，
+label不为空时，则需使用接口notificationManager.cancel(id, label, callback)取消通知。
 
 **起始版本：** 9
 
@@ -59,7 +64,12 @@ notificationManager.cancel(0, cancelCallback);
 function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 ```
 
-根据通知ID和标签取消已发布的通知。使用callback异步回调。 取消后，对应的通知将从通知中心、状态栏等位置移除，用户不再可见。 适用于需要精确取消某一条带有特定标签的通知的场景。 与仅传入通知ID的notificationManager.cancel(id, callback)相比， 此接口额外传入label参数，可精确取消同一ID下不同标签的通知。
+根据通知ID和标签取消已发布的通知。使用callback异步回调。
+
+取消后，对应的通知将从通知中心、状态栏等位置移除，用户不再可见。
+适用于需要精确取消某一条带有特定标签的通知的场景。
+与仅传入通知ID的notificationManager.cancel(id, callback)相比，
+此接口额外传入label参数，可精确取消同一ID下不同标签的通知。
 
 **起始版本：** 9
 
@@ -107,7 +117,10 @@ notificationManager.cancel(0, "label", cancelCallback);
 function cancel(id: number, label?: string): Promise<void>
 ```
 
-根据通知ID和标签取消已发布的通知，若标签为空，则取消与指定通知ID匹配， 标签为空的已发布通知。使用Promise异步回调。 取消后，对应的通知将从通知中心、状态栏等位置移除，用户不再可见。
+根据通知ID和标签取消已发布的通知，若标签为空，则取消与指定通知ID匹配，
+标签为空的已发布通知。使用Promise异步回调。
+
+取消后，对应的通知将从通知中心、状态栏等位置移除，用户不再可见。
 
 **起始版本：** 9
 

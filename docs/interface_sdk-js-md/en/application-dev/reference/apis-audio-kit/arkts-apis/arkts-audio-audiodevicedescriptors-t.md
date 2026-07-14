@@ -4,7 +4,8 @@
 type AudioDeviceDescriptors = Array<Readonly<AudioDeviceDescriptor>>
 ```
 
-Defines an [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i.md) array, which is read- only.
+Defines an [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i.md) array, which is read-
+only.
 
 **Since:** 7
 

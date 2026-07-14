@@ -18,7 +18,8 @@ import { media } from '@kit.MediaKit';
 height?: number
 ```
 
-target height of the watermark in pixel The value range is all integers.
+target height of the watermark in pixel
+The value range is all integers.
 
 **Type:** number
 
@@ -34,7 +35,8 @@ target height of the watermark in pixel The value range is all integers.
 left: number
 ```
 
-Offset of the watermark to the left line of pixel The value range is all integers.
+Offset of the watermark to the left line of pixel
+The value range is all integers.
 
 **Type:** number
 
@@ -50,7 +52,8 @@ Offset of the watermark to the left line of pixel The value range is all integer
 top: number
 ```
 
-Offset of the watermark to the top line of pixel The value range is all integers.
+Offset of the watermark to the top line of pixel
+The value range is all integers.
 
 **Type:** number
 
@@ -66,7 +69,8 @@ Offset of the watermark to the top line of pixel The value range is all integers
 width?: number
 ```
 
-target width of the watermark in pixel The value range is all integers.
+target width of the watermark in pixel
+The value range is all integers.
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # DatePickerComponentOptions
 
-Defines options for DatePickerComponent.
+DatePickerComponentOptions defines options for the date time picker component.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,9 @@ Date options.
 displayMode?: DisplayMode
 ```
 
-Display mode of picker.
+Display mode of the picker.
+
+Default value: DisplayMode.DATE
 
 **Type:** DisplayMode
 

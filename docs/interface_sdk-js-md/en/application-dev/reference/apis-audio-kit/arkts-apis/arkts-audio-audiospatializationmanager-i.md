@@ -18,7 +18,8 @@ import { audio } from '@kit.AudioKit';
 isSpatializationEnabledForCurrentDevice(): boolean
 ```
 
-Checks whether spatial audio rendering is enabled for the current device. This API returns the result synchronously.
+Checks whether spatial audio rendering is enabled for the current device. This API returns the result
+synchronously.
 
 **Since:** 18
 
@@ -36,7 +37,8 @@ Checks whether spatial audio rendering is enabled for the current device. This A
 off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the spatial audio rendering status change event of the current device. This API uses an asynchronous callback to return the result.
+Unsubscribes from the spatial audio rendering status change event of the current device. This API uses an
+asynchronous callback to return the result.
 
 **Since:** 18
 
@@ -61,7 +63,8 @@ Unsubscribes from the spatial audio rendering status change event of the current
 on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void
 ```
 
-Subscribes to the spatial audio rendering status change event of the current device. This API uses an asynchronous callback to return the result.
+Subscribes to the spatial audio rendering status change event of the current device. This API uses an
+asynchronous callback to return the result.
 
 **Since:** 18
 

@@ -1,6 +1,7 @@
 # ImageAnalyzerType
 
-Defines the image analyze type.
+Defines the AI image analysis type. If it is not set, subject recognition and text recognition are enabled by
+default.
 
 **Since:** 12
 
@@ -12,7 +13,7 @@ Defines the image analyze type.
 SUBJECT = 0
 ```
 
-Image analyze type subject.
+Subject recognition.
 
 **Since:** 12
 
@@ -28,7 +29,7 @@ Image analyze type subject.
 TEXT
 ```
 
-Image analyze type text.
+Text recognition.
 
 **Since:** 12
 
@@ -44,7 +45,7 @@ Image analyze type text.
 OBJECT_LOOKUP
 ```
 
-Image analyze type object lookup.
+Object lookup.
 
 **Since:** 12
 

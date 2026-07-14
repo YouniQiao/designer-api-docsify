@@ -1,6 +1,7 @@
 # DrawingRenderingContext
 
-**DrawingRenderingContext** provides a rendering context for drawing rectangles, text, images, and other objects on a canvas.
+**DrawingRenderingContext** provides a rendering context for drawing rectangles, text, images, and
+other objects on a canvas.
 
 **Since:** 12
 
@@ -12,7 +13,8 @@
 constructor(unit?: LengthMetricsUnit)
 ```
 
-Creates a **Canvas** object for drawing operations using the drawing API. Configuration of the unit mode for the **DrawingRenderingContext** object is supported.
+Creates a **Canvas** object for drawing operations using the drawing API. Configuration of the
+unit mode for the **DrawingRenderingContext** object is supported.
 
 **Since:** 12
 

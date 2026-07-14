@@ -12,7 +12,8 @@ import { pointer } from '@kit.InputKit';
 function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the mouse pointer is visible in the current window. This API uses an asynchronous callback to return the result.
+Sets whether the mouse pointer is visible in the current window. This API uses an asynchronous callback to return
+the result.
 
 **Since:** 9
 

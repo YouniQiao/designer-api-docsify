@@ -20,7 +20,8 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 appIndex: number
 ```
 
-Index of the DLP sandbox application. The value range is [1000, 1100]. If the value is out of range, an error log is generated.
+Index of the DLP sandbox application. The value range is [1000, 1100]. If the value is out of range, an error
+log is generated.
 
 **Type:** number
 

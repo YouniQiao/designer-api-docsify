@@ -12,7 +12,8 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 function getAllLauncherAbilityResourceInfo(resourceFlags: number, callback: AsyncCallback<Array<LauncherAbilityResourceInfo>>): void
 ```
 
-Obtains the resource information of the entry abilities of the current application based on the given resource flags. This API uses an asynchronous callback to return the result.
+Obtains the resource information of the entry abilities of the current application based on the given resource
+flags. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -44,7 +45,8 @@ Obtains the resource information of the entry abilities of the current applicati
 function getAllLauncherAbilityResourceInfo(resourceFlags: number): Promise<Array<LauncherAbilityResourceInfo>>
 ```
 
-Obtains the resource information of the entry abilities of the current application based on the given resource flags. This API uses a promise to return the result.
+Obtains the resource information of the entry abilities of the current application based on the given resource
+flags. This API uses a promise to return the result.
 
 **Since:** 11
 

@@ -12,7 +12,8 @@ UDMF提供的数据操作接口包含三个可选参数：intention、key和visi
 intention?: Intention
 ```
 
-表示数据操作相关的数据通路类型，取值为[Intention](arkts-arkdata-intention-e.md)枚举类型，包括DATA_HUB、DRAG等。不填写时默认无值，具体是否必填请参阅具体接口的参数 说明。
+表示数据操作相关的数据通路类型，取值为[Intention](arkts-arkdata-intention-e.md)枚举类型，包括DATA_HUB、DRAG等。不填写时默认无值，具体是否必填请参阅具体接口的参数
+说明。
 
 **类型：** Intention
 
@@ -30,7 +31,11 @@ intention?: Intention
 key?: string
 ```
 
-UDMF中数据对象的唯一标识符，可通过[insertData](arkts-arkdata-insertdata-f.md#insertdata-1)接口的返回值获取。不填写时默认无值，具体是否必填请参阅具体接口的参数说明。 由udmf:/、intention、bundleName和groupId四部分组成，以'/'连接，比如：udmf://DataHub/com.ohos.test/0123456789。 其中udmf:/固定，DataHub为对应枚举的取值，com.ohos.test为包名，0123456789为随机生成的groupId。
+UDMF中数据对象的唯一标识符，可通过[insertData](arkts-arkdata-insertdata-f.md#insertdata-1)接口的返回值获取。不填写时默认无值，具体是否必填请参阅具体接口的参数说明。
+
+由udmf:/、intention、bundleName和groupId四部分组成，以'/'连接，比如：udmf://DataHub/com.ohos.test/0123456789。
+
+其中udmf:/固定，DataHub为对应枚举的取值，com.ohos.test为包名，0123456789为随机生成的groupId。
 
 **类型：** string
 
@@ -48,7 +53,8 @@ UDMF中数据对象的唯一标识符，可通过[insertData](arkts-arkdata-inse
 visibility?: Visibility
 ```
 
-表示数据的可见性等级，仅公共数据通路可使用，取值为[Visibility](arkts-arkdata-visibility-e.md)枚举类型。只在写入数据的时候填写才生效，若不填写默认是 Visibility.ALL。
+表示数据的可见性等级，仅公共数据通路可使用，取值为[Visibility](arkts-arkdata-visibility-e.md)枚举类型。只在写入数据的时候填写才生效，若不填写默认是
+Visibility.ALL。
 
 **类型：** Visibility
 

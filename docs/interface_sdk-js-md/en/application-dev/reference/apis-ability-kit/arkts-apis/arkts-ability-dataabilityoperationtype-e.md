@@ -1,6 +1,7 @@
 # DataAbilityOperationType
 
-Enumerates the operation types of a DataAbility. The DataAbility can use an enumerated value to specify the operation type when operating data in batches.
+Enumerates the operation types of a DataAbility. The DataAbility can use an enumerated value to specify the
+operation type when operating data in batches.
 
 **Since:** 7
 

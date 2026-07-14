@@ -185,7 +185,10 @@ workerPort.onmessage = (): void => {
 onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 ```
 
-The onmessage attribute of parentPort specifies the event handler to be called then the worker thread receives a message sent by the host thread through worker postMessage. The event handler is executed in the worker thread.
+The onmessage attribute of parentPort specifies the event handler
+to be called then the worker thread receives a message sent by
+the host thread through worker postMessage.
+The event handler is executed in the worker thread.
 
 **Type:** (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 
@@ -203,7 +206,9 @@ The onmessage attribute of parentPort specifies the event handler to be called t
 onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 ```
 
-The onmessage attribute of parentPort specifies the event handler to be called then the worker receives a message that cannot be deserialized. The event handler is executed in the worker thread.
+The onmessage attribute of parentPort specifies the event handler
+to be called then the worker receives a message that cannot be deserialized.
+The event handler is executed in the worker thread.
 
 **Type:** (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 

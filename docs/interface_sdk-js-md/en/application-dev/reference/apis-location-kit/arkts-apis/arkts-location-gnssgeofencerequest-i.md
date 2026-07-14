@@ -60,7 +60,10 @@ Indicates the callback for reporting the geofence transition status.
 loiterTimeMs?: number
 ```
 
-Indicates time for which a device is dwelling in the geofence, in milliseconds. If the device dwelling time reaches the value specified by this parameter, a GEOFENCE_TRANSITION_EVENT_DWELL event is reported. The value should be an integer.
+Indicates time for which a device is dwelling in the geofence, in milliseconds.
+If the device dwelling time reaches the value specified by this parameter,
+a GEOFENCE_TRANSITION_EVENT_DWELL event is reported.
+The value should be an integer.
 
 **Type:** number
 

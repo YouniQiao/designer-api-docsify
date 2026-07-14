@@ -20,7 +20,17 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 static createAlbumRequest(context: Context, name: string): MediaAlbumChangeRequest
 ```
 
-Creates a MediaAlbumChangeRequest instance. The album name must meet the following requirements: - The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are: . .. \ / : * ? " ' ` < > | { } [ ] - The characters are case insensitive. - Duplicate album names are not allowed.
+Creates a MediaAlbumChangeRequest instance.
+
+The album name must meet the following requirements:
+
+- The total length of the album name must be between 1 and 255 characters.
+- It must not contain any invalid characters, which are:
+
+. .. \ / : * ? " ' ` < > | { } [ ]
+
+- The characters are case insensitive.
+- Duplicate album names are not allowed.
 
 **Since:** 11
 
@@ -191,7 +201,12 @@ async function example(context: Context, albumUri: string) {
 deleteAssets(assets: Array<PhotoAsset>): void
 ```
 
-Permanently deletes assets from the trash. > **NOTE** > > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
+Permanently deletes assets from the trash.
+
+> **NOTE**
+>
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> operation.
 
 **Since:** 11
 
@@ -259,7 +274,12 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 deleteAssetsWithUri(assetUris: Array<string>): void
 ```
 
-Permanently deletes assets from the trash. > **NOTE** > > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
+Permanently deletes assets from the trash.
+
+> **NOTE**
+>
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> operation.
 
 **Since:** 19
 
@@ -1116,7 +1136,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 static setUploadStatus(context: Context, albums: Album[], allowUpload: boolean): Promise<void>
 ```
 
-Sets whether the albums can be synced to cloud storage or family storage. This API uses a promise to return the result.
+Sets whether the albums can be synced to cloud storage or family storage. This API uses a promise to return the
+result.
 
 **Since:** 22
 

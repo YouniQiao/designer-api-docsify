@@ -34,7 +34,9 @@ Number of allowed opening times. The default value is **0**. No value range rest
 countdown?: number
 ```
 
-Validity period for file viewing, in seconds. The default value is 0. After the validity period expires, the file is automatically closed. The value must be greater than or equal to 0. No value range restriction is specified.
+Validity period for file viewing, in seconds. The default value is 0. After the validity period expires,
+the file is automatically closed. The value must be greater than or equal to 0. No value range restriction
+is specified.
 
 **Type:** number
 
@@ -66,7 +68,8 @@ Extended attribute of a DLP file. This parameter is left empty by default.
 fileId?: string
 ```
 
-System account ID. This parameter is left empty by default. The value contains a maximum of 255 bytes. If the value is out of range, error code 401 is thrown.
+System account ID. This parameter is left empty by default. The value contains a maximum of 255 bytes. If the
+value is out of range, error code 401 is thrown.
 
 **Type:** string
 

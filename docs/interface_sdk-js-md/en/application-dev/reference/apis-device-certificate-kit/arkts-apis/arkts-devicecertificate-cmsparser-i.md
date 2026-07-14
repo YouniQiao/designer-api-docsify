@@ -1,6 +1,12 @@
 # CmsParser
 
-Verifies or decrypts a CMS message. > **NOTE** > > PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7 > supports data types including data, signed data, enveloped data, signed and enveloped data, digested > data, and encrypted data. It is often used to protect data integrity and confidentiality.
+Verifies or decrypts a CMS message.
+
+> **NOTE**
+>
+> PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7
+> supports data types including data, signed data, enveloped data, signed and enveloped data, digested
+> data, and encrypted data. It is often used to protect data integrity and confidentiality.
 
 **Since:** 22
 
@@ -138,7 +144,8 @@ async function testCmsDecryptTest() {
 getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 ```
 
-Obtains the certificate from CMS message of the **SIGNED_DATA** type by passing enumerated values. The signer certificates or all certificates can be obtained. This API uses a promise to return the result.
+Obtains the certificate from CMS message of the **SIGNED_DATA** type by passing enumerated values. The signer
+certificates or all certificates can be obtained. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -173,7 +180,8 @@ Obtains the certificate from CMS message of the **SIGNED_DATA** type by passing 
 getContentData(): Promise<Uint8Array>
 ```
 
-Obtains the content data from CMS message of the **SIGNED_DATA** type. This API uses a promise to return the result.
+Obtains the content data from CMS message of the **SIGNED_DATA** type. This API uses a promise to return the
+result.
 
 **Since:** 22
 
@@ -462,7 +470,12 @@ async function testCmsVerifyTest() {
 setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 ```
 
-Converts data in CMS format into CMS objects. This API uses a promise to return the result. > **NOTE** > > CMS message in PEM and DER formats is supported. **string** corresponds to the PEM format, and **Uint8Array** > corresponds to the DER format.
+Converts data in CMS format into CMS objects. This API uses a promise to return the result.
+
+> **NOTE**
+>
+> CMS message in PEM and DER formats is supported. **string** corresponds to the PEM format, and **Uint8Array**
+> corresponds to the DER format.
 
 **Since:** 22
 

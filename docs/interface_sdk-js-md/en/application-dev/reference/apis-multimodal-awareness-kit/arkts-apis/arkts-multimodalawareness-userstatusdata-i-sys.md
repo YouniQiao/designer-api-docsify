@@ -20,7 +20,8 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 errCode: number
 ```
 
-Business error code. The value `0` indicates success, and other values indicate failure.
+Business error code.
+The value `0` indicates success, and other values indicate failure.
 
 **Type:** number
 
@@ -56,7 +57,8 @@ User status detection feature type.
 result: number
 ```
 
-User status detection result. The value `0` indicates success, and other values indicate failure.
+User status detection result.
+The value `0` indicates success, and other values indicate failure.
 
 **Type:** number
 

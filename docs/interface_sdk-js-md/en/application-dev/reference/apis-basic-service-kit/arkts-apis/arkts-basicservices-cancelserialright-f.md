@@ -12,7 +12,8 @@ import { serialManager } from '@kit.BasicServicesKit';
 function cancelSerialRight(portId: number): void
 ```
 
-Cancels the permission to access the serial port device when the application is running. This API is used to close the enabled serial port device.
+Cancels the permission to access the serial port device when the application is running. This API is used to close
+the enabled serial port device.
 
 **Since:** 19
 

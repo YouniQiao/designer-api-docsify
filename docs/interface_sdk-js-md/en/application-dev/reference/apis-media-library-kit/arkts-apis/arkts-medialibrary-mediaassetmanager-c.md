@@ -18,7 +18,8 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 static cancelRequest(context: Context, requestId: string): Promise<void>
 ```
 
-Cancels a request for the asset, the callback of which has not been triggered yet. This API uses a promise to return the result.
+Cancels a request for the asset, the callback of which has not been triggered yet. This API uses a promise to
+return the result.
 
 **Since:** 12
 
@@ -223,7 +224,8 @@ static requestMovingPhoto(
     ): Promise<string>
 ```
 
-Requests a moving photo object, which can be used to request the asset data of the moving photo. This API uses a promise to return the result.
+Requests a moving photo object, which can be used to request the asset data of the moving photo. This API uses a
+promise to return the result.
 
 **Since:** 12
 

@@ -1,6 +1,18 @@
 # AVRecorder
 
-AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-createavrecorder-f.md#createavrecorder-1) to create an AVRecorder instance. For details about the audio and video recording demo, see [Audio Recording](../../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../../media/media/video-recording.md). > **NOTE** > > > To use the camera to record videos, the camera module is required. For details about how to use the APIs > provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md).
+AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before
+calling any API in AVRecorder, you must use
+[createAVRecorder()](arkts-media-createavrecorder-f.md#createavrecorder-1) to
+create an AVRecorder instance.
+
+For details about the audio and video recording demo, see
+[Audio Recording](../../../../media/media/using-avrecorder-for-recording.md) and
+[Video Recording](../../../../media/media/video-recording.md).
+
+> **NOTE**
+>
+> > To use the camera to record videos, the camera module is required. For details about how to use the APIs
+> provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md).
 
 **Since:** 9
 
@@ -18,7 +30,9 @@ import { media } from '@kit.MediaKit';
 addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<number>
 ```
 
-add a watermark for the AVRecorder. This API uses a promise to return the result. App can add up to 5 watermarks. This API can be called only before the prepared state.
+add a watermark for the AVRecorder. This API uses a promise to return the result.
+App can add up to 5 watermarks.
+This API can be called only before the prepared state.
 
 **Since:** 26.0.0
 
@@ -54,7 +68,11 @@ add a watermark for the AVRecorder. This API uses a promise to return the result
 getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void
 ```
 
-Obtains the real-time configuration of this AVRecorder. This API uses an asynchronous callback to return the result. This API can be called only after [prepare()](arkts-media-avrecorder-i.md#prepare-1) is called.
+Obtains the real-time configuration of this AVRecorder. This API uses an asynchronous callback to return the
+result.
+
+This API can be called only after
+[prepare()](arkts-media-avrecorder-i.md#prepare-1) is called.
 
 **Since:** 11
 
@@ -80,7 +98,10 @@ Obtains the real-time configuration of this AVRecorder. This API uses an asynchr
 getAVRecorderConfig(): Promise<AVRecorderConfig>
 ```
 
-Obtains the real-time configuration of this AVRecorder. This API uses a promise to return the result. This API can be called only after [prepare()](arkts-media-avrecorder-i.md#prepare-2) is called.
+Obtains the real-time configuration of this AVRecorder. This API uses a promise to return the result.
+
+This API can be called only after [prepare()](arkts-media-avrecorder-i.md#prepare-2) is
+called.
 
 **Since:** 11
 
@@ -106,7 +127,17 @@ Obtains the real-time configuration of this AVRecorder. This API uses a promise 
 getAudioCapturerMaxAmplitude(callback: AsyncCallback<number>): void
 ```
 
-Obtains the maximum amplitude of the current audio capturer. This API uses an asynchronous callback to return the result. This API can be called only after the [prepare()](arkts-media-avrecorder-i.md#prepare-1) API is called. If this API is called after [stop()](arkts-media-avrecorder-i.md#stop-1) is successfully called, an error is reported. The return value is the maximum amplitude within the duration from the time the maximum amplitude is obtained last time to the current time. For example, if you have obtained the maximum amplitude at 1s and you call this API again at 2s, then the return value is the maximum amplitude within the duration from 1s to 2s.
+Obtains the maximum amplitude of the current audio capturer. This API uses an asynchronous callback to return the
+result.
+
+This API can be called only after the
+[prepare()](arkts-media-avrecorder-i.md#prepare-1) API is
+called. If this API is called after [stop()](arkts-media-avrecorder-i.md#stop-1) is
+successfully called, an error is reported.
+
+The return value is the maximum amplitude within the duration from the time the maximum amplitude is obtained
+last time to the current time. For example, if you have obtained the maximum amplitude at 1s and you call this
+API again at 2s, then the return value is the maximum amplitude within the duration from 1s to 2s.
 
 **Since:** 11
 
@@ -131,7 +162,16 @@ Obtains the maximum amplitude of the current audio capturer. This API uses an as
 getAudioCapturerMaxAmplitude(): Promise<number>
 ```
 
-Obtains the maximum amplitude of the current audio capturer. This API uses a promise to return the result. This API can be called only after the [prepare()](arkts-media-avrecorder-i.md#prepare-1) API is called. If this API is called after [stop()](arkts-media-avrecorder-i.md#stop-1) is successfully called, an error is reported. The return value is the maximum amplitude within the duration from the time the maximum amplitude is obtained last time to the current time. For example, if you have obtained the maximum amplitude at 1s and you call this API again at 2s, then the return value is the maximum amplitude within the duration from 1s to 2s.
+Obtains the maximum amplitude of the current audio capturer. This API uses a promise to return the result.
+
+This API can be called only after the
+[prepare()](arkts-media-avrecorder-i.md#prepare-1) API is
+called. If this API is called after [stop()](arkts-media-avrecorder-i.md#stop-1) is
+successfully called, an error is reported.
+
+The return value is the maximum amplitude within the duration from the time the maximum amplitude is obtained
+last time to the current time. For example, if you have obtained the maximum amplitude at 1s and you call this
+API again at 2s, then the return value is the maximum amplitude within the duration from 1s to 2s.
 
 **Since:** 11
 
@@ -206,7 +246,13 @@ Obtains available encoders. This API uses a promise to return the result.
 getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInfo>): void
 ```
 
-Obtains the information about the current audio capturer. This API uses an asynchronous callback to return the result. This API can be called only after the [prepare()](arkts-media-avrecorder-i.md#prepare-1) API is called. If this API is called after [stop()](arkts-media-avrecorder-i.md#stop-1) is successfully called, an error is reported.
+Obtains the information about the current audio capturer. This API uses an asynchronous callback to return the
+result.
+
+This API can be called only after the
+[prepare()](arkts-media-avrecorder-i.md#prepare-1) API is
+called. If this API is called after [stop()](arkts-media-avrecorder-i.md#stop-1) is
+successfully called, an error is reported.
 
 **Since:** 11
 
@@ -232,7 +278,12 @@ Obtains the information about the current audio capturer. This API uses an async
 getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 ```
 
-Obtains the information about the current audio capturer. This API uses a promise to return the result. This API can be called only after the [prepare()](arkts-media-avrecorder-i.md#prepare-1) API is called. If this API is called after [stop()](arkts-media-avrecorder-i.md#stop-1) is successfully called, an error is reported.
+Obtains the information about the current audio capturer. This API uses a promise to return the result.
+
+This API can be called only after the
+[prepare()](arkts-media-avrecorder-i.md#prepare-1) API is
+called. If this API is called after [stop()](arkts-media-avrecorder-i.md#stop-1) is
+successfully called, an error is reported.
 
 **Since:** 11
 
@@ -258,7 +309,16 @@ Obtains the information about the current audio capturer. This API uses a promis
 getInputSurface(callback: AsyncCallback<string>): void
 ```
 
-Obtains the surface required for recording. This API uses an asynchronous callback to return the result. The caller obtains the surface buffer from this surface and fills in the corresponding video data. Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time. This API can be called only after the [prepare()](arkts-media-avrecorder-i.md#prepare-1) API is called.
+Obtains the surface required for recording. This API uses an asynchronous callback to return the result.
+
+The caller obtains the surface buffer from this surface and fills in the corresponding video data.
+
+Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp
+must be based on the system startup time.
+
+This API can be called only after the
+[prepare()](arkts-media-avrecorder-i.md#prepare-1) API is
+called.
 
 **Since:** 9
 
@@ -284,7 +344,15 @@ Obtains the surface required for recording. This API uses an asynchronous callba
 getInputSurface(): Promise<string>
 ```
 
-Obtains the surface required for recording. This API uses a promise to return the result. The caller obtains the surface buffer from this surface and fills in the corresponding video data. Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time. This API can be called only after the [prepare()](arkts-media-avrecorder-i.md#prepare-2) API is called.
+Obtains the surface required for recording. This API uses a promise to return the result.
+
+The caller obtains the surface buffer from this surface and fills in the corresponding video data.
+
+Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp
+must be based on the system startup time.
+
+This API can be called only after the [prepare()](arkts-media-avrecorder-i.md#prepare-2) API
+is called.
 
 **Since:** 9
 
@@ -331,7 +399,8 @@ Unsubscribes from AVRecorder state changes. This API uses an asynchronous callba
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Unsubscribes from AVRecorder errors. After the unsubscription, your application can no longer receive AVRecorder errors. This API uses an asynchronous callback to return the result.
+Unsubscribes from AVRecorder errors. After the unsubscription, your application can no longer receive AVRecorder
+errors. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -390,7 +459,10 @@ Unsubscribes from media asset callback events. This API uses an asynchronous cal
 on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo>): void
 ```
 
-Subscribes to audio capturer configuration changes. Any configuration change triggers the callback that returns the entire configuration information. This API uses an asynchronous callback to return the result. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to audio capturer configuration changes. Any configuration change triggers the callback that returns
+the entire configuration information. This API uses an asynchronous callback to return the result.
+
+When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 11
 
@@ -415,7 +487,13 @@ Subscribes to audio capturer configuration changes. Any configuration change tri
 on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Subscribes to media asset callback events. When [FileGenerationMode](arkts-media-filegenerationmode-e.md) is used during media file creation, the [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md) object is called back to the application after the [stop](arkts-media-avrecorder-i.md#stop-1) operation is complete. This API uses an asynchronous callback to return the result. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to media asset callback events. When
+[FileGenerationMode](arkts-media-filegenerationmode-e.md) is used during media file creation,
+the [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md) object is called back to the application
+after the [stop](arkts-media-avrecorder-i.md#stop-1) operation is complete. This API uses
+an asynchronous callback to return the result.
+
+When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 12
 
@@ -441,7 +519,9 @@ Subscribes to media asset callback events. When [FileGenerationMode](arkts-media
 on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler): void
 ```
 
-Subscribes to AVRecorder state changes. An application can subscribe to only one AVRecorder state change event. When the application initiates multiple subscriptions to this event, the last subscription is applied. This API uses an asynchronous callback to return the result.
+Subscribes to AVRecorder state changes. An application can subscribe to only one AVRecorder state change event.
+When the application initiates multiple subscriptions to this event, the last subscription is applied. This API
+uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -469,7 +549,14 @@ Subscribes to AVRecorder state changes. An application can subscribe to only one
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to AVRecorder errors. This event is used only for error prompt and does not require the user to stop recording control. If the [AVRecorderState](arkts-media-avrecorderstate-t.md) is also switched to error, call [reset()](arkts-media-avrecorder-i.md#reset-1) or [release()] [release()](arkts-media-avrecorder-i.md#release-1) to exit the recording. This API uses an asynchronous callback to return the result. An application can subscribe to only one AVRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to AVRecorder errors. This event is used only for error prompt and does not require the user to stop
+recording control. If the [AVRecorderState](arkts-media-avrecorderstate-t.md) is also switched
+to error, call [reset()](arkts-media-avrecorder-i.md#reset-1) or [release()]
+[release()](arkts-media-avrecorder-i.md#release-1) to exit the recording. This API uses
+an asynchronous callback to return the result.
+
+An application can subscribe to only one AVRecorder error event. When the application initiates multiple
+subscriptions to this event, the last subscription is applied.
 
 **Since:** 9
 
@@ -505,7 +592,11 @@ Subscribes to AVRecorder errors. This event is used only for error prompt and do
 pause(callback: AsyncCallback<void>): void
 ```
 
-Pauses video recording. This API uses an asynchronous callback to return the result. This API can be called only after the [start()](arkts-media-avrecorder-i.md#start-1) API is called. You can call [resume()](arkts-media-avrecorder-i.md#resume-1) to resume recording.
+Pauses video recording. This API uses an asynchronous callback to return the result.
+
+This API can be called only after the [start()](arkts-media-avrecorder-i.md#start-1) API
+is called. You can call [resume()](arkts-media-avrecorder-i.md#resume-1) to resume
+recording.
 
 **Since:** 9
 
@@ -531,7 +622,10 @@ Pauses video recording. This API uses an asynchronous callback to return the res
 pause(): Promise<void>
 ```
 
-Pauses video recording. This API uses a promise to return the result. This API can be called only after the [start()](arkts-media-avrecorder-i.md#start-2) API is called. You can call [resume()](arkts-media-avrecorder-i.md#resume-2) to resume recording.
+Pauses video recording. This API uses a promise to return the result.
+
+This API can be called only after the [start()](arkts-media-avrecorder-i.md#start-2) API is called. You can call
+[resume()](arkts-media-avrecorder-i.md#resume-2) to resume recording.
 
 **Since:** 9
 
@@ -589,7 +683,8 @@ Sets audio and video recording parameters. This API uses an asynchronous callbac
 prepare(config: AVRecorderConfig): Promise<void>
 ```
 
-Sets audio and video recording parameters. This API uses a promise to return the result. The MICROPHONE permission is required only if audio recording is involved.
+Sets audio and video recording parameters. This API uses a promise to return the result.
+The MICROPHONE permission is required only if audio recording is involved.
 
 **Since:** 9
 
@@ -626,7 +721,9 @@ Sets audio and video recording parameters. This API uses a promise to return the
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases the audio and video recording resources. This API uses an asynchronous callback to return the result. After the resources are released, you can no longer perform any operation on the AVRecorder instance.
+Releases the audio and video recording resources. This API uses an asynchronous callback to return the result.
+
+After the resources are released, you can no longer perform any operation on the AVRecorder instance.
 
 **Since:** 9
 
@@ -650,7 +747,9 @@ Releases the audio and video recording resources. This API uses an asynchronous 
 release(): Promise<void>
 ```
 
-Releases the audio and video recording resources. This API uses a promise to return the result. After the resources are released, you can no longer perform any operation on the AVRecorder instance.
+Releases the audio and video recording resources. This API uses a promise to return the result.
+
+After the resources are released, you can no longer perform any operation on the AVRecorder instance.
 
 **Since:** 9
 
@@ -676,7 +775,14 @@ Releases the audio and video recording resources. This API uses a promise to ret
 reset(callback: AsyncCallback<void>): void
 ```
 
-Resets audio and video recording. This API uses an asynchronous callback to return the result. For audio-only recording, you can call [prepare()](arkts-media-avrecorder-i.md#prepare-1) again for re -recording. For video-only recording or audio and video recording, you can call [prepare()](arkts-media-avrecorder-i.md#prepare-1) and [getInputSurface()](arkts-media-avrecorder-i.md#getinputsurface-1) again for re- recording.
+Resets audio and video recording. This API uses an asynchronous callback to return the result.
+
+For audio-only recording, you can call
+[prepare()](arkts-media-avrecorder-i.md#prepare-1) again for re
+-recording. For video-only recording or audio and video recording, you can call
+[prepare()](arkts-media-avrecorder-i.md#prepare-1) and
+[getInputSurface()](arkts-media-avrecorder-i.md#getinputsurface-1) again for re-
+recording.
 
 **Since:** 9
 
@@ -701,7 +807,12 @@ Resets audio and video recording. This API uses an asynchronous callback to retu
 reset(): Promise<void>
 ```
 
-Resets audio and video recording. This API uses a promise to return the result. For audio-only recording, you can call [prepare()](arkts-media-avrecorder-i.md#prepare-2) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](arkts-media-avrecorder-i.md#prepare-2) and [getInputSurface()](arkts-media-avrecorder-i.md#getinputsurface-3) again for re-recording.
+Resets audio and video recording. This API uses a promise to return the result.
+
+For audio-only recording, you can call [prepare()](arkts-media-avrecorder-i.md#prepare-2)
+again for re-recording. For video-only recording or audio and video recording, you can call
+[prepare()](arkts-media-avrecorder-i.md#prepare-2) and
+[getInputSurface()](arkts-media-avrecorder-i.md#getinputsurface-3) again for re-recording.
 
 **Since:** 9
 
@@ -726,7 +837,10 @@ Resets audio and video recording. This API uses a promise to return the result. 
 resume(callback: AsyncCallback<void>): void
 ```
 
-Resumes video recording. This API uses an asynchronous callback to return the result. This API can be called only after the [pause()](arkts-media-avrecorder-i.md#pause-1) API is called.
+Resumes video recording. This API uses an asynchronous callback to return the result.
+
+This API can be called only after the [pause()](arkts-media-avrecorder-i.md#pause-1) API
+is called.
 
 **Since:** 9
 
@@ -752,7 +866,9 @@ Resumes video recording. This API uses an asynchronous callback to return the re
 resume(): Promise<void>
 ```
 
-Resumes video recording. This API uses a promise to return the result. This API can be called only after the [pause()](arkts-media-avrecorder-i.md#pause-2) API is called.
+Resumes video recording. This API uses a promise to return the result.
+
+This API can be called only after the [pause()](arkts-media-avrecorder-i.md#pause-2) API is called.
 
 **Since:** 9
 
@@ -780,7 +896,8 @@ Resumes video recording. This API uses a promise to return the result. This API 
 setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 ```
 
-Sets whether to mute the current audio recording stream when an audio interruption occurs. This API uses a promise to return the result.
+Sets whether to mute the current audio recording stream when an audio interruption occurs. This API uses a
+promise to return the result.
 
 **Since:** 20
 
@@ -811,7 +928,12 @@ Sets whether to mute the current audio recording stream when an audio interrupti
 start(callback: AsyncCallback<void>): void
 ```
 
-Starts video recording. This API uses an asynchronous callback to return the result. For audio-only recording, this API can be called only after the [prepare()](arkts-media-avrecorder-i.md#prepare-1) API is called. For video-only recording, this API can be called only after the [getInputSurface()](arkts-media-avrecorder-i.md#getinputsurface-1) API is called.
+Starts video recording. This API uses an asynchronous callback to return the result.
+
+For audio-only recording, this API can be called only after the
+[prepare()](arkts-media-avrecorder-i.md#prepare-1) API is
+called. For video-only recording, this API can be called only after the
+[getInputSurface()](arkts-media-avrecorder-i.md#getinputsurface-1) API is called.
 
 **Since:** 9
 
@@ -837,7 +959,12 @@ Starts video recording. This API uses an asynchronous callback to return the res
 start(): Promise<void>
 ```
 
-Starts video recording. This API uses a promise to return the result. For audio-only recording, this API can be called only after the [prepare()](arkts-media-avrecorder-i.md#prepare-2) API is called. For video-only recording, this API can be called only after the [getInputSurface()](arkts-media-avrecorder-i.md#getinputsurface-3) API is called.
+Starts video recording. This API uses a promise to return the result.
+
+For audio-only recording, this API can be called only after the
+[prepare()](arkts-media-avrecorder-i.md#prepare-2) API is called. For video-only recording,
+this API can be called only after the [getInputSurface()](arkts-media-avrecorder-i.md#getinputsurface-3) API is
+called.
 
 **Since:** 9
 
@@ -865,7 +992,17 @@ Starts video recording. This API uses a promise to return the result. For audio-
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops video recording. This API uses an asynchronous callback to return the result. This API can be called only after the [start()](arkts-media-avrecorder-i.md#start-1) or [pause()](arkts-media-avrecorder-i.md#pause-1) API is called. For audio-only recording, you can call [prepare()](arkts-media-avrecorder-i.md#prepare-1) again for re -recording. For video-only recording or audio and video recording, you can call [prepare()](arkts-media-avrecorder-i.md#prepare-1) and [getInputSurface()](arkts-media-avrecorder-i.md#getinputsurface-1) again for re- recording.
+Stops video recording. This API uses an asynchronous callback to return the result.
+
+This API can be called only after the [start()](arkts-media-avrecorder-i.md#start-1) or
+[pause()](arkts-media-avrecorder-i.md#pause-1) API is called.
+
+For audio-only recording, you can call
+[prepare()](arkts-media-avrecorder-i.md#prepare-1) again for re
+-recording. For video-only recording or audio and video recording, you can call
+[prepare()](arkts-media-avrecorder-i.md#prepare-1) and
+[getInputSurface()](arkts-media-avrecorder-i.md#getinputsurface-1) again for re-
+recording.
 
 **Since:** 9
 
@@ -891,7 +1028,15 @@ Stops video recording. This API uses an asynchronous callback to return the resu
 stop(): Promise<void>
 ```
 
-Stops video recording. This API uses a promise to return the result. This API can be called only after the [start()](arkts-media-avrecorder-i.md#start-2) or [pause()](arkts-media-avrecorder-i.md#pause-2) API is called. For audio-only recording, you can call [prepare()](arkts-media-avrecorder-i.md#prepare-2) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](arkts-media-avrecorder-i.md#prepare-2) and [getInputSurface()](arkts-media-avrecorder-i.md#getinputsurface-3) again for re-recording.
+Stops video recording. This API uses a promise to return the result.
+
+This API can be called only after the [start()](arkts-media-avrecorder-i.md#start-2) or
+[pause()](arkts-media-avrecorder-i.md#pause-2) API is called.
+
+For audio-only recording, you can call [prepare()](arkts-media-avrecorder-i.md#prepare-2)
+again for re-recording. For video-only recording or audio and video recording, you can call
+[prepare()](arkts-media-avrecorder-i.md#prepare-2) and
+[getInputSurface()](arkts-media-avrecorder-i.md#getinputsurface-3) again for re-recording.
 
 **Since:** 9
 
@@ -919,7 +1064,10 @@ Stops video recording. This API uses a promise to return the result. This API ca
 updateRotation(rotation: number): Promise<void>
 ```
 
-Updates the video rotation angle, in degrees. This API uses a promise to return the result. This API can be called only after the [prepare()](arkts-media-avrecorder-i.md#prepare-2) event is triggered and before the [start()](arkts-media-avrecorder-i.md#start-1) API is called.
+Updates the video rotation angle, in degrees. This API uses a promise to return the result.
+
+This API can be called only after the [prepare()](arkts-media-avrecorder-i.md#prepare-2) event
+is triggered and before the [start()](arkts-media-avrecorder-i.md#start-1) API is called.
 
 **Since:** 12
 

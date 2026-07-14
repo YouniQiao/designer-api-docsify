@@ -12,7 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 ```
 
-Adds a notification slot of a specified type. This API uses an asynchronous callback to return the result. The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
+Adds a notification slot of a specified type. This API uses an asynchronous callback to return the result.
+
+The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and
+banner) and level of a notification. Before publishing a notification, the application needs to
+create a corresponding type of notification slot first, or the system will automatically create a
+corresponding type of notification slot when the notification is published. Only one notification
+slot of the same type can be created.
 
 **Since:** 9
 
@@ -59,7 +65,13 @@ notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION, a
 function addSlot(type: SlotType): Promise<void>
 ```
 
-Adds a notification slot of a specified type. This API uses a promise to return the result. The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
+Adds a notification slot of a specified type. This API uses a promise to return the result.
+
+The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and
+banner) and level of a notification. Before publishing a notification, the application needs to
+create a corresponding type of notification slot first, or the system will automatically create a
+corresponding type of notification slot when the notification is published. Only one notification
+slot of the same type can be created.
 
 **Since:** 9
 

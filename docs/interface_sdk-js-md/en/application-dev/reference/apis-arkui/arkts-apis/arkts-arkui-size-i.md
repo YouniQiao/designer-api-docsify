@@ -1,6 +1,7 @@
 # Size
 
-Returns the width and height of the component. The default unit is vp, but APIs that use the Size type may specify a different unit, in which case the unit specified by the API takes precedence.
+Returns the width and height of the component. The default unit is vp, but APIs that use the Size type may specify a
+different unit, in which case the unit specified by the API takes precedence.
 
 **Since:** 11
 
@@ -12,7 +13,11 @@ Returns the width and height of the component. The default unit is vp, but APIs 
 height: number
 ```
 
-Height of the component. Unit: vp. Value range: [0, +∞).
+Height of the component.
+
+Unit: vp.
+
+Value range: [0, +∞).
 
 **Type:** number
 
@@ -30,7 +35,11 @@ Height of the component. Unit: vp. Value range: [0, +∞).
 width: number
 ```
 
-Width of the component. Unit: vp. Value range: [0, +∞).
+Width of the component.
+
+Unit: vp.
+
+Value range: [0, +∞).
 
 **Type:** number
 

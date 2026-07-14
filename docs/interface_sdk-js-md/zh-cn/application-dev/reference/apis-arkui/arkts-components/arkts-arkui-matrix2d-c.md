@@ -1,6 +1,11 @@
 # Matrix2D
 
-用于画布绘制 [CanvasRenderingContext2D](../../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)、 [OffscreenCanvasRenderingContext2D](../../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md)、 [CanvasPattern](../../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvaspattern.md)和 [Path2D](../../../../reference/apis-arkui/arkui-ts/ts-components-canvas-path2d.md)的矩阵对象， 可以对矩阵进行缩放、旋转和平移等变换。
+用于画布绘制
+[CanvasRenderingContext2D](../../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)、
+[OffscreenCanvasRenderingContext2D](../../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md)、
+[CanvasPattern](../../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvaspattern.md)和
+[Path2D](../../../../reference/apis-arkui/arkui-ts/ts-components-canvas-path2d.md)的矩阵对象，
+可以对矩阵进行缩放、旋转和平移等变换。
 
 **起始版本：** 8
 
@@ -247,7 +252,8 @@ translate(tx?: number, ty?: number): Matrix2D
 rotateX?: number
 ```
 
-水平倾斜系数，取值范围无限制。<br>异常值undefined按无效值处理， NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+水平倾斜系数，取值范围无限制。<br>异常值undefined按无效值处理，
+NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
 
 **类型：** number
 
@@ -265,7 +271,8 @@ rotateX?: number
 rotateY?: number
 ```
 
-垂直倾斜系数，取值范围无限制。<br>异常值undefined按无效值处理， NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+垂直倾斜系数，取值范围无限制。<br>异常值undefined按无效值处理，
+NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
 
 **类型：** number
 
@@ -283,7 +290,8 @@ rotateY?: number
 scaleX?: number
 ```
 
-水平缩放系数，取值范围无限制。<br>异常值undefined按无效值处理， NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+水平缩放系数，取值范围无限制。<br>异常值undefined按无效值处理，
+NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
 
 **类型：** number
 
@@ -301,7 +309,8 @@ scaleX?: number
 scaleY?: number
 ```
 
-垂直缩放系数，取值范围无限制。<br>异常值undefined按无效值处理， NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+垂直缩放系数，取值范围无限制。<br>异常值undefined按无效值处理，
+NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
 
 **类型：** number
 
@@ -319,7 +328,8 @@ scaleY?: number
 translateX?: number
 ```
 
-水平平移距离，取值范围无限制。<br>异常值undefined按无效值处理， NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。<br>默认单位：vp
+水平平移距离，取值范围无限制。<br>异常值undefined按无效值处理，
+NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。<br>默认单位：vp
 
 **类型：** number
 
@@ -337,7 +347,8 @@ translateX?: number
 translateY?: number
 ```
 
-垂直平移距离，取值范围无限制。<br>异常值undefined按无效值处理， NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。<br>默认单位：vp
+垂直平移距离，取值范围无限制。<br>异常值undefined按无效值处理，
+NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。<br>默认单位：vp
 
 **类型：** number
 

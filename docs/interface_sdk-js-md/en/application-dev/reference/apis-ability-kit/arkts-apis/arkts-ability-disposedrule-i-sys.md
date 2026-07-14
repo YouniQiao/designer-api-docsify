@@ -84,7 +84,8 @@ List of application components to be disposed of or exempted.
 pageJump?: PageJumpMode
 ```
 
-Specifies whether to jump to another page when the target application is blocked. The default value is {@link PageJumpMode.PAGE_JUMP_WINDOW_SHOW}.
+Specifies whether to jump to another page when the target application is blocked. The default value is
+{@link PageJumpMode.PAGE_JUMP_WINDOW_SHOW}.
 
 **Type:** PageJumpMode
 
@@ -102,7 +103,8 @@ Specifies whether to jump to another page when the target application is blocked
 priority: number
 ```
 
-Priority of the disposed rule, which is used to sort the query results of the rule list. The value is an integer. A smaller value indicates a higher priority.
+Priority of the disposed rule, which is used to sort the query results of the rule list. The value is an integer.
+A smaller value indicates a higher priority.
 
 **Type:** number
 

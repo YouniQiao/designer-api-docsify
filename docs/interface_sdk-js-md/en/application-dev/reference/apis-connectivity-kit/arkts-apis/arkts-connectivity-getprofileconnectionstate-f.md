@@ -12,7 +12,8 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function getProfileConnectionState(profileId: ProfileId): ProfileConnectionState
 ```
 
-Obtains the connection state of profile. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Obtains the connection state of profile.
+On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 

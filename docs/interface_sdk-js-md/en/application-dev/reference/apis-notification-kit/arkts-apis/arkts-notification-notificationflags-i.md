@@ -40,7 +40,8 @@ Settings of screen lock for the notification. The default value is **TYPE_NONE**
 soundEnabled?: NotificationFlagStatus
 ```
 
-Settings of sound for the notification. The default value is **TYPE_NONE**. This parameter becomes writable starting from API version 23. Only TYPE_CLOSE takes effect.
+Settings of sound for the notification. The default value is **TYPE_NONE**. This parameter becomes writable
+starting from API version 23. Only TYPE_CLOSE takes effect.
 
 **Type:** NotificationFlagStatus
 
@@ -54,7 +55,8 @@ Settings of sound for the notification. The default value is **TYPE_NONE**. This
 vibrationEnabled?: NotificationFlagStatus
 ```
 
-Settings of vibration for the notification. The default value is **TYPE_NONE**. This parameter becomes writable starting from API version 23. Only TYPE_CLOSE takes effect.
+Settings of vibration for the notification. The default value is **TYPE_NONE**. This parameter becomes writable
+starting from API version 23. Only TYPE_CLOSE takes effect.
 
 **Type:** NotificationFlagStatus
 

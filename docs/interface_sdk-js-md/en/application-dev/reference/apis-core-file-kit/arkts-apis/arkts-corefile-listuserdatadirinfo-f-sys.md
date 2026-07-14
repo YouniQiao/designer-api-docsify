@@ -12,7 +12,8 @@ import { storageStatistics } from '@kit.CoreFileKit';
 function listUserdataDirInfo(): Promise<Array<UserdataDirInfo>>
 ```
 
-Queries the space usage of the **\/data** directory on the user device. This API uses a promise to return the result.
+Queries the space usage of the **\/data** directory on the user device.
+This API uses a promise to return the result.
 
 **Since:** 23
 

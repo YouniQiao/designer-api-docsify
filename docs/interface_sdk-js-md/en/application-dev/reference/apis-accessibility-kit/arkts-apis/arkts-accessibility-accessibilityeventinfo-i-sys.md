@@ -36,7 +36,8 @@ Event type.
 extraInfo?: string
 ```
 
-Added or deleted text content carried by the **TextArea**, **TextInput**, **SearchField**, or **RichEdit** component.
+Added or deleted text content carried by the **TextArea**, **TextInput**, **SearchField**, or **RichEdit**
+component.
 
 **Type:** string
 

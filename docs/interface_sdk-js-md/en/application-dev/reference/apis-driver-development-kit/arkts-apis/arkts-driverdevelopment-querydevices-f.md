@@ -12,7 +12,8 @@ import { deviceManager } from '@kit.DriverDevelopmentKit';
 function queryDevices(busType?: number): Array<Readonly<Device>>
 ```
 
-Queries the list of peripheral devices. If the device has no peripheral device connected, an empty list is returned.
+Queries the list of peripheral devices. If the device has no peripheral device connected, an empty list is
+returned.
 
 **Since:** 10
 

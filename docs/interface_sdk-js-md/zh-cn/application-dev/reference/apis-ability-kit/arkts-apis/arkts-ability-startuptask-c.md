@@ -1,6 +1,7 @@
 # StartupTask
 
-The module provides capabilities related to startup tasks in [AppStartup](../../../../application-models/app-startup.md).
+The module provides capabilities related to startup tasks in
+[AppStartup](../../../../application-models/app-startup.md).
 
 **起始版本：** 12
 

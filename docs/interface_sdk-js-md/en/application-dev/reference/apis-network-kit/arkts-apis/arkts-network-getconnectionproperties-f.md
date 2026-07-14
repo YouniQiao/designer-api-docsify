@@ -12,7 +12,8 @@ import { connection } from '@kit.NetworkKit';
 function getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback<ConnectionProperties>): void
 ```
 
-Queries the connection properties of a network. This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Queries the connection properties of a network.
+This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 8
 
@@ -67,7 +68,8 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProperties>
 ```
 
-Queries the connection properties of a network. This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Queries the connection properties of a network.
+This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 8
 

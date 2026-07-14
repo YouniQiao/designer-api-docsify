@@ -30,7 +30,7 @@ No specific fault type.
 CPP_CRASH = 2
 ```
 
-C++ program crash.
+Native program crash.
 
 **Since:** 8
 

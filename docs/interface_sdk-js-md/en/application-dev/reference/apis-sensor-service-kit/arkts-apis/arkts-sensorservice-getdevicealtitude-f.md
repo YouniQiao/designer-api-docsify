@@ -12,7 +12,8 @@ import { sensor } from '@kit.SensorServiceKit';
 function getDeviceAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the altitude based on the atmospheric pressure. This API uses an asynchronous callback to return the result.
+Obtains the altitude based on the atmospheric pressure. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 9
 

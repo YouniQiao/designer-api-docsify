@@ -12,7 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 ```
 
-Obtains all notification slots of this application. This API uses an asynchronous callback to return the result. This API is used to batch query the configuration information of all notification slots created by the current application, including settings such as the type, reminder method, and level of each slot. This is suitable for scenarios where all slot configurations need to be viewed.
+Obtains all notification slots of this application. This API uses an asynchronous callback to return the result.
+
+This API is used to batch query the configuration information of all notification slots created by the
+current application, including settings such as the type, reminder method, and level of each slot.
+This is suitable for scenarios where all slot configurations need to be viewed.
 
 **Since:** 9
 
@@ -57,7 +61,11 @@ notificationManager.getSlots(getSlotsCallback);
 function getSlots(): Promise<Array<NotificationSlot>>
 ```
 
-Obtains all notification slots of this application. This API uses a promise to return the result. This API is used to batch query the configuration information of all notification slots created by the current application, including settings such as the type, reminder method, and level of each slot. This is suitable for scenarios where all slot configurations need to be viewed.
+Obtains all notification slots of this application. This API uses a promise to return the result.
+
+This API is used to batch query the configuration information of all notification slots created by the
+current application, including settings such as the type, reminder method, and level of each slot.
+This is suitable for scenarios where all slot configurations need to be viewed.
 
 **Since:** 9
 

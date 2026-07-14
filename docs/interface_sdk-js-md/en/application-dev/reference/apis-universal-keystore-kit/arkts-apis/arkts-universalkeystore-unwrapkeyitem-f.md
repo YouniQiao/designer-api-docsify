@@ -12,7 +12,14 @@ import { huks } from '@kit.UniversalKeystoreKit';
 function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>
 ```
 
-Unwraps a key. This API uses a promise to return the result. > **NOTE** > > Unwrapping SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md) > requires the ohos.permission.ACCESS_SE_KEY permission. <!--Del-->This feature is not supported currently.<!--DelEnd-->
+Unwraps a key. This API uses a promise to return the result.
+
+> **NOTE**
+>
+> Unwrapping SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
+
+<!--Del-->This feature is not supported currently.<!--DelEnd-->
 
 **Since:** 20
 

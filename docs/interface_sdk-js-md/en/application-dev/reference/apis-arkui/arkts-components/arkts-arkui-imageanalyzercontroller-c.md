@@ -1,6 +1,7 @@
 # ImageAnalyzerController
 
-Image analyzer controller.
+Implements an AI image analysis controller, which provides control for image analysis features when bound to
+supported components.
 
 **Since:** 12
 
@@ -12,7 +13,7 @@ Image analyzer controller.
 constructor()
 ```
 
-Constructor.
+A constructor used to create an **ImageAnalyzerController** instance.
 
 **Since:** 12
 
@@ -28,7 +29,7 @@ Constructor.
 getImageAnalyzerSupportTypes(): ImageAnalyzerType[]
 ```
 
-Get image analyzer support types.
+Obtains the analysis types supported by the corresponding component.
 
 **Since:** 12
 
@@ -42,5 +43,5 @@ Get image analyzer support types.
 
 | Type | Description |
 | --- | --- |
-| ImageAnalyzerType[] | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@atomicservice |
+| ImageAnalyzerType[] | Analysis type supported by the corresponding component. |
 

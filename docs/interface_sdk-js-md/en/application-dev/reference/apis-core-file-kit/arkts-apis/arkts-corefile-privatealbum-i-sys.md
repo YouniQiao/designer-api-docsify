@@ -1,6 +1,8 @@
 # PrivateAlbum (System API)
 
-Provides APIs for managing the system albums. This API will be deprecated. Use [Album](arkts-corefile-album-i-sys.md) instead.
+Provides APIs for managing the system albums.
+
+This API will be deprecated. Use [Album](arkts-corefile-album-i-sys.md) instead.
 
 **Inheritance/Implementation:** PrivateAlbum extends [AbsAlbum](arkts-corefile-absalbum-i-sys.md)
 
@@ -26,7 +28,12 @@ import { userFileManager } from '@kit.CoreFileKit';
 delete(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a file from the system album. Only the files in the trash can be deleted. This API uses an asynchronous callback to return the result. This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-album-i-sys.md#deletephotoassets-1) instead.
+Deletes a file from the system album. Only the files in the trash can be deleted. This API uses an asynchronous
+callback to return the result.
+
+This API will be deprecated. Use
+[Album.deletePhotoAssets](arkts-corefile-album-i-sys.md#deletephotoassets-1)
+instead.
 
 **Since:** 9
 
@@ -83,7 +90,12 @@ async function example(mgr: userFileManager.UserFileManager) {
 delete(uri: string): Promise<void>
 ```
 
-Deletes a file from the system album. Only the files in the trash can be deleted. This API uses a promise to return the result. This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-album-i-sys.md#deletephotoassets-1) instead.
+Deletes a file from the system album. Only the files in the trash can be deleted. This API uses a promise to
+return the result.
+
+This API will be deprecated. Use
+[Album.deletePhotoAssets](arkts-corefile-album-i-sys.md#deletephotoassets-1)
+instead.
 
 **Since:** 9
 
@@ -144,7 +156,12 @@ async function example(mgr: userFileManager.UserFileManager) {
 recover(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Recovers a file in the system album. Only the files in the trash can be recovered. This API uses an asynchronous callback to return the result. This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-album-i-sys.md#recoverphotoassets-1) instead.
+Recovers a file in the system album. Only the files in the trash can be recovered. This API uses an asynchronous
+callback to return the result.
+
+This API will be deprecated. Use
+[Album.recoverPhotoAssets](arkts-corefile-album-i-sys.md#recoverphotoassets-1)
+instead.
 
 **Since:** 9
 
@@ -209,7 +226,12 @@ async function example(mgr: userFileManager.UserFileManager) {
 recover(uri: string): Promise<void>
 ```
 
-Recovers a file in the system album. Only the files in the trash can be recovered. This API uses a promise to return the result. This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-album-i-sys.md#recoverphotoassets-1) instead.
+Recovers a file in the system album. Only the files in the trash can be recovered. This API uses a promise to
+return the result.
+
+This API will be deprecated. Use
+[Album.recoverPhotoAssets](arkts-corefile-album-i-sys.md#recoverphotoassets-1)
+instead.
 
 **Since:** 9
 

@@ -1,6 +1,7 @@
 # ResultSet
 
-A result set is a set of results returned after the relational database (RDB) query APIs are called. You can use the **resultset** APIs to obtain required data.
+A result set is a set of results returned after the relational database (RDB) query APIs are called. You can use the
+**resultset** APIs to obtain required data.
 
 **Since:** 7
 

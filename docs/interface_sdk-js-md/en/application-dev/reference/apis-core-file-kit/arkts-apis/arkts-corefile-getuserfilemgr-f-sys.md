@@ -12,7 +12,8 @@ import { userFileManager } from '@kit.CoreFileKit';
 function getUserFileMgr(context: Context): UserFileManager
 ```
 
-Obtains a **UserFileManager** instance. This instance can be used to access and modify user media data (such as audio and video assets, images, and documents).
+Obtains a **UserFileManager** instance. This instance can be used to access and modify user media data (such as
+audio and video assets, images, and documents).
 
 **Since:** 9
 

@@ -12,7 +12,8 @@
 static getAppDefaultTimeZone(): TimeZone
 ```
 
-获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](arkts-localization-timezone-c.md#setappdefaulttimezonebyid-1)设置了默认时区，则返回设置的默认时区对象；否 则，返回系统时区对象。
+获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](arkts-localization-timezone-c.md#setappdefaulttimezonebyid-1)设置了默认时区，则返回设置的默认时区对象；否
+则，返回系统时区对象。
 
 **起始版本：** 26.0.0
 
@@ -415,7 +416,11 @@ public isDaylightSavingTime(date: Date): boolean
 static setAppDefaultTimeZoneById(zoneID: string): void
 ```
 
-设置当前应用的默认时区，在应用运行时生命周期内有效。 > **说明：** > > 进行日期时间格式化时，若未指定时区，会优先使用应用设置的默认时区。
+设置当前应用的默认时区，在应用运行时生命周期内有效。
+
+> **说明：**
+>
+> 进行日期时间格式化时，若未指定时区，会优先使用应用设置的默认时区。
 
 **起始版本：** 26.0.0
 

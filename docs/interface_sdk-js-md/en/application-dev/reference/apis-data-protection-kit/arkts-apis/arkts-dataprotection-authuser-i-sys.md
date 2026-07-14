@@ -20,7 +20,8 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 authAccount: string
 ```
 
-Account of the user who can access the DLP file. The value contains a maximum of 255 bytes. If the value is out of range, error code 401 is thrown.
+Account of the user who can access the DLP file. The value contains a maximum of 255 bytes. If the value is
+out of range, error code 401 is thrown.
 
 **Type:** string
 
@@ -68,7 +69,8 @@ Permission granted to the user.
 permExpiryTime: number
 ```
 
-Time when the authorization expires. The value must be greater than or equal to 0. If the value is out of range, it will be forcibly converted to an unsigned integer. Unit: s.
+Time when the authorization expires. The value must be greater than or equal to 0. If the value is out of
+range, it will be forcibly converted to an unsigned integer. Unit: s.
 
 **Type:** number
 

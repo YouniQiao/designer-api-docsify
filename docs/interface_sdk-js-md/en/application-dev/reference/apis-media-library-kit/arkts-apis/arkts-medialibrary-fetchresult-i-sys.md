@@ -18,7 +18,8 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 getRangeObjects(index: number, offset: number): Promise<T[]>
 ```
 
-Obtains the file asset array of a specified length (second parameter) from the specified index (first parameter) in the result set. This API uses a promise to return the result.
+Obtains the file asset array of a specified length (second parameter) from the specified index (first parameter)
+in the result set. This API uses a promise to return the result.
 
 **Since:** 23
 

@@ -260,7 +260,10 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 ```
 
-打开自定义对话框。 isModal = true和showInSubWindow = true不能同时使用。 * @param { promptAction.CustomDialogOptions } options - 选项。 * @returns { Promise<number> } 返回将由closeCustomDialog使用的对话框ID。
+打开自定义对话框。
+
+isModal = true和showInSubWindow = true不能同时使用。
+* @param { promptAction.CustomDialogOptions } options - 选项。 * @returns { Promise<number> } 返回将由closeCustomDialog使用的对话框ID。
 
 **起始版本：** 12
 
@@ -296,7 +299,9 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
     options?: promptAction.BaseDialogOptions): Promise<void>
 ```
 
-打开带有frameNode和控制器的自定义对话框。 isModal = true和showInSubWindow = true不能同时使用。
+打开带有frameNode和控制器的自定义对话框。
+
+isModal = true和showInSubWindow = true不能同时使用。
 
 **起始版本：** 18
 
@@ -366,7 +371,7 @@ Open menu with frameNode.
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | The ComponentContent already exists. |
 | [103304](../errorcode-promptAction.md#103304-指定的targetid不存在) | The targetId does not exist. |
-| [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在节点树上) | The node of targetId is not in the component tree. |
+| [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) | The node of targetId is not in the component tree. |
 
 ## openPopup
 
@@ -406,7 +411,7 @@ Open popup with frameNode.
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | The ComponentContent already exists. |
 | [103304](../errorcode-promptAction.md#103304-指定的targetid不存在) | The targetId does not exist. |
-| [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在节点树上) | The node of targetId is not in the component tree. |
+| [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) | The node of targetId is not in the component tree. |
 
 ## openToast
 
@@ -450,7 +455,9 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
     options?: promptAction.DialogOptions): Promise<number>
 ```
 
-使用控制器显示自定义对话框。 isModal = true和showInSubWindow = true不能同时使用。
+使用控制器显示自定义对话框。
+
+isModal = true和showInSubWindow = true不能同时使用。
 
 **起始版本：** 18
 

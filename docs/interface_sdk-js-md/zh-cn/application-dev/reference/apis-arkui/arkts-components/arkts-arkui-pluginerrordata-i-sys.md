@@ -1,6 +1,7 @@
 # PluginErrorData（系统接口）
 
-发生错误时提供的数据。 AnonyMous Object Rectification
+发生错误时提供的数据。
+AnonyMous Object Rectification
 
 **起始版本：** 18
 
@@ -14,7 +15,8 @@
 errcode: number
 ```
 
-错误码。 AnonyMous Object Rectification
+错误码。
+AnonyMous Object Rectification
 
 **类型：** number
 
@@ -30,7 +32,8 @@ errcode: number
 msg: string
 ```
 
-错误信息。 AnonyMous Object Rectification
+错误信息。
+AnonyMous Object Rectification
 
 **类型：** string
 

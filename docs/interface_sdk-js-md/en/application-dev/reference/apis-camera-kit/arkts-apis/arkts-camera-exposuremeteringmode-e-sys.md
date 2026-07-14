@@ -30,7 +30,8 @@ Matrix metering mode. A wide area of the screen is selected, which is ideal for 
 CENTER = 1
 ```
 
-Center-weighted metering mode. Metering is performed on the entire image, with the center allocated with the maximum weight, which is ideal for shooting portraits.
+Center-weighted metering mode. Metering is performed on the entire image, with the center allocated with the
+maximum weight, which is ideal for shooting portraits.
 
 **Since:** 24
 
@@ -46,7 +47,8 @@ Center-weighted metering mode. Metering is performed on the entire image, with t
 SPOT = 2
 ```
 
-Spot metering mode. Metering is performed around 2.5% of the metering points, focusing on the light in a specific small area, such as the eyes of the subject.
+Spot metering mode. Metering is performed around 2.5% of the metering points, focusing on the light in a specific
+small area, such as the eyes of the subject.
 
 **Since:** 24
 
@@ -62,7 +64,8 @@ Spot metering mode. Metering is performed around 2.5% of the metering points, fo
 CENTER_HIGHLIGHT_WEIGHTED = 3
 ```
 
-Center-weighted and highlight metering mode. This mode focuses on the highlight area near the center of the screen.
+Center-weighted and highlight metering mode. This mode focuses on the highlight area near the center of the
+screen.
 
 **Since:** 23
 

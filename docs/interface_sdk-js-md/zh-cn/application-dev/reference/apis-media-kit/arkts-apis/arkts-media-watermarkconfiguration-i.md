@@ -12,7 +12,8 @@
 height?: number
 ```
 
-target height of the watermark in pixel The value range is all integers.
+target height of the watermark in pixel
+The value range is all integers.
 
 **类型：** number
 
@@ -28,7 +29,8 @@ target height of the watermark in pixel The value range is all integers.
 left: number
 ```
 
-水印到左侧像素行的偏移量 取值为整数。
+水印到左侧像素行的偏移量
+取值为整数。
 
 **类型：** number
 
@@ -44,7 +46,8 @@ left: number
 top: number
 ```
 
-水印到顶部像素行的偏移量 取值为整数。
+水印到顶部像素行的偏移量
+取值为整数。
 
 **类型：** number
 
@@ -60,7 +63,8 @@ top: number
 width?: number
 ```
 
-target width of the watermark in pixel The value range is all integers.
+target width of the watermark in pixel
+The value range is all integers.
 
 **类型：** number
 

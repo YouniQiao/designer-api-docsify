@@ -15,7 +15,8 @@ function queryBusinessAbilityInfo(
   ): void
 ```
 
-Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access.
+Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required
+for cross user access.
 
 **Since:** 10
 
@@ -70,7 +71,8 @@ try {
 function queryBusinessAbilityInfo(filter: BusinessAbilityFilter): Promise<Array<BusinessAbilityInfo>>
 ```
 
-Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access.
+Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required
+for cross user access.
 
 **Since:** 10
 

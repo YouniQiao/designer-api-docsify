@@ -1,6 +1,6 @@
 # RouterState
 
-Defines the state of router.
+Defines the routing state.
 
 **Since:** 3
 
@@ -22,7 +22,7 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 index: number
 ```
 
-Index of the current page in the stack. NOTE: The index starts from 1 from the bottom to the top of the stack.
+Index of the current page in the stack. The index starts from 1 from the bottom to the top of the stack.
 
 **Type:** number
 

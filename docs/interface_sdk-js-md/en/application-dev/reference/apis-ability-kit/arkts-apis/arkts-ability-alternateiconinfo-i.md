@@ -12,7 +12,9 @@ Describes the app backup icon information.
 readonly enabled: boolean
 ```
 
-Whether the backup icon is enabled. true: The current backup icon is enabled. false: The current backup icon is not enabled.
+Whether the backup icon is enabled.
+true: The current backup icon is enabled.
+false: The current backup icon is not enabled.
 
 **Type:** boolean
 
@@ -28,7 +30,8 @@ Whether the backup icon is enabled. true: The current backup icon is enabled. fa
 readonly iconId: number
 ```
 
-Resource ID of the backup icon, which is automatically generated during compilation and build based on the icon configured in the app.
+Resource ID of the backup icon, which is automatically generated
+during compilation and build based on the icon configured in the app.
 
 **Type:** number
 

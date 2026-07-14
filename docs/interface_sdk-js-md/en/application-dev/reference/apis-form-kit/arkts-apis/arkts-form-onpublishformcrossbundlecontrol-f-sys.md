@@ -12,7 +12,8 @@ import { formProvider } from '@kit.FormKit';
 function onPublishFormCrossBundleControl(callback: formInfo.PublishFormCrossBundleControlCallback): void
 ```
 
-Subscribes to controls on cross-bundle widget addition to the home screen. This API uses an asynchronous callback to return the result.
+Subscribes to controls on cross-bundle widget addition to the home screen. This API uses an asynchronous callback
+to return the result.
 
 **Since:** 23
 

@@ -18,7 +18,8 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Indicates the device address.
+The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -66,7 +67,8 @@ Indicates the pairing state reason.
 reasonMsg?: string
 ```
 
-Indicates reason message. This field is intended for log information only and should not be used for logic processing.
+Indicates reason message. This field is intended for log information only
+and should not be used for logic processing.
 
 **Type:** string
 

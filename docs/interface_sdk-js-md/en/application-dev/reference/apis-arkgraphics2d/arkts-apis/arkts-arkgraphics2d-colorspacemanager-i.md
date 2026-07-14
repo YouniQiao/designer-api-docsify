@@ -1,6 +1,9 @@
 # ColorSpaceManager
 
-Implements management of color space objects. Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-create-f.md#create-1) to create a color space manager.
+Implements management of color space objects.
+Before calling any of the following APIs, you must use
+[create()](arkts-arkgraphics2d-create-f.md#create-1) to create a color
+space manager.
 
 **Inheritance/Implementation:** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-isendable-t.md)
 

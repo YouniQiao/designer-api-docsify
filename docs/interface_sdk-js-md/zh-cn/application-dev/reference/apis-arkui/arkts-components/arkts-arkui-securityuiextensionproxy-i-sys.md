@@ -1,6 +1,8 @@
 # SecurityUIExtensionProxy（系统接口）
 
-该接口用于向UIExtensionAbility发送数据。<br/> 当UIExtensionAbility连接成功时，<br/> 它从UIExtensionComponent的onRemoteReady回调中返回。
+该接口用于向UIExtensionAbility发送数据。<br/>
+当UIExtensionAbility连接成功时，<br/>
+它从UIExtensionComponent的onRemoteReady回调中返回。
 
 **起始版本：** 26.0.0
 

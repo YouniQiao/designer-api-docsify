@@ -12,7 +12,8 @@ import { connection } from '@kit.NetworkKit';
 function getDefaultNetSync(): NetHandle
 ```
 
-Obtains the data network that is activated by default. To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the data network that is activated by default.
+To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 11
 

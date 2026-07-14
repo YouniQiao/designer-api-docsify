@@ -1,6 +1,10 @@
 # NotificationCapsule
 
-Describes the notification capsule, which is used to display the capsule form in the live view. > **NOTE** > > The actual display effect depends on the device capabilities and the notification center UI style.
+Describes the notification capsule, which is used to display the capsule form in the live view.
+
+> **NOTE**
+>
+> The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Since:** 11
 
@@ -12,7 +16,8 @@ Describes the notification capsule, which is used to display the capsule form in
 capsuleButtons?: Array<NotificationIconButton>
 ```
 
-Buttons of the notification capsule of an instant task. A maximum of two buttons are supported. This parameter is left empty by default.
+Buttons of the notification capsule of an instant task. A maximum of two buttons are supported. This parameter
+is left empty by default.
 
 **Type:** Array<NotificationIconButton>
 

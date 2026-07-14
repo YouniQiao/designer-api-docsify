@@ -1,6 +1,6 @@
 # DatePickerComponent
 
-Defines DatePickerComponent.
+DatePickerComponent component is used to select date (year, month, day) and time (hour, minute, second).
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerCompo
 options: DatePickerComponentOptions
 ```
 
-The options of a date picker view component.
+Defines options for the date time picker component.
 
 **Type:** DatePickerComponentOptions
 

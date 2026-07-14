@@ -186,7 +186,11 @@ offPropertyChange(callback?: Callback<Property>): void
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-订阅客户端连接状态更改事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。 如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。 回调返回真实设备地址，否则返回随机设备地址。
+订阅客户端连接状态更改事件。
+
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
+如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。
+回调返回真实设备地址，否则返回随机设备地址。
 
 **起始版本：** 26.0.0
 
@@ -206,7 +210,9 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 onMtuChange(callback: Callback<number>): void
 ```
 
-订阅MTU变化事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
+订阅MTU变化事件。
+
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
 
 **起始版本：** 26.0.0
 
@@ -226,7 +232,9 @@ onMtuChange(callback: Callback<number>): void
 onPropertyChange(callback: Callback<Property>): void
 ```
 
-订阅属性值变更事件。 只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
+订阅属性值变更事件。
+
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
 
 **起始版本：** 26.0.0
 
@@ -284,7 +292,8 @@ readProperty(property: Property): Promise<Property>
 requestMtuSize(mtu: number): Promise<void>
 ```
 
-与服务端协商MTU大小。 协商结果需要通过订阅MTU事件获取。
+与服务端协商MTU大小。
+协商结果需要通过订阅MTU事件获取。
 
 **起始版本：** 26.0.0
 

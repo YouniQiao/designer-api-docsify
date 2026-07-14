@@ -1,6 +1,7 @@
 # MediaAssetDataHandler
 
-MediaAssetDataHandler is a media asset handler used to customize the media asset processing logic in **onDataPrepared**.
+MediaAssetDataHandler is a media asset handler used to customize the media asset processing logic in
+**onDataPrepared**.
 
 **Since:** 11
 
@@ -18,7 +19,20 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 onDataPrepared(data: T, map?: Map<string, string>): void
 ```
 
-Called when the requested media asset is ready. If an error occurs, **data** returned by the callback is **undefined**. Each media asset request corresponds to a callback. T supports the following data types: ArrayBuffer, [ImageSource](../../apis-image-kit/arkts-apis/arkts-image-imagesource-i.md), [MovingPhoto](arkts-file-photoaccesshelper.md), and boolean. ArrayBuffer indicates the image or video asset data, [ImageSource](../../apis-image-kit/arkts-apis/arkts-image-imagesource-i.md) indicates the image source, [MovingPhoto](arkts-file-photoaccesshelper.md) indicates a moving photo object, and boolean indicates whether the image or video is successfully written to the application sandbox directory. Information returned by **map**: | Map Key | Description| |----------|-------| | 'quality' | Image quality. The value **high** means high quality, and **low** means poor quality.|
+Called when the requested media asset is ready. If an error occurs, **data** returned by the callback is
+**undefined**. Each media asset request corresponds to a callback.
+
+T supports the following data types: ArrayBuffer, [ImageSource](../../apis-image-kit/arkts-apis/arkts-image-imagesource-i.md),
+[MovingPhoto](arkts-file-photoaccesshelper.md), and boolean. ArrayBuffer indicates the image
+or video asset data, [ImageSource](../../apis-image-kit/arkts-apis/arkts-image-imagesource-i.md) indicates the image source,
+[MovingPhoto](arkts-file-photoaccesshelper.md) indicates a moving photo object, and boolean
+indicates whether the image or video is successfully written to the application sandbox directory.
+
+Information returned by **map**:
+
+| Map Key | Description|
+|----------|-------|
+| 'quality' | Image quality. The value **high** means high quality, and **low** means poor quality.|
 
 **Since:** 11
 

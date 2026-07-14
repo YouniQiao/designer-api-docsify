@@ -12,7 +12,8 @@ import { connection } from '@kit.NetworkKit';
 function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: NetAddress): Promise<number>
 ```
 
-Obtains the data network that is activated by default. You can only call this method in VPN application.
+Obtains the data network that is activated by default.
+You can only call this method in VPN application.
 
 **Since:** 23
 

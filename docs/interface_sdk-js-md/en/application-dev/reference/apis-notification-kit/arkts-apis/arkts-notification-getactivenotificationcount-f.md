@@ -12,7 +12,12 @@ import { notificationManager } from '@kit.NotificationKit';
 function getActiveNotificationCount(callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of active notifications of this application. This API uses an asynchronous callback to return the result. This API is used to query the number of notifications of the current application that are still active in the notification center (not deleted by the user or canceled by the program). This is suitable for scenarios where an unread notification count prompt needs to be displayed.
+Obtains the number of active notifications of this application. This API uses an asynchronous callback to return
+the result.
+
+This API is used to query the number of notifications of the current application that are still active in the
+notification center (not deleted by the user or canceled by the program). This is suitable for scenarios where
+an unread notification count prompt needs to be displayed.
 
 **Since:** 9
 
@@ -57,7 +62,10 @@ notificationManager.getActiveNotificationCount(getActiveNotificationCountCallbac
 function getActiveNotificationCount(): Promise<number>
 ```
 
-Obtains the number of active notifications of this application. This API uses a promise to return the result. This API is used to query the number of notifications of the current application in the notification center. This is suitable for scenarios where an unread notification count prompt needs to be displayed.
+Obtains the number of active notifications of this application. This API uses a promise to return the result.
+
+This API is used to query the number of notifications of the current application in the notification center. This
+is suitable for scenarios where an unread notification count prompt needs to be displayed.
 
 **Since:** 9
 

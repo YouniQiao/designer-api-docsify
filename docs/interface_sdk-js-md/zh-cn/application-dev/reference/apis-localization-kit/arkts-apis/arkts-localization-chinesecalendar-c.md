@@ -1,6 +1,7 @@
 # ChineseCalendar
 
-提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。 继承自[Calendar](arkts-localization-calendar-c.md)，支持[Calendar](arkts-localization-calendar-c.md)的方法。
+提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。
+继承自[Calendar](arkts-localization-calendar-c.md)，支持[Calendar](arkts-localization-calendar-c.md)的方法。
 
 **继承/实现关系：** ChineseCalendar extends [Calendar](arkts-localization-calendar-c.md)
 

@@ -6,7 +6,15 @@
 function switchInputMethod(target: InputMethodProperty, callback: AsyncCallback<boolean>): void
 ```
 
-切换输入法，使用callback异步回调。 **含义/功能**：将当前输入法切换为指定的目标输入法。 **使用场景：**当前输入法应用需要切换到另一个输入法时使用（如用户在输入法设置中选择了新的输入法）。 **使用后效果**：成功时系统将当前输入法切换为目标输入法，目标输入法成为新的当前输入法；失败时当前输入法不变。 **异步返回方式**：使用callback异步回调。成功时err为undefined，data为true；失败时返回BusinessError对象。
+切换输入法，使用callback异步回调。
+
+**含义/功能**：将当前输入法切换为指定的目标输入法。
+
+**使用场景：**当前输入法应用需要切换到另一个输入法时使用（如用户在输入法设置中选择了新的输入法）。
+
+**使用后效果**：成功时系统将当前输入法切换为目标输入法，目标输入法成为新的当前输入法；失败时当前输入法不变。
+
+**异步返回方式**：使用callback异步回调。成功时err为undefined，data为true；失败时返回BusinessError对象。
 
 **起始版本：** 9
 
@@ -58,7 +66,15 @@ inputMethod.switchInputMethod(currentIme, (err: BusinessError, result: boolean) 
 function switchInputMethod(target: InputMethodProperty): Promise<boolean>
 ```
 
-切换输入法，使用promise异步回调。 **含义/功能**：将当前输入法切换为指定的目标输入法。 **使用场景：**当前输入法应用需要切换到另一个输入法时使用。 **使用后效果**：成功时系统将当前输入法切换为目标输入法；失败时当前输入法不变。 **异步返回方式**：使用Promise异步回调。成功时返回true，失败时返回BusinessError对象。
+切换输入法，使用promise异步回调。
+
+**含义/功能**：将当前输入法切换为指定的目标输入法。
+
+**使用场景：**当前输入法应用需要切换到另一个输入法时使用。
+
+**使用后效果**：成功时系统将当前输入法切换为目标输入法；失败时当前输入法不变。
+
+**异步返回方式**：使用Promise异步回调。成功时返回true，失败时返回BusinessError对象。
 
 **起始版本：** 9
 

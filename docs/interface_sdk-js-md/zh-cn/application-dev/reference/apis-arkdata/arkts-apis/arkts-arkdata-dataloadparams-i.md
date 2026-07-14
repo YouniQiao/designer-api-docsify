@@ -1,6 +1,8 @@
 # DataLoadParams
 
-用于在延迟加载场景下描述发送方的数据加载策略。 当同时传入loadHandler和delayedDataLoadHandler时，优先使用delayedDataLoadHandler，loadHandler不生效。
+用于在延迟加载场景下描述发送方的数据加载策略。
+
+当同时传入loadHandler和delayedDataLoadHandler时，优先使用delayedDataLoadHandler，loadHandler不生效。
 
 **起始版本：** 20
 
@@ -48,7 +50,8 @@ delayedDataLoadHandler?: DelayedDataLoadHandler
 loadHandler: DataLoadHandler
 ```
 
-表示用于延迟加载数据的处理函数。该处理函数为同步函数，适用于处理简单业务逻辑，若函数业务逻辑较复杂、执行时间较长（3s以上），推荐使用 [DelayedDataLoadHandler](arkts-arkdata-delayeddataloadhandler-t.md)。
+表示用于延迟加载数据的处理函数。该处理函数为同步函数，适用于处理简单业务逻辑，若函数业务逻辑较复杂、执行时间较长（3s以上），推荐使用
+[DelayedDataLoadHandler](arkts-arkdata-delayeddataloadhandler-t.md)。
 
 **类型：** DataLoadHandler
 

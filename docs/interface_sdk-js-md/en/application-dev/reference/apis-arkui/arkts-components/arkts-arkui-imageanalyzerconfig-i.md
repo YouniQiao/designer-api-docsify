@@ -1,6 +1,6 @@
 # ImageAnalyzerConfig
 
-Image analyzer config.
+Provides AI image analyzer configuration.
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ Image analyzer config.
 types: ImageAnalyzerType[]
 ```
 
-Image analyze types.
+AI image analysis types.
 
 **Type:** ImageAnalyzerType[]
 

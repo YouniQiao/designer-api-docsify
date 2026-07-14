@@ -4,7 +4,9 @@
 export type MissionDeviceInfo = _MissionDeviceInfo
 ```
 
-可以作为 [registerMissionListener](arkts-ability-registermissionlistener-f-sys.md#registermissionlistener-1) 的入参，表示注册监听时所需参数的枚举。
+可以作为
+[registerMissionListener](arkts-ability-registermissionlistener-f-sys.md#registermissionlistener-1)
+的入参，表示注册监听时所需参数的枚举。
 
 **起始版本：** 10
 

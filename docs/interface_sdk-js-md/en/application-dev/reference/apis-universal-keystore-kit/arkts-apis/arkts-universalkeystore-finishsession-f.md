@@ -12,7 +12,9 @@ import { huks } from '@kit.UniversalKeystoreKit';
 function finishSession(handle: number, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-Finishes the key operation. This API uses an asynchronous callback to return the result. The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
+Finishes the key operation. This API uses an asynchronous callback to return the result.
+
+The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
 
@@ -66,7 +68,10 @@ function finishSession(
   ): void
 ```
 
-Finishes the key operation by segment. The **finishSession** operation is used for user identity authentication and access control. This API uses an asynchronous callback to return the result. The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
+Finishes the key operation by segment. The **finishSession** operation is used for user identity authentication and
+access control. This API uses an asynchronous callback to return the result.
+
+The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
 
@@ -112,7 +117,9 @@ Finishes the key operation by segment. The **finishSession** operation is used f
 function finishSession(handle: number, options: HuksOptions, token?: Uint8Array): Promise<HuksReturnResult>
 ```
 
-Finishes the key operation. This API uses a promise to return the result. The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
+Finishes the key operation. This API uses a promise to return the result.
+
+The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
 

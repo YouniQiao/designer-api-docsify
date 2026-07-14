@@ -34,7 +34,8 @@ ID of this capture action.
 time: number
 ```
 
-Estimated duration when the sensor captures frames at the bottom layer in a single capture. If **–1** is reported , there is no estimated duration.
+Estimated duration when the sensor captures frames at the bottom layer in a single capture. If **–1** is reported
+, there is no estimated duration.
 
 **Type:** number
 

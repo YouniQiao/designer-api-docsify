@@ -20,7 +20,8 @@ import { window } from '@kit.ArkUI';
 windowType: WindowType
 ```
 
-Window type. There is no default value. If null is passed in, the window fails to be created. **TYPE_DIALOG** is not supported.
+Window type. There is no default value. If null is passed in, the window fails to be created. **TYPE_DIALOG** is
+not supported.
 
 **Type:** WindowType
 

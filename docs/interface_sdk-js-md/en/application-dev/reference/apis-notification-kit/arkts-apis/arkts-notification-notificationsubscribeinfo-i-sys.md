@@ -1,6 +1,11 @@
 # NotificationSubscribeInfo (System API)
 
-The **NotificationSubscribeInfo** module provides APIs for defining the information about the publisher for notification subscription. > **NOTE** > > The APIs provided by this module are system APIs.
+The **NotificationSubscribeInfo** module provides APIs for defining the information about the publisher for
+notification subscription.
+
+> **NOTE**
+>
+> The APIs provided by this module are system APIs.
 
 **Since:** 7
 
@@ -14,7 +19,8 @@ The **NotificationSubscribeInfo** module provides APIs for defining the informat
 bundleNames?: Array<string>
 ```
 
-Bundle names of the applications whose notifications to subscribe to. If this parameter is not specified, the subscription defaults to notifications from all applications.
+Bundle names of the applications whose notifications to subscribe to. If this parameter is not specified, the
+subscription defaults to notifications from all applications.
 
 **Type:** Array<string>
 
@@ -30,7 +36,8 @@ Bundle names of the applications whose notifications to subscribe to. If this pa
 deviceType?: string
 ```
 
-Device type. If this parameter is not specified, the subscription defaults to notifications from the current device. The value is obtained based on device information.
+Device type. If this parameter is not specified, the subscription defaults to notifications from the current
+device. The value is obtained based on device information.
 
 **Type:** string
 
@@ -46,7 +53,10 @@ Device type. If this parameter is not specified, the subscription defaults to no
 enableClassification?: boolean
 ```
 
-Whether to enable notification classification. - **true**: yes. - **false**: no. The default value is **false**.
+Whether to enable notification classification.
+
+- **true**: yes.
+- **false**: no. The default value is **false**.
 
 **Type:** boolean
 
@@ -64,7 +74,15 @@ Whether to enable notification classification. - **true**: yes. - **false**: no.
 filterLimit?: number
 ```
 
-Notification filtering range. The default value is **0**. The options are as follows: - **0**: All notifications are included in the subscription. - **1**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-i.md) is empty. - **2**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-i.md) is not empty.
+Notification filtering range. The default value is **0**. The options are as follows:
+
+- **0**: All notifications are included in the subscription.
+- **1**: Filter out notifications whose slot type is
+[SOCIAL_COMMUNICATION](arkts-notification-slottype-e.md) and
+[userInput](arkts-notification-notificationactionbutton-i.md) is empty.
+- **2**: Filter out notifications whose slot type is
+[SOCIAL_COMMUNICATION](arkts-notification-slottype-e.md) and
+[userInput](arkts-notification-notificationactionbutton-i.md) is not empty.
 
 **Type:** number
 
@@ -80,7 +98,13 @@ Notification filtering range. The default value is **0**. The options are as fol
 needSilentReplayOnSubscribe?: boolean
 ```
 
-Whether to enable silent replay upon subscription. - **true**: yes. - **false**: no. The default value is **false**. After this feature is enabled, historical notifications are silently re-pushed upon the first subscription, without ringing or vibration reminders.
+Whether to enable silent replay upon subscription.
+
+- **true**: yes.
+- **false**: no. The default value is **false**.
+
+After this feature is enabled, historical notifications are silently re-pushed upon the first subscription,
+without ringing or vibration reminders.
 
 **Type:** boolean
 
@@ -116,7 +140,8 @@ Image options of the live notification.
 slotTypes?: Array<notificationManager.SlotType>
 ```
 
-Types of the notification slots. If this parameter is not specified, the subscription defaults to notifications of all slot types.
+Types of the notification slots. If this parameter is not specified, the subscription defaults to notifications of
+all slot types.
 
 **Type:** Array<notificationManager.SlotType>
 
@@ -132,7 +157,8 @@ Types of the notification slots. If this parameter is not specified, the subscri
 userId?: number
 ```
 
-User ID. If this parameter is not specified, the subscription defaults to notifications from the current user ID.
+User ID. If this parameter is not specified, the subscription defaults to notifications from the current user
+ID.
 
 **Type:** number
 

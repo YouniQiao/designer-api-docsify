@@ -291,7 +291,10 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 readonly comment: string
 ```
 
-Used to verify the [MediaChangeRequest](arkts-medialibrary-mediachangerequest-i.md) type. <br>If a class (such as **MediaAssetsChangeRequest**) object can be accessed, it is an implementation class of **MediaChangeRequest**.
+Used to verify the [MediaChangeRequest](arkts-medialibrary-mediachangerequest-i.md)
+type.
+<br>If a class (such as **MediaAssetsChangeRequest**) object can be accessed, it is an implementation class
+of **MediaChangeRequest**.
 
 **Type:** string
 

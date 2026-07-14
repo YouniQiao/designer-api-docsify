@@ -26,7 +26,8 @@ Bundle name of the application.
 uid?: number
 ```
 
-UID of the application, which is obtained from ApplicationInfo. The default value is **0**. This parameter is mandatory in application clone scenarios.
+UID of the application, which is obtained from ApplicationInfo. The default value is **0**. This parameter is
+mandatory in application clone scenarios.
 
 **Type:** number
 

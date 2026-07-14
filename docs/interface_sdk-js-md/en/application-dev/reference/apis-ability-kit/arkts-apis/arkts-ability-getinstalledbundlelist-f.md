@@ -12,7 +12,8 @@ import { bundleManager } from '@kit.AbilityKit';
 function getInstalledBundleList(bundleFlags: number): Promise<Array<BundleInfo>>
 ```
 
-Obtains all the bundle information in the system based on the given bundle flags. This API uses a promise to return the result.
+Obtains all the bundle information in the system based on the given bundle flags.
+This API uses a promise to return the result.
 
 **Since:** 26.0.0
 

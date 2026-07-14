@@ -1,6 +1,17 @@
 # AVRecorder
 
-音视频录制管理类，用于音视频媒体录制。在调用AVRecorder的方法前，需要先调用 [createAVRecorder](arkts-media-createavrecorder-f.md#createavrecorder-1)接口构建一个 AVRecorder实例。 音视频录制demo可参考：[音频录制开发指导](../../../../media/media/using-avrecorder-for-recording.md)、 [视频录制开发指导](../../../../media/media/video-recording.md)。 > **说明：** > > - 本Interface首批API从API version 9开始支持。 > > - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理](@ohos.multimedia.camera:camera)。
+音视频录制管理类，用于音视频媒体录制。在调用AVRecorder的方法前，需要先调用
+[createAVRecorder](arkts-media-createavrecorder-f.md#createavrecorder-1)接口构建一个
+AVRecorder实例。
+
+音视频录制demo可参考：[音频录制开发指导](../../../../media/media/using-avrecorder-for-recording.md)、
+[视频录制开发指导](../../../../media/media/video-recording.md)。
+
+> **说明：**
+>
+> - 本Interface首批API从API version 9开始支持。
+>
+> - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理](@ohos.multimedia.camera:camera)。
 
 **起始版本：** 9
 
@@ -48,7 +59,9 @@ getInputMetaSurface(type: MetaSourceType): Promise<string>
 isWatermarkSupported(): Promise<boolean>
 ```
 
-查询设备是否支持硬件数字水印。使用Promise异步回调。 可以在prepare()、start()或pause()事件触发后调用。
+查询设备是否支持硬件数字水印。使用Promise异步回调。
+
+可以在prepare()、start()或pause()事件触发后调用。
 
 **起始版本：** 13
 
@@ -81,7 +94,12 @@ avRecorder.isWatermarkSupported().then((isWatermarkSupported: boolean) => {
 setMetadata(metadata: Record<string, string>): void
 ```
 
-设置录制的元数据信息。如果这些信息的键相同，会覆盖config.metadata.customInfo（参考 [prepare()](media.AVRecorder.prepare(config: AVRecorderConfig))和 [AVRecorderConfig](@ohos.multimedia.media:media.AVRecorderConfig)）中的值。 该方法只能在[prepare()](media.AVRecorder.prepare(config: AVRecorderConfig))事件成功触发后，且必须在 [stop()](media.AVRecorder.stop(callback: AsyncCallback<void>))之前调用。
+设置录制的元数据信息。如果这些信息的键相同，会覆盖config.metadata.customInfo（参考
+[prepare()](media.AVRecorder.prepare(config: AVRecorderConfig))和
+[AVRecorderConfig](@ohos.multimedia.media:media.AVRecorderConfig)）中的值。
+
+该方法只能在[prepare()](media.AVRecorder.prepare(config: AVRecorderConfig))事件成功触发后，且必须在
+[stop()](media.AVRecorder.stop(callback: AsyncCallback<void>))之前调用。
 
 **起始版本：** 26.0.0
 
@@ -110,7 +128,9 @@ setMetadata(metadata: Record<string, string>): void
 setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 ```
 
-为AVRecorder设置水印。使用Promise异步回调。 只能在prepare()事件触发后且start()事件触发前调用。
+为AVRecorder设置水印。使用Promise异步回调。
+
+只能在prepare()事件触发后且start()事件触发前调用。
 
 **起始版本：** 13
 

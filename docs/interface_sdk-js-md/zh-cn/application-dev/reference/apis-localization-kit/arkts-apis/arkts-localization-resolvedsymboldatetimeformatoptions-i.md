@@ -1,6 +1,7 @@
 # ResolvedSymbolDateTimeFormatOptions
 
-自定义符号时间日期格式化对象配置项的解析结果。继承自Intl.ResolvedDateTimeFormatOptions， 支持Intl.ResolvedDateTimeFormatOptions的所有配置项，并且功能与其一致。
+自定义符号时间日期格式化对象配置项的解析结果。继承自Intl.ResolvedDateTimeFormatOptions，
+支持Intl.ResolvedDateTimeFormatOptions的所有配置项，并且功能与其一致。
 
 **继承/实现关系：** ResolvedSymbolDateTimeFormatOptions extends [Intl.ResolvedDateTimeFormatOptions](Intl.ResolvedDateTimeFormatOptions)
 
@@ -14,7 +15,8 @@
 amPMSymbol?: string[]
 ```
 
-指定的上午和下午符号，其中第一个元素为上午符号，第二个元素为下午符号。 默认值：区域默认的符号。
+指定的上午和下午符号，其中第一个元素为上午符号，第二个元素为下午符号。
+默认值：区域默认的符号。
 
 **类型：** string[]
 

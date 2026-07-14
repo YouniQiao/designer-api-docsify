@@ -1,6 +1,7 @@
 # HttpRequest
 
-<p>Defines an HTTP request task. Before invoking APIs provided by HttpRequest, you must call createHttp() to create an HttpRequestTask object.</p>
+<p>Defines an HTTP request task. Before invoking APIs provided by HttpRequest,
+you must call createHttp() to create an HttpRequestTask object.</p>
 
 **Since:** 11
 
@@ -703,7 +704,21 @@ httpRequest.once("headersReceive", (header: Object) => {
 request(url: string, callback: AsyncCallback<HttpResponse>): void
 ```
 
-Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result. > **NOTE** > > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-httprequestoptions-i.md) or call > [requestInStream](arkts-network-httprequest-i.md#requestinstream-1) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
+Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+>
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
+> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-httprequestoptions-i.md) or call
+> [requestInStream](arkts-network-httprequest-i.md#requestinstream-1) to
+> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
+> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
+> will fail to be received.
+
+> (2) If you need to pass in cookies, add them to the **options** parameter.
+
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
+> HTTP request.
 
 **Since:** 6
 
@@ -803,7 +818,22 @@ httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
 request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result. > **NOTE** > > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-httprequestoptions-i.md) or call > [requestInStream](arkts-network-httprequest-i.md#requestinstream-1) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
+Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to
+return the result.
+
+> **NOTE**
+>
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
+> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-httprequestoptions-i.md) or call
+> [requestInStream](arkts-network-httprequest-i.md#requestinstream-1) to
+> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
+> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
+> will fail to be received.
+
+> (2) If you need to pass in cookies, add them to the **options** parameter.
+
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
+> HTTP request.
 
 **Since:** 6
 
@@ -954,7 +984,22 @@ httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse
 request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result. > **NOTE** > > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-httprequestoptions-i.md) or call > [requestInStream](arkts-network-httprequest-i.md#requestinstream-1) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
+Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the
+result.
+
+> **NOTE**
+>
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
+> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-httprequestoptions-i.md) or call
+> [requestInStream](arkts-network-httprequest-i.md#requestinstream-1) to
+> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
+> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
+> will fail to be received.
+
+> (2) If you need to pass in cookies, add them to the **options** parameter.
+
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
+> HTTP request.
 
 **Since:** 6
 
@@ -1088,7 +1133,8 @@ promise.then((data:http.HttpResponse) => {
 requestInStream(url: string, callback: AsyncCallback<number>): void
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result, which is a streaming response.
+Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to
+return the result, which is a streaming response.
 
 **Since:** 10
 
@@ -1182,7 +1228,8 @@ httpRequest.requestInStream("EXAMPLE_URL", (err: BusinessError, data: number) =>
 requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<number>): void
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result, which is a streaming response.
+Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to
+return the result, which is a streaming response.
 
 **Since:** 10
 
@@ -1321,7 +1368,8 @@ httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , 
 requestInStream(url: string, options?: HttpRequestOptions): Promise<number>
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result, which is a streaming response.
+Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the
+result, which is a streaming response.
 
 **Since:** 10
 
@@ -1443,7 +1491,22 @@ promise.then((data: number) => {
 requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 ```
 
-Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns the response synchronously. > **NOTE** > > (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit** > parameter in [HttpRequestOptions](arkts-network-httprequestoptions-i.md). > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request. > (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned. **Required permission**: ohos.permission.INTERNET
+Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns
+the response synchronously.
+
+> **NOTE**
+>
+> (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit**
+> parameter in [HttpRequestOptions](arkts-network-httprequestoptions-i.md).
+
+> (2) If you need to pass in cookies, add them to the **options** parameter.
+
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
+> HTTP request.
+
+> (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned.
+
+**Required permission**: ohos.permission.INTERNET
 
 **Since:** 26.0.0
 

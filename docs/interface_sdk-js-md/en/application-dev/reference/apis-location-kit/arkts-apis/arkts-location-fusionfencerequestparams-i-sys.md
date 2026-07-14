@@ -74,7 +74,10 @@ Indicates the callback for reporting the fence transition status.
 fenceType: number
 ```
 
-Indicates fusion fence type. This field is in bitmap format. Multiple types of fences can be transferred. The definition of each bit is as follows: [FusionFenceType](arkts-location-fusionfencetype-e-sys.md). The value range is all integers.
+Indicates fusion fence type.
+This field is in bitmap format. Multiple types of fences can be transferred.
+The definition of each bit is as follows: [FusionFenceType](arkts-location-fusionfencetype-e-sys.md).
+The value range is all integers.
 
 **Type:** number
 
@@ -110,7 +113,9 @@ Indicates GNSS fence array.
 identifier: string
 ```
 
-Identifier of the fusion fence. The string format should be a valid unique identifier (e.g., GUID or specific alphanumeric pattern).
+Identifier of the fusion fence.
+The string format should be a valid unique identifier (e.g., GUID or specific
+alphanumeric pattern).
 
 **Type:** string
 
@@ -128,7 +133,10 @@ Identifier of the fusion fence. The string format should be a valid unique ident
 loiterTimeMs: number
 ```
 
-Indicates time for which a device is dwelling in the geofence, in milliseconds. If the device dwelling time reaches the value specified by this parameter, a GEOFENCE_TRANSITION_EVENT_DWELL event is reported. The value range is all integers.
+Indicates time for which a device is dwelling in the geofence, in milliseconds.
+If the device dwelling time reaches the value specified by this parameter,
+a GEOFENCE_TRANSITION_EVENT_DWELL event is reported.
+The value range is all integers.
 
 **Type:** number
 
@@ -146,7 +154,10 @@ Indicates time for which a device is dwelling in the geofence, in milliseconds. 
 monitorTransitionEvents: number
 ```
 
-Indicates geofence transition status monitored. This field is in bitmap format. The definition of each bit is as follows {@link geoLocationManager.GeofenceTransitionEvent}. The value range is all integers.
+Indicates geofence transition status monitored.
+This field is in bitmap format.
+The definition of each bit is as follows {@link geoLocationManager.GeofenceTransitionEvent}.
+The value range is all integers.
 
 **Type:** number
 

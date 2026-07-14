@@ -36,7 +36,8 @@ Grid level after the picker is started. The default value is **STANDARD**.
 gridPinchModeType?: GridPinchModeType
 ```
 
-Grid pinch mode. If this parameter is set, the pinch function is supported. Otherwise, the pinch function is not supported.
+Grid pinch mode. If this parameter is set, the pinch function is supported. Otherwise, the pinch function is not
+supported.
 
 **Type:** GridPinchModeType
 

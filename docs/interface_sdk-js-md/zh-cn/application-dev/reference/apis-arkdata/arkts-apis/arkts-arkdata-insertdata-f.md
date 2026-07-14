@@ -6,7 +6,9 @@
 function insertData(options: Options, data: UnifiedData, callback: AsyncCallback<string>): void
 ```
 
-将数据写入UDMF的公共数据通路中，并生成数据的唯一标识符，使用callback异步回调。 **实现机制：** 系统接收UnifiedData对象后，验证数据完整性并序列化存储。根据intention值路由到对应存储空间，生成唯一标识符key。数据在公共数据通路中由系统管理有效期，默认策略为应用退出后自动清理。
+将数据写入UDMF的公共数据通路中，并生成数据的唯一标识符，使用callback异步回调。
+
+**实现机制：** 系统接收UnifiedData对象后，验证数据完整性并序列化存储。根据intention值路由到对应存储空间，生成唯一标识符key。数据在公共数据通路中由系统管理有效期，默认策略为应用退出后自动清理。
 
 **起始版本：** 10
 

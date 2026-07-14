@@ -20,7 +20,13 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addResource(type: ResourceType, fileUri: string): void
 ```
 
-Adds resources from the application sandbox based on the file URI. For details about the data source, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md). > **NOTE** > > For the same asset change request, this API cannot be repeatedly called after the resource is successfully > added. For a moving photo, you can call this API twice to add the image and video resources.
+Adds resources from the application sandbox based on the file URI. For details about the data source, see
+[@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+
+> **NOTE**
+>
+> For the same asset change request, this API cannot be repeatedly called after the resource is successfully
+> added. For a moving photo, you can call this API twice to add the image and video resources.
 
 **Since:** 11
 
@@ -50,7 +56,12 @@ Adds resources from the application sandbox based on the file URI. For details a
 addResource(type: ResourceType, data: ArrayBuffer): void
 ```
 
-Adds a resource using **ArrayBuffer** data. > **NOTE** > > For the same asset change request, this API cannot be repeatedly called after the resource is successfully > added. For a moving photo, you can call this API twice to add the image and video resources.
+Adds a resource using **ArrayBuffer** data.
+
+> **NOTE**
+>
+> For the same asset change request, this API cannot be repeatedly called after the resource is successfully
+> added. For a moving photo, you can call this API twice to add the image and video resources.
 
 **Since:** 11
 
@@ -142,7 +153,10 @@ Create an asset change request based on the file type and filename extension.
 static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-Creates an image asset change request. For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+Creates an image asset change request.
+
+For details about data source of the asset to be created, see
+[@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **Since:** 11
 
@@ -177,7 +191,10 @@ Creates an image asset change request. For details about data source of the asse
 static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-Creates a video asset change request. For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+Creates a video asset change request.
+
+For details about data source of the asset to be created, see
+[@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **Since:** 11
 
@@ -300,7 +317,13 @@ Discards the photo taken by the camera.
 getAsset(): PhotoAsset
 ```
 
-Obtains the asset in this asset change request. > **NOTE** > > For the change request used to create an asset, this API returns **null** before > [applyChanges](arkts-medialibrary-photoaccesshelper-i.md#applychanges-1) is called > to apply the changes.
+Obtains the asset in this asset change request.
+
+> **NOTE**
+>
+> For the change request used to create an asset, this API returns **null** before
+> [applyChanges](arkts-medialibrary-photoaccesshelper-i.md#applychanges-1) is called
+> to apply the changes.
 
 **Since:** 11
 
@@ -327,7 +350,12 @@ Obtains the asset in this asset change request. > **NOTE** > > For the change re
 getWriteCacheHandler(): Promise<number>
 ```
 
-Obtains the handler used for writing a file to cache. This API uses a promise to return the result. > **NOTE** > > For the same asset change request, this API cannot be repeatedly called after a temporary file write handle is > successfully obtained.
+Obtains the handler used for writing a file to cache. This API uses a promise to return the result.
+
+> **NOTE**
+>
+> For the same asset change request, this API cannot be repeatedly called after a temporary file write handle is
+> successfully obtained.
 
 **Since:** 11
 

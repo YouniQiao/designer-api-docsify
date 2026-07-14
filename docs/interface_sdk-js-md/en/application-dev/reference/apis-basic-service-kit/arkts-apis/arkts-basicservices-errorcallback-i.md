@@ -1,6 +1,7 @@
 # ErrorCallback
 
-Defines a common callback that carries an error parameter. The information returned by the callback is of the [BusinessError](arkts-basicservices-businesserror-i.md) type.
+Defines a common callback that carries an error parameter. The information returned by the callback is of
+the [BusinessError](arkts-basicservices-businesserror-i.md) type.
 
 **Since:** 6
 

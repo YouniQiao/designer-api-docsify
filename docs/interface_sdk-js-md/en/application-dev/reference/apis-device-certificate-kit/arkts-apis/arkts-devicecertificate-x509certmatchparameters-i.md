@@ -114,7 +114,8 @@ Whether to match all SANs of the certificate. **true**: yes; **false**: no.
 minPathLenConstraint?: number
 ```
 
-Minimum length of the certification path (chain of trust) that can be built from the certificate to a trusted root CA.
+Minimum length of the certification path (chain of trust) that can be built from the certificate to a trusted
+root CA.
 
 **Type:** number
 
@@ -146,7 +147,8 @@ Constraints on the subject names that can be included in certificates.
 privateKey?: string | Uint8Array
 ```
 
-Specifies the certificate private key. string indicates a private key in PEM format, and Uint8Array indicates a private key in DER format.
+Specifies the certificate private key. string indicates a private key in PEM format, and Uint8Array indicates a
+private key in DER format.
 
 **Type:** string | Uint8Array
 

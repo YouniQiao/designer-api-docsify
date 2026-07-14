@@ -36,7 +36,8 @@ Turning angle, unit degree.
 distance: number
 ```
 
-Moving distance, unit cm. The value should be an integer.
+Moving distance, unit cm.
+The value should be an integer.
 
 **Type:** number
 

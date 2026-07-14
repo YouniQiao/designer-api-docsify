@@ -1,6 +1,7 @@
 # FilterClause
 
-Defines the contact filter criteria. Multiple filter criteria are ORed. If the parameter is an array, the array can contain a maximum of three elements.
+Defines the contact filter criteria. Multiple filter criteria are ORed. If the parameter is an array, the array can
+contain a maximum of three elements.
 
 **Since:** 15
 

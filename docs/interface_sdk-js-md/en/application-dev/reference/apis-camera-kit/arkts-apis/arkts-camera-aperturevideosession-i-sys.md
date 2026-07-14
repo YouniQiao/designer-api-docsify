@@ -103,7 +103,8 @@ Unsubscribes from smooth zoom state change events.
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the result.
+Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the
+result.
 
 **Since:** 12
 

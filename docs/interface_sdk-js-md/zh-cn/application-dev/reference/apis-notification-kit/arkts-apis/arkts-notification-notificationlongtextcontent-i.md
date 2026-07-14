@@ -1,6 +1,17 @@
 # NotificationLongTextContent
 
-描述长文本通知。继承自[NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md)。 > **说明：** > > - 当该类型通知与其他通知形成组通知时，该通知类型的展示效果默认为折叠态， > 显示的标题与正文为该类型继承的NotificationBasicContent中的`title`与`text`。 > 当该类型通知单独展示，没有与其他通知形成组通知时，该通知类型的展示效果 > 默认为展开态，显示的标题为展开时的标题`expandedTitle`，显示的正文内容为长文本`longText`。 > > - 用户点击成组展示的通知，查看各个通知详情时，该通知的展示效果变化为展开态。 > > - 实际显示效果依赖于设备能力和通知中心UI样式。
+描述长文本通知。继承自[NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md)。
+
+> **说明：**
+>
+> - 当该类型通知与其他通知形成组通知时，该通知类型的展示效果默认为折叠态，
+> 显示的标题与正文为该类型继承的NotificationBasicContent中的`title`与`text`。
+> 当该类型通知单独展示，没有与其他通知形成组通知时，该通知类型的展示效果
+> 默认为展开态，显示的标题为展开时的标题`expandedTitle`，显示的正文内容为长文本`longText`。
+>
+> - 用户点击成组展示的通知，查看各个通知详情时，该通知的展示效果变化为展开态。
+>
+> - 实际显示效果依赖于设备能力和通知中心UI样式。
 
 **继承/实现关系：** NotificationLongTextContent extends [NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md)
 
@@ -14,7 +25,8 @@
 briefText: string
 ```
 
-通知概要内容，是对通知内容的总结，不在通知中心中显示。 不可为空字符串，大小不超过1024字节，超出部分会被截断。
+通知概要内容，是对通知内容的总结，不在通知中心中显示。
+不可为空字符串，大小不超过1024字节，超出部分会被截断。
 
 **类型：** string
 

@@ -36,7 +36,9 @@ Audio content type.
 rendererFlags: number
 ```
 
-Flags that control the renderer behavior. Set this parameter to **0**.
+Flags that control the renderer behavior.
+
+Set this parameter to **0**.
 
 **Type:** number
 
@@ -68,7 +70,8 @@ Audio stream usage.
 volumeMode?: AudioVolumeMode
 ```
 
-Audio volume mode config. If volumeMode is set to {@link AudioVolumeMode.APP_INDIVIDUAL}, this audio renderer will be affected by app volume percentage set by {@link setAppVolumePercentage}
+Audio volume mode config. If volumeMode is set to {@link AudioVolumeMode.APP_INDIVIDUAL}, this audio renderer
+will be affected by app volume percentage set by {@link setAppVolumePercentage}
 
 **Type:** AudioVolumeMode
 

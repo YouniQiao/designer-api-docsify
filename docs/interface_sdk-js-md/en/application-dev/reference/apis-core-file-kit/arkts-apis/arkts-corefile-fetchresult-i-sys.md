@@ -24,7 +24,8 @@ import { userFileManager } from '@kit.CoreFileKit';
 close(): void
 ```
 
-Releases and invalidates the **FetchFileResult** instance. After this instance is released, the APIs in this instance cannot be invoked.
+Releases and invalidates the **FetchFileResult** instance. After this instance is released, the APIs in this
+instance cannot be invoked.
 
 **Since:** 9
 
@@ -397,7 +398,10 @@ async function example(mgr: userFileManager.UserFileManager) {
 getNextObject(callback: AsyncCallback<T>): void
 ```
 
-Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result. Before using this API, you must use [isAfterLast()](arkts-corefile-fetchresult-i-sys.md#isafterlast-1) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result.
+
+Before using this API, you must use [isAfterLast()](arkts-corefile-fetchresult-i-sys.md#isafterlast-1) to check
+whether the current position is the end of the result set.
 
 **Since:** 9
 
@@ -450,7 +454,10 @@ async function example(mgr: userFileManager.UserFileManager) {
 getNextObject(): Promise<T>
 ```
 
-Obtains the next file asset in the result set. This API uses a promise to return the result. Before using this API, you must use [isAfterLast()](arkts-corefile-fetchresult-i-sys.md#isafterlast-1) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses a promise to return the result.
+
+Before using this API, you must use [isAfterLast()](arkts-corefile-fetchresult-i-sys.md#isafterlast-1) to check
+whether the current position is the end of the result set.
 
 **Since:** 9
 
@@ -498,7 +505,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 getPositionObject(index: number, callback: AsyncCallback<T>): void
 ```
 
-Obtains a file asset with the specified index in the result set. This API uses an asynchronous callback to return the result.
+Obtains a file asset with the specified index in the result set. This API uses an asynchronous callback to return
+the result.
 
 **Since:** 9
 

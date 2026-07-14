@@ -1,6 +1,7 @@
 # UIEnvWindowAvoidAreaInfoVP
 
-Describes [environment variable](../../../../ui/arkts-env-system-property.md) data types for window avoidance areas of different types. All types of window avoidance areas are measured in vp.
+Describes [environment variable](../../../../ui/arkts-env-system-property.md) data types for window avoidance areas
+of different types. All types of window avoidance areas are measured in vp.
 
 **Since:** 23
 
@@ -46,7 +47,8 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_K
 navigationIndicator: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_NAVIGATION_INDICATOR** type, in vp.
+Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_NAVIGATION_INDICATOR**
+type, in vp.
 
 **Type:** UIEnvAvoidAreaVP
 

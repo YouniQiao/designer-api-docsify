@@ -38,7 +38,9 @@ Indicates circular fence.
 gnssFenceType: number
 ```
 
-Indicates GNSS fence type. The value range of this field is as follows: [GnssFenceType](arkts-location-gnssfencetype-e-sys.md). The value range is all integers.
+Indicates GNSS fence type.
+The value range of this field is as follows: [GnssFenceType](arkts-location-gnssfencetype-e-sys.md).
+The value range is all integers.
 
 **Type:** number
 

@@ -1,6 +1,7 @@
 # CloudEnhancement (System API)
 
-Provides APIs for cloud enhancement management, including managing the tasks of generating AI-powered cloud- enhanced photos and obtaining the association between the original photos and AI cloud-enhanced photos.
+Provides APIs for cloud enhancement management, including managing the tasks of generating AI-powered cloud-
+enhanced photos and obtaining the association between the original photos and AI cloud-enhanced photos.
 
 **Since:** 13
 
@@ -497,7 +498,8 @@ submitCloudEnhancementTasks(
     ): Promise<void>
 ```
 
-Submits cloud enhancement tasks. You can select the trigger mode of the cloud enhancement task. This API uses a promise to return the result.
+Submits cloud enhancement tasks. You can select the trigger mode of the cloud enhancement task. This API uses a
+promise to return the result.
 
 **Since:** 18
 

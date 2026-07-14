@@ -20,7 +20,17 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 createAsset(displayName: string): Promise<PhotoAsset>
 ```
 
-Creates an asset with the specified file name. This API uses a promise to return the result. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " < > | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` < > | { } [ ]
+Creates an asset with the specified file name. This API uses a promise to return the result.
+
+The file name must meet the following requirements:
+
+- A valid file name must include a base name and a supported image or video extension.
+- The total length of the file name must be between 1 and 255 characters.
+- The base name must not contain any invalid characters.
+
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " < > |
+
+For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` < > | { } [ ]
 
 **Since:** 12
 
@@ -78,7 +88,17 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions): Promise<PhotoAsset>
 ```
 
-Creates an asset with the specified file name and options. This API uses a promise to return the result. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " < > | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` < > | { } [ ]
+Creates an asset with the specified file name and options. This API uses a promise to return the result.
+
+The file name must meet the following requirements:
+
+- A valid file name must include a base name and a supported image or video extension.
+- The total length of the file name must be between 1 and 255 characters.
+- The base name must not contain any invalid characters.
+
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " < > |
+
+For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` < > | { } [ ]
 
 **Since:** 12
 
@@ -143,7 +163,8 @@ getHiddenAlbums(
     ): Promise<FetchResult<Album>>
 ```
 
-Obtains hidden albums based on the specified display mode and retrieval options. This API uses a promise to return the result.
+Obtains hidden albums based on the specified display mode and retrieval options. This API uses a promise to
+return the result.
 
 **Since:** 12
 

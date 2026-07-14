@@ -30,7 +30,8 @@ authStatus?: AuthStatus
 flag?: number
 ```
 
-授权标志。 取值范围：(-∞,+∞)。
+授权标志。
+取值范围：(-∞,+∞)。
 
 **类型：** number
 

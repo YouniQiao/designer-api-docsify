@@ -12,7 +12,9 @@ Surface配置。
 isOpaque?: boolean
 ```
 
-是否需要将XComponent所持有的surface视为不透明， 即使该surface具有半透明像素。 true表示需要视为不透明，false表示其他情况。
+是否需要将XComponent所持有的surface视为不透明，
+即使该surface具有半透明像素。
+true表示需要视为不透明，false表示其他情况。
 
 **类型：** boolean
 

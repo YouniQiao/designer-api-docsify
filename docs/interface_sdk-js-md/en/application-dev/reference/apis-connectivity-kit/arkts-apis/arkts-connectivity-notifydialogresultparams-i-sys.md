@@ -20,7 +20,8 @@ import { access } from '@kit.ConnectivityKit';
 dialogResult: boolean
 ```
 
-The result of bluetooth dialog. The value true indicates that the user approves the request, and the value false indicates that the user rejects the request.
+The result of bluetooth dialog. The value true indicates that the user approves the request,
+and the value false indicates that the user rejects the request.
 
 **Type:** boolean
 

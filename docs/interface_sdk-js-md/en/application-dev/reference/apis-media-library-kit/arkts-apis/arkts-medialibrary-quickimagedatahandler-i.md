@@ -1,6 +1,7 @@
 # QuickImageDataHandler
 
-QuickImageDataHandler is a media asset handler used to customize the media asset processing logic in **onDataPrepared**.
+QuickImageDataHandler is a media asset handler used to customize the media asset processing logic in
+**onDataPrepared**.
 
 **Since:** 13
 
@@ -18,7 +19,13 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 onDataPrepared(data: T, imageSource: image.ImageSource, map: Map<string, string>): void
 ```
 
-Called when the requested image is ready. If an error occurs, **data** returned by the callback is **undefined**. Information returned by **map**: | Map Key | **Description**| |----------|-------| | 'quality' | Image quality. The value **high** means high quality, and **low** means poor quality.|
+Called when the requested image is ready. If an error occurs, **data** returned by the callback is **undefined**.
+
+Information returned by **map**:
+
+| Map Key | **Description**|
+|----------|-------|
+| 'quality' | Image quality. The value **high** means high quality, and **low** means poor quality.|
 
 **Since:** 13
 

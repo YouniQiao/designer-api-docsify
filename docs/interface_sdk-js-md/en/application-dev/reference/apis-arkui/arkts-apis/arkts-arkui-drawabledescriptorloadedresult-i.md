@@ -18,7 +18,9 @@ import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, Anim
 imageHeight: number
 ```
 
-Image height. Unit: px.
+Image height.
+
+Unit: px.
 
 **Type:** number
 
@@ -36,7 +38,9 @@ Image height. Unit: px.
 imageWidth: number
 ```
 
-Image width. Unit: px.
+Image width.
+
+Unit: px.
 
 **Type:** number
 

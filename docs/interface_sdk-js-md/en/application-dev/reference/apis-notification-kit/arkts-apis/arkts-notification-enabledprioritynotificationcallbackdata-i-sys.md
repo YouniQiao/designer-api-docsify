@@ -14,7 +14,9 @@ Returns the notification priority master switch state.
 readonly enable: boolean
 ```
 
-Whether the priority notification is enabled. - **true**: The priority notification is enabled. - **false**: The priority notification is disabled.
+Whether the priority notification is enabled.
+- **true**: The priority notification is enabled.
+- **false**: The priority notification is disabled.
 
 **Type:** boolean
 

@@ -18,7 +18,9 @@ import { componentUtils } from '@kit.ArkUI';
 x: number
 ```
 
-Translation distance along the x-axis. Unit: vp
+Translation distance along the x-axis.
+
+Unit: vp
 
 **Type:** number
 
@@ -36,7 +38,9 @@ Translation distance along the x-axis. Unit: vp
 y: number
 ```
 
-Translation distance along the y-axis. Unit: vp
+Translation distance along the y-axis.
+
+Unit: vp
 
 **Type:** number
 
@@ -54,7 +58,9 @@ Translation distance along the y-axis. Unit: vp
 z: number
 ```
 
-Translation distance along the z-axis. Unit: vp
+Translation distance along the z-axis.
+
+Unit: vp
 
 **Type:** number
 

@@ -40,7 +40,8 @@ Mode for direct selection.
 BROWSER_AND_SELECT_MODE = 2
 ```
 
-Compatibility mode. Tapping the bottom-right area enables direct selection, whereas tapping elsewhere switches to large image preview mode.
+Compatibility mode. Tapping the bottom-right area enables direct selection, whereas tapping elsewhere switches to
+large image preview mode.
 
 **Since:** 18
 

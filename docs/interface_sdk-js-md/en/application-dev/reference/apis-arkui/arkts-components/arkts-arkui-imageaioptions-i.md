@@ -1,6 +1,16 @@
 # ImageAIOptions
 
-Image ai options.
+Provides the AI image analysis options.
+
+> **NOTE**
+>
+> The **types** parameter of this API has a higher priority than that of
+> [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md). This means that, if both parameters are set, the value set by
+> this API takes precedence.
+>
+> This API depends on device capabilities and must be used together with the
+> [enableAnalyzer](ImageAttribute#enableAnalyzer) API of the corresponding component (for example, the
+> [Image](./image) component).
 
 **Since:** 12
 
@@ -12,7 +22,7 @@ Image ai options.
 aiController?: ImageAnalyzerController
 ```
 
-Image analyze AI controller.
+AI image analysis controller.
 
 **Type:** ImageAnalyzerController
 
@@ -30,7 +40,7 @@ Image analyze AI controller.
 types?: ImageAnalyzerType[]
 ```
 
-Image analyze types.
+AI image analysis types.
 
 **Type:** ImageAnalyzerType[]
 

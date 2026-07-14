@@ -18,7 +18,12 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 actionButton?: [ActionButton?, ActionButton?, ActionButton?]
 ```
 
-Buttons displayed for the reminder notification. For third-party applications, a maximum of two buttons are supported. For system applications, a maximum of three buttons are supported in API version 10 and later versions, and a maximum of two buttons are supported in versions earlier than API version 10.
+Buttons displayed for the reminder notification.
+
+For third-party applications, a maximum of two buttons are supported.
+
+For system applications, a maximum of three buttons are supported in API version 10 and later versions, and a
+maximum of two buttons are supported in versions earlier than API version 10.
 
 **Type:** [ActionButton?, ActionButton?, ActionButton?]
 
@@ -32,7 +37,10 @@ Buttons displayed for the reminder notification. For third-party applications, a
 autoDeletedTime?: number
 ```
 
-Time when the notification is automatically cleared. The data format is timestamp, in milliseconds. For details, please refer to [NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i.md#autodeletedtime)
+Time when the notification is automatically cleared.
+
+The data format is timestamp, in milliseconds. For details, please refer to
+[NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i.md#autodeletedtime)
 
 **Type:** number
 
@@ -74,7 +82,8 @@ Resource ID of the reminder content, which can be obtained through $r(*resource-
 customRingUri?: string
 ```
 
-URI of the custom prompt tone. The prompt tone file must be stored in the **resources/rawfile** directory and supports formats such as M4A, AAC, MP3, OGG, WAV, FLAC, and AMR.
+URI of the custom prompt tone. The prompt tone file must be stored in the **resources/rawfile** directory and
+supports formats such as M4A, AAC, MP3, OGG, WAV, FLAC, and AMR.
 
 **Type:** string
 
@@ -102,7 +111,8 @@ Content to be displayed after the reminder expires.
 expiredContentResourceId?: number
 ```
 
-Resource ID of the content to be displayed after the reminder expires, which can be obtained through $r(*resource -name*).id.
+Resource ID of the content to be displayed after the reminder expires, which can be obtained through $r(*resource
+-name*).id.
 
 **Type:** number
 
@@ -116,7 +126,7 @@ Resource ID of the content to be displayed after the reminder expires, which can
 fixedTimeZone?: TimeZoneType
 ```
 
-Time zone type. Default value: DEFAULT.
+Time zone type. The default value is **TimeZoneType.DEFAULT**.
 
 **Type:** TimeZoneType
 
@@ -132,7 +142,8 @@ Time zone type. Default value: DEFAULT.
 groupId?: string
 ```
 
-Group ID used for the reminder. If "Don't ask again" or similar information is selected for the reminder, other reminders with the same group ID are also canceled.
+Group ID used for the reminder. If "Don't ask again" or similar information is selected for the reminder, other
+reminders with the same group ID are also canceled.
 
 **Type:** string
 
@@ -146,7 +157,10 @@ Group ID used for the reminder. If "Don't ask again" or similar information is s
 maxScreenWantAgent?: MaxScreenWantAgent
 ```
 
-Information about the ability that is started automatically and displayed in full-screen mode when the reminder arrives. If the device is in use, only a notification banner is displayed. This API is reserved.
+Information about the ability that is started automatically and displayed in full-screen mode when the reminder
+arrives. If the device is in use, only a notification banner is displayed.
+
+This API is reserved.
 
 **Type:** MaxScreenWantAgent
 
@@ -160,7 +174,8 @@ Information about the ability that is started automatically and displayed in ful
 notificationId?: number
 ```
 
-Notification ID used by the reminder. You must pass in a notification ID. If there are reminders with the same notification ID, the later one will overwrite the earlier one. The default value is **0**.
+Notification ID used by the reminder. You must pass in a notification ID. If there are reminders with the same
+notification ID, the later one will overwrite the earlier one. The default value is **0**.
 
 **Type:** number
 
@@ -174,7 +189,7 @@ Notification ID used by the reminder. You must pass in a notification ID. If the
 notificationRequestProxy?: NotificationRequestProxy
 ```
 
-Notification request proxy.
+Notification request message. This parameter is left empty by default.
 
 **Type:** NotificationRequestProxy
 
@@ -218,7 +233,20 @@ Audio channel of the custom prompt tone. The default channel is the alarm channe
 ringDuration?: number
 ```
 
-Ringing duration. The value ranges from 0 to1800, in seconds. The default value is **1**. If the value is **0**, the system notification tone is used. If the value is greater than 0 and [ReminderRequest.customRingUri](arkts-backgroundtasks-reminderrequest-i.md) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](arkts-backgroundtasks-reminderrequest-i.md). Otherwise, the custom notification tone of the agent-powered reminder is used.
+Ringing duration.
+
+The value ranges from 0 to1800, in seconds. The default value is **1**.
+
+If the value is **0**, the system notification tone is used.
+
+If the value is greater than 0 and [ReminderRequest.customRingUri](arkts-backgroundtasks-reminderrequest-i.md) is
+set, the reminder rings on the specified channel
+[ReminderRequest.ringChannel](arkts-backgroundtasks-reminderrequest-i.md). Otherwise, the custom notification
+tone of the agent-powered reminder is used.
+
+The device vibrates when the reminder rings. Since API version 26.0.0, long vibration is supported, and the
+vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates
+once quickly when the reminder rings.
 
 **Type:** number
 
@@ -260,7 +288,8 @@ Content to be displayed when the reminder is snoozing. (It is not applicable to 
 snoozeContentResourceId?: number
 ```
 
-Resource ID of the content to be displayed when the reminder is snoozing, which can be obtained through $r( *resource-name*).id.
+Resource ID of the content to be displayed when the reminder is snoozing, which can be obtained through $r(
+*resource-name*).id.
 
 **Type:** number
 
@@ -302,7 +331,11 @@ Number of reminder snooze times. The default value is **0**. (It is not applicab
 tapDismissed?: boolean
 ```
 
-Whether the reminder is automatically cleared. The default value is **true**. For details, see [NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i.md#tapdismissed) - **true** (default): The reminder is automatically cleared after the notification or button is tapped. - **false**: The reminder is retained after the notification or button is tapped.
+Whether the reminder is automatically cleared. The default value is **true**. For details, see
+[NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i.md#tapdismissed)
+
+- **true** (default): The reminder is automatically cleared after the notification or button is tapped.
+- **false**: The reminder is retained after the notification or button is tapped.
 
 **Type:** boolean
 
@@ -316,7 +349,9 @@ Whether the reminder is automatically cleared. The default value is **true**. Fo
 timeInterval?: number
 ```
 
-Reminder snooze interval, in seconds. The minimum value is 30s. (It is not applicable to countdown reminders.)
+Reminder snooze interval,
+
+in seconds. The minimum value is 30s. (It is not applicable to countdown reminders.)
 
 **Type:** number
 

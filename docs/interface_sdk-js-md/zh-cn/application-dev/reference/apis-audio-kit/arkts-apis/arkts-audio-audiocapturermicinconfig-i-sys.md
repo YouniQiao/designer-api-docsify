@@ -1,6 +1,7 @@
 # AudioCapturerMicInConfig（系统接口）
 
-Describes audio capturer configuration options that can capture microphone input (mic-in) audio data before any processing.
+Describes audio capturer configuration options that can capture
+microphone input (mic-in) audio data before any processing.
 
 **起始版本：** 23
 
@@ -32,7 +33,8 @@ Capturer attribute information.
 ecStreamInfo?: AudioStreamInfo
 ```
 
-Stream information that describe echo reference signal. If not set this attribute, the capturer will only record Mic-In audio stream.
+Stream information that describe echo reference signal.
+If not set this attribute, the capturer will only record Mic-In audio stream.
 
 **类型：** AudioStreamInfo
 

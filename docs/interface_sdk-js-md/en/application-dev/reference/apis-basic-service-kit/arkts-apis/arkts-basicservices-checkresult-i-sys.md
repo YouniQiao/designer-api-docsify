@@ -20,7 +20,9 @@ import { update } from '@kit.BasicServicesKit';
 isExistNewVersion: boolean
 ```
 
-Whether a new version is available. The value **true** indicates that a new version is available, and the value **false** indicates the opposite.
+Whether a new version is available.
+
+The value **true** indicates that a new version is available, and the value **false** indicates the opposite.
 
 **Type:** boolean
 

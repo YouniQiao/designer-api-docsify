@@ -18,7 +18,9 @@ import { OperateCheck, OperateIcon, ComposeListItem, OperateItem, IconType, Cont
 arrow?: OperateIcon
 ```
 
-Arrow with a size of 12 x 24 vp. If this parameter is not set or is set to **undefined**, the arrow is not displayed.
+Arrow with a size of 12 x 24 vp.
+
+If this parameter is not set or is set to **undefined**, the arrow is not displayed.
 
 **Type:** OperateIcon
 
@@ -36,7 +38,9 @@ Arrow with a size of 12 x 24 vp. If this parameter is not set or is set to **und
 button?: OperateButton
 ```
 
-Button. If this parameter is not set or is set to **undefined**, the button is not displayed.
+Button.
+
+If this parameter is not set or is set to **undefined**, the button is not displayed.
 
 **Type:** OperateButton
 
@@ -54,7 +58,9 @@ Button. If this parameter is not set or is set to **undefined**, the button is n
 checkbox?: OperateCheck
 ```
 
-Check box with a size of 24 x 24 vp. If this parameter is not set or is set to **undefined**, the check box is not displayed.
+Check box with a size of 24 x 24 vp.
+
+If this parameter is not set or is set to **undefined**, the check box is not displayed.
 
 **Type:** OperateCheck
 
@@ -72,7 +78,9 @@ Check box with a size of 24 x 24 vp. If this parameter is not set or is set to *
 icon?: OperateIcon
 ```
 
-First icon with a size of 24 x 24 vp. If this parameter is not set or is set to **undefined**, the icon is not displayed.
+First icon with a size of 24 x 24 vp.
+
+If this parameter is not set or is set to **undefined**, the icon is not displayed.
 
 **Type:** OperateIcon
 
@@ -90,7 +98,9 @@ First icon with a size of 24 x 24 vp. If this parameter is not set or is set to 
 image?: ResourceStr
 ```
 
-Image with a size of 48 x 48 vp. If this parameter is not set or is set to **undefined**, the image is not displayed.
+Image with a size of 48 x 48 vp.
+
+If this parameter is not set or is set to **undefined**, the image is not displayed.
 
 **Type:** ResourceStr
 
@@ -108,7 +118,9 @@ Image with a size of 48 x 48 vp. If this parameter is not set or is set to **und
 radio?: OperateCheck
 ```
 
-Radio button with a size of 24 x 24 vp. If this parameter is not set or is set to **undefined**, the radio button is not displayed.
+Radio button with a size of 24 x 24 vp.
+
+If this parameter is not set or is set to **undefined**, the radio button is not displayed.
 
 **Type:** OperateCheck
 
@@ -126,7 +138,9 @@ Radio button with a size of 24 x 24 vp. If this parameter is not set or is set t
 subIcon?: OperateIcon
 ```
 
-Second icon with a size of 24 x 24 vp. If this parameter is not set or is set to **undefined**, the icon is not displayed.
+Second icon with a size of 24 x 24 vp.
+
+If this parameter is not set or is set to **undefined**, the icon is not displayed.
 
 **Type:** OperateIcon
 
@@ -144,7 +158,9 @@ Second icon with a size of 24 x 24 vp. If this parameter is not set or is set to
 switch?: OperateCheck
 ```
 
-Switch. If this parameter is not set or is set to **undefined**, the switch is not displayed.
+Switch.
+
+If this parameter is not set or is set to **undefined**, the switch is not displayed.
 
 **Type:** OperateCheck
 
@@ -162,7 +178,9 @@ Switch. If this parameter is not set or is set to **undefined**, the switch is n
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Symbol icon with a size of 48 x 48 vp. If this parameter is not set or is set to **undefined**, the symbol icon is not displayed.
+Symbol icon with a size of 48 x 48 vp.
+
+If this parameter is not set or is set to **undefined**, the symbol icon is not displayed.
 
 **Type:** SymbolGlyphModifier
 
@@ -180,7 +198,9 @@ Symbol icon with a size of 48 x 48 vp. If this parameter is not set or is set to
 text?: ResourceStr
 ```
 
-Text. If this parameter is not set or is set to **undefined**, the text is not displayed.
+Text.
+
+If this parameter is not set or is set to **undefined**, the text is not displayed.
 
 **Type:** ResourceStr
 

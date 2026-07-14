@@ -12,7 +12,8 @@ import { volumeManager } from '@kit.CoreFileKit';
 function mount(volumeId: string, callback: AsyncCallback<void>): void
 ```
 
-Mounts a volume. This API uses an asynchronous callback to return the result. Currently, only the FAT, exFAT, ext4 and NTFS file systems are supported.
+Mounts a volume. This API uses an asynchronous callback to return the result. Currently, only the FAT, exFAT, ext4
+and NTFS file systems are supported.
 
 **Since:** 9
 
@@ -50,7 +51,8 @@ Mounts a volume. This API uses an asynchronous callback to return the result. Cu
 function mount(volumeId: string): Promise<void>
 ```
 
-Mounts a volume. This API uses a promise to return the result. Currently, only the FAT, exFAT, ext4 and NTFS file systems are supported.
+Mounts a volume. This API uses a promise to return the result. Currently, only the FAT, exFAT, ext4 and NTFS file
+systems are supported.
 
 **Since:** 9
 

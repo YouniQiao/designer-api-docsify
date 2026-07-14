@@ -12,7 +12,8 @@ Describes the authorized bundle information.
 readonly appIndex: number
 ```
 
-Index of an application clone, which takes effect only for application clones. The value is obtained from the **appIndex** of ApplicationInfo.
+Index of an application clone, which takes effect only for application clones. The value is obtained from the
+**appIndex** of ApplicationInfo.
 
 **Type:** number
 

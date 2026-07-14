@@ -12,7 +12,8 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: number): Array<LauncherAbilityResourceInfo>
 ```
 
-Obtains the bundle information of the entry ability of an application based on the given bundle name and resource flags. This API returns the result synchronously.
+Obtains the bundle information of the entry ability of an application based on the given bundle name and resource
+flags. This API returns the result synchronously.
 
 **Since:** 11
 
@@ -51,7 +52,8 @@ Obtains the bundle information of the entry ability of an application based on t
 function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: number, appIndex?: number): Array<LauncherAbilityResourceInfo>
 ```
 
-Obtains the launcher ability resource information of an application based on the given bundle name, resource flags, and app index. This API returns the result synchronously.
+Obtains the launcher ability resource information of an application based on the given bundle name, resource flags,
+and app index. This API returns the result synchronously.
 
 **Since:** 12
 

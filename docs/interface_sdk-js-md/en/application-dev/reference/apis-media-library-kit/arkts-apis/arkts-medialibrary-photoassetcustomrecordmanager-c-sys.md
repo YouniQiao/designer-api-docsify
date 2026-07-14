@@ -20,7 +20,9 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addLcdJumpCount(ids: Array<number>): Promise<Array<number>>
 ```
 
-Increases the value of **LcdJumpCount** by 1 for the data in the database based on **fileId** in [PhotoAssetCustomRecord](arkts-medialibrary-photoassetcustomrecord-i-sys.md). This API uses a promise to return the result.
+Increases the value of **LcdJumpCount** by 1 for the data in the database based on **fileId** in
+[PhotoAssetCustomRecord](arkts-medialibrary-photoassetcustomrecord-i-sys.md). This API uses a promise to return the
+result.
 
 **Since:** 20
 
@@ -54,7 +56,9 @@ Increases the value of **LcdJumpCount** by 1 for the data in the database based 
 addShareCount(ids: Array<number>): Promise<Array<number>>
 ```
 
-Increases the value of **shareCount** by 1 for the data in the database based on **fileId** in [PhotoAssetCustomRecord](arkts-medialibrary-photoassetcustomrecord-i-sys.md). This API uses a promise to return the result.
+Increases the value of **shareCount** by 1 for the data in the database based on **fileId** in
+[PhotoAssetCustomRecord](arkts-medialibrary-photoassetcustomrecord-i-sys.md). This API uses a promise to return the
+result.
 
 **Since:** 20
 
@@ -309,7 +313,8 @@ async function example(context: Context) {
 setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<number>>
 ```
 
-Updates the existing database fields based on custom user behavior recordings. This API uses a promise to return the result.
+Updates the existing database fields based on custom user behavior recordings. This API uses a promise to return
+the result.
 
 **Since:** 20
 

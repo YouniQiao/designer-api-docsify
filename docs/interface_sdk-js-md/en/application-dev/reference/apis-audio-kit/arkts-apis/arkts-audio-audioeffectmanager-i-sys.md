@@ -167,7 +167,9 @@ Unsubscribes from the system audio separation effect enabled state change event.
 onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 ```
 
-Subscribes to system audio separation effect enabled state change event. The audio separation effect state in system can be set by system playback controller application, other applications can use this function to listen the change event.
+Subscribes to system audio separation effect enabled state change event.
+The audio separation effect state in system can be set by system playback controller application,
+other applications can use this function to listen the change event.
 
 **Since:** 26.0.0
 
@@ -242,7 +244,9 @@ try {
 setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number): Promise<void>
 ```
 
-Sets audio separation effect enable or disable for specific application process, or for specific audio playback stream. This API uses a promise to return the result.
+Sets audio separation effect enable or disable for specific application process,
+or for specific audio playback stream.
+This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -284,7 +288,8 @@ Sets audio separation effect enable or disable for specific application process,
 setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number): Promise<void>
 ```
 
-Sets audio separation effect volume for specific volume type. This API uses a promise to return the result.
+Sets audio separation effect volume for specific volume type.
+This API uses a promise to return the result.
 
 **Since:** 26.0.0
 

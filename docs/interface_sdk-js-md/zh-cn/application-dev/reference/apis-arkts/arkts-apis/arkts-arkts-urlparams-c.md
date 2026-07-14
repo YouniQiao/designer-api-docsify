@@ -81,7 +81,9 @@ paramsObject.append('fod', '3');
 constructor(init?: string[][] | Record<string, string> | string | URLParams)
 ```
 
-ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; | string | URLParams) URLParams的构造函数。
+ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; | string | URLParams)
+
+URLParams的构造函数。
 
 **起始版本：** 9
 
@@ -368,7 +370,9 @@ for (let key of keys) {
 set(name: string, value: string): void
 ```
 
-将与name关联的URLSearchParams对象中的值设置为value。 如果存在名称为name的键值对，请将第一个键值对的值设置为value并删除所有其他值。如果不是，则将键值对附加到查询字符串。
+将与name关联的URLSearchParams对象中的值设置为value。
+
+如果存在名称为name的键值对，请将第一个键值对的值设置为value并删除所有其他值。如果不是，则将键值对附加到查询字符串。
 
 **起始版本：** 9
 

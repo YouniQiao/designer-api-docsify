@@ -40,7 +40,8 @@ The pop-up window is displayed on the left of the indexer.
 START
 ```
 
-The pop-up window is displayed on the right of the indexer for left-to-right scripts, and on the left of the indexer for right-to-left scripts.
+The pop-up window is displayed on the right of the indexer for left-to-right scripts, and on the left of the
+indexer for right-to-left scripts.
 
 **Since:** 12
 
@@ -56,7 +57,8 @@ The pop-up window is displayed on the right of the indexer for left-to-right scr
 END
 ```
 
-The pop-up window is displayed on the left of the indexer for left-to-right scripts, and on the right of the indexer for right-to-left scripts.
+The pop-up window is displayed on the left of the indexer for left-to-right scripts, and on the right of the
+indexer for right-to-left scripts.
 
 **Since:** 12
 

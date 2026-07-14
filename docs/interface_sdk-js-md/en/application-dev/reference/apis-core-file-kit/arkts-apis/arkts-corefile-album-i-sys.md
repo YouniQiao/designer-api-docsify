@@ -26,7 +26,8 @@ import { userFileManager } from '@kit.CoreFileKit';
 addPhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void
 ```
 
-Adds image and video assets to an album. Before the operation, ensure that the image and video assets to add and the album exist. This API uses an asynchronous callback to return the result.
+Adds image and video assets to an album. Before the operation, ensure that the image and video assets to add and
+the album exist. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -92,7 +93,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 addPhotoAssets(assets: Array<FileAsset>): Promise<void>
 ```
 
-Adds image and video assets to an album. Before the operation, ensure that the image and video assets to add and the album exist. This API uses a promise to return the result.
+Adds image and video assets to an album. Before the operation, ensure that the image and video assets to add and
+the album exist. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -162,7 +164,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 commitModify(callback: AsyncCallback<void>): void
 ```
 
-Commits the modification on the album attributes to the database. This API uses an asynchronous callback to return the result.
+Commits the modification on the album attributes to the database. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 9
 
@@ -271,7 +274,13 @@ async function example(mgr: userFileManager.UserFileManager) {
 deletePhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void
 ```
 
-Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses an asynchronous callback to return the result. > **NOTE** > > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
+Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets
+exist in the recycle bin. This API uses an asynchronous callback to return the result.
+
+> **NOTE**
+>
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> operation.
 
 **Since:** 10
 
@@ -337,7 +346,13 @@ async function example(mgr: userFileManager.UserFileManager) {
 deletePhotoAssets(assets: Array<FileAsset>): Promise<void>
 ```
 
-Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses a promise to return the result. > **NOTE** > > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
+Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets
+exist in the recycle bin. This API uses a promise to return the result.
+
+> **NOTE**
+>
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> operation.
 
 **Since:** 10
 
@@ -407,7 +422,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 recoverPhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void
 ```
 
-Recovers image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses an asynchronous callback to return the result.
+Recovers image or video assets from the recycle bin. Before the operation, ensure that the image or video assets
+exist in the recycle bin. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -473,7 +489,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 recoverPhotoAssets(assets: Array<FileAsset>): Promise<void>
 ```
 
-Recovers image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses a promise to return the result.
+Recovers image or video assets from the recycle bin. Before the operation, ensure that the image or video assets
+exist in the recycle bin. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -543,7 +560,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 removePhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void
 ```
 
-Removes image and video assets from an album. The album and file resources must exist. This API uses an asynchronous callback to return the result.
+Removes image and video assets from an album. The album and file resources must exist. This API uses an
+asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -609,7 +627,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 removePhotoAssets(assets: Array<FileAsset>): Promise<void>
 ```
 
-Removes image and video assets from an album. The album and file resources must exist. This API uses a promise to return the result.
+Removes image and video assets from an album. The album and file resources must exist. This API uses a promise to
+return the result.
 
 **Since:** 10
 

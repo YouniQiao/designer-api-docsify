@@ -12,7 +12,8 @@ import { adminManager } from '@kit.MDMKit';
 function setDelegatedPolicies(admin: Want, bundleName: string, policies: Array<string>): void
 ```
 
-Delegates other applications to set device management policies. The applications must request the permissions required.
+Delegates other applications to set device management policies. The applications must request the permissions
+required.
 
 **Since:** 14
 

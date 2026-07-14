@@ -72,7 +72,8 @@ File name displayed.
 DATE_ADDED
 ```
 
-Date when the file was added. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
+Date when the file was added. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on
+January 1, 1970).
 
 **Since:** 9
 
@@ -90,7 +91,8 @@ Date when the file was added. The value is the number of seconds elapsed since t
 DATE_MODIFIED
 ```
 
-Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
+Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed
+since the Epoch time (00:00:00 UTC on January 1, 1970).
 
 **Since:** 9
 
@@ -180,7 +182,8 @@ Image height, in pixels.
 DATE_TAKEN
 ```
 
-Date when the file (photo) was taken. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
+Date when the file (photo) was taken. The value is the number of seconds elapsed since the Epoch time (00:00:00
+UTC on January 1, 1970).
 
 **Since:** 9
 
@@ -252,7 +255,8 @@ File location type.
 DATE_TRASHED
 ```
 
-Date when the file was deleted. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
+Date when the file was deleted. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on
+January 1, 1970).
 
 **Since:** 10
 
@@ -306,7 +310,9 @@ User comment information.
 CAMERA_SHOT_KEY
 ```
 
-Key for the Ultra Snapshot feature. This parameter is available only for the system camera, and the key value is defined by the system camera.
+Key for the Ultra Snapshot feature.
+
+This parameter is available only for the system camera, and the key value is defined by the system camera.
 
 **Since:** 10
 

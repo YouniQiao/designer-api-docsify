@@ -42,7 +42,8 @@ set radius(value: number)
 set segmentCount(value: number)
 ```
 
-使用正多边形近似圆柱体的圆形底面, 其中segmentCount是正多边形的边数.
+使用正多边形近似圆柱体的圆形底面,
+其中segmentCount是正多边形的边数.
 
 **类型：** number
 

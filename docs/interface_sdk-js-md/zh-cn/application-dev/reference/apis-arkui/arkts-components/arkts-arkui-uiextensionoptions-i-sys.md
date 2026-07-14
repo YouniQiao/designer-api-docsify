@@ -14,7 +14,8 @@
 areaChangePlaceholder?: Record<string, ComponentContent>
 ```
 
-设置区域变化占位符。 如果设置了区域变化占位ComponentContent，则占位节点会一直显示，直到UIExtensionComponent尺寸变化完成。
+设置区域变化占位符。
+如果设置了区域变化占位ComponentContent，则占位节点会一直显示，直到UIExtensionComponent尺寸变化完成。
 
 **类型：** Record<string, ComponentContent>
 
@@ -52,7 +53,8 @@ dpiFollowStrategy?: DpiFollowStrategy
 isTransferringCaller?: boolean
 ```
 
-设置当前能力是否作为调用方使用。<br/> 如果设置为true，则作为调用方，将UIExtensionComponent的当前token设置为rootToken。
+设置当前能力是否作为调用方使用。<br/>
+如果设置为true，则作为调用方，将UIExtensionComponent的当前token设置为rootToken。
 
 **类型：** boolean
 
@@ -72,7 +74,8 @@ isTransferringCaller?: boolean
 placeholder?: ComponentContent
 ```
 
-设置占位符。 如果设置了占位ComponentContent，则在连接未建立时显示占位节点。
+设置占位符。
+如果设置了占位ComponentContent，则在连接未建立时显示占位节点。
 
 **类型：** ComponentContent
 

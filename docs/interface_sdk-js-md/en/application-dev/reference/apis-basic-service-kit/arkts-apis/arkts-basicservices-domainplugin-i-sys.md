@@ -266,7 +266,8 @@ osAccount.DomainAccountManager.registerPlugin(plugin)
 getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>): void
 ```
 
-Obtains the domain access token based on the specified conditions. This API uses an asynchronous callback to return the result.
+Obtains the domain access token based on the specified conditions. This API uses an asynchronous callback to
+return the result.
 
 **Since:** 10
 

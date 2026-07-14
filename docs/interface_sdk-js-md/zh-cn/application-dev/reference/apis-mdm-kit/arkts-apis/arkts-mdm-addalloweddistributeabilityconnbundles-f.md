@@ -6,7 +6,17 @@
 function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Array<string>, serviceType: ServiceType, accountId: number): void
 ```
 
-为指定用户添加允许使用分布式能力的应用名单，名单中的应用在指定用户下可以使用指定的分布式能力。 当前支持的分布式类型有：[协同服务](arkts-mdm-servicetype-e.md)。 > **说明：** > > 1.如果要设置允许使用协同服务的应用名单，在调用本接口前必须已经通过 > [setDisallowedPolicyForAccount](arkts-mdm-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1) > 接口禁用了向其他设备传输数据的设备间单向传输数据的能力，否则会抛出错误码9201043。 > 2.当向其他设备传输数据的设备间单向传输数据的能力被解除禁用时，通过本接口设置的允许使用协同服务的应用名单会被同步清除。
+为指定用户添加允许使用分布式能力的应用名单，名单中的应用在指定用户下可以使用指定的分布式能力。
+
+当前支持的分布式类型有：[协同服务](arkts-mdm-servicetype-e.md)。
+
+> **说明：**
+>
+> 1.如果要设置允许使用协同服务的应用名单，在调用本接口前必须已经通过
+> [setDisallowedPolicyForAccount](arkts-mdm-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1)
+> 接口禁用了向其他设备传输数据的设备间单向传输数据的能力，否则会抛出错误码9201043。
+
+> 2.当向其他设备传输数据的设备间单向传输数据的能力被解除禁用时，通过本接口设置的允许使用协同服务的应用名单会被同步清除。
 
 **起始版本：** 26.0.0
 

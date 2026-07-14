@@ -18,7 +18,9 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 appMessageId?: string
 ```
 
-Unique ID carried in a notification sent by an app, which is used for notification deduplication. If an app publishes notifications with the same appMessageId locally or on the cloud, the device displays only one message. Repeated notifications received later will be silenced and deduplicated, and will not be displayed or notified. The deduplication flag is valid only within 24 hours after the notification is published. After 24 hours or the device is restarted, the deduplication flag becomes invalid.
+Unique ID carried in a notification sent by an application, which is used for notification deduplication.
+This parameter is left empty by default. For details, see
+[NotificationRequest.appMessageId](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i.md).
 
 **Type:** string
 
@@ -34,7 +36,13 @@ Unique ID carried in a notification sent by an app, which is used for notificati
 isAlertOnce?: boolean
 ```
 
-Whether to send a notification only once when the notification is published or updated. - true: A notification is sent only when the notification is published for the first time. For subsequent update, the notification mode is changed to LEVEL_MIN. - false (default): A notification is sent based on the configured notification mode.
+Whether to send a notification alert only once when a notification is published or updated. The default value is
+**false**. For details, see
+[NotificationRequest.isAlertOnce](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i.md).
+
+- **true**: An alert is sent only when the notification is published for the first time. For subsequent update,
+the alert mode is changed to [LEVEL_LOW](../../apis-notification-kit/arkts-apis/arkts-notification-slotlevel-e.md).
+- **false**: The alert is sent in the configured alert mode.
 
 **Type:** boolean
 

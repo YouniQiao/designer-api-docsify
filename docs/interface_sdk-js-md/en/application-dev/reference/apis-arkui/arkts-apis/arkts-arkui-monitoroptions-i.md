@@ -1,6 +1,7 @@
 # MonitorOptions
 
-Defines the optional parameters for [addMonitor](arkts-arkui-uiutils-c.md#addmonitor-1), which are used to configure the callback type and whether to enable the wildcard capability.
+Defines the optional parameters for [addMonitor](arkts-arkui-uiutils-c.md#addmonitor-1), which are used to configure the callback
+type and whether to enable the wildcard capability.
 
 **Since:** 20
 
@@ -18,7 +19,9 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 enableWildcard?: boolean
 ```
 
-Whether to enable the wildcard capability for this **addMonitor**. **true** to enable the wildcard capability, and **false** means the opposite. The default value is **false**. If the wildcard capability is disabled but the path contains wildcards, the path is considered invalid.
+Whether to enable the wildcard capability for this **addMonitor**. **true** to enable the wildcard capability, and
+**false** means the opposite. The default value is **false**. If the wildcard capability is disabled but the path
+contains wildcards, the path is considered invalid.
 
 **Type:** boolean
 
@@ -38,7 +41,8 @@ Whether to enable the wildcard capability for this **addMonitor**. **true** to e
 isSynchronous?: boolean
 ```
 
-Whether the current callback is a synchronous callback. **true**: The current callback is a synchronous callback. **false** (default value): The current callback is an asynchronous callback.
+Whether the current callback is a synchronous callback. **true**: The current callback is a synchronous callback.
+**false** (default value): The current callback is an asynchronous callback.
 
 **Type:** boolean
 

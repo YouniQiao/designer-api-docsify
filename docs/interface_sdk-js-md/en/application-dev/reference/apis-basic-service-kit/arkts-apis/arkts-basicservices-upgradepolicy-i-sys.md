@@ -36,7 +36,9 @@ Automatic update period.
 autoUpgradeStrategy: boolean
 ```
 
-Automatic update policy. The value **true** indicates that automatic update is supported, and the value **false** indicates the opposite.
+Automatic update policy.
+
+The value **true** indicates that automatic update is supported, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -52,7 +54,10 @@ Automatic update policy. The value **true** indicates that automatic update is s
 downloadStrategy: boolean
 ```
 
-Automatic download policy. The value **true** indicates that automatic download is supported, and the value **false** indicates the opposite.
+Automatic download policy.
+
+The value **true** indicates that automatic download is supported, and the value **false** indicates the
+opposite.
 
 **Type:** boolean
 

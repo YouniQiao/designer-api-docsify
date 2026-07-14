@@ -36,7 +36,8 @@ Smart album change information.
 assetSourceType?: AssetSourceType
 ```
 
-The asset source type. Default value: 0.
+The asset source type.
+Default value: 0.
 
 **Type:** AssetSourceType
 
@@ -86,7 +87,8 @@ Date when the media asset was created.
 dateModifiedMs?: number
 ```
 
-The modified time of asset. <br>Unit:milliseconds.
+The modified time of asset.
+<br>Unit:milliseconds.
 
 **Type:** number
 
@@ -168,7 +170,8 @@ ID of the media asset.
 hiddenTime?: number
 ```
 
-The hidden time of asset. <br>Unit:milliseconds.
+The hidden time of asset.
+<br>Unit:milliseconds.
 
 **Type:** number
 
@@ -234,7 +237,8 @@ Position of the media asset.
 size?: number
 ```
 
-File size of the media asset, in bytes. The size of a moving photo includes the total size of the image and video.
+File size of the media asset, in bytes. The size of a moving photo includes the total size of the image and
+video.
 
 **Type:** number
 

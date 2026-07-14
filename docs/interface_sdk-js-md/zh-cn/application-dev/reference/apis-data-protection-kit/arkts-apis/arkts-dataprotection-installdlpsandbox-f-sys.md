@@ -6,7 +6,13 @@
 function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: number, uri: string): Promise<DLPSandboxInfo>
 ```
 
-安装一个应用的DLP沙箱。DLP沙箱为受保护的DLP文件创建独立的运行环境，与原应用进程隔离，确保数据在授权范围内安全流转。沙箱应用继承原应用的功能但仅能访问授权的DLP文件。使用Promise异步回调。 调用installDLPSandbox成功后必须在使用完毕后调用 [uninstallDLPSandbox](arkts-dataprotection-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox-1) 卸载沙箱。 DLP文件管理应用打开受保护文件前，需要先为目标应用安装DLP沙箱。
+安装一个应用的DLP沙箱。DLP沙箱为受保护的DLP文件创建独立的运行环境，与原应用进程隔离，确保数据在授权范围内安全流转。沙箱应用继承原应用的功能但仅能访问授权的DLP文件。使用Promise异步回调。
+
+调用installDLPSandbox成功后必须在使用完毕后调用
+[uninstallDLPSandbox](arkts-dataprotection-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox-1)
+卸载沙箱。
+
+DLP文件管理应用打开受保护文件前，需要先为目标应用安装DLP沙箱。
 
 **起始版本：** 10
 
@@ -63,7 +69,13 @@ dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.REA
 function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: number, uri: string, callback: AsyncCallback<DLPSandboxInfo>): void
 ```
 
-安装一个应用的DLP沙箱。使用callback异步回调。调用成功后，系统为应用创建DLP沙箱环境并返回沙箱信息。 调用installDLPSandbox成功后必须在使用完毕后调用 [uninstallDLPSandbox](arkts-dataprotection-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox-1) 卸载沙箱。 DLP文件管理应用打开受保护文件前，需要先为目标应用安装DLP沙箱。
+安装一个应用的DLP沙箱。使用callback异步回调。调用成功后，系统为应用创建DLP沙箱环境并返回沙箱信息。
+
+调用installDLPSandbox成功后必须在使用完毕后调用
+[uninstallDLPSandbox](arkts-dataprotection-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox-1)
+卸载沙箱。
+
+DLP文件管理应用打开受保护文件前，需要先为目标应用安装DLP沙箱。
 
 **起始版本：** 10
 

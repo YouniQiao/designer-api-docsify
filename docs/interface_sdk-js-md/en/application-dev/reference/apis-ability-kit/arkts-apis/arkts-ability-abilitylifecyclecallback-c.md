@@ -1,6 +1,10 @@
 # AbilityLifecycleCallback
 
-The lifecycle of a [UIAbility](arkts-app-ability-uiability.md) dynamically changes from creation to destruction. The AbilityLifecycleCallback module provides the capability to listen for these lifecycle changes, which can be used for scenarios such as tracking the runtime duration of each UIAbility and performing data loading decoupled from the service logic of UIAbility.
+The lifecycle of a [UIAbility](arkts-app-ability-uiability.md) dynamically changes from creation to
+destruction.
+The AbilityLifecycleCallback module provides the capability to listen for these lifecycle changes, which can be used
+for scenarios such as tracking the runtime duration of each UIAbility and performing data loading decoupled from the
+service logic of UIAbility.
 
 **Since:** 9
 
@@ -18,7 +22,8 @@ import { AbilityLifecycleCallback } from '@kit.AbilityKit';
 onAbilityBackground(ability: UIAbility): void
 ```
 
-Called after the [onBackground](arkts-ability-uiability-c.md#onbackground-1) callback of the UIAbility is triggered.
+Called after the [onBackground](arkts-ability-uiability-c.md#onbackground-1) callback of the
+UIAbility is triggered.
 
 **Since:** 9
 
@@ -44,7 +49,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityContinue(ability: UIAbility): void
 ```
 
-Called after the [onContinue](arkts-ability-uiability-c.md#oncontinue-1) callback of the UIAbility is triggered.
+Called after the [onContinue](arkts-ability-uiability-c.md#oncontinue-1) callback of the UIAbility
+is triggered.
 
 **Since:** 9
 
@@ -70,7 +76,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityCreate(ability: UIAbility): void
 ```
 
-Called after the [onCreate](arkts-ability-uiability-c.md#oncreate-1) callback of the UIAbility is triggered.
+Called after the [onCreate](arkts-ability-uiability-c.md#oncreate-1) callback of the UIAbility is
+triggered.
 
 **Since:** 9
 
@@ -96,7 +103,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityDestroy(ability: UIAbility): void
 ```
 
-Called after the [onDestroy](arkts-ability-uiability-c.md#ondestroy-1) callback of the UIAbility is triggered.
+Called after the [onDestroy](arkts-ability-uiability-c.md#ondestroy-1) callback of the UIAbility
+is triggered.
 
 **Since:** 9
 
@@ -122,7 +130,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityForeground(ability: UIAbility): void
 ```
 
-Called after the [onForeground](arkts-ability-uiability-c.md#onforeground-1) callback of the UIAbility is triggered.
+Called after the [onForeground](arkts-ability-uiability-c.md#onforeground-1) callback of the
+UIAbility is triggered.
 
 **Since:** 9
 
@@ -148,7 +157,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilitySaveState?(ability: UIAbility): void
 ```
 
-Called after the [onSaveState](arkts-ability-uiability-c.md#onsavestate-1) callback of the UIAbility is triggered.
+Called after the [onSaveState](arkts-ability-uiability-c.md#onsavestate-1) callback of the
+UIAbility is triggered.
 
 **Since:** 12
 
@@ -174,7 +184,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityWillBackground?(ability: UIAbility): void
 ```
 
-Called before the [onBackground](arkts-ability-uiability-c.md#onbackground-1) callback of the UIAbility is triggered.
+Called before the [onBackground](arkts-ability-uiability-c.md#onbackground-1) callback of the
+UIAbility is triggered.
 
 **Since:** 12
 
@@ -200,7 +211,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityWillContinue?(ability: UIAbility): void
 ```
 
-Called before the [onContinue](arkts-ability-uiability-c.md#oncontinue-1) callback of the UIAbility is triggered.
+Called before the [onContinue](arkts-ability-uiability-c.md#oncontinue-1) callback of the UIAbility
+is triggered.
 
 **Since:** 12
 
@@ -226,7 +238,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityWillCreate?(ability: UIAbility): void
 ```
 
-Called before the [onCreate](arkts-ability-uiability-c.md#oncreate-1) callback of the UIAbility is triggered.
+Called before the [onCreate](arkts-ability-uiability-c.md#oncreate-1) callback of the UIAbility is
+triggered.
 
 **Since:** 12
 
@@ -252,7 +265,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityWillDestroy?(ability: UIAbility): void
 ```
 
-Called before the [onDestroy](arkts-ability-uiability-c.md#ondestroy-1) callback of the UIAbility is triggered.
+Called before the [onDestroy](arkts-ability-uiability-c.md#ondestroy-1) callback of the UIAbility
+is triggered.
 
 **Since:** 12
 
@@ -278,7 +292,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityWillForeground?(ability: UIAbility): void
 ```
 
-Called before the [onForeground](arkts-ability-uiability-c.md#onforeground-1) callback of the UIAbility is triggered.
+Called before the [onForeground](arkts-ability-uiability-c.md#onforeground-1) callback of the
+UIAbility is triggered.
 
 **Since:** 12
 
@@ -304,7 +319,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onAbilityWillSaveState?(ability: UIAbility): void
 ```
 
-Called before the [onSaveState](arkts-ability-uiability-c.md#onsavestate-1) callback of the UIAbility is triggered.
+Called before the [onSaveState](arkts-ability-uiability-c.md#onsavestate-1) callback of the
+UIAbility is triggered.
 
 **Since:** 12
 
@@ -330,7 +346,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onNewWant?(ability: UIAbility): void
 ```
 
-Called after the [onNewWant](arkts-ability-uiability-c.md#onnewwant-1) callback of the UIAbility is triggered.
+Called after the [onNewWant](arkts-ability-uiability-c.md#onnewwant-1) callback of the UIAbility
+is triggered.
 
 **Since:** 12
 
@@ -356,7 +373,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWillNewWant?(ability: UIAbility): void
 ```
 
-Called before the [onNewWant](arkts-ability-uiability-c.md#onnewwant-1) callback of the UIAbility is triggered.
+Called before the [onNewWant](arkts-ability-uiability-c.md#onnewwant-1) callback of the UIAbility
+is triggered.
 
 **Since:** 12
 
@@ -409,7 +427,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called after the [onWindowStageCreate](arkts-ability-uiability-c.md#onwindowstagecreate-1) callback of the UIAbility is triggered.
+Called after the [onWindowStageCreate](arkts-ability-uiability-c.md#onwindowstagecreate-1) callback of
+the UIAbility is triggered.
 
 **Since:** 9
 
@@ -436,7 +455,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called after the [onWindowStageDestroy](arkts-ability-uiability-c.md#onwindowstagedestroy-1) callback of the UIAbility is triggered.
+Called after the [onWindowStageDestroy](arkts-ability-uiability-c.md#onwindowstagedestroy-1)
+callback of the UIAbility is triggered.
 
 **Since:** 9
 
@@ -490,7 +510,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called after the [onWindowStageRestore](arkts-ability-uiability-c.md#onwindowstagerestore-1) callback of the UIAbility is triggered.
+Called after the [onWindowStageRestore](arkts-ability-uiability-c.md#onwindowstagerestore-1)
+callback of the UIAbility is triggered.
 
 **Since:** 12
 
@@ -517,7 +538,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called before the [onWindowStageCreate](arkts-ability-uiability-c.md#onwindowstagecreate-1) callback of the UIAbility is triggered.
+Called before the [onWindowStageCreate](arkts-ability-uiability-c.md#onwindowstagecreate-1)
+callback of the UIAbility is triggered.
 
 **Since:** 12
 
@@ -544,7 +566,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called before the [onWindowStageDestroy](arkts-ability-uiability-c.md#onwindowstagedestroy-1) callback of the UIAbility is triggered.
+Called before the [onWindowStageDestroy](arkts-ability-uiability-c.md#onwindowstagedestroy-1)
+callback of the UIAbility is triggered.
 
 **Since:** 12
 
@@ -571,7 +594,8 @@ For details, see [AbilityLifecycleCallback Usage Example](#abilitylifecyclecallb
 onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-Called before the [onWindowStageRestore](arkts-ability-uiability-c.md#onwindowstagerestore-1) callback of the UIAbility is triggered.
+Called before the [onWindowStageRestore](arkts-ability-uiability-c.md#onwindowstagerestore-1)
+callback of the UIAbility is triggered.
 
 **Since:** 12
 

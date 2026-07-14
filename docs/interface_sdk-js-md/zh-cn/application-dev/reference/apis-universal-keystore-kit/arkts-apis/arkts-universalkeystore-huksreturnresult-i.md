@@ -28,7 +28,9 @@ certChains?: Array<string>
 outData?: Uint8Array
 ```
 
-表示 [initSession](arkts-universalkeystore-initsession-f.md#initsession-1) 操作之后获取到的challenge信息。默认为undefined。
+表示
+[initSession](arkts-universalkeystore-initsession-f.md#initsession-1)
+操作之后获取到的challenge信息。默认为undefined。
 
 **类型：** Uint8Array
 
@@ -44,7 +46,9 @@ outData?: Uint8Array
 properties?: Array<HuksParam>
 ```
 
-表示 [initSession](arkts-universalkeystore-initsession-f.md#initsession-1) 操作之后获取到的challenge信息。默认为undefined。
+表示
+[initSession](arkts-universalkeystore-initsession-f.md#initsession-1)
+操作之后获取到的challenge信息。默认为undefined。
 
 **类型：** Array<HuksParam>
 

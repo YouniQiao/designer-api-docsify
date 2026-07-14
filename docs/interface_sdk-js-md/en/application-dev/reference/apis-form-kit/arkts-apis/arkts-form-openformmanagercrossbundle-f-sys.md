@@ -12,7 +12,8 @@ import { formProvider } from '@kit.FormKit';
 function openFormManagerCrossBundle(want: Want): void
 ```
 
-Open the view of forms belonging to the specified bundle. Client to communication with FormManagerService.
+Open the view of forms belonging to the specified bundle.
+Client to communication with FormManagerService.
 
 **Since:** 20
 

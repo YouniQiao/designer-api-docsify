@@ -12,7 +12,14 @@ Enumerates the album keys.
 ALBUM_LPATH = 'lpath'
 ```
 
-Virtual path of the album. Albums and their virtual path values: - Camera application album: '/DCIM/Camera' - Screenshot application album: '/Pictures/Screenshots' - Screen recording application album: '/Pictures/Screenrecords' - User-created album: '/Pictures/Users/{Custom album name}'
+Virtual path of the album.
+
+Albums and their virtual path values:
+
+- Camera application album: '/DCIM/Camera'
+- Screenshot application album: '/Pictures/Screenshots'
+- Screen recording application album: '/Pictures/Screenrecords'
+- User-created album: '/Pictures/Users/{Custom album name}'
 
 **Since:** 23
 

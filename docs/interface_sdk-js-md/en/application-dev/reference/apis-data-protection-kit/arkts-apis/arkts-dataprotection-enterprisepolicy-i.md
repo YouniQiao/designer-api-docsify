@@ -18,7 +18,8 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 policyString: string
 ```
 
-JSON string of an enterprise custom policy. The value contains a maximum of 4,194,304 bytes. If the value is out of range, an error log is generated.
+JSON string of an enterprise custom policy. The value contains a maximum of 4,194,304 bytes. If the value is
+out of range, an error log is generated.
 
 **Type:** string
 

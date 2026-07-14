@@ -4,7 +4,8 @@
 type OnSeiMessageHandle = (messages: Array<SeiMessage>, playbackPosition?: number) => void
 ```
 
-Describes the handle used to obtain SEI messages. This is used when in subscriptions to SEI message events, and the callback returns detailed SEI information.
+Describes the handle used to obtain SEI messages. This is used when in subscriptions to SEI message events, and the
+callback returns detailed SEI information.
 
 **Since:** 18
 

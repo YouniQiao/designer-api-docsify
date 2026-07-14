@@ -12,7 +12,8 @@ import { bundleManager } from '@kit.AbilityKit';
 function getBundleInfoForSelfSync(bundleFlags: number): BundleInfo
 ```
 
-Obtains the bundle information of the current application based on the given bundle flags. This API returns the result synchronously.
+Obtains the bundle information of the current application based on the given bundle flags. This API returns the
+result synchronously.
 
 **Since:** 10
 

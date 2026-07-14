@@ -38,7 +38,8 @@ Called to get the information presented on the user authentication page for remo
 onRemoteAuthResult: ResultCallback
 ```
 
-Called to return the authentication result. If the authentication is successful, UserAuthResult contains the token information.
+Called to return the authentication result. If the authentication is successful,
+UserAuthResult contains the token information.
 
 **Type:** ResultCallback
 

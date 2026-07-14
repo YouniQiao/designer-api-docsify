@@ -12,7 +12,8 @@
 advertisingId: number
 ```
 
-广播ID。 取值范围为全体整数。
+广播ID。
+取值范围为全体整数。
 
 **类型：** number
 

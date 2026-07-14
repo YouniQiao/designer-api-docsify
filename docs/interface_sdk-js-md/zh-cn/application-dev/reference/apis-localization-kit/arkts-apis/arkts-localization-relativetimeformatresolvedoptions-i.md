@@ -36,7 +36,14 @@ locale: string
 numberingSystem: string
 ```
 
-使用的数字系统，取值包括： "adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", "wcho"。
+使用的数字系统，取值包括：
+
+"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide",
+"gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham",
+"laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong",
+"mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment",
+"shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii",
+"wara", "wcho"。
 
 **类型：** string
 
@@ -56,7 +63,9 @@ numberingSystem: string
 numeric: string
 ```
 
-输出消息的格式，表示格式化结果中是否使用数字表示相对日期或时间。取值包括："always", "auto"。 不同取值的显示效果请参考[附录表23](../../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+输出消息的格式，表示格式化结果中是否使用数字表示相对日期或时间。取值包括："always", "auto"。
+
+不同取值的显示效果请参考[附录表23](../../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -76,7 +85,9 @@ numeric: string
 style: string
 ```
 
-国际化消息的长度，取值包括："long", "short", "narrow"。 不同取值的显示效果请参考[附录表24](../../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+国际化消息的长度，取值包括："long", "short", "narrow"。
+
+不同取值的显示效果请参考[附录表24](../../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 

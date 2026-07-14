@@ -1,6 +1,7 @@
 # HighlightAlbum (System API)
 
-Provides APIs for managing the **Highlights** album, which is an automatically generated collection of memorable photos or videos.
+Provides APIs for managing the **Highlights** album, which is an automatically generated collection of memorable
+photos or videos.
 
 **Since:** 12
 
@@ -334,7 +335,16 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setSubTitle(subTitle: string): Promise<void>
 ```
 
-Sets the subtitle for this **Highlights** album instance. The subtitle must meet the following requirements: - The total length of the subtitle must be between 0 and 255 characters. - It must not contain any invalid characters, which are: . \ / : * ? " ' ` < > | { } [ ] - The characters are case insensitive.
+Sets the subtitle for this **Highlights** album instance.
+
+The subtitle must meet the following requirements:
+
+- The total length of the subtitle must be between 0 and 255 characters.
+- It must not contain any invalid characters, which are:
+
+. \ / : * ? " ' ` < > | { } [ ]
+
+- The characters are case insensitive.
 
 **Since:** 18
 

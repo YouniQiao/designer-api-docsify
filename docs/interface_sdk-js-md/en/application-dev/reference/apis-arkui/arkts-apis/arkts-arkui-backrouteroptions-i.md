@@ -1,6 +1,6 @@
 # BackRouterOptions
 
-Defines the option of router back.
+Defines the parameters for routing back.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 params?: Object
 ```
 
-Data that needs to be passed to the destination page during navigation.
+Data that needs to be passed to the target page during redirection.
 
 **Type:** Object
 
@@ -40,7 +40,8 @@ Data that needs to be passed to the destination page during navigation.
 uri?: string
 ```
 
-Returns to the page of the specified path. If the page with the specified path does not exist in the page stack, router.back() is called by default.
+URI of the page to return to. If the specified page does not exist in the page stack, the application does not
+respond. If this parameter is not set, the application returns to the previous page.
 
 **Type:** string
 

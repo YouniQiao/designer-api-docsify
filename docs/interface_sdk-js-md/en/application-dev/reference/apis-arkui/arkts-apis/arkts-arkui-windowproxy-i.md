@@ -189,7 +189,8 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea
 ```
 
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area.
+Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area,
+and soft keyboard area.
 
 **Since:** 12
 
@@ -241,7 +242,8 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 occupyEvents(eventFlags: number): Promise<void>
 ```
 
-Sets the events that the component (**EmbeddedComponent** or **UIExtensionComponent**) will occupy, preventing the host from responding to these events within the component's area.
+Sets the events that the component (**EmbeddedComponent** or **UIExtensionComponent**) will occupy, preventing
+the host from responding to these events within the component's area.
 
 **Since:** 18
 
@@ -399,7 +401,8 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 off(type: 'rectChange', callback?: Callback<RectChangeOptions>): void
 ```
 
-Unsubscribes from position and size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**).
+Unsubscribes from position and size change events of the component (**EmbeddedComponent** or
+**UIExtensionComponent**).
 
 **Since:** 14
 
@@ -544,7 +547,8 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 on(type: 'rectChange', reasons: number, callback: Callback<RectChangeOptions>): void
 ```
 
-Subscribes to position and size change events of the component (**EmbeddedComponent** or **UIExtensionComponent** ).
+Subscribes to position and size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**
+).
 
 **Since:** 14
 
@@ -595,7 +599,13 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 properties: WindowProxyProperties
 ```
 
-Information about the component (**EmbeddedComponent** or **UIExtensionComponent**). Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md#onsessioncreate-1). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](arkts-arkui-windowproxy-i.md#on-2) callback.
+Information about the component (**EmbeddedComponent** or **UIExtensionComponent**).
+
+Note: Due to architecture restrictions, avoid obtaining the value in
+[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md#onsessioncreate-1). Instead, when
+possible, obtain the value after receiving the
+[on('windowSizeChange')](arkts-arkui-windowproxy-i.md#on-2)
+callback.
 
 **Type:** WindowProxyProperties
 

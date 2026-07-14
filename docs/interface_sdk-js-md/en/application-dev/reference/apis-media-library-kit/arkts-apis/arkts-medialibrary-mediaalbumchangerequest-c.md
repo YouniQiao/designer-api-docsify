@@ -71,7 +71,13 @@ Constructor used to initialize a new object.
 getAlbum(): Album
 ```
 
-Obtains the album in the current album change request. > **NOTE** > > For the change request for creating an album, this API returns **null** before > [applyChanges](arkts-medialibrary-photoaccesshelper-i.md#applychanges-1) is called > to apply the changes.
+Obtains the album in the current album change request.
+
+> **NOTE**
+>
+> For the change request for creating an album, this API returns **null** before
+> [applyChanges](arkts-medialibrary-photoaccesshelper-i.md#applychanges-1) is called
+> to apply the changes.
 
 **Since:** 11
 
@@ -122,7 +128,17 @@ Removes assets from the album.
 setAlbumName(name: string): void
 ```
 
-Sets the album name. The album name must meet the following requirements: - The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are: . \ / : * ? " ' ` < > | { } [ ] - It is case-insensitive. - Duplicate album names are not allowed.
+Sets the album name.
+
+The album name must meet the following requirements:
+
+- The total length of the album name must be between 1 and 255 characters.
+- It must not contain any invalid characters, which are:
+
+. \ / : * ? " ' ` < > | { } [ ]
+
+- It is case-insensitive.
+- Duplicate album names are not allowed.
 
 **Since:** 11
 

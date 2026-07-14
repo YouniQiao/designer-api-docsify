@@ -18,7 +18,9 @@ import { componentUtils } from '@kit.ArkUI';
 x: number
 ```
 
-X-coordinate. Unit: px
+X-coordinate.
+
+Unit: px
 
 **Type:** number
 
@@ -36,7 +38,9 @@ X-coordinate. Unit: px
 y: number
 ```
 
-Y-coordinate. Unit: px
+Y-coordinate.
+
+Unit: px
 
 **Type:** number
 
