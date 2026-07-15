@@ -59,7 +59,7 @@ Sets the edgeLight animation Mode of the dialog.
 
 **Type:** EdgeLightMode
 
-**Default:** EdgeLightMode.EDGELIGHT_DISABLED
+**Default:** EdgeLightMode.EDGELIGHT_AUTO
 
 **Since:** 26.0.0
 

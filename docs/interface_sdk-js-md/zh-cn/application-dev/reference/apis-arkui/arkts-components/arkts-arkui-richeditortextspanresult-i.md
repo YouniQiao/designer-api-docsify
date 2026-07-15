@@ -32,6 +32,8 @@ paragraphStyle?: RichEditorParagraphStyle
 
 段落样式。
 
+省略时，使用系统默认段落样式。
+
 **类型：** RichEditorParagraphStyle
 
 **起始版本：** 12
@@ -48,7 +50,7 @@ paragraphStyle?: RichEditorParagraphStyle
 previewText?: string
 ```
 
-插入的预上屏文本内容。
+文本Span预上屏内容。
 
 **类型：** string
 
@@ -122,7 +124,9 @@ urlStyle?: RichEditorUrlStyle
 
 url信息。
 
-默认值：undefined
+默认值：undefined。
+
+当需要为文本设置超链接样式时传入此参数。
 
 **类型：** RichEditorUrlStyle
 
@@ -158,7 +162,9 @@ value: string
 valueResource?: Resource
 ```
 
-组件SymbolSpan内容。
+SymbolSpan资源内容。
+
+默认值：undefined。
 
 **类型：** Resource
 

@@ -52,7 +52,7 @@ Sets the edgeLight animation Mode of the dialog.
 
 **类型：** EdgeLightMode
 
-**默认值：** EdgeLightMode.EDGELIGHT_DISABLED
+**默认值：** EdgeLightMode.EDGELIGHT_AUTO
 
 **起始版本：** 26.0.0
 

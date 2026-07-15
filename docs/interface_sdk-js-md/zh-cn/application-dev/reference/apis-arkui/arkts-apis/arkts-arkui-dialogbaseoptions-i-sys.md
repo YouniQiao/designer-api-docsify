@@ -36,7 +36,7 @@ edgeLightMode?: EdgeLightMode
 
 **类型：** EdgeLightMode
 
-**默认值：** EdgeLightMode.EDGELIGHT_DISABLED
+**默认值：** EdgeLightMode.EDGELIGHT_AUTO
 
 **起始版本：** 26.1.0
 

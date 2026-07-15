@@ -30,7 +30,7 @@ imageStyle: RichEditorImageSpanStyleResult
 offsetInSpan: [number, number]
 ```
 
-文本Span内容里有效内容的起始和结束位置。
+Span里图片的起始和结束位置。
 
 **类型：** [number, number]
 

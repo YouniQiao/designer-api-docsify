@@ -24,7 +24,7 @@ Query whether Wi-Fi is available
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns {@code true} if the Wi-Fi is abailable, returns {@code false} otherwise. |
+| boolean | Returns {@code true} if the Wi-Fi is available, returns {@code false} otherwise. |
 
 **Error codes:**
 

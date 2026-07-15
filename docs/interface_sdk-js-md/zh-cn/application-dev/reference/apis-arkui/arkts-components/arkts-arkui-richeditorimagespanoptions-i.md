@@ -30,7 +30,7 @@ gesture?: RichEditorGesture
 imageStyle?: RichEditorImageSpanStyle
 ```
 
-图片样式。
+图片样式信息。当需要自定义图片的大小、垂直对齐方式、缩放类型等样式时传入此参数；省略时，使用系统默认图片样式。
 
 **类型：** RichEditorImageSpanStyle
 
@@ -68,7 +68,7 @@ offset?: number
 onHover?: OnHoverCallback
 ```
 
-鼠标悬停触发回调。省略时，不执行相关行为。
+鼠标悬停触发回调。省略时，不执行鼠标悬停回调行为。
 
 **类型：** OnHoverCallback
 

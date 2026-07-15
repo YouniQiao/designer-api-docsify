@@ -16,7 +16,7 @@
 textStyle: RichEditorTextStyle
 ```
 
-文本Span样式信息。
+文本样式。
 
 **类型：** RichEditorTextStyle
 

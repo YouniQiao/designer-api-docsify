@@ -33,7 +33,7 @@ hide(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词窗口已被销毁) | This selection window has been destroyed. |
+| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 **示例：**
 
@@ -89,7 +89,7 @@ moveTo(x: number, y: number): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词窗口已被销毁) | This selection window has been destroyed. |
+| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 **示例：**
 
@@ -278,7 +278,7 @@ setUiContent(path: string): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词窗口已被销毁) | This selection window has been destroyed. |
+| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 **示例：**
 
@@ -325,7 +325,7 @@ show(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词窗口已被销毁) | This selection window has been destroyed. |
+| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 **示例：**
 
@@ -368,7 +368,7 @@ startMoving(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词窗口已被销毁) | This selection window has been destroyed. |
+| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 **示例：**
 

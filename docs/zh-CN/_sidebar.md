@@ -14,6 +14,7 @@
 - [Background Tasks Kit (181)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-background-tasks-kit/arkts-apis/arkts-workschedulerextensionability.md)
 - [Basic Service Kit (739)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-basic-service-kit/arkts-apis/arkts-wallpaperextensionability.md)
 - [Basic Services Kit (40)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-basic-services-kit/c-apis/capi-syscap-ndk-h.md)
+- [Calendar Kit (19)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-calendar-kit/arkts-apis/arkts-calendarmanager.md)
 - [Connectivity Kit (112)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-connectivity-kit/arkts-apis/arkts-nearlink-advertising.md)
 - [Contacts Kit (53)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-contacts-kit/arkts-apis/arkts-contact.md)
 - [Content Embed Kit (23)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-content-embed-kit/c-apis/capi-content-embed-proxy-h.md)
@@ -36,7 +37,8 @@
 - [Network Kit (52)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-net-http-type-h.md)
 - [Notification Kit (345)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-notification-kit/arkts-apis/arkts-application-notificationsubscriberextensionability.md)
 - Others
-- [Performance Analysis Kit (156)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-performance-analysis-kit/arkts-apis/arkts-faultlogger.md)
+- [Performance Analysis Kit (208)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-performance-analysis-kit/arkts-apis/arkts-faultlogger.md)
+- [Telephony Kit (82)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-sim.md)
 - [Test Kit (54)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-test-kit/arkts-apis/arkts-uitest.md)
 - [Universal Keystore Kit (129)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-universal-keystore-kit/arkts-apis/arkts-security-cryptoextensionability.md)
 - [User Authentication Kit (83)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-user-authentication-kit/arkts-apis/arkts-app-ability-userauthextensionability.md)

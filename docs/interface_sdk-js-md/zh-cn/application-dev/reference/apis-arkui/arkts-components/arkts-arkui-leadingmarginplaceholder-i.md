@@ -30,7 +30,7 @@ pixelMap: PixelMap
 size: [Dimension, Dimension]
 ```
 
-图片大小，不支持设置百分比。
+图片大小，默认单位为vp。不支持设置百分比。
 
 **类型：** [Dimension, Dimension]
 

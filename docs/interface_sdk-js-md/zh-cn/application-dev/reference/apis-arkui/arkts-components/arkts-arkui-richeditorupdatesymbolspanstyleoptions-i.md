@@ -16,7 +16,7 @@ SymbolSpan样式选项。
 symbolStyle: RichEditorSymbolSpanStyle
 ```
 
-组件样式。
+SymbolSpan的样式信息。
 
 **类型：** RichEditorSymbolSpanStyle
 

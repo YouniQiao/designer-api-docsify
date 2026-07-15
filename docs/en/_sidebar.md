@@ -52,7 +52,7 @@
 - [Security Guard Kit (17)](interface_sdk-js-md/en/application-dev/reference/apis-security-guard-kit/arkts-apis/arkts-security-securityguard.md)
 - [Sensor Service Kit (144)](interface_sdk-js-md/en/application-dev/reference/apis-sensor-service-kit/arkts-apis/arkts-sensor.md)
 - [Tee Kit (54)](interface_sdk_c-md/en/application-dev/reference/apis-tee-kit/c-apis/capi-tee-sharemem-ops-h.md)
-- [Telephony Kit (449)](interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call.md)
+- [Telephony Kit (450)](interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call.md)
 - [Test Kit (54)](interface_sdk-js-md/en/application-dev/reference/apis-test-kit/arkts-apis/arkts-uitest.md)
 - [Third_Party (1465)](interface_sdk_c-md/en/application-dev/reference/apis-third_party/c-apis/capi-types-h.md)
 - [Universal Keystore Kit (129)](interface_sdk-js-md/en/application-dev/reference/apis-universal-keystore-kit/arkts-apis/arkts-security-cryptoextensionability.md)

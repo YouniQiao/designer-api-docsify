@@ -16,7 +16,7 @@ hapticFeedbackMode? : HapticFeedbackMode
 
 默认值：HapticFeedbackMode.DISABLED，菜单弹出时不振动。
 
-**说明：** 仅当应用具备ohos.permission.VIBRATE权限，且用户启用了触感反馈时才会生效。
+**说明：** 仅当应用具备ohos.permission.VIBRATE权限，用户已启用触感反馈，且系统硬件支持时才会生效。
 
 **类型：** HapticFeedbackMode
 

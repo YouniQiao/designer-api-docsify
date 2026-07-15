@@ -12,7 +12,9 @@
 preventDefault?: Callback<void>
 ```
 
-阻止系统默认剪切事件。
+阻止系统默认复制事件。
+
+省略时，执行系统默认复制行为。
 
 **类型：** Callback<void>
 

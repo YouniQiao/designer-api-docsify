@@ -12,7 +12,7 @@
 layoutStyle?: RichEditorLayoutStyle
 ```
 
-图片布局风格。
+图片布局样式。
 
 **类型：** RichEditorLayoutStyle
 

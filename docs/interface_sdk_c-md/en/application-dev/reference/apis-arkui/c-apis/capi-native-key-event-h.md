@@ -301,7 +301,7 @@ Obtains the type of the specified key event.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | Pointer to the target **ArkUI_UIInputEvent** object. |
+| const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
 
 **Returns**:
 
@@ -325,7 +325,7 @@ Obtains the key code from the specified key event.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | Pointer to the target **ArkUI_UIInputEvent** object. |
+| const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
 
 **Returns**:
 
@@ -349,7 +349,7 @@ Obtains the key value from the specified key event.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | Pointer to the target **ArkUI_UIInputEvent** object. |
+| const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
 
 **Returns**:
 
@@ -373,7 +373,7 @@ Obtains the type of input device that triggers the specified key event.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | Pointer to the target **ArkUI_UIInputEvent** object. |
+| const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
 
 **Returns**:
 
@@ -397,7 +397,7 @@ Stops the specified key event from bubbling upwards or downwards.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | Pointer to the target **ArkUI_UIInputEvent** object. |
+| const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
 | bool stopPropagation | Whether to stop event propagation. The value **true** means to stop event propagation, and false** means the opposite. |
 
 ### OH_ArkUI_KeyEvent_GetKeyIntensionCode()
@@ -416,7 +416,7 @@ Obtains the intention code associated with the specified key event.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | Pointer to the target **ArkUI_UIInputEvent** object. |
+| const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
 
 **Returns**:
 
@@ -440,7 +440,7 @@ Obtains the Unicode value of the specified key event. Non-space basic Latin char
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | Pointer to the target **ArkUI_UIInputEvent** object. |
+| const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
 
 **Returns**:
 
@@ -464,7 +464,7 @@ Sets whether the specified key event is consumed in the key event callback.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | Pointer to the target **ArkUI_UIInputEvent** object. |
+| const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
 | bool isConsumed | Whether the key event is consumed by the callback. The value **true** means that the key event isconsumed, and **false** the opposite. |
 
 ### OH_ArkUI_KeyEvent_Dispatch()
@@ -484,7 +484,7 @@ Dispatches the specified key event to a specific node.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Target node. |
-| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | Pointer to the target **ArkUI_UIInputEvent** object. |
+| const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
 
 ### OH_ArkUI_KeyEvent_IsNumLockOn()
 
@@ -502,14 +502,14 @@ Obtains the state of the NumLock key when the specified key event occurs.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | Pointer to the target **ArkUI_UIInputEvent** object. |
+| const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
 | bool* state | Output parameter that returns the state of the NumLock key. The value **true** indicates an activatedstate, and **false** indicates an inactivated state. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_KeyEvent_IsCapsLockOn()
 
@@ -527,14 +527,14 @@ Obtains the state of the CapsLock key when the specified key event occurs.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | Pointer to the target **ArkUI_UIInputEvent** object. |
+| const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
 | bool* state | Output parameter that returns the state of the CapsLock key. The value **true** indicates an activatedstate, and **false** indicates an inactivated state. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_KeyEvent_IsScrollLockOn()
 
@@ -552,13 +552,13 @@ Obtains the state of the ScrollLock key when the specified key event occurs.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)* event | Pointer to the target **ArkUI_UIInputEvent** object. |
+| const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
 | bool* state | Output parameter that returns the state of the ScrollLock key. The value **true** indicates anactivated state, and **false** indicates an inactivated state. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 

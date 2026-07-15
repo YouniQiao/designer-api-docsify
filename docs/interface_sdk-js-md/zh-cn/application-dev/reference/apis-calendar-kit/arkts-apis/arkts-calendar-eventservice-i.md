@@ -1,0 +1,56 @@
+# EventService
+
+日程服务。
+
+**起始版本：** 10
+
+**系统能力：** SystemCapability.Applications.CalendarData
+
+## description
+
+```TypeScript
+description?: string
+```
+
+服务辅助描述。长度建议为[0,5000]字符，不填时，默认为空字符串。
+
+**类型：** string
+
+**起始版本：** 10
+
+**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+
+**系统能力：** SystemCapability.Applications.CalendarData
+
+## type
+
+```TypeScript
+type: ServiceType
+```
+
+服务类型。
+
+**类型：** ServiceType
+
+**起始版本：** 10
+
+**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+
+**系统能力：** SystemCapability.Applications.CalendarData
+
+## uri
+
+```TypeScript
+uri: string
+```
+
+服务的uri，格式为DeepLink类型。可以跳转到三方应用相应界面。长度建议为[0,5000]字符。
+
+**类型：** string
+
+**起始版本：** 10
+
+**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+
+**系统能力：** SystemCapability.Applications.CalendarData
+

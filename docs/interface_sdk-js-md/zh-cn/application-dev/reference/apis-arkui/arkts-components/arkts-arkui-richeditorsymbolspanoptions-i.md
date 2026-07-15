@@ -12,7 +12,7 @@
 offset?: number
 ```
 
-添加组件的位置。省略时，添加到所有内容的最后。
+添加SymbolSpan的位置。省略时，添加到所有内容的最后。
 
 如果值小于0，添加到所有内容的最前面；如果值大于所有内容的长度，添加到所有内容的最后面。
 
@@ -32,7 +32,7 @@ offset?: number
 style?: RichEditorSymbolSpanStyle
 ```
 
-组件样式信息。省略时，使用系统默认样式信息。
+SymbolSpan样式信息。当需要自定义SymbolSpan的颜色、大小、粗细、渲染策略等样式时传入此参数；省略时，使用系统默认样式信息。
 
 **类型：** RichEditorSymbolSpanStyle
 

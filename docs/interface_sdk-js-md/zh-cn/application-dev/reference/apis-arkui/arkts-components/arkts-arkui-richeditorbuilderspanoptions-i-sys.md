@@ -12,7 +12,9 @@
 dragBackgroundColor? : ColorMetrics
 ```
 
-添加builder单独拖拽时的背板背景颜色。不配置或者异常值时，颜色按系统默认配置。
+设置BuilderSpan单独拖拽时的背板颜色。未配置或传入无效颜色值时，按默认值处理。
+
+默认值：跟随系统主题拖拽背板色。
 
 **类型：** ColorMetrics
 
@@ -30,9 +32,9 @@ dragBackgroundColor? : ColorMetrics
 isDragShadowNeeded?: boolean
 ```
 
-添加builder单独拖拽时是否需要投影。不配置或者异常值时，默认需要投影。true表示需要投影，false表示不需要投影。
+设置BuilderSpan单独拖拽时是否需要投影。true表示需要投影，false表示不需要投影。未配置或传入无效值时，按默认值处理。
 
-默认值： true
+默认值：true。
 
 **类型：** boolean
 

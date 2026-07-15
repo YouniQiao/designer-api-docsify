@@ -48,7 +48,7 @@ textStyle?: RichEditorTextStyle
 value: string
 ```
 
-文本Span内容或Symbol的id。
+文本Span内容。
 
 **类型：** string
 

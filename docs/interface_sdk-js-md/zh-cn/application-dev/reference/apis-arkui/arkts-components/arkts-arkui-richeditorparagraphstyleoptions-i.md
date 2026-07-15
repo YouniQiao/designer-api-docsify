@@ -6,7 +6,7 @@
 
 > **说明：**
 >
-> 接口作用的范围：设定的区间所涉及的段落。
+> 接口作用的范围：设定的区间所覆盖的段落，即区间起始位置和结束位置所在的段落及其之间的所有段落。
 
 **继承/实现关系：** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md)
 

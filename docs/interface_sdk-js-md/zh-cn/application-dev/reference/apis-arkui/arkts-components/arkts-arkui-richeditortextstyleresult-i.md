@@ -4,6 +4,8 @@
 
 在RichEditorTextStyle中，fontWeight是设置字体粗细的输入参数。
 
+而在RichEditorTextStyleResult中，会将之前设置的字体粗细转换为数字后返回。
+
 RichEditorSymbolSpanStyle和RichEditorSymbolSpanStyleResult中fontWeight的转换关系，与RichEditorTextStyle和
 RichEditorTextStyleResult中fontWeight的转换关系一致。
 
@@ -219,7 +221,9 @@ strokeColor?: ResourceColor
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-获取文本描边拐角样式。
+文本描边拐角样式。
+
+默认值：StrokeJoinStyle.MITER_JOIN。
 
 **类型：** StrokeJoinStyle
 
@@ -239,7 +243,7 @@ strokeWidth?: number
 
 文本描边宽度。
 
-单位为[vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+单位为[vp](../../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
 
 **类型：** number
 

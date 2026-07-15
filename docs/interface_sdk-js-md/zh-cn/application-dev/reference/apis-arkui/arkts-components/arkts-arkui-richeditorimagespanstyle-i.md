@@ -12,7 +12,7 @@
 layoutStyle?: RichEditorLayoutStyle
 ```
 
-图片布局风格。默认值：{"borderRadius":"","margin":""}
+图片布局样式。默认值：{"borderRadius":"","margin":""}
 
 **类型：** RichEditorLayoutStyle
 
@@ -32,6 +32,8 @@ objectFit?: ImageFit
 
 图片缩放类型。
 
+默认值：ImageFit.Cover。
+
 **类型：** ImageFit
 
 **起始版本：** 10
@@ -48,8 +50,8 @@ objectFit?: ImageFit
 size?: [Dimension, Dimension]
 ```
 
-图片的宽度和高度，单位为px。默认值：size的默认值与objectFit的值有关，不同的objectFit值对应的size默认值也不同。objectFit的值为Cover时，图片高度为组件高度减去组件上下内边距，图片宽度为组件宽
-度减去组件左右内边距。
+图片宽度和高度，默认单位为vp。默认值：与objectFit的值相关，不同的objectFit值有不同的默认尺寸。objectFit的值为Cover时，图片高度为组件高度减去组件上下内边距，宽度为组件宽度减去组件左右内边距。不支持
+以Percentage形式设置。
 
 **类型：** [Dimension, Dimension]
 
@@ -68,6 +70,8 @@ verticalAlign?: ImageSpanAlignment
 ```
 
 图片垂直对齐方式。
+
+默认值：ImageSpanAlignment.BOTTOM
 
 **类型：** ImageSpanAlignment
 

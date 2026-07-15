@@ -12,7 +12,8 @@
 leadingMargin?: Dimension | LeadingMarginPlaceholder
 ```
 
-设置文本段落缩进，当段落仅存在ImageSpan或BuilderSpan时，此属性值不生效。参数为Dimension类型时，不支持以Percentage形式设置。默认值：{"size":["0.00px","0.00px"]}
+设置文本段落缩进，当段落仅存在ImageSpan或BuilderSpan时，此属性值不生效。参数为Dimension类型时，不支持以Percentage形式设置，默认单位为vp。默认值：{"size":
+["0.00px","0.00px"]}
 
 **类型：** Dimension | LeadingMarginPlaceholder
 
@@ -56,6 +57,8 @@ paragraphSpacing?: number
 
 单位：fp
 
+取值范围：[0, +∞)。传入负值时，按默认值处理。
+
 段落间距默认大小为0。
 
 **类型：** number
@@ -76,10 +79,10 @@ shaderStyle?: ShaderStyle
 
 设置文本着色器效果。
 
-该接口与[RichEditorTextStyle](arkts-arkui-richeditortextstyleresult-i.md)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于
-[RichEditorTextStyle](arkts-arkui-richeditortextstyleresult-i.md)的fontColor。
+默认值：undefined，不设置着色器效果。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+该接口与[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于
+[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)的fontColor。
 
 **类型：** ShaderStyle
 
@@ -157,7 +160,7 @@ wordBreak?: WordBreak
 
 设置断行规则。
 
-默认值：WordBreak.BREAK_WORD
+默认值：WordBreak.BREAK_WORD。
 
 **类型：** WordBreak
 

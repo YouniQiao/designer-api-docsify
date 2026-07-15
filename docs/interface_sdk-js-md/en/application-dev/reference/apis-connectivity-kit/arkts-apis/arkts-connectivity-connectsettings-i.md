@@ -19,7 +19,7 @@ addNetworkToSystem?: boolean
 ```
 
 Whether to add the network to the system for connection.
-Default is false, if set to ture, the network will be added to the system
+Default is false, if set to true, the network will be added to the system
 before connection and cannot be retrieved again.
 
 **Type:** boolean

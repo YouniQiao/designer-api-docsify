@@ -12,7 +12,7 @@
 font?: Font
 ```
 
-设置placeholder文本样式。
+设置提示文本样式。
 
 默认值遵循主题设置。
 
@@ -32,7 +32,7 @@ font?: Font
 fontColor?: ResourceColor
 ```
 
-设置placeholder文本颜色。
+设置提示文本颜色。
 
 默认值遵循主题设置。
 
